@@ -1,0 +1,531 @@
+
+; Винчестер ================================================================================================================================================ ПМ Пистолет Макарова
+; ==================================== первая ветка ====================================
+
+
+; 1 ветка
+
+; upgrade 1
+[wpn_svd_a1]:wpn_svd
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, scope7, sheka, knife
+
+
+available_upgrades		= svd_upgr2
+installed_upgrades		= svd_upgr1
+
+cost					= 17000
+scope_name              = wpn_addon_scope
+scope_names 					= wpn_addon_scope,wpn_addon_scope_cobra,wpn_addon_scope_pka,wpn_addon_scope_kashtan, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night
+scope_respawn = wpn_svd_a1
+scope_respawn_wpn_addon_scope = scope_pso1_svd_a1
+scope_respawn_wpn_addon_scope_pka = scope_pka_svd_a1
+scope_respawn_wpn_addon_scope_cobra = scope_cobra_svd_a1
+scope_respawn_wpn_addon_scope_kashtan = scope_kashtan_svd_a1
+scope_respawn_wpn_addon_scope_x2.7 = scope_pso1m2_svd_a1
+scope_respawn_wpn_addon_scope_detector = scope_nvsn_svd_a1
+scope_respawn_wpn_addon_scope_night = scope_nvas_svd_a1
+
+icon_group = 2
+hud                      	= wpn_svd_a1_hud
+[wpn_svd_a1_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, scope7, sheka, knife
+
+; upgrade 1 Sights
+
+[scope_pso1_svd_a1]:wpn_svd_a1
+hidden_bones =  scope2, scope3, scope4, scope5, scope6, scope7, sheka, knife
+hud  						= wpn_svd_a1_1pso_hud
+scope_name 					= wpn_addon_scope
+scope_x              	= 38                 ; offset in inventory icon
+scope_y                 = 7
+[wpn_svd_a1_1pso_hud]:wpn_svd_hud
+hidden_bones =  scope2, scope3, scope4, scope5, scope6, scope7, sheka, knife
+aim_hud_offset_pos = 0.0,-0.0005,0.06
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.0005,0.06
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_pso1m2_svd_a1]:wpn_svd_a1
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope7, sheka, knife
+hud  						= wpn_svd_a1_pso1m2_hud
+scope_name 					= wpn_addon_scope_x2.7
+scope_x              	= 38                 ; offset in inventory icon
+scope_y                 = 7
+[wpn_svd_a1_pso1m2_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope7, sheka, knife
+aim_hud_offset_pos = -0.0005,-0.0005,0.06
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0005,-0.0005,0.06
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_pka_svd_a1]:wpn_svd_a1
+hidden_bones = scope1, scope2, scope3, scope5, scope6, scope7, sheka, knife
+hud  						= wpn_svd_a1_pka_hud
+scope_name 					= wpn_addon_scope_pka
+scope_x              	= 76                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a1_pka_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope5, scope6, scope7, sheka, knife
+aim_hud_offset_pos = 0.0,0.0005,-0.05
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0005,-0.05
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_origin_offset = -0.03
+
+
+[scope_cobra_svd_a1]:wpn_svd_a1
+hidden_bones = scope1, scope2, scope3, scope4, scope6, scope7, sheka, knife
+hud  						= wpn_svd_a1_cobra_hud
+scope_name 					= wpn_addon_scope_cobra
+scope_x              	= 72                 ; offset in inventory icon
+scope_y                 = 11
+[wpn_svd_a1_cobra_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope6, scope7, sheka, knife
+aim_hud_offset_pos = -0.0088,0.002,-0.08
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0088,0.002,-0.08
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_origin_offset = -0.03
+
+
+[scope_kashtan_svd_a1]:wpn_svd_a1
+hidden_bones = scope1, scope2, scope4, scope5, scope6, scope7, sheka, knife
+hud  						= wpn_svd_a1_kashtan_hud
+scope_name 					= wpn_addon_scope_kashtan
+scope_x              	= 57                 ; offset in inventory icon
+scope_y                 = 4
+[wpn_svd_a1_kashtan_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope4, scope5, scope6, scope7, sheka, knife
+aim_hud_offset_pos = -0.0115,0.0,-0.008
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0115,0.0,-0.008
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_nvsn_svd_a1]:wpn_svd_a1
+hidden_bones = scope1, scope3, scope4, scope5, scope6, scope7, sheka, knife
+hud  						= wpn_svd_a1_nvsn_hud
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 33                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a1_nvsn_hud]:wpn_svd_hud
+hidden_bones = scope1, scope3, scope4, scope5, scope6, scope7, sheka, knife
+aim_hud_offset_pos = 0.0045,-0.028,0.04
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0045,-0.028,0.04
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_nvas_svd_a1]:wpn_svd_a1
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, sheka, knife
+hud  						= wpn_svd_a1_nvas_hud
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 33                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a1_nvas_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, sheka, knife
+aim_hud_offset_pos = 0.01,-0.022,0.04
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.01,-0.022,0.04
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+
+
+
+; upgrade 2
+[wpn_svd_a2]:wpn_svd_a1
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, scope7, knife
+available_upgrades		= svd_upgr3
+installed_upgrades		= svd_upgr1, svd_upgr2
+
+cam_dispersion          = 3.5	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 2.0	;увеличениe cam_dispersion с каждым выстрелом
+
+zoom_cam_dispersion         = 0.8
+zoom_cam_dispersion_inc     = 0.7
+
+inv_weight				= 5.0
+cost					= 18000
+scope_name              = wpn_addon_scope
+scope_names 					= wpn_addon_scope,wpn_addon_scope_cobra,wpn_addon_scope_pka,wpn_addon_scope_kashtan, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night
+scope_respawn = wpn_svd_a2
+scope_respawn_wpn_addon_scope = scope_pso1_svd_a2
+scope_respawn_wpn_addon_scope_pka = scope_pka_svd_a2
+scope_respawn_wpn_addon_scope_cobra = scope_cobra_svd_a2
+scope_respawn_wpn_addon_scope_kashtan = scope_kashtan_svd_a2
+scope_respawn_wpn_addon_scope_x2.7 = scope_pso1m2_svd_a2
+scope_respawn_wpn_addon_scope_detector = scope_nvsn_svd_a2
+scope_respawn_wpn_addon_scope_night = scope_nvas_svd_a2
+
+hud                      	= wpn_svd_a2_hud
+[wpn_svd_a2_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, scope7, knife
+
+; upgrade 2 Sights
+
+[scope_pso1_svd_a2]:wpn_svd_a2
+hidden_bones =  scope2, scope3, scope4, scope5, scope6, scope7, knife
+hud  						= wpn_svd_a2_1pso_hud
+scope_name 					= wpn_addon_scope
+scope_x              	= 38                 ; offset in inventory icon
+scope_y                 = 7
+[wpn_svd_a2_1pso_hud]:wpn_svd_hud
+hidden_bones =  scope2, scope3, scope4, scope5, scope6, scope7, knife
+aim_hud_offset_pos = 0.0,-0.0005,0.06
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.0005,0.06
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_pso1m2_svd_a2]:wpn_svd_a2
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope7, knife
+hud  						= wpn_svd_a2_pso1m2_hud
+scope_name 					= wpn_addon_scope_x2.7
+scope_x              	= 38                 ; offset in inventory icon
+scope_y                 = 7
+[wpn_svd_a2_pso1m2_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope7, knife
+aim_hud_offset_pos = -0.0005,-0.0005,0.06
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0005,-0.0005,0.06
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_pka_svd_a2]:wpn_svd_a2
+hidden_bones = scope1, scope2, scope3, scope5, scope6, scope7, knife
+hud  						= wpn_svd_a2_pka_hud
+scope_name 					= wpn_addon_scope_pka
+scope_x              	= 76                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a2_pka_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope5, scope6, scope7, knife
+aim_hud_offset_pos = 0.0,0.0005,-0.05
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0005,-0.05
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_origin_offset = -0.03
+
+
+[scope_cobra_svd_a2]:wpn_svd_a2
+hidden_bones = scope1, scope2, scope3, scope4, scope6, scope7, knife
+hud  						= wpn_svd_a2_cobra_hud
+scope_name 					= wpn_addon_scope_cobra
+scope_x              	= 72                 ; offset in inventory icon
+scope_y                 = 11
+[wpn_svd_a2_cobra_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope6, scope7, knife
+aim_hud_offset_pos = -0.0088,0.002,-0.08
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0088,0.002,-0.08
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_origin_offset = -0.03
+
+
+[scope_kashtan_svd_a2]:wpn_svd_a2
+hidden_bones = scope1, scope2, scope4, scope5, scope6, scope7, knife
+hud  						= wpn_svd_a2_kashtan_hud
+scope_name 					= wpn_addon_scope_kashtan
+scope_x              	= 57                 ; offset in inventory icon
+scope_y                 = 4
+[wpn_svd_a2_kashtan_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope4, scope5, scope6, scope7, knife
+aim_hud_offset_pos = -0.0115,0.0,-0.008
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0115,0.0,-0.008
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_nvsn_svd_a2]:wpn_svd_a2
+hidden_bones = scope1, scope3, scope4, scope5, scope6, scope7, knife
+hud  						= wpn_svd_a2_nvsn_hud
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 33                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a2_nvsn_hud]:wpn_svd_hud
+hidden_bones = scope1, scope3, scope4, scope5, scope6, scope7, knife
+aim_hud_offset_pos = 0.0045,-0.028,0.04
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0045,-0.028,0.04
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_nvas_svd_a2]:wpn_svd_a2
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, knife
+hud  						= wpn_svd_a2_nvas_hud
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 33                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a2_nvas_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, knife
+aim_hud_offset_pos = 0.01,-0.022,0.04
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.01,-0.022,0.04
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+
+; upgrade 3
+[wpn_svd_a3]:wpn_svd_a2
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, scope7, knife
+available_upgrades		= svd_upgr4
+installed_upgrades		= svd_upgr1, svd_upgr2, svd_upgr3
+
+inv_weight				= 4.9
+cost					= 19000
+scope_name              = wpn_addon_scope
+scope_names 					= wpn_addon_scope,wpn_addon_scope_cobra,wpn_addon_scope_pka,wpn_addon_scope_kashtan, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night
+scope_respawn = wpn_svd_a3
+scope_respawn_wpn_addon_scope = scope_pso1_svd_a3
+scope_respawn_wpn_addon_scope_pka = scope_pka_svd_a3
+scope_respawn_wpn_addon_scope_cobra = scope_cobra_svd_a3
+scope_respawn_wpn_addon_scope_kashtan = scope_kashtan_svd_a3
+scope_respawn_wpn_addon_scope_x2.7 = scope_pso1m2_svd_a3
+scope_respawn_wpn_addon_scope_detector = scope_nvsn_svd_a3
+scope_respawn_wpn_addon_scope_night = scope_nvas_svd_a3
+
+
+
+
+
+; upgrade 3 Sights
+
+[scope_pso1_svd_a3]:wpn_svd_a3
+hidden_bones =  scope2, scope3, scope4, scope5, scope6, scope7, knife
+hud  						= wpn_svd_a3_1pso_hud
+scope_name 					= wpn_addon_scope
+scope_x              	= 38                 ; offset in inventory icon
+scope_y                 = 7
+[wpn_svd_a3_1pso_hud]:wpn_svd_hud
+hidden_bones =  scope2, scope3, scope4, scope5, scope6, scope7, knife
+aim_hud_offset_pos = 0.0,-0.0005,0.06
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.0005,0.06
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_pso1m2_svd_a3]:wpn_svd_a3
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope7, knife
+hud  						= wpn_svd_a3_pso1m2_hud
+scope_name 					= wpn_addon_scope_x2.7
+scope_x              	= 38                 ; offset in inventory icon
+scope_y                 = 7
+[wpn_svd_a3_pso1m2_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope7, knife
+aim_hud_offset_pos = -0.0005,-0.0005,0.06
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0005,-0.0005,0.06
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_pka_svd_a3]:wpn_svd_a3
+hidden_bones = scope1, scope2, scope3, scope5, scope6, scope7, knife
+hud  						= wpn_svd_a3_pka_hud
+scope_name 					= wpn_addon_scope_pka
+scope_x              	= 76                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a3_pka_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope5, scope6, scope7, knife
+aim_hud_offset_pos = 0.0,0.0005,-0.05
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0005,-0.05
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_origin_offset = -0.03
+
+
+[scope_cobra_svd_a3]:wpn_svd_a3
+hidden_bones = scope1, scope2, scope3, scope4, scope6, scope7, knife
+hud  						= wpn_svd_a3_cobra_hud
+scope_name 					= wpn_addon_scope_cobra
+scope_x              	= 72                 ; offset in inventory icon
+scope_y                 = 11
+[wpn_svd_a3_cobra_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope6, scope7, knife
+aim_hud_offset_pos = -0.0088,0.002,-0.08
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0088,0.002,-0.08
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_origin_offset = -0.03
+
+
+[scope_kashtan_svd_a3]:wpn_svd_a3
+hidden_bones = scope1, scope2, scope4, scope5, scope6, scope7, knife
+hud  						= wpn_svd_a3_kashtan_hud
+scope_name 					= wpn_addon_scope_kashtan
+scope_x              	= 57                 ; offset in inventory icon
+scope_y                 = 4
+[wpn_svd_a3_kashtan_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope4, scope5, scope6, scope7, knife
+aim_hud_offset_pos = -0.0115,0.0,-0.008
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0115,0.0,-0.008
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_nvsn_svd_a3]:wpn_svd_a3
+hidden_bones = scope1, scope3, scope4, scope5, scope6, scope7, knife
+hud  						= wpn_svd_a3_nvsn_hud
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 33                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a3_nvsn_hud]:wpn_svd_hud
+hidden_bones = scope1, scope3, scope4, scope5, scope6, scope7, knife
+aim_hud_offset_pos = 0.0045,-0.028,0.04
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0045,-0.028,0.04
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_nvas_svd_a3]:wpn_svd_a3
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, knife
+hud  						= wpn_svd_a3_nvas_hud
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 33                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a3_nvas_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, knife
+aim_hud_offset_pos = 0.01,-0.022,0.04
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.01,-0.022,0.04
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+
+
+
+; upgrade 4
+[wpn_svd_a4]:wpn_svd_a3
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, scope7
+available_upgrades		= none
+installed_upgrades		= svd_upgr1, svd_upgr2, svd_upgr3, svd_upgr4
+
+quickmelee_status		= 1
+
+inv_weight				= 5.1
+cost					= 20000
+scope_name              = wpn_addon_scope
+scope_names 					= wpn_addon_scope,wpn_addon_scope_cobra,wpn_addon_scope_pka,wpn_addon_scope_kashtan, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night
+scope_respawn = wpn_svd_a4
+scope_respawn_wpn_addon_scope = scope_pso1_svd_a4
+scope_respawn_wpn_addon_scope_pka = scope_pka_svd_a4
+scope_respawn_wpn_addon_scope_cobra = scope_cobra_svd_a4
+scope_respawn_wpn_addon_scope_kashtan = scope_kashtan_svd_a4
+scope_respawn_wpn_addon_scope_x2.7 = scope_pso1m2_svd_a4
+scope_respawn_wpn_addon_scope_detector = scope_nvsn_svd_a4
+scope_respawn_wpn_addon_scope_night = scope_nvas_svd_a4
+
+hud                      	= wpn_svd_a4_hud
+
+[wpn_svd_a4_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, scope7
+
+; upgrade 4 Sights
+
+[scope_pso1_svd_a4]:wpn_svd_a4
+hidden_bones =  scope2, scope3, scope4, scope5, scope6, scope7
+hud  						= wpn_svd_a4_1pso_hud
+scope_name 					= wpn_addon_scope
+scope_x              	= 38                 ; offset in inventory icon
+scope_y                 = 7
+[wpn_svd_a4_1pso_hud]:wpn_svd_hud
+hidden_bones =  scope2, scope3, scope4, scope5, scope6, scope7
+aim_hud_offset_pos = 0.0,-0.0005,0.06
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.0005,0.06
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_pso1m2_svd_a4]:wpn_svd_a4
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope7
+hud  						= wpn_svd_a4_pso1m2_hud
+scope_name 					= wpn_addon_scope_x2.7
+scope_x              	= 38                 ; offset in inventory icon
+scope_y                 = 7
+[wpn_svd_a4_pso1m2_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope7
+aim_hud_offset_pos = -0.0005,-0.0005,0.06
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0005,-0.0005,0.06
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_pka_svd_a4]:wpn_svd_a4
+hidden_bones = scope1, scope2, scope3, scope5, scope6, scope7
+hud  						= wpn_svd_a4_pka_hud
+scope_name 					= wpn_addon_scope_pka
+scope_x              	= 76                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a4_pka_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope5, scope6, scope7
+aim_hud_offset_pos = 0.0,0.0005,-0.05
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0005,-0.05
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_origin_offset = -0.03
+
+
+[scope_cobra_svd_a4]:wpn_svd_a4
+hidden_bones = scope1, scope2, scope3, scope4, scope6, scope7
+hud  						= wpn_svd_a4_cobra_hud
+scope_name 					= wpn_addon_scope_cobra
+scope_x              	= 72                 ; offset in inventory icon
+scope_y                 = 11
+[wpn_svd_a4_cobra_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope6, scope7
+aim_hud_offset_pos = -0.0088,0.002,-0.08
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0088,0.002,-0.08
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_origin_offset = -0.03
+
+
+[scope_kashtan_svd_a4]:wpn_svd_a4
+hidden_bones = scope1, scope2, scope4, scope5, scope6, scope7
+hud  						= wpn_svd_a4_kashtan_hud
+scope_name 					= wpn_addon_scope_kashtan
+scope_x              	= 57                 ; offset in inventory icon
+scope_y                 = 4
+[wpn_svd_a4_kashtan_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope4, scope5, scope6, scope7
+aim_hud_offset_pos = -0.0115,0.0,-0.008
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0115,0.0,-0.008
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_nvsn_svd_a4]:wpn_svd_a4
+hidden_bones = scope1, scope3, scope4, scope5, scope6, scope7
+hud  						= wpn_svd_a4_nvsn_hud
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 33                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a4_nvsn_hud]:wpn_svd_hud
+hidden_bones = scope1, scope3, scope4, scope5, scope6, scope7
+aim_hud_offset_pos = 0.0045,-0.028,0.04
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0045,-0.028,0.04
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_nvas_svd_a4]:wpn_svd_a4
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6
+hud  						= wpn_svd_a4_nvas_hud
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 33                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_a4_nvas_hud]:wpn_svd_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6
+aim_hud_offset_pos = 0.01,-0.022,0.04
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.01,-0.022,0.04
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0

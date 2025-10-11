@@ -1,0 +1,1834 @@
+
+<game_task id="dominoes_principle" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>esc_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle1" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle1</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle1_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle2" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle2</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>agr_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle2_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle3" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle3</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>val_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle3_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle4" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle4</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>esc_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle4_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle5" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle5</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle5_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle6" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle6</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle6_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle7" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle7</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>marsh_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle7_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle8" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle8</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>lost_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle8_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle9" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle9</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>agr_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle9_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle10" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle10</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>agr_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle10_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle11" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle11</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>esc_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle11_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle12" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle12</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>marsh_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle12_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle13" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle13</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>val_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle13_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle14" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle14</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>lost_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle14_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle15" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle15</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle15_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle16" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle16</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle16_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle17" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle17</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>esc_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle17_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle18" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle18</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>marsh_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle18_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle19" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle19</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle19_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle20" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle20</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle20_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle21" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle21</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_dp_stalker_6</object_story_id>
+			<infoportion_complete>dominoes_principle21_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle22" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle22</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>marsh_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle22_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle23" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle23</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>lost_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle23_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle24" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle24</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_dp_stalker_7</object_story_id>
+			<infoportion_complete>dominoes_principle24_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle25" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle25</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>val_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle25_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle26" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle26</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>lost_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle26_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle27" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle27</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_dp_stalker_8</object_story_id>
+			<infoportion_complete>dominoes_principle27_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle28" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle28</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_dp_stalker_9</object_story_id>
+			<infoportion_complete>dominoes_principle28_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle29" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle29</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>val_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle29_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle30" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle30</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>esc_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle30_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle31" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle31</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle31_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle32" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle32</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_dp_stalker_10</object_story_id>
+			<infoportion_complete>dominoes_principle32_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle33" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle33</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle33_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle34" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle34</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>lost_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle34_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle35" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle35</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle35_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle36" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle36</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>marsh_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle36_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle37" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle37</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>agr_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle37_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle38" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle38</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>agr_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle38_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle39" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle39</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>val_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle39_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle40" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle40</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_old_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle40_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle41" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle41</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>mil_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle41_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle42" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle42</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>red_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle42_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle43" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle43</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>rad_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle43_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle44" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle44</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>rad_dp_stalker_6</object_story_id>
+			<infoportion_complete>dominoes_principle44_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle45" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle45</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>dead_city_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle45_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle46" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle46</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>aes1_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle46_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle47" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle47</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>aes2_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle47_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle48" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle48</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>pri_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle48_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle49" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle49</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_old_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle49_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle50" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle50</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_old_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle50_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle51" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle51</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_old_dp_stalker_6</object_story_id>
+			<infoportion_complete>dominoes_principle51_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle52" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle52</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>mil_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle52_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle53" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle53</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>red_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle53_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle54" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle54</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>rad_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle54_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle55" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle55</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>rad_dp_stalker_7</object_story_id>
+			<infoportion_complete>dominoes_principle55_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle56" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle56</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>dead_city_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle56_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle57" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle57</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>aes1_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle57_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle58" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle58</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>aes2_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle58_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle59" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle59</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>pri_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle59_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle60" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle60</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_old_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle60_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle61" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle61</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>ros_dp_stalker_1</object_story_id>
+			<infoportion_complete>dominoes_principle61_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle62" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle62</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_old_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle62_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle63" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle63</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_old_dp_stalker_7</object_story_id>
+			<infoportion_complete>dominoes_principle63_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle64" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle64</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>mil_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle64_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle65" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle65</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>red_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle65_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle66" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle66</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>rad_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle66_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle67" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle67</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>rad_dp_stalker_8</object_story_id>
+			<infoportion_complete>dominoes_principle67_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle68" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle68</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>dead_city_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle68_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle69" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle69</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>aes1_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle6_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle70" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle70</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>aes2_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle70_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle71" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle71</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>pri_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle71_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle72" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle72</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_old_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle72_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle73" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle73</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>ros_dp_stalker_2</object_story_id>
+			<infoportion_complete>dominoes_principle73_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle74" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle74</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_old_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle74_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle75" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle75</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_old_dp_stalker_8</object_story_id>
+			<infoportion_complete>dominoes_principle75_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle76" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle76</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>mil_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle76_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle77" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle77</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>red_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle77_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle78" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle78</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>rad_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle78_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle79" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle79</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>rad_dp_stalker_9</object_story_id>
+			<infoportion_complete>dominoes_principle79_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle80" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle80</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>dead_city_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle80_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle81" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle81</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>aes1_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle81_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle82" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle82</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>aes2_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle82_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle83" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle83</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>pri_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle83_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle84" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle84</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_old_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle84_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle85" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle85</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>ros_dp_stalker_3</object_story_id>
+			<infoportion_complete>dominoes_principle85_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle86" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle86</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_old_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle86_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle87" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle87</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_old_dp_stalker_9</object_story_id>
+			<infoportion_complete>dominoes_principle87_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle88" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle88</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>mil_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle88_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle89" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle89</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>red_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle89_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle90" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle90</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>rad_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle90_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle91" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle91</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>rad_dp_stalker_10</object_story_id>
+			<infoportion_complete>dominoes_principle91_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle92" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle92</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>dead_city_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle92_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle93" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle93</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>aes1_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle93_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle94" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle94</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>aes2_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle94_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle95" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle95</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>pri_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle95_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle96" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle96</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>yan_old_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle96_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle97" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle97</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>ros_dp_stalker_4</object_story_id>
+			<infoportion_complete>dominoes_principle97_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle98" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle98</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>gar_old_dp_stalker_10</object_story_id>
+			<infoportion_complete>dominoes_principle98_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="dominoes_principle99" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle99</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>ros_dp_stalker_5</object_story_id>
+			<infoportion_complete>dominoes_principle99_1</infoportion_complete>
+		</objective>
+</game_task>
+
+
+
+
+<game_task id="leading_deadlock1" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock1</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_01</object_story_id>
+			<infoportion_complete>leading_deadlock1_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock2" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock2</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_02</object_story_id>
+			<infoportion_complete>leading_deadlock2_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock3" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock3</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_03</object_story_id>
+			<infoportion_complete>leading_deadlock3_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock4" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock4</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_04</object_story_id>
+			<infoportion_complete>leading_deadlock4_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock5" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock5</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_05</object_story_id>
+			<infoportion_complete>leading_deadlock5_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock6" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock6</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_06</object_story_id>
+			<infoportion_complete>leading_deadlock6_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock7" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock7</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_07</object_story_id>
+			<infoportion_complete>leading_deadlock7_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock8" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock8</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_08</object_story_id>
+			<infoportion_complete>leading_deadlock8_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock9" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock9</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_09</object_story_id>
+			<infoportion_complete>leading_deadlock9_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock10" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock10</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_10</object_story_id>
+			<infoportion_complete>leading_deadlock10_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock11" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock11</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_11</object_story_id>
+			<infoportion_complete>leading_deadlock11_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock12" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock12</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_12</object_story_id>
+			<infoportion_complete>leading_deadlock12_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock13" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock13</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_13</object_story_id>
+			<infoportion_complete>leading_deadlock1_13</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock14" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock14</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_14</object_story_id>
+			<infoportion_complete>leading_deadlock14_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock15" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock15</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_15</object_story_id>
+			<infoportion_complete>leading_deadlock15_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock16" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock16</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_16</object_story_id>
+			<infoportion_complete>leading_deadlock16_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock17" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock17</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_17</object_story_id>
+			<infoportion_complete>leading_deadlock17_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock18" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock18</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_18</object_story_id>
+			<infoportion_complete>leading_deadlock18_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock19" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock19</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_19</object_story_id>
+			<infoportion_complete>leading_deadlock19_1</infoportion_complete>
+		</objective>
+</game_task>
+
+<game_task id="leading_deadlock20" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock20</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_20</object_story_id>
+			<infoportion_complete>leading_deadlock20_1</infoportion_complete>
+		</objective>
+</game_task>
+
+
+<!--<game_task id="dominoes_principle" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_dominoes_principle</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>_dp_stalker_</object_story_id>
+			<infoportion_complete>dominoes_principle_1</infoportion_complete>
+		</objective>
+</game_task>-->
+
+<!--<game_task id="leading_deadlock" prio="200">
+		<title>Принцип домино</title>
+		<objective>
+			<text>Принцип домино</text>
+			<icon>domino</icon>
+			<infoportion_complete>player_complete_leading_deadlock</infoportion_complete>
+		</objective>
+		<objective>
+			<text>Ликвидировать цель</text>
+	<map_location_type hint= "dominoes_principle_hint">kill_stalker_location</map_location_type>
+	<object_story_id>deadlock_dp_stalker_0</object_story_id>
+			<infoportion_complete>leading_deadlock_1</infoportion_complete>
+		</objective>
+</game_task>-->

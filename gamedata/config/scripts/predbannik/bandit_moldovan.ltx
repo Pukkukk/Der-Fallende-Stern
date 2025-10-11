@@ -1,0 +1,59 @@
+[logic]
+active = walker
+
+[walker]
+path_walk = sor_bar_bandit_walk
+path_look = sor_bar_bandit_look
+soundgroup = bar_visitors1
+meet = meet
+danger = danger_ignore
+on_info = {+zaglushka_4} walker2
+on_info2 = {+zaglushka_6} walker2
+
+[meet]
+use = true
+use_wpn = true
+meet_talk_enabled = true
+
+
+[walker2]
+path_walk = sor_bar_bandit_walk2
+path_look = sor_bar_bandit_look2
+meet = meet@talk
+danger = danger_ignore
+on_info = {+meet_borman_start} walker3
+
+[meet@talk]
+meet_state		= 15|guard@wait
+meet_state_wpn	= 15|backoff@threat_weap
+victim			= 15|actor
+victim_wpn		= 15|actor
+use = {=rostok_dist_to_actor_le(3.0) -meet_borman_start} self, true
+use_wpn = {=rostok_dist_to_actor_le(3.0) -meet_borman_start} self, true
+meet_dialog	= sor_moldovan_dialog1
+
+
+[walker3]
+path_walk = sor_bar_bandit_walk
+path_look = sor_bar_bandit_look
+soundgroup = bar_visitors1
+meet = no_meet
+danger = danger_ignore
+on_timer = 15000 | walker4
+
+[walker4]
+path_walk = sor_bar_bandit_walk
+path_look = sor_bar_bandit_look
+soundgroup = bar_visitors1
+meet = meet@wait
+danger = danger_ignore
+
+[meet@wait]
+use = true
+use_wpn = true
+meet_talk_enabled = true
+
+
+
+[danger_ignore]
+ignore_distance = 0

@@ -1,0 +1,66 @@
+[logic]
+active = walker
+combat_ignore = combat_ignore
+on_hit = hit
+on_death = death
+
+[walker]
+path_walk = aes_stalker_grc_02_walk
+path_look = aes_stalker_grc_02_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@aes_stalker_grc_02
+
+meet = no_meet
+on_info = {+grc_pursuit_2} walker1
+on_info2 = {+zaglushka_77} walker2
+
+[walker1]
+path_walk = aes_stalker_grc_02_walk1
+path_look = aes_stalker_grc_02_look1
+combat_ignore_cond = always
+danger = danger_condition@aes_stalker_grc_02
+
+wounded = wounded
+meet = meet
+on_info = {+zaglushka_77} walker2
+
+[walker2]
+path_walk = aes_stalker_grc_02_walk
+path_look = aes_stalker_grc_02_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@aes_stalker_grc_02
+
+meet = meet@friend
+
+[wounded]
+hp_state		= 10 | wounded_heavy@help_heavy
+hp_state_see	= 10 | wounded_heavy@help_heavy
+psy_state		= wounded_psy
+hp_victim		= 10 | nil
+hp_cover		= 210 | false
+hp_fight		= 210 | false
+
+[meet]
+meet_state 		= wounded_heavy@help_heavy
+meet_state_wpn	= wounded_heavy@help_heavy
+victim 			= nil
+victim_wpn 		= nil
+use 			= true
+use_wpn 		= true
+meet_dialog		= cpr_sinebrukhov_dialog
+
+[meet@friend]
+use = true
+use_wpn = true
+
+[hit]
+on_info = {=hit_by_actor} %+grc_pursuit_2%
+
+[death]
+on_info = {-player_complete_grc_pursuit} nil %+grc_pursuit_fail%
+
+[combat_ignore]
+combat_ignore_cond = always
+
+[danger_condition@aes_stalker_grc_02]
+ignore_distance = 0

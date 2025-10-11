@@ -1,0 +1,57 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Devices
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[device_atifact_merger]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\artifact merger"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_merger.ogf
+radius				= 1
+
+inv_name			= ArtefactMerger
+inv_name_short		= AfMerger
+inv_weight			= 3	;0.2
+
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 6
+inv_grid_y			= 13
+cost				= 5000
+
+
+[inventory_box]
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\inventory box"
+class				= O_INVBOX
+cform				= skeleton
+visual				= physics\box\expl_dinamit.ogf
+script_binding      = bind_physic_object.init
+
+[straj_treasure]:inventory_box
+visual = equipments\item_rukzak
+radius = 1
+custom_data = scripts\dfs\straj_taynik.ltx
+
+[renn_treasure]:inventory_box
+visual = equipments\item_rukzak
+radius = 1
+custom_data = scripts\dfs\renn_taynik.ltx
+
+[rx_wmgr_box]:inventory_box
+visual			= grenadier\ammo_vog-25.ogf
+;script_binding		= rx_wmgr.bind_box
+
+
+[dfs_ibox_general]
+GroupControlSection	= spawn_group
+discovery_dependency	= 
+$spawn				= "devices\inventory box"
+class				= O_INVBOX
+cform				= skeleton
+visual				= physics\box\expl_dinamit.ogf
+script_binding		= bind_physic_object.init

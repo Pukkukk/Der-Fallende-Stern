@@ -1,0 +1,368 @@
+;;;;;;;;;;;;;;;;; —¬ƒ ;;;;;;;;;;;;;;;;
+;-------------------------------------
+[wpn_svd]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn                  = "weapons\svd"		; option for Level Editor
+$npc			 		= on				; option for Level Editor
+$prefetch 		 		= 8
+scheduled               = off              	; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_SVD
+min_radius              = 50
+max_radius              = 350
+description				= gunsl_wpn_svd_descr
+dont_interrupt_shot_anm = true ;Ќе прерывать анимацию выстрела чтобы гильза успела вылететь, т.к. в гансе гильзы €вл€ютс€ частью анимации выстрела
+is_gunslinger_weapon = true ;—пециальный флаг чтобы двиг понимал что это ствол из Gunslinger Mod и к нему надо применить фикс создани€ физ. оболочки дл€ избежани€ ошибок с этим св€занных.	
+
+ef_main_weapon_type		 = 3
+ef_weapon_type			 = 8
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, scope7, sight, sheka, knife
+;--- scope weapons -----------------------------------------------------------------
+holder_range_modifier	= 2.15               ; во сколько раз увеличиваетс€ eye_range 
+holder_fov_modifier	= 0.3              ; во сколько раз увеличиваетс€ eye_fov
+;-----------------------------------------------------------------------------------
+
+cost				= 15000
+weapon_class			= sniper_rifle
+
+ammo_limit			= 60
+ammo_current			= 10
+ammo_elapsed			= 0
+
+ammo_mag_size			= 10
+ammo_class			= ammo_7.62x54_7h1, ammo_7.62x54_7h14, ammo_7.62x54_ap 
+
+sprint_allowed			= true
+;-----------------------------------------------------------------------------------
+;базова€ дисперси€
+fire_dispersion_base		= 0.025	;угол (в градусах) базовой дисперсии оружи€ (оружи€ зажатого в тисках)
+control_inertion_factor		= 2.2f
+	
+;отдача
+cam_relax_speed         	= 7.5	;скорость возврата в исходное положение
+cam_relax_speed_ai         	= 120.75
+cam_dispersion          	= 4.0	;увеличени€ угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.5	;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 1.0	;ствол будет подыматьс€ на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 15.0	;максимальный угол отдачи
+cam_max_angle_horz		= 3.0	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 1.0	;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		 = 0.005 ;веро€тность осечки при максимальном износе 
+misfire_condition_k			= 0.05
+condition_shot_dec 			= 0.0002 ;увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+hand_dependence 		= 1
+single_handed			= 0
+
+slot 				= 2		; // secondary
+animation_slot			= 2		; type of the animation that will be used
+
+inv_name			= gunsl_wpn_svd
+inv_name_short			= gunsl_wpn_svd
+inv_weight				= 4.9
+
+inv_grid_width			= 6
+inv_grid_height			= 2
+inv_grid_x			= 0
+inv_grid_y			= 0
+
+kill_msg_x		= 0
+kill_msg_y		= 0
+kill_msg_width		= 98
+kill_msg_height		= 23
+
+direction               = 0, 0, 1
+
+fire_point 					= 0.0, 0.129, 0.945
+
+flame_particles                                    = weapons\new_effects\akmsl_pkm
+smoke_particles				= weapons\generic_shoot_00
+
+shell_point		 			= 0.0, 0.129, 0.192
+shell_dir		 			= 0.0, 0.0, 0.4
+shell_particles				= weapons\762x54
+
+PDM_disp_base 			= 6.0
+PDM_disp_vel_factor 		= 0.9
+PDM_disp_accel_factor 		= 1.0
+PDM_crouch	 		= 1.0
+PDM_crouch_no_acc 		= 1.0
+
+;;;;;;; ƒл€ "ѕоследний —талкер"
+hit_power                       = 1.2
+hit_impulse		 	= 90
+hit_type 			= fire_wound
+
+fire_distance           	= 600
+bullet_speed		 	= 850	;начальна€ скорость пули
+rpm                     	= 120
+
+use_aim_bullet				= true		;ѕоддерживаетс€ ли перва€ суппер пул€
+time_to_aim				= 1.0	
+
+hud                     = wpn_svd_hud
+normal                  = 0, 1, 0
+position                = -0.026, -0.077, 0.00	;(-влево\+вправо ,+выше\-ниже, -ближе\+дальше  )
+orientation             = 0, 0, 0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;под мишкой
+strap_position         		= -0.25,-0.15,0.50 ;-0.30,-0.15,0.55	;-0.15,-0.15,0.45		; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -5,-189,65		; -25,-189,65		; (3rd person view in degrees)
+;strap_position         		= -0.26,-0.11,0.15			; position (offset) and orientation of the weapon when it is strapped
+;strap_orientation      		= -15,-9,110				; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo            = 10
+visual                  = dynamics\weapons\wpn_svd\wpn_svd.ogf
+
+light_color		 	= 0.6,0.5,0.3
+light_range		 	= 4.0
+light_var_color		 	= 0.05
+light_var_range		 	= 0.5
+light_time 		 	= 0.2
+
+ph_mass			 		= 3
+;cost			 		= 900
+
+;addons
+scope_status			= 2
+silencer_status			= 0
+grenade_launcher_status		= 0
+; zoom_enabled				= true
+scope_x 						= 60
+scope_y 						= -2
+scope_name 					= wpn_addon_scope			; section name for the attachable scope
+scope_names 					= wpn_addon_scope,wpn_addon_scope_cobra,wpn_addon_scope_pka,wpn_addon_scope_kashtan, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night
+scope_respawn = wpn_svd
+scope_respawn_wpn_addon_scope = scope_pso1_svd
+scope_respawn_wpn_addon_scope_pka = scope_pka_svd
+scope_respawn_wpn_addon_scope_cobra = scope_cobra_svd
+scope_respawn_wpn_addon_scope_kashtan = scope_kashtan_svd
+scope_respawn_wpn_addon_scope_x2.7 = scope_pso1m2_svd
+scope_respawn_wpn_addon_scope_detector = scope_nvsn_svd
+scope_respawn_wpn_addon_scope_night = scope_nvas_svd
+
+
+zoom_enabled			= true
+scope_zoom_factor	        = 100		;ѕ—ќ-1 4X
+scope_texture			= wpn\wpn_crosshair
+
+;звуки
+snd_silncer_shot		= weapons\svd\svd_shoot_s
+snd_draw		= weapons\svd\svd_draw
+snd_holster		= weapons\vss\vss_hide
+snd_shoot		= weapons\svd\svd_shoot
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\svd\svd_reload
+snd_reload_empty        = weapons\svd\svd_reload_empty
+snd_changecartridgetype = weapons\svd\svd_reload
+snd_shoot_grenade       = weapons\gen_grenshoot
+snd_reload_grenade      = weapons\gen_grenload, 1.0, 0.8
+snd_switch              = weapons\groza_switch, 1.0, 0.5
+snd_close		= $silent
+snd_reload_jammed       = weapons\svd\svd_revival
+snd_reload_jammed_last  = weapons\svd\svd_revival_last
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_fire_modes	= weapons\vss\vss_firemode
+;snd_fire_modes_empty
+;snd_fire_modes_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\vss\vss_firemode
+snd_laser_off	        = weapons\vss\vss_firemode
+snd_torch_on	        = weapons\vss\vss_firemode
+snd_torch_off	        = weapons\vss\vss_firemode
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_kick		= weapons\ak74\ak74_bayonet
+snd_item_on             = weapons\headflash_on
+#include "huds.ltx" 
+
+[scope_pso1_svd]:wpn_svd
+hidden_bones =  scope2, scope3, scope4, scope5, scope6, scope7, sight, sheka, knife
+hud  						= wpn_svd_1pso_hud
+scope_name 					= wpn_addon_scope
+scope_x              	= 38                 ; offset in inventory icon
+scope_y                 = 7
+[wpn_svd_1pso_hud]:wpn_svd_hud
+aim_hud_offset_pos = 0.0,-0.0005,0.06
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.0005,0.06
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_pso1m2_svd]:wpn_svd
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope7, sight, sheka, knife
+hud  						= wpn_svd_pso1m2_hud
+scope_name 					= wpn_addon_scope_x2.7
+scope_x              	= 38                 ; offset in inventory icon
+scope_y                 = 7
+[wpn_svd_pso1m2_hud]:wpn_svd_hud
+aim_hud_offset_pos = -0.0005,-0.0005,0.06
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0005,-0.0005,0.06
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_pka_svd]:wpn_svd
+hidden_bones = scope1, scope2, scope3, scope5, scope6, scope7, sight, sheka, knife
+hud  						= wpn_svd_pka_hud
+scope_name 					= wpn_addon_scope_pka
+scope_x              	= 76                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_pka_hud]:wpn_svd_hud
+aim_hud_offset_pos = 0.0,0.0005,-0.05
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0005,-0.05
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_origin_offset = -0.03
+
+
+[scope_cobra_svd]:wpn_svd
+hidden_bones = scope1, scope2, scope3, scope4, scope6, scope7, sight, sheka, knife
+hud  						= wpn_svd_cobra_hud
+scope_name 					= wpn_addon_scope_cobra
+scope_x              	= 72                 ; offset in inventory icon
+scope_y                 = 11
+[wpn_svd_cobra_hud]:wpn_svd_hud
+aim_hud_offset_pos = -0.0088,0.002,-0.08
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0088,0.002,-0.08
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_origin_offset = -0.03
+
+
+[scope_kashtan_svd]:wpn_svd
+hidden_bones = scope1, scope2, scope4, scope5, scope6, scope7, sight, sheka, knife
+hud  						= wpn_svd_kashtan_hud
+scope_name 					= wpn_addon_scope_kashtan
+scope_x              	= 57                 ; offset in inventory icon
+scope_y                 = 4
+[wpn_svd_kashtan_hud]:wpn_svd_hud
+aim_hud_offset_pos = -0.0115,0.0,-0.008
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0115,0.0,-0.008
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_nvsn_svd]:wpn_svd
+hidden_bones = scope1, scope3, scope4, scope5, scope6, scope7, sight, sheka, knife
+hud  						= wpn_svd_nvsn_hud
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 33                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_nvsn_hud]:wpn_svd_hud
+aim_hud_offset_pos = 0.0045,-0.028,0.04
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0045,-0.028,0.04
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_nvas_svd]:wpn_svd
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, sight, sheka, knife
+hud  						= wpn_svd_nvas_hud
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 33                 ; offset in inventory icon
+scope_y                 = 8
+[wpn_svd_nvas_hud]:wpn_svd_hud
+aim_hud_offset_pos = 0.01,-0.022,0.04
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.01,-0.022,0.04
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[wpn_svd_m1]:wpn_svd
+hidden_bones = scope1, scope3, scope4, scope5, scope6, scope7, knife
+class                   = WP_SVD          ;WP_BINOC
+description					= enc_weapons1_wpn-svd_m1
+inv_name					= wpn-svd_m1
+inv_name_short					= wpn-svd_m1
+cost				= 25000
+inv_weight				= 5.3
+
+fire_dispersion_base		= 0.0085
+cam_dispersion			= 0.35
+cam_step_angle_horz		= 0.1
+condition_shot_dec 		= 0.0006
+rpm                     	= 180
+ammo_class			= ammo_93x64_sp, ammo_93x64_ap 
+
+
+silencer_status				= 2
+silencer_name  				= wpn_addon_silencer
+silencer_x                  = 270		; offset in inventory icon
+silencer_y                  = 13
+
+
+scope_dynamic_zoom = true
+
+silencer_hit_power 		= 1.6
+silencer_hit_impulse	 	= 75
+silencer_fire_distance 		= 560
+silencer_bullet_speed	 	= 825
+silencer_smoke_particles			= weapons\generic_shoot_00
+silencer_light_color		= 0.6,0.5,0.3
+silencer_light_range		= 2
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+fire_point 					= 0.0, 0.129, 0.942
+shell_point		 			= 0.0, 0.120, 0.185
+strap_position         		= -0.15,-0.15,0.45
+strap_orientation      		= -25,-189,65
+position					= -0.022, -0.077, 0.00
+scope_status			= 1
+scope_name =  wpn_addon_scope_night
+inv_grid_x					= 5
+inv_grid_y					= 23
+scope_respawn = wpn_svd_m1
+;звуки
+snd_shoot			= weapons\svd\svd_nimble_shoot
+snd_gyro					= weapons\binoculars_gyro
+snd_zoomin					= weapons\binoculars_zoomin
+snd_zoomout				        = weapons\binoculars_zoomout
+visual					= dynamics\weapons\wpn_svds\wpn_svds
+hud                     = wpn_svd_m1_hud
+vision_present				= true
+vis_frame_speed				= 4				; скорость, с которой наводитс€ рамка на цель
+vis_frame_color				= 0.7,0.7,0.7,1.0	; цвет рамки RGBA (A) Ќе учитываетс€
+found_snd					= detectors\DA-2_beep1
+
+scope_texture		= crosshair2d\crosshairs_ui_pn23
+scope_zoom_factor	= 10
+scope_zoom_factor_descr	= 4
+holder_range_modifier	= 1.2
+holder_fov_modifier		= 0.3
+
+scope_inertion_factor   = 8
+
+scope_lense_fov_factor		= 8
+scope_dynamic_zoom 	= false
+scope_lense_hud_fov = 0.25
+
+
+[wpn_svd_m1_hud]:wpn_svd_hud
+item_visual					= dynamics\weapons\wpn_svds\wpn_svds_hud
+aim_hud_offset_pos =0.002500,0.010500,0.040000
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.002500,0.010500,0.040000
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0

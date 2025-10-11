@@ -1,0 +1,67 @@
+
+; Fort17 ================================================================================================================================================ ПМ Пистолет Макарова
+; ==================================== первая ветка ====================================
+
+
+; 1 ветка
+
+; upgrade 1
+[wpn_fort17_a1]:wpn_fort17
+hidden_bones = barrel_silencer, flash, laser
+available_upgrades		= fort17_upgr2
+installed_upgrades		= fort17_upgr1
+icon_group = 2
+cost					 	= 2380
+hud                      	= wpn_fort17_a1_hud
+[wpn_fort17_a1_hud]:wpn_fort_snag_hud
+hidden_bones = barrel_silencer, flash, laser
+
+
+
+
+
+; upgrade 2
+[wpn_fort17_a2]:wpn_fort17_a1
+hidden_bones = barrel, flash, laser
+available_upgrades		= fort17_upgr3
+installed_upgrades		= fort17_upgr1, fort17_upgr2
+silencer_status				= 2
+cost					 	= 2580
+hud                      	= wpn_fort17_a2_hud
+[wpn_fort17_a2_hud]:wpn_fort_snag_hud
+hidden_bones = barrel, flash, laser
+
+
+
+
+; upgrade 3
+[wpn_fort17_a3]:wpn_fort17_a2
+available_upgrades		= fort17_upgr4
+installed_upgrades		= fort17_upgr1, fort17_upgr2, fort17_upgr3
+cost					 	= 2780
+
+ammo_mag_size		 		= 17
+
+; upgrade 3
+[wpn_fort17_a4]:wpn_fort17_a3, green_laser, tactical_torch
+hidden_bones = barrel
+available_upgrades		= none
+installed_upgrades		= fort17_upgr1, fort17_upgr2, fort17_upgr3, fort17_upgr4
+cost					 	= 2980
+
+laserdot_world_attach_offset_x = 0.0
+laserdot_world_attach_offset_y = 0.1
+laserdot_world_attach_offset_z = 0.05
+
+laserdot_attach_offset_x = 0.0
+laserdot_attach_offset_y = 0.0
+laserdot_attach_offset_z = 0.1
+
+torch_attach_offset_x = 0.0
+torch_attach_offset_y = 0.0
+torch_attach_offset_z = 0.4
+
+hud                      	= wpn_fort17_a4_hud
+[wpn_fort17_a4_hud]:wpn_fort_snag_hud
+hidden_bones = barrel
+

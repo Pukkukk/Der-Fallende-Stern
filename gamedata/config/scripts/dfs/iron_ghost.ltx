@@ -1,0 +1,48 @@
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = x16_iron_mask_walk
+path_look = x16_iron_mask_look
+meet = no_meet
+show_spot = false
+on_actor_dist_le = 5 |  walker0
+danger = danger_condition@x16_iron_mask
+combat_ignore_cond = always
+
+[walker0]
+path_walk = x16_iron_mask_walk1
+path_look = x16_iron_mask_look1
+meet = no_meet
+show_spot = false
+on_timer = 7000 | remark
+danger = danger_condition@x16_iron_mask
+combat_ignore_cond = always
+
+[remark]
+anim = hello
+snd = demon_say
+target = actor
+meet = no_meet
+show_spot = false
+on_signal = sound_end| walker1
+danger = danger_condition@x16_iron_mask
+combat_ignore_cond = always
+
+[walker1]
+path_walk = x16_iron_mask_walk
+path_look = x16_iron_mask_look
+meet = no_meet
+show_spot = false
+on_timer = 3000 | {-zaglushka_17} %+zaglushka_17 =demon_away_1%
+danger = danger_condition@x16_iron_mask
+combat_ignore_cond = always
+
+[danger_condition@x16_iron_mask]
+ignore_distance = 0
+
+[combat_ignore]
+;combat_ignore_cond = always
+[smart_terrains]
+none = true

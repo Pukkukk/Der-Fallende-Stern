@@ -1,0 +1,62 @@
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = sor_us_soldier_0003_walk
+path_look = sor_us_soldier_0003_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@sor_us_soldier_0003
+meet = meet@no_pass
+on_info = {+conductor_2} walker1
+on_info2 = {+dont_has_pass} walker0
+
+[walker0]
+path_walk = sor_us_soldier_0003_walk
+path_look = sor_us_soldier_0003_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@sor_us_soldier_0003
+meet = no_meet
+on_info = {+conductor_2} walker1
+on_info2 = {+zaglushka_41} nil
+
+[walker1]
+path_walk = sor_us_soldier_0003_walk
+path_look = sor_us_soldier_0003_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@sor_us_soldier_0003
+meet = meet@has_pass
+on_info = {+sor_get_pass} walker2
+on_info2 = {+zaglushka_41} nil
+
+[walker2]
+path_walk = sor_us_soldier_0003_walk
+path_look = sor_us_soldier_0003_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@sor_us_soldier_0003
+meet = no_meet
+on_info = {+zaglushka_41} nil
+
+[combat_ignore]
+combat_ignore_cond = {=fighting_dist_ge(50)}
+
+[danger_condition@sor_us_soldier_0003]
+ignore_distance = 0
+
+[meet@no_pass]
+victim = 30|actor
+victim_wpn = 30|actor
+meet_state		= 30|threat
+meet_state_wpn	= 30|backoff@threat_weap
+use = {=rostok_dist_to_actor_le(3.0) -dont_has_pass} self, true
+use_wpn = {=rostok_dist_to_actor_le(3.0) -dont_has_pass} self, true
+meet_dialog	= sor_post_dialog1
+
+[meet@has_pass]
+victim = 30|actor
+victim_wpn = 30|actor
+meet_state		= 30|threat
+meet_state_wpn	= 30|backoff@threat_weap
+use = {=rostok_dist_to_actor_le(3.0) -sor_get_pass} self, true
+use_wpn = {=rostok_dist_to_actor_le(3.0) -sor_get_pass} self, true
+meet_dialog	= sor_post_dialog2

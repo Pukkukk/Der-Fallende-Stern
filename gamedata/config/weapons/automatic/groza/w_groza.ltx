@@ -1,0 +1,608 @@
+;;;;;;;;;;;;;;;;;;; ОЦ-14 Гроза ;;;;;;;;;;;;;;;;;;
+;-------------------------------------------------
+[wpn_groza]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn                   = "weapons\groza"					; option for Level Editor
+$npc					= on				; option for Level Editor
+$prefetch 				= 16
+scheduled				= off              ; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_GROZA
+min_radius              = 30
+max_radius              = 100
+description			= gunsl_wpn_groza_descr
+
+dont_interrupt_shot_anm = true 
+is_gunslinger_weapon = true 
+
+
+ef_main_weapon_type		= 2
+ef_weapon_type			= 6
+
+;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0		       ; во сколько раз увеличивается eye_range 
+holder_fov_modifier	= 0.7              ; во сколько раз увеличивается eye_fov
+;-----------------------------------------------------------------------------------
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, foregrip_rail, launcher_scope_static, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45, handler2
+
+cost				= 7000
+weapon_class			= assault_rifle
+
+ammo_limit			= 210
+ammo_current			= 180
+ammo_elapsed			= 20
+
+ammo_mag_size		 	= 20
+ammo_class		 	= ammo_9x39_pab9, ammo_9x39_sp5, ammo_9x39_ap
+fire_modes			= 1, -1
+launch_speed			= 0
+
+grenade_class			= ammo_vog-25, ammo_vog-25p
+
+hand_dependence		 	= 1
+single_handed			= 0
+
+slot 				= 2		; // secondary
+animation_slot			= 8		; type of the animation that will be used
+
+inv_name	         	= gunsl_wpn_groza
+inv_name_short		 	= gunsl_wpn_groza
+inv_weight		 	= 3.2
+
+inv_grid_width     = 4
+inv_grid_height    = 2
+inv_grid_x         = 0
+inv_grid_y         = 10
+
+kill_msg_x		= 67
+kill_msg_y		= 123
+kill_msg_width		= 64
+kill_msg_height		= 30
+
+;-----------------------------------------------------------------------------------
+;базовая дисперсия
+fire_dispersion_base		= 0.22	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor		= 1.05f
+
+;отдача
+cam_relax_speed         	= 12.5	;скорость возврата в исходное положение
+cam_dispersion          	= 0.3	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.12	;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 0.75	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 8.5	;максимальный угол отдачи
+cam_max_angle_horz		= 9.0	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 0.85	;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		        = 0.003	;вероятность осечки при максимальном износе 
+misfire_condition_k			= 0.05
+condition_shot_dec 			= 0.0001 ;увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+
+fire_point              			= 0.0,0.194,0.274
+fire_point2              			= 0.0, 0.156, 0.285
+flame_particles		= weapons\new_effects\aksu
+smoke_particles		= weapons\generic_shoot_00
+grenade_flame_particles = weapons\generic_weapon01
+
+shell_point			= 0.0, 0.194, -0.185
+shell_dir			= 0.0, 0.0, 0.4
+shell_particles			= weapons\9x39 ;weapons\arsenal_shells1
+rpm_empty_click 		= 200
+
+PDM_disp_base 			= 1.0
+PDM_disp_vel_factor 		= 1.2
+PDM_disp_accel_factor 		= 1.2
+PDM_crouch	 		= 1.0
+PDM_crouch_no_acc 		= 1.0
+
+;;;;;;; Для "Последний Сталкер"
+hit_power               = 0.60
+hit_impulse	 	= 58
+hit_type 			= fire_wound
+fire_distance           = 150
+bullet_speed		= 350	;начальная скорость пули
+rpm                    	= 750
+
+use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+time_to_aim				= 1.0	
+
+grenade_vel			= 120
+; end ttc
+
+silencer_hit_power       	= 0.57
+silencer_hit_impulse	 	= 52
+silencer_fire_distance   	= 120
+silencer_bullet_speed	 	= 320
+
+hud                     = wpn_groza_hud
+normal                  = 0, 1, 0
+
+;----------------------------------------------------------
+position                = -0.026, -0.144, 0.0
+orientation      	= 0, 0, 0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+strap_position         		= -0.15,-0.38,0.35			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -10,-5,10					; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo            = 90
+visual                  = dynamics\weapons\wpn_groza\wpn_groza.ogf
+
+light_color		 	= 0.6,0.5,0.3
+light_range		 	= 5
+light_var_color		 	= 0.05
+light_var_range		 	= 0.5
+light_time 		 	= 0.2
+
+ph_mass			 		= 5
+;cost			 		= 2100
+
+;addons
+scope_status			= 2
+silencer_status			= 0
+grenade_launcher_status	        = 1
+
+zoom_enabled			= true
+scope_zoom_factor               = 100
+
+scope_respawn                                        = wpn_groza
+scope_name              = wpn_addon_scope_po4x34
+scope_names             = wpn_addon_scope_po4x34
+scope_respawn_wpn_addon_scope_po4x34                 = wpn_groza_po4x34
+scope_respawn_wpn_addon_scope_eotech                 = wpn_groza_eotech
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_groza_susat_dusk
+scope_respawn_wpn_addon_scope_elcan                  = wpn_groza_elcan
+scope_respawn_wpn_addon_scope_susat_night            = wpn_groza_susat_night
+
+scope_x 					= 63						; offset in inventory icon
+scope_y 					= -1
+
+silencer_name  				        = wpn_addon_silencer		; section name for the attachable silencer
+silencer_x 					= 171						; offset in inventory icon
+silencer_y 					= 16				
+
+;******[Звуковая часть]******;
+snd_draw		= weapons\ak74\ak74_draw
+snd_holster		= weapons\p90\p90_hide
+snd_shoot		= iwp\groza_muzzle_mono1
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\groza\groza_reload
+snd_reload_empty        = weapons\groza\groza_reload_empty
+snd_changecartridgetype = weapons\groza\groza_reload
+snd_shoot_grenade       = weapons\ak74\ak74_gl_shoot
+snd_reload_grenade      = weapons\ak74\ak74_gl_reload
+snd_change_grenade      = weapons\ak74\ak74_gl_grenadechange
+snd_switch              = weapons\groza\groza_gl_activate_scope
+snd_close		= $silent
+snd_reload_jammed       = weapons\groza\groza_revival
+snd_reload_jammed_last  = weapons\groza\groza_revival
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_fire_modes	= weapons\vss\vss_firemode
+;snd_fire_modes_empty
+;snd_fire_modes_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\vss\vss_firemode
+snd_laser_off	        = weapons\vss\vss_firemode
+snd_torch_on	        = weapons\vss\vss_firemode
+snd_torch_off	        = weapons\vss\vss_firemode
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_kick		= weapons\ak74\ak74_bayonet
+snd_item_on             = weapons\headflash_on
+snd_scope_brightness_plus = weapons\nv_intensity
+snd_scope_brightness_minus = weapons\nv_intensity
+snd_silncer_shot        = weapons\groza\groza_shoot_silencer
+;params when silencer is attached 
+;similar to corresponding params without prefix silencer_
+
+;silencer_flame_particles 	= weapons\generic_weapon01
+silencer_smoke_particles 	= weapons\generic_shoot_00
+
+silencer_light_color		= 0.6,0.5,0.3
+silencer_light_range		= 2
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+ 
+ #include "huds.ltx"
+ 
+[wpn_groza_sil]:wpn_groza 
+ silencer_status			= 1;2
+scope_status			= 2
+grenade_launcher_status	= 0
+hud                     = wpn_groza_silencer_hud 
+ snd_shoot        = weapons\groza\groza_shoot_silencer
+ inv_weight		 		= 2.85
+
+inv_name                = gunsl_wpn_groza_sil
+inv_name_short          = gunsl_wpn_groza_sil
+
+inv_grid_width			= 4
+inv_grid_height			= 2
+inv_grid_x				= 12
+inv_grid_y				= 48
+
+flame_particles		    = weapons\new_effects\aksu
+ 
+scope_respawn                                        = wpn_groza_sil
+scope_name              = wpn_addon_scope_po4x34
+scope_names             = wpn_addon_scope_po4x34
+scope_respawn_wpn_addon_scope_po4x34                 = wpn_groza_sil_po4x34
+
+;===================================================================================================
+; UPGRADE
+upgrade_allowed				= true ;false ; разрешен ли апгрейд этой секции
+upgrades					= groza_sil_upgr1, groza_sil_upgr2, groza_sil_upgr3, groza_sil_upgr4, groza_sil_upgr5, groza_sil_upgr6
+available_upgrades			= groza_sil_upgr1
+upgrade_scheme				= upgrade_scheme_groza_sil ; набор иконок апгрейдов 
+upgrade_mechanic				= bar_azot ; набор иконок апгрейдов 
+image						= ui_upgrade_wpn_groza ; изображение предмета
+;===================================================================================================
+
+
+[wpn_groza_sil_po4x34]:wpn_groza_sil
+
+hidden_bones = scope1, scope2, scope3, scope4, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45, launcher_scope, foregrip_rail, handler2
+scope_bone = scope5
+
+hud = wpn_groza_sil_po4x34_hud
+
+scope_name              = wpn_addon_scope_po4x34
+scope_x              	= 80                 ; offset in inventory icon
+scope_y                 = -17
+
+
+[wpn_groza_sil_po4x34_hud]:wpn_groza_silencer_hud
+
+aim_hud_offset_pos = 0.0,-0.032,-0.12
+aim_hud_offset_rot = 0.007000,0.000000,0.000000
+
+aim_hud_offset_pos_16x9 = 0.0,-0.032,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+[wpn_groza_sil_eotech]:wpn_groza_sil
+
+hidden_bones = scope2, scope3, scope4, scope5, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45, planka, launcher_scope, foregrip, handler2
+scope_bone = scope1
+
+hud                      			= wpn_groza_sil_eotech_hud
+
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 89                 ; offset in inventory icon
+scope_y                 = -6
+
+
+[wpn_groza_sil_eotech_hud]:wpn_groza_silencer_hud
+
+aim_hud_offset_pos = 0.000266,0.004670,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000266,0.004670,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+inertion_aim_origin_offset = 0.015
+inertion_aim_speed = 8
+
+
+[wpn_groza_sil_susat_dusk]:wpn_groza_sil
+
+hidden_bones = scope1, scope3, scope4, scope5, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45, planka, launcher_scope, foregrip, handler2
+scope_bone = scope2
+
+hud                      			= wpn_groza_sil_susat_dusk_hud
+
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 90                ; offset in inventory icon
+scope_y                 = -11
+
+
+[wpn_groza_sil_susat_dusk_hud]:wpn_groza_silencer_hud
+
+aim_hud_offset_pos = 0.000356,0.001420,-0.11
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000356,0.001420,-0.11
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[wpn_groza_sil_elcan]:wpn_groza_sil
+
+hidden_bones = scope1, scope2, scope4, scope5, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45, planka, launcher_scope, foregrip, handler2
+scope_bone = scope3
+
+hud = wpn_groza_sil_elcan_hud
+
+scope_name              = wpn_addon_scope_elcan
+scope_x              	= 62               ; offset in inventory icon
+scope_y                 = -9
+
+use_alt_aim_hud = true
+
+[wpn_groza_sil_elcan_hud]:wpn_groza_silencer_hud
+
+aim_hud_offset_pos = -0.0,-0.00055,-0.12
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = -0.0,-0.00055,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000220,-0.038200,0.000000
+aim_hud_offset_alt_rot = 0.000500,-0.000100,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000220,-0.039200,0.000000
+aim_hud_offset_alt_rot_16x9 = 0.002100,0.000000,0.000000
+
+[wpn_groza_sil_susat_night]:wpn_groza_sil
+
+hidden_bones = scope1, scope2, scope3, scope5, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45, planka, launcher_scope, foregrip, handler2
+scope_bone = scope4
+
+hud = wpn_groza_sil_susat_night_hud
+
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 47                ; offset in inventory icon
+scope_y                 = -8
+
+scope_lense_hud_fov = 0.2
+
+[wpn_groza_sil_susat_night_hud]:wpn_groza_silencer_hud
+
+aim_hud_offset_pos =  -0.000094,-0.023240,0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = -0.000094,-0.023240,0.1
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+
+
+
+
+
+
+[wpn_groza_m1]:wpn_groza 
+
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag45_black, mag60, flash, light, sight, grip, laser, foregrip_rail, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler2
+
+ammo_class				= ammo_5.45x39_fmj, ammo_5.45x39_ap   ; name of the ltx-section of used ammo 
+
+hit_power           = 0.7
+hit_impulse		 	= 140
+hit_type 			= fire_wound
+
+fire_distance           	= 400
+bullet_speed			= 900	;начальная скорость пули
+rpm                    		= 750
+
+fire_dispersion_base		= 0.06
+
+ammo_mag_size		 	= 30
+
+snd_shoot				= weapons\groza\groza_shoot_uniq
+
+inv_name                = gunsl_wpn_groza_nimble
+inv_name_short          = gunsl_wpn_groza_nimble
+description             = gunsl_wpn_groza_nimble_descr
+
+inv_grid_width     = 4
+inv_grid_height    = 2
+inv_grid_x         = 0
+inv_grid_y         = 32
+
+hud                     = wpn_groza_545_hud 
+ 
+scope_respawn                                        = wpn_groza_m1
+scope_name              = wpn_addon_scope_po4x34
+scope_names             = wpn_addon_scope_po4x34
+scope_respawn_wpn_addon_scope_po4x34                 = wpn_groza_545_po4x34
+
+;===================================================================================================
+; UPGRADE
+upgrade_allowed				= true ;false ; разрешен ли апгрейд этой секции
+upgrades					= groza_545_upgr1, groza_545_upgr2, groza_545_upgr3, groza_545_upgr4, groza_545_upgr5, groza_545_upgr6, groza_545_upgr7
+available_upgrades			= groza_545_upgr1
+upgrade_scheme				= upgrade_scheme_groza545 ; набор иконок апгрейдов 
+upgrade_mechanic				= bar_azot ; набор иконок апгрейдов 
+image						= ui_upgrade_wpn_groza545 ; изображение предмета
+;===================================================================================================
+
+
+cam_dispersion          = 0.8        ;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc      = 0.5       ;увеличениe cam_dispersion с каждым выстрелом
+zoom_cam_dispersion          = 0.45
+zoom_cam_dispersion_inc      = 0.45
+
+
+[wpn_groza_545_hud]:wpn_groza_hud
+
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag45_black, mag60, flash, light, sight, grip, laser, foregrip_rail, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler2
+
+
+
+
+
+
+
+
+
+[wpn_groza_scope_hud]:wpn_groza_hud
+
+;Переключение на патроны/////////////////////////////////////////////////////////////////
+anm_switch                 = groza_gl_deactivate_scope
+anm_switch_w_gl            = groza_gl_deactivate_scope
+anm_switch_empty_w_gl      = groza_gl_deactivate_scope
+anm_switch_jammed_w_gl     = groza_gl_deactivate_scope, groza_gl_deactivate_scope_jammed
+
+;Переключение на гранаты/////////////////////////////////////////////////////////////////
+anm_switch_g              = groza_gl_activate_scope
+anm_switch_empty_g        = groza_gl_activate_scope
+anm_switch_jammed_g       = groza_gl_activate_scope, groza_gl_activate_scope_jammed
+
+[wpn_groza_545_scope_hud]:wpn_groza_scope_hud
+
+[wpn_groza_po4x34]:wpn_groza
+hidden_bones = scope1, scope2, scope3, scope4, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, foregrip_rail, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45, launcher_scope, handler2
+scope_bone = scope5
+hud = wpn_groza_po4x34_hud
+scope_name              = wpn_addon_scope_po4x34
+scope_x              	= 80                 ; offset in inventory icon
+scope_y                 = -17
+[wpn_groza_po4x34_hud]:wpn_groza_scope_hud
+aim_hud_offset_pos = 0.0,-0.032,-0.12
+aim_hud_offset_rot = 0.007000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0,-0.032,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+[wpn_groza_eotech]:wpn_groza
+hidden_bones = scope2, scope3, scope4, scope5, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45, planka, launcher_scope, foregrip, handler2
+scope_bone = scope1
+hud                      			= wpn_groza_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 89                 ; offset in inventory icon
+scope_y                 = -6
+[wpn_groza_eotech_hud]:wpn_groza_scope_hud
+aim_hud_offset_pos = 0.000266,0.004670,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.000266,0.004670,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_aim_origin_offset = 0.015
+inertion_aim_speed = 8
+
+
+[wpn_groza_susat_dusk]:wpn_groza
+hidden_bones = scope1, scope3, scope4, scope5, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45, planka, launcher_scope, foregrip, handler2
+scope_bone = scope2
+hud                      			= wpn_groza_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 90                ; offset in inventory icon
+scope_y                 = -11
+[wpn_groza_susat_dusk_hud]:wpn_groza_scope_hud
+aim_hud_offset_pos = 0.000356,0.001420,-0.11
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.000356,0.001420,-0.11
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[wpn_groza_elcan]:wpn_groza
+hidden_bones = scope1, scope2, scope4, scope5, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45, planka, launcher_scope, foregrip, handler2
+scope_bone = scope3
+hud = wpn_groza_elcan_hud
+scope_name              = wpn_addon_scope_elcan
+use_alt_aim_hud = true
+scope_x              	= 62               ; offset in inventory icon
+scope_y                 = -9
+[wpn_groza_elcan_hud]:wpn_groza_scope_hud
+aim_hud_offset_pos = -0.0,-0.00055,-0.12
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0,-0.00055,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000220,-0.038200,0.000000
+aim_hud_offset_alt_rot = 0.000500,-0.000100,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000220,-0.039200,0.000000
+aim_hud_offset_alt_rot_16x9 = 0.002100,0.000000,0.000000
+
+[wpn_groza_susat_night]:wpn_groza
+hidden_bones = scope1, scope2, scope3, scope5, mag30, mag45, mag45_black, mag60, flash, light, sight, grip, laser, shell5x45, bullet5x45, bullet5x45_2, ammo_chamber_5x45, planka, launcher_scope, foregrip, handler2
+scope_bone = scope4
+hud = wpn_groza_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 47                ; offset in inventory icon
+scope_y                 = -8
+scope_lense_hud_fov = 0.2
+[wpn_groza_susat_night_hud]:wpn_groza_scope_hud
+aim_hud_offset_pos =  -0.000094,-0.023240,0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.000094,-0.023240,0.1
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+
+
+
+
+
+[wpn_groza_545_po4x34]:wpn_groza_m1
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag45_black, mag60, flash, light, sight, grip, laser, foregrip_rail, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler2
+scope_bone = scope5
+hud = wpn_groza545_po4x34_hud
+scope_name              = wpn_addon_scope_po4x34
+scope_x              	= 80                 ; offset in inventory icon
+scope_y                 = -17
+[wpn_groza545_po4x34_hud]:wpn_groza_scope_hud
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag45_black, mag60, flash, light, sight, grip, laser, foregrip_rail, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler2
+
+aim_hud_offset_pos = 0.0,-0.032,-0.12
+aim_hud_offset_rot = 0.007000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0,-0.032,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+
+
+
+
+
+;#include "upgrades.ltx"
+;#include "upgrades_sil.ltx"
+;#include "upgrades_545.ltx"
+

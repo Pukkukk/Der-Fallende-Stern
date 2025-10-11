@@ -1,0 +1,924 @@
+
+; Беретта ================================================================================================================================================ ПМ Пистолет Макарова
+; ==================================== первая ветка ====================================
+
+
+; 1 ветка
+
+; upgrade 1
+[wpn_abakan_a1]:wpn_abakan
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+
+available_upgrades		= an94_upgr2
+installed_upgrades		= an94_upgr1
+
+cost					= 7000	
+scope_respawn                                        = wpn_abakan_a1
+scope_respawn_wpn_addon_scope                    = wpn_abakan_pso_a1
+scope_respawn_wpn_addon_scope_x2.7                   = wpn_abakan_pso2_a1
+scope_respawn_wpn_addon_scope_detector               = wpn_abakan_detector_a1
+scope_respawn_wpn_addon_scope_night                  = wpn_abakan_night_a1
+scope_respawn_wpn_addon_scope_cobra                  = wpn_abakan_cobra_a1
+scope_respawn_wpn_addon_scope_pka                    = wpn_abakan_pka_a1
+scope_respawn_wpn_addon_scope_kashtan                = wpn_abakan_kashtan_a1
+
+
+hud                      	= wpn_abakan_a1_hud
+[wpn_abakan_a1_hud]:wpn_abakan_hud
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+
+; upgrade 1 Sights
+
+[wpn_abakan_pso_a1]:wpn_abakan_a1
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+hud = wpn_abakan_a1_pso_hud
+scope_name              = wpn_addon_scope
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a1_pso_hud]:wpn_abakan_hud
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.0185,-0.0225,0.12
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0185,-0.0225,0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_pso2_a1]:wpn_abakan_a1
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+hud = wpn_abakan_a1_pso2_hud
+scope_name              = wpn_addon_scope_x2.7
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a1_pso2_hud]:wpn_abakan_hud
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.020,-0.0205,0.08
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.020,-0.0205,0.08
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_detector_a1]:wpn_abakan_a1
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+hud = wpn_abakan_a1_detector_hud
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a1_detector_hud]:wpn_abakan_hud
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.0225,-0.0505,0.065
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0225,-0.0505,0.065
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_night_a1]:wpn_abakan_a1
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+hud = wpn_abakan_a1_night_hud
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a1_night_hud]:wpn_abakan_hud
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.0295,-0.038,0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0295,-0.038,0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_cobra_a1]:wpn_abakan_a1
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+hud = wpn_abakan_a1_cobra_hud
+scope_name              = wpn_addon_scope_cobra
+scope_x              	= 61                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_abakan_a1_cobra_hud]:wpn_abakan_hud
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.01,-0.0293,-0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.01,-0.0293,-0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+inertion_origin_offset = -0.03
+
+[wpn_abakan_pka_a1]:wpn_abakan_a1
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+scope_bone = scope_pka
+hud = wpn_abakan_a1_pka_hud
+scope_name              = wpn_addon_scope_pka
+scope_x              	= 67                ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a1_pka_hud]:wpn_abakan_hud
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.02,-0.0198,0.0
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.02,-0.0198,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_kashtan_a1]:wpn_abakan_a1
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+scope_bone = scope_kashtan
+hud = wpn_abakan_a1_kashtan_hud
+scope_name              = wpn_addon_scope_kashtan
+scope_x              	= 59                   ; offset in inventory icon
+scope_y                 = -2
+[wpn_abakan_a1_kashtan_hud]:wpn_abakan_hud
+hidden_bones = mag45, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.0083,-0.022,0.02
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.0083,-0.022,0.02
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+
+; upgrade 2
+[wpn_abakan_a2]:wpn_abakan_a1
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+
+inv_weight			= 4.178
+ammo_elapsed			= 45				; obsolete	
+ammo_mag_size			= 45				; clip (magazine) size
+
+available_upgrades		= an94_upgr3
+installed_upgrades		= an94_upgr1, an94_upgr2
+
+cost					= 8000	
+scope_respawn                                        = wpn_abakan_a2
+scope_respawn_wpn_addon_scope                    = wpn_abakan_pso_a2
+scope_respawn_wpn_addon_scope_x2.7                   = wpn_abakan_pso2_a2
+scope_respawn_wpn_addon_scope_detector               = wpn_abakan_detector_a2
+scope_respawn_wpn_addon_scope_night                  = wpn_abakan_night_a2
+scope_respawn_wpn_addon_scope_cobra                  = wpn_abakan_cobra_a2
+scope_respawn_wpn_addon_scope_pka                    = wpn_abakan_pka_a2
+scope_respawn_wpn_addon_scope_kashtan                = wpn_abakan_kashtan_a2
+
+hud                      	= wpn_abakan_a2_hud
+[wpn_abakan_a2_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+
+; upgrade 2 Sights
+
+[wpn_abakan_pso_a2]:wpn_abakan_a2
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+hud = wpn_abakan_a2_pso_hud
+scope_name              = wpn_addon_scope
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a2_pso_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.0185,-0.0225,0.12
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0185,-0.0225,0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_pso2_a2]:wpn_abakan_a2
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+hud = wpn_abakan_a2_pso2_hud
+scope_name              = wpn_addon_scope_x2.7
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a2_pso2_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.020,-0.0205,0.08
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.020,-0.0205,0.08
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_detector_a2]:wpn_abakan_a2
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+hud = wpn_abakan_a2_detector_hud
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a2_detector_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.0225,-0.0505,0.065
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0225,-0.0505,0.065
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_night_a2]:wpn_abakan_a2
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+hud = wpn_abakan_a2_night_hud
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a2_night_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.0295,-0.038,0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0295,-0.038,0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_cobra_a2]:wpn_abakan_a2
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+hud = wpn_abakan_a2_cobra_hud
+scope_name              = wpn_addon_scope_cobra
+scope_x              	= 61                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_abakan_a2_cobra_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.01,-0.0293,-0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.01,-0.0293,-0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+inertion_origin_offset = -0.03
+
+[wpn_abakan_pka_a2]:wpn_abakan_a2
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+scope_bone = scope_pka
+hud = wpn_abakan_a2_pka_hud
+scope_name              = wpn_addon_scope_pka
+scope_x              	= 67                ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a2_pka_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.02,-0.0198,0.0
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.02,-0.0198,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_kashtan_a2]:wpn_abakan_a2
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+scope_bone = scope_kashtan
+hud = wpn_abakan_a2_kashtan_hud
+scope_name              = wpn_addon_scope_kashtan
+scope_x              	= 59                   ; offset in inventory icon
+scope_y                 = -2
+[wpn_abakan_a2_kashtan_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife, tilnik
+aim_hud_offset_pos = 0.0083,-0.022,0.02
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.0083,-0.022,0.02
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+; upgrade 3
+[wpn_abakan_a3]:wpn_abakan_a2
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+
+inv_weight			= 4.278
+cam_dispersion           = 0.55     ;увеличения угла (в градусах) с первым выстрелом
+cam_dispersion_inc       = 0.30      ;увеличениe cam_dispersion с каждvм вvстрелом
+zoom_cam_dispersion          = 0.37
+zoom_cam_dispersion_inc      = 0.17
+
+available_upgrades		= an94_upgr4
+installed_upgrades		= an94_upgr1, an94_upgr2, an94_upgr3
+
+cost					= 9000	
+scope_respawn                                        = wpn_abakan_a3
+scope_respawn_wpn_addon_scope                    = wpn_abakan_pso_a3
+scope_respawn_wpn_addon_scope_x2.7                   = wpn_abakan_pso2_a3
+scope_respawn_wpn_addon_scope_detector               = wpn_abakan_detector_a3
+scope_respawn_wpn_addon_scope_night                  = wpn_abakan_night_a3
+scope_respawn_wpn_addon_scope_cobra                  = wpn_abakan_cobra_a3
+scope_respawn_wpn_addon_scope_pka                    = wpn_abakan_pka_a3
+scope_respawn_wpn_addon_scope_kashtan                = wpn_abakan_kashtan_a3
+
+hud                      	= wpn_abakan_a3_hud
+[wpn_abakan_a3_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+
+; upgrade 3 Sights
+
+[wpn_abakan_pso_a3]:wpn_abakan_a3
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a3_pso_hud
+scope_name              = wpn_addon_scope
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a3_pso_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0185,-0.0225,0.12
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0185,-0.0225,0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_pso2_a3]:wpn_abakan_a3
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a3_pso2_hud
+scope_name              = wpn_addon_scope_x2.7
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a3_pso2_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.020,-0.0205,0.08
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.020,-0.0205,0.08
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_detector_a3]:wpn_abakan_a3
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a3_detector_hud
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a3_detector_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0225,-0.0505,0.065
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0225,-0.0505,0.065
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_night_a3]:wpn_abakan_a3
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a3_night_hud
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a3_night_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0295,-0.038,0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0295,-0.038,0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_cobra_a3]:wpn_abakan_a3
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a3_cobra_hud
+scope_name              = wpn_addon_scope_cobra
+scope_x              	= 61                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_abakan_a3_cobra_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.01,-0.0293,-0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.01,-0.0293,-0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+inertion_origin_offset = -0.03
+
+[wpn_abakan_pka_a3]:wpn_abakan_a3
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+scope_bone = scope_pka
+hud = wpn_abakan_a3_pka_hud
+scope_name              = wpn_addon_scope_pka
+scope_x              	= 67                ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a3_pka_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.02,-0.0198,0.0
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.02,-0.0198,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_kashtan_a3]:wpn_abakan_a3
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+scope_bone = scope_kashtan
+hud = wpn_abakan_a3_kashtan_hud
+scope_name              = wpn_addon_scope_kashtan
+scope_x              	= 59                   ; offset in inventory icon
+scope_y                 = -2
+[wpn_abakan_a3_kashtan_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler2, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0083,-0.022,0.02
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.0083,-0.022,0.02
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+; upgrade 4
+[wpn_abakan_a4]:wpn_abakan_a3
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+
+inv_weight			= 4.328
+cam_dispersion           = 0.50     ;увеличения угла (в градусах) с первым выстрелом
+cam_dispersion_inc       = 0.25      ;увеличениe cam_dispersion с каждvм вvстрелом
+zoom_cam_dispersion          = 0.35
+zoom_cam_dispersion_inc      = 0.15
+
+available_upgrades		= an94_upgr5
+installed_upgrades		= an94_upgr1, an94_upgr2, an94_upgr3, an94_upgr4
+
+cost					= 10000	
+scope_respawn                                        = wpn_abakan_a4
+scope_respawn_wpn_addon_scope                    = wpn_abakan_pso_a4
+scope_respawn_wpn_addon_scope_x2.7                   = wpn_abakan_pso2_a4
+scope_respawn_wpn_addon_scope_detector               = wpn_abakan_detector_a4
+scope_respawn_wpn_addon_scope_night                  = wpn_abakan_night_a4
+scope_respawn_wpn_addon_scope_cobra                  = wpn_abakan_cobra_a4
+scope_respawn_wpn_addon_scope_pka                    = wpn_abakan_pka_a4
+scope_respawn_wpn_addon_scope_kashtan                = wpn_abakan_kashtan_a4
+
+hud                      	= wpn_abakan_a4_hud
+[wpn_abakan_a4_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+
+
+; upgrade 4 Sights
+
+[wpn_abakan_pso_a4]:wpn_abakan_a4
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a4_pso_hud
+scope_name              = wpn_addon_scope
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a4_pso_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0185,-0.0225,0.12
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0185,-0.0225,0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_pso2_a4]:wpn_abakan_a4
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a4_pso2_hud
+scope_name              = wpn_addon_scope_x2.7
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a4_pso2_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.020,-0.0205,0.08
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.020,-0.0205,0.08
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_detector_a4]:wpn_abakan_a4
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a4_detector_hud
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a4_detector_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0225,-0.0505,0.065
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0225,-0.0505,0.065
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_night_a4]:wpn_abakan_a4
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a4_night_hud
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a4_night_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0295,-0.038,0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0295,-0.038,0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_cobra_a4]:wpn_abakan_a4
+hidden_bones = mag30, mag45_black, mag60, handler, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a4_cobra_hud
+scope_name              = wpn_addon_scope_cobra
+scope_x              	= 61                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_abakan_a4_cobra_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.01,-0.0293,-0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.01,-0.0293,-0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+inertion_origin_offset = -0.03
+
+[wpn_abakan_pka_a4]:wpn_abakan_a4
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+scope_bone = scope_pka
+hud = wpn_abakan_a4_pka_hud
+scope_name              = wpn_addon_scope_pka
+scope_x              	= 67                ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a4_pka_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.02,-0.0198,0.0
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.02,-0.0198,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_kashtan_a4]:wpn_abakan_a4
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+scope_bone = scope_kashtan
+hud = wpn_abakan_a4_kashtan_hud
+scope_name              = wpn_addon_scope_kashtan
+scope_x              	= 59                   ; offset in inventory icon
+scope_y                 = -2
+[wpn_abakan_a4_kashtan_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45_black, mag60, handler, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0083,-0.022,0.02
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.0083,-0.022,0.02
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+
+; upgrade 5
+[wpn_abakan_a5]:wpn_abakan_a4
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+
+inv_weight			= 4.328
+ammo_elapsed			= 60				; obsolete	
+ammo_mag_size			= 60				; clip (magazine) size
+
+
+available_upgrades		= an94_upgr6
+installed_upgrades		= an94_upgr1, an94_upgr2, an94_upgr3, an94_upgr4, an94_upgr5
+
+cost					= 11000	
+scope_respawn                                        = wpn_abakan_a5
+scope_respawn_wpn_addon_scope                    = wpn_abakan_pso_a5
+scope_respawn_wpn_addon_scope_x2.7                   = wpn_abakan_pso2_a5
+scope_respawn_wpn_addon_scope_detector               = wpn_abakan_detector_a5
+scope_respawn_wpn_addon_scope_night                  = wpn_abakan_night_a5
+scope_respawn_wpn_addon_scope_cobra                  = wpn_abakan_cobra_a5
+scope_respawn_wpn_addon_scope_pka                    = wpn_abakan_pka_a5
+scope_respawn_wpn_addon_scope_kashtan                = wpn_abakan_kashtan_a5
+
+hud                      	= wpn_abakan_a5_hud
+[wpn_abakan_a5_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+
+
+; upgrade 5 Sights
+
+[wpn_abakan_pso_a5]:wpn_abakan_a5
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a5_pso_hud
+scope_name              = wpn_addon_scope
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a5_pso_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0185,-0.0225,0.12
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0185,-0.0225,0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_pso2_a5]:wpn_abakan_a5
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a5_pso2_hud
+scope_name              = wpn_addon_scope_x2.7
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a5_pso2_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.020,-0.0205,0.08
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.020,-0.0205,0.08
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_detector_a5]:wpn_abakan_a5
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a5_detector_hud
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a5_detector_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0225,-0.0505,0.065
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0225,-0.0505,0.065
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_night_a5]:wpn_abakan_a5
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a5_night_hud
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a5_night_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0295,-0.038,0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0295,-0.038,0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_cobra_a5]:wpn_abakan_a5
+hidden_bones = mag30, mag45, mag45_black, handler, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+hud = wpn_abakan_a5_cobra_hud
+scope_name              = wpn_addon_scope_cobra
+scope_x              	= 61                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_abakan_a5_cobra_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.01,-0.0293,-0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.01,-0.0293,-0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+inertion_origin_offset = -0.03
+
+[wpn_abakan_pka_a5]:wpn_abakan_a5
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+scope_bone = scope_pka
+hud = wpn_abakan_a5_pka_hud
+scope_name              = wpn_addon_scope_pka
+scope_x              	= 67                ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a5_pka_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.02,-0.0198,0.0
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.02,-0.0198,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_kashtan_a5]:wpn_abakan_a5
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+scope_bone = scope_kashtan
+hud = wpn_abakan_a5_kashtan_hud
+scope_name              = wpn_addon_scope_kashtan
+scope_x              	= 59                   ; offset in inventory icon
+scope_y                 = -2
+[wpn_abakan_a5_kashtan_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail, knife
+aim_hud_offset_pos = 0.0083,-0.022,0.02
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.0083,-0.022,0.02
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+
+; upgrade 6
+[wpn_abakan_a6]:wpn_abakan_a5
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+
+inv_weight			= 4.528
+quickmelee_status		= 1
+
+available_upgrades		= none
+installed_upgrades		= an94_upgr1, an94_upgr2, an94_upgr3, an94_upgr4, an94_upgr5, an94_upgr6
+
+cost					= 12000	
+scope_respawn                                        = wpn_abakan_a6
+scope_respawn_wpn_addon_scope                    = wpn_abakan_pso_a6
+scope_respawn_wpn_addon_scope_x2.7                   = wpn_abakan_pso2_a6
+scope_respawn_wpn_addon_scope_detector               = wpn_abakan_detector_a6
+scope_respawn_wpn_addon_scope_night                  = wpn_abakan_night_a6
+scope_respawn_wpn_addon_scope_cobra                  = wpn_abakan_cobra_a6
+scope_respawn_wpn_addon_scope_pka                    = wpn_abakan_pka_a6
+scope_respawn_wpn_addon_scope_kashtan                = wpn_abakan_kashtan_a6
+
+hud                      	= wpn_abakan_a6_hud
+[wpn_abakan_a6_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+
+
+
+; upgrade 6 Sights
+
+[wpn_abakan_pso_a6]:wpn_abakan_a6
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+hud = wpn_abakan_a6_pso_hud
+scope_name              = wpn_addon_scope
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a6_pso_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+aim_hud_offset_pos = 0.0185,-0.0225,0.12
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0185,-0.0225,0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_pso2_a6]:wpn_abakan_a6
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+hud = wpn_abakan_a6_pso2_hud
+scope_name              = wpn_addon_scope_x2.7
+scope_x              	= 32                 ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a6_pso2_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+aim_hud_offset_pos = 0.020,-0.0205,0.08
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.020,-0.0205,0.08
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_detector_a6]:wpn_abakan_a6
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail
+hud = wpn_abakan_a6_detector_hud
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a6_detector_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, flash, light, laser, line, line2, foregrip_rail
+aim_hud_offset_pos = 0.0225,-0.0505,0.065
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0225,-0.0505,0.065
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_night_a6]:wpn_abakan_a6
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+hud = wpn_abakan_a6_night_hud
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 31                 ; offset in inventory icon
+scope_y                 = 1
+[wpn_abakan_a6_night_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_kashtan, scope_pso_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+aim_hud_offset_pos = 0.0295,-0.038,0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0295,-0.038,0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_cobra_a6]:wpn_abakan_a6
+hidden_bones = mag30, mag45, mag45_black, handler, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+hud = wpn_abakan_a6_cobra_hud
+scope_name              = wpn_addon_scope_cobra
+scope_x              	= 61                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_abakan_a6_cobra_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_pka, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+aim_hud_offset_pos = 0.01,-0.0293,-0.04
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.01,-0.0293,-0.04
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+inertion_origin_offset = -0.03
+
+[wpn_abakan_pka_a6]:wpn_abakan_a6
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+scope_bone = scope_pka
+hud = wpn_abakan_a6_pka_hud
+scope_name              = wpn_addon_scope_pka
+scope_x              	= 67                ; offset in inventory icon
+scope_y                 = 0
+[wpn_abakan_a6_pka_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_kashtan, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+aim_hud_offset_pos = 0.02,-0.0198,0.0
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.02,-0.0198,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+[wpn_abakan_kashtan_a6]:wpn_abakan_a6
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+scope_bone = scope_kashtan
+hud = wpn_abakan_a6_kashtan_hud
+scope_name              = wpn_addon_scope_kashtan
+scope_x              	= 59                   ; offset in inventory icon
+scope_y                 = -2
+[wpn_abakan_a6_kashtan_hud]:wpn_abakan_hud
+hidden_bones = mag30, mag45, mag45_black, handler, scope_cobra, scope_pka, scope_pso_assault, scope_nv_assault, scope_rakurs, scope_pso_sniper, scope_nv_sniper, flash, light, laser, line, line2, foregrip_rail
+aim_hud_offset_pos = 0.0083,-0.022,0.02
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+aim_hud_offset_pos_16x9 = 0.0083,-0.022,0.02
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+gl_hud_offset_pos          = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot          = 0.000000,0.000000,0.0000
+gl_hud_offset_pos_16x9     = -0.0200,0.02000,-0.20000
+gl_hud_offset_rot_16x9     = 0.000000,0.000000,0.0000
+
+
+
+

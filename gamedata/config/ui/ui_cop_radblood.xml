@@ -1,0 +1,36 @@
+<window>
+	<rad_green x="628" y="300" width="46" height="46" stretch="1" light_anim="ui_slow_blinking_alpha">
+	    <texture>cop_radiation_green</texture>
+	</rad_green>
+
+	<rad_yellow x="628" y="300" width="46" height="46" stretch="1" light_anim="ui_slow_blinking_alpha">
+		<texture>cop_radiation_yellow</texture>
+	</rad_yellow>
+
+	<rad_orange x="628" y="300" width="46" height="46" stretch="1" light_anim="ui_slow_blinking_alpha">
+		<texture>cop_radiation_orange</texture>
+	</rad_orange>
+
+	<rad_red x="628" y="300" width="46" height="46" stretch="1" light_anim="ui_slow_blinking_alpha">
+		<texture>cop_radiation_red</texture>
+	</rad_red>
+
+
+	<blood_green x="578" y="300" width="46" height="46" stretch="1" light_anim="ui_slow_blinking_alpha">
+		<texture>cop_blood_green</texture>
+	</blood_green>
+
+	<blood_yellow x="578" y="300" width="46" height="46" stretch="1" light_anim="ui_slow_blinking_alpha">
+		<texture>cop_blood_yellow</texture>
+	</blood_yellow>
+
+	<blood_orange x="578" y="300" width="46" height="46" stretch="1" light_anim="ui_slow_blinking_alpha">
+		<texture>cop_blood_orange</texture>
+	</blood_orange>
+
+	<blood_red x="578" y="300" width="46" height="46" stretch="1" light_anim="ui_slow_blinking_alpha">
+		<texture>cop_blood_red</texture>
+	</blood_red>
+
+
+</window>

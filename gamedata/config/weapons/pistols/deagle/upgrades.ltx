@@ -1,0 +1,69 @@
+
+; Eagle ================================================================================================================================================ ПМ Пистолет Макарова
+; ==================================== первая ветка ====================================
+
+
+; 1 ветка
+
+; upgrade 1
+[wpn_desert_eagle_a1]:wpn_desert_eagle
+hidden_bones = barrel_compensator, flash, laser, line, light 
+available_upgrades		= deagle_upgr2
+installed_upgrades		= deagle_upgr1
+icon_group = 2
+cost					 	= 4300
+hud                      	= wpn_eagle_a1_hud
+[wpn_eagle_a1_hud]:wpn_desert_eagle_hud
+hidden_bones = barrel_compensator, flash, laser, line, light 
+
+
+
+
+
+; upgrade 2
+[wpn_desert_eagle_a2]:wpn_desert_eagle_a1
+hidden_bones = flash, laser, line, light 
+available_upgrades		= deagle_upgr3
+installed_upgrades		= deagle_upgr1, deagle_upgr2
+
+cam_dispersion          	= 3.0		;увеличени¤ угла (в градусах) с каждым выстрелом
+cam_dispersion_inc			= 2.0		;увеличениe cam_dispersion с каждым выстрелом
+
+zoom_cam_dispersion         = 1.5
+zoom_cam_dispersion_inc     = 1.0
+
+silencer_status				= 0
+cost					 	= 4600
+hud                      	= wpn_eagle_a2_hud
+[wpn_eagle_a2_hud]:wpn_desert_eagle_hud
+hidden_bones = flash, laser, line, light 
+
+
+
+
+; upgrade 3
+[wpn_desert_eagle_a3]:wpn_desert_eagle_a2
+available_upgrades		= deagle_upgr4
+installed_upgrades		= deagle_upgr1, deagle_upgr2, deagle_upgr3
+cost					 	= 4900
+ammo_mag_size		 		= 11
+
+; upgrade 3
+[wpn_desert_eagle_a4]:wpn_desert_eagle_a3
+hidden_bones =
+available_upgrades		= none
+installed_upgrades		= deagle_upgr1, deagle_upgr2, deagle_upgr3, deagle_upgr4
+cost					 	= 5200
+
+laserdot_world_attach_offset_x = 0.0
+laserdot_world_attach_offset_y = 0.1
+laserdot_world_attach_offset_z = 0.1
+
+torch_attach_offset_x = 0.0
+torch_attach_offset_y = 0.0
+torch_attach_offset_z = 0.4
+
+hud                      	= wpn_eagle_a4_hud
+[wpn_eagle_a4_hud]:wpn_desert_eagle_hud
+hidden_bones =
+

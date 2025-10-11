@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="actor">
+		<text>Наемник</text>
+	</string>
+	<string id="actor_dolg">
+		<text>Долг</text>
+	</string>
+	<string id="actor_freedom">
+		<text>Свобода</text>
+	</string>
+	<string id="arena_enemy">
+		<text>Наемник</text>
+	</string>
+	<string id="bad">
+		<text>плохо</text>
+	</string>
+	<string id="bandit">
+		<text>группировка Ковцура</text>
+	</string>
+	<string id="dolg">
+		<text>Долг</text>
+	</string>
+	<string id="ecolog">
+		<text>Эколог</text>
+	</string>
+	<string id="enemy">
+		<text>враг</text>
+	</string>
+	<string id="excellent">
+		<text>отлично</text>
+	</string>
+	<string id="exo_outfit_name_m1">
+		<text>Экзоскелет ПНБ-4УЗ</text>
+	</string>
+	<string id="experienced">
+		<text>опытный</text>
+	</string>
+	<string id="Found_PDA">
+		<text>Найденные КПК</text>
+	</string>
+	<string id="freedom">
+		<text>Свобода</text>
+	</string>
+	<string id="friendly">
+		<text>друг</text>
+	</string>
+	<string id="good">
+		<text>хорошо</text>
+	</string>
+	<string id="indifferent">
+		<text>нейтрал</text>
+	</string>
+	<string id="killer">
+		<text>Наемник</text>
+	</string>
+	<string id="speckiller">
+		<text>Наемник</text>
+	</string>
+	<string id="l01_escape">
+		<text>Кордон</text>
+	</string>
+	<string id="l02_garbage">
+		<text>Свалка</text>
+	</string>
+	<string id="l03_agroprom">
+		<text>НИИ Агропром</text>
+	</string>
+	<string id="l04_darkvalley">
+		<text>Темная Долина</text>
+	</string>
+	<string id="l05_bar">
+		<text>Бар</text>
+	</string>
+	<string id="l06_rostok">
+		<text>Дикая территория</text>
+	</string>
+	<string id="l07_military">
+		<text>Армейские склады</text>
+	</string>
+	<string id="l08_yantar">
+		<text>Янтарь</text>
+	</string>
+	<string id="l10_radar">
+		<text>Радар</text>
+	</string>
+	<string id="l11_pripyat">
+		<text>Припять</text>
+	</string>
+	<string id="l12_stancia">
+		<text>ЧАЭС</text>
+	</string>
+	<string id="l12_stancia_2">
+		<text>ЧАЭС</text>
+	</string>
+	<string id="master">
+		<text>мастер</text>
+	</string>
+	<string id="military">
+		<text>Военный</text>
+	</string>
+	<string id="monolith">
+		<text>Монолит</text>
+	</string>
+	<string id="neutral">
+		<text>нейтрал</text>
+	</string>
+	<string id="novice">
+		<text>новичок</text>
+	</string>
+	<string id="st_no_active_task">
+		<text>Нет активного задания</text>
+	</string>
+	<string id="st_time_till_surge">
+		<text>Время до выброса</text>
+	</string>
+	<string id="stalker">
+		<text>Одиночка</text>
+	</string>
+	<string id="terrible">
+		<text>ужасно</text>
+	</string>
+	<string id="trader">
+		<text>Торговец</text>
+	</string>
+	<string id="ui_st_community">
+		<text>группа</text>
+	</string>
+	<string id="ui_st_price">
+		<text>Цена</text>
+	</string>
+	<string id="ui_st_rank">
+		<text>ранг</text>
+	</string>
+	<string id="ui_st_relation">
+		<text>отношение</text>
+	</string>
+	<string id="ui_st_reputation">
+		<text>репутация</text>
+	</string>
+	<string id="very_bad">
+		<text>оч. плохо</text>
+	</string>
+	<string id="very_good">
+		<text>оч. хорошо</text>
+	</string>
+	<string id="veteran">
+		<text>ветеран</text>
+	</string>
+	<string id="zombied">
+		<text>Свобода</text>
+	</string>
+	<string id="Btn_Cancel">
+		<text>Отменить</text>
+	</string>
+	<string id="Btn_No">
+		<text>Нет</text>
+	</string>
+	<string id="Btn_OK">
+		<text>OK</text>
+	</string>
+	<string id="Btn_Yes">
+		<text>Да</text>
+	</string>
+	<string id="global_map">
+		<text>Карта Зоны</text>
+	</string>
+	<string id="st_autosave">
+		<text>Автосохранение...</text>
+	</string>
+	<string id="st_game_over">
+		<text>Игра окончена.</text>
+	</string>
+	<string id="st_item_used">
+		<text>Использовано</text>
+	</string>
+	<string id="st_not_enough_money">
+		<text>Недостаточно денег</text>
+	</string>
+	<string id="st_not_enough_money_npc">
+		<text>у НПС недостаточно денег</text>
+	</string>
+	<string id="ui_st_opponent_items">
+		<text>Рюкзак</text>
+	</string>
+	<string id="st_search_treasure">
+		<text>Обыскать тайник ($$ACTION_USE$$)</text>
+	</string>
+	<string id="inventory_item_use">
+		<text>Поднять предмет ($$ACTION_USE$$)</text>
+	</string>
+	<string id="ui_mm_check_updates">
+		<text>Обновления</text>
+	</string>
+	<string id="ui_mm_alternative">
+		<text>Альтернатива</text>
+	</string>
+	<string id="ui_inv_health">
+		<text>Здоровье</text>
+	</string>
+	<string id="ui_inv_radiation">
+		<text>Радиация</text>
+	</string>
+	<string id="ui_inv_satiety">
+		<text>Сытость</text>
+	</string>
+	<string id="ui_inv_power">
+		<text>Выносливость</text>
+	</string>
+	<string id="ui_inv_bleeding">
+		<text>Кровотечение</text>
+	</string>
+	<string id="st_mp_say_to_all">
+		<text>Всем</text>
+	</string>
+	<string id="st_mp_say_to_team">
+		<text>Команде</text>
+	</string>
+	<string id="st_knife">
+		<text>Нож</text>
+	</string>
+	<string id="st_mp_disabled_voting">
+		<text>Голосование недоступно на этом сервере.</text>
+	</string>
+	<string id="st_mp_no_current_voting">
+		<text>Сейчас нет активных голосований.</text>
+	</string>
+	<string id="st_mp_ready">
+		<text>готов</text>
+	</string>
+	<string id="st_mp_voting_succeed">
+		<text>Голосование прошло успешно!</text>
+	</string>
+	<string id="st_mp_voting_failed">
+		<text>Голосование провалено!</text>
+	</string>
+	<string id="l03u_agr_underground">
+		<text>Подземелье НИИ Агропром</text>
+	</string>
+	<string id="l04u_labx18">
+		<text>Лаборатория X-18</text>
+	</string>
+	<string id="l08u_brainlab">
+		<text>Лаборатория X-16</text>
+	</string>
+	<string id="l10u_bunker">
+		<text>Лаборатория X-10</text>
+	</string>
+	<string id="l12u_sarcofag">
+		<text>Саркофаг</text>
+	</string>
+	<string id="l12u_control_monolith">
+		<text>Управление Монолитом</text>
+	</string>
+	
+	<string id="ps_stalker">
+		<text>Одиночка</text>
+	</string>
+	<string id="ps_dolg">
+		<text>Долг</text>
+	</string>
+	<string id="ps_freedom">
+		<text>Свобода</text>
+	</string>
+	<string id="ps_exmon">
+		<text>Ветераны</text>
+	</string>
+	<string id="ps_bandit">
+		<text>Бандит</text>
+	</string>
+	<string id="ps_killer">
+		<text>Наемник</text>
+	</string>
+	
+	
+	
+	; Новые локации
+	<string id="atp_for_test22">
+		<text>Территория АТП</text>
+	</string>
+	<string id="peshera">
+		<text>Пещера</text>
+	</string>
+	<string id="puzir">
+		<text>Призрачный Лес</text>
+	</string>
+	<string id="aver">
+		<text>Забытый Лес</text>
+	</string>
+	<string id="av_peshera">
+		<text>Логово</text>
+	</string>
+	<string id="limansk">
+		<text>Лиманск</text>
+	</string>
+	<string id="hospital">
+		<text>Госпиталь</text>
+	</string>
+	<string id="generators">
+		<text>Генераторы</text>
+	</string>
+	<string id="warlab">
+		<text>Военная лаборатория</text>
+	</string>
+	<string id="red_forest">
+		<text>Рыжий лес</text>
+	</string>
+	<string id="lost_village">
+		<text>Покинутая деревня</text>
+	</string>
+	<string id="marsh">
+		<text>Болота</text>
+	</string>
+	<string id="dead_city">
+		<text>Мертвый город</text>
+	</string>
+	<string id="zaton">
+		<text>Затон</text>
+	</string>
+	<string id="jupiter">
+		<text>Окрестности Юпитера</text>
+	</string>
+	<string id="pripyat">
+		<text>Припять-Восток</text>
+	</string>
+	<string id="jupiter_underground">
+		<text>Путепровод</text>
+	</string>
+	<string id="labx8">
+		<text>Лаборатория X-8</text>
+	</string>
+	<string id="cs_agroprom_underground">
+		<text>Катакомбы</text>
+	</string>
+	<string id="predbannik">
+		<text>Сортировка</text>
+	</string>
+	<string id="garbage_old">
+		<text>Свалка-Буфер</text>
+	</string>
+	<string id="yantar_old">
+		<text>Янтарь-Буфер</text>
+	</string>
+	<string id="swamp_old">
+		<text>Ведьмино Болото</text>
+	</string>
+	
+	<string id="lch_hint">
+		<text>тропа</text>
+	</string>
+	<string id="dominoes_principle_hint">
+		<text>цель</text>
+	</string>
+	<string id="marsh_monk_6_hint">
+		<text>Часовня</text>
+	</string>
+	
+	<string id="old_gar_river_point_hint">
+		<text>под мостом</text>
+	</string>
+	
+	<string id="cond_satan_hint">
+		<text>проводник</text>
+	</string>
+	
+	<string id="st_detail_list_for_foo">
+		<text>СТАТИСТИКА</text>
+	</string>
+	
+	<string id="tip_kharon_cross">
+		<text>ГОВОРИ!</text>
+	</string>
+	
+	<string id="usarmy">
+		<text>Армия США</text>
+	</string>
+	<string id="p_usarmy">
+		<text>Армия США</text>
+	</string>
+	<string id="camban">
+		<text>группа Камбиса</text>
+	</string>
+	<string id="bb">
+		<text>группа Бормана</text>
+	</string>
+	<string id="demon">
+		<text>ксеноморф</text>
+	</string>
+	<string id="cliric">
+		<text>монахи</text>
+	</string>
+	<string id="degen">
+		<text>выродок</text>
+	</string>
+	<string id="degen_group">
+		<text>выродки</text>
+	</string>
+	<string id="cnn">
+		<text>Поиск</text>
+	</string>
+	<string id="nato">
+		<text>СБ GRC</text>
+	</string>
+	<string id="stranger">
+		<text>неизвестно</text>
+	</string>
+	<string id="exmon">
+		<text>Ветераны</text>
+	</string>
+	
+	<string id="sidor_man_hint">
+		<text>Агдам</text>
+	</string>
+	
+	<string id="xform_from_hell_hint">
+		<text>Посылка</text>
+	</string>
+	
+	<string id="baza_kovzur_hint">
+		<text>База Ковцура</text>
+	</string>
+	
+	<string id="dfs_ros_bandit_lager_hint">
+		<text>лагерь бандитов</text>
+	</string>
+	
+	<string id="fura_done_point_hint">
+		<text>пригнать сюда</text>
+	</string>
+	
+	<string id="rf_killer_baza_hint">
+		<text>база наемников</text>
+	</string>
+	
+	<string id="pri_poisk_base_hint">
+		<text>база Поиска</text>
+	</string>
+	
+	<string id="aes_evapoint_hint">
+		<text>точка эвакуации</text>
+	</string>
+	
+	<string id="operation_stealing_point_0_hint">
+		<text>вход в коллектор</text>
+	</string>
+	
+	<string id="operation_stealing_point_1_hint">
+		<text>выход из коллектора</text>
+	</string>
+	
+	<string id="operation_stealing_point_2_hint">
+		<text>отстойник</text>
+	</string>
+	
+	<string id="w_pri_killer_sniper_hint">
+		<text>снайпер</text>
+	</string>
+	
+	<string id="blocked">
+		<text>недоступно</text>
+	</string>
+	
+	<string id="dfs_pri_spy_point_hint">
+		<text>укромное место</text>
+	</string>
+	
+	<string id="secret_storage">
+		<text>тайник</text>
+	</string>
+	
+	<string id="sniper_position">
+		<text>огневая позиция</text>
+	</string>
+	
+	<string id="power_off">
+		<text>нет питания</text>
+	</string>
+	
+	<string id="power_on">
+		<text>скачать информацию ($$ACTION_USE$$)</text>
+	</string>
+	
+	<string id="take_off_battery">
+		<text>снять батарею ($$ACTION_USE$$)</text>
+	</string>
+	
+	<string id="monolith_kee_1_active_hint">
+		<text>ключ 1</text>
+	</string>
+	<string id="monolith_kee_2_active_hint">
+		<text>ключ 2</text>
+	</string>
+	<string id="monolith_kee_3_active_hint">
+		<text>ключ 3</text>
+	</string>
+	
+</string_table>

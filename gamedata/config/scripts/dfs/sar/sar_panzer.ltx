@@ -1,0 +1,34 @@
+[logic]
+active = walker
+combat_ignore = combat_ignore
+on_hit = hit
+on_death = death
+
+[hit]
+on_info = {=hit_by_actor =is_npc_enemy} %=taboo_taboo%
+
+[death]
+on_info = {=killed_by_actor =is_npc_enemy} %=taboo_taboo%
+
+[walker]
+path_walk = mon_col_panzer_walk
+path_look = mon_col_panzer_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@mon_col_panzer
+
+meet = meet
+
+[meet]
+meet_state 		= ward@wait
+meet_state_wpn 	= ward@wait
+victim 			= actor
+victim_wpn 		= actor
+use				= {=dfs_dialog_dist(3.0) -panzer_test_start} self
+use_wpn			= {=dfs_dialog_dist(3.0) -panzer_test_start} self
+meet_dialog		= {-panzer_test_start} mon_col_panzer_dialog1
+
+[combat_ignore]
+;combat_ignore_cond = {=fighting_dist_ge(50)}
+
+[danger_condition@mon_col_panzer]
+ignore_distance = 0

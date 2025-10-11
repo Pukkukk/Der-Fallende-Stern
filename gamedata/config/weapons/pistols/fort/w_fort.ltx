@@ -1,0 +1,194 @@
+;;;;;;;;;;;;;;;;;;;;;; Fort 12 ;;;;;;;;;;;;;;;;;;;;;
+;---------------------------------------------------
+[wpn_fort]:identity_immunities
+GroupControlSection			= spawn_group
+discovery_dependency 		= 
+$spawn                   	= "weapons\fort"					; option for Level Editor
+$npc			 			= on				; option for Level Editor
+$prefetch 					= 8
+scheduled            		= off              ; option for ALife Simulator
+cform                    	= skeleton
+class                    	= WP_PM
+min_radius               	= 5
+max_radius               	= 30
+description					= gunsl_wpn_fort12_descr
+dont_interrupt_shot_anm = true ;Не прерывать анимацию выстрела чтобы гильза успела вылететь, т.к. в гансе гильзы являются частью анимации выстрела
+is_gunslinger_weapon = true ;Специальный флаг чтобы двиг понимал что это ствол из Gunslinger Mod и к нему надо применить фикс создания физ. оболочки для избежания ошибок с этим связанных.	
+
+ef_weapon_type				= 5
+
+;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0               ; во сколько раз увеличивается eye_range 
+holder_fov_modifier		= 1.0            ; во сколько раз увеличивается eye_fov
+;-----------------------------------------------------------------------------------
+hidden_bones = sight, barrel_silencer
+cost					 = 1000
+
+ammo_limit		 		= 120
+ammo_current		 		= 90
+ammo_elapsed		 		= 12
+
+ammo_mag_size		 		= 12
+ammo_class		 		= ammo_9x18_fmj, ammo_9x18_pmm
+
+
+hand_dependence		 		= 1
+single_handed				= 1
+
+slot 				 	= 1		; // primary
+animation_slot		 		= 1		; type of the animation that will be used
+
+
+inv_name				= gunsl_wpn_fort12
+inv_name_short				= gunsl_wpn_fort12
+inv_weight					= 0.83
+
+inv_grid_width				= 2
+inv_grid_height				= 1
+inv_grid_x				= 10
+inv_grid_y				= 8
+
+kill_msg_x			= 104
+kill_msg_y			= 178
+kill_msg_width		= 28
+kill_msg_height		= 21
+
+;-----------------------------------------------------------------------------------
+;базовая дисперсия
+fire_dispersion_base		= 0.23  ;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+
+;отдача
+cam_relax_speed         	= 10	;скорость возврата в исходное положение
+cam_dispersion          	= 0.35	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.0	;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 1.0	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 20.0	;максимальный угол отдачи
+cam_max_angle_horz		= 10.0	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 0.17	;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.003	;вероятность осечки при максимальном износе
+misfire_condition_k			= 0.05 
+condition_shot_dec 			= 0.0003 ;увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+direction                	= 0, 0, 1
+fire_point			= 0.0, 0.148, 0.180 ;0.0, 0.148, 0.161
+
+flame_particles							 = weapons\new_effects\pistol_9x18
+smoke_particles 						 = weapons\generic_shoot_00
+rpm_empty_click 	 		= 200
+
+shell_point			= 0.0, 0.133, 0.03
+shell_dir		 	= 0.0, 0.0, 0.4
+shell_particles			= weapons\9x18
+PDM_disp_base 			= 1.0
+PDM_disp_vel_factor 		= 0.6
+PDM_disp_accel_factor 		= 0.6
+PDM_crouch	 		= 1.0
+PDM_crouch_no_acc 		= 1.0
+
+;;;;;;; Для "Последний Сталкер"
+hit_power           = 0.42
+hit_impulse	    = 40
+hit_type 		= fire_wound
+
+fire_distance       = 50
+bullet_speed	    = 320	;начальная скорость пули
+rpm                 = 300
+; end ttc
+
+use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+time_to_aim				= 1.0	
+
+silencer_hit_power       	= 0.40
+silencer_hit_impulse	 	= 35
+silencer_fire_distance   	= 45
+silencer_bullet_speed	 	= 285
+
+hud                      	= wpn_fort_hud
+normal                   	= 0, 1, 0
+position					= -0.021, -0.10, 0.0
+orientation 					= 0, 0, 0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;strap_position         		= -0.1,-0.45,0.2			; position (offset) and orientation of the weapon when it is strapped
+;strap_orientation      		= 1.57,0,0						; (3rd person view)
+;strap_bone0					= bip01_spine2
+;strap_bone1					= bip01_spine1
+
+startup_ammo             	= 90
+visual                   	= dynamics\weapons\wpn_fort\wpn_fort.ogf
+
+light_color		 		= 0.6,0.5,0.3
+light_range		 		= 3.0
+light_var_color		 		= 0.05
+light_var_range		 		= 0.5
+light_time 		 		= 0.2
+
+ph_mass			 			= 1
+;cost			 			= 350
+
+;addons
+scope_status			= 0
+silencer_status			= 2
+grenade_launcher_status		= 0
+
+zoom_enabled			= true
+scope_zoom_factor	    	= 100
+
+;звуки
+snd_item_on             = weapons\headflash_on
+snd_draw		= weapons\m1911\draw
+snd_holster		= weapons\m1911\hide
+snd_shoot		= weapons\fort12\fort_shoot
+snd_empty		= weapons\pistol_empty
+snd_reload		= weapons\fort12\fort_reload
+snd_reload_empty        = weapons\fort12\fort_reload_full
+snd_reload_jammed       = weapons\grach\grach_revival
+snd_reload_jammed_last  = weapons\grach\grach_revival
+snd_changecartridgetype = weapons\fort12\fort_reload
+snd_close		= $silent
+snd_jamned              = weapons\glock17\glock17_revival
+snd_jamned_last         = weapons\glock17\glock17_revival_last
+snd_prepare_detector    = weapons\detector_prepare
+snd_finish_detector     = weapons\pistol_hand_draw
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_attach_sil		= weapons\fort12\fort_reload
+snd_detach_sil		= weapons\fort12\fort_reload
+snd_fakeshoot_first	= weapons\pistol_empty
+snd_fire_modes	= weapons\fort12\fort_reload
+snd_reload_jammed_detector               = weapons\grach\grach_revival_det
+snd_reload_jammed_last_detector          = weapons\grach\grach_revival_det
+snd_light_misfire                        = weapons\pistol_light_misfire
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_silncer_shot				= weapons\fort12\fort_shoot_s
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; silencer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+silencer_name						= wpn_addon_silencer	; section name for the attachable silencer
+silencer_x 							= 76					; offset in inventory icon
+silencer_y 							= -18					
+
+;params when silencer is attached 
+;similar to corresponding params without prefix silencer_
+
+;silencer_flame_particles 	= weapons\generic_weapon01
+silencer_smoke_particles 				 = weapons\generic_shoot_00
+silencer_light_color		= 0.6,0.5,0.3
+silencer_light_range		= 2
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+#include "huds.ltx"

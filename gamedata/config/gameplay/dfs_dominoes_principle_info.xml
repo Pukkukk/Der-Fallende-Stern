@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<game_information_portions>
+
+<info_portion id="dominoes_principle_start">
+		<task>dominoes_principle</task>
+	</info_portion>
+	<info_portion id="dominoes_principle_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle"> 
+</info_portion>
+
+<info_portion id="dominoes_principle1_start">
+		<task>dominoes_principle1</task>
+	</info_portion>
+	<info_portion id="dominoes_principle1_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle1"> 
+</info_portion>
+
+<info_portion id="dominoes_principle2_start">
+		<task>dominoes_principle2</task>
+	</info_portion>
+	<info_portion id="dominoes_principle2_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle2"> 
+</info_portion>
+
+<info_portion id="dominoes_principle3_start">
+		<task>dominoes_principle3</task>
+	</info_portion>
+	<info_portion id="dominoes_principle3_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle3"> 
+</info_portion>
+
+<info_portion id="dominoes_principle4_start">
+		<task>dominoes_principle4</task>
+	</info_portion>
+	<info_portion id="dominoes_principle4_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle4"> 
+</info_portion>
+
+<info_portion id="dominoes_principle5_start">
+		<task>dominoes_principle5</task>
+	</info_portion>
+	<info_portion id="dominoes_principle5_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle5"> 
+</info_portion>
+
+<info_portion id="dominoes_principle6_start">
+		<task>dominoes_principle6</task>
+	</info_portion>
+	<info_portion id="dominoes_principle6_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle6"> 
+</info_portion>
+
+<info_portion id="dominoes_principle7_start">
+		<task>dominoes_principle7</task>
+	</info_portion>
+	<info_portion id="dominoes_principle7_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle7"> 
+</info_portion>
+
+<info_portion id="dominoes_principle8_start">
+		<task>dominoes_principle8</task>
+	</info_portion>
+	<info_portion id="dominoes_principle8_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle8"> 
+</info_portion>
+
+<info_portion id="dominoes_principle9_start">
+		<task>dominoes_principle9</task>
+	</info_portion>
+	<info_portion id="dominoes_principle9_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle9"> 
+</info_portion>
+
+<info_portion id="dominoes_principle10_start">
+		<task>dominoes_principle10</task>
+	</info_portion>
+	<info_portion id="dominoes_principle1_10">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle10"> 
+</info_portion>
+
+<info_portion id="dominoes_principle11_start">
+		<task>dominoes_principle11</task>
+	</info_portion>
+	<info_portion id="dominoes_principle1_11">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle11"> 
+</info_portion>
+
+<info_portion id="dominoes_principle12_start">
+		<task>dominoes_principle12</task>
+	</info_portion>
+	<info_portion id="dominoes_principle1_12">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle12"> 
+</info_portion>
+
+<info_portion id="dominoes_principle13_start">
+		<task>dominoes_principle13</task>
+	</info_portion>
+	<info_portion id="dominoes_principle1_13">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle13"> 
+</info_portion>
+
+<info_portion id="dominoes_principle14_start">
+		<task>dominoes_principle14</task>
+	</info_portion>
+	<info_portion id="dominoes_principle1_14">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle14"> 
+</info_portion>
+
+<info_portion id="dominoes_principle15_start">
+		<task>dominoes_principle15</task>
+	</info_portion>
+	<info_portion id="dominoes_principle1_15">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle15"> 
+</info_portion>
+
+<info_portion id="dominoes_principle16_start">
+		<task>dominoes_principle16</task>
+	</info_portion>
+	<info_portion id="dominoes_principle16_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle16"> 
+</info_portion>
+
+<info_portion id="dominoes_principle17_start">
+		<task>dominoes_principle17</task>
+	</info_portion>
+	<info_portion id="dominoes_principle17_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle17"> 
+</info_portion>
+
+<info_portion id="dominoes_principle18_start">
+		<task>dominoes_principle18</task>
+	</info_portion>
+	<info_portion id="dominoes_principle18_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle18"> 
+</info_portion>
+
+<info_portion id="dominoes_principle19_start">
+		<task>dominoes_principle19</task>
+	</info_portion>
+	<info_portion id="dominoes_principle19_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle19"> 
+</info_portion>
+
+<info_portion id="dominoes_principle20_start">
+		<task>dominoes_principle20</task>
+	</info_portion>
+	<info_portion id="dominoes_principle20_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle20"> 
+</info_portion>
+
+<info_portion id="dominoes_principle21_start">
+		<task>dominoes_principle21</task>
+	</info_portion>
+	<info_portion id="dominoes_principle21_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle21"> 
+</info_portion>
+
+<info_portion id="dominoes_principle22_start">
+		<task>dominoes_principle22</task>
+	</info_portion>
+	<info_portion id="dominoes_principle22_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle22"> 
+</info_portion>
+
+<info_portion id="dominoes_principle23_start">
+		<task>dominoes_principle23</task>
+	</info_portion>
+	<info_portion id="dominoes_principle23_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle23"> 
+</info_portion>
+
+<info_portion id="dominoes_principle24_start">
+		<task>dominoes_principle24</task>
+	</info_portion>
+	<info_portion id="dominoes_principle24_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle24"> 
+</info_portion>
+
+<info_portion id="dominoes_principle25_start">
+		<task>dominoes_principle25</task>
+	</info_portion>
+	<info_portion id="dominoes_principle25_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle25"> 
+</info_portion>
+
+<info_portion id="dominoes_principle26_start">
+		<task>dominoes_principle26</task>
+	</info_portion>
+	<info_portion id="dominoes_principle26_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle26"> 
+</info_portion>
+
+<info_portion id="dominoes_principle27_start">
+		<task>dominoes_principle27</task>
+	</info_portion>
+	<info_portion id="dominoes_principle27_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle27"> 
+</info_portion>
+
+<info_portion id="dominoes_principle28_start">
+		<task>dominoes_principle28</task>
+	</info_portion>
+	<info_portion id="dominoes_principle28_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle28"> 
+</info_portion>
+
+<info_portion id="dominoes_principle29_start">
+		<task>dominoes_principle29</task>
+	</info_portion>
+	<info_portion id="dominoes_principle29_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle29"> 
+</info_portion>
+
+<info_portion id="dominoes_principle30_start">
+		<task>dominoes_principle30</task>
+	</info_portion>
+	<info_portion id="dominoes_principle30_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle30"> 
+</info_portion>
+
+<info_portion id="dominoes_principle31_start">
+		<task>dominoes_principle31</task>
+	</info_portion>
+	<info_portion id="dominoes_principle31_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle31"> 
+</info_portion>
+
+<info_portion id="dominoes_principle32_start">
+		<task>dominoes_principle32</task>
+	</info_portion>
+	<info_portion id="dominoes_principle32_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle32"> 
+</info_portion>
+
+<info_portion id="dominoes_principle33_start">
+		<task>dominoes_principle33</task>
+	</info_portion>
+	<info_portion id="dominoes_principle33_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle33"> 
+</info_portion>
+
+<info_portion id="dominoes_principle34_start">
+		<task>dominoes_principle34</task>
+	</info_portion>
+	<info_portion id="dominoes_principle34_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle34"> 
+</info_portion>
+
+<info_portion id="dominoes_principle35_start">
+		<task>dominoes_principle35</task>
+	</info_portion>
+	<info_portion id="dominoes_principle35_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle35"> 
+</info_portion>
+
+<info_portion id="dominoes_principle36_start">
+		<task>dominoes_principle36</task>
+	</info_portion>
+	<info_portion id="dominoes_principle36_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle36"> 
+</info_portion>
+
+<info_portion id="dominoes_principle37_start">
+		<task>dominoes_principle37</task>
+	</info_portion>
+	<info_portion id="dominoes_principle37_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle37"> 
+</info_portion>
+
+<info_portion id="dominoes_principle38_start">
+		<task>dominoes_principle38</task>
+	</info_portion>
+	<info_portion id="dominoes_principle38_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle38"> 
+</info_portion>
+
+<info_portion id="dominoes_principle39_start">
+		<task>dominoes_principle39</task>
+	</info_portion>
+	<info_portion id="dominoes_principle39_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle39"> 
+</info_portion>
+
+<info_portion id="dominoes_principle40_start">
+		<task>dominoes_principle40</task>
+	</info_portion>
+	<info_portion id="dominoes_principle40_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle40"> 
+</info_portion>
+
+<info_portion id="dominoes_principle41_start">
+		<task>dominoes_principle41</task>
+	</info_portion>
+	<info_portion id="dominoes_principle41_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle41"> 
+</info_portion>
+
+<info_portion id="dominoes_principle42_start">
+		<task>dominoes_principle42</task>
+	</info_portion>
+	<info_portion id="dominoes_principle42_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle42"> 
+</info_portion>
+
+<info_portion id="dominoes_principle43_start">
+		<task>dominoes_principle43</task>
+	</info_portion>
+	<info_portion id="dominoes_principle43_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle43"> 
+</info_portion>
+
+<info_portion id="dominoes_principle44_start">
+		<task>dominoes_principle44</task>
+	</info_portion>
+	<info_portion id="dominoes_principle44_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle44"> 
+</info_portion>
+
+<info_portion id="dominoes_principle45_start">
+		<task>dominoes_principle45</task>
+	</info_portion>
+	<info_portion id="dominoes_principle45_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle45"> 
+</info_portion>
+
+<info_portion id="dominoes_principle46_start">
+		<task>dominoes_principle46</task>
+	</info_portion>
+	<info_portion id="dominoes_principle46_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle46"> 
+</info_portion>
+
+<info_portion id="dominoes_principle47_start">
+		<task>dominoes_principle47</task>
+	</info_portion>
+	<info_portion id="dominoes_principle47_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle47"> 
+</info_portion>
+
+<info_portion id="dominoes_principle48_start">
+		<task>dominoes_principle48</task>
+	</info_portion>
+	<info_portion id="dominoes_principle48_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle48"> 
+</info_portion>
+
+<info_portion id="dominoes_principle49_start">
+		<task>dominoes_principle49</task>
+	</info_portion>
+	<info_portion id="dominoes_principle49_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle49"> 
+</info_portion>
+
+<info_portion id="dominoes_principle50_start">
+		<task>dominoes_principle50</task>
+	</info_portion>
+	<info_portion id="dominoes_principle50_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle50"> 
+</info_portion>
+
+<info_portion id="dominoes_principle51_start">
+		<task>dominoes_principle51</task>
+	</info_portion>
+	<info_portion id="dominoes_principle51_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle51"> 
+</info_portion>
+
+<info_portion id="dominoes_principle52_start">
+		<task>dominoes_principle52</task>
+	</info_portion>
+	<info_portion id="dominoes_principle52_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle52"> 
+</info_portion>
+
+<info_portion id="dominoes_principle53_start">
+		<task>dominoes_principle53</task>
+	</info_portion>
+	<info_portion id="dominoes_principle53_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle53"> 
+</info_portion>
+
+<info_portion id="dominoes_principle54_start">
+		<task>dominoes_principle54</task>
+	</info_portion>
+	<info_portion id="dominoes_principle54_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle54"> 
+</info_portion>
+
+<info_portion id="dominoes_principle55_start">
+		<task>dominoes_principle55</task>
+	</info_portion>
+	<info_portion id="dominoes_principle55_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle55"> 
+</info_portion>
+
+<info_portion id="dominoes_principle56_start">
+		<task>dominoes_principle56</task>
+	</info_portion>
+	<info_portion id="dominoes_principle56_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle56"> 
+</info_portion>
+
+<info_portion id="dominoes_principle57_start">
+		<task>dominoes_principle57</task>
+	</info_portion>
+	<info_portion id="dominoes_principle57_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle57"> 
+</info_portion>
+
+<info_portion id="dominoes_principle58_start">
+		<task>dominoes_principle58</task>
+	</info_portion>
+	<info_portion id="dominoes_principle58_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle58"> 
+</info_portion>
+
+<info_portion id="dominoes_principle59_start">
+		<task>dominoes_principle59</task>
+	</info_portion>
+	<info_portion id="dominoes_principle59_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle59"> 
+</info_portion>
+
+<info_portion id="dominoes_principle60_start">
+		<task>dominoes_principle60</task>
+	</info_portion>
+	<info_portion id="dominoes_principle60_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle60"> 
+</info_portion>
+
+<info_portion id="dominoes_principle61_start">
+		<task>dominoes_principle61</task>
+	</info_portion>
+	<info_portion id="dominoes_principle61_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle61"> 
+</info_portion>
+
+<info_portion id="dominoes_principle62_start">
+		<task>dominoes_principle62</task>
+	</info_portion>
+	<info_portion id="dominoes_principle62_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle62"> 
+</info_portion>
+
+<info_portion id="dominoes_principle63_start">
+		<task>dominoes_principle63</task>
+	</info_portion>
+	<info_portion id="dominoes_principle63_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle63"> 
+</info_portion>
+
+<info_portion id="dominoes_principle64_start">
+		<task>dominoes_principle64</task>
+	</info_portion>
+	<info_portion id="dominoes_principle64_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle64"> 
+</info_portion>
+
+<info_portion id="dominoes_principle65_start">
+		<task>dominoes_principle65</task>
+	</info_portion>
+	<info_portion id="dominoes_principle65_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle65"> 
+</info_portion>
+
+<info_portion id="dominoes_principle66_start">
+		<task>dominoes_principle66</task>
+	</info_portion>
+	<info_portion id="dominoes_principle66_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle66"> 
+</info_portion>
+
+<info_portion id="dominoes_principle67_start">
+		<task>dominoes_principle67</task>
+	</info_portion>
+	<info_portion id="dominoes_principle67_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle67"> 
+</info_portion>
+
+<info_portion id="dominoes_principle68_start">
+		<task>dominoes_principle68</task>
+	</info_portion>
+	<info_portion id="dominoes_principle68_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle68"> 
+</info_portion>
+
+<info_portion id="dominoes_principle69_start">
+		<task>dominoes_principle69</task>
+	</info_portion>
+	<info_portion id="dominoes_principle69_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle69"> 
+</info_portion>
+
+<info_portion id="dominoes_principle70_start">
+		<task>dominoes_principle70</task>
+	</info_portion>
+	<info_portion id="dominoes_principle70_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle70"> 
+</info_portion>
+
+<info_portion id="dominoes_principle71_start">
+		<task>dominoes_principle71</task>
+	</info_portion>
+	<info_portion id="dominoes_principle71_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle71"> 
+</info_portion>
+
+<info_portion id="dominoes_principle72_start">
+		<task>dominoes_principle72</task>
+	</info_portion>
+	<info_portion id="dominoes_principle72_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle72"> 
+</info_portion>
+
+<info_portion id="dominoes_principle73_start">
+		<task>dominoes_principle73</task>
+	</info_portion>
+	<info_portion id="dominoes_principle73_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle73"> 
+</info_portion>
+
+<info_portion id="dominoes_principle74_start">
+		<task>dominoes_principle74</task>
+	</info_portion>
+	<info_portion id="dominoes_principle74_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle74"> 
+</info_portion>
+
+<info_portion id="dominoes_principle75_start">
+		<task>dominoes_principle75</task>
+	</info_portion>
+	<info_portion id="dominoes_principle75_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle75"> 
+</info_portion>
+
+<info_portion id="dominoes_principle76_start">
+		<task>dominoes_principle76</task>
+	</info_portion>
+	<info_portion id="dominoes_principle76_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle76"> 
+</info_portion>
+
+<info_portion id="dominoes_principle77_start">
+		<task>dominoes_principle77</task>
+	</info_portion>
+	<info_portion id="dominoes_principle77_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle77"> 
+</info_portion>
+
+<info_portion id="dominoes_principle78_start">
+		<task>dominoes_principle78</task>
+	</info_portion>
+	<info_portion id="dominoes_principle78_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle78"> 
+</info_portion>
+
+<info_portion id="dominoes_principle79_start">
+		<task>dominoes_principle79</task>
+	</info_portion>
+	<info_portion id="dominoes_principle79_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle79"> 
+</info_portion>
+
+<info_portion id="dominoes_principle80_start">
+		<task>dominoes_principle80</task>
+	</info_portion>
+	<info_portion id="dominoes_principle80_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle80"> 
+</info_portion>
+
+<info_portion id="dominoes_principle81_start">
+		<task>dominoes_principle81</task>
+	</info_portion>
+	<info_portion id="dominoes_principle81_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle81"> 
+</info_portion>
+
+<info_portion id="dominoes_principle82_start">
+		<task>dominoes_principle82</task>
+	</info_portion>
+	<info_portion id="dominoes_principle82_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle82"> 
+</info_portion>
+
+<info_portion id="dominoes_principle83_start">
+		<task>dominoes_principle83</task>
+	</info_portion>
+	<info_portion id="dominoes_principle83_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle83"> 
+</info_portion>
+
+<info_portion id="dominoes_principle84_start">
+		<task>dominoes_principle84</task>
+	</info_portion>
+	<info_portion id="dominoes_principle84_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle84"> 
+</info_portion>
+
+<info_portion id="dominoes_principle85_start">
+		<task>dominoes_principle85</task>
+	</info_portion>
+	<info_portion id="dominoes_principle85_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle85"> 
+</info_portion>
+
+<info_portion id="dominoes_principle86_start">
+		<task>dominoes_principle86</task>
+	</info_portion>
+	<info_portion id="dominoes_principle86_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle86"> 
+</info_portion>
+
+<info_portion id="dominoes_principle87_start">
+		<task>dominoes_principle87</task>
+	</info_portion>
+	<info_portion id="dominoes_principle87_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle87"> 
+</info_portion>
+
+<info_portion id="dominoes_principle88_start">
+		<task>dominoes_principle88</task>
+	</info_portion>
+	<info_portion id="dominoes_principle88_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle88"> 
+</info_portion>
+
+<info_portion id="dominoes_principle89_start">
+		<task>dominoes_principle89</task>
+	</info_portion>
+	<info_portion id="dominoes_principle89_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle89"> 
+</info_portion>
+
+<info_portion id="dominoes_principle90_start">
+		<task>dominoes_principle90</task>
+	</info_portion>
+	<info_portion id="dominoes_principle90_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle90"> 
+</info_portion>
+
+<info_portion id="dominoes_principle91_start">
+		<task>dominoes_principle91</task>
+	</info_portion>
+	<info_portion id="dominoes_principle91_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle91"> 
+</info_portion>
+
+<info_portion id="dominoes_principle92_start">
+		<task>dominoes_principle92</task>
+	</info_portion>
+	<info_portion id="dominoes_principle92_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle92"> 
+</info_portion>
+
+<info_portion id="dominoes_principle93_start">
+		<task>dominoes_principle93</task>
+	</info_portion>
+	<info_portion id="dominoes_principle93_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle93"> 
+</info_portion>
+
+<info_portion id="dominoes_principle94_start">
+		<task>dominoes_principle94</task>
+	</info_portion>
+	<info_portion id="dominoes_principle94_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle94"> 
+</info_portion>
+
+<info_portion id="dominoes_principle95_start">
+		<task>dominoes_principle95</task>
+	</info_portion>
+	<info_portion id="dominoes_principle95_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle95"> 
+</info_portion>
+
+<info_portion id="dominoes_principle96_start">
+		<task>dominoes_principle96</task>
+	</info_portion>
+	<info_portion id="dominoes_principle96_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle96"> 
+</info_portion>
+
+<info_portion id="dominoes_principle97_start">
+		<task>dominoes_principle97</task>
+	</info_portion>
+	<info_portion id="dominoes_principle97_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle97"> 
+</info_portion>
+
+<info_portion id="dominoes_principle98_start">
+		<task>dominoes_principle98</task>
+	</info_portion>
+	<info_portion id="dominoes_principle98_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle98"> 
+</info_portion>
+
+<info_portion id="dominoes_principle99_start">
+		<task>dominoes_principle99</task>
+	</info_portion>
+	<info_portion id="dominoes_principle99_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle99"> 
+</info_portion>
+
+
+
+
+
+<info_portion id="leading_deadlock1_start">
+		<task>leading_deadlock1</task>
+	</info_portion>
+	<info_portion id="leading_deadlock1_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock1"> 
+</info_portion>
+
+<info_portion id="leading_deadlock2_start">
+		<task>leading_deadlock2</task>
+	</info_portion>
+	<info_portion id="leading_deadlock2_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock2"> 
+</info_portion>
+
+<info_portion id="leading_deadlock3_start">
+		<task>leading_deadlock3</task>
+	</info_portion>
+	<info_portion id="leading_deadlock3_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock3"> 
+</info_portion>
+
+<info_portion id="leading_deadlock4_start">
+		<task>leading_deadlock4</task>
+	</info_portion>
+	<info_portion id="leading_deadlock4_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock4"> 
+</info_portion>
+
+<info_portion id="leading_deadlock5_start">
+		<task>leading_deadlock5</task>
+	</info_portion>
+	<info_portion id="leading_deadlock5_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock5"> 
+</info_portion>
+
+<info_portion id="leading_deadlock6_start">
+		<task>leading_deadlock6</task>
+	</info_portion>
+	<info_portion id="leading_deadlock6_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock6"> 
+</info_portion>
+
+<info_portion id="leading_deadlock7_start">
+		<task>leading_deadlock7</task>
+	</info_portion>
+	<info_portion id="leading_deadlock7_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock7"> 
+</info_portion>
+
+<info_portion id="leading_deadlock8_start">
+		<task>leading_deadlock8</task>
+	</info_portion>
+	<info_portion id="leading_deadlock8_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock8"> 
+</info_portion>
+
+<info_portion id="leading_deadlock9_start">
+		<task>leading_deadlock9</task>
+	</info_portion>
+	<info_portion id="leading_deadlock9_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock9"> 
+</info_portion>
+
+<info_portion id="leading_deadlock10_start">
+		<task>leading_deadlock10</task>
+	</info_portion>
+	<info_portion id="leading_deadlock10_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock10"> 
+</info_portion>
+
+<info_portion id="leading_deadlock11_start">
+		<task>leading_deadlock11</task>
+	</info_portion>
+	<info_portion id="leading_deadlock11_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock11"> 
+</info_portion>
+
+<info_portion id="leading_deadlock12_start">
+		<task>leading_deadlock12</task>
+	</info_portion>
+	<info_portion id="leading_deadlock12_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock12"> 
+</info_portion>
+
+<info_portion id="leading_deadlock13_start">
+		<task>leading_deadlock13</task>
+	</info_portion>
+	<info_portion id="leading_deadlock13_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock13"> 
+</info_portion>
+
+<info_portion id="leading_deadlock14_start">
+		<task>leading_deadlock14</task>
+	</info_portion>
+	<info_portion id="leading_deadlock14_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock14"> 
+</info_portion>
+
+<info_portion id="leading_deadlock15_start">
+		<task>leading_deadlock15</task>
+	</info_portion>
+	<info_portion id="leading_deadlock15_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock15"> 
+</info_portion>
+
+<info_portion id="leading_deadlock16_start">
+		<task>leading_deadlock16</task>
+	</info_portion>
+	<info_portion id="leading_deadlock16_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock16"> 
+</info_portion>
+
+<info_portion id="leading_deadlock17_start">
+		<task>leading_deadlock17</task>
+	</info_portion>
+	<info_portion id="leading_deadlock17_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock17"> 
+</info_portion>
+
+<info_portion id="leading_deadlock18_start">
+		<task>leading_deadlock18</task>
+	</info_portion>
+	<info_portion id="leading_deadlock18_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock18"> 
+</info_portion>
+
+<info_portion id="leading_deadlock19_start">
+		<task>leading_deadlock19</task>
+	</info_portion>
+	<info_portion id="leading_deadlock19_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock19"> 
+</info_portion>
+
+<info_portion id="leading_deadlock20_start">
+		<task>leading_deadlock20</task>
+	</info_portion>
+	<info_portion id="leading_deadlock20_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock20"> 
+</info_portion>
+
+
+
+
+
+<!--<info_portion id="dominoes_principle_start">
+		<task>dominoes_principle</task>
+	</info_portion>
+	<info_portion id="dominoes_principle_1">
+	</info_portion>
+	<info_portion id="player_complete_dominoes_principle"> 
+</info_portion>-->
+
+<!--<info_portion id="leading_deadlock_start">
+		<task>leading_deadlock</task>
+	</info_portion>
+	<info_portion id="leading_deadlock_1">
+	</info_portion>
+	<info_portion id="player_complete_leading_deadlock"> 
+</info_portion>-->
+		
+</game_information_portions>

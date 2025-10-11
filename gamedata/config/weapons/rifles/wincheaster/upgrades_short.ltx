@@ -1,0 +1,445 @@
+
+; Винчестер ================================================================================================================================================ ПМ Пистолет Макарова
+; ==================================== первая ветка ====================================
+
+
+; 1 ветка
+
+; upgrade 1
+[wpn_wincheaster1300_short_a1]:wpn_wincheaster1300_short
+hidden_bones = scope5, scope1, scope2, scope3, scope4, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine, rail
+
+available_upgrades		= wincheaster_s_upgr4
+installed_upgrades		= wincheaster_s_upgr1
+icon_group = 2
+cost					 	= 2500
+hud                      	= wpn_winchester1300s_hud_a1
+[wpn_winchester1300s_hud_a1]:wpn_winchester1300_hud
+hidden_bones = scope5, scope1, scope2, scope3, scope4, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine, rail
+
+
+
+; upgrade 4
+[wpn_wincheaster1300_short_a4]:wpn_wincheaster1300_short_a1
+hidden_bones = scope5, scope1, scope2, scope3, scope4, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+available_upgrades		= wincheaster_s_upgr5
+installed_upgrades		= wincheaster_s_upgr1, wincheaster_s_upgr4
+
+inv_weight					= 2.16
+
+cost					 	= 3000
+scope_status				= 2
+scope_names             = wpn_addon_scope_eotech, wpn_addon_scope_susat_dusk, wpn_addon_scope_elcan, wpn_addon_scope_susat_night, wpn_addon_scope_susat
+
+scope_respawn                                        = wpn_wincheaster1300_short_a4
+scope_respawn_wpn_addon_scope_eotech                 = wpn_wincheaster1300_short_a4_eotech
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_wincheaster1300_short_a4_susat_dusk
+scope_respawn_wpn_addon_scope_elcan                  = wpn_wincheaster1300_short_a4_elcan
+scope_respawn_wpn_addon_scope_susat_night                  = wpn_wincheaster1300_short_a4_susat_night
+scope_respawn_wpn_addon_scope_susat                  = wpn_wincheaster1300_short_a4_susat
+
+hud                      	= wpn_winchester1300s_hud_a4
+
+[wpn_winchester1300s_hud_a4]:wpn_winchester1300_hud
+hidden_bones = scope5, scope1, scope2, scope3, scope4, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+
+
+; upgrade 4 Sights
+[wpn_wincheaster1300_short_a4_eotech]:wpn_wincheaster1300_short_a4
+hidden_bones = scope5,  scope2, scope3, scope4, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+scope_bone = scope1
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 74                 ; offset in inventory icon
+scope_y                 = 6
+hud = wpn_wincheaster1300_short_a4_eotech_hud
+[wpn_wincheaster1300_short_a4_eotech_hud]:wpn_winchester1300_hud
+hidden_bones = scope5,  scope2, scope3, scope4, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.052700,0.046000
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.052700,0.046000
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.05
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.1
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_wincheaster1300_short_a4_susat_dusk]:wpn_wincheaster1300_short_a4
+hidden_bones = scope5, scope1, scope3, scope4, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+scope_bone = scope2
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 76                ; offset in inventory icon
+scope_y                 = 2
+hud                      			= wpn_wincheaster1300_short_a4_susat_dusk_hud
+[wpn_wincheaster1300_short_a4_susat_dusk_hud]:wpn_winchester1300_hud
+hidden_bones = scope5, scope1, scope3, scope4, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.056100,0.046500
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.056100,0.046500
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_wincheaster1300_short_a4_elcan]:wpn_wincheaster1300_short_a4
+hidden_bones = scope5, scope1, scope2, scope4, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+scope_bone = scope3
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 42                ; offset in inventory icon
+scope_y                 = 4
+hud = wpn_wincheaster1300_short_a4_elcan_hud
+[wpn_wincheaster1300_short_a4_elcan_hud]:wpn_winchester1300_hud
+hidden_bones = scope5, scope1, scope2, scope4, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.058240,-0.071000
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.058240,-0.071000
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000000,-0.095700,0.000000
+aim_hud_offset_alt_rot = -0.001000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000000,-0.095700,0.000000
+aim_hud_offset_alt_rot_16x9 = -0.001000,0.000000,0.000000
+
+[wpn_wincheaster1300_short_a4_susat_night]:wpn_wincheaster1300_short_a4
+hidden_bones = scope5, scope1, scope2, scope3, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+scope_bone = scope4
+hud = wpn_wincheaster1300_short_a4_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 52                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_wincheaster1300_short_a4_susat_night_hud]:wpn_winchester1300_hud
+hidden_bones = scope5, scope1, scope2, scope3, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.077840,0.044500
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.077840,0.044500
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,0.12
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,0.07
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+[wpn_wincheaster1300_short_a4_susat]:wpn_wincheaster1300_short_a4
+hidden_bones = scope4, scope1, scope2, scope3, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+scope_bone = scope5
+hud = wpn_wincheaster1300_short_a4_susat_hud
+scope_name              = wpn_addon_scope_susat
+use_alt_aim_hud = true
+scope_x              	= 52                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_wincheaster1300_short_a4_susat_hud]:wpn_winchester1300_hud
+hidden_bones = scope4, scope1, scope2, scope3, barrel, flash, laser, bolt_foregrip_rail, stock, stock_tactical, magazine
+
+aim_hud_offset_pos = -0.000350,-0.084191,-0.044100
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+
+aim_hud_offset_pos_16x9 = -0.000350,-0.084191,-0.044100
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+aim_hud_offset_alt_pos = 0.000000,-0.117041,0.000000
+aim_hud_offset_alt_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000000,-0.117041,0.000000
+aim_hud_offset_alt_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+; upgrade 5
+[wpn_wincheaster1300_short_a5]:wpn_wincheaster1300_short_a4
+hidden_bones = scope5, scope1, scope2, scope3, scope4, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+available_upgrades		= wincheaster_s_upgr7
+installed_upgrades		= wincheaster_s_upgr1, wincheaster_s_upgr4, wincheaster_s_upgr5
+hud                      	= wpn_winchester1300s_hud_a5
+
+inv_weight					= 2.36
+
+cam_dispersion          = 4.45	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 1.95	;увеличениe cam_dispersion с каждым выстрелом
+zoom_cam_dispersion			= 2.95
+zoom_cam_dispersion_inc		= 2.45
+
+cost					 	= 3500
+scope_status				= 2
+scope_respawn                                        = wpn_wincheaster1300_short_a5
+scope_respawn_wpn_addon_scope_eotech                 = wpn_wincheaster1300_short_a5_eotech
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_wincheaster1300_short_a5_susat_dusk
+scope_respawn_wpn_addon_scope_elcan                  = wpn_wincheaster1300_short_a5_elcan
+scope_respawn_wpn_addon_scope_susat_night                  = wpn_wincheaster1300_short_a5_susat_night
+scope_respawn_wpn_addon_scope_susat                  = wpn_wincheaster1300_short_a5_susat
+
+[wpn_winchester1300s_hud_a5]:wpn_winchester1300_tac_hud
+hidden_bones = scope5, scope1, scope2, scope3, scope4, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+
+
+
+
+; upgrade 5 Sights
+[wpn_wincheaster1300_short_a5_eotech]:wpn_wincheaster1300_short_a5
+hidden_bones = scope5, scope2, scope3, scope4, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+scope_bone = scope1
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 74                 ; offset in inventory icon
+scope_y                 = 6
+hud = wpn_wincheaster1300_short_a5_eotech_hud
+[wpn_wincheaster1300_short_a5_eotech_hud]:wpn_winchester1300_tac_hud
+hidden_bones = scope5, scope2, scope3, scope4, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.052700,0.046000
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.052700,0.046000
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.05
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.1
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_wincheaster1300_short_a5_susat_dusk]:wpn_wincheaster1300_short_a5
+hidden_bones = scope5, scope1, scope3, scope4, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+scope_bone = scope2
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 76                ; offset in inventory icon
+scope_y                 = 2
+hud                      			= wpn_wincheaster1300_short_a5_susat_dusk_hud
+[wpn_wincheaster1300_short_a5_susat_dusk_hud]:wpn_winchester1300_tac_hud
+hidden_bones = scope5, scope1, scope3, scope4, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.056100,0.046500
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.056100,0.046500
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_wincheaster1300_short_a5_elcan]:wpn_wincheaster1300_short_a5
+hidden_bones = scope5, scope1, scope2, scope4, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+scope_bone = scope3
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 42                ; offset in inventory icon
+scope_y                 = 4
+hud = wpn_wincheaster1300_short_a5_elcan_hud
+[wpn_wincheaster1300_short_a5_elcan_hud]:wpn_winchester1300_tac_hud
+hidden_bones = scope5, scope1, scope2, scope4, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.058240,-0.071000
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.058240,-0.071000
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000000,-0.095700,0.000000
+aim_hud_offset_alt_rot = -0.001000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000000,-0.095700,0.000000
+aim_hud_offset_alt_rot_16x9 = -0.001000,0.000000,0.000000
+
+[wpn_wincheaster1300_short_a5_susat_night]:wpn_wincheaster1300_short_a5
+hidden_bones = scope5, scope1, scope2, scope3, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+scope_bone = scope4
+hud = wpn_wincheaster1300_short_a5_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 52                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_wincheaster1300_short_a5_susat_night_hud]:wpn_winchester1300_tac_hud
+hidden_bones = scope5, scope1, scope2, scope3, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.077840,0.044500
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.077840,0.044500
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,0.12
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,0.07
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+[wpn_wincheaster1300_short_a5_susat]:wpn_wincheaster1300_short_a5
+hidden_bones = scope4, scope1, scope2, scope3, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+scope_bone = scope5
+hud = wpn_wincheaster1300_short_a5_susat_hud
+scope_name              = wpn_addon_scope_susat
+use_alt_aim_hud = true
+scope_x              	= 52                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_wincheaster1300_short_a5_susat_hud]:wpn_winchester1300_tac_hud
+hidden_bones = scope4, scope1, scope2, scope3, barrel, flash, laser, bolt_foregrip, stock, stock_tactical, magazine
+
+aim_hud_offset_pos = -0.000350,-0.084191,-0.044100
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+
+aim_hud_offset_pos_16x9 = -0.000350,-0.084191,-0.044100
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+aim_hud_offset_alt_pos = 0.000000,-0.117041,0.000000
+aim_hud_offset_alt_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000000,-0.117041,0.000000
+aim_hud_offset_alt_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+
+; upgrade 7
+[wpn_wincheaster1300_short_a7]:wpn_wincheaster1300_short_a5
+hidden_bones = scope5, scope1, scope2, scope3, scope4, barrel, bolt_foregrip, stock, stock_tactical, magazine
+available_upgrades		= none
+installed_upgrades		= wincheaster_s_upgr1, wincheaster_s_upgr4, wincheaster_s_upgr5, wincheaster_s_upgr7
+
+inv_weight					= 2.56
+
+laserdot_attach_offset_x = 0.0
+laserdot_attach_offset_y = -0.220500
+laserdot_attach_offset_z = -0.600000
+
+laserdot_world_attach_offset_x = 0.010
+laserdot_world_attach_offset_y = 0.087
+laserdot_world_attach_offset_z = 0.506
+
+torch_world_attach_offset_x = -0.004
+torch_world_attach_offset_y = 0.074
+torch_world_attach_offset_z = 0.506
+
+torch_omni_world_attach_offset_x = -0.004
+torch_omni_world_attach_offset_y = 0.074
+torch_omni_world_attach_offset_z = 0.506
+
+torch_attach_offset_x = -0.008
+torch_attach_offset_y = 0.048
+torch_attach_offset_z = 0.4
+torch_omni_attach_offset_x = 0.0 
+torch_omni_attach_offset_y = 0.0
+torch_omni_attach_offset_z = 0.0
+torch_range = 50
+torch_r2_range = 50
+torch_omni_range = 0.2
+torch_r2_omni_range = 0.2
+
+cost					 	= 4000
+scope_status				= 2
+scope_respawn                                        = wpn_wincheaster1300_short_a7
+scope_respawn_wpn_addon_scope_eotech                 = wpn_wincheaster1300_short_a7_eotech
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_wincheaster1300_short_a7_susat_dusk
+scope_respawn_wpn_addon_scope_elcan                  = wpn_wincheaster1300_short_a7_elcan
+scope_respawn_wpn_addon_scope_susat_night                  = wpn_wincheaster1300_short_a7_susat_night
+scope_respawn_wpn_addon_scope_susat                  = wpn_wincheaster1300_short_a7_susat
+
+hud                      	= wpn_winchester1300s_hud_a7
+[wpn_winchester1300s_hud_a7]:wpn_winchester1300_tac_hud
+hidden_bones = scope5, scope1, scope2, scope3, scope4, barrel, bolt_foregrip, stock, stock_tactical, magazine
+
+
+
+; upgrade 7 Sights
+[wpn_wincheaster1300_short_a7_eotech]:wpn_wincheaster1300_short_a7
+hidden_bones = scope5, scope2, scope3, scope4, barrel, bolt_foregrip, stock, stock_tactical, magazine
+scope_bone = scope1
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 74                 ; offset in inventory icon
+scope_y                 = 6
+hud = wpn_wincheaster1300_short_a7_eotech_hud
+[wpn_wincheaster1300_short_a7_eotech_hud]:wpn_winchester1300_tac_hud
+hidden_bones = scope5, scope2, scope3, scope4, barrel, bolt_foregrip, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.052700,0.046000
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.052700,0.046000
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.05
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.1
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_wincheaster1300_short_a7_susat_dusk]:wpn_wincheaster1300_short_a7
+hidden_bones = scope5, scope1, scope3, scope4, barrel, bolt_foregrip, stock, stock_tactical, magazine
+scope_bone = scope2
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 76                ; offset in inventory icon
+scope_y                 = 2
+hud                      			= wpn_wincheaster1300_short_a7_susat_dusk_hud
+[wpn_wincheaster1300_short_a7_susat_dusk_hud]:wpn_winchester1300_tac_hud
+hidden_bones = scope5, scope1, scope3, scope4, barrel, bolt_foregrip, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.056100,0.046500
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.056100,0.046500
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_wincheaster1300_short_a7_elcan]:wpn_wincheaster1300_short_a7
+hidden_bones = scope5, scope1, scope2, scope4, barrel, bolt_foregrip, stock, stock_tactical, magazine
+scope_bone = scope3
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 42                ; offset in inventory icon
+scope_y                 = 4
+hud = wpn_wincheaster1300_short_a7_elcan_hud
+[wpn_wincheaster1300_short_a7_elcan_hud]:wpn_winchester1300_tac_hud
+hidden_bones = scope5, scope1, scope2, scope4, barrel, bolt_foregrip, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.058240,-0.071000
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.058240,-0.071000
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000000,-0.095700,0.000000
+aim_hud_offset_alt_rot = -0.001000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000000,-0.095700,0.000000
+aim_hud_offset_alt_rot_16x9 = -0.001000,0.000000,0.000000
+
+[wpn_wincheaster1300_short_a7_susat_night]:wpn_wincheaster1300_short_a7
+hidden_bones = scope5, scope1, scope2, scope3, barrel, bolt_foregrip, stock, stock_tactical, magazine
+scope_bone = scope4
+hud = wpn_wincheaster1300_short_a7_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 52                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_wincheaster1300_short_a7_susat_night_hud]:wpn_winchester1300_tac_hud
+hidden_bones = scope5, scope1, scope2, scope3, barrel, bolt_foregrip, stock, stock_tactical, magazine
+aim_hud_offset_pos = 0.000000,-0.077840,0.044500
+aim_hud_offset_rot = 0.0,0.0,0.0
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.077840,0.044500
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,0.12
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,0.07
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+[wpn_wincheaster1300_short_a7_susat]:wpn_wincheaster1300_short_a7
+hidden_bones = scope4, scope1, scope2, scope3, barrel, bolt_foregrip, stock, stock_tactical, magazine
+scope_bone = scope5
+hud = wpn_wincheaster1300_short_a7_susat_hud
+scope_name              = wpn_addon_scope_susat
+use_alt_aim_hud = true
+scope_x              	= 52                 ; offset in inventory icon
+scope_y                 = 2
+[wpn_wincheaster1300_short_a7_susat_hud]:wpn_winchester1300_tac_hud
+hidden_bones = scope4, scope1, scope2, scope3, barrel, bolt_foregrip, stock, stock_tactical, magazine
+
+aim_hud_offset_pos = -0.000350,-0.084191,-0.044100
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+
+aim_hud_offset_pos_16x9 = -0.000350,-0.084191,-0.044100
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+aim_hud_offset_alt_pos = 0.000000,-0.117041,0.000000
+aim_hud_offset_alt_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000000,-0.117041,0.000000
+aim_hud_offset_alt_rot_16x9 = 0.000000,0.000000,0.000000

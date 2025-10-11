@@ -1,0 +1,211 @@
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;; Walther P99 ;;;;;;;;;;;;;;;;;;;;;;;;;
+;-----------------------------------------------------------------
+[wpn_walther]:identity_immunities
+GroupControlSection			= spawn_group
+discovery_dependency 		= 
+$spawn                   	= "weapons\walther"					; option for Level Editor
+$npc			 			= on		; option for Level Editor
+$prefetch 					= 8
+scheduled         		   	= off              ; option for ALife Simulator
+cform             		    = skeleton
+class                    	= WP_WALTH
+min_radius               	= 0
+max_radius               	= 50
+description					= gunsl_wpn_walther_descr
+dont_interrupt_shot_anm = true ;Не прерывать анимацию выстрела чтобы гильза успела вылететь, т.к. в гансе гильзы являются частью анимации выстрела
+is_gunslinger_weapon = true ;Специальный флаг чтобы двиг понимал что это ствол из Gunslinger Mod и к нему надо применить фикс создания физ. оболочки для избежания ошибок с этим связанных.	
+
+ef_weapon_type				= 5
+hidden_bones =  barrel_compensator, flash, laser, sight, barrel_silencer
+;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0               ; во сколько раз увеличивается eye_range 
+holder_fov_modifier		= 1.0              ; во сколько раз увеличивается eye_fov
+;-----------------------------------------------------------------------------------
+
+cost					 	= 1500  ; 300
+
+ammo_limit		 			= 120
+ammo_current		 		= 96
+ammo_elapsed		 		= 16
+
+ammo_mag_size		 		= 16
+ammo_class		 			= ammo_9x19_fmj, ammo_9x19_pbp 
+
+hand_dependence		 		= 1
+single_handed				= 1
+							
+slot 			 		= 1
+animation_slot				= 1									; type of the animation that will be used
+
+inv_name				= gunsl_wpn_walther
+inv_name_short				= gunsl_wpn_walther
+inv_weight					= 0.69	;.5
+
+inv_grid_width				= 2
+inv_grid_height				= 1
+inv_grid_x				= 12
+inv_grid_y				= 23
+
+kill_msg_x		= 168
+kill_msg_y		= 178
+kill_msg_width		= 27
+kill_msg_height		= 23
+
+;-----------------------------------------------------------------------------------
+;базовая дисперсия
+fire_dispersion_base		= 0.18 	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+
+;отдача
+cam_relax_speed         	= 8.5	;скорость возврата в исходное положение
+cam_dispersion          	= 0.47	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.0	;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 1.0	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 20.0	;максимальный угол отдачи
+cam_max_angle_horz		= 10.0	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 0.35	;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 	= 0.005	;вероятность осечки при максимальном износе 
+misfire_condition_k		= 0.05
+condition_shot_dec 		= 0.0003 ;увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+direction           	 = 0, 0, 1
+fire_point               = 0.0, 0.136, 0.165
+flame_particles							 =  weapons\new_effects\pistol_9x18
+smoke_particles 						 = weapons\generic_shoot_00
+grenade_flame_particles 				 =  weapons\generic_shoot_00
+silencer_smoke_particles 				 =  weapons\generic_shoot_00
+
+shell_point		 			= 0.0, 0.136, 0.02
+shell_dir		 			= 0.0, 0.0, 0.4
+shell_particles	 			= weapons\9x19
+
+rpm_empty_click 	 		= 200
+
+PDM_disp_base 			= 1.0
+PDM_disp_vel_factor 		= 0.5
+PDM_disp_accel_factor 		= 0.5
+PDM_crouch	 		= 1.0
+PDM_crouch_no_acc 		= 1.0
+
+;;;;;; Для "Последний Сталкер"
+hit_power           = 0.43
+hit_impulse	    = 43
+hit_type 		= fire_wound	
+
+fire_distance       = 50
+bullet_speed	    = 320		
+rpm                 = 315
+; end ttc
+
+use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+time_to_aim				= 1.0	
+
+silencer_hit_power       	= 0.4
+silencer_hit_impulse	 	= 38
+silencer_fire_distance   	= 45
+silencer_bullet_speed	 	= 285
+
+hud                      	= wpn_walther_hud
+normal                   	= 0, 1, 0
+position                 	= -0.021, -0.095, 0.0
+orientation              	= 0, 0, 0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;strap_position         		= -0.1,-0.45,0.2			; position (offset) and orientation of the weapon when it is strapped
+;strap_orientation      		= 1.57,0,0						; (3rd person view)
+;strap_bone0					= bip01_spine2
+;strap_bone1					= bip01_spine1
+
+;startup_ammo            	= 90
+visual                   	= dynamics\weapons\wpn_walter99\wpn_walter99.ogf
+
+light_color		 		= 0.6,0.5,0.3
+light_range		 		= 3.0
+light_var_color		 		= 0.05
+light_var_range		 		= 0.5
+light_time 		 		= 0.2
+
+ph_mass			 			= 1
+;cost			 			= 350
+
+;addons
+scope_status			= 0							; 0 - no addon
+silencer_status			= 2							; 1 - permanent
+grenade_launcher_status		= 0							; 2 - attachable
+
+zoom_enabled			= true
+scope_zoom_factor	    	= 100
+
+;звуки
+snd_draw		= weapons\p99\p99_draw
+snd_holster		= weapons\m1911\hide
+snd_shoot		= weapons\p99\p99_shoot
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload		= weapons\p99\p99_reload 
+snd_reload_empty        = weapons\p99\p99_reload_full
+snd_changecartridgetype = weapons\p99\p99_reload 
+snd_close		= $silent
+snd_reload_jammed       = weapons\grach\grach_revival
+snd_reload_jammed_last  = weapons\grach\grach_revival
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_attach_sil		= weapons\m1911\colt1911_reload
+snd_detach_sil		= weapons\m1911\colt1911_reload
+snd_attach_scope        = weapons\m1911\colt1911_reload
+snd_detach_scope        = weapons\m1911\colt1911_reload
+snd_attach_gl           = weapons\m1911\colt1911_reload
+snd_detach_gl           = weapons\m1911\colt1911_reload
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_fire_modes	= weapons\glock17\glock17_firemode
+;snd_fire_modes_empty
+;snd_fire_modes_jammed
+snd_prepare_detector    = weapons\detector_prepare
+snd_finish_detector     = weapons\pistol_hand_draw
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_reload_jammed_detector               = weapons\grach\grach_revival_det
+snd_reload_jammed_last_detector          = weapons\grach\grach_revival_det
+snd_light_misfire                        = weapons\pistol_stryker_light_misfire
+snd_laser_on	= weapons\vss\vss_firemode
+snd_laser_off	= weapons\vss\vss_firemode
+snd_torch_on	        = weapons\vss\vss_firemode
+snd_torch_off	        = weapons\vss\vss_firemode
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_silncer_shot		= weapons\p99\p99_sil_shoot
+snd_item_on             = weapons\headflash_on
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; silencer
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+silencer_name  				= wpn_addon_silencer		; section name for the attachable silencer
+silencer_x 					= 74						; offset in inventory icon
+silencer_y 					= -18					
+
+;params when silencer is attached 
+;similar to corresponding params without prefix silencer_
+
+;silencer_flame_particles 	= weapons\generic_weapon01
+
+silencer_light_color		= 0.6,0.5,0.3
+silencer_light_range		= 2
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#include "huds.ltx"
+
+

@@ -1,0 +1,233 @@
+;;;;;;;;;;;;;;;;;;;;;;; Colt 1911 ;;;;;;;;;;;;;;;;;;;;;;;
+;--------------------------------------------------------
+[wpn_colt1911]:identity_immunities
+GroupControlSection			= spawn_group
+discovery_dependency 		= 
+$spawn                   	= "weapons\colt1911"					; option for Level Editor
+$npc			 			= on				; option for Level Editor
+$prefetch 					= 8
+scheduled            		= off              ; option for ALife Simulator
+cform                    	= skeleton
+class                    	= WP_PM
+min_radius               	= 5
+max_radius               	= 30
+description				= gunsl_wpn_colt1911_descr
+
+ef_weapon_type				= 5
+
+;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0               ; во сколько раз увеличиваетс€ eye_range 
+holder_fov_modifier		= 1.0              ; во сколько раз увеличиваетс€ eye_fov
+;-----------------------------------------------------------------------------------
+hidden_bones = barrel_silencer, barrel_compensator, sight
+cost					 	= 1500
+
+ammo_limit		 			= 120
+ammo_current		 		= 90
+ammo_elapsed		 		= 12
+
+ammo_mag_size		 		= 7
+ammo_class		 		= ammo_11.43x23_fmj, ammo_11.43x23_hydro
+
+
+hand_dependence		 		= 1
+single_handed				= 1
+
+slot 				 	= 1		; // primary
+animation_slot		 		= 1		; type of the animation that will be used
+
+inv_name				= gunsl_wpn_colt1911
+inv_name_short				= gunsl_wpn_colt1911
+inv_weight					= 1.1
+
+inv_grid_width				= 2
+inv_grid_height				= 1
+inv_grid_x				= 19
+inv_grid_y				= 4
+
+kill_msg_x		= 161
+kill_msg_y		= 153
+kill_msg_width		= 37
+kill_msg_height		= 24
+
+;-----------------------------------------------------------------------------------
+;базова€ дисперси€
+fire_dispersion_base		= 0.2	;угол (в градусах) базовой дисперсии оружи€ (оружи€ зажатого в тисках)
+
+;отдача
+cam_relax_speed         	= 8;3.0	;скорость возврата в исходное положение
+cam_dispersion          	= 1.5	;увеличени€ угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.0	;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 1.0	;ствол будет подыматьс€ на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 20.0	;максимальный угол отдачи
+cam_max_angle_horz		= 10.0	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 0.6	;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.003	;веро€тность осечки при максимальном износе 
+misfire_condition_k			= 0.05
+condition_shot_dec			= 0.0002 ;увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+direction                	= 0, 0, 1
+fire_point					= 0.000000,0.2130000,0.19500
+
+flame_particles							 = weapons\new_effects\pistol_45acp
+smoke_particles 						 = weapons\generic_shoot_00
+grenade_flame_particles 				 = weapons\generic_shoot_00
+silencer_smoke_particles 				 = weapons\generic_shoot_00
+rpm_empty_click 	 		= 200
+
+shell_point		 		= 0.0, 0.210, 0.025
+shell_dir		 		= 0.0, 0.0, 0.4
+shell_particles	 			= weapons\45acp
+
+PDM_disp_base 			= 1.0
+PDM_disp_vel_factor 		= 0.9
+PDM_disp_accel_factor 		= 0.9
+PDM_crouch	 		= 1.0
+PDM_crouch_no_acc 		= 1.0
+
+;;;;;; ƒл€ "ѕоследний —талкер"
+hit_power           = 0.5
+hit_impulse	    = 55
+hit_type 			= fire_wound
+
+fire_distance       = 50
+bullet_speed	    = 325	;начальна€ скорость пули
+rpm                 = 300
+; end ttc
+
+use_aim_bullet				= true		;ѕоддерживаетс€ ли перва€ суппер пул€
+time_to_aim				= 1.0	
+
+silencer_hit_power       	= 0.47
+silencer_hit_impulse	 	= 45
+silencer_fire_distance   	= 50
+silencer_bullet_speed	 	= 300
+
+hud                      	= wpn_colt1911_hud
+normal                   	= 0, 1, 0
+position                 	= -0.021, -0.092, 0.0
+orientation              	= 0, 0, 0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;strap_position         		= -0.1,-0.45,0.2			; position (offset) and orientation of the weapon when it is strapped
+;strap_orientation      		= 1.57,0,0						; (3rd person view)
+;strap_bone0				= bip01_spine2
+;strap_bone1				= bip01_spine1
+
+startup_ammo             	= 90
+visual                   	= dynamics\weapons\wpn_colt1911\wpn_colt1911.ogf
+
+light_color		 		= 0.6,0.5,0.3
+light_range		 		= 3.0
+light_var_color		 		= 0.05
+light_var_range		 		= 0.5
+light_time 		 		= 0.2
+
+ph_mass			 			= 1
+;cost			 			= 350
+
+;addons
+scope_status			= 0
+silencer_status			= 2 ;0
+grenade_launcher_status		= 0
+
+zoom_enabled				= true
+scope_zoom_factor	    	= 100
+
+snd_item_on             = weapons\headflash_on
+snd_draw		= weapons\m1911\draw
+snd_holster		= weapons\m1911\hide
+snd_shoot		= weapons\m1911\colt1911_shoot
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload		= weapons\m1911\colt1911_reload
+snd_reload_empty        = weapons\m1911\colt1911_reload_full
+snd_reload_jammed       = weapons\glock17\glock17_revival
+snd_reload_jammed_last  = weapons\glock17\glock17_revival_last
+snd_changecartridgetype = weapons\m1911\colt1911_reload
+snd_close		= $silent
+snd_jamned              = weapons\glock17\glock17_revival
+snd_jamned_last         = weapons\glock17\glock17_revival_last
+snd_prepare_detector    = weapons\detector_prepare
+snd_finish_detector     = weapons\pistol_hand_draw
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_attach_sil		= weapons\m1911\colt1911_reload
+snd_detach_sil		= weapons\m1911\colt1911_reload
+snd_fakeshoot_first	= weapons\pistol_empty
+snd_fire_modes	= weapons\m1911\colt1911_reload
+snd_reload_jammed_detector               = weapons\glock17\glock17_revival_det
+snd_reload_jammed_last_detector          = weapons\glock17\glock17_revival_det
+snd_light_misfire                        = weapons\pistol_light_misfire
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_silncer_shot			= weapons\m1911\colt1911_shoot_s
+
+
+silencer_name  				= wpn_addon_silencer
+silencer_x 					= 75
+silencer_y 					= -18				
+
+
+silencer_light_color		= 0.6,0.5,0.3
+silencer_light_range		= 2
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+
+#include "huds.ltx"
+
+
+
+[wpn_colt_uniq]:wpn_colt1911
+hidden_bones = barrel_silencer, barrel_compensator, sight
+
+visual                   	= dynamics\weapons\wpn_colt1911\wpn_m45a1.ogf
+
+inv_weight					= 1.270
+
+inv_name				= gunsl_wpn_m45a1
+inv_name_short			= gunsl_wpn_m45a1
+description					= gunsl_wpn_m45a1_descr
+inv_grid_width				= 2
+inv_grid_height				= 1
+inv_grid_x					= 0
+inv_grid_y					= 60
+
+cost					 	= 2000
+;===================================================================================================
+; UPGRADE
+upgrade_allowed				= true ;false ; разрешен ли апгрейд этой секции
+upgrades					= colt_m1_upgr1, colt_m1_upgr2, colt_m1_upgr3
+available_upgrades			= colt_m1_upgr1
+upgrade_scheme				= upgrade_scheme_colt ; набор иконок апгрейдов 
+upgrade_mechanic				= mil_shurup ; набор иконок апгрейдов 
+image						= ui_upgrade_wpn_colt_m45a1 ; изображение предмета
+;===================================================================================================
+
+cam_dispersion          = 1.1	;увеличени€ угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 1.1	;увеличениe cam_dispersion с каждым выстрелом
+
+zoom_cam_dispersion         = 0.45
+zoom_cam_dispersion_inc     = 0.7
+
+hit_power           = 0.7
+fire_dispersion_base		= 0.18
+
+hud                      	= wpn_colt1911_uniq_hud
+
+
+#include "upgrades.ltx"
+
+[wpn_colt_112]:wpn_colt1911
+
+#include "upgrades_uniq.ltx"

@@ -1,0 +1,329 @@
+;;;;;;;;;;;;;;;;;;; HK G36C «Commando» ;;;;;;;;;;;;;;;;;;;;
+;----------------------------------------------------------
+[wpn_g36]:identity_immunities
+$spawn                   	= "weapons\g36"
+$npc                     	= on
+$prefetch 		         	= 8
+scheduled                	= off
+cform                    	= skeleton
+class                    	= WP_LR300
+min_radius               	= 0
+max_radius               	= 125
+dont_interrupt_shot_anm = true ;Не прерывать анимацию выстрела чтобы гильза успела вылететь, т.к. в гансе гильзы являются частью анимации выстрела
+is_gunslinger_weapon = true ;Специальный флаг чтобы двиг понимал что это ствол из Gunslinger Mod и к нему надо применить фикс создания физ. оболочки для избежания ошибок с этим связанных.	
+
+inv_name	        		= ars-g36c
+inv_name_short				= ars-g36c
+description				= enc_ars-g36c
+
+cost					= 9000
+inv_weight				= 2.8
+
+visual                   	= dynamics\weapons\wpn_g36\wpn_g36c.ogf
+hidden_bones = firemode_single, firemode_triple,  scope1, scope2, scope3, scope4, scope5, scope6, light, foregrip_handler, ironsight_rail, flash, laser, ironsight_sight, foregrip_sight, bayonet
+ef_main_weapon_type			= 2
+ef_weapon_type				= 6
+
+holder_range_modifier		        = 1
+holder_fov_modifier			= 1
+
+hand_dependence		    	        = 1
+single_handed				= 0
+
+sprint_allowed				= true
+
+slot 			         	= 2
+animation_slot			 	= 2
+
+inv_grid_width     = 4
+inv_grid_height    = 2
+inv_grid_x         = 5
+inv_grid_y         = 34
+
+kill_msg_x				= 0
+kill_msg_y				= 28
+kill_msg_width				= 84
+kill_msg_height				= 28
+
+ammo_limit		        = 210
+ammo_current		     	= 90
+ammo_elapsed		     	= 30
+
+ph_mass				= 5
+
+;-----Ballistics, Handling & Accuracy-----;
+hit_power                	= 0.54
+hit_impulse		        = 55
+hit_type 				= fire_wound
+
+fire_distance            	= 320
+bullet_speed			= 820
+rpm                      	= 800
+
+silencer_hit_power       	= 0.7
+silencer_hit_impulse	 	= 42
+silencer_fire_distance   	= 270
+silencer_bullet_speed	 	= 765
+
+ammo_mag_size				= 30
+ammo_class				= ammo_5.56x45_ss190, ammo_5.56x45_ap
+fire_modes				= 1, 3, -1
+	
+tri_state_reload		= off
+
+control_inertion_factor		= 1.05f
+
+fire_dispersion_base		= 0.18
+handling_factor			= 1.00
+use_aim_bullet			= true
+time_to_aim			= 0.50
+
+PDM_disp_base 			= 2.00
+PDM_disp_vel_factor 		= 0.75
+PDM_disp_accel_factor 		= 1.75
+PDM_crouch	 		= 0.50
+PDM_crouch_no_acc 		= 0.50
+
+cam_relax_speed        	 	= 18.0
+cam_relax_speed_ai      	= 360
+cam_dispersion         	 	= 0.125
+cam_step_angle_horz			= 0.15
+cam_dispersion_inc			= 0.12
+cam_dispertion_frac			= 0.25
+cam_max_angle				= 4.0
+cam_max_angle_horz			= 6.0
+
+fire_dispersion_condition_factor 	= 1.000
+misfire_probability 			= 0.0025
+misfire_condition_k			= 0.05
+condition_shot_dec 			= 0.0001
+
+;-----Sights & Attachments-----;
+;--Scope & Sight--
+zoom_enabled				= true
+
+scope_status		    = 2
+scope_name 				= wpn_addon_scope_susat
+scope_names             = wpn_addon_scope_eotech, wpn_addon_scope_susat_dusk, wpn_addon_scope_elcan, wpn_addon_scope_susat_night, wpn_addon_scope_susat, wpn_addon_acog
+scope_x                 = 100
+scope_y                 = 100
+
+scope_respawn                                        = wpn_g36
+scope_respawn_wpn_addon_scope_eotech                 = wpn_g36_eotech
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_g36_susat_dusk
+scope_respawn_wpn_addon_scope_elcan                  = wpn_g36_elcan
+scope_respawn_wpn_addon_scope_susat_night            = wpn_g36_susat_night
+scope_respawn_wpn_addon_scope_susat                  = wpn_g36_susat
+scope_respawn_wpn_addon_acog                         = wpn_g36_acog
+
+scope_zoom_factor               = 100
+max_zoom_factor			= 5
+
+;--Silencer--
+silencer_status				= 2
+
+silencer_name  				= wpn_addon_silencer
+silencer_x 					= 167
+silencer_y 					= 18
+
+;--Grenade Launcher--
+grenade_launcher_status		        = 0
+grenade_class				= ammo_m209 
+launch_speed				= 0
+
+grenade_launcher_name 		      = wpn_addon_grenade_launcher_m203
+grenade_launcher_x 			= 109
+grenade_launcher_y 			= 30
+
+;-----Sounds, Particles, Muzzleflash & Miscellaneous-----;
+
+snd_draw		= weapons\sig550\sig550_draw
+snd_holster		= weapons\p90\p90_hide
+snd_shoot		= iwp\muzzle_g36_mono
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\sig550\sig550_reload
+snd_reload_empty        = weapons\sig550\sig550_reload_empty
+snd_changecartridgetype = weapons\sig550\sig550_reload
+snd_shoot_grenade       = weapons\m203\m203_shoot
+snd_reload_grenade        = weapons\m203\m203_reload
+snd_change_grenade      = weapons\m203\m203_changegrenade
+snd_switch              = weapons\l85\l85_gl_activate
+snd_close		= $silent
+snd_reload_jammed       = weapons\sig550\sig550_revival
+snd_reload_jammed_last  = weapons\sig550\sig550_revival_last
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_fire_modes	= weapons\l85\l85_firemode
+;snd_fire_modes_empty
+;snd_fire_modes_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\l85\l85_lam
+snd_laser_off	        = weapons\l85\l85_lam
+snd_torch_on	        = weapons\l85\l85_lam
+snd_torch_off	        = weapons\l85\l85_lam
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_kick		= weapons\ak74\ak74_bayonet
+snd_silncer_shot        = iwp\silencer_g36_mono
+snd_scope_brightness_plus = weapons\nv_intensity
+snd_scope_brightness_minus = weapons\nv_intensity
+snd_scope_zoom_plus = weapons\nv_intensity
+snd_scope_zoom_minus = weapons\nv_intensity
+snd_item_on             = weapons\headflash_on
+rpm_empty_click 	 		= 200
+
+light_disabled				= false
+
+light_color		 	= 0.6,0.5,0.3
+light_range		 	= 5
+light_var_color		 	= 0.05
+light_var_range		 	= 0.1
+light_time 		 	= 0.2
+
+silencer_light_color		= 0.6,0.5,0.3
+silencer_light_range		= 2
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+flame_particles							 =  weapons\new_effects\g36_3sides
+smoke_particles 						 = weapons\generic_shoot_00
+grenade_flame_particles 				 = weapons\generic_weapon01
+silencer_smoke_particles 				 = weapons\generic_shoot_00
+
+
+shell_point				= 0.0, 0.21, 0.13
+shell_dir				= 0.0, 0.0, 0.4
+shell_particles	 			= weapons\556x45 ;weapons\arsenal_shells1
+
+normal                   	= 0, 1, 0
+position                	= -0.026, -0.097, 0.0
+orientation             	= 0, 0 , 0
+
+direction                	= 0, 0, 1
+
+fire_point              			= 0.0, 0.21, 0.8
+fire_point2             			= 0.0, 0.14, 0.6  
+
+strap_position			= -0.26, -0.11, 0.25
+strap_orientation			= -15, -9, 110
+strap_bone0			= bip01_spine2
+strap_bone1			= bip01_spine1
+
+hud                      	= wpn_g36_hud
+#include "huds.ltx"
+ 
+ 
+[wpn_g36_eotech]:wpn_g36
+hidden_bones = firemode_single, firemode_triple,  scope2, scope3, scope4, scope5, scope6, light, foregrip_handler, flash, laser, ironsight_sight, foregrip_sight, bayonet, foregrip_handler, ironsight, ironsight_sight
+scope_bone = scope1
+hud = wpn_g36_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x                     = 74		; offset in inventory icon
+scope_y                     = -4
+[wpn_g36_eotech_hud]:wpn_g36_hud
+aim_hud_offset_pos = -0.000900,-0.059100,-0.036000
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.000900,-0.059100,-0.036000
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos = 0.001000,0.022289,-0.03
+gl_hud_offset_rot = 0.043,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.001000,0.022289,-0.03
+gl_hud_offset_rot_16x9 = 0.043,0.0,0.0
+
+
+
+[wpn_g36_susat_dusk]:wpn_g36
+hidden_bones = firemode_single, firemode_triple,  scope1, scope3, scope4, scope5, scope6, light, foregrip_handler, flash, laser, ironsight_sight, foregrip_sight, bayonet, foregrip_handler, ironsight, ironsight_sight
+scope_bone = scope2
+hud = wpn_g36_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x                     = 76		; offset in inventory icon
+scope_y                     = -8
+[wpn_g36_susat_dusk_hud]:wpn_g36_hud
+aim_hud_offset_pos = -0.000800,-0.062300,-0.103000
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.000800,-0.062300,-0.103000
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos = 0.001000,0.022289,-0.03
+gl_hud_offset_rot = 0.043,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.001000,0.022289,-0.03
+gl_hud_offset_rot_16x9 = 0.043,0.0,0.0
+inertion_aim_origin_offset = 0.015
+inertion_aim_speed = 8
+
+
+[wpn_g36_elcan]:wpn_g36
+hidden_bones = firemode_single, firemode_triple,  scope1, scope2, scope4, scope5, scope6, light, foregrip_handler, flash, laser, ironsight_sight, foregrip_sight, bayonet, foregrip_handler, ironsight, ironsight_sight
+
+hud = wpn_g36_elcan_hud
+scope_name              = wpn_addon_scope_elcan
+use_alt_aim_hud = true
+scope_x                     = 54		; offset in inventory icon
+scope_y                     = -7
+[wpn_g36_elcan_hud]:wpn_g36_hud
+aim_hud_offset_pos = -0.001000,-0.064000,-0.148000
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.001000,-0.064000,-0.148000
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos = 0.001000,0.022289,-0.03
+gl_hud_offset_rot = 0.043,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.001000,0.022289,-0.03
+gl_hud_offset_rot_16x9 = 0.043,0.0,0.0
+
+aim_hud_offset_alt_pos = -0.001000,-0.100801,-0.040000
+aim_hud_offset_alt_rot = -0.004000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = -0.001000,-0.100801,-0.040000
+aim_hud_offset_alt_rot_16x9 = -0.004000,0.000000,0.000000
+
+[wpn_g36_susat_night]:wpn_g36
+hidden_bones = firemode_single, firemode_triple,  scope1, scope2, scope3, scope5, scope6, light, foregrip_handler, flash, laser, ironsight_sight, foregrip_sight, bayonet, foregrip_handler, ironsight, ironsight_sight
+
+hud = wpn_g36_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x                     = 40		; offset in inventory icon
+scope_y                     = -5
+[wpn_g36_susat_night_hud]:wpn_g36_hud
+aim_hud_offset_pos  = -0.000900,-0.086600,0.190999
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9  = -0.000900,-0.086600,0.190999
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos = 0.001000,0.022289,-0.03
+gl_hud_offset_rot = 0.043,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.001000,0.022289,-0.03
+gl_hud_offset_rot_16x9 = 0.043,0.0,0.0
+
+
+[wpn_g36_susat]:wpn_g36
+hidden_bones = firemode_single, firemode_triple,  scope1, scope2, scope3, scope4, scope6, light, foregrip_handler, flash, laser, ironsight_sight, foregrip_sight, bayonet, foregrip_handler, ironsight, ironsight_sight
+
+hud = wpn_g36_susat_hud
+scope_name              = wpn_addon_scope_susat 
+use_alt_aim_hud = true
+scope_x                     = 73		; offset in inventory icon
+scope_y                     = -7
+[wpn_g36_susat_hud]:wpn_g36_hud
+aim_hud_offset_pos = -0.001400,-0.090800,-0.075500
+aim_hud_offset_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = -0.001400,-0.090800,-0.075500
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+aim_hud_offset_alt_pos = -0.001200,-0.124101,-0.040000
+aim_hud_offset_alt_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = -0.001200,-0.124101,-0.040000
+aim_hud_offset_alt_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+[wpn_g36_acog]:wpn_g36_susat
+
+scope_name              = wpn_addon_acog

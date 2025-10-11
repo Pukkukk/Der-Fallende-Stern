@@ -1,0 +1,842 @@
+
+<article id="dfs_story_ar_0" name="dfs_story_ar_0" article_type="journal" group="jj_notes">
+<texture x="300" y="400" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_0_rus</text>
+</article>
+
+<article id="dfs_story_ar_1" name="dfs_story_ar_1" article_type="journal" group="jj_notes">
+<texture x="0" y="0" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_1_rus</text>
+</article>
+
+<article id="dfs_story_ar_2" name="dfs_story_ar_2" article_type="journal" group="jj_notes">
+<texture x="0" y="200" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_2_rus</text>
+</article>
+
+<article id="dfs_story_ar_3" name="dfs_story_ar_3" article_type="journal" group="jj_notes">
+<texture x="0" y="400" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_3_rus</text>
+</article>
+
+<article id="dfs_story_ar_4" name="dfs_story_ar_4" article_type="journal" group="jj_notes">
+<texture x="0" y="600" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_4_rus</text>
+</article>
+
+<article id="dfs_story_ar_5" name="dfs_story_ar_5" article_type="journal" group="jj_notes">
+<texture x="0" y="800" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_5_rus</text>
+</article>
+
+<article id="dfs_story_ar_6" name="dfs_story_ar_6" article_type="journal" group="jj_notes">
+<texture x="300" y="0" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_6_rus</text>
+</article>
+
+<article id="dfs_story_ar_7" name="dfs_story_ar_7" article_type="journal" group="jj_notes">
+<texture x="300" y="200" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_7_rus</text>
+</article>
+
+<article id="dfs_story_ar_8" name="dfs_story_ar_8" article_type="journal" group="jj_notes">
+<texture x="300" y="600" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_8_rus</text>
+</article>
+
+<article id="dfs_story_ar_9" name="dfs_story_ar_9" article_type="journal" group="jj_photos">
+<texture x="300" y="800" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_9_rus</text>
+</article>
+
+<article id="dfs_story_ar_10" name="dfs_story_ar_10" article_type="journal" group="jj_notes">
+<texture x="600" y="0" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_10_rus</text>
+</article>
+
+<article id="dfs_story_ar_11" name="dfs_story_ar_11" article_type="journal" group="jj_notes">
+<texture x="600" y="200" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_11_rus</text>
+</article>
+
+<article id="dfs_story_ar_12" name="dfs_story_ar_12" article_type="journal" group="jj_notes">
+<texture x="600" y="400" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_12_rus</text>
+</article>
+
+<article id="dfs_story_ar_13" name="dfs_story_ar_13" article_type="journal" group="jj_notes">
+<texture x="600" y="600" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_13_rus</text>
+</article>
+
+<article id="dfs_story_ar_14" name="dfs_story_ar_14" article_type="journal" group="jj_notes">
+<texture x="600" y="800" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_14_rus</text>
+</article>
+
+<article id="dfs_story_ar_15" name="dfs_story_ar_15" article_type="journal" group="jj_notes">
+<texture x="900" y="0" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_15_rus</text>
+</article>
+
+<article id="dfs_story_ar_16" name="dfs_story_ar_16" article_type="journal" group="jj_notes">
+<texture x="900" y="200" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_16_rus</text>
+</article>
+
+<article id="dfs_story_ar_17" name="dfs_story_ar_17" article_type="journal" group="jj_notes">
+<texture x="900" y="400" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_17_rus</text>
+</article>
+
+<article id="dfs_story_ar_18" name="dfs_story_ar_18" article_type="journal" group="jj_notes">
+<texture x="900" y="600" width="300" height="400">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_18_rus</text>
+</article>
+
+<article id="dfs_story_ar_19" name="dfs_story_ar_19" article_type="journal" group="jj_notes">
+<texture x="1200" y="0" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_19_rus</text>
+</article>
+
+<article id="dfs_story_ar_20" name="dfs_story_ar_20" article_type="journal" group="jj_notes">
+<texture x="1200" y="200" width="300" height="400">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_20_rus</text>
+</article>
+
+<article id="dfs_story_ar_21" name="dfs_story_ar_21" article_type="journal" group="jj_notes">
+<texture x="1200" y="600" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_21_rus</text>
+</article>
+
+<article id="dfs_story_ar_22" name="dfs_story_ar_22" article_type="journal" group="jj_notes">
+<texture x="1200" y="800" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_22_rus</text>
+</article>
+
+<article id="dfs_story_ar_23" name="dfs_story_ar_23" article_type="journal" group="jj_photos">
+<texture x="1500" y="0" width="300" height="600">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_23_rus</text>
+</article>
+
+<article id="dfs_story_ar_24" name="dfs_story_ar_24" article_type="journal" group="jj_saves">
+<texture x="1500" y="600" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_24_rus</text>
+</article>
+
+<article id="dfs_story_ar_25" name="dfs_story_ar_25" article_type="journal" group="jj_saves">
+<texture x="1500" y="800" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_25_rus</text>
+</article>
+
+<article id="dfs_story_ar_26" name="dfs_story_ar_26" article_type="journal" group="jj_saves">
+<texture x="0" y="1000" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_26_rus</text>
+</article>
+
+<article id="dfs_story_ar_27" name="dfs_story_ar_27" article_type="journal" group="jj_saves">
+<texture x="0" y="1200" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_27_rus</text>
+</article>
+
+<article id="dfs_story_ar_28" name="dfs_story_ar_28" article_type="journal" group="jj_saves">
+<texture x="0" y="1400" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_28_rus</text>
+</article>
+
+<article id="dfs_story_ar_29" name="dfs_story_ar_29" article_type="journal" group="jj_saves">
+<texture x="0" y="1600" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_29_rus</text>
+</article>
+
+<article id="dfs_story_ar_30" name="dfs_story_ar_30" article_type="journal" group="jj_saves">
+<texture x="0" y="1800" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_30_rus</text>
+</article>
+
+<article id="dfs_story_ar_31" name="dfs_story_ar_31" article_type="journal" group="jj_saves">
+<texture x="300" y="1000" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_31_rus</text>
+</article>
+
+<article id="dfs_story_ar_32" name="dfs_story_ar_32" article_type="journal" group="jj_saves">
+<texture x="300" y="1200" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_32_rus</text>
+</article>
+
+<article id="dfs_story_ar_33" name="dfs_story_ar_33" article_type="journal" group="jj_saves">
+<texture x="300" y="1400" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_33_rus</text>
+</article>
+
+<article id="dfs_story_ar_34" name="dfs_story_ar_34" article_type="journal" group="jj_pda">
+<texture x="600" y="1000" width="300" height="600">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_34_rus</text>
+</article>
+
+<article id="dfs_story_ar_35" name="dfs_story_ar_35" article_type="journal" group="jj_pda">
+<texture x="900" y="1200" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_35_rus</text>
+</article>
+
+<article id="dfs_story_ar_36" name="dfs_story_ar_36" article_type="journal" group="jj_saves">
+<texture x="900" y="1400" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_36_rus</text>
+</article>
+
+<article id="dfs_story_ar_37" name="dfs_story_ar_37" article_type="journal" group="jj_notes">
+<texture x="1200" y="1000" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_37_rus</text>
+</article>
+
+<article id="dfs_story_ar_38" name="dfs_story_ar_38" article_type="journal" group="jj_notes">
+<texture x="900" y="1800" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_38_rus</text>
+</article>
+
+<article id="dfs_story_ar_39" name="dfs_story_ar_39" article_type="journal" group="jj_notes">
+<texture x="1200" y="1200" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_39_rus</text>
+</article>
+
+<article id="dfs_story_ar_40" name="dfs_story_ar_40" article_type="journal" group="jj_notes">
+<texture x="1200" y="1400" width="300" height="400">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_40_rus</text>
+</article>
+
+<article id="dfs_story_ar_41" name="dfs_story_ar_41" article_type="journal" group="jj_photos">
+<texture x="1200" y="1800" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_41_rus</text>
+</article>
+
+<article id="dfs_story_ar_42" name="dfs_story_ar_42" article_type="journal" group="saboteur_letter">
+<texture x="0" y="0" width="0" height="0">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_42_rus</text>
+</article>
+
+<article id="dfs_story_ar_43" name="dfs_story_ar_43" article_type="journal" group="saboteur_letter">
+<texture x="0" y="0" width="0" height="0">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_43_rus</text>
+</article>
+
+<article id="dfs_story_ar_44" name="dfs_story_ar_44" article_type="journal" group="saboteur_letter">
+<texture x="0" y="0" width="0" height="0">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_44_rus</text>
+</article>
+
+<article id="dfs_story_ar_45" name="dfs_story_ar_45" article_type="journal" group="saboteur_letter">
+<texture x="0" y="0" width="0" height="0">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_45_rus</text>
+</article>
+
+<article id="dfs_story_ar_46" name="dfs_story_ar_46" article_type="journal" group="saboteur_letter">
+<texture x="0" y="0" width="0" height="0">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_46_rus</text>
+</article>
+
+<article id="dfs_story_ar_47" name="dfs_story_ar_47" article_type="journal" group="jj_notes">
+<texture x="1500" y="1000" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_47_rus</text>
+</article>
+
+<article id="dfs_story_ar_48" name="dfs_story_ar_48" article_type="journal" group="jj_notes">
+<texture x="1500" y="1200" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_48_rus</text>
+</article>
+
+<article id="dfs_story_ar_49" name="dfs_story_ar_49" article_type="journal" group="jj_notes">
+<texture x="1500" y="1400" width="300" height="400">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_49_rus</text>
+</article>
+
+<article id="dfs_story_ar_50" name="dfs_story_ar_50" article_type="journal" group="jj_notes">
+<texture x="1500" y="1800" width="400" height="250">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar_50_rus</text>
+</article>
+
+<article id="dfs_story_ar_51" name="dfs_story_ar_51" article_type="journal" group="von_berkov_diary">
+<texture x="0" y="0" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_51_rus</text>
+</article>
+
+<article id="dfs_story_ar_52" name="dfs_story_ar_52" article_type="journal" group="von_berkov_diary">
+<texture x="0" y="300" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_52_rus</text>
+</article>
+
+<article id="dfs_story_ar_53" name="dfs_story_ar_53" article_type="journal" group="von_berkov_diary">
+<texture x="0" y="600" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_53_rus</text>
+</article>
+
+<article id="dfs_story_ar_54" name="dfs_story_ar_54" article_type="journal" group="von_berkov_diary">
+<texture x="0" y="900" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_54_rus</text>
+</article>
+
+<article id="dfs_story_ar_55" name="dfs_story_ar_55" article_type="journal" group="von_berkov_diary">
+<texture x="0" y="1200" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_55_rus</text>
+</article>
+
+<article id="dfs_story_ar_56" name="dfs_story_ar_56" article_type="journal" group="von_berkov_diary">
+<texture x="0" y="1500" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_56_rus</text>
+</article>
+
+<article id="dfs_story_ar_57" name="dfs_story_ar_57" article_type="journal" group="von_berkov_diary">
+<texture x="450" y="0" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_57_rus</text>
+</article>
+
+<article id="dfs_story_ar_58" name="dfs_story_ar_58" article_type="journal" group="von_berkov_diary">
+<texture x="450" y="300" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_58_rus</text>
+</article>
+
+<article id="dfs_story_ar_59" name="dfs_story_ar_59" article_type="journal" group="von_berkov_diary">
+<texture x="450" y="600" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_59_rus</text>
+</article>
+
+<article id="dfs_story_ar_60" name="dfs_story_ar_60" article_type="journal" group="von_berkov_diary">
+<texture x="450" y="900" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_60_rus</text>
+</article>
+
+<article id="dfs_story_ar_61" name="dfs_story_ar_61" article_type="journal" group="von_berkov_diary">
+<texture x="450" y="1200" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_61_rus</text>
+</article>
+
+<article id="dfs_story_ar_62" name="dfs_story_ar_62" article_type="journal" group="von_berkov_diary">
+<texture x="450" y="1500" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_62_rus</text>
+</article>
+
+<article id="dfs_story_ar_63" name="dfs_story_ar_63" article_type="journal" group="von_berkov_diary">
+<texture x="0" y="0" width="0" height="0">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_63_rus</text>
+</article>
+
+<article id="dfs_story_ar_64" name="dfs_story_ar_64" article_type="journal" group="von_berkov_diary">
+<texture x="0" y="0" width="0" height="0">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_64_rus</text>
+</article>
+
+<article id="dfs_story_ar_65" name="dfs_story_ar_65" article_type="journal" group="von_berkov_diary">
+<texture x="900" y="0" width="450" height="900">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_65_rus</text>
+</article>
+
+<article id="dfs_story_ar_66" name="dfs_story_ar_66" article_type="journal" group="von_berkov_diary">
+<texture x="900" y="900" width="450" height="600">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_66_rus</text>
+</article>
+
+<article id="dfs_story_ar_67" name="dfs_story_ar_67" article_type="journal" group="von_berkov_diary">
+<texture x="900" y="1500" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_67_rus</text>
+</article>
+
+<article id="dfs_story_ar_68" name="dfs_story_ar_68" article_type="journal" group="von_berkov_diary">
+<texture x="0" y="0" width="0" height="0">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_68_rus</text>
+</article>
+
+<article id="dfs_story_ar_69" name="dfs_story_ar_69" article_type="journal" group="von_berkov_diary">
+<texture x="1350" y="0" width="450" height="300">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_69_rus</text>
+</article>
+
+<article id="dfs_story_ar_70" name="dfs_story_ar_70" article_type="journal" group="von_berkov_diary">
+<texture x="0" y="0" width="0" height="0">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_70_rus</text>
+</article>
+
+<article id="dfs_story_ar_71" name="dfs_story_ar_71" article_type="journal" group="von_berkov_diary">
+<texture x="1350" y="300" width="450" height="1200">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_71_rus</text>
+</article>
+
+<article id="dfs_story_ar_72" name="dfs_story_ar_72" article_type="journal" group="von_berkov_diary">
+<texture x="1350" y="1500" width="450" height="500">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar_72_rus</text>
+</article>
+
+<article id="dfs_story_ar_73" name="dfs_story_ar_73" article_type="journal" group="jj_notes">
+<texture x="1300" y="402" width="250" height="220">ui\ui_icon_photo</texture>
+	<text>dfs_story_ar_73_rus</text>
+</article>
+
+
+
+
+
+
+
+
+<article id="malyawa_01_desc" name="malyawa_01_descr" article_type="journal" group="jj_pda">
+<texture x="0" y="0" width="0" height="0"></texture>
+	<text>malyawa_01_description</text>
+</article>
+
+<article id="letter_1_desc" name="letter_1_descr" article_type="journal" group="jj_pda">
+<texture x="0" y="0" width="0" height="0"></texture>
+	<text>letter_1_description</text>
+</article>
+
+
+<article id="molokh_pda_nam" name="molokh_pda_name" article_type="journal" group="jj_pda">
+<texture x="0" y="0" width="0" height="0"></texture>
+	<text>molokh_pda_description</text>
+</article>
+
+<article id="zakhar_pda_nam" name="zakhar_pda_name" article_type="journal" group="jj_pda">
+<texture x="0" y="0" width="0" height="0"></texture>
+	<text>zakhar_pda_description</text>
+</article>
+
+<article id="ss_document_06_nam" name="ss_document_06_name" article_type="journal" group="jj_pda">
+<texture x="0" y="0" width="0" height="0"></texture>
+	<text>ss_document_06_description</text>
+</article>
+
+<article id="malyawa_name3" name="malyawa_name3" article_type="journal" group="jj_pda">
+<texture x="0" y="0" width="0" height="0"></texture>
+	<text>malyawa_03_description</text>
+</article>
+
+<article id="malyawa_name4" name="malyawa_name5" article_type="journal" group="jj_pda">
+<texture x="0" y="0" width="0" height="0"></texture>
+	<text>malyawa_04_description</text>
+</article>
+
+<article id="malyawa_name5" name="malyawa_name5" article_type="journal" group="jj_pda">
+<texture x="0" y="0" width="0" height="0"></texture>
+	<text>malyawa_05_description</text>
+</article>
+
+<article id="malyawa_name6" name="malyawa_name6" article_type="journal" group="jj_pda">
+<texture x="0" y="0" width="0" height="0"></texture>
+	<text>malyawa_06_description</text>
+</article>
+
+<article id="fly_pda_name" name="fly_pda_name" article_type="journal" group="jj_pda">
+<texture x="0" y="0" width="0" height="0"></texture>
+	<text>fly_pda_description</text>
+</article>
+
+
+
+<!--<article id="dfs_story_ar_" name="dfs_story_ar_" article_type="journal" group="von_berkov_diary">
+<texture x="00" y="00" width="300" height="200">ui\ui_icon_photo_dfs_berkov_diary</texture>
+	<text>dfs_story_ar__rus</text>
+</article>-->
+
+<!--<article id="dfs_story_ar_" name="dfs_story_ar_" article_type="journal" group="jj_notes">
+<texture x="00" y="00" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>dfs_story_ar__rus</text>
+</article>-->
+
+
+<!-- Подсказки к заданиям --------------->
+
+<article id="dfs_1" name="" article_type="task">
+	<text>dfs_tasks_rus_1</text>
+</article>
+
+<article id="dfs_2" name="" article_type="task">
+	<text>dfs_tasks_rus_2</text>
+</article>
+
+<article id="dfs_3" name="" article_type="task">
+	<text>dfs_tasks_rus_3</text>
+</article>
+
+<article id="dfs_4" name="" article_type="task">
+	<text>dfs_tasks_rus_4</text>
+</article>
+
+<article id="dfs_5" name="" article_type="task">
+	<text>dfs_tasks_rus_5</text>
+</article>
+
+<article id="dfs_6" name="" article_type="task">
+	<text>dfs_tasks_rus_6</text>
+</article>
+
+<article id="dfs_7" name="" article_type="task">
+	<text>dfs_tasks_rus_7</text>
+</article>
+
+<article id="dfs_8" name="" article_type="task">
+	<text>dfs_tasks_rus_8</text>
+</article>
+
+<article id="dfs_9" name="" article_type="task">
+	<text>dfs_tasks_rus_9</text>
+</article>
+
+<article id="dfs_10" name="" article_type="task">
+	<text>dfs_tasks_rus_10</text>
+</article>
+
+<article id="dfs_11" name="" article_type="task">
+	<text>dfs_tasks_rus_11</text>
+</article>
+
+<article id="dfs_12" name="" article_type="task">
+	<text>dfs_tasks_rus_12</text>
+</article>
+
+<article id="dfs_13" name="" article_type="task">
+	<text>dfs_tasks_rus_13</text>
+</article>
+
+<article id="dfs_14" name="" article_type="task">
+	<text>dfs_tasks_rus_14</text>
+</article>
+
+<article id="dfs_15" name="" article_type="task">
+	<text>dfs_tasks_rus_15</text>
+</article>
+
+<article id="dfs_16" name="" article_type="task">
+	<text>dfs_tasks_rus_16</text>
+</article>
+
+<article id="dfs_17" name="" article_type="task">
+	<text>dfs_tasks_rus_17</text>
+</article>
+
+<article id="dfs_18" name="" article_type="task">
+	<text>dfs_tasks_rus_18</text>
+</article>
+
+<article id="dfs_19" name="" article_type="task">
+	<text>dfs_tasks_rus_19</text>
+</article>
+
+<article id="dfs_20" name="" article_type="task">
+	<text>dfs_tasks_rus_20</text>
+</article>
+
+<article id="dfs_21" name="" article_type="task">
+	<text>dfs_tasks_rus_21</text>
+</article>
+
+<article id="dfs_22" name="" article_type="task">
+	<text>dfs_tasks_rus_22</text>
+</article>
+
+<article id="dfs_23" name="" article_type="task">
+	<text>dfs_tasks_rus_23</text>
+</article>
+
+<article id="dfs_24" name="" article_type="task">
+	<text>dfs_tasks_rus_24</text>
+</article>
+
+<article id="dfs_25" name="" article_type="task">
+	<text>dfs_tasks_rus_25</text>
+</article>
+
+<article id="dfs_26" name="" article_type="task">
+	<text>dfs_tasks_rus_26</text>
+</article>
+
+<article id="dfs_27" name="" article_type="task">
+	<text>dfs_tasks_rus_27</text>
+</article>
+
+<article id="dfs_28" name="" article_type="task">
+	<text>dfs_tasks_rus_28</text>
+</article>
+
+<article id="dfs_29" name="" article_type="task">
+	<text>dfs_tasks_rus_29</text>
+</article>
+
+<article id="dfs_30" name="" article_type="task">
+	<text>dfs_tasks_rus_30</text>
+</article>
+
+<article id="dfs_31" name="" article_type="task">
+	<text>dfs_tasks_rus_31</text>
+</article>
+
+<article id="dfs_32" name="" article_type="task">
+	<text>dfs_tasks_rus_32</text>
+</article>
+
+<article id="dfs_33" name="" article_type="task">
+	<text>dfs_tasks_rus_33</text>
+</article>
+
+<article id="dfs_34" name="" article_type="task">
+	<text>dfs_tasks_rus_34</text>
+</article>
+
+<article id="dfs_35" name="" article_type="task">
+	<text>dfs_tasks_rus_35</text>
+</article>
+
+<article id="dfs_36" name="" article_type="task">
+	<text>dfs_tasks_rus_36</text>
+</article>
+
+<article id="dfs_37" name="" article_type="task">
+	<text>dfs_tasks_rus_37</text>
+</article>
+
+<article id="dfs_38" name="" article_type="task">
+	<text>dfs_tasks_rus_38</text>
+</article>
+
+<article id="dfs_39" name="" article_type="task">
+	<text>dfs_tasks_rus_39</text>
+</article>
+
+<article id="dfs_40" name="" article_type="task">
+	<text>dfs_tasks_rus_40</text>
+</article>
+
+<article id="dfs_41" name="" article_type="task">
+	<text>dfs_tasks_rus_41</text>
+</article>
+
+<article id="dfs_42" name="" article_type="task">
+	<text>dfs_tasks_rus_42</text>
+</article>
+
+<article id="dfs_43" name="" article_type="task">
+	<text>dfs_tasks_rus_43</text>
+</article>
+
+<article id="dfs_44" name="" article_type="task">
+	<text>dfs_tasks_rus_44</text>
+</article>
+
+<article id="dfs_45" name="" article_type="task">
+	<text>dfs_tasks_rus_45</text>
+</article>
+
+<article id="dfs_46" name="" article_type="task">
+	<text>dfs_tasks_rus_46</text>
+</article>
+
+<article id="dfs_47" name="" article_type="task">
+	<text>dfs_tasks_rus_47</text>
+</article>
+
+<article id="dfs_48" name="" article_type="task">
+	<text>dfs_tasks_rus_48</text>
+</article>
+
+<article id="dfs_49" name="" article_type="task">
+	<text>dfs_tasks_rus_49</text>
+</article>
+
+<article id="dfs_50" name="" article_type="task">
+	<text>dfs_tasks_rus_50</text>
+</article>
+
+<article id="dfs_51" name="" article_type="task">
+	<text>dfs_tasks_rus_51</text>
+</article>
+
+<article id="dfs_52" name="" article_type="task">
+	<text>dfs_tasks_rus_52</text>
+</article>
+
+<article id="dfs_53" name="" article_type="task">
+	<text>dfs_tasks_rus_53</text>
+</article>
+
+<article id="dfs_54" name="" article_type="task">
+	<text>dfs_tasks_rus_54</text>
+</article>
+
+<article id="dfs_55" name="" article_type="task">
+	<text>dfs_tasks_rus_55</text>
+</article>
+
+<article id="dfs_56" name="" article_type="task">
+	<text>dfs_tasks_rus_56</text>
+</article>
+
+<article id="dfs_57" name="" article_type="task">
+	<text>dfs_tasks_rus_57</text>
+</article>
+
+<article id="dfs_58" name="" article_type="task">
+	<text>dfs_tasks_rus_58</text>
+</article>
+
+<article id="dfs_59" name="" article_type="task">
+	<text>dfs_tasks_rus_59</text>
+</article>
+
+<article id="dfs_60" name="" article_type="task">
+	<text>dfs_tasks_rus_60</text>
+</article>
+
+<article id="dfs_61" name="" article_type="task">
+	<text>dfs_tasks_rus_61</text>
+</article>
+
+<article id="dfs_62" name="" article_type="task">
+	<text>dfs_tasks_rus_62</text>
+</article>
+
+<article id="dfs_63" name="" article_type="task">
+	<text>dfs_tasks_rus_63</text>
+</article>
+
+<article id="dfs_64" name="" article_type="task">
+	<text>dfs_tasks_rus_64</text>
+</article>
+
+<article id="dfs_65" name="" article_type="task">
+	<text>dfs_tasks_rus_65</text>
+</article>
+
+<article id="dfs_66" name="" article_type="task">
+	<text>dfs_tasks_rus_66</text>
+</article>
+
+<article id="dfs_67" name="" article_type="task">
+	<text>dfs_tasks_rus_67</text>
+</article>
+
+<article id="dfs_68" name="" article_type="task">
+	<text>dfs_tasks_rus_68</text>
+</article>
+
+<article id="dfs_69" name="" article_type="task">
+	<text>dfs_tasks_rus_69</text>
+</article>
+
+<article id="dfs_70" name="" article_type="task">
+	<text>dfs_tasks_rus_70</text>
+</article>
+
+<article id="dfs_71" name="" article_type="task">
+	<text>dfs_tasks_rus_71</text>
+</article>
+
+<article id="dfs_72" name="" article_type="task">
+	<text>dfs_tasks_rus_72</text>
+</article>
+
+<article id="dfs_73" name="" article_type="task">
+	<text>dfs_tasks_rus_73</text>
+</article>
+
+<article id="dfs_74" name="" article_type="task">
+	<text>dfs_tasks_rus_74</text>
+</article>
+
+<article id="dfs_75" name="" article_type="task">
+	<text>dfs_tasks_rus_75</text>
+</article>
+
+<article id="dfs_76" name="" article_type="task">
+	<text>dfs_tasks_rus_76</text>
+</article>
+
+<article id="dfs_77" name="" article_type="task">
+	<text>dfs_tasks_rus_77</text>
+</article>
+
+<article id="dfs_78" name="" article_type="task">
+	<text>dfs_tasks_rus_78</text>
+</article>
+
+<article id="dfs_79" name="" article_type="task">
+	<text>dfs_tasks_rus_79</text>
+</article>
+
+<article id="dfs_80" name="" article_type="task">
+	<text>dfs_tasks_rus_80</text>
+</article>
+
+<article id="dfs_81" name="" article_type="task">
+	<text>dfs_tasks_rus_81</text>
+</article>
+
+<article id="dfs_82" name="" article_type="task">
+	<text>dfs_tasks_rus_82</text>
+</article>
+
+<article id="dfs_83" name="" article_type="task">
+	<text>dfs_tasks_rus_83</text>
+</article>
+
+<article id="dfs_84" name="" article_type="task">
+	<text>dfs_tasks_rus_84</text>
+</article>
+
+<article id="dfs_85" name="" article_type="task">
+	<text>dfs_tasks_rus_85</text>
+</article>
+
+<article id="dfs_86" name="" article_type="task">
+	<text>dfs_tasks_rus_86</text>
+</article>
+
+<article id="dfs_87" name="" article_type="task">
+	<text>dfs_tasks_rus_87</text>
+</article>
+
+<article id="dfs_88" name="" article_type="task">
+	<text>dfs_tasks_rus_88</text>
+</article>
+
+<article id="dfs_89" name="" article_type="task">
+	<text>dfs_tasks_rus_89</text>
+</article>
+
+<!--<article id="dfs_" name="" article_type="task">
+	<text>dfs_tasks_rus_</text>
+</article>-->
+
+
+<!--------Энциклопедия-------------------->
+
+<article id="social_stalker-clans_usarmy" name="usarmy" group="Social">
+	<texture x="300" y="1600" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>enc_social_stalker-clans_usarmy</text>
+</article>
+	
+<article id="social_stalker-clans_camban" name="camban" group="Social">
+	<texture x="600" y="1600" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>enc_social_stalker-clans_camban</text>
+</article>
+	
+<article id="social_stalker-clans_bb" name="bb" group="Social">
+	<texture x="600" y="800" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>enc_social_stalker-clans_bb</text>
+</article>
+	
+<article id="social_stalker-clans_cliric" name="cliric" group="Social">
+	<texture x="600" y="1800" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>enc_social_stalker-clans_cliric</text>
+</article>
+
+<article id="social_stalker-clans_degen" name="degen_group" group="Social">
+	<texture x="900" y="1000" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>enc_social_stalker-clans_degen</text>
+</article>
+
+<article id="social_stalker-clans_nato" name="nato" group="Social">
+	<texture x="900" y="1600" width="300" height="200">ui\ui_icon_photo_dfs</texture>
+	<text>enc_social_stalker-clans_nato</text>
+</article>
+
+
+
+
+
+

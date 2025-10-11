@@ -1,0 +1,352 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;; Автомат специальный АС "Вал" (6П30) ;;;;;;;;;;;;;;;;;;;;;;;;;;
+;----------------------------------------------------------------------------------------
+[wpn_val]:identity_immunities
+GroupControlSection			= spawn_group
+discovery_dependency 		= 
+$spawn                  	= "weapons\val"					; option for Level Editor
+$npc			 			= on				; option for Level Editor
+$prefetch 					= 8
+scheduled            		= off              ; option for ALife Simulator
+cform                		= skeleton
+class                		= WP_VAL	;WP_AK74
+min_radius		= 0
+max_radius					= 150
+description					= gunsl_wpn_val_descr
+
+ef_main_weapon_type			= 2
+ef_weapon_type				= 6
+hidden_bones = mag, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_handler, rail_lam, sight
+
+;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0
+holder_fov_modifier	= 1.0
+;-----------------------------------------------------------------------------------
+
+cost		 	 		= 7000
+weapon_class				= assault_rifle
+
+ammo_elapsed				= 20
+ammo_mag_size				= 20
+ammo_class		 		= ammo_9x39_sp5, ammo_9x39_ap, ammo_9x39_pab9
+fire_modes				= 1, -1
+		
+hand_dependence		 		= 1
+single_handed				= 0
+	
+slot 				 	= 2		; // secondary
+animation_slot		 		= 2		; type of the animation that will be used
+
+inv_name	         		= gunsl_wpn_val
+inv_name_short		 		= gunsl_wpn_val
+inv_weight		 		= 2.5
+
+inv_grid_width				= 5
+inv_grid_height				= 2
+inv_grid_x				= 0
+inv_grid_y				= 12
+
+kill_msg_x		= 0
+kill_msg_y		= 154
+kill_msg_width		= 78
+kill_msg_height		= 21
+
+;-----------------------------------------------------------------------------------
+;базовая дисперсия
+fire_dispersion_base		= 0.12	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor		= 1.04f
+
+;отдача
+cam_relax_speed         	= 5	;скорость возврата в исходное положение
+cam_dispersion          	= 0.3	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.05	;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 1.0	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 7.0	;максимальный угол отдачи
+cam_max_angle_horz		= 10.0	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 0.5;0.4	;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 	        = 0.003	;вероятность осечки при максимальном износе 
+misfire_condition_k		= 0.05
+condition_shot_dec 		= 0.0001  ; увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+direction            	    = 0, 0, 1
+fire_point              			= 0.000000,0.174,0.572
+
+smoke_particles     				= weapons\generic_shoot_00
+
+shell_point					= 0.00000,0.167000,0.082000
+shell_dir		 			= 0.0, 1.0, 0.0
+shell_particles         			= weapons\9x39
+
+PDM_disp_base 			= 1.0
+PDM_disp_vel_factor 		= 1.2
+PDM_disp_accel_factor 		= 1.2
+PDM_crouch	 		= 1.0
+PDM_crouch_no_acc 		= 1.0
+
+;;;;;;; Для "Последний Сталкер"
+hit_power        	= 0.51
+hit_impulse		= 67
+hit_type 		    = fire_wound
+hit_rate		= 1.95
+fire_distance   	= 300
+bullet_speed		= 420
+rpm                     = 650
+rpm_empty_click 		                = 400
+; end ttc
+
+use_aim_bullet			= true			;Поддерживается ли первая суппер пуля
+time_to_aim			= 0.5	
+
+hud             	        = wpn_val_hud
+normal          	        = 0, 1, 0
+
+;----------------------------------------------------------
+position        	    	= -0.026, -0.131, 0.0
+orientation            		= 0, 0, 0
+;--STRAP PARAMETERS----------------------------------------
+;под мишкой
+strap_position         		= -0.255,-0.112,0.25			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -15,-9,115 ;-15,-9,110				; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+visual          	        = dynamics\weapons\wpn_val\wpn_val.ogf
+
+light_disabled				= true
+
+;addons
+scope_status			= 2
+silencer_status			= 0
+grenade_launcher_status  	= 0
+
+zoom_enabled			= true
+scope_zoom_factor		= 100
+scope_name 		    = wpn_addon_scope
+scope_names             = wpn_addon_scope, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night, wpn_addon_scope_cobra, wpn_addon_scope_pka, wpn_addon_scope_kashtan 
+scope_x                 = 100
+scope_y                 = 100
+
+scope_respawn                                        = wpn_val
+scope_respawn_wpn_addon_scope                    = wpn_val_pso
+scope_respawn_wpn_addon_scope_x2.7                   = wpn_val_pso2
+scope_respawn_wpn_addon_scope_detector               = wpn_val_detector
+scope_respawn_wpn_addon_scope_night                  = wpn_val_night
+scope_respawn_wpn_addon_scope_cobra                  = wpn_val_cobra
+scope_respawn_wpn_addon_scope_pka                    = wpn_val_pka
+scope_respawn_wpn_addon_scope_kashtan                = wpn_val_kashtan
+
+;-----------------------------------------------------
+;звуки
+snd_draw		= weapons\vss\vss_draw
+snd_holster		= weapons\vss\vss_hide
+snd_shoot		= iwp\vss_silencer_mono
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\vss\vss_reload
+snd_reload_empty        = weapons\vss\vss_reload_full
+snd_changecartridgetype = weapons\vss\vss_reload
+snd_shoot_grenade       = weapons\gen_grenshoot
+snd_reload_grenade      = weapons\gen_grenload, 1.0, 0.8
+snd_switch              = weapons\groza_switch, 1.0, 0.5
+snd_close		= $silent
+snd_reload_jammed       = weapons\vss\vss_revival
+snd_reload_jammed_last  = weapons\vss\vss_revival
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_fire_modes	= weapons\vss\vss_firemode
+;snd_fire_modes_empty
+;snd_fire_modes_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\vss\vss_firemode
+snd_laser_off	        = weapons\vss\vss_firemode
+snd_torch_on	        = weapons\vss\vss_firemode
+snd_torch_off	        = weapons\vss\vss_firemode
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+snd_item_on             = weapons\headflash_on
+snd_scope_brightness_plus = weapons\nv_intensity
+snd_scope_brightness_minus = weapons\nv_intensity
+snd_silncer_shot        = iwp\vss_silencer_mono
+;-----------------------------------------------------------------------------
+;-- HUD DESCRIPTION
+;-----------------------------------------------------------------------------
+ #include "huds.ltx"
+ 
+ 
+ [wpn_val_pso]:wpn_val
+
+hidden_bones = mag, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_assault, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_lam, sight, rail_handler
+scope_bone = scope_pso_sniper
+
+hud = wpn_val_pso_hud
+
+scope_name              = wpn_addon_scope
+scope_x              	= 49                 ; offset in inventory icon
+scope_y                 = 9
+
+
+[wpn_val_pso_hud]:wpn_val_hud
+
+aim_hud_offset_pos = 0.009000,-0.0338,0.11
+aim_hud_offset_rot = 0.00000,0.000000,0.0
+
+aim_hud_offset_pos_16x9 = 0.009000,-0.0338,0.11
+aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
+
+[wpn_val_pso2]:wpn_val
+
+hidden_bones = mag, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_lam, sight, rail_handler
+scope_bone = scope_pso_assault
+
+hud = wpn_val_pso2_hud
+
+scope_name              = wpn_addon_scope_x2.7
+scope_x              	= 49                 ; offset in inventory icon
+scope_y                 = 9
+
+
+[wpn_val_pso2_hud]:wpn_val_hud
+
+aim_hud_offset_pos = 0.009000,-0.033,0.1
+aim_hud_offset_rot = 0.00000,0.000000,0.0
+
+aim_hud_offset_pos_16x9 = 0.009000,-0.033,0.1
+aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
+
+[wpn_val_rakurs]:wpn_val
+
+hidden_bones = mag, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_lam, sight, rail_handler
+scope_bone = scope_rakurs
+
+hud = wpn_val_rakurs_hud
+
+scope_name              = wpn_addon_scope_rakurs
+scope_x              	= 156                 ; offset in inventory icon
+scope_y                 = 5
+
+
+[wpn_val_rakurs_hud]:wpn_val_hud
+
+aim_hud_offset_pos = 0.000000,-0.002500,-0.03
+aim_hud_offset_rot = 0.00000,0.000000,0.000000
+
+aim_hud_offset_pos_16x9 = 0.000000,-0.002500,-0.03
+aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.000000
+
+[wpn_val_detector]:wpn_val
+
+hidden_bones = mag, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_lam, sight, rail_handler
+scope_bone = scope_nv_sniper
+
+hud = wpn_val_detector_hud
+
+scope_name              = wpn_addon_scope_detector 
+use_alt_aim_hud = true
+scope_x              	= 34                 ; offset in inventory icon
+scope_y                 = 7
+
+
+[wpn_val_detector_hud]:wpn_val_hud
+
+aim_hud_offset_pos = 0.013,-0.0615,0.147
+aim_hud_offset_rot = 0.00000,0.000000,0.0
+
+aim_hud_offset_pos_16x9 = 0.013,-0.0615,0.147
+aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
+
+[wpn_val_night]:wpn_val
+
+hidden_bones = mag, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, tactical_handler, sheka, flash, laser, light, line, rail_lam, sight, rail_handler
+scope_bone = scope_nv_assault
+
+hud = wpn_val_night_hud
+
+scope_name              = wpn_addon_scope_night 
+use_alt_aim_hud = true
+scope_x              	= 34                 ; offset in inventory icon
+scope_y                 = 7
+
+
+[wpn_val_night_hud]:wpn_val_hud
+
+aim_hud_offset_pos = 0.0189,-0.0485,0.118
+aim_hud_offset_rot = 0.00000,0.000000,0.0
+
+aim_hud_offset_pos_16x9 = 0.0189,-0.0485,0.118
+aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.
+
+[wpn_val_cobra]:wpn_val
+
+hidden_bones = mag, scope_rakurs, scope_kashtan, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_lam, sight, rail_handler
+scope_bone = scope_cobra
+
+hud = wpn_val_cobra_hud
+
+scope_name              = wpn_addon_scope_cobra
+scope_x              	= 62                 ; offset in inventory icon
+scope_y                 = 11
+
+
+[wpn_val_cobra_hud]:wpn_val_hud
+
+aim_hud_offset_pos = -0.0010000,-0.0400,0.03
+aim_hud_offset_rot = 0.00000,0.000000,0.000000
+
+aim_hud_offset_pos_16x9 = -0.0010000,-0.0400,0.03
+aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.000000
+inertion_origin_offset = -0.03
+
+[wpn_val_pka]:wpn_val
+
+hidden_bones = mag, scope_rakurs, scope_kashtan, scope_cobra, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_lam, sight, rail_handler
+scope_bone = scope_pka
+
+hud = wpn_val_pka_hud
+
+scope_name              = wpn_addon_scope_pka
+scope_x              	= 87                 ; offset in inventory icon
+scope_y                 = 9
+
+
+[wpn_val_pka_hud]:wpn_val_hud
+
+aim_hud_offset_pos = 0.00920000,-0.0333000,-0.02
+aim_hud_offset_rot = 0.000000,0.000000,0.0
+
+aim_hud_offset_pos_16x9 = 0.00920000,-0.0333000,-0.02
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
+
+[wpn_val_kashtan]:wpn_val
+
+hidden_bones = mag, scope_rakurs, scope_cobra, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_lam, sight, rail_handler
+scope_bone = scope_kashtan
+
+hud = wpn_val_kashtan_hud
+
+scope_name              = wpn_addon_scope_kashtan
+scope_x              	= 62                 ; offset in inventory icon
+scope_y                 = 4
+
+
+[wpn_val_kashtan_hud]:wpn_val_hud
+
+aim_hud_offset_pos = -0.0013000,-0.03170,0.09
+aim_hud_offset_rot = 0.00000,0.000000,0.0
+
+aim_hud_offset_pos_16x9 = -0.0013000,-0.03170,0.09
+aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
+
+
+
+#include "upgrades.ltx"

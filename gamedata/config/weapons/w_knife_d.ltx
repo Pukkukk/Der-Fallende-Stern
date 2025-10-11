@@ -1,0 +1,103 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Метательный нож
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[wpn_knife_d]:wpn_knife,grenade_f1
+class				= II_BOLT ;G_F1 ;
+cform				= skeleton
+visual				= weapons\knife_d\wpn_knife_new_h.ogf
+inv_name			= wpn_knife_d_name
+$prefetch 			= 16
+inv_name_short		= wpn_knife_d_name
+inv_weight			= .44
+radius				= 2
+
+description			= wpn_knife_d_description
+
+ef_weapon_type		= 1
+
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 20
+inv_grid_y			= 6
+can_take			= true
+quest_item			= true
+
+animation_slot		= 6
+single_handed		= 1
+
+slot				= 1
+hud					= wpn_knife_d_hud
+force_min			= 40
+force_const			= 50
+force_max			= 60
+force_grow_speed	= 15
+
+destroy_time		= 1000000000000000000000000000000000000
+;grenade_remove_time		= 0
+
+
+snd_checkout = weapons\knife_1
+
+attach_position_offset	= -0.021,0,0.0
+attach_angle_offset		= 0,0,0 ;0,3.14,0
+attach_bone_name		= 
+
+// should be deleted after update
+;bone_name				= 
+position_offset			 = 0.0,0.0,0.0
+angle_offset			 = 1.570790,1.570790,3.92699 ;-1.570790,-1.570790,-3.92699
+
+cost				= 1090
+
+ph_crash_speed_min			= 100
+ph_crash_speed_max			= 120
+ph_collision_damage_factor	= 1000
+ph_mass 					= 70
+
+throw_point			= 0,0.,0. ;0,0.4,0.5
+throw_dir			= 0,0,0 ;0,0,1
+
+script_binding       = bolt_binder.init ;bind_dfs_knife.init
+
+; ttc	
+hit_power                	= 2.40
+hit_impulse		         	= 120
+hit_type				 	= wound
+
+hit_power_2                	= 2.40
+hit_impulse_2	         	= 120
+hit_type_2				 	= wound_2
+
+fire_distance            	= 90
+bullet_speed			 	= 180	;начальная скорость пули
+rpm                      	= 1000 ;600
+; end ttc
+
+normal                   	= 0, 1, 0
+position                 	= -0.021, -0.078, 0.0
+orientation              	= 0,180,0
+
+[wpn_knife_d_hud]
+fire_point          = 0.0, 0.0, 0.
+fire_bone           = bolt_0
+
+orientation         = 0,0,0
+position            = 0,0,0.1
+
+visual              = weapons\knife_d\wpn_knife_new_h_hud.ogf
+
+throw_point				 = 0,0,0 ;0.0,0.4,0.3
+throw_dir				 = -1,0,-1 ;0,0,1
+
+anim_draw			= draw
+anim_show			= draw3
+anim_hide			= holster_0
+anim_idle			= idle_0
+anim_playing		= idle_01
+anim_throw_begin	= attack_0_begin
+anim_throw_idle		= attack_0_idle
+anim_throw_act		= attack_0_act	
+anim_throw_end		= attack_0_end
+anim_idle_sprint	= idle_sprint
+

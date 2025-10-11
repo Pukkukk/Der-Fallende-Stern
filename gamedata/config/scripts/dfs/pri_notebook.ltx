@@ -1,0 +1,20 @@
+[logic]
+active      = ph_button@locked
+
+[ph_button@locked]
+anim_blend  = false
+anim        = button_false
+tooltip		= power_off
+on_info		= {+inform_access_2} ph_button@unlocked
+
+[ph_button@unlocked]
+anim_blend  = false
+anim        = button_false
+tooltip		= power_on
+on_press 	= ph_button@off %+inform_access_3 +player_complete_inform_access +info_dfs_story_ar_42 +info_dfs_story_ar_43 +info_dfs_story_ar_44 +info_dfs_story_ar_45 +info_dfs_story_ar_46%
+
+[ph_button@off]
+anim_blend  = false
+anim        = button_false
+tooltip		= power_off
+on_info = nil

@@ -1,0 +1,121 @@
+
+; Eagle ================================================================================================================================================ ПМ Пистолет Макарова
+; ==================================== первая ветка ====================================
+
+
+; 1 ветка
+
+; upgrade 1
+[wpn_glock_a1]: wpn_glock18c
+hidden_bones = flash, laser, line, light, mag2, bone, bone2, barrel_silencer, barrel_compensator, bolt_auto
+available_upgrades		= glock_upgr2
+installed_upgrades		= glock_upgr1
+icon_group = 2
+cost					 	= 2650
+hud                      	= wpn_glock_a1_hud
+[wpn_glock_a1_hud]:wpn_glock17_hud
+hidden_bones = flash, laser, line, light, mag2, bone, bone2, barrel_silencer, barrel_compensator, bolt_auto
+
+
+
+
+
+; upgrade 2
+[wpn_glock_a2]:wpn_glock_a1
+hidden_bones = flash, laser, line, light, mag2, bone, bone2, barrel, barrel_compensator, bolt_auto
+available_upgrades		= glock_upgr3
+installed_upgrades		= glock_upgr1, glock_upgr2
+silencer_status				= 2
+cost					 	= 2950
+hud                      	= wpn_glock_a2_hud
+[wpn_glock_a2_hud]:wpn_glock17_hud
+hidden_bones = flash, laser, line, light, mag2, bone, bone2, barrel, barrel_compensator, bolt_auto
+
+
+
+
+; upgrade 3
+[wpn_glock_a3]:wpn_glock_a2
+hidden_bones = flash, laser, line, light, mag2, bone, bone2, barrel, barrel_compensator, bolt
+available_upgrades		= glock_upgr4
+installed_upgrades		= glock_upgr1, glock_upgr2, glock_upgr3
+cost					 	= 3250
+
+fire_modes                      = 1, -1
+firemod_status				= 1
+
+
+hud                      	= wpn_glock_a3_hud
+[wpn_glock_a3_hud]:wpn_glock17_hud
+hidden_bones = flash, laser, line, light, mag2, bone, bone2, barrel, barrel_compensator, bolt
+
+; upgrade 4
+[wpn_glock_a4]:wpn_glock_a3
+hidden_bones = flash, laser, line, light, mag, bone, bone2, barrel, barrel_compensator, bolt
+available_upgrades		= glock_upgr5
+installed_upgrades		= glock_upgr1, glock_upgr2, glock_upgr3, glock_upgr4
+cost					 	= 3550
+ammo_mag_size		 		= 33
+
+
+hud                      	= wpn_glock_a4_hud
+[wpn_glock_a4_hud]:wpn_glock_unic_hud
+hidden_bones = flash, laser, line, light, mag, bone, bone2, barrel, barrel_compensator, bolt
+
+
+; upgrade 5
+[wpn_glock_a5]:wpn_glock_a4
+hidden_bones = line, mag, bone, bone2, barrel, barrel_compensator, bolt
+available_upgrades		= glock_upgr6
+installed_upgrades		= glock_upgr1, glock_upgr2, glock_upgr3, glock_upgr4, glock_upgr5
+cost					 	= 3850
+
+
+
+torch_world_attach_offset_x = 0.049
+torch_world_attach_offset_y = 0.244
+torch_world_attach_offset_z = 0.375
+
+torch_omni_world_attach_offset_x = 0.049
+torch_omni_world_attach_offset_y = 0.244
+torch_omni_world_attach_offset_z = 0.375
+
+torch_attach_offset_x = 0.0
+torch_attach_offset_y = 0.0
+torch_attach_offset_z = 0.4
+
+hud                      	= wpn_glock_a5_hud
+[wpn_glock_a5_hud]:wpn_glock_unic_hud
+hidden_bones = line, mag, bone, bone2, barrel, barrel_compensator, bolt
+
+
+; upgrade 6
+[wpn_glock_a6]:wpn_glock_a5
+hidden_bones = mag, bone, bone2, barrel, barrel_compensator, bolt
+available_upgrades		= none
+installed_upgrades		= glock_upgr1, glock_upgr2, glock_upgr3, glock_upgr4, glock_upgr5, glock_upgr6
+cost					 	= 4150
+
+laserdot_world_attach_offset_x = -0.037
+laserdot_world_attach_offset_y = 0.244
+laserdot_world_attach_offset_z = 0.347
+
+laserdot_attach_offset_x = 0.0
+laserdot_attach_offset_y = 0.0
+laserdot_attach_offset_z = 0.1
+
+torch_world_attach_offset_x = 0.049
+torch_world_attach_offset_y = 0.244
+torch_world_attach_offset_z = 0.375
+
+torch_omni_world_attach_offset_x = 0.049
+torch_omni_world_attach_offset_y = 0.244
+torch_omni_world_attach_offset_z = 0.375
+
+torch_attach_offset_x = 0.0
+torch_attach_offset_y = 0.0
+torch_attach_offset_z = 0.4
+
+hud                      	= wpn_glock_a6_hud
+[wpn_glock_a6_hud]:wpn_glock_unic_hud
+hidden_bones = mag, bone, bone2, barrel, barrel_compensator, bolt

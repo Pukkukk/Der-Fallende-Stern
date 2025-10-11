@@ -1,0 +1,86 @@
+[logic]
+active = camper
+combat_ignore = combat_ignore
+on_hit = hit
+
+[camper]
+path_walk = swamp_pope_vitaly_walk
+path_look = swamp_pope_vitaly_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@swamp_pope_vitaly
+
+on_actor_dist_le_nvis = 50 | %+creazy_pope_start =actor_enemy%
+on_info = {+player_complete_creazy_pope} camper1 %=pope_friend%
+radius = 0
+
+[camper1]
+path_walk = swamp_pope_vitaly_walk1
+path_look = swamp_pope_vitaly_look1
+combat_ignore_cond = always
+danger = danger_condition@swamp_pope_vitaly
+
+wounded = wounded
+;meet = meet
+on_info = {+zaglushka_31} camper3
+radius = 0
+
+[camper3]
+path_walk = swamp_pope_vitaly_walk
+path_look = swamp_pope_vitaly_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@swamp_pope_vitaly
+
+meet = default_meet
+on_info = {+player_complete_lost_priest} camper4
+radius = 0
+
+[camper4]
+path_walk = swamp_pope_vitaly_walk
+path_look = swamp_pope_vitaly_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@swamp_pope_vitaly
+
+meet = no_meet
+radius = 0
+on_actor_dist_ge_nvis = 30 | walker %+zaglushka_34 =pope_massage%
+
+[walker]
+path_walk = swamp_pope_vitaly_walk2
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@swamp_pope_vitaly
+
+meet = no_meet
+on_signal = arrive | walker1
+
+[walker1]
+path_walk = swamp_pope_vitaly_walk3
+path_look = swamp_pope_vitaly_look3
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@swamp_pope_vitaly
+
+meet = default_meet
+on_info = {+meet_vill_stalker_start} nil
+
+[combat_ignore]
+combat_ignore_cond = always
+
+[danger_condition@swamp_pope_vitaly]
+ignore_distance = 0
+
+[meet]
+use = true
+use_wpn = true
+meet_dialog = pope_vitaly_dialog1
+
+[wounded]
+hp_state		= 100|help_me@help
+hp_state_see	= 100|wounded@help_see
+psy_state		= 100|psy_pain
+hp_victim		= 100|nil
+hp_cover		= false
+hp_fight		= false
+syndata			= wounded@help
+help_dialog		= pope_vitaly_dialog1
+
+[hit]
+on_info = {-player_complete_creazy_pope} %+player_complete_creazy_pope =actor_friend =clirics_friend%

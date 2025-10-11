@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="item test1">
+		<text>Это тестовая строка для вещмешка</text>
+	</string>
+	<string id="item test2">
+		<text>Это еще одна тестовая строка для вещмешка</text>
+	</string>
+	<string id="item_case_esc_desc">
+		<text>Кейс с документами. Сделан из огнеупорного материала.</text>
+	</string>
+	<string id="item_decoder_desc">
+		<text>Нечто вроде мощной электронной отмычки. Похоже, что она создавалась с целью взломать какой-то специфический электронный замок. Как ни странно конструкция не подразумевает универсальности - оно создавалось для конкретного замка и не способно взламывать какие-либо другие коды.</text>
+	</string>
+	<string id="item_decoder_name">
+		<text>Декодер</text>
+	</string>
+	<string id="item_detector_yantar_desc">
+		<text>Устройство для замеров пси-излучения.</text>
+	</string>
+	<string id="item_detector_yantar_name">
+		<text>Сенсор ПП-4а</text>
+	</string>
+	<string id="item_dec_doc_desc">
+		<text>Полиэтиленовый файл с документами.</text>
+	</string>
+	<string id="item_dec_doc_name">
+		<text>Расшифровка документов из Х18</text>
+	</string>
+	<string id="item_doc_x16_desc">
+		<text>Документы по установке «пси-Мозг».</text>
+	</string>
+	<string id="item_doc_x16_name">
+		<text>Документы из лаборатории Х16</text>
+	</string>
+	<string id="item_doc_x18_desc">
+		<text>Толстая стопка научных бумаг. Сплошные термины, формулы и диаграммы. Без ученой степени по биологии сложно что-то в них понять.</text>
+	</string>
+	<string id="item_doc_x18p1_name">
+		<text>Документы из Х18 часть1</text>
+	</string>
+	<string id="item_doc_x18p2_name">
+		<text>Документы из Х18 часть2</text>
+	</string>
+	<string id="item_doc_x18p3_name">
+		<text>Документы из Х18 часть3</text>
+	</string>
+	<string id="item_doc_x18p4_name">
+		<text>Документы из Х18</text>
+	</string>
+	<string id="item_doc_x18p5_name">
+		<text>Документы из Х18 часть5</text>
+	</string>
+	<string id="item_docs_hiden_pri_desc">
+		<text>Потёртая рукопись в кожаной обложке. Написана самим Стрелком. Судя по заглавиям, в ней раскрываются некоторые загадки Зоны.</text>
+	</string>
+	<string id="item_docs_hiden_pri_name">
+		<text>Документы из Припяти</text>
+	</string>
+	<string id="item_dolg_arhive_documents_desc">
+		<text>Архивная папка. В такой папке очень удобно хранить документы.</text>
+	</string>
+	<string id="item_dolg_arhive_documents_name">
+		<text>Архивная папка Долга</text>
+	</string>
+	<string id="item_dynamite_esc_desc">
+		<text>Тяжёлый деревянный ящик, с надписями "Взрывоопасно" на нескольких языках.</text>
+	</string>
+	<string id="item_dynamite_esc_name">
+		<text>Ящик с динамитом</text>
+	</string>
+	<string id="item_diplomat_esc_desc">
+		<text>Обыкновенный старый дипломат, в который можно положить всё что угодно.</text>
+	</string>
+	<string id="item_diplomat_esc_name">
+		<text>Дипломат с инструментами</text>
+	</string>
+	<string id="item_flash_crazy_mil_desc">
+		<text>Флеш-диск - удобное устройство для переноса информации.</text>
+	</string>
+	<string id="item_flash_crazy_mil_name">
+		<text>Флешка сумасшедшего</text>
+	</string>
+	<string id="item_flash_eco_rost_desc">
+		<text>Флеш-диск - удобное устройство для переноса информации.</text>
+	</string>
+	<string id="item_flash_eco_rost_name">
+		<text>Флешка профессора Круглова</text>
+	</string>
+	<string id="item_flash_esc_desc">
+		<text>Флеш-диск - удобное устройство для переноса информации.</text>
+	</string>
+	<string id="item_flash_esc_name">
+		<text>Флешка Лиса</text>
+	</string>
+	<string id="item_flash_gslinger_agro_desc">
+		<text>Флеш-диск - удобное устройство для переноса информации.</text>
+	</string>
+	<string id="item_flash_gslinger_agro_name">
+		<text>Флешка Стрелка</text>
+	</string>
+	<string id="item_borov_flash_desc">
+		<text>Флеш-диск - удобное устройство для переноса информации.</text>
+	</string>
+	<string id="item_borov_flash_name">
+		<text>Информация о лаборатории X18</text>
+	</string>
+	<string id="item_key_x18_desc">
+		<text>Электронный ключ от подземной лаборатории Х-18.</text>
+	</string>
+	<string id="item_key_x18_name">
+		<text>Ключ Борова</text>
+	</string>
+	<string id="item_key_1_x18_name">
+		<text>Ключ Бармена</text>
+	</string>
+	<string id="item_krot_flash">
+		<text>Флешка Крота</text>
+	</string>
+	<string id="item_war_key_desc">
+		<text>Электронный ключ от двери в главной лаборатории.</text>
+	</string>
+	<string id="item_war_key_1_name">
+		<text>Электронный ключ №1</text>
+	</string>
+	<string id="item_war_key_2_name">
+		<text>Электронный ключ №2</text>
+	</string>
+	<string id="item_war_key_3_name">
+		<text>Электронный ключ №3</text>
+	</string>
+	<string id="item_war_notebook_desc">
+		<text>Ноутбук.</text>
+	</string>
+	<string id="item_war_notebook_name">
+		<text>Ноутбук</text>
+	</string>
+	<string id="item_pda_deserter_desc">
+		<text>Карманный персональный компьютер. Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_pda_deserter_name">
+		<text>КПК Дезертира</text>
+	</string>
+	<string id="item_pda_lucky_desc">
+		<text>Карманный персональный компьютер. Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_pda_lucky_name">
+		<text>КПК Счастливчика</text>
+	</string>
+	<string id="item_pda_killer_leader_desc">
+		<text>Карманный персональный компьютер. Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_pda_killer_leader_name">
+		<text>КПК лидера наёмников</text>
+	</string>
+	<string id="item_pda_tiran_desc">
+		<text>Карманный персональный компьютер. Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_pda_tiran_name">
+		<text>КПК Тирана</text>
+	</string>
+	<string id="item_pda_sniper_desc">
+		<text>Карманный персональный компьютер. Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_pda_sniper_name">
+		<text>КПК Снайпера</text>
+	</string>
+	<string id="item_pda_vp_desc">
+		<text>Карманный персональный компьютер. Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_pda_vp_name">
+		<text>КПК Василия Петровича</text>
+	</string>
+	<string id="item_svoboda_leader_pda_desc">
+		<text>Миниатюрный персональный компьютер. Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_svoboda_leader_pda_name">
+		<text>КПК Лукаша</text>
+	</string>
+	<string id="item_svoboda_pda_desc">
+		<text>Карманный персональный компьютер, принадлежащий сталкеру из группировки «Свобода». Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_svoboda_pda_name">
+		<text>КПК свободовца</text>
+	</string>
+	<string id="item_dolg_pda_desc">
+		<text>Карманный персональный компьютер, принадлежащий сталкеру из группировки «Долг». Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_dolg_pda_name">
+		<text>КПК долговца</text>
+	</string>
+	<string id="item_quest_case_02_desc">
+		<text>Кейс с документами. Сделан из огнеупорного материала.</text>
+	</string>
+	<string id="item_quest_case_02_name">
+		<text>Документы военных</text>
+	</string>
+	<string id="item_case_esc_name">
+		<text>Документы с блокпоста</text>
+	</string>
+	<string id="yan_bad_psy_helmet_desc">
+		<text>Ненастроенный прототип, разработанный учеными для защиты от ПСИ-излучения</text>
+	</string>
+	<string id="yan_bad_psy_helmet_name">
+		<text>Ненастроенный пси-шлем</text>
+	</string>
+	<string id="yan_good_psy_helmet_desc">
+		<text>Настроенный прототип, разработанный учеными для защиты от ПСИ-излучения</text>
+	</string>
+	<string id="yan_good_psy_helmet_name">
+		<text>Настроенный пси-шлем</text>
+	</string>
+	<string id="item_pda_jaw_zam_desc">
+		<text>Карманный персональный компьютер. Незаменимое устройство в Зоне.</text>
+	</string>
+	<string id="item_pda_jaw_zam_name">
+		<text>КПК Зама "Челюсти"</text>
+	</string>
+	<string id="item_foto_name">
+		<text>Фотография</text>
+	</string>
+	<string id="item_foto1_desc">
+		<text>На фотографии изображены антенны, находящиеся на Радаре. По всей видимости, это и есть "Выжигатель мозгов".</text>
+	</string>
+	<string id="item_foto2_desc">
+		<text>На фотографии изображена установка, которая позволяет взаимодействовать с ноосферой.</text>
+	</string>
+<string id="treasure_detector_name">
+		<text>детектор</text>
+	</string>
+	<string id="treasure_artefact_name">
+		<text>артефакт</text>
+	</string>
+	<string id="treasure_medecine_name">
+		<text>медикаменты</text>
+	</string>
+	<string id="treasure_grenade_name">
+		<text>гранаты</text>
+	</string>
+	<string id="treasure_wpngrenade_name">
+		<text>гранаты для подствольника</text>
+	</string>
+	<string id="treasure_drink_name">
+		<text>напитки</text>
+	</string>
+	<string id="treasure_ammo_name">
+		<text>патроны</text>
+	</string>
+	<string id="treasure_mutant_name">
+		<text>части монстров</text>
+	</string>
+	<string id="treasure_addon_name">
+		<text>аддон к оружию</text>
+	</string>
+	<string id="treasure_eat_name">
+		<text>еда</text>
+	</string>
+	<string id="dfs_secret_name_aver">
+		<text>Забытый лес: тайник</text>
+	</string>
+	<string id="dfs_secret_name_hos">
+		<text>Госпиталь: тайник</text>
+	</string>
+	<string id="dfs_secret_name_lim">
+		<text>Лиманск: тайник</text>
+	</string>
+	<string id="dfs_secret_name_marsh">
+		<text>Болота: тайник</text>
+	</string>
+	<string id="dfs_secret_name_peshera">
+		<text>Пешера: тайник</text>
+	</string>
+	<string id="dfs_secret_name_sor">
+		<text>Сортировка: тайник</text>
+	</string>
+	<string id="dfs_secret_name_red">
+		<text>Рыжий лес: тайник</text>
+	</string>
+	<string id="dfs_secret_description">
+		<text>заначка на черный день</text>
+	</string>
+
+<string id="hos_secret_electric_box_02">
+		<text>Тайник в госпитале</text>
+	</string>
+	<string id="hos_secret_electric_box_02_descr">
+		<text>Сделали запас для своей группы в госпитале.</text>
+	</string>
+	<string id="hos_secret_rucksack_01">
+		<text>Спрятанный хабар</text>
+	</string>
+	<string id="hos_secret_rucksack_01_descr">
+		<text>Как штурмовали второй этаж, пришлось срочно руки от вещей освобождать.</text>
+	</string>
+	<string id="hos_secret_seif_01">
+		<text>Маленький тайник</text>
+	</string>
+	<string id="hos_secret_seif_01_descr">
+		<text>Отстреливаться пришлось, так я хабар спрятал.</text>
+	</string>
+
+	<string id="lim_secret_electric_box_01">
+		<text>Труба в канализации</text>
+	</string>
+	<string id="lim_secret_electric_box_01_2">
+		<text>Электрощит на «Радиоволне»</text>
+	</string>
+	<string id="lim_secret_electric_box_01_2_descr">
+		<text>Брали здание института, я надыбал в электрощитке на балконе чью-то заначку, но взять не успел: шли в бешеном темпе.</text>
+	</string>
+	<string id="lim_secret_electric_box_01_descr">
+		<text>В сточной трубе обнаружил какой-то тайник. Как вернёмся, заберу.</text>
+	</string>
+	<string id="lim_secret_instrument_case_01">
+		<text>Саквояж в нише</text>
+	</string>
+	<string id="lim_secret_instrument_case_01_1">
+		<text>Саквояж на чердаке</text>
+	</string>
+	<string id="lim_secret_instrument_case_01_1_descr">
+		<text>Два дня от вражин отстреливались. Под конец загнали нас под крышу, а тут как раз наши подошли. Я там кейс приметил, но в суматохе так и забыл его на чердаке.</text>
+	</string>
+	<string id="lim_secret_instrument_case_01_descr">
+		<text>Шли рейдом мимо ого дворика, заметил саквояжик возле забора.</text>
+	</string>
+	<string id="lim_secret_pipe_02">
+		<text>Труба под УАЗиком</text>
+	</string>
+	<string id="lim_secret_pipe_02_01">
+		<text>За гаражами</text>
+	</string>
+	<string id="lim_secret_pipe_02_01_descr">
+		<text>Видел чей-то тайник за гаражами, только заглянуть не успел. Смотреть в большой трубе за деревом.</text>
+	</string>
+	<string id="lim_secret_pipe_02_2">
+		<text>Труба в контейнере</text>
+	</string>
+	<string id="lim_secret_pipe_02_2_descr">
+		<text>Зажали нас в каком-то дворе - там в трубе, где мусорный контейнер, вроде было что-то. Как разберёмся с делами - вернусь, гляну.</text>
+	</string>
+	<string id="lim_secret_pipe_02_descr">
+		<text>Из трубы под УАЗиком торчал какой-то куль с барахлом. Времени проверять не было. Жив буду - обследую.</text>
+	</string>
+	<string id="lim_secret_rucksack_01">
+		<text>Рюкзак под бардачком</text>
+	</string>
+	<string id="lim_secret_rucksack_01_descr">
+		<text>В старый «москвич» под приборную панель бросил рюкзак бедолаги Жбана.</text>
+	</string>
+	<string id="lim_secret_rucksack_02_1">
+		<text>Рюкзак под забором</text>
+	</string>
+	<string id="lim_secret_rucksack_02_12">
+		<text>Вещи раненого</text>
+	</string>
+	<string id="lim_secret_rucksack_02_12_descr">
+		<text>Чесануло Санька, когда лезли через стену. Пришлось его рюкзак кинуть, чтобы самого спасти.</text>
+	</string>
+	<string id="lim_secret_rucksack_02_1_descr">
+		<text>Уходя от погони, скинул рюкзак под забором вот тут.</text>
+	</string>
+	<string id="lim_secret_rucksack_02_2">
+		<text>Рюкзак убитого</text>
+	</string>
+	<string id="lim_secret_rucksack_02_2_descr">
+		<text>Новенького рядом со мной гранатой накрыло, парень сразу спёкся. А рюкзак его Даня под мост кинул. Мёртвому он уже до лампочки, а нам потом может сгодиться.</text>
+	</string>
+	<string id="lim_secret_seif_03">
+		<text>Сейф в гараже</text>
+	</string>
+	<string id="lim_secret_seif_03_descr">
+		<text>Искали беглого в гаражах, наткнулись в одном на сейф. Надо будет потом как-нибудь его вскрыть.</text>
+	</string>
+	<string id="lim_secret_trees_log_01">
+		<text>Прикопанное бревно</text>
+	</string>
+	<string id="lim_secret_trees_log_01_descr">
+		<text>Перед тем как завалили этого урода, приметил я, что он что-то возле бревна за беседкой возился.</text>
+	</string>
+	<string id="lim_secret_trees_stump_01_1">
+		<text>Свёрток в пне</text>
+	</string>
+	<string id="lim_secret_trees_stump_01_1_descr">
+		<text>В дупле пня вроде сверток какой-то мелькнул, когда мы в атаку шли.</text>
+	</string>
+<string id="marsh_secret_nichka_0008">
+		<text>Рюкзак в камышах</text>
+	</string>
+	<string id="marsh_secret_nichka_0008_descr">
+		<text>В зарослях камышей сбросил рюкзак, когда отбивался от кабанов. Ориентиров никаких, хорошо хоть координаты места сразу вбил.</text>
+	</string>
+	<string id="marsh_secret_nichka_0024">
+		<text>Тайник в электрощитке</text>
+	</string>
+	<string id="marsh_secret_nichka_0024_descr">
+		<text>Щиток трансформаторной будки на хуторе. Кто чужой полезет - убьёт.</text>
+	</string>
+	<string id="marsh_secret_nichka_0042">
+		<text>Под мостом</text>
+	</string>
+	<string id="marsh_secret_nichka_0042_descr">
+		<text>Под мостом сидели, пережидая, пока погоня сверху пробежит. Там рюкзак с хабарком и оставил - к балке какой-то примостил.</text>
+	</string>
+	<string id="marsh_secret_nichka_0023">
+		<text>Тайник в бревне</text>
+	</string>
+	<string id="marsh_secret_nichka_0023_descr">
+		<text>Перед походом в другую часть Болот пришлось разгрузить рюкзак. Часть хабара впихнул в бревно.</text>
+	</string>
+	<string id="marsh_secret_nichka_0014">
+		<text>Церковная поленница</text>
+	</string>
+	<string id="marsh_secret_nichka_0014_descr">
+		<text>Под Божий присмотр спрятал свои вещички в треснувшем бревне.</text>
+	</string>
+<string id="marsh_secret_nichka_0013">
+		<text>Деревянный крест</text>
+	</string>
+	<string id="marsh_secret_nichka_0013_descr">
+		<text>В могиле с единственным деревянным крестом в ряду на церковном кладбище отложил на чёрный день небольшую заначку.</text>
+	</string>
+<string id="marsh_secret_nichka_0012">
+		<text>Могила с противогазом</text>
+	</string>
+	<string id="marsh_secret_nichka_0012_descr">
+		<text>Покойникам доверяю больше, чем живым. Мой схрон на кладбище - крайняя слева могила, противогазом отмеченная.</text>
+	</string>
+<string id="marsh_secret_nichka_0041">
+		<text>На карнизе купола</text>
+	</string>
+	<string id="marsh_secret_nichka_0041_descr">
+		<text>На карнизе церковного купола приныкал свой рюкзак. Скакал по крыше, что твой горный козёл!</text>
+	</string>
+<string id="marsh_secret_nichka_0015">
+		<text>Схрон в камышах</text>
+	</string>
+	<string id="marsh_secret_nichka_0015_descr">
+		<text>Оставил рюкзак недалеко от церкви в камышах, только теперь даже по координатам найти не могу.</text>
+	</string>
+<string id="marsh_secret_nichka_0033">
+		<text>Сейф в камышах</text>
+	</string>
+	<string id="marsh_secret_nichka_0033_descr">
+		<text>Не знаю, откуда на болоте такой сейф взялся, но грех было не воспользоваться. До поры пусть всё моё там полежит.</text>
+	</string>
+<string id="marsh_secret_nichka_0029">
+		<text>Тайник среди кустов</text>
+	</string>
+	<string id="marsh_secret_nichka_0029_descr">
+		<text>Из болота выбрался, сил не было самому идти, поэтому всю ношу прямо рядом с тропой среди кустов кинул.</text>
+	</string>
+<string id="marsh_secret_nichka_0028">
+		<text>Сейф за сухостоем</text>
+	</string>
+	<string id="marsh_secret_nichka_0028_descr">
+		<text>Сынишке на лекарства буду откладывать в тайнике: за сухим деревом есть сейф. Как наберётся достаточно, рвану на Большую землю.</text>
+	</string>
+	<string id="marsh_secret_nichka_0006">
+		<text>Рюкзак в болотах</text>
+	</string>
+	<string id="marsh_secret_nichka_0006_descr">
+		<text>Еле от болотной твари оторвался, но рюкзак обронил. Неохота снова туда соваться, но может и припереть.</text>
+	</string>
+	<string id="marsh_secret_nichka_0005">
+		<text>Труба в болоте</text>
+	</string>
+	<string id="marsh_secret_nichka_0005_descr">
+		<text>Задолбался я в этих топях на себе хабар таскать, потому скинул на одном острове в притопленную трубу с вентилем. В камышах всё равно 
+фиг кто без точных координат найдёт.</text>
+	</string>
+<string id="marsh_secret_nichka_0007">
+		<text>Притопленный сейф</text>
+	</string>
+	<string id="marsh_secret_nichka_0007_descr">
+		<text>Недалеко от разрушенного моста притопленый сейф лежит. Рискнул туда всё своё барахлишко кинуть.</text>
+	</string>
+	<string id="marsh_secret_nichka_0017">
+		<text>Саквояж под печкой</text>
+	</string>
+	<string id="marsh_secret_nichka_0017_descr">
+		<text>Штирлиц топил печку третий день. На четвертый она утонула. В ней я и спрятал свой саквояжик.</text>
+	</string>
+<string id="marsh_secret_nichka_0010">
+		<text>Пень у дерева</text>
+	</string>
+	<string id="marsh_secret_nichka_0010_descr">
+		<text>Решил, что хабар буду складывать в пне у сухого дерева. Как стану линять с Болот, заберу.</text>
+	</string>
+	<string id="marsh_secret_nichka_0027">
+		<text>Пень у деревца</text>
+	</string>
+	<string id="marsh_secret_nichka_0027_descr">
+		<text>Пусть дураки долю Крюку платят. Я своё буду складывать под пнём у молодого деревца.</text>
+	</string>
+<string id="marsh_secret_nichka_0004">
+		<text>Труба на станции</text>
+	</string>
+	<string id="marsh_secret_nichka_0004_descr">
+		<text>В старой насосной станции посреди болота спрятал в раструб рядом с вентилем.</text>
+	</string>
+	<string id="marsh_secret_nichka_0018">
+		<text>Барахло в ЗАЗе</text>
+	</string>
+	<string id="marsh_secret_nichka_0018_descr">
+		<text>Полночи сидели на крыше «Запорожца», пока наши не подошли. Я тогда не знал, кто до нас первым доберётся, потому кинул где-то рядом своё 
+барахло. В светлое время надо будет найти.</text>
+	</string>
+	<string id="marsh_secret_nichka_0037">
+		<text>Люк возле станции</text>
+	</string>
+	<string id="marsh_secret_nichka_0037_descr">
+		<text>Под каким-то люком возле станции зарыл добро, чтобы случайным грабителям моего ничего не досталось.</text>
+	</string>
+	<string id="marsh_secret_nichka_0036">
+		<text>Рюкзак на острове</text>
+	</string>
+	<string id="marsh_secret_nichka_0036_descr">
+		<text>Гнала меня болотная тварь несколько километров, потому на каком-то острове решил от рюкзака избавиться, а то бы сдох от такого 
+марафона.</text>
+	</string>
+	<string id="marsh_secret_nichka_0016">
+		<text>Сейф в грязи</text>
+	</string>
+	<string id="marsh_secret_nichka_0016_descr">
+		<text>На берегу болота недалеко от церкви сунул в сейф все свои находки, чтобы грабителям не достались.</text>
+	</string>
+<string id="marsh_secret_nichka_0032">
+		<text>Ящичек в печке</text>
+	</string>
+	<string id="marsh_secret_nichka_0032_descr">
+		<text>Тайник, как у Кощея в сказке: в ларце, ларец в печи, печь в сгоревшем доме, а дом - на Болотах.</text>
+	</string>
+<string id="marsh_secret_nichka_0035">
+		<text>Коряга на Болотах</text>
+	</string>
+	<string id="marsh_secret_nichka_0035_descr">
+		<text>Шли через Болота, приметил возле мостков трухлявую корягу. Место хорошее, так я туда приныкал туда свои сокровища.</text>
+	</string>
+<string id="marsh_secret_nichka_0038">
+		<text>Схрон в трубе</text>
+	</string>
+	<string id="marsh_secret_nichka_0038_descr">
+		<text>Чёрный рюкзак в большой трубе - вся память про Митька.</text>
+	</string>
+<string id="marsh_secret_nichka_0009">
+		<text>Оставленный хабар</text>
+	</string>
+	<string id="marsh_secret_nichka_0009_descr">
+		<text>Из-под носа у одного лоха рюкзак с хабаром спёр. Далеко, правда, не унёс: чтобы не погореть, пришлось кинуть неподалёку в 
+камышах.</text>
+	</string>
+	<string id="marsh_secret_nichka_0026">
+		<text>Рюкзак на тропе</text>
+	</string>
+	<string id="marsh_secret_nichka_0026_descr">
+		<text>На тропе плоть встретил, а из оружия один нож был. Рюкзак там кинул, чтоб вторую руку освободить и ногам легче убегать было. Надо 
+как-нить вернуться.</text>
+	</string>
+<string id="marsh_secret_nichka_0039">
+		<text>Саквояж в кабине</text>
+	</string>
+	<string id="marsh_secret_nichka_0039_descr">
+		<text>Нашел саквояжик на болоте, сложил туда свои пожитки и заныкал в кабине крана до лучших времен.</text>
+	</string>
+<string id="marsh_secret_nichka_0034">
+		<text>Болотный пень</text>
+	</string>
+	<string id="marsh_secret_nichka_0034_descr">
+		<text>Старший сказал, много барахла не брать, так я своё спрятал в пень рядом с водонасосной станцией - там в кустах, под деревом.</text>
+	</string>
+	<string id="marsh_secret_nichka_0031">
+		<text>Посреди болота</text>
+	</string>
+	<string id="marsh_secret_nichka_0031_descr">
+		<text>Посреди болота на бетонной херне с кусками арматуры оставил ящик с барахлом, чтобы на сухопутное выбраться.</text>
+	</string>
+<string id="marsh_secret_nichka_0021">
+		<text>Рюкзак у матраса</text>
+	</string>
+	<string id="marsh_secret_nichka_0021_descr">
+		<text>Лёха, балда стоеросовая, забыл рюкзак свой там, где спал - у затонувшей лодки рядом с матрасом.</text>
+	</string>
+	<string id="marsh_secret_nichka_0040">
+		<text>Рюкзак под вагоном</text>
+	</string>
+	<string id="marsh_secret_nichka_0040_descr">
+		<text>Чтобы бежать было легче, оставил ношу под вагоном на железнодорожном полотне.</text>
+	</string>
+<string id="marsh_secret_nichka_0019">
+		<text>Пень у «железки»</text>
+	</string>
+	<string id="marsh_secret_nichka_0019_descr">
+		<text>Проходили у «железки», когда стрельбу услышали. Я свои вещички быстро в пень за валунами и припрятал.</text>
+	</string>
+<string id="marsh_secret_nichka_0020">
+		<text>Труба от цистерны</text>
+	</string>
+	<string id="marsh_secret_nichka_0020_descr">
+		<text>Собираем с пацанами всё в рукаве трубы (с вентилем), что от цистерны к Болотам идет.</text>
+	</string>
+<string id="marsh_secret_nichka_0030">
+		<text>Тайник под кузовом</text>
+	</string>
+	<string id="marsh_secret_nichka_0030_descr">
+		<text>Под кузовом КАМАЗа напротив моста в ящике из-под инструментов.</text>
+	</string>
+<string id="marsh_secret_nichka_0025">
+		<text>Электрощит на АТП</text>
+	</string>
+	<string id="marsh_secret_nichka_0025_descr">
+		<text>Как вступал к Серому, свою мелочёвку на всякий пожарный затасовал на АТП в электрощит. Кто знает, может, ещё сгодится.</text>
+	</string>
+<string id="marsh_secret_nichka_0001">
+		<text>Ящичек под вышкой</text>
+	</string>
+	<string id="marsh_secret_nichka_0001_descr">
+		<text>Сношу пока весь хабар в тайник под одну из высоковольтных вышек.</text>
+	</string>
+<string id="marsh_secret_nichka_0043">
+		<text>Среди валунов</text>
+	</string>
+	<string id="marsh_secret_nichka_0043_descr">
+		<text>Между трёх валунов кинул в щель сумку с вещами, чтобы перед пацанами не палиться.</text>
+	</string>
+<string id="marsh_secret_nichka_0003">
+		<text>Ящик в кабине ГАЗона</text>
+	</string>
+	<string id="marsh_secret_nichka_0003_descr">
+		<text>Санёк Хромой откуда-то ящик слесарный притащил, мы и сложили туда кой-что ценное и кинули в кабину ржавого ГАЗона.</text>
+	</string>
+<string id="marsh_secret_nichka_0022">
+		<text>Нычка в щитке</text>
+	</string>
+	<string id="marsh_secret_nichka_0022_descr">
+		<text>Отложил для торговца заказ в голубом ящике.</text>
+	</string>
+<string id="marsh_secret_nichka_0011">
+		<text>Бревно у вышки</text>
+	</string>
+	<string id="marsh_secret_nichka_0011_descr">
+		<text>Расщепленное дерево неподалёку от высоковольной вышки.</text>
+	</string>
+<string id="marsh_secret_nichka_0044">
+		<text>Коряга возле лодки</text>
+	</string>
+	<string id="marsh_secret_nichka_0044_descr">
+		<text>Долго искал надёжное место для своего тайника, так нашёл корягу с дуплом.</text>
+	</string>
+<string id="red_secret_pipe_02">
+		<text>Труба в тележке</text>
+	</string>
+	<string id="red_secret_pipe_02_descr">
+		<text>Затасовал вещички в трубу и скинул в ржавую вагонетку.</text>
+	</string>
+<string id="red_secret_box_01_0000">
+		<text>Синий ящик</text>
+	</string>
+	<string id="red_secret_box_01_0000_descr">
+		<text>На втором этаже здания возле капера есть синий ящик с хабаром.</text>
+	</string>
+	<string id="red_secret_zaz968">
+		<text>Запор на капере</text>
+	</string>
+	<string id="red_secret_zaz968_descr">
+		<text>Возле спуска в шахты под сиденьем «запора» сложил свои находки. Перед походом к Сидоровичу вытряхну в большой рюкзак.</text>
+	</string>
+<string id="red_secret_trees_stump_01_0000">
+		<text>Пень перед лесом</text>
+	</string>
+	<string id="red_secret_trees_stump_01_0000_descr">
+		<text>Мало ли что в этом лесу нас ждёт, так я перегруз в трухлявый пень спрятал.</text>
+	</string>
+	<string id="red_secret_trees_stump_01_4">
+		<text>Тайник в пне</text>
+	</string>
+	<string id="red_secret_trees_stump_01_4_descr">
+		<text>Притаили с Жекой всякую мелочёвку в пне в Рыжем лесу.</text>
+	</string>
+<string id="red_secret_rucksack_02">
+		<text>Рюкзак в кустах</text>
+	</string>
+<string id="red_secret_rucksack_02_descr">
+		<text>Сбросил хабар вкусты. Никто, кажется, не видел.</text>
+	</string>
+	<string id="red_secret_rucksack_01_on_tree">
+		<text>Дерево у забора</text>
+	</string>
+	<string id="red_secret_rucksack_01_on_tree_descr">
+		<text>До самой ограды заповедника кровосос за мной гнался, падлюка! Загнал меня на дерево. Если бы рюкзак там не оставил, хрен бы до ограды 
+допрыгнул.</text>
+	</string>
+<string id="red_secret_rucksack_02_4">
+		<text>Проклятый хабар</text>
+	</string>
+	<string id="red_secret_rucksack_02_4_descr">
+		<text>Целая история с этим рюкзаком: все, чей он был, погибли. Я его и кинул от греха подальше, чтоб глаза мои его не видели.</text>
+	</string>
+<string id="red_secret_rucksack_02_in_stone">
+		<text>Потеряшка</text>
+	</string>
+	<string id="red_secret_rucksack_02_in_stone_descr">
+		<text>Абраша, дебил, посеял мой рюкзак среди камней где-то вот в этой точке. И возвращаться за ним стремается, урод. Ай да друг!</text>
+	</string>
+	<string id="red_secret_rucksack_02_5">
+		<text>Странное место</text>
+	</string>
+	<string id="red_secret_rucksack_02_5_descr">
+		<text>Уснул ночью под валуном на рюкзаке, а утром проснулся совсем в другом месте. Пытался разобраться, только всё время по кругу 
+ходил.</text>
+	</string>
+	<string id="red_secret_trees_stump_01">
+		<text>Дырявый пень</text>
+	</string>
+<string id="red_secret_trees_stump_01_descr">
+		<text>Услышал какой-то визг и вой, драпанул по лесу, а вещи втулил в дырявый пень.</text>
+	</string>
+	<string id="red_secret_rucksack_02_0001">
+		<text>Рюкзак под валунами</text>
+	</string>
+	<string id="red_secret_rucksack_02_0001_descr">
+		<text>Перед выходом к мосту на Лиманск под валунами бросил рюкзак Колькин, он лишний был. Это чтобы, значит, идти дальше легче было.</text>
+	</string>
+	<string id="red_secret_rucksack_02_6">
+		<text>Рюкзак под обвалом</text>
+	</string>
+	<string id="red_secret_rucksack_02_6_descr">
+		<text>На выходе из Рыжего леса валуны с оврага сорвались, и на меня! А за ними что-то тёмное ко мне потянулось. Еле ноги унёс, но рюкзак свой 
+потерял там где-то.</text>
+	</string>
+<string id="red_secret_rucksack_01_under_stone_3">
+		<text>Валун возле оврага</text>
+	</string>
+	<string id="red_secret_rucksack_01_under_stone_3_descr">
+		<text>Собаки к оврагу прижали, за валунами кинул рюкзак и пошёл на прорыв.</text>
+	</string>
+	<string id="red_secret_sekret_trees_stump_01_0000">
+		<text>Пень в глуши</text>
+	</string>
+	<string id="red_secret_sekret_trees_stump_01_0000_descr">
+		<text>Заблудился в Рыжем лесу и скинул всё свое барахло в дупло пня на этой точке.</text>
+	</string>
+<string id="red_secret_rucksack_01_1_0000">
+		<text>Рюкзак на ветке</text>
+	</string>
+	<string id="red_secret_rucksack_01_1_0000_descr">
+		<text>Спрятался от какой-то твари на дереве. Саму монстрятину не видел, только слышал в тумане. Скинул там рюкзак на ветке, а сам спрыгнул - 
+и бегом оттудова!</text>
+	</string>
+
+<string id="red_secret_rucksack_02_0000">
+		<text>Рюкзак в лесу</text>
+	</string>
+	<string id="red_secret_rucksack_02_0000_descr">
+		<text>Словно в ужастике побывал - не знаю, как и выбрался. Потерял рюкзак. Теоретически «посеять» я его мог только в одном месте.</text>
+	</string>
+<string id="red_secret_trees_log_01">
+		<text>Вещи в дупле дерева</text>
+	</string>
+	<string id="red_secret_trees_log_01_descr">
+		<text>По дороге на Лиманск припрятали свои вещи с Хлыстом в дупле поваленного дерева на выходе из заповедника.</text>
+	</string>
+<string id="red_secret_rucksack_02_in_tonnel">
+		<text>Тайник в штольне</text>
+	</string>
+	<string id="red_secret_rucksack_02_in_tonnel_descr">
+		<text>В заброшенной штольне, в самом конце, запрятал хабар.</text>
+	</string>
+	<string id="red_secret_trees_stump_01_2_0000">
+		<text>Пень у оврага</text>
+	</string>
+	<string id="red_secret_trees_stump_01_2_0000_descr">
+		<text>Недалечко от офигительной аномалии в пне затихарили барахлишко. Сами счас полезем эту хрень поближе исследовать: возле такой по-любасу 
+ценные арты должны лежать.</text>
+	</string>
+
+
+</string_table>

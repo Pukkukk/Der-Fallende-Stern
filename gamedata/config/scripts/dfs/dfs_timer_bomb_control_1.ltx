@@ -1,0 +1,21 @@
+[logic]
+active = ph_idle@unblocked
+
+[ph_idle@blocked]
+on_info = {+perimetre_storm_start -esc_mobil_is_terminated} ph_idle@unblocked
+
+[ph_idle@unblocked]
+tips = do_place_mine
+on_use = {=has_timer_bomb} %=prip_timer_c4_1_on +mina1_on%
+on_info = {+mina1_on} ph_idle@action
+
+[ph_idle@action]
+tips = turn_on_timer
+on_use = %+mina1_on_1%
+on_info = {+mina1_on_1} ph_idle@timer
+
+[ph_idle@timer]
+on_timer = 15000 | ph_idle@timer1 %=prip_timer_c4_1_plase% 
+
+[ph_idle@timer1]
+on_timer = 1000 | %=prip_1_hit +killer_truck_1_destroyed%

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+	
+	<ui_log_checker>
+		<logic_maker>
+			<background x="0" y="0" width="260" height="2300" stretch="1">
+				<texture x="0" y="0" width="350" height="2300">ui\ui_dg_inventory</texture>
+			</background>
+			<caption x="30" y="123" width="203" height="343">
+				<text complex_mode="1"></text>
+			</caption>
+			<edit_box_path x="30" y="93" width="203" height="25">
+				<texture>ui_linetext_e</texture>
+				<text font="letterica16" r="240" g="217" b="182">scripts\</text>
+			</edit_box_path>
+			<edit_box_path_no_texture x="30" y="93" width="203" height="25"></edit_box_path_no_texture>
+			<frame_list2 x="30" y="123" width="203" height="313">
+				<texture>ui\ui_frame_01</texture>
+			</frame_list2>
+			<btn1 x="72" y="40" width="100" height="35" stretch="1">
+				<texture>ui_button_ordinary</texture>
+				<text x="0" y="-4">Сохранить и выйти</text>
+			</btn1>
+			<btn_close x="226" y="19" width="100" height="35" stretch="1" hint="Закрыть">
+				<texture>ui_PDA_checker</texture>
+			</btn_close>
+			<btn_caption x="30" y="123" width="203" height="343" stretch="1"></btn_caption>
+		</logic_maker>
+		
+		<log_checker_small>
+			<background x="0" y="0" width="260" height="2300" stretch="1">
+				<texture x="0" y="0" width="350" height="2300">ui\ui_dg_inventory</texture>
+			</background>
+			<caption x="72" y="330" width="150" height="30">
+				<text align="c" complex_mode="0" font="graffiti32" r="238" g="155" b="23" a="255">Введите имя точки</text>
+			</caption>
+			<caption_texture x="12" y="370" width="850" height="30">
+				<texture>ui_linetext_e</texture>
+				<text font="letterica16" r="240" g="217" b="182"/>
+			</caption_texture>
+			<btn1 x="72" y="40" width="100" height="35" stretch="1">
+				<texture>ui_button_ordinary</texture>
+				<text x="0" y="-4">Фулл режим</text>
+			</btn1>
+		</log_checker_small>
+		
+		<log_checker_full>
+			<background x="3" y="20" width="891" height="643">
+				<texture x="0" y="0" width="1020" height="702">ui\ui_microSDK</texture>
+			</background>
+			<caption_background1 x="603" y="170" width="300" height="200">
+				<texture x="600" y="750" width="250" height="200">ui\ui_microSDK</texture>
+			</caption_background1>
+			<caption_background2 x="603" y="370" width="300" height="200">
+				<texture x="350" y="750" width="250" height="200">ui\ui_microSDK</texture>
+			</caption_background2>
+			<caption_helper1 x="722" y="180" width="160" height="420">
+				<text complex_mode="1" r="238" g="155" b="23" a="255">Вас приветствует помошник</text>
+			</caption_helper1>
+			<btn1 x="750" y="140" width="100" height="35" stretch="1">
+				<texture>ui_button_ordinary</texture>
+				<text x="0" y="-4">Лайт режим</text>
+			</btn1>
+			<btn_settings x="635" y="140" width="100" height="35" stretch="1">
+				<texture>ui_button_ordinary</texture>
+				<text x="0" y="-4">Настройки</text>
+			</btn_settings>
+			<caption_helper x="700" y="180" width="170" height="25" align="c">
+				<text r="238" g="155" b="23" a="255">Помощник</text>
+			</caption_helper>
+			<caption_helper2 x="700" y="210" width="170" height="170">
+				<text complex_mode="1" r="238" g="155" b="23" a="255">Выберите нужную секцию в списке</text>
+			</caption_helper2>
+			<list_section_all x="140" y="140" width="270" height="75" item_height="24" always_show_scroll="1" align="r">
+				<font font="letterica16" r="216" g="186" b="140" />
+			</list_section_all>
+			<frame_list1 x="140" y="140" width="270" height="75">
+				<texture>ui\ui_frame_01</texture>
+			</frame_list1>
+			<btn_logic x="250" y="335" width="100" height="35" stretch="1">
+				<texture>ui_button_ordinary</texture>
+				<text>[smart_terrain]</text>
+			</btn_logic>
+			<btn_logic_maker x="370" y="335" width="100" height="35" stretch="1">
+				<texture>ui_button_ordinary</texture>
+				<text>Logic Maker</text>
+			</btn_logic_maker>
+			<btn_save x="750" y="585" width="100" height="35" stretch="1">
+				<texture>ui_button_ordinary</texture>
+				<text>Сохранить</text>
+			</btn_save>
+			<stalker>
+				<caption_name x="140" y="230" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Имя - </text>
+				</caption_name>
+				<edit_box_name x="250" y="230" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_name>
+				<caption_section x="140" y="265" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Секция - </text>
+				</caption_section>
+				<edit_box_section x="250" y="265" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_section>
+				<btn_section x="600" y="265" width="25" height="23" stretch="1">
+					<texture>ui_cb_button</texture>
+				</btn_section>
+				<list_section x="250" y="291" width="350" height="100" item_height="24" always_show_scroll="1">
+					<font font="letterica16" r="216" g="186" b="140"/>
+				</list_section>
+				<frame_list_section x="250" y="291" width="350" height="100">
+					<texture>ui\ui_frame_01</texture>
+				</frame_list_section>
+				<caption_character x="140" y="300" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Характер - </text>
+				</caption_character>
+				<edit_box_character x="250" y="300" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_character>
+				<caption_logic x="140" y="338" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Секция логики</text>
+				</caption_logic>
+				<caption_logic_2 x="590" y="370" width="75" height="25" align="r">
+					<text font="letterica16" r="240" g="217" b="182" x="0" y="4"></text>
+				</caption_logic_2>
+				<edit_box_logic x="140" y="370" width="450" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_logic>
+				<caption_team x="140" y="405" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Team -</text>
+				</caption_team>
+				<edit_box_team x="220" y="405" width="30" height="25" numonly="1">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_team>
+				<caption_squad x="270" y="405" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Squad -</text>
+				</caption_squad>
+				<edit_box_squad x="350" y="405" width="30" height="25" numonly="1">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_squad>
+				<caption_group x="400" y="405" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Group -</text>
+				</caption_group>
+				<edit_box_group x="480" y="405" width="30" height="25" numonly="1">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_group>
+				<caption_health x="140" y="440" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Здоровье - </text>
+				</caption_health>
+				<edit_box_health x="220" y="440" width="30" height="25" numonly="1">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_health>
+				<caption_money x="270" y="440" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Деньги - </text>
+				</caption_money>
+				<edit_box_money x="350" y="440" width="30" height="25" numonly="1">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_money>
+				<caption_visual x="140" y="475" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Визуал - </text>
+				</caption_visual>
+				<edit_box_visual x="250" y="475" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_visual>
+				<list_visual x="140" y="510" width="270" height="100" item_height="24" always_show_scroll="1">
+					<font font="letterica16" r="216" g="186" b="140" />
+				</list_visual>
+				<frame_list2 x="140" y="510" width="270" height="100">
+					<texture>ui\ui_frame_01</texture>
+				</frame_list2>
+			</stalker>
+			<smart>
+				<caption_stay x="140" y="335" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Stay - </text>
+				</caption_stay>
+				<edit_box_stay x="250" y="335" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_stay>
+				<caption_respawn x="140" y="370" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Respawn - </text>
+				</caption_respawn>
+				<edit_box_respawn x="250" y="370" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_respawn>
+				<caption_cond x="140" y="405" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Condition - </text>
+				</caption_cond>
+				<edit_box_cond x="250" y="405" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_cond>
+				<caption_squad x="140" y="440" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Squad -</text>
+				</caption_squad>
+				<edit_box_squad x="230" y="440" width="30" height="25" numonly="1">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_squad>
+				<caption_groups x="300" y="440" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Groups -</text>
+				</caption_groups>
+				<edit_box_groups x="380" y="440" width="30" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_groups>
+				<caption_communities x="140" y="475" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Communities - </text>
+				</caption_communities>
+				<edit_box_communities x="250" y="475" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_communities>
+				<caption_idle x="140" y="510" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Idle - </text>
+				</caption_idle>
+				<edit_box_idle x="250" y="510" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_idle>
+				<caption_present x="140" y="545" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Present - </text>
+				</caption_present>
+				<edit_box_present x="250" y="545" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_present>
+				<caption_radius x="140" y="580" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Radius - </text>
+				</caption_radius>
+				<edit_box_radius x="250" y="580" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_radius>
+			</smart>
+			<respawn>
+				<caption_conditions x="140" y="405" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Conditions - </text>
+				</caption_conditions>
+				<edit_box_conditions x="250" y="405" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_conditions>
+				<spawn_once x="140" y="300" width="243" height="21">
+					<text font="letterica16" r="215" g="195" b="170">Spawn once - </text>
+				</spawn_once>
+				<item_spawn x="140" y="510" width="243" height="21">
+					<text font="letterica16" r="215" g="195" b="170">Item spawn - </text>
+				</item_spawn>
+				<caption_min_count x="140" y="335" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Min count -</text>
+				</caption_min_count>
+				<edit_box_min_count x="220" y="335" width="30" height="25" numonly="1">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_min_count>
+				<caption_max_count x="270" y="335" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Max count -</text>
+				</caption_max_count>
+				<edit_box_max_count x="350" y="335" width="30" height="25" numonly="1">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_max_count>
+				<caption_max_spawn x="400" y="335" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Max spawn -</text>
+				</caption_max_spawn>
+				<edit_box_max_spawn x="480" y="335" width="30" height="25" numonly="1">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_max_spawn>
+				<caption_respawn_radius x="140" y="440" width="50" height="25">
+					<text font="letterica16" r="255" g="255" b="0">Respawn radius - </text>
+				</caption_respawn_radius>
+				<edit_box_respawn_radius x="250" y="440" width="350" height="25">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_respawn_radius>
+			</respawn>
+			<way>
+				<caption_flag_pre x="225" y="267" width="30" height="25" align="r">
+					<text font="letterica16" r="255" g="255" b="0">0x</text>
+				</caption_flag_pre>
+			</way>
+			<anom>
+				<edit_box_power x="250" y="405" width="350" height="25" float="1">
+					<texture>ui_linetext_e</texture>
+					<text font="letterica16" r="240" g="217" b="182"/>
+				</edit_box_power>
+			</anom>
+		</log_checker_full>
+		
+		<log_checker_settings>
+			<background x="0" y="0" width="260" height="2300" stretch="1">
+				<texture x="0" y="0" width="350" height="2300">ui\ui_dg_inventory</texture>
+			</background>
+			<check_mouseinvert x="20" y="55" width="143" height="21">
+				<text font="letterica16" r="215" g="195" b="170">ui_mm_invert_mouse</text>
+			</check_mouseinvert>
+		</log_checker_settings>
+	</ui_log_checker>

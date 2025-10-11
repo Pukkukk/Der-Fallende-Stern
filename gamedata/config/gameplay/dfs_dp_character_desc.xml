@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+
+<xml>
+<!-- ***********************************************************************************
+	 ************************* ПЕРСОНАЖИ КВЕСТА "ПРИНЦИП ДОМИНО" ***********************
+	 ******************************************************************************* -->
+	 
+	 <!-- ************************* ДО БАРЬЕРА *********************************** -->
+	 
+	 	<specific_character id="dominoes_principle_stalker_1" team_default = "1">
+		<name>GENERATE_NAME_bandit</name>
+		<icon>ui_npc_u_stalker_bandit_3</icon>
+		<map_icon x="3" y="2"></map_icon>
+		<bio>esc_bandit_novice_bio</bio>
+	
+		<class>dominoes_principle_stalker_1</class>
+		<community>ps_bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		
+		<rank>125</rank>
+		<reputation>-126</reputation>
+		
+		<snd_config>characters_voice\human_02\bandit\</snd_config>
+		<crouch_type>1</crouch_type>
+
+		<visual>actors\bandit\stalker_bandit_3</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_fmj = 1 \n
+			wpn_bm16 \n
+			ammo_12x70_buck = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml"	\n	
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"	
+		</supplies>
+
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"						
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_2" team_default = "1">
+		<name>GENERATE_NAME_bandit</name>
+		<icon>ui_npc_u_stalker_bandit_4</icon>
+		<map_icon x="3" y="2"></map_icon>
+		<bio>esc_bandit_novice_bio</bio>
+		
+		<class>dominoes_principle_stalker_2</class>
+		<community>ps_bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		
+		<rank>124</rank>
+		<reputation>-73</reputation>
+		
+		<snd_config>characters_voice\human_02\bandit\</snd_config>
+		<crouch_type>1</crouch_type>
+
+		<visual>actors\bandit\stalker_bandit_4</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_fmj = 1 \n
+			wpn_stg44 \n
+			ammo_7.92x33 = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml"	\n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"		
+		</supplies>
+
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"						
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_3" team_default = "1">
+		<name>GENERATE_NAME_bandit</name>
+		<icon>ui_npc_u_stalker_bandit_5</icon>
+		<map_icon x="3" y="2"></map_icon>
+		<bio>esc_bandit_novice_bio</bio>
+				
+		<class>dominoes_principle_stalker_3</class>
+		<community>ps_bandit</community> <terrain_sect>stalker_bandit_terrain</terrain_sect>
+		
+		<rank>133</rank>
+		<reputation>-100</reputation>
+		
+		<snd_config>characters_voice\human_02\bandit\</snd_config>
+		<crouch_type>1</crouch_type>
+
+		<visual>actors\bandit\stalker_bandit_5</visual>
+		<supplies>
+			[spawn] \n
+			wpn_tt33 \n
+			wpn_ppsh \n
+			ammo_7.62x25_p = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"			
+		</supplies>
+
+#include "gameplay\character_criticals_3.xml"
+#include "gameplay\character_dialogs.xml"						
+	</specific_character>
+	
+	
+	<specific_character id="dominoes_principle_stalker_4" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_neytral_hood_uzor</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>gar_stalker_regular_bio</bio>
+
+		<class>dominoes_principle_stalker_4</class>
+		<community>ps_stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		
+		<rank>423</rank>
+		<reputation>20</reputation>
+		<money min="600" max="2000" infinitive="0"/>
+		
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+		
+		<visual>actors\neytral\stalker_neytral_hood_uzor</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_pmm = 1 \n
+			wpn_toz34 \n
+			ammo_12x70_buck = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"
+		</supplies>
+				
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_5" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_neytral_balon_8</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>gar_stalker_regular_bio</bio>
+
+		<class>dominoes_principle_stalker_5</class>
+		<community>ps_stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		
+		<rank>354</rank>
+		<reputation>-11</reputation>
+		<money min="600" max="2000" infinitive="0"/>
+		
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\neytral\stalker_neytral_balon_8</visual>
+		
+		<supplies>
+			[spawn] \n
+			wpn_hpsa \n
+			wpn_mp40 \n
+			ammo_9x19_fmj = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"
+		</supplies>
+				
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_6" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_neytral_hood_2</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>gar_stalker_regular_bio</bio>
+
+		<class>dominoes_principle_stalker_6</class>
+		<community>ps_stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		
+		<rank>515</rank>
+		<reputation>14</reputation>
+		<money min="600" max="2000" infinitive="0"/>
+		
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+		<visual>actors\neytral\stalker_neytral_hood_2</visual>
+
+		<supplies>
+			[spawn] \n
+			wpn_pb \n
+			ammo_9x18_fmj = 1 \n
+			wpn_vepr \n
+			ammo_12x70_buck = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"
+		</supplies>
+
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_7" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_neytral_hood_2</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>gar_stalker_regular_bio</bio>
+
+		<class>dominoes_principle_stalker_7</class>
+		<community>ps_stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		
+		<rank>546</rank>
+		<reputation>1</reputation>
+		<money min="600" max="2000" infinitive="0"/>
+		
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<visual>actors\neytral\stalker_neytral_hood_2</visual>
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_fmj = 1 \n
+			wpn_ak74u \n
+			ammo_5.45x39_ap = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"
+		</supplies>
+
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+	
+	<specific_character id="dominoes_principle_stalker_8" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_neytral_balon_8</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>gar_stalker_regular_bio</bio>
+
+		<class>dominoes_principle_stalker_8</class>
+		<community>ps_stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		
+		<rank>447</rank>
+		<reputation>-15</reputation>
+		<money min="600" max="2000" infinitive="0"/>
+		
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+		
+		<visual>actors\neytral\stalker_neytral_balon_8</visual>
+		
+		<supplies>
+			[spawn] \n
+			wpn_pm \n
+			ammo_9x18_fmj = 1 \n
+			wpn_wincheaster1300 \n
+			ammo_12x70_buck \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"
+		</supplies>
+
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 <!-- ************************* ЗА БАРЬЕРОМ ********************************** -->
+	 
+	 <specific_character id="dominoes_principle_stalker_9" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_sv_hood_9</icon>
+		<map_icon x="5" y="0"></map_icon>
+		<bio>mil_Svoboda_specnaz_bio</bio>
+
+        <snd_config>characters_voice\human_03\freedom\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<class>dominoes_principle_stalker_9</class>
+		<community>ps_freedom</community> <terrain_sect>stalker_freedom_terrain</terrain_sect>
+
+		<rank>679</rank>
+		<reputation>110</reputation>
+
+		<visual>actors\svoboda\stalker_sv_hood_9</visual>
+		<supplies>
+			[spawn] \n
+			wpn_usp  \n
+			ammo_11.43x23_hydro = 1 \n
+			wpn_sig550 = 1 \n
+			ammo_5.56x45_ap = 1 \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"			
+		</supplies>
+		
+#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+	
+	<specific_character id="dominoes_principle_stalker_10" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_sv_rukzak_1_1</icon>
+		<map_icon x="5" y="0"></map_icon>
+		<bio>mil_Svoboda_regular_bio</bio>
+
+        <snd_config>characters_voice\human_01\freedom\</snd_config>
+		<crouch_type>-1</crouch_type>
+		
+		<class>dominoes_principle_stalker_10</class>
+		<community>ps_freedom</community> <terrain_sect>stalker_freedom_terrain</terrain_sect>
+		
+		<rank>368</rank>
+		<reputation>74</reputation>
+
+		<visual>actors\svoboda\stalker_sv_rukzak_1_1</visual>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_lr300 \n
+			ammo_5.56x45_ss190 = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"			
+		</supplies>
+		
+#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	
+	<specific_character id="dominoes_principle_stalker_11" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_sv_rukzak_3_1</icon>
+		<map_icon x="5" y="0"></map_icon>
+		<bio>mil_Svoboda_sniper_bio</bio>
+
+        <snd_config>characters_voice\human_01\freedom\</snd_config>
+		<crouch_type>-1</crouch_type>
+		
+		<class>dominoes_principle_stalker_11</class>
+		<community>ps_freedom</community> <terrain_sect>stalker_freedom_terrain</terrain_sect>
+
+		<rank>560</rank>
+		<reputation>81</reputation>
+
+		<visual>actors\svoboda\stalker_sv_rukzak_3_1</visual>
+		<supplies>
+			[spawn] \n
+			wpn_sig220 \n
+			ammo_11.43x23_hydro = 1 \n
+            wpn_svu \n
+            ammo_7.62x54_ap = 1 \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"				
+		</supplies>
+
+#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+	
+	
+	<specific_character id="dominoes_principle_stalker_12" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_sv_rukzak_1_1</icon>
+		<map_icon x="5" y="0"></map_icon>
+		<bio>mil_Svoboda_master_bio</bio>
+		
+		<class>dominoes_principle_stalker_12</class>
+		<community>ps_freedom</community> <terrain_sect>stalker_freedom_terrain</terrain_sect>
+
+        <snd_config>characters_voice\human_03\freedom\</snd_config>
+		<crouch_type>0</crouch_type>
+		
+		<rank>930</rank>
+		<reputation>126</reputation>
+
+		<visual>actors\svoboda\stalker_sv_rukzak_1_1</visual>
+		<supplies>
+			[spawn] \n
+			wpn_usp  \n
+			ammo_11.43x23_hydro = 1 \n
+			wpn_g36 \n
+			ammo_5.56x45_ap = 1 \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"			
+		</supplies>
+		
+#include "gameplay\character_criticals_5.xml"
+#include "gameplay\character_dialogs.xml"			
+	</specific_character>
+	
+	<specific_character id="dominoes_principle_stalker_13" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_antigas</icon>
+		<map_icon x="4" y="0"></map_icon>
+		<bio>mil_Dolg_specnaz_bio</bio>
+
+		<class>dominoes_principle_stalker_13</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+
+		<rank>720</rank>
+		<reputation>96</reputation>
+
+        <snd_config>characters_voice\human_03\dolg\</snd_config>
+  		<crouch_type>0</crouch_type>
+
+        <panic_threshold>0.0</panic_threshold>
+
+		<visual>actors\dolg\stalker_do_antigas</visual>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_pbp = 1 \n
+			wpn_groza \n
+			ammo_9x39_sp5 = 1 \n	
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"				
+		</supplies>
+		
+#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_dialogs.xml"			
+	</specific_character>
+	
+	<specific_character id="dominoes_principle_stalker_14" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_ki_antigas</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>mil_Killer_specnaz_bio</bio>
+		
+		<class>dominoes_principle_stalker_14</class>
+		<community>ps_killer</community> <terrain_sect>stalker_killer_terrain</terrain_sect>
+
+        <snd_config>characters_voice\human_03\killer\</snd_config>
+  		<crouch_type>-1</crouch_type>
+		<rank>740</rank>
+		<reputation>-86</reputation>
+
+		<visual>actors\killer\stalker_ki_antigas</visual>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_pbp = 1 \n
+			wpn_vepr \n
+			ammo_12x70_buck = 1 \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"	
+		</supplies>
+		
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"					
+	</specific_character>
+
+
+	<specific_character id="dominoes_principle_stalker_15" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_ki_mask</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>mil_killer_sniper_bio</bio>
+
+        <snd_config>characters_voice\human_03\killer\</snd_config>
+  		<crouch_type>-1</crouch_type>
+		
+		<class>dominoes_principle_stalker_15</class>
+		<community>ps_killer</community> <terrain_sect>stalker_killer_terrain</terrain_sect>
+
+		<rank>820</rank>
+		<reputation>-102</reputation>
+
+		<visual>actors\killer\stalker_ki_mask</visual>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_pbp = 1 \n
+			wpn_l85 \n
+			ammo_5.56x45_ap = 1 \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"	
+		</supplies>
+		
+#include "gameplay\character_criticals_4.xml"
+	#include "gameplay\character_dialogs.xml"				
+	</specific_character>
+
+
+	<specific_character id="dominoes_principle_stalker_16" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_ki_exoskeleton</icon>
+		<map_icon x="2" y="0"></map_icon>
+		<bio>mil_killer_master_bio</bio>
+
+        <snd_config>characters_voice\human_03\killer\</snd_config>
+  		<crouch_type>-1</crouch_type>		
+		
+		<class>dominoes_principle_stalker_16</class>
+		<community>ps_killer</community> <terrain_sect>stalker_killer_terrain</terrain_sect>
+
+		
+		<rank>913</rank>
+		<reputation>-123</reputation>
+
+		<visual>actors\killer\stalker_ki_exoskeleton</visual>
+		<supplies>
+			[spawn] \n
+			wpn_usp \n
+			ammo_11.43x23_hydro = 1 \n
+			wpn_lr300 \n
+			ammo_5.56x45_ap = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"	
+		</supplies>
+		
+#include "gameplay\character_criticals_2.xml"
+	#include "gameplay\character_dialogs.xml"
+
+	</specific_character>
+	
+	<specific_character id="dominoes_principle_stalker_17" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_neytral_exoskeleton</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>mil_Stalker_master_bio</bio>
+
+		<class>dominoes_principle_stalker_17</class>
+		<community>ps_stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+		
+		<rank>924</rank>
+		<reputation>19</reputation>
+
+        <snd_config>characters_voice\human_03\stalker\</snd_config>
+  		<crouch_type>0</crouch_type>
+
+		<visual>actors\neytral\stalker_neytral_exoskeleton</visual>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_val_m1 \n
+			ammo_9x39_sp5 = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"	
+		</supplies>
+		
+#include "gameplay\character_criticals_2.xml"
+#include "gameplay\character_dialogs.xml"						
+	</specific_character>
+ 
+ 
+	<specific_character id="dominoes_principle_stalker_18" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_neytral_nauchniy</icon>
+		<map_icon x="1" y="0"></map_icon>
+		<bio>mil_Stalker_veteran_bio</bio>
+
+		<class>dominoes_principle_stalker_18</class>
+		<community>ps_stalker</community> <terrain_sect>stalker_terrain</terrain_sect>
+			
+		<rank>856</rank>
+		<reputation>-2</reputation>
+
+        <snd_config>characters_voice\human_03\stalker\</snd_config>
+  		<crouch_type>-1</crouch_type>
+
+		<visual>actors\neytral\stalker_neytral_nauchniy</visual>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_lr300 \n
+			ammo_5.56x45_ap = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"	
+		</supplies>
+
+#include "gameplay\character_criticals_4.xml"
+#include "gameplay\character_dialogs.xml"			
+	</specific_character>
+	
+	<specific_character id="dominoes_principle_stalker_19" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_u_stalker_mo_hood_9</icon>
+    <map_icon x="3" y="0"></map_icon>
+    <bio>mil_Monolit_regular_bio</bio>
+
+	<class>dominoes_principle_stalker_19</class>
+    <community>ps_exmon</community>
+
+    <snd_config>characters_voice\human_03\monolith\</snd_config>
+  	<crouch_type>-1</crouch_type>
+
+    <rank>340</rank>
+    <reputation>-186</reputation>
+
+    <visual>actors\monolit\stalker_mo_hood_9</visual>
+    <supplies>
+      [spawn] \n
+      wpn_fort_m1 \n
+      ammo_9x18_fmj = 1 \n
+      wpn_ak74 \n
+      ammo_5.45x39_ap = 1 \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"	
+    </supplies>
+
+#include "gameplay\character_criticals_1.xml"
+	
+		<start_dialog>hello_dialog</start_dialog>
+  </specific_character>
+
+
+  <specific_character id="dominoes_principle_stalker_20" team_default = "1">
+    <name>GENERATE_NAME_stalker</name>
+    <icon>ui_npc_u_stalker_mo_exo</icon>
+    <map_icon x="3" y="0"></map_icon>
+    <bio>mil_Monolit_master_bio</bio>
+
+    <class>dominoes_principle_stalker_20</class>
+    <community>ps_exmon</community>
+
+
+    <rank>934</rank>
+    <reputation>-564</reputation>
+
+    <panic_threshold>0.0</panic_threshold>
+
+    <snd_config>characters_voice\human_03\monolith\</snd_config>
+ 	<crouch_type>0</crouch_type>
+
+    <visual>actors\monolit\stalker_mo_exo</visual>
+    <supplies>
+      [spawn] \n
+      wpn_fort \n
+      ammo_9x18_fmj = 1 \n
+	  wpn_rpk \n
+	ammo_5.45x39_fmj = 1 \n
+#include "gameplay\character_items.xml" \n
+#include "gameplay\character_drugs.xml" \n
+#include "gameplay\character_food.xml"	
+    </supplies>
+
+#include "gameplay\character_criticals_1.xml"
+	
+		<start_dialog>hello_dialog</start_dialog>
+		<actor_dialog>esc_stalker_talk_level</actor_dialog>
+  </specific_character>
+  
+  <specific_character id="dominoes_principle_stalker_21" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_neytral_hood_uzor</icon>
+		<map_icon x="0" y="0"></map_icon>
+		<bio>sim_stalker_general_bio</bio>
+
+		<class>dominoes_principle_stalker_21</class>
+		<community>ps_exmon</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<money min="600" max="2000" infinitive="0"></money>
+		
+		<rank>324</rank>
+		<reputation>0</reputation>
+ 
+		<visual>actors\neytral\stalker_neytral_hood_uzor</visual>
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<supplies>
+			[spawn] \n
+			wpn_ak74 \n
+			ammo_5.45x39_fmj = 1 \n
+		</supplies>
+
+#include "gameplay\character_criticals_4.xml"
+
+		<start_dialog>bar_bar_visitors_7_start</start_dialog>
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_22" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_neytral_hood_2</icon>
+		<map_icon x="0" y="0"></map_icon>
+		<bio>sim_stalker_general_bio</bio>
+
+		<class>dominoes_principle_stalker_22</class>
+		<community>ps_exmon</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<money min="600" max="2000" infinitive="0"></money>
+		
+		<rank>410</rank>
+		<reputation>0</reputation>
+ 
+		<visual>actors\neytral\stalker_neytral_hood_2</visual>
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<supplies>
+			[spawn] \n
+			wpn_ak74 \n
+			ammo_5.45x39_fmj = 1 \n
+		</supplies>
+
+#include "gameplay\character_criticals_4.xml"
+
+		<start_dialog>bar_bar_visitors_8_start</start_dialog>
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_23" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_mask_1</icon>
+		<map_icon x="0" y="0"></map_icon>
+		<bio>sim_dolg_regular_bio</bio>
+
+		<class>dominoes_principle_stalker_23</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<money min="200" max="600" infinitive="0"></money>
+		
+		<rank>307</rank>
+		<reputation>0</reputation>
+ 
+		<visual>actors\dolg\stalker_do_mask_1</visual>
+		<snd_config>characters_voice\human_01\dolg\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_abakan \n
+			ammo_5.45x39_fmj = 1 \n
+		</supplies>
+		
+#include "gameplay\character_criticals_6.xml"
+
+		<start_dialog>bar_bar_visitors_9_start</start_dialog>
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_24" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_bandit_veteran</icon>
+		<map_icon x="0" y="0"></map_icon>
+		<bio>sim_bandit_general_bio</bio>
+
+		<class>dominoes_principle_stalker_24</class>
+		<community>ps_exmon</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<money min="600" max="2000" infinitive="0"></money>
+		
+		<rank>376</rank>
+		<reputation>0</reputation>
+ 
+		<visual>actors\bandit\stalker_bandit_veteran</visual>
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>1</crouch_type>
+
+		<supplies>
+			[spawn] \n
+			wpn_val \n
+			ammo_9x39_pab9 = 1 \n
+		</supplies>
+
+#include "gameplay\character_criticals_4.xml"
+
+		<start_dialog>bar_bar_visitors_10_start</start_dialog>
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_25" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_ki_head_1</icon>
+		<map_icon x="0" y="0"></map_icon>
+		<bio>sim_killer_veteran_bio</bio>
+
+		<class>dominoes_principle_stalker_25</class>
+		<community>ps_exmon</community> <terrain_sect>stalker_terrain</terrain_sect>
+		<money min="600" max="2000" infinitive="0"></money>
+		
+		<rank>423</rank>
+		<reputation>0</reputation>
+ 
+		<visual>actors\killer\stalker_ki_head_1</visual>
+		<snd_config>characters_voice\human_01\stalker\</snd_config>
+		<crouch_type>-1</crouch_type>
+
+		<supplies>
+			[spawn] \n
+			wpn_lr300=1, scope \n
+			ammo_5.56x45_ss190 = 1 \n
+		</supplies>
+		
+#include "gameplay\character_criticals_4.xml"
+
+		<start_dialog>bar_bar_visitors_13_start</start_dialog>
+	</specific_character>
+	
+	<specific_character id="dominoes_principle_stalker_26" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_mask</icon>
+		<map_icon x="4" y="0"></map_icon>
+		<bio>sim_dolg_regular_bio</bio>
+
+		<class>dominoes_principle_stalker_26</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<money min="200" max="600" infinitive="0"></money>
+		
+		<rank>310</rank>
+		<reputation>20</reputation>
+
+		<panic_threshold>0.0</panic_threshold>
+
+		<visual>actors\dolg\stalker_do_mask</visual>
+		<snd_config>characters_voice\human_01\dolg\</snd_config>
+		<crouch_type>0</crouch_type>
+
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_abakan \n
+			ammo_5.45x39_fmj = 1 \n
+			device_torch \n			
+#include "gameplay\character_items.xml"\n
+#include "gameplay\character_food.xml" \n
+#include "gameplay\character_drugs.xml"
+		</supplies>
+
+#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_dialogs.xml"
+		<actor_dialog>bar_dolg_base_guard_acces</actor_dialog>	
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_27" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_balon_8</icon>
+		<map_icon x="4" y="0"></map_icon>
+		<bio>sim_dolg_regular_bio</bio>
+
+		<class>dominoes_principle_stalker_27</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<money min="600" max="2000" infinitive="0"></money>
+		
+		<rank>311</rank>
+		<reputation>20</reputation>
+
+		<visual>actors\dolg\stalker_do_balon_8</visual>
+		<snd_config>characters_voice\human_01\dolg\</snd_config>
+		<crouch_type>0</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_abakan_m2 \n
+			ammo_5.45x39_fmj = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml"\n
+#include "gameplay\character_food.xml" \n
+#include "gameplay\character_drugs.xml"
+		</supplies>
+
+#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_dialogs.xml"		
+		<actor_dialog>bar_dolg_base_guard_acces</actor_dialog>
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_28" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_mask_1</icon>
+		<map_icon x="4" y="0"></map_icon>
+		<bio>sim_dolg_regular_bio</bio>
+		
+		<class>dominoes_principle_stalker_28</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<money min="200" max="600" infinitive="0"></money>
+		
+		<rank>340</rank>
+		<reputation>20</reputation>
+
+		<visual>actors\dolg\stalker_do_mask_1</visual>
+		<snd_config>characters_voice\human_01\dolg\</snd_config>
+		<crouch_type>0</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_abakan \n
+			ammo_5.45x39_fmj = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n			
+#include "gameplay\character_food.xml" \n
+#include "gameplay\character_drugs.xml"
+		</supplies>
+
+#include "gameplay\character_criticals_6.xml"
+#include "gameplay\character_dialogs.xml"
+		<actor_dialog>bar_dolg_base_guard_acces</actor_dialog>
+	</specific_character>
+
+
+	<specific_character id="dominoes_principle_stalker_29" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_balon_8</icon>
+		<map_icon x="4" y="0"></map_icon>
+		<bio>sim_dolg_sniper_bio</bio>
+
+		<class>dominoes_principle_stalker_29</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<money min="600" max="2000" infinitive="0"></money>
+		
+		<rank>352</rank>
+		<reputation>20</reputation>
+
+		<visual>actors\dolg\stalker_do_balon_8</visual>
+		<snd_config>characters_voice\human_01\dolg\</snd_config>
+		<crouch_type>0</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_l85_m2 \n
+			ammo_5.56x45_ap = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml" \n	
+#include "gameplay\character_food.xml" \n
+#include "gameplay\character_drugs.xml"
+		</supplies>
+
+#include "gameplay\character_criticals_6.xml"				
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_30" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_mask_1</icon>
+		<map_icon x="4" y="0"></map_icon>
+		<bio>sim_dolg_sniper_bio</bio>
+
+		<class>dominoes_principle_stalker_30</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<money min="600" max="2000" infinitive="0"></money>
+		
+		<rank>421</rank>
+		<reputation>20</reputation>
+
+		<visual>actors\dolg\stalker_do_mask_1</visual>
+		<snd_config>characters_voice\human_01\dolg\</snd_config>
+		<crouch_type>0</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_l85 \n
+			ammo_5.56x45_ap = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml"\n		
+#include "gameplay\character_food.xml" \n
+#include "gameplay\character_drugs.xml"
+		</supplies>
+
+#include "gameplay\character_criticals_6.xml"				
+#include "gameplay\character_dialogs.xml"
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_31" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_mask</icon>
+		<map_icon x="4" y="0"></map_icon>
+		<bio>sim_dolg_sniper_bio</bio>
+
+		<class>dominoes_principle_stalker_31</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<money min="600" max="2000" infinitive="0"></money>
+		
+		<rank>430</rank>
+		<reputation>20</reputation>
+
+		<visual>actors\dolg\stalker_do_mask</visual>
+		<snd_config>characters_voice\human_01\dolg\</snd_config>
+		<crouch_type>0</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_l85 \n
+			ammo_5.56x45_ap = 1 \n
+			device_torch \n
+#include "gameplay\character_items.xml"	\n
+#include "gameplay\character_food.xml" \n
+#include "gameplay\character_drugs.xml"
+		</supplies>
+
+#include "gameplay\character_criticals_6.xml"				
+#include "gameplay\character_dialogs.xml"
+		</specific_character>
+
+
+	<specific_character id="dominoes_principle_stalker_32" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_nauchniy</icon>
+		<map_icon x="4" y="0"></map_icon>
+		<bio>sim_dolg_veteran_bio</bio>
+
+		<class>dominoes_principle_stalker_32</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<money min="600" max="2000" infinitive="0"></money>
+		
+		<rank>580</rank>
+		<reputation>40</reputation>
+
+		<visual>actors\dolg\stalker_do_nauchniy</visual>
+		<snd_config>characters_voice\human_03\dolg\</snd_config>
+		<crouch_type>0</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_groza_m1 \n
+			ammo_9x39_ap = 1 \n	
+#include "gameplay\character_items.xml"	\n
+#include "gameplay\character_food.xml" \n
+#include "gameplay\character_drugs.xml"
+		</supplies>		
+
+#include "gameplay\character_criticals_6.xml"			
+#include "gameplay\character_dialogs.xml"
+		
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_33" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_antigas</icon>
+		<map_icon x="4" y="0"></map_icon>
+		<bio>sim_dolg_veteran_bio</bio>
+
+		<class>dominoes_principle_stalker_33</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<money min="2000" max="5000" infinitive="0"></money>
+
+		<rank>624</rank>
+		<reputation>40</reputation>
+
+		<visual>actors\dolg\stalker_do_antigas</visual>
+		<snd_config>characters_voice\human_03\dolg\</snd_config>
+		<crouch_type>0</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_groza \n
+			ammo_9x39_ap = 1 \n	
+#include "gameplay\character_items.xml"	\n
+#include "gameplay\character_food.xml" \n
+#include "gameplay\character_drugs.xml"
+		</supplies>		
+
+#include "gameplay\character_criticals_6.xml"			
+#include "gameplay\character_dialogs.xml"
+		
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_34" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_nauchniy</icon>
+		<map_icon x="4" y="0"></map_icon>
+		<bio>sim_dolg_veteran_bio</bio>
+
+		<class>dominoes_principle_stalker_34</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<money min="2000" max="5000" infinitive="0"></money>
+
+		<rank>634</rank>
+		<reputation>40</reputation>
+
+		<visual>actors\dolg\stalker_do_nauchniy</visual>
+		<snd_config>characters_voice\human_03\dolg\</snd_config>
+		<crouch_type>0</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_pbp = 1 \n
+			wpn_groza \n
+			ammo_9x39_ap = 1 \n
+			ammo_9x39_sp5 = 1 \n
+			ammo_vog-25p = 2 \n
+#include "gameplay\character_items.xml"	\n
+#include "gameplay\character_food.xml" \n
+#include "gameplay\character_drugs.xml"
+		</supplies>		
+
+#include "gameplay\character_criticals_6.xml"			
+#include "gameplay\character_dialogs.xml"
+		
+	</specific_character>
+
+	<specific_character id="dominoes_principle_stalker_35" team_default = "1">
+		<name>GENERATE_NAME_stalker</name>
+		<icon>ui_npc_u_stalker_do_antigas</icon>
+		<map_icon x="4" y="0"></map_icon>
+		<bio>sim_dolg_veteran_bio</bio>
+
+		<class>dominoes_principle_stalker_35</class>
+		<community>ps_dolg</community> <terrain_sect>stalker_dolg_terrain</terrain_sect>
+		<money min="2000" max="5000" infinitive="0"></money>
+
+		<rank>713</rank>
+		<reputation>40</reputation>
+
+		<visual>actors\dolg\stalker_do_antigas</visual>
+		<snd_config>characters_voice\human_03\dolg\</snd_config>
+		<crouch_type>0</crouch_type>
+		<supplies>
+			[spawn] \n
+			wpn_walther \n
+			ammo_9x19_fmj = 1 \n
+			wpn_groza \n
+			ammo_9x39_ap = 1 \n	
+#include "gameplay\character_items.xml" \n	
+#include "gameplay\character_food.xml" \n
+#include "gameplay\character_drugs.xml"
+		</supplies>		
+
+#include "gameplay\character_criticals_6.xml"			
+#include "gameplay\character_dialogs.xml"
+		
+	</specific_character>
+
+<!--
+ps_stalker
+ps_dolg
+ps_freedom
+ps_exmon
+ps_bandit
+ps_killer    -->
+</xml>

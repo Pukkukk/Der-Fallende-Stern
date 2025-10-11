@@ -1,0 +1,281 @@
+;;;;;;;;;;;;;;;;;;;;  ольт ћ4a1 ;;;;;;;;;;;;;;;;;;;
+#include "huds.ltx"
+;--------------------------------------------------
+[wpn_m4_taktik]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn                   	= "weapons\m4_taktik"					; option for Level Editor
+$npc			 			= on				; option for Level Editor
+$prefetch 		 			= 8
+scheduled                	= off              ; option for ALife Simulator
+cform                    	= skeleton
+class                    	= WP_AK74
+min_radius               	= 0
+max_radius               	= 50
+description					= enc_wpn-m4_a1
+dont_interrupt_shot_anm = true ;Ќе прерывать анимацию выстрела чтобы гильза успела вылететь, т.к. в гансе гильзы €вл€ютс€ частью анимации выстрела
+is_gunslinger_weapon = true ;—пециальный флаг чтобы двиг понимал что это ствол из Gunslinger Mod и к нему надо применить фикс создани€ физ. оболочки дл€ избежани€ ошибок с этим св€занных.	
+
+hidden_bones = laser, grip, s_kemper, s_eot, s_aimpoint, s_acog, s_pn23, s_leupold, s_specter, s_susat, mag_60, mag_45
+ef_main_weapon_type			= 2
+ef_weapon_type				= 6
+;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0		   ; во сколько раз увеличиваетс€ eye_range 
+holder_fov_modifier	= 0.7              ; во сколько раз увеличиваетс€ eye_fov
+;-----------------------------------------------------------------------------------
+
+cost					= 8000
+weapon_class			 	= assault_rifle
+
+ammo_limit		 		= 210
+ammo_current		 		= 30
+ammo_elapsed		 		= 30
+
+ammo_mag_size		 		= 30
+ammo_class		 		= ammo_5.56x45_ss190, ammo_5.56x45_ap
+grenade_class				= ammo_m209
+fire_modes				= 1, -1
+launch_speed                            = 0
+
+hand_dependence		 		= 1
+single_handed				= 0
+
+inv_name				= ars-m4_a1
+inv_name_short				= ars-m4_a1
+inv_weight				= 2.7
+
+inv_grid_width     = 5
+inv_grid_height    = 2
+inv_grid_x         = 24
+inv_grid_y         = 5
+
+kill_msg_x		= 175
+kill_msg_y		= 0
+kill_msg_width		= 82
+kill_msg_height		= 28
+
+slot 			 		= 2		; // secondary
+animation_slot				= 2	;8		; type of the animation that will be used
+
+;-----------------------------------------------------------------------------------
+;базова€ дисперси€
+fire_dispersion_base		= 0.20  ; угол (в градусах) базовой дисперсии оружи€ (оружи€ зажатого в тисках)
+control_inertion_factor		= 1.2f
+
+;отдача					
+cam_relax_speed         		= 12.5 	        ;скорость возврата в исходное положение
+cam_dispersion          		= 0.15		;увеличени€ угла (в градусах) с каждым выстрелом
+cam_dispersion_inc			= 0.3		;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac			= 0.9		;ствол будет подыматьс€ на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle				= 10.0	    	;максимальный угол отдачи
+cam_max_angle_horz			= 20.0		;(degree) maximum shot horizontal degree 
+cam_step_angle_horz			= 0.45		;(degree) size of step camera moved in horizontal position while shooting
+					
+fire_dispersion_condition_factor = 5	    	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.004		;веро€тность осечки при максимальном износе 
+misfire_condition_k		= 0.05		
+condition_shot_dec 		= 0.00025  ; увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+direction                	= 0, 0, 1
+
+fire_point               	= 0.0, 0.065, 0.640
+fire_point2                     = 0.0, 0.0115, 0.55
+flame_particles							 = weapons\new_effects\a1_type_ar15
+smoke_particles 						 = weapons\generic_shoot_00
+grenade_flame_particles 				 = weapons\generic_weapon01
+silencer_smoke_particles 				 = weapons\generic_shoot_00
+
+
+shell_point		 		= 0.0, 0.072, 0.100
+shell_dir		 		= 0.0, 1.0, 0.0
+shell_particles	 			= weapons\556x45
+
+; rpm_empty_click 	 	= 200
+
+PDM_disp_base 			= 1.4		
+PDM_disp_vel_factor 		= 1.2		
+PDM_disp_accel_factor 		= 1.2		
+PDM_crouch	 		= 1.0		
+PDM_crouch_no_acc 		= 1.0
+
+;;;;;;; ƒл€ "ѕоследний —талкер"
+hit_power        	= 0.53
+hit_impulse		= 55
+hit_type 			= fire_wound
+fire_distance          	= 350
+bullet_speed		= 880  ; начальна€ скорость пули
+rpm                     = 750
+rpm_empty_click 	 	= 100
+	
+silencer_hit_power       	= 0.5
+silencer_hit_impulse	 	= 43
+silencer_fire_distance   	= 320
+silencer_bullet_speed	 	= 830
+
+use_aim_bullet				= true		;ѕоддерживаетс€ ли перва€ суппер пул€
+time_to_aim				= 1.0	
+
+hud                      	= wpn_m4_guns_hud
+normal                   	= 0, 1, 0
+position                 	= -0.026, -0.135, 0.0
+orientation              	= 0.0, 0.0, 0.0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+strap_position         		= -0.175,-0.18,0.2 ;-0.15,-0.37,0.2			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -10,-5,90       ;-10,-5,10					; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo             	= 1000
+visual                   	= dynamics\weapons\wpn_m4\wpn_m4.ogf
+
+light_color		 		= 0.6,0.5,0.3
+light_range		 		= 5
+light_var_color		 		= 0.05
+light_var_range		 		= 0.1
+light_time 		 		= 0.2
+
+ph_mass			 			= 3
+;cost			 			= 2500
+
+;addons
+scope_status			= 2
+silencer_status			= 2
+grenade_launcher_status		= 2
+
+zoom_enabled			= true
+scope_zoom_factor	    	= 100 ;65
+
+scope_name 				= wpn_addon_scope_susat
+scope_names             =  wpn_addon_scope_eotech, wpn_addon_scope_susat_dusk, wpn_addon_scope_elcan, wpn_addon_scope_susat_night, wpn_addon_scope_susat, wpn_addon_acog
+scope_x                 = 100
+scope_y                 = 100
+
+scope_respawn                                        = wpn_m4_taktik
+scope_respawn_wpn_addon_scope_eotech                 = wpn_m4_eotech
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_m4_susat_dusk
+scope_respawn_wpn_addon_scope_elcan                  = wpn_m4_elcan
+scope_respawn_wpn_addon_scope_susat_night            = wpn_m4_susat_night
+scope_respawn_wpn_addon_scope_susat                  = wpn_m4_susat
+scope_respawn_wpn_addon_acog                         = wpn_m4_acog
+
+silencer_name  				= wpn_addon_silencer
+silencer_x 				= 212
+silencer_y 				= 12
+
+grenade_launcher_name 		        = wpn_addon_grenade_launcher_m203
+grenade_launcher_x 			= 121
+grenade_launcher_y 			= 28
+
+;звуки
+snd_draw		= weapons\sig550\sig550_draw
+snd_holster		= weapons\p90\p90_hide
+snd_shoot		= iwp\m4a1_muzzle_mono1
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\m4\m4_reload
+snd_reload_empty        = weapons\m4\m4_reload_empty
+snd_reload_jammed       = weapons\m4\m4_revival
+snd_reload_jammed_last  = weapons\m4\m4_revival
+snd_shoot_grenade       = weapons\m203\m203_shoot
+snd_reload_grenade      = weapons\m203\m203_reload
+snd_switch              = weapons\m203\m203_activate
+snd_silncer_shot        = iwp\m4a1_silencer_mono
+snd_fire_modes          = weapons\l85\l85_firemode
+snd_tact_item_on        = weapons\l85\l85_lam
+snd_zoom_change = weapons\zoom_change, 0.2 ;звук при изменении зума
+snd_item_on = weapons\headflash_on ;звук включени€ налобного фонар€, пнв
+snd_aim_start = weapons\vss\vss_aim_start
+snd_aim_end = weapons\vss\vss_aim_end
+
+
+;silencer_flame_particles 	= weapons\generic_weapon01
+
+silencer_light_color		= 0.6,0.5,0.3
+silencer_light_range		= 2
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+
+[wpn_m4_eotech]:wpn_m4_taktik
+hidden_bones = laser, grip, s_kemper, s_aimpoint, s_acog, s_pn23, s_leupold, s_specter, s_susat, ironsight, mag_60, mag_45
+hud = wpn_m4_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 82
+scope_y                 = -6
+[wpn_m4_eotech_hud]:wpn_m4_guns_hud
+aim_hud_offset_pos = 0.0,0.0043,0.0
+aim_hud_offset_rot = 0.03,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.0043.0
+aim_hud_offset_rot_16x9 = 0.03,0.0,0.0
+
+
+[wpn_m4_susat_dusk]:wpn_m4_taktik
+hidden_bones = laser, grip, s_kemper, s_eot, s_acog, s_pn23, s_leupold, s_specter, s_susat, ironsight, mag_60, mag_45
+hud = wpn_m4_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 85
+scope_y                 = -10
+[wpn_m4_susat_dusk_hud]:wpn_m4_guns_hud
+aim_hud_offset_pos = 0.0,-0.0176,0.0
+aim_hud_offset_rot = 0.0025,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.0176,0.0
+aim_hud_offset_rot_16x9 = 0.0025,0.0,0.0
+
+
+[wpn_m4_elcan]:wpn_m4_taktik
+hidden_bones = laser, grip, s_kemper, s_eot, s_aimpoint, s_acog, s_pn23, s_leupold, s_susat, ironsight, mag_60, mag_45
+hud = wpn_m4_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 54                 ; offset in inventory icon
+scope_y                 = -7
+[wpn_m4_elcan_hud]:wpn_m4_guns_hud
+aim_hud_offset_pos = 0.0,-0.0205,-0.12
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.0205,-0.12
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000100,-0.061000,-0.040000
+aim_hud_offset_alt_rot = -0.004000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000100,-0.061000,-0.040000
+aim_hud_offset_alt_rot_16x9 = -0.004000,0.000000,0.000000
+
+
+[wpn_m4_susat_night]:wpn_m4_taktik
+hidden_bones = laser, grip, s_kemper, s_eot, s_aimpoint, s_acog, s_leupold, s_specter, s_susat, ironsight, mag_60, mag_45
+hud = wpn_m4_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 44                 ; offset in inventory icon
+scope_y                 = -8
+scope_lense_hud_fov = 0.3
+[wpn_m4_susat_night_hud]:wpn_m4_guns_hud
+aim_hud_offset_pos = 0.0,-0.0415,0.152000
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.0415,0.152000
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[wpn_m4_susat]:wpn_m4_taktik
+hidden_bones = laser, grip, s_kemper, s_eot, s_aimpoint, s_acog, s_pn23, s_leupold, s_specter, ironsight, mag_60, mag_45
+hud = wpn_m4_susat_hud
+scope_name              = wpn_addon_scope_susat 
+use_alt_aim_hud = true
+scope_x              	= 80                 ; offset in inventory icon
+scope_y                 = -8
+[wpn_m4_susat_hud]:wpn_m4_guns_hud
+aim_hud_offset_pos = 0.0,-0.0385,-0.121
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.0385,-0.121
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000100,-0.072000,-0.040000
+aim_hud_offset_alt_rot = -0.004000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000100,-0.072000,-0.040000
+aim_hud_offset_alt_rot_16x9 = -0.004000,0.000000,0.000000
+
+
+[wpn_m4_acog]:wpn_m4_susat
+
+scope_name              = wpn_addon_acog

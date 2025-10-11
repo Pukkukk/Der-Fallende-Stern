@@ -1,0 +1,652 @@
+
+; VSS ================================================================================================================================================
+; ==================================== первая ветка ====================================
+
+
+; 1 ветка
+
+; upgrade 1
+[wpn_groza_545_a1]:wpn_groza_545
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag45_black, mag60, flash, light, grip, laser, foregrip_rail, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler2
+
+scope_names             = wpn_addon_scope_po4x34
+scope_respawn                                        = wpn_groza_545_a1
+scope_respawn_wpn_addon_scope_po4x34                 = wpn_groza_545_po4x34_a1
+
+available_upgrades		= groza_545_upgr2
+installed_upgrades		= groza_545_upgr1
+
+
+
+cost					= 11000
+hud                      	= wpn_groza_545_a1_hud
+[wpn_groza_545_a1_hud]:wpn_groza_545_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag45_black, mag60, flash, light, grip, laser, foregrip_rail, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler2
+
+; upgrade 1 Sights
+
+[wpn_groza_545_po4x34_a1]:wpn_groza_545_a1
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag45_black, mag60, flash, light, grip, laser, foregrip_rail, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler2
+scope_bone = scope5
+hud = wpn_groza_545_a1_po4x34_hud
+scope_name              = wpn_addon_scope_po4x34
+scope_x              	= 80                 ; offset in inventory icon
+scope_y                 = -17
+[wpn_groza_545_a1_po4x34_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag45_black, mag60, flash, light, grip, laser, foregrip_rail, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler2
+aim_hud_offset_pos = 0.0,-0.032,-0.12
+aim_hud_offset_rot = 0.007000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0,-0.032,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+; upgrade 2
+[wpn_groza_545_a2]:wpn_groza_545_a1
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip_rail, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler2
+available_upgrades		= groza_545_upgr3
+installed_upgrades		= groza_545_upgr1, groza_545_upgr2
+
+inv_weight		 		= 2.8
+
+scope_names             = wpn_addon_scope_po4x34
+scope_respawn                                        = wpn_groza_545_a2
+scope_respawn_wpn_addon_scope_po4x34                 = wpn_groza_545_po4x34_a2
+cost					= 12000
+ammo_mag_size		     	= 45
+
+hud                      	= wpn_groza_545_a2_hud
+[wpn_groza_545_a2_hud]:wpn_groza_545_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip_rail, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler2
+
+; upgrade 2 Sights
+
+[wpn_groza_545_po4x34_a2]:wpn_groza_545_a2
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip_rail, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler2
+scope_bone = scope5
+hud = wpn_groza_545_a2_po4x34_hud
+scope_name              = wpn_addon_scope_po4x34
+scope_x              	= 80                 ; offset in inventory icon
+scope_y                 = -17
+[wpn_groza_545_a2_po4x34_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip_rail, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler2
+aim_hud_offset_pos = 0.0,-0.032,-0.12
+aim_hud_offset_rot = 0.007000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0,-0.032,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+
+
+; upgrade 3
+[wpn_groza_545_a3]:wpn_groza_545_a2
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip_rail, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler
+available_upgrades		= groza_545_upgr4
+installed_upgrades		= groza_545_upgr1, groza_545_upgr2, groza_545_upgr3
+
+inv_weight		 		= 2.75
+
+cam_dispersion          = 0.75        ;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc      = 0.45       ;увеличениe cam_dispersion с каждым выстрелом
+zoom_cam_dispersion          = 0.40
+zoom_cam_dispersion_inc      = 0.40
+
+scope_names             = wpn_addon_scope_po4x34
+scope_respawn                                        = wpn_groza_545_a3
+scope_respawn_wpn_addon_scope_po4x34                 = wpn_groza_545_po4x34_a3
+cost					= 13000
+
+hud                      	= wpn_groza_545_a3_hud
+[wpn_groza_545_a3_hud]:wpn_groza_545_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip_rail, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler
+
+; upgrade 3 Sights
+
+
+[wpn_groza_545_po4x34_a3]:wpn_groza_545_a3
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip_rail, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler
+scope_bone = scope5
+hud = wpn_groza_545_a3_po4x34_hud
+scope_name              = wpn_addon_scope_po4x34
+scope_x              	= 80                 ; offset in inventory icon
+scope_y                 = -17
+[wpn_groza_545_a3_po4x34_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip_rail, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler
+aim_hud_offset_pos = 0.0,-0.032,-0.12
+aim_hud_offset_rot = 0.007000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0,-0.032,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+; upgrade 4
+[wpn_groza_545_a4]:wpn_groza_545_a3
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler
+available_upgrades		= groza_545_upgr5
+installed_upgrades		= groza_545_upgr1, groza_545_upgr2, groza_545_upgr3, groza_545_upgr4
+
+
+inv_weight		 		= 2.8
+
+scope_names             = wpn_addon_scope_po4x34,wpn_addon_scope_eotech, wpn_addon_scope_susat_dusk, wpn_addon_scope_elcan, wpn_addon_scope_susat_night
+scope_respawn                                        = wpn_groza_545_a4
+scope_respawn_wpn_addon_scope_po4x34                 = wpn_groza_545_po4x34_a4
+scope_respawn_wpn_addon_scope_eotech                 = wpn_groza_545_eotech_a4
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_groza_545_susat_dusk_a4
+scope_respawn_wpn_addon_scope_elcan                  = wpn_groza_545_elcan_a4
+scope_respawn_wpn_addon_scope_susat_night            = wpn_groza_545_susat_night_a4
+cost					= 14000
+hud                      	= wpn_groza_545_a4_hud
+[wpn_groza_545_a4_hud]:wpn_groza_545_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler
+
+; upgrade 4 Sights
+
+[wpn_groza_545_po4x34_a4]:wpn_groza_545_a4
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler
+scope_bone = scope5
+hud = wpn_groza_545_a4_po4x34_hud
+scope_name              = wpn_addon_scope_po4x34
+scope_x              	= 80                 ; offset in inventory icon
+scope_y                 = -17
+[wpn_groza_545_a4_po4x34_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, flash, light, grip, laser, foregrip, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler
+aim_hud_offset_pos = 0.0,-0.032,-0.12
+aim_hud_offset_rot = 0.007000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0,-0.032,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+[wpn_groza_545_eotech_a4]:wpn_groza_545_a4
+hidden_bones = scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope1
+hud                      			= wpn_groza_545_a4_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 89                 ; offset in inventory icon
+scope_y                 = -6
+[wpn_groza_545_a4_eotech_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = 0.000266,0.004670,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.000266,0.004670,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_aim_origin_offset = 0.015
+inertion_aim_speed = 8
+
+
+[wpn_groza_545_susat_dusk_a4]:wpn_groza_545_a4
+hidden_bones = scope1, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope2
+hud                      			= wpn_groza_545_a4_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 90                ; offset in inventory icon
+scope_y                 = -11
+[wpn_groza_545_a4_susat_dusk_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = 0.000356,0.001420,-0.11
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.000356,0.001420,-0.11
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[wpn_groza_545_elcan_a4]:wpn_groza_545_a4
+hidden_bones = scope1, scope2, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope3
+hud = wpn_groza_545_a4_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 62               ; offset in inventory icon
+scope_y                 = -9
+[wpn_groza_545_a4_elcan_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope4, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = -0.0,-0.00055,-0.12
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0,-0.00055,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000220,-0.038200,0.000000
+aim_hud_offset_alt_rot = 0.000500,-0.000100,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000220,-0.039200,0.000000
+aim_hud_offset_alt_rot_16x9 = 0.002100,0.000000,0.000000
+
+[wpn_groza_545_susat_night_a4]:wpn_groza_545_a4
+hidden_bones = scope1, scope2, scope3, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope4
+hud = wpn_groza_545_a4_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 47                ; offset in inventory icon
+scope_y                 = -8
+scope_lense_hud_fov = 0.2
+[wpn_groza_545_a4_susat_night_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope3, scope5, mag_20, mag45, mag30, mag60, flash, light, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos =  -0.000094,-0.023240,0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.000094,-0.023240,0.1
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+; upgrade 5
+[wpn_groza_545_a5]:wpn_groza_545_a4
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, laser, foregrip, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler
+available_upgrades		= groza_545_upgr6
+installed_upgrades		= groza_545_upgr1, groza_545_upgr2, groza_545_upgr3, groza_545_upgr4, groza_545_upgr5
+
+inv_weight		 		= 3.1
+
+laserdot_world_attach_offset_x = -0.044
+laserdot_world_attach_offset_y = 0.225
+laserdot_world_attach_offset_z = 0.057
+
+laserdot_attach_offset_x = 0.002000
+laserdot_attach_offset_y = 0.003500
+laserdot_attach_offset_z = -0.258500
+
+torch_world_attach_offset_x = 0.055
+torch_world_attach_offset_y = 0.222
+torch_world_attach_offset_z = 0.063
+
+torch_omni_world_attach_offset_x = 0.055
+torch_omni_world_attach_offset_y = 0.222
+torch_omni_world_attach_offset_z = 0.063
+
+scope_names             = wpn_addon_scope_po4x34,wpn_addon_scope_eotech, wpn_addon_scope_susat_dusk, wpn_addon_scope_elcan, wpn_addon_scope_susat_night
+scope_respawn                                        = wpn_groza_545_a5
+scope_respawn_wpn_addon_scope_po4x34                 = wpn_groza_545_po4x34_a5
+scope_respawn_wpn_addon_scope_eotech                 = wpn_groza_545_eotech_a5
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_groza_545_susat_dusk_a5
+scope_respawn_wpn_addon_scope_elcan                  = wpn_groza_545_elcan_a5
+scope_respawn_wpn_addon_scope_susat_night            = wpn_groza_545_susat_night_a5
+cost					= 15000
+hud                      	= wpn_groza_545_a5_hud
+[wpn_groza_545_a5_hud]:wpn_groza_545_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, laser, foregrip, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler
+
+; upgrade 5 Sights
+
+[wpn_groza_545_po4x34_a5]:wpn_groza_545_a5
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, grip, laser, foregrip, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler
+scope_bone = scope5
+hud = wpn_groza_545_a5_po4x34_hud
+scope_name              = wpn_addon_scope_po4x34
+scope_x              	= 80                 ; offset in inventory icon
+scope_y                 = -17
+[wpn_groza_545_a5_po4x34_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, grip, laser, foregrip, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler
+aim_hud_offset_pos = 0.0,-0.032,-0.12
+aim_hud_offset_rot = 0.007000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0,-0.032,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+[wpn_groza_545_eotech_a5]:wpn_groza_545_a5
+hidden_bones = scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope1
+hud                      			= wpn_groza_545_a5_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 89                 ; offset in inventory icon
+scope_y                 = -6
+[wpn_groza_545_a5_eotech_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = 0.000266,0.004670,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.000266,0.004670,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_aim_origin_offset = 0.015
+inertion_aim_speed = 8
+
+
+[wpn_groza_545_susat_dusk_a5]:wpn_groza_545_a5
+hidden_bones = scope1, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope2
+hud                      			= wpn_groza_545_a5_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 90                ; offset in inventory icon
+scope_y                 = -11
+[wpn_groza_545_a5_susat_dusk_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = 0.000356,0.001420,-0.11
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.000356,0.001420,-0.11
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[wpn_groza_545_elcan_a5]:wpn_groza_545_a5
+hidden_bones = scope1, scope2, scope4, scope5, mag_20, mag45, mag30, mag60, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope3
+hud = wpn_groza_545_a5_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 62               ; offset in inventory icon
+scope_y                 = -9
+[wpn_groza_545_a5_elcan_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope4, scope5, mag_20, mag45, mag30, mag60, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = -0.0,-0.00055,-0.12
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0,-0.00055,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000220,-0.038200,0.000000
+aim_hud_offset_alt_rot = 0.000500,-0.000100,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000220,-0.039200,0.000000
+aim_hud_offset_alt_rot_16x9 = 0.002100,0.000000,0.000000
+
+[wpn_groza_545_susat_night_a5]:wpn_groza_545_a5
+hidden_bones = scope1, scope2, scope3, scope5, mag_20, mag45, mag30, mag60, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope4
+hud = wpn_groza_545_a5_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 47                ; offset in inventory icon
+scope_y                 = -8
+scope_lense_hud_fov = 0.2
+[wpn_groza_545_a5_susat_night_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope3, scope5, mag_20, mag45, mag30, mag60, grip, laser, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos =  -0.000094,-0.023240,0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.000094,-0.023240,0.1
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+; upgrade 6
+[wpn_groza_545_a6]:wpn_groza_545_a5
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, foregrip, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler
+available_upgrades		= groza_545_upgr7
+installed_upgrades		= groza_545_upgr1, groza_545_upgr2, groza_545_upgr3, groza_545_upgr4, groza_545_upgr5, groza_545_upgr6
+inv_weight		 		= 3.3
+
+
+laserdot_world_attach_offset_x = -0.044
+laserdot_world_attach_offset_y = 0.225
+laserdot_world_attach_offset_z = 0.057
+
+laserdot_attach_offset_x = 0.002000
+laserdot_attach_offset_y = 0.003500
+laserdot_attach_offset_z = -0.258500
+
+torch_world_attach_offset_x = 0.055
+torch_world_attach_offset_y = 0.222
+torch_world_attach_offset_z = 0.063
+
+torch_omni_world_attach_offset_x = 0.055
+torch_omni_world_attach_offset_y = 0.222
+torch_omni_world_attach_offset_z = 0.063
+
+scope_names             = wpn_addon_scope_po4x34,wpn_addon_scope_eotech, wpn_addon_scope_susat_dusk, wpn_addon_scope_elcan, wpn_addon_scope_susat_night
+scope_respawn                                        = wpn_groza_545_a6
+scope_respawn_wpn_addon_scope_po4x34                 = wpn_groza_545_po4x34_a6
+scope_respawn_wpn_addon_scope_eotech                 = wpn_groza_545_eotech_a6
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_groza_545_susat_dusk_a6
+scope_respawn_wpn_addon_scope_elcan                  = wpn_groza_545_elcan_a6
+scope_respawn_wpn_addon_scope_susat_night            = wpn_groza_545_susat_night_a6
+cost					= 16000
+hud                      	= wpn_groza_545_a6_hud
+[wpn_groza_545_a6_hud]:wpn_groza_545_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, foregrip, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler
+
+; upgrade 6 Sights
+
+[wpn_groza_545_po4x34_a6]:wpn_groza_545_a6
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, grip, foregrip, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler
+scope_bone = scope5
+hud = wpn_groza_545_a6_po4x34_hud
+scope_name              = wpn_addon_scope_po4x34
+scope_x              	= 80                 ; offset in inventory icon
+scope_y                 = -17
+[wpn_groza_545_a6_po4x34_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, grip, foregrip, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler
+aim_hud_offset_pos = 0.0,-0.032,-0.12
+aim_hud_offset_rot = 0.007000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0,-0.032,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+[wpn_groza_545_eotech_a6]:wpn_groza_545_a6
+hidden_bones = scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope1
+hud                      			= wpn_groza_545_a6_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 89                 ; offset in inventory icon
+scope_y                 = -6
+[wpn_groza_545_a6_eotech_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = 0.000266,0.004670,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.000266,0.004670,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_aim_origin_offset = 0.015
+inertion_aim_speed = 8
+
+
+[wpn_groza_545_susat_dusk_a6]:wpn_groza_545_a6
+hidden_bones = scope1, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope2
+hud                      			= wpn_groza_545_a6_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 90                ; offset in inventory icon
+scope_y                 = -11
+[wpn_groza_545_a6_susat_dusk_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, grip, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = 0.000356,0.001420,-0.11
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.000356,0.001420,-0.11
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[wpn_groza_545_elcan_a6]:wpn_groza_545_a6
+hidden_bones = scope1, scope2, scope4, scope5, mag_20, mag45, mag30, mag60, grip, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope3
+hud = wpn_groza_545_a6_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 62               ; offset in inventory icon
+scope_y                 = -9
+[wpn_groza_545_a6_elcan_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope4, scope5, mag_20, mag45, mag30, mag60, grip, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = -0.0,-0.00055,-0.12
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0,-0.00055,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000220,-0.038200,0.000000
+aim_hud_offset_alt_rot = 0.000500,-0.000100,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000220,-0.039200,0.000000
+aim_hud_offset_alt_rot_16x9 = 0.002100,0.000000,0.000000
+
+[wpn_groza_545_susat_night_a6]:wpn_groza_545_a6
+hidden_bones = scope1, scope2, scope3, scope5, mag_20, mag45, mag30, mag60, grip, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope4
+hud = wpn_groza_545_a6_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 47                ; offset in inventory icon
+scope_y                 = -8
+scope_lense_hud_fov = 0.2
+[wpn_groza_545_a6_susat_night_hud]:wpn_groza_545_scope_hud
+hidden_bones = scope1, scope2, scope3, scope5, mag_20, mag45, mag30, mag60, grip, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos =  -0.000094,-0.023240,0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.000094,-0.023240,0.1
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+; upgrade 7
+[wpn_groza_545_a7]:wpn_groza_545_a6
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, foregrip, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler
+available_upgrades		= none
+installed_upgrades		= groza_545_upgr1, groza_545_upgr2, groza_545_upgr3, groza_545_upgr4, groza_545_upgr5, groza_545_upgr6, groza_545_upgr7
+inv_weight		 		= 3.45
+
+grenade_launcher_status	= 0
+
+cam_dispersion          = 0.70        ;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc      = 0.40       ;увеличениe cam_dispersion с каждым выстрелом
+zoom_cam_dispersion          = 0.35
+zoom_cam_dispersion_inc      = 0.35
+
+laserdot_world_attach_offset_x = -0.044
+laserdot_world_attach_offset_y = 0.225
+laserdot_world_attach_offset_z = 0.057
+
+laserdot_attach_offset_x = 0.002000
+laserdot_attach_offset_y = 0.003500
+laserdot_attach_offset_z = -0.258500
+
+torch_world_attach_offset_x = 0.055
+torch_world_attach_offset_y = 0.222
+torch_world_attach_offset_z = 0.063
+
+torch_omni_world_attach_offset_x = 0.055
+torch_omni_world_attach_offset_y = 0.222
+torch_omni_world_attach_offset_z = 0.063
+
+scope_names             = wpn_addon_scope_po4x34,wpn_addon_scope_eotech, wpn_addon_scope_susat_dusk, wpn_addon_scope_elcan, wpn_addon_scope_susat_night
+scope_respawn                                        = wpn_groza_545_a7
+scope_respawn_wpn_addon_scope_po4x34                 = wpn_groza_545_po4x34_a7
+scope_respawn_wpn_addon_scope_eotech                 = wpn_groza_545_eotech_a7
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_groza_545_susat_dusk_a7
+scope_respawn_wpn_addon_scope_elcan                  = wpn_groza_545_elcan_a7
+scope_respawn_wpn_addon_scope_susat_night            = wpn_groza_545_susat_night_a7
+cost					= 17000
+hud                      	= wpn_groza_545_a7_hud
+[wpn_groza_545_a7_hud]:wpn_groza_545_tact_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, foregrip, launcher_scope_static, shell, bullet, bullet_2, ammo_chamber, handler
+
+; upgrade 7 Sights
+
+[wpn_groza_545_po4x34_a7]:wpn_groza_545_a7
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, foregrip, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler
+scope_bone = scope5
+hud = wpn_groza_545_a7_po4x34_hud
+scope_name              = wpn_addon_scope_po4x34
+scope_x              	= 80                 ; offset in inventory icon
+scope_y                 = -17
+[wpn_groza_545_a7_po4x34_hud]:wpn_groza_545_tact_hud
+hidden_bones = scope1, scope2, scope3, scope4, mag_20, mag45, mag30, mag60, foregrip, shell, bullet, bullet_2, ammo_chamber, launcher_scope, handler
+aim_hud_offset_pos = 0.0,-0.032,-0.12
+aim_hud_offset_rot = 0.007000,0.000000,0.000000
+aim_hud_offset_pos_16x9 = 0.0,-0.032,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+
+[wpn_groza_545_eotech_a7]:wpn_groza_545_a7
+hidden_bones = scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope1
+hud                      			= wpn_groza_545_a7_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 89                 ; offset in inventory icon
+scope_y                 = -6
+[wpn_groza_545_a7_eotech_hud]:wpn_groza_545_tact_hud
+hidden_bones = scope2, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = 0.000266,0.004670,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.000266,0.004670,0.0
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+inertion_aim_origin_offset = 0.015
+inertion_aim_speed = 8
+
+
+[wpn_groza_545_susat_dusk_a7]:wpn_groza_545_a7
+hidden_bones = scope1, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope2
+hud                      			= wpn_groza_545_a7_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 90                ; offset in inventory icon
+scope_y                 = -11
+[wpn_groza_545_a7_susat_dusk_hud]:wpn_groza_545_tact_hud
+hidden_bones = scope1, scope3, scope4, scope5, mag_20, mag45, mag30, mag60, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = 0.000356,0.001420,-0.11
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.000356,0.001420,-0.11
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[wpn_groza_545_elcan_a7]:wpn_groza_545_a7
+hidden_bones = scope1, scope2, scope4, scope5, mag_20, mag45, mag30, mag60, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope3
+hud = wpn_groza_545_a7_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 62               ; offset in inventory icon
+scope_y                 = -9
+[wpn_groza_545_a7_elcan_hud]:wpn_groza_545_tact_hud
+hidden_bones = scope1, scope2, scope4, scope5, mag_20, mag45, mag30, mag60, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos = -0.0,-0.00055,-0.12
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.0,-0.00055,-0.12
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000220,-0.038200,0.000000
+aim_hud_offset_alt_rot = 0.000500,-0.000100,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000220,-0.039200,0.000000
+aim_hud_offset_alt_rot_16x9 = 0.002100,0.000000,0.000000
+
+[wpn_groza_545_susat_night_a7]:wpn_groza_545_a7
+hidden_bones = scope1, scope2, scope3, scope5, mag_20, mag45, mag30, mag60, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+scope_bone = scope4
+hud = wpn_groza_545_a7_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 47                ; offset in inventory icon
+scope_y                 = -8
+scope_lense_hud_fov = 0.2
+[wpn_groza_545_a7_susat_night_hud]:wpn_groza_545_tact_hud
+hidden_bones = scope1, scope2, scope3, scope5, mag_20, mag45, mag30, mag60, shell, bullet, bullet_2, ammo_chamber, planka, launcher_scope, foregrip, handler
+aim_hud_offset_pos =  -0.000094,-0.023240,0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = -0.000094,-0.023240,0.1
+aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+gl_hud_offset_pos = 0.0,-0.001,-0.1
+gl_hud_offset_rot = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9 = 0.0,-0.001,-0.05
+gl_hud_offset_rot_16x9 = 0.0,0.0,0.0

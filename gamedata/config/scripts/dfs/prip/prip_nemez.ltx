@@ -1,0 +1,63 @@
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = pri_nemez_walk
+path_look = pri_nemez_look
+combat_ignore_cond = {=fighting_dist_ge(10)}
+danger = danger_condition@pri_nemez
+
+meet = meet
+on_info = {+find_gunman_start} walker1
+
+[walker1]
+path_walk = pri_nemez_walk1
+combat_ignore_cond = {=fighting_dist_ge(10)}
+danger = danger_condition@pri_nemez
+
+meet = no_meet
+on_signal = arrive | %+zaglushka_76%
+on_info = {+zaglushka_76} walker2
+
+[walker2]
+path_walk = pri_nemez_walk2
+path_look = pri_nemez_look2
+combat_ignore_cond = {=fighting_dist_ge(10)}
+danger = danger_condition@pri_nemez
+
+meet = default_meet
+on_info = {+zaglushka_232} walker3
+
+[walker3]
+path_walk = pri_nemez_walk2
+path_look = pri_nemez_look3
+combat_ignore_cond = {=fighting_dist_ge(10)}
+danger = danger_condition@pri_nemez
+
+meet = default_meet
+on_info = {+zaglushka_235} walker4
+
+[walker4]
+path_walk = pri_nemez_walk2
+path_look = pri_nemez_look2
+combat_ignore_cond = {=fighting_dist_ge(10)}
+danger = danger_condition@pri_nemez
+
+meet = default_meet
+
+[meet]
+meet_state 		= ward@wait
+meet_state_wpn 	= ward@wait
+victim 			= actor
+victim_wpn 		= actor
+use				= {=dfs_dialog_dist(3.0) -find_gunman_start} self, true
+use_wpn			= {=dfs_dialog_dist(3.0) -find_gunman_start} self, true
+meet_dialog		= pri_nemez_dialog1
+
+[combat_ignore]
+;combat_ignore_cond = {=fighting_dist_ge(10)}
+
+[danger_condition@pri_nemez]
+ignore_distance = 0
+

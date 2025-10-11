@@ -1,0 +1,56 @@
+[logic]
+active = walker@at_hole
+combat_ignore = combat_ignore
+trade = misc\dfs_trade.ltx
+inv_max_weight = 10000
+ 
+[walker@at_hole]
+path_walk = atp_freedom_trader_hole_walk
+path_look = atp_freedom_trader_hole_look
+;def_state_standing = wait
+;def_state_moving1 = walk
+;def_state_moving2 = walk
+;def_state_moving3 = walk
+meet = meet@at_hole
+danger = danger_condition@atp_freedom_trader
+combat_ignore_cond = always
+on_info = {=actor_in_zone(atp_freedom_trader_meet_zone_1)} walker@zone_1, {=actor_in_zone(atp_freedom_trader_meet_zone_2)} walker@zone_2, walker@at_hole
+
+[walker@zone_1]
+path_walk = atp_freedom_trader_zone_1_walk
+path_look = atp_freedom_trader_zone_1_look
+;def_state_standing = wait
+;def_state_moving1 = walk
+;def_state_moving2 = walk
+;def_state_moving3 = walk
+meet = meet@at_hole
+danger = danger_condition@atp_freedom_trader
+combat_ignore_cond = always
+on_info = {=actor_in_zone(atp_freedom_trader_meet_zone_1)} walker@zone_1, {=actor_in_zone(atp_freedom_trader_meet_zone_2)} walker@zone_2, walker@at_hole
+
+[walker@zone_2]
+path_walk = atp_freedom_trader_zone_2_walk
+path_look = atp_freedom_trader_zone_2_look
+;def_state_standing = wait
+;def_state_moving1 = walk
+;def_state_moving2 = walk
+;def_state_moving3 = walk
+meet = meet@at_hole
+danger = danger_condition@atp_freedom_trader
+combat_ignore_cond = always
+on_info = {=actor_in_zone(atp_freedom_trader_meet_zone_1)} walker@zone_1, {=actor_in_zone(atp_freedom_trader_meet_zone_2)} walker@zone_2, walker@at_hole
+
+[meet@at_hole]
+meet_state 		= wait@wait
+meet_state_wpn	= wait@wait
+victim			= actor
+victim_wpn		= actor
+use				= true
+use_wpn			= false
+
+
+[danger_condition@atp_freedom_trader]
+ignore_distance       = 0
+
+[combat_ignore]
+combat_ignore_cond = always

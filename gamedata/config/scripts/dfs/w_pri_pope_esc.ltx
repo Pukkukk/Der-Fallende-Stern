@@ -1,0 +1,55 @@
+[logic]
+active = walker
+combat_ignore = combat_ignore
+on_hit = hit
+on_death = death
+
+[hit]
+on_info = {=hit_by_actor =is_npc_enemy} %=taboo_taboo%
+
+[death]
+on_info = {=killed_by_actor =is_npc_enemy} %=taboo_taboo%
+
+[walker]
+path_walk = w_pri_monk_01_walk
+path_look = w_pri_monk_01_look
+combat_ignore_cond = {=fighting_dist_ge(30)}
+danger = danger_condition@w_pri_monk_01
+
+meet = default_meet
+on_info = {+zaglushka_139} walker1
+
+[walker1]
+path_walk = w_pri_monk_01_walk1
+combat_ignore_cond = {=fighting_dist_ge(30)}
+danger = danger_condition@w_pri_monk_01
+
+meet = no_meet
+on_signal = arrive | %+zaglushka_140%
+on_info = {+zaglushka_140} walker2
+
+[walker2]
+path_walk = w_pri_monk_01_walk2
+path_look = w_pri_monk_01_look2
+combat_ignore_cond = {=fighting_dist_ge(30)}
+danger = danger_condition@w_pri_monk_01
+
+meet = default_meet
+on_info = {+zaglushka_141} walker3
+
+[walker3]
+path_walk = w_pri_monk_01_walk
+path_look = w_pri_monk_01_look
+combat_ignore_cond = {=fighting_dist_ge(30)}
+danger = danger_condition@w_pri_monk_01
+
+meet = default_meet
+
+[combat_ignore]
+combat_ignore_cond = {=fighting_dist_ge(30)}
+
+[danger_condition@w_pri_monk_01]
+ignore_distance = 0
+
+[smart_terrains]
+none = true

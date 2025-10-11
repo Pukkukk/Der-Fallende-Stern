@@ -1,0 +1,20 @@
+[logic]
+active = walker
+combat_ignore = combat_ignore
+on_death = death
+
+[death]
+on_info = %+kill_sar_grc_stalker_30%
+
+[combat_ignore]
+;combat_ignore_cond = {!see_actor}
+
+[walker]
+path_walk = sar_grc_stalker_30_walk
+path_look = sar_grc_stalker_30_look
+show_spot = false
+combat_ignore_cond = {!see_actor}
+danger = danger_condition@sar_grc_stalker_30
+
+[danger_condition@sar_grc_stalker_30]
+ignore_distance = 0

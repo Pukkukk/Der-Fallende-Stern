@@ -1,0 +1,36 @@
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = pri_borman_walk
+combat_ignore_cond = {=fighting_dist_ge(10)}
+danger = danger_condition@pri_borman
+
+meet = no_meet
+on_signal = arrive | %+overhear_bazar_2%
+on_info = {+overhear_bazar_2} walker1
+
+[walker1]
+path_walk = pri_borman_walk1
+path_look = pri_borman_look1
+combat_ignore_cond = {=fighting_dist_ge(10)}
+danger = danger_condition@pri_borman
+
+meet = no_meet
+on_info = {+player_complete_overhear_bazar} walker2
+
+[walker2]
+path_walk = pri_borman_walk1
+path_look = pri_borman_look1
+combat_ignore_cond = {=fighting_dist_ge(10)}
+danger = danger_condition@pri_borman
+
+meet = default_meet
+on_actor_dist_le = 10 | %=full_pipez%
+
+[combat_ignore]
+;combat_ignore_cond = {=fighting_dist_ge(10)}
+
+[danger_condition@pri_borman]
+ignore_distance = 0

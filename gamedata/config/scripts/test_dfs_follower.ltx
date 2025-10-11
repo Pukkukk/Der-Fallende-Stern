@@ -1,0 +1,21 @@
+[logic]
+active = follower
+combat_ignore = combat_ignore
+
+[follower]
+leader = 20112
+formation_line = true
+distance = 2.0
+anim_walk = patrol
+anim_run = run
+anim_sprint = sprint
+combat_ignore_cond = always
+meet = no_meet
+danger = danger_condition@flw
+no_retreat = true
+
+[danger_condition@flw]
+ignore_distance = 0
+
+[combat_ignore]
+combat_ignore_cond = always

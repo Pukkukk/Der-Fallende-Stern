@@ -1,0 +1,218 @@
+[wpn_knife]:identity_immunities
+GroupControlSection			= spawn_group
+discovery_dependency 		= 
+$spawn              		= "weapons\knife"
+$npc                		= off
+$prefetch 		    		= 8
+scheduled           		= off
+cform						= skeleton
+description					= enc_weapons1_wpn-knife
+
+ef_weapon_type				= 1
+
+class						= WP_KNIFE
+
+visual						= dynamics\weapons\wpn_knife\wpn_knife.ogf
+inv_name					= st_knife
+
+inv_name_short				= st_knife
+inv_weight				= 0
+inv_grid_width				= 0
+inv_grid_height				= 0
+inv_grid_x					= 18
+inv_grid_y					= 8
+
+kill_msg_x					= 197
+kill_msg_y					= 177
+kill_msg_width				= 53
+kill_msg_height				= 16
+
+show_ammo				= false
+
+slot					= 0
+animation_slot				= 5
+single_handed				= 1
+
+hud							= wpn_knife_hud
+	
+cost				= 700
+
+hand_dependence		     	= 1
+
+cam_relax_speed          	= 5.0
+cam_dispersion           	= 0.9
+cam_max_angle		     	= 7
+cam_max_angle_horz		= 5.0
+cam_step_angle_horz		= 0.5
+
+
+fire_dispersion          	= 0.2
+fire_dispersion_add      	= 5.3
+fire_dispersion_relax    	= 0.6
+fire_dispersion_base	 	= 0.5
+disp_vel_factor		     	= 0.9
+disp_crouch_factor	     	= 0.75
+disp_jump_factor	     	= 7
+fire_dispersion_condition_factor = 0.0
+misfire_probability 		= 0.0
+condition_shot_dec 			= 0.0
+
+direction                	= 0, 0, 1
+shell_point		         	= 0.0, 0.0, 0.0
+fire_point               	= 0.0, 0.1, 0.4
+
+rpm_empty_click 	     	= 200
+
+hit_power                	= 2.85
+hit_impulse		        = 120
+hit_type				 	= wound
+
+hit_power_2                	= 3.55
+hit_impulse_2	         	= 120
+hit_type_2				 	= wound
+
+fire_distance            	= 1.8
+bullet_speed			= 1000
+rpm                      	= 1000
+
+normal                   	= 0, 1, 0
+position                 	= -0.021, -0.078, 0.0
+orientation              	= 0,90,0
+startup_ammo             	= 1000
+wm_size                  	= 0.10
+
+light_disabled				= true
+
+ph_mass			         	= 4
+
+ammo_limit		         	= 180
+ammo_current		     	= 90
+ammo_elapsed		     	= 0
+	
+ammo_mag_size		     	= 0
+ammo_class				 	= ammo_9x39_pab9
+	
+min_radius               	= 50
+max_radius               	= 50
+
+scope_status			= 0
+silencer_status			= 0
+grenade_launcher_status		= 0
+zoom_enabled				= false
+
+snd_draw						= weapons\knife\knife_draw, 0.5
+snd_holster						= weapons\knife\knife_hide, 0.5
+snd_shoot					= weapons\knife\knife_kick_2
+snd_shoot2					= weapons\knife\knife_kick_2
+snd_item_on             = weapons\headflash_on
+
+weapon_remove_time			= 5000	
+
+[wpn_knife_hud]
+zoom_hide_crosshair			= true
+
+hands_position				= 0.0,-0.13,0.03
+hands_orientation			= 0.0,0.0,0.0
+hands_position_16x9			= 0.0,-0.13,0.03
+hands_orientation_16x9			= 0.0,0.0,0.0
+
+
+item_position				= 0.000000,0.000000,0.000000
+item_orientation			= 0.000000,0.000000,0.000000
+
+item_visual             	= dynamics\weapons\wpn_knife\wpn_knife_hud.ogf
+attach_place_idx				= 0
+
+shell_point						= 0,0,0
+shell_bone              	= wpn_body
+
+fire_point						= 0.004500,0.062500,-0.178499
+fire_bone               	= knife
+
+disable_bore = true                                            ;отключение анимации скуки
+
+anm_show			= knife_draw
+anm_show_empty			= knife_draw
+anm_hide             		= knife_hide
+anm_idle             		= knife_idle
+anm_idle_slow                   = knife_idle
+anm_idle_crouch                 = knife_idle
+anm_idle_crouch_slow            = knife_idle
+anm_idle_aim			= knife_idle
+anm_attack			= knife_kick_1
+anm_attack2			= knife_kick_2
+anm_idle_moving 		= knife_walk
+anm_idle_moving_slow 		= knife_slow
+anm_idle_moving_crouch 	        = knife_slow_down
+anm_idle_moving_crouch_slow 	= knife_slow_super
+anm_idle_sprint_start		= knife_sprint_start
+anm_idle_sprint			= knife_sprint
+anm_idle_sprint_end		= knife_sprint_end
+anm_bore                        = knife_sprint_start
+
+anm_headlamp_on = knife_headflash
+anm_headlamp_off = knife_headflash
+
+lock_time_end_anm_headlamp_on = 0.5
+lock_time_end_anm_headlamp_off = 0.5
+
+anm_nv_on = knife_headflash
+anm_nv_off = knife_headflash
+
+lock_time_end_anm_nv_on = 0.5
+lock_time_end_anm_nv_off = 0.5
+
+
+anm_show_suicide = knife_suicide_draw
+anm_prepare_suicide = knife_suicide
+anm_selfkill = knife_suicide_kick
+anm_stop_suicide = knife_suicide_end
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+
+aim_hud_offset_pos			= -0.077000,0.022000,0.000000
+aim_hud_offset_rot			= 0.000000,0.005000,-0.015000
+
+
+gl_hud_offset_pos				= 0,0,0
+gl_hud_offset_rot				= 0,0,0
+
+lean_hud_offset_pos			= 0,0,0
+lean_hud_offset_rot			= 0,0,0
+
+
+[fake_wpn_knife]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+; $spawn 			= "food and drugs\antirad"
+; $prefetch 		= 32
+radius				= 1
+class			= II_ATTCH ;II_ANTIR
+cform           = skeleton
+visual						= weapons\knife\wpn_knife.ogf
+inv_name					= st_knife
+description					= enc_weapons1_wpn-knife
+inv_name_short				= st_knife
+inv_weight			= 0.3
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x			= 18
+inv_grid_y			= 8
+cost				= 70
+
+; eatable item
+; eat_health = 0
+; eat_satiety = 0
+; eat_power = 0
+; eat_radiation = 0
+; wounds_heal_perc = 0
+; eat_portions_num = 0
+
+; food item
+; animation_slot		= 4
+
+;hud item
+; hud = wpn_vodka_hud

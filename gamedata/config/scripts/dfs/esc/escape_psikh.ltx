@@ -1,0 +1,48 @@
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = esc_creazy_walk
+path_look = esc_creazy_look
+combat_ignore_cond = always
+danger = danger_condition@esc_creazy
+meet = no_meet
+wounded = wounded
+on_actor_dist_le = 10 | walker1
+
+[walker1]
+path_walk = esc_creazy_walk0
+path_look = esc_creazy_look0
+combat_ignore_cond = always
+danger = danger_condition@esc_creazy
+meet = meet
+wounded = wounded
+on_info = {+zaglushka_13} walker2
+
+[meet]
+use = true
+use_wpn = true
+
+[wounded]
+hp_state = 100|psycho_pain@bar_psycho_pain
+hp_state_see = 100|psycho_pain@bar_psycho_pain
+psy_state = 0|psycho_pain@bar_psycho_pain
+hp_victim = 100|nil
+hp_cover = 100|false
+hp_fight = 100|false
+help_dialog = nil
+
+[walker2]
+path_walk = esc_creazy_walk1
+combat_ignore_cond = always
+danger = danger_condition@esc_creazy
+
+meet = no_meet
+on_signal = arrive | nil %=trans_3%
+
+[danger_condition@esc_creazy]
+ignore_distance = 0
+
+[combat_ignore]
+combat_ignore_cond = always

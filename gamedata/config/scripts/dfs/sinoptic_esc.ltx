@@ -1,0 +1,38 @@
+[spawner]
+cond = {-mutant_attack_start}
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = old_gar_sinoptic_walk
+path_look = old_gar_sinoptic_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@old_gar_sinoptic
+
+meet = meet
+on_info = {+zaglushka_112} walker1
+
+[walker1]
+path_walk = old_gar_sinoptic_walk
+path_look = old_gar_sinoptic_look
+combat_ignore_cond = {=fighting_dist_ge(50)}
+danger = danger_condition@old_gar_sinoptic
+
+meet = no_meet
+
+[meet]
+meet_state 		= sit@wait
+meet_state_wpn 	= sit@ward
+victim 			= actor
+victim_wpn 		= nil
+use				= true
+use_wpn			= false
+
+[combat_ignore]
+combat_ignore_cond = {=fighting_dist_ge(50)}
+
+[danger_condition@old_gar_sinoptic]
+ignore_distance = 0
+[smart_terrains]
+old_gar_stalker_lager = {+exempt_hostages_5}

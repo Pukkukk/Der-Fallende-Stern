@@ -1,0 +1,60 @@
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = wolf_ghost_walk
+path_look = wolf_ghost_look
+meet = no_meet
+show_spot = false
+on_info = {+zaglushka_9} remark
+danger = danger_condition@volk_ghost
+combat_ignore_cond = always
+
+[remark]
+anim = hello_wpn
+snd = esc_wolf_say_thanks
+target = 19925
+meet = no_meet
+show_spot = false
+on_signal = sound_end| walker2
+danger = danger_condition@volk_ghost
+combat_ignore_cond = always
+
+[walker2]
+path_walk = wolf_ghost_walk
+path_look = wolf_ghost_look
+meet = no_meet
+show_spot = false
+on_timer = 15000 | remark2
+danger = danger_condition@volk_ghost
+combat_ignore_cond = always
+
+[remark2]
+anim = guard_rac
+snd = esc_wolf_radio
+target = 19925
+on_signal = sound_end| walker3 %=play_snd_from_radio_ghost%
+meet = no_meet
+show_spot = false
+danger = danger_condition@volk_ghost
+combat_ignore_cond = always
+
+[walker3]
+path_walk = wolf_ghost_walk
+path_look = wolf_ghost_look
+meet = no_meet
+show_spot = false
+danger = danger_condition@volk_ghost
+combat_ignore_cond = always
+on_timer = 10000 | nil %+zaglushka_11 =ghosts_away%
+
+[danger_condition@volk_ghost]
+ignore_distance = 0
+
+[combat_ignore]
+combat_ignore_cond = always
+
+
+
+

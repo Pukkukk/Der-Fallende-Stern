@@ -1,0 +1,72 @@
+
+; Eagle ================================================================================================================================================ ПМ Пистолет Макарова
+; ==================================== первая ветка ====================================
+
+
+; 1 ветка
+
+; upgrade 1
+[wpn_desert_eagle_unic_a1]:wpn_desert_eagle_unic
+hidden_bones = barrel_compensator, flash, laser, line, light 
+available_upgrades		= deagle_u_upgr2
+installed_upgrades		= deagle_u_upgr1
+icon_group = 2
+cost					 	= 4300
+hud                      	= wpn_eagle_u_a1_hud
+[wpn_eagle_u_a1_hud]:wpn_desert_eagle_unic_hud
+hidden_bones = barrel_compensator, flash, laser, line, light 
+
+
+
+
+
+; upgrade 2
+[wpn_desert_eagle_unic_a2]:wpn_desert_eagle_unic_a1
+hidden_bones = flash, laser, line, light 
+available_upgrades		= deagle_u_upgr3
+installed_upgrades		= deagle_u_upgr1, deagle_u_upgr2
+silencer_status				= 0
+
+cam_dispersion          	= 1.2		;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc			= 1.2		;увеличениe cam_dispersion с каждым выстрелом
+
+cam_max_angle				= 12.0		;максимальный угол отдачи
+cam_max_angle_horz			= 12.0		;(degree) maximum shot horizontal degree
+
+zoom_cam_dispersion         = 1.5
+zoom_cam_dispersion_inc     = 1.0
+
+cost					 	= 4600
+hud                      	= wpn_eagle_u_a2_hud
+[wpn_eagle_u_a2_hud]:wpn_desert_eagle_unic_hud
+hidden_bones = flash, laser, line, light 
+
+
+
+
+; upgrade 3
+[wpn_desert_eagle_unic_a3]:wpn_desert_eagle_unic_a2
+available_upgrades		= deagle_u_upgr4
+installed_upgrades		= deagle_u_upgr1, deagle_u_upgr2, deagle_u_upgr3
+cost					 	= 4900
+ammo_mag_size		 		= 11
+
+; upgrade 3
+[wpn_desert_eagle_unic_a4]:wpn_desert_eagle_unic_a3
+hidden_bones =
+available_upgrades		= none
+installed_upgrades		= deagle_u_upgr1, deagle_u_upgr2, deagle_u_upgr3, deagle_u_upgr4
+cost					 	= 5200
+
+laserdot_world_attach_offset_x = 0.0
+laserdot_world_attach_offset_y = 0.1
+laserdot_world_attach_offset_z = 0.1
+
+torch_attach_offset_x = 0.0
+torch_attach_offset_y = 0.0
+torch_attach_offset_z = 0.4
+
+hud                      	= wpn_eagle_u_a4_hud
+[wpn_eagle_u_a4_hud]:wpn_desert_eagle_unic_hud
+hidden_bones =
+

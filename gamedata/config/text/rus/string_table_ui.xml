@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="cant_walk">
+		<text>Вы слишком истощены, чтобы двигаться</text>
+	</string>
+	<string id="cant_walk_weight">
+		<text>Вы слишком перегружены, чтобы двигаться</text>
+	</string>
+	<string id="dar_poltergeist_hold_the_door">
+		<text>Кто-то удерживает дверь.</text>
+	</string>
+	<string id="Global Map">
+		<text>Глобальная карта</text>
+	</string>
+	<string id="gun_jammed">
+		<text>Осечка!</text>
+	</string>
+	<string id="inventory_box_use">
+		<text>Обыскать ящик ($$ACTION_USE$$)</text>
+	</string>
+	<string id="Local Map">
+		<text>Локальная карта</text>
+	</string>
+	<string id="st_game_saved">
+		<text>игра сохранена</text>
+	</string>
+	<string id="tip_car_locked">
+		<text>Заблокировано</text>
+	</string>
+	<string id="tip_car_use">
+		<text>открыть дверь ($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_door_close">
+		<text>Нажмите ($$ACTION_USE$$), чтобы закрыть дверь</text>
+	</string>
+	<string id="tip_door_coded">
+		<text>Дверь закодирована</text>
+	</string>
+	<string id="tip_door_decode">
+		<text>Нажмите ($$ACTION_USE$$), чтобы декодировать дверь</text>
+	</string>
+	<string id="tip_door_decoding">
+		<text>Идет процесс декодирования</text>
+	</string>
+	<string id="tip_door_locked">
+		<text>Дверь заперта</text>
+	</string>
+	<string id="tip_door_open">
+		<text>Нажмите ($$ACTION_USE$$), чтобы открыть дверь</text>
+	</string>
+	<string id="tip_gate_close">
+		<text>Нажмите ($$ACTION_USE$$) для того, чтобы закрыть ворота</text>
+	</string>
+	<string id="tip_gate_locked">
+		<text>Ворота заблокированы</text>
+	</string>
+	<string id="tip_gate_open">
+		<text>Нажмите ($$ACTION_USE$$) для того, чтобы открыть ворота</text>
+	</string>
+	<string id="tip_monolith">
+		<text>ЗАГАДАТЬ ЖЕЛАНИЕ ($$ACTION_USE$$)</text>
+	</string>
+	<string id="tip_sleep">
+		<text>Спать ($$ACTION_USE$$)</text>
+	</string>
+	<string id="st_do_stealing">
+		<text>Угнать! ($$ACTION_USE$$)</text>
+	</string>
+	<string id="st_sit_n_go">
+		<text>Забирайся в кабину! ($$ACTION_USE$$)</text>
+	</string>
+	<string id="turn_off_the_barier">
+		<text>ОТКЛЮЧИТЬ БАРЬЕР ($$ACTION_USE$$)</text>
+	</string>
+	<string id="barier_is_dissactivated">
+		<text>БАРЬЕР ДЕАКТИВИРОВАН</text>
+	</string>
+	<string id="kb_turn_engine2">
+		<text>Зажигание</text>
+	</string>
+	<string id="is_driven_lock">
+		<text>Заколочено</text>
+	</string>
+<string id="timer_boom">
+		<text>Привет от Арнольда!</text>
+	</string>
+<string id="cant_sleep_near_enemies">
+		<text>Вы не можете спать рядом с врагами</text>
+	</string>
+<string id="static_0">
+		<text>Пролог</text>
+	</string>
+<string id="static_1">
+		<text>Эпизод I. Доктор Рипли</text>
+	</string>
+<string id="static_2">
+		<text>Эпизод II. Грешник</text>
+	</string>
+<string id="static_3">
+		<text>Эпизод III. Особенности понятий полковника Панцера</text>
+	</string>
+<string id="dont_kill">
+		<text>JJ так бы не поступил!</text>
+	</string>
+<string id="static_4">
+		<text>Эпизод IV. Диверсанты</text>
+	</string>
+<string id="static_5">
+		<text>Эпизод V. Солдаты удачи</text>
+	</string>
+<string id="static_6">
+		<text>Несколькими днями раньше...</text>
+	</string>
+<string id="you_have_noticed">
+		<text>ЗАДАНИЕ ПРОВАЛЕНО!</text>
+	</string>
+	
+<string id="you_have_lost">
+		<text>Джей-Джей проиграл...</text>
+	</string>
+	
+<string id="you_have_vin">
+		<text>Меняющий Лица побежден</text>
+	</string>
+	
+</string_table>

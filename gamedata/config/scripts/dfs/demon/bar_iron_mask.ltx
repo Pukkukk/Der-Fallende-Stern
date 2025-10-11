@@ -1,0 +1,64 @@
+
+[spawner]
+cond = {-bar_iron_mask_away -player_complete_meet_gosha}
+
+[logic]
+active = walker@at_hole
+combat_ignore = combat_ignore
+on_hit = hit
+ 
+[walker@at_hole]
+path_walk = bar_barman_hole_walk
+path_look = bar_barman_hole_look
+meet = meet
+danger = danger_condition@demon
+on_info = {=actor_in_zone(bar_barman_meet_zone_1)} walker@zone_1, {=actor_in_zone(bar_barman_meet_zone_2)} walker@zone_2,{=actor_in_zone(bar_barman_meet_zone_3)} walker@zone_3, walker@at_hole
+on_info2 = {+bar_iron_mask_told} walker@mute
+combat_ignore_cond = always
+
+[walker@zone_1]
+path_walk = barman_zone_1_walk
+path_look = barman_zone_1_look
+meet = meet
+danger = danger_condition@demon
+on_info = {=actor_in_zone(bar_barman_meet_zone_1)} walker@zone_1, {=actor_in_zone(bar_barman_meet_zone_2)} walker@zone_2,{=actor_in_zone(bar_barman_meet_zone_3)} walker@zone_3, walker@at_hole
+on_info2 = {+bar_iron_mask_told} walker@mute
+combat_ignore_cond = always
+
+[walker@zone_2]
+path_walk = barman_zone_2_walk
+path_look = barman_zone_2_look
+meet = meet
+danger = danger_condition@demon
+on_info = {=actor_in_zone(bar_barman_meet_zone_1)} walker@zone_1, {=actor_in_zone(bar_barman_meet_zone_2)} walker@zone_2,{=actor_in_zone(bar_barman_meet_zone_3)} walker@zone_3, walker@at_hole
+on_info2 = {+bar_iron_mask_told} walker@mute
+combat_ignore_cond = always
+
+[walker@zone_3]
+path_walk = barman_zone_3_walk
+path_look = barman_zone_3_look
+meet = meet
+danger = danger_condition@demon
+on_info = {=actor_in_zone(bar_barman_meet_zone_1)} walker@zone_1, {=actor_in_zone(bar_barman_meet_zone_2)} walker@zone_2,{=actor_in_zone(bar_barman_meet_zone_3)} walker@zone_3, walker@at_hole
+on_info2 = {+bar_iron_mask_told} walker@mute
+combat_ignore_cond = always
+
+[walker@mute]
+path_walk = bar_barman_hole_walk
+path_look = bar_barman_hole_walk
+meet = no_meet
+danger = danger_condition@demon
+combat_ignore_cond = always
+
+[hit]
+on_info = {=hit_by_actor} %+bar_iron_mask_away%
+
+[meet]
+use = true
+use_wpn = true
+
+[danger_condition@demon]
+ignore_distance       = 0
+
+[combat_ignore]
+combat_ignore_cond = always

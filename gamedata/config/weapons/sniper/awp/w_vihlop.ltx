@@ -1,0 +1,210 @@
+;;;;;;;;;;;;;;;;;;;;; ВССК Выхлоп ;;;;;;;;;;;;;;;;;;;;;
+;------------------------------------------------------
+[wpn_vihlop]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency 		= 
+$spawn 				= "weapons\vihlop"		; option for Level Editor
+$npc				= on			; option for Level Editor
+$prefetch 			= 8
+scheduled 			= off 			; option for ALife Simulator
+cform 				= skeleton
+class 				= WP_SVD
+min_radius 			= 50
+max_radius 			= 200
+description			= gunsl_wpn_l96_descr
+
+
+ef_main_weapon_type		= 3
+ef_weapon_type			= 8
+hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, scope7, scope8, scope9, scope10, scope11, sight, sheka, knife
+
+;--- scope weapons -----------------------------------------------------------------
+holder_range_modifier	= 2.15               ; во сколько раз увеличивается eye_range 
+holder_fov_modifier	= 0.3              ; во сколько раз увеличивается eye_fov
+;-----------------------------------------------------------------------------------
+
+cost				= 25000
+weapon_class			= sniper_rifle
+
+ammo_limit			= 60
+ammo_current			= 60
+ammo_elapsed			= 5
+ammo_mag_size			= 10
+                       	
+ammo_class			= ammo_12.7x54
+
+fire_modes			= 1
+
+hand_dependence 		= 2
+single_handed			= 0
+
+slot 				= 2			; secondary
+animation_slot			= 2			; type of the animation that will be used
+
+inv_name				= gunsl_wpn_l96
+inv_name_short			= gunsl_wpn_l96
+inv_weight			= 6.1
+
+inv_grid_width     = 6
+inv_grid_height    = 2
+inv_grid_x         = 11
+inv_grid_y         = 33
+
+;спавнить автоматически боеприпасы при подъеме оружия
+auto_spawn_ammo			= false
+
+sprint_allowed			= true
+
+;-----------------------------------------------------------------------------------
+;базовая дисперсия
+;dispersion_start		= 0
+fire_dispersion_base		= 0.0035 		; угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor		= 1.6f
+
+;отдача
+cam_relax_speed 		= 6.5			; скорость возврата в исходное положение
+cam_relax_speed_ai 		= 120.75		; скорость возврата в исходное положение
+cam_dispersion 			= 2.3			; увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.5			; увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 1.0			; ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 15.0			; максимальный угол отдачи
+cam_max_angle_horz		= 3.0			; (degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 2.0			; (degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor= 5			; увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.0001			; вероятность осечки при максимальном износе 
+misfire_condition_k		= 0.0005
+condition_shot_dec 		= 0.0001	 	; увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+direction 		= 0, 0, 1
+fire_point              = 0.0, 0.215, 0.600 ;fire_point 			= 0.0, 0.128, 0.522
+
+smoke_particles		 	= weapons\generic_shoot_00
+flame_particles                                    = weapons\new_effects\shtg_bm16
+
+shell_point		 	= 0.0, 0.2, -0.030 ;shell_point		 	= 0.0, 0.128, 0.0
+shell_dir		 	= 0.0, 0.0, 0.4
+shell_particles	 		= weapons\762x54 
+
+PDM_disp_base 			= 4.5
+PDM_disp_vel_factor 		= 1.0
+PDM_disp_accel_factor 		= 1.2
+PDM_crouch	 		= 0.9
+PDM_crouch_no_acc 		= 0.8
+
+;;;;;;; Для "Последний Сталкер"
+hit_power                       = 1.3
+hit_impulse		 	= 85
+hit_type 			    = fire_wound
+hit_rate	                = 2.0
+fire_distance           	= 600
+bullet_speed		 	= 1150
+rpm                     	= 30
+
+silencer_hit_power 		= 1.3
+silencer_hit_impulse	 	= 85
+silencer_fire_distance 		= 600
+silencer_bullet_speed	 	= 1150
+
+use_aim_bullet			= true			; Поддерживается ли первая суппер пуля
+time_to_aim			= 1.0	
+
+hud                     = wpn_l96_hud
+normal                  = 0, 1, 0
+position                         = -0.156500, 0.180000, -0.440000
+orientation                      = 0.000000, 0.000000, 0.000000
+strap_position                   = 0.030000, -0.150000, 0.570000
+strap_orientation                = 154.999969, 8.999993, -115.000015
+
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;под мышкой
+strap_bone0			= bip01_spine2
+strap_bone1			= bip01_spine1
+
+visual 				= dynamics\weapons\wpn_l96\wpn_l96.ogf
+
+light_disabled			= true
+
+ph_mass			 	= 5
+
+;addons
+scope_status			= 1
+silencer_status			= 2
+grenade_launcher_status		= 0
+
+zoom_enabled			= true
+scope_zoom_factor	= 20
+scope_zoom_factor_descr	= 6.0
+
+scope_inertion_factor   = 8
+
+scope_lense_fov_factor	= 15
+scope_dynamic_zoom 	= true
+scope_lense_hud_fov = 0.4
+scope_texture			= crosshair2d\crosshair_l96  ;wpn\scope_vssk
+
+silencer_name  				= wpn_addon_silencer
+silencer_x              = 253                ; offset in inventory icon
+silencer_y              = 17
+
+;------------------------------ S.T.A.L.K.E.R`s sound remake ------------------------------
+;звуки
+snd_draw		= weapons\svd\svd_draw
+snd_holster		= weapons\vss\vss_hide
+snd_shoot					     = weapons\dvl_10\l96_shoot
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload						 = weapons\rem700_firebreath\l96_new_reload
+snd_reload_empty				 = weapons\rem700_firebreath\l96_new_reload_empty
+snd_changecartridgetype = weapons\svd\svd_reload
+snd_shoot_grenade       = weapons\gen_grenshoot
+snd_reload_grenade      = weapons\gen_grenload, 1.0, 0.8
+snd_switch              = weapons\groza_switch, 1.0, 0.5
+snd_close		= $silent
+snd_reload_jammed       = weapons\svd\svd_revival
+snd_reload_jammed_last  = weapons\svd\svd_revival_last
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_fakeshoot_first	= weapons\glock17\glock17_shoot_s
+snd_fire_modes	= weapons\vss\vss_firemode
+;snd_fire_modes_empty
+;snd_fire_modes_jammed
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_laser_on	        = weapons\vss\vss_firemode
+snd_laser_off	        = weapons\vss\vss_firemode
+snd_torch_on	        = weapons\vss\vss_firemode
+snd_torch_off	        = weapons\vss\vss_firemode
+snd_headlamp_on     = weapons\headflash_on
+snd_headlamp_off     = weapons\headflash_off
+snd_nv_on                 = weapons\nv_act
+snd_nv_off                = weapons\nv_deact
+snd_kick		        = weapons\ak74\ak74_bayonet
+snd_item_on             = weapons\headflash_on
+snd_silncer_shot	= weapons\dvl_10\dvl_shoot_silenced
+;------------------------------------------------------------------------------------------
+
+silencer_smoke_particles 	= weapons\generic_shoot_00
+
+silencer_light_color		= 0.6, 0.5, 0.3
+silencer_light_range		= 2
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+hit_probability_gd_novice	= 0.80			; точность стрельбы,      
+hit_probability_gd_stalker	= 0.85			; когда оружие в руках НПС
+hit_probability_gd_veteran	= 0.90			; в зависимости от уровня 
+hit_probability_gd_master	= 0.95			; сложности игры          
+
+;-----------------------------------------------------------------------------
+;-- HUD DESCRIPTION
+;-----------------------------------------------------------------------------
+#include "huds.ltx"

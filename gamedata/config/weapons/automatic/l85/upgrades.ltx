@@ -1,0 +1,952 @@
+
+; VSS ================================================================================================================================================
+; ==================================== первая ветка ====================================
+
+
+; 1 ветка
+
+; upgrade 1
+[wpn_l85_a1]:wpn_l85
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, laser, mag40
+
+available_upgrades		= l85_upgr2
+installed_upgrades		= l85_upgr1
+
+scope_respawn                                        = wpn_l85_a1
+scope_respawn_wpn_addon_scope_susat                  = wpn_l85_susat_a1
+scope_respawn_wpn_addon_scope_eotech                 = wpn_l85_eotech_a1
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_l85_susat_dusk_a1
+scope_respawn_wpn_addon_scope_elcan                  = wpn_l85_elcan_a1
+scope_respawn_wpn_addon_scope_susat_night            = wpn_l85_susat_night_a1
+
+
+cost					= 6000
+hud                      	= wpn_l85_a1_hud
+[wpn_l85_a1_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, laser, mag40
+
+; upgrade 1 Sights
+
+[wpn_l85_eotech_a1]:wpn_l85_a1
+hidden_bones = scope2, scope3, scope4, scope5, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40
+scope_bone = scope1
+hud = wpn_l85_a1_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 64                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a1_eotech_hud]:wpn_l85_hud
+hidden_bones = scope2, scope3, scope4, scope5, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40
+aim_hud_offset_pos = 0.0,0.0222,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0222,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.05
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.1
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_l85_susat_dusk_a1]:wpn_l85_a1
+hidden_bones = scope1, scope3, scope4, scope5, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40
+scope_bone = scope2
+hud = wpn_l85_a1_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 65                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a1_susat_dusk_hud]:wpn_l85_hud
+hidden_bones = scope1, scope3, scope4, scope5, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40
+aim_hud_offset_pos = 0.0005,0.01841,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0005,0.01841,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+[wpn_l85_susat_a1]:wpn_l85_a1
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40
+scope_bone = scope4
+hud = wpn_l85_a1_susat_hud
+scope_name              = wpn_addon_scope_susat 
+use_alt_aim_hud = true
+scope_x              	= 66                 ; offset in inventory icon
+scope_y                 = -9
+[wpn_l85_a1_susat_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40
+aim_hud_offset_pos = 0.0,0.015,-0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0115,-0.1
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000200,-0.021000,0.051000
+aim_hud_offset_alt_rot = 0.002000,0.000000,0.0
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.023100,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+
+[wpn_l85_elcan_a1]:wpn_l85_a1
+hidden_bones = scope1, scope2, scope4, scope5, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40
+scope_bone = scope3
+hud = wpn_l85_a1_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 37                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a1_elcan_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope4, scope5, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40
+aim_hud_offset_pos = 0.0,0.016,-0.15
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.016,-0.15
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000300,-0.026000,0.050000
+aim_hud_offset_alt_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.026840,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+[wpn_l85_susat_night_a1]:wpn_l85_a1
+hidden_bones = scope1, scope2, scope3, scope4, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40
+scope_bone = scope5
+hud = wpn_l85_a1_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 28                 ; offset in inventory icon
+scope_y                 = -12
+scope_lense_hud_fov = 0.3
+[wpn_l85_a1_susat_night_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope4, handguard_rail, mag45, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40
+aim_hud_offset_pos = 0.0,-0.007,0.02
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.007,0.02
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,0.12
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,0.07
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+; upgrade 2
+[wpn_l85_a2]:wpn_l85_a1
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, laser
+available_upgrades		= l85_upgr3
+installed_upgrades		= l85_upgr1, l85_upgr2
+
+inv_weight				= 3.92
+
+scope_respawn                                        = wpn_l85_a2
+scope_respawn_wpn_addon_scope_susat                  = wpn_l85_susat_a2
+scope_respawn_wpn_addon_scope_eotech                 = wpn_l85_eotech_a2
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_l85_susat_dusk_a2
+scope_respawn_wpn_addon_scope_elcan                  = wpn_l85_elcan_a2
+scope_respawn_wpn_addon_scope_susat_night            = wpn_l85_susat_night_a2
+
+ammo_mag_size		     	= 40
+cost					= 7000
+hud                      	= wpn_l85_a2_hud
+[wpn_l85_a2_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, laser
+
+; upgrade 2 Sights
+
+[wpn_l85_eotech_a2]:wpn_l85_a2
+hidden_bones = scope2, scope3, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2
+scope_bone = scope1
+hud = wpn_l85_a2_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 64                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a2_eotech_hud]:wpn_l85_hud
+hidden_bones = scope2, scope3, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2
+aim_hud_offset_pos = 0.0,0.0222,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0222,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.05
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.1
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_l85_susat_dusk_a2]:wpn_l85_a2
+hidden_bones = scope1, scope3, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2
+scope_bone = scope2
+hud = wpn_l85_a2_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 65                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a2_susat_dusk_hud]:wpn_l85_hud
+hidden_bones = scope1, scope3, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2
+aim_hud_offset_pos = 0.0005,0.01841,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0005,0.01841,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+[wpn_l85_susat_a2]:wpn_l85_a2
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2
+scope_bone = scope4
+hud = wpn_l85_a2_susat_hud
+scope_name              = wpn_addon_scope_susat 
+use_alt_aim_hud = true
+scope_x              	= 66                 ; offset in inventory icon
+scope_y                 = -9
+[wpn_l85_a2_susat_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2
+aim_hud_offset_pos = 0.0,0.015,-0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0115,-0.1
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000200,-0.021000,0.051000
+aim_hud_offset_alt_rot = 0.002000,0.000000,0.0
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.023100,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+
+[wpn_l85_elcan_a2]:wpn_l85_a2
+hidden_bones = scope1, scope2, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2
+scope_bone = scope3
+hud = wpn_l85_a2_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 37                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a2_elcan_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2
+aim_hud_offset_pos = 0.0,0.016,-0.15
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.016,-0.15
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000300,-0.026000,0.050000
+aim_hud_offset_alt_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.026840,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+[wpn_l85_susat_night_a2]:wpn_l85_a2
+hidden_bones = scope1, scope2, scope3, scope4, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2
+scope_bone = scope5
+hud = wpn_l85_a2_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 28                 ; offset in inventory icon
+scope_y                 = -12
+scope_lense_hud_fov = 0.3
+[wpn_l85_a2_susat_night_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope4, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2
+aim_hud_offset_pos = 0.0,-0.007,0.02
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.007,0.02
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,0.12
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,0.07
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+
+; upgrade 3
+[wpn_l85_a3]:wpn_l85_a2
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, laser, handler
+available_upgrades		= l85_upgr4
+installed_upgrades		= l85_upgr1, l85_upgr2, l85_upgr3
+
+inv_weight				= 4.0
+
+cam_dispersion          = 0.70      ;увеличения угла (в градусах) с первым выстрелом
+cam_dispersion_inc      = 0.35    ;увеличениe cam_dispersion с каждым выстрелом
+
+zoom_cam_dispersion          = 0.37
+zoom_cam_dispersion_inc      = 0.27
+
+scope_respawn                                        = wpn_l85_a3
+scope_respawn_wpn_addon_scope_susat                  = wpn_l85_susat_a3
+scope_respawn_wpn_addon_scope_eotech                 = wpn_l85_eotech_a3
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_l85_susat_dusk_a3
+scope_respawn_wpn_addon_scope_elcan                  = wpn_l85_elcan_a3
+scope_respawn_wpn_addon_scope_susat_night            = wpn_l85_susat_night_a3
+cost					= 8000
+hud                      	= wpn_l85_a3_hud
+[wpn_l85_a3_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, laser, handler
+
+; upgrade 3 Sights
+
+[wpn_l85_eotech_a3]:wpn_l85_a3
+hidden_bones = scope2, scope3, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, handler
+scope_bone = scope1
+hud = wpn_l85_a3_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 64                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a3_eotech_hud]:wpn_l85_hud
+hidden_bones = scope2, scope3, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, handler
+aim_hud_offset_pos = 0.0,0.0222,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0222,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.05
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.1
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_l85_susat_dusk_a3]:wpn_l85_a3
+hidden_bones = scope1, scope3, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, handler
+scope_bone = scope2
+hud = wpn_l85_a3_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 65                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a3_susat_dusk_hud]:wpn_l85_hud
+hidden_bones = scope1, scope3, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, handler
+aim_hud_offset_pos = 0.0005,0.01841,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0005,0.01841,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+[wpn_l85_susat_a3]:wpn_l85_a3
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, handler
+scope_bone = scope4
+hud = wpn_l85_a3_susat_hud
+scope_name              = wpn_addon_scope_susat 
+use_alt_aim_hud = true
+scope_x              	= 66                 ; offset in inventory icon
+scope_y                 = -9
+[wpn_l85_a3_susat_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, handler
+aim_hud_offset_pos = 0.0,0.015,-0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0115,-0.1
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000200,-0.021000,0.051000
+aim_hud_offset_alt_rot = 0.002000,0.000000,0.0
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.023100,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+
+[wpn_l85_elcan_a3]:wpn_l85_a3
+hidden_bones = scope1, scope2, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, handler
+scope_bone = scope3
+hud = wpn_l85_a3_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 37                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a3_elcan_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope4, scope5, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, handler
+aim_hud_offset_pos = 0.0,0.016,-0.15
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.016,-0.15
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000300,-0.026000,0.050000
+aim_hud_offset_alt_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.026840,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+[wpn_l85_susat_night_a3]:wpn_l85_a3
+hidden_bones = scope1, scope2, scope3, scope4, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, handler
+scope_bone = scope5
+hud = wpn_l85_a3_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 28                 ; offset in inventory icon
+scope_y                 = -12
+scope_lense_hud_fov = 0.3
+[wpn_l85_a3_susat_night_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope4, handguard_rail, mag30, mag60, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, handler
+aim_hud_offset_pos = 0.0,-0.007,0.02
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.007,0.02
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,0.12
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,0.07
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+
+; upgrade 4
+[wpn_l85_a4]:wpn_l85_a3
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, laser, handler, mag40
+available_upgrades		= l85_upgr5
+installed_upgrades		= l85_upgr1, l85_upgr2, l85_upgr3, l85_upgr4
+
+scope_respawn                                        = wpn_l85_a4
+scope_respawn_wpn_addon_scope_susat                  = wpn_l85_susat_a4
+scope_respawn_wpn_addon_scope_eotech                 = wpn_l85_eotech_a4
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_l85_susat_dusk_a4
+scope_respawn_wpn_addon_scope_elcan                  = wpn_l85_elcan_a4
+scope_respawn_wpn_addon_scope_susat_night            = wpn_l85_susat_night_a4
+
+inv_weight				= 4.1
+ammo_mag_size		     	= 60
+cost					= 9000
+
+hud                      	= wpn_l85_a4_hud
+[wpn_l85_a4_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, laser, handler, mag40
+
+; upgrade 4 Sights
+
+[wpn_l85_eotech_a4]:wpn_l85_a4
+hidden_bones = scope2, scope3, scope4, scope5, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+scope_bone = scope1
+hud = wpn_l85_a4_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 64                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a4_eotech_hud]:wpn_l85_hud
+hidden_bones = scope2, scope3, scope4, scope5, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+aim_hud_offset_pos = 0.0,0.0222,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0222,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.05
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.1
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_l85_susat_dusk_a4]:wpn_l85_a4
+hidden_bones = scope1, scope3, scope4, scope5, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+scope_bone = scope2
+hud = wpn_l85_a4_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 65                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a4_susat_dusk_hud]:wpn_l85_hud
+hidden_bones = scope1, scope3, scope4, scope5, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+aim_hud_offset_pos = 0.0005,0.01841,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0005,0.01841,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+[wpn_l85_susat_a4]:wpn_l85_a4
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+scope_bone = scope4
+hud = wpn_l85_a4_susat_hud
+scope_name              = wpn_addon_scope_susat 
+use_alt_aim_hud = true
+scope_x              	= 66                 ; offset in inventory icon
+scope_y                 = -9
+[wpn_l85_a4_susat_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+aim_hud_offset_pos = 0.0,0.015,-0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0115,-0.1
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000200,-0.021000,0.051000
+aim_hud_offset_alt_rot = 0.002000,0.000000,0.0
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.023100,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+
+[wpn_l85_elcan_a4]:wpn_l85_a4
+hidden_bones = scope1, scope2, scope4, scope5, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+scope_bone = scope3
+hud = wpn_l85_a4_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 37                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a4_elcan_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope4, scope5, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+aim_hud_offset_pos = 0.0,0.016,-0.15
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.016,-0.15
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000300,-0.026000,0.050000
+aim_hud_offset_alt_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.026840,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+[wpn_l85_susat_night_a4]:wpn_l85_a4
+hidden_bones = scope1, scope2, scope3, scope4, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+scope_bone = scope5
+hud = wpn_l85_a4_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 28                 ; offset in inventory icon
+scope_y                 = -12
+scope_lense_hud_fov = 0.3
+[wpn_l85_a4_susat_night_hud]:wpn_l85_hud
+hidden_bones = scope1, scope2, scope3, scope4, handguard_rail, mag30, mag45, tac_handler, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+aim_hud_offset_pos = 0.0,-0.007,0.02
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.007,0.02
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,0.12
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,0.07
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+; upgrade 5
+[wpn_l85_a5]:wpn_l85_a4
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard, mag30, mag45, flash, light, rope, bayonet, laser, handler, mag40
+available_upgrades		= l85_upgr6
+installed_upgrades		= l85_upgr1, l85_upgr2, l85_upgr3, l85_upgr4, l85_upgr5
+
+scope_respawn                                        = wpn_l85_a5
+scope_respawn_wpn_addon_scope_susat                  = wpn_l85_susat_a5
+scope_respawn_wpn_addon_scope_eotech                 = wpn_l85_eotech_a5
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_l85_susat_dusk_a5
+scope_respawn_wpn_addon_scope_elcan                  = wpn_l85_elcan_a5
+scope_respawn_wpn_addon_scope_susat_night            = wpn_l85_susat_night_a5
+cost					= 10000
+
+inv_weight				= 4.25
+grenade_launcher_status	= 0
+
+cam_dispersion          = 0.65      ;увеличения угла (в градусах) с первым выстрелом
+cam_dispersion_inc      = 0.39    ;увеличениe cam_dispersion с каждым выстрелом
+
+zoom_cam_dispersion          = 0.35
+zoom_cam_dispersion_inc      = 0.25
+
+hud                      	= wpn_l85_a5_hud
+[wpn_l85_a5_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard, mag30, mag45, flash, light, rope, bayonet, laser, handler, mag40
+
+; upgrade 5 Sights
+
+[wpn_l85_eotech_a5]:wpn_l85_a5
+hidden_bones = scope2, scope3, scope4, scope5, handguard, mag30, mag45, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+scope_bone = scope1
+hud = wpn_l85_a5_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 64                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a5_eotech_hud]:wpn_l85_tact_hud
+hidden_bones = scope2, scope3, scope4, scope5, handguard, mag30, mag45, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+aim_hud_offset_pos = 0.0,0.0222,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0222,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.05
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.1
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_l85_susat_dusk_a5]:wpn_l85_a5
+hidden_bones = scope1, scope3, scope4, scope5, handguard, mag30, mag45, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+scope_bone = scope2
+hud = wpn_l85_a5_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 65                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a5_susat_dusk_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope3, scope4, scope5, handguard, mag30, mag45, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+aim_hud_offset_pos = 0.0005,0.01841,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0005,0.01841,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+[wpn_l85_susat_a5]:wpn_l85_a5
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard, mag30, mag45, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+scope_bone = scope4
+hud = wpn_l85_a5_susat_hud
+scope_name              = wpn_addon_scope_susat 
+use_alt_aim_hud = true
+scope_x              	= 66                 ; offset in inventory icon
+scope_y                 = -9
+[wpn_l85_a5_susat_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard, mag30, mag45, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+aim_hud_offset_pos = 0.0,0.015,-0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0115,-0.1
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000200,-0.021000,0.051000
+aim_hud_offset_alt_rot = 0.002000,0.000000,0.0
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.023100,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+
+[wpn_l85_elcan_a5]:wpn_l85_a5
+hidden_bones = scope1, scope2, scope4, scope5, handguard, mag30, mag45, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+scope_bone = scope3
+hud = wpn_l85_a5_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 37                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a5_elcan_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope4, scope5, handguard, mag30, mag45, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+aim_hud_offset_pos = 0.0,0.016,-0.15
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.016,-0.15
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000300,-0.026000,0.050000
+aim_hud_offset_alt_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.026840,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+[wpn_l85_susat_night_a5]:wpn_l85_a5
+hidden_bones = scope1, scope2, scope3, scope4, handguard, mag30, mag45, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+scope_bone = scope5
+hud = wpn_l85_a5_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 28                 ; offset in inventory icon
+scope_y                 = -12
+scope_lense_hud_fov = 0.3
+[wpn_l85_a5_susat_night_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope3, scope4, handguard, mag30, mag45, flash, light, rope, bayonet, sight_handle, sight_iron2, line, line2, mag40, handler
+aim_hud_offset_pos = 0.0,-0.007,0.02
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.007,0.02
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,0.12
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,0.07
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+; upgrade 6
+[wpn_l85_a6]:wpn_l85_a5
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard, mag30, mag45, bayonet, handler, mag40
+available_upgrades		= l85_upgr7
+installed_upgrades		= l85_upgr1, l85_upgr2, l85_upgr3, l85_upgr4, l85_upgr5, l85_upgr6
+inv_weight				= 4.45
+
+
+laserdot_world_attach_offset_x = -0.020
+laserdot_world_attach_offset_y = 0.228
+laserdot_world_attach_offset_z = 0.194
+
+laserdot_attach_offset_x = -0.041
+laserdot_attach_offset_y = 0.1155
+laserdot_attach_offset_z = -0.388497
+
+torch_world_attach_offset_x = 0.020
+torch_world_attach_offset_y = 0.234
+torch_world_attach_offset_z = 0.194
+
+torch_omni_world_attach_offset_x = 0.020
+torch_omni_world_attach_offset_y = 0.234
+torch_omni_world_attach_offset_z = 0.194
+
+scope_respawn                                        = wpn_l85_a6
+scope_respawn_wpn_addon_scope_susat                  = wpn_l85_susat_a6
+scope_respawn_wpn_addon_scope_eotech                 = wpn_l85_eotech_a6
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_l85_susat_dusk_a6
+scope_respawn_wpn_addon_scope_elcan                  = wpn_l85_elcan_a6
+scope_respawn_wpn_addon_scope_susat_night            = wpn_l85_susat_night_a6
+cost					= 11000
+hud                      	= wpn_l85_a6_hud
+[wpn_l85_a6_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard, mag30, mag45, bayonet, handler, mag40
+
+; upgrade 6 Sights
+
+[wpn_l85_eotech_a6]:wpn_l85_a6
+hidden_bones = scope2, scope3, scope4, scope5, handguard, mag30, mag45, bayonet, sight_handle, sight_iron2, mag40, handler
+scope_bone = scope1
+hud = wpn_l85_a6_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 64                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a6_eotech_hud]:wpn_l85_tact_hud
+hidden_bones = scope2, scope3, scope4, scope5, handguard, mag30, mag45, bayonet, sight_handle, sight_iron2, mag40, handler
+aim_hud_offset_pos = 0.0,0.0222,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0222,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.05
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.1
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_l85_susat_dusk_a6]:wpn_l85_a6
+hidden_bones = scope1, scope3, scope4, scope5, handguard, mag30, mag45, bayonet, sight_handle, sight_iron2, mag40, handler
+scope_bone = scope2
+hud = wpn_l85_a6_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 65                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a6_susat_dusk_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope3, scope4, scope5, handguard, mag30, mag45, bayonet, sight_handle, sight_iron2, mag40, handler
+aim_hud_offset_pos = 0.0005,0.01841,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0005,0.01841,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+[wpn_l85_susat_a6]:wpn_l85_a6
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard, mag30, mag45, bayonet, sight_handle, sight_iron2, mag40, handler
+scope_bone = scope4
+hud = wpn_l85_a6_susat_hud
+scope_name              = wpn_addon_scope_susat 
+use_alt_aim_hud = true
+scope_x              	= 66                 ; offset in inventory icon
+scope_y                 = -9
+[wpn_l85_a6_susat_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard, mag30, mag45, bayonet, sight_handle, sight_iron2, mag40, handler
+aim_hud_offset_pos = 0.0,0.015,-0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0115,-0.1
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000200,-0.021000,0.051000
+aim_hud_offset_alt_rot = 0.002000,0.000000,0.0
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.023100,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+
+[wpn_l85_elcan_a6]:wpn_l85_a6
+hidden_bones = scope1, scope2, scope4, scope5, handguard, mag30, mag45, bayonet, sight_handle, sight_iron2, mag40, handler
+scope_bone = scope3
+hud = wpn_l85_a6_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 37                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a6_elcan_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope4, scope5, handguard, mag30, mag45, bayonet, sight_handle, sight_iron2, mag40, handler
+aim_hud_offset_pos = 0.0,0.016,-0.15
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.016,-0.15
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000300,-0.026000,0.050000
+aim_hud_offset_alt_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.026840,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+[wpn_l85_susat_night_a6]:wpn_l85_a6
+hidden_bones = scope1, scope2, scope3, scope4, handguard, mag30, mag45, bayonet, sight_handle, sight_iron2, mag40, handler
+scope_bone = scope5
+hud = wpn_l85_a6_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 28                 ; offset in inventory icon
+scope_y                 = -12
+scope_lense_hud_fov = 0.3
+[wpn_l85_a6_susat_night_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope3, scope4, handguard, mag30, mag45, bayonet, sight_handle, sight_iron2, mag40, handler
+aim_hud_offset_pos = 0.0,-0.007,0.02
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.007,0.02
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,0.12
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,0.07
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+; upgrade 7
+[wpn_l85_a7]:wpn_l85_a6
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard, mag30, mag45, handler, mag40
+available_upgrades		= none
+installed_upgrades		= l85_upgr1, l85_upgr2, l85_upgr3, l85_upgr4, l85_upgr5, l85_upgr6, l85_upgr7
+inv_weight				= 4.75
+
+quickmelee_status		= 1
+silencer_status				= 0
+grenade_launcher_status		= 0	
+
+scope_respawn                                        = wpn_l85_a7
+scope_respawn_wpn_addon_scope_susat                  = wpn_l85_susat_a7
+scope_respawn_wpn_addon_scope_eotech                 = wpn_l85_eotech_a7
+scope_respawn_wpn_addon_scope_susat_dusk             = wpn_l85_susat_dusk_a7
+scope_respawn_wpn_addon_scope_elcan                  = wpn_l85_elcan_a7
+scope_respawn_wpn_addon_scope_susat_night            = wpn_l85_susat_night_a7
+
+cam_dispersion          = 0.35        ;увеличени¤ угла (в градусах) с каждым выстрелом
+cam_dispersion_inc      = 0.15       ;увеличениe cam_dispersion с каждым выстрелом
+
+zoom_cam_dispersion          = 0.15
+zoom_cam_dispersion_inc      = 0.10
+
+laserdot_world_attach_offset_x = -0.020
+laserdot_world_attach_offset_y = 0.228
+laserdot_world_attach_offset_z = 0.194
+
+laserdot_attach_offset_x = -0.041
+laserdot_attach_offset_y = 0.1155
+laserdot_attach_offset_z = -0.388497
+
+torch_world_attach_offset_x = 0.020
+torch_world_attach_offset_y = 0.234
+torch_world_attach_offset_z = 0.194
+
+torch_omni_world_attach_offset_x = 0.020
+torch_omni_world_attach_offset_y = 0.234
+torch_omni_world_attach_offset_z = 0.194
+
+cost					= 12000
+hud                      	= wpn_l85_a7_hud
+[wpn_l85_a7_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope3, scope4, scope5, rail, handguard, mag30, mag45, handler, mag40
+
+; upgrade 7 Sights
+
+[wpn_l85_eotech_a7]:wpn_l85_a7
+hidden_bones = scope2, scope3, scope4, scope5, handguard, mag30, mag45, sight_handle, sight_iron2, mag40, handler
+scope_bone = scope1
+hud = wpn_l85_a7_eotech_hud
+scope_name              = wpn_addon_scope_eotech
+scope_x              	= 64                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a7_eotech_hud]:wpn_l85_tact_hud
+hidden_bones = scope2, scope3, scope4, scope5, handguard, mag30, mag45, sight_handle, sight_iron2, mag40, handler
+aim_hud_offset_pos = 0.0,0.0222,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0222,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.05
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.1
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+[wpn_l85_susat_dusk_a7]:wpn_l85_a7
+hidden_bones = scope1, scope3, scope4, scope5, handguard, mag30, mag45, sight_handle, sight_iron2, mag40, handler
+scope_bone = scope2
+hud = wpn_l85_a7_susat_dusk_hud
+scope_name              = wpn_addon_scope_susat_dusk
+scope_x              	= 65                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a7_susat_dusk_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope3, scope4, scope5, handguard, mag30, mag45, sight_handle, sight_iron2, mag40, handler
+aim_hud_offset_pos = 0.0005,0.01841,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0005,0.01841,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+
+[wpn_l85_susat_a7]:wpn_l85_a7
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard, mag30, mag45, sight_handle, sight_iron2, mag40, handler
+scope_bone = scope4
+hud = wpn_l85_a7_susat_hud
+scope_name              = wpn_addon_scope_susat 
+use_alt_aim_hud = true
+scope_x              	= 66                 ; offset in inventory icon
+scope_y                 = -9
+[wpn_l85_a7_susat_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope3, scope5, rail, handguard, mag30, mag45, sight_handle, sight_iron2, mag40, handler
+aim_hud_offset_pos = 0.0,0.015,-0.1
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.0115,-0.1
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000200,-0.021000,0.051000
+aim_hud_offset_alt_rot = 0.002000,0.000000,0.0
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.023100,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+[wpn_l85_elcan_a7]:wpn_l85_a7
+hidden_bones = scope1, scope2, scope4, scope5, handguard, mag30, mag45, sight_handle, sight_iron2, mag40, handler
+scope_bone = scope3
+hud = wpn_l85_a7_elcan_hud
+scope_name              = wpn_addon_scope_elcan 
+use_alt_aim_hud = true
+scope_x              	= 37                 ; offset in inventory icon
+scope_y                 = -10
+[wpn_l85_a7_elcan_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope4, scope5, handguard, mag30, mag45, sight_handle, sight_iron2, mag40, handler
+aim_hud_offset_pos = 0.0,0.016,-0.15
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,0.016,-0.15
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,-0.0
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,-0.05
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0
+
+aim_hud_offset_alt_pos = 0.000300,-0.026000,0.050000
+aim_hud_offset_alt_rot = 0.000000,0.000000,0.000000
+aim_hud_offset_alt_pos_16x9 = 0.000200,-0.026840,0.010000
+aim_hud_offset_alt_rot_16x9 = 0.002000,0.000000,0.000000
+
+[wpn_l85_susat_night_a7]:wpn_l85_a7
+hidden_bones = scope1, scope2, scope3, scope4, handguard, mag30, mag45, sight_handle, sight_iron2, mag40, handler
+scope_bone = scope5
+hud = wpn_l85_a7_susat_night_hud
+scope_name              = wpn_addon_scope_susat_night
+scope_x              	= 28                 ; offset in inventory icon
+scope_y                 = -12
+scope_lense_hud_fov = 0.3
+[wpn_l85_a7_susat_night_hud]:wpn_l85_tact_hud
+hidden_bones = scope1, scope2, scope3, scope4, handguard, mag30, mag45, sight_handle, sight_iron2, mag40, handler
+aim_hud_offset_pos = 0.0,-0.007,0.02
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.007,0.02
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+gl_hud_offset_pos          = 0.0,0.012,0.12
+gl_hud_offset_rot          = 0.0,0.0,0.0
+gl_hud_offset_pos_16x9     = 0.0,0.012,0.07
+gl_hud_offset_rot_16x9     = 0.0,0.0,0.0

@@ -1,0 +1,192 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; «ТТ» (Тульский, Токарев) ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[wpn_tt33]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency 		= 
+$spawn 				= "weapons\tt33"		; option for Level Editor
+$npc				= on			; option for Level Editor
+$prefetch 			= 8
+scheduled 			= off 			; option for ALife Simulator
+cform 				= skeleton      
+class 				= WP_PM
+min_radius 			= 1
+max_radius 			= 10
+description			= gunsl_wpn_tt33_descr      
+
+ef_main_weapon_type		= 0
+ef_weapon_type			= 5
+
+;-----------------------------------------------------------------------------------
+holder_range_modifier		= 1.0 			; во сколько раз увеличивается eye_range 
+holder_fov_modifier		= 1.5 			; во сколько раз увеличивается eye_fov
+;-----------------------------------------------------------------------------------
+hidden_bones = sight
+
+cost				= 900
+ 
+ammo_limit			= 120
+ammo_current			= 120
+ammo_elapsed			= 9
+ammo_mag_size			= 8
+
+ammo_class			= ammo_7.62x25_p, ammo_7.62x25_ps
+                	
+hand_dependence			= 1
+single_handed			= 1
+
+slot 				= 1
+animation_slot			= 1
+
+inv_name			= gunsl_wpn_tt33
+inv_name_short			= gunsl_wpn_tt33
+inv_weight			= 0.94
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 31
+inv_grid_y         = 2
+
+;спавнить автоматически боеприпасы при подъеме оружия
+;auto_spawn_ammo		= false
+
+;-----------------------------------------------------------------------------------
+;базовая дисперсия
+fire_dispersion_base		= 0.2	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor		= 0.95f
+
+;отдача					
+cam_relax_speed         	= 15.724		;скорость возврата в исходное положение
+cam_dispersion          	= 0.302		;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.060		;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 0.050		;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle		        = 0.936	    	;максимальный угол отдачи
+cam_max_angle_horz		= 0.936		;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 0.302		;(degree) size of step camera moved in horizontal position while shooting
+					
+fire_dispersion_condition_factor 	= 5	    	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.005		;вероятность осечки при максимальном износе 
+misfire_condition_k		= 0.05		
+condition_shot_dec 		= 0.0001		;увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+direction           	        = 0, 0, 1
+fire_point               	= 0.0, 0.131, 0.192
+
+flame_particles							 =  weapons\new_effects\pistol_9x18
+smoke_particles 						 = weapons\generic_shoot_00
+grenade_flame_particles 				 =  weapons\generic_shoot_00
+silencer_smoke_particles 				 =  weapons\generic_shoot_00
+
+
+shell_point		 	= 0.00, 0.159, 0.03
+shell_dir		 	= 0.0, 0.0, 0.4
+shell_particles	 		= weapons\9x18
+
+PDM_disp_base 		        = 1.0		
+PDM_disp_vel_factor 		= 0.8		
+PDM_disp_accel_factor 		= 0.8		
+PDM_crouch	 	        = 1.0		
+PDM_crouch_no_acc 		= 1.0
+
+;;;;;; Для "Последний Сталкер"
+hit_power			= 0.48
+hit_impulse		 	= 50
+hit_type 			= fire_wound
+
+fire_distance 			= 50
+bullet_speed			= 420		;начальная скорость пули
+rpm 				= 250
+rpm_empty_click 	 	= 150
+; end ttc
+
+use_aim_bullet			= true		;Поддерживается ли первая суппер пуля
+time_to_aim			= 1.0	
+
+hud 				= wpn_tt33_hud
+normal 				= 0, 1, 0
+position                 	= -0.021, -0.10, 0.0
+orientation 			= 0, 0, 1
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;strap_position 		= -0.1, -0.45, 0.2		; position (offset) and orientation of the weapon when it is strapped
+;strap_orientation 		= 1.57, 0, 0			; (3rd person view)
+;strap_bone0			= bip01_spine2
+;strap_bone1			= bip01_spine1
+
+visual 				= dynamics\weapons\wpn_tt33\wpn_tt33.ogf
+
+light_color		 	= 0.6, 0.5, 0.3
+light_range		 	= 3.0
+light_var_color		 	= 0.05
+light_var_range		 	= 0.5
+light_time 		 	= 0.2
+
+ph_mass			 	= 1
+
+;addons
+scope_status			= 0
+silencer_status			= 0	;2
+grenade_launcher_status		= 0
+
+zoom_enabled			= true
+scope_zoom_factor	 	= 100
+
+silencer_name 		= wpn_addon_silencer		; section name for the attachable silencer
+silencer_x 			= 75						; offset in inventory icon
+silencer_y 			= -19					
+
+;sounds (name of the sound, volume (0.0 - 1.0), delay (sec))
+snd_draw		= weapons\p99\p99_draw
+snd_holster		= weapons\m1911\hide
+snd_shoot		= weapons\tt33\tt_shoot
+snd_empty		= weapons\pistol_empty
+snd_reload		= weapons\tt33\tt_reload
+snd_reload_empty        = weapons\tt33\tt_reload_full
+snd_changecartridgetype = weapons\tt33\tt_reload
+snd_close		= $silent
+snd_reload_jammed       = weapons\grach\grach_revival
+snd_reload_jammed_last  = weapons\grach\grach_revival
+snd_jammed_click        = weapons\glock17\glock17_dry
+snd_attach_sil		= weapons\m1911\colt1911_reload
+snd_detach_sil		= weapons\m1911\colt1911_reload
+snd_attach_scope        = weapons\m1911\colt1911_reload
+snd_detach_scope        = weapons\m1911\colt1911_reload
+snd_attach_gl           = weapons\m1911\colt1911_reload
+snd_detach_gl           = weapons\m1911\colt1911_reload
+snd_unload_mag          = $silent
+snd_jam                 = $silent
+snd_breechblock         = $silent
+snd_prepare_detector    = weapons\detector_prepare
+snd_finish_detector     = weapons\pistol_hand_draw
+snd_aim_start           = weapons\vss\vss_aim_start
+snd_aim_end             = weapons\vss\vss_aim_end
+snd_sprint_start        = weapons\detector_prepare
+snd_sprint_end          = weapons\pistol_sprint_end
+snd_reload_jammed_detector               = weapons\grach\grach_revival_det
+snd_reload_jammed_last_detector          = weapons\grach\grach_revival_det
+snd_light_misfire                        = weapons\pistol_light_misfire
+snd_suicide	        = weapons\suicide_start
+snd_stop_suicide	= weapons\suicide_end
+snd_headlamp_on         = weapons\headflash_on
+snd_headlamp_off        = weapons\headflash_off
+snd_nv_on               = weapons\nv_act
+snd_nv_off              = weapons\nv_deact
+
+snd_item_on             = weapons\headflash_on
+;silencer_flame_particles 	= weapons\generic_weapon01
+
+
+silencer_hit_power		= 0.45
+silencer_hit_impulse	 	= 45
+silencer_fire_distance 		= 45
+silencer_bullet_speed	 	= 390
+
+silencer_light_color		= 0.6, 0.5, 0.3
+silencer_light_range		= 2
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+;-----------------------------------------------------------------------------
+;-- HUD DESCRIPTION
+;-----------------------------------------------------------------------------
+#include "huds.ltx"

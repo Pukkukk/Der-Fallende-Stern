@@ -1,0 +1,41 @@
+[logic]
+active = sleeper
+combat_ignore = combat_ignore
+
+[sleeper]
+path_main = esc_satan_sleep
+wakeable = false
+danger = danger_condition@esc_satan
+combat_ignore_cond = {=fighting_dist_ge(50)}
+on_actor_dist_le_nvis = 3 | sleeper1
+meet = no_meet
+
+[sleeper1]
+path_main = esc_satan_sleep
+wakeable = true
+danger = danger_condition@esc_satan
+combat_ignore_cond = {=fighting_dist_ge(50)}
+on_actor_dist_ge_nvis = 5 | sleeper
+on_info = {+zaglushka_29} sleeper2
+on_info2 = {+zaglushka_30} walker
+meet = default_meet
+
+[sleeper2]
+path_main = esc_satan_sleep
+wakeable = true
+danger = danger_condition@esc_satan
+combat_ignore_cond = {=fighting_dist_ge(50)}
+meet = no_meet
+
+[walker]
+path_walk = esc_satan_walk
+danger = danger_condition@esc_satan
+combat_ignore_cond = {=fighting_dist_ge(50)}
+on_signal = arrive | %+zaglushka_28 =esc_satan_away_1%
+meet = no_meet
+
+[combat_ignore]
+combat_ignore_cond = {=fighting_dist_ge(50)}
+
+[danger_condition@esc_satan]
+ignore_distance = 1.8

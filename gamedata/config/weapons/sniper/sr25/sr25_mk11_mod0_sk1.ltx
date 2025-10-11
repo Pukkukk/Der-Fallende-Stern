@@ -1,0 +1,193 @@
+;;;;;;;;;;;;;;;;;;;; SR-25 ;;;;;;;;;;;;;;;;;;;
+;---------------------------------------------
+[wpn_sr25_mk11_mod0_sk1]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency 	= 
+$spawn                  = "weapons\sr25_mk11_mod0_sk1"					; option for Level Editor
+$npc			 		= on				; option for Level Editor
+$prefetch 		 		= 8
+scheduled               = off              ; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_AK74
+min_radius              = 0
+max_radius              = 50
+description				= enc_weapons1_wpn-sr25 
+
+ef_main_weapon_type		= 2
+ef_weapon_type			= 6
+
+
+;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0		       ; во сколько раз увеличивается eye_range 
+holder_fov_modifier	= 0.7              ; во сколько раз увеличивается eye_fov
+;-----------------------------------------------------------------------------------
+
+weapon_class			= assault_rifle
+
+cost				= 20000
+
+ammo_limit		 	= 210
+ammo_current			= 30
+ammo_elapsed		 	= 20
+
+ammo_mag_size		 	= 20
+grenade_class			= ammo_m209
+ammo_class		 		= ammo_7.62x51_fmj, ammo_7.62x51_ap
+fire_modes				= 1
+launch_speed = 0
+
+hand_dependence		 	= 1
+single_handed			= 0
+
+inv_name			= wpn-sr25 
+inv_name_short			= wpn-sr25
+inv_weight				= 6.5
+
+inv_grid_width     = 6
+inv_grid_height    = 2
+inv_grid_x         = 30
+inv_grid_y         = 16
+
+
+kill_msg_x		= 72
+kill_msg_y		= 82
+kill_msg_width		= 56
+kill_msg_height		= 23
+
+slot 				= 2		; // secondary
+animation_slot			= 2		; type of the animation that will be used
+hidden_bones = laser, grip, s_kemper, s_eot, s_aimpoint, s_acog, s_pn23, s_specter, s_susat, mag_60, mag_45
+;-----------------------------------------------------------------------------------
+;базовая дисперсия
+fire_dispersion_base		= 0.011	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor		= 1.05f
+	
+;отдача					
+cam_relax_speed 		= 9.5			; скорость возврата в исходное положение
+cam_relax_speed_ai 		= 120.75		; скорость возврата в исходное положение
+cam_dispersion 			= 2.05			; увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.30			; увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 1.0			; ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 15.0			; максимальный угол отдачи
+cam_max_angle_horz		= 3.0			; (degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 1.15
+					
+fire_dispersion_condition_factor 	= 5	    	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.005		;вероятность осечки при максимальном износе 
+misfire_condition_k		= 0.05		
+condition_shot_dec 		= 0.00025		;увеличение износа при каждом выстреле
+;--------------------------------------------------------------------------------
+
+direction               = 0, 0, 1
+
+fire_point             	= 0,0.227,0.765
+flame_particles				= amik\weapons\smoke_particles\smoke_particles_00
+smoke_particles				= amik\weapons\smoke_particles\smoke_particles_00	
+;amik\weapons\nato_smoke_00	;amik\weapons\smoke_particles\silencer_smoke_particles_00
+grenade_flame_particles			= weapons\generic_weapon01
+
+shell_point             			= 0.0,0.227,0.084
+shell_dir               			= 0,0,0.4
+shell_particles         			= weapons\762x51
+
+rpm_empty_click 	 	= 200
+
+PDM_disp_base 		= 4.0		
+PDM_disp_vel_factor 	= 0.8		
+PDM_disp_accel_factor 	= 1.0		
+PDM_crouch	 	= 1.0		
+PDM_crouch_no_acc 	= 1.0
+
+;;;;;;; Для "Последний Сталкер"
+hit_power        = 1.00
+hit_impulse	 = 90
+hit_type 			= fire_wound
+hit_rate	 = 2.0
+fire_distance    = 800
+bullet_speed	 = 840  ;начальная скорость пули
+rpm              = 240
+; end ttc
+
+use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+time_to_aim				= 1.0
+
+silencer_hit_power       	= 1.0
+silencer_hit_impulse	 	= 90
+silencer_fire_distance   	= 800
+silencer_bullet_speed	 	= 840
+
+hud                     = wpn_sr25_hud
+normal                  = 0, 1, 0
+position                 	= -0.026, -0.135, 0.0
+orientation              	= 0.0, 0.0, 0.0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+strap_position         		= -0.175,-0.18,0.2 ;-0.15,-0.37,0.2			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -10,-5,90       ;-10,-5,10					; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo            = 1000
+visual                  = dynamics\weapons\wpn_sr25\wpn_sr25.ogf
+
+light_color		 	= 0.6,0.5,0.3
+light_range		 	= 5
+light_var_color		 	= 0.05
+light_var_range		 	= 0.1
+light_time 		 	= 0.2
+
+ph_mass			 	= 5
+
+;addons
+scope_status			= 1
+silencer_status			= 1
+grenade_launcher_status	        = 0
+
+zoom_enabled			= true
+scope_zoom_factor	        = 10
+scope_inertion_factor   = 8
+
+scope_lense_fov_factor	= 15
+scope_dynamic_zoom 	= true
+scope_lense_hud_fov = 0.4
+
+scope_texture			= crosshair2d\crosshair_leupold ;wpn\mil-dot
+
+silencer_name  				= wpn_addon_silencer
+silencer_x 				= 237
+silencer_y 				= 16
+
+;silencer_smoke_particles 	= amik\weapons\smoke_particles\silencer_smoke_particles_00
+grenade_launcher_name 		= wpn_addon_grenade_launcher_m203
+grenade_launcher_x 			= 128
+grenade_launcher_y 			= 28
+
+
+silencer_light_color		= 1.0, 0.1, 0.0
+silencer_light_range		= 2
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+;звуки
+snd_draw		= weapons\sig550\sig550_draw
+snd_holster		= weapons\p90\p90_hide
+snd_shoot		= iwp\galil31_silencer_mono3
+snd_empty		= weapons\glock17\glock17_dry
+snd_reload              = weapons\m4\m16_reload
+snd_reload_empty        = weapons\m4\m16_reload_empty
+snd_reload_jammed       = weapons\m4\m4_revival
+snd_reload_jammed_last  = weapons\m4\m4_revival
+snd_shoot_grenade       = weapons\m203\m203_shoot
+snd_reload_grenade      = weapons\m203\m203_reload
+snd_switch              = weapons\m203\m203_activate
+snd_silncer_shot        = weapons\m4\sr25_sil
+snd_fire_modes          = weapons\l85\l85_firemode
+snd_tact_item_on        = weapons\l85\l85_lam
+snd_zoom_change = weapons\zoom_change, 0.2 ;звук при изменении зума
+snd_item_on = weapons\headflash_on ;звук включения налобного фонаря, пнв
+snd_aim_start = weapons\vss\vss_aim_start
+snd_aim_end = weapons\vss\vss_aim_end
+
+#include "huds.ltx"
+

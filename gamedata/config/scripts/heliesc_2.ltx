@@ -1,0 +1,27 @@
+[logic]
+active = heli_move@rails
+
+[heli_move@rails]
+path_move    		= yup_ghost_train_way_1
+engine_sound        = true
+combat_use_rocket   = false
+combat_use_mgun     = false
+combat_safe_altitude = 0
+invulnerable       = true
+immortal           = true
+combat_ignore_cond = always
+mute = true
+on_signal = arrive | heli_move@rails2
+
+[heli_move@rails2]
+path_move    		= yup_ghost_train_way_2
+engine_sound        = false
+combat_use_rocket   = false
+combat_use_mgun     = false
+combat_safe_altitude = 0
+invulnerable       = true
+immortal           = true
+combat_ignore_cond = always
+mute = true
+on_signal = arrived | heli_move@rails
+

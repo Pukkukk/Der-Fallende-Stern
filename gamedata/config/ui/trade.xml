@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<window>
+
+	<static_icon x="688" y="0" width="1024" height="768">
+		<texture></texture>
+		<texture_offset x="0" y="0"/>
+	</static_icon>
+---------------------------------------------------------------
+	<static_icon x="0" y="0" width="0" height="0">
+		<texture></texture>
+	</static_icon>
+----------------------------------------------------------------
+	<main x=0 y=0 width=1024 height=768/>
+
+	<top_background x=0 y=0 width=1024 height=768>
+		<texture>ui\ui_trader</texture>
+	</top_background>
+
+	<bottom_background x=0 y=0 width=0 height=0>
+		<texture></texture>
+	</bottom_background>
+-----------------------------------------------------------------
+
+
+---------------< кнопки >----------------------------------------
+	<!-- BUTTONS -->
+	<button x="353" y="736" width="316" height="24"  hR="255" hB="83" hG="179" highlight_text="1">
+		<texture>ui_inGame2_big_inventory_button</texture>
+		<text font="letterica18" r="216" g="186" b="140" align="c">ui_st_trade</text>
+        <text_color>
+			<e r="240" g="217" b="182"/>				
+			<t r="0" g="0" b="0"/>				
+			<d r="135" g="123" b="116"/>
+			<h r="0" g="0" b="0"/>
+		</text_color>
+	</button>
+
+	<button x="5080" y="730" width="165" height="35"  hR="255" hB="83" hG="179" highlight_text="1">
+		<texture></texture>
+		<text font="letterica18" r="216" g="186" b="140" align="c">ui_st_leave</text>
+
+	</button>
+
+------------------------------------------------------------------
+
+
+---------------< актор >----------------------------------------
+	<!-- OUR BAG -->
+	<our_bag_static x="684" y="260" width="1024" height="768">
+		<texture>ui_inGame2_trade</texture>
+	</our_bag_static>
+	
+	<our_money_static x="90" y="-185" width="108" height="20"stretch="1">
+	        <texture></texture>
+		<text font="letterica16" r="240" g="215" b="185" align="r" vert_align="c"></text>
+	</our_money_static>
+
+	<dragdrop_list x="20" y="50" width="306" height="419.5"
+			cell_width = "29" cell_height="30" rows_num="14" cols_num="10"
+			group_similar="1" unlimited="1"/>
+
+---------------< сидор >----------------------------------------
+	<!-- OTHERS BAG -->
+	<others_bag_static x="-5" y="260" width="1024" height="768">
+		<texture>ui_inGame2_trade</texture>
+	</others_bag_static>
+
+	<other_money_static x="90" y="-185" width="108" height="20"stretch="1">
+		<texture></texture>
+		<text font="letterica16" r="240" g="215" b="185" align="r" vert_align="c"></text>
+	</other_money_static>
+
+	<dragdrop_list x="25" y="50" width="306" height="419.5"
+			cell_width = "29" cell_height="30" rows_num="14" cols_num="10"
+			group_similar="1" unlimited="1"/>
+
+
+---------------< актор >----------------------------------------
+	<!-- OUR TRADE -->
+	<static x="704" y="110" width="1024" height="768">
+		<texture></texture>
+
+	</static>
+
+	<dragdrop_list x="0" y="0" width="306" height="149.5"
+			cell_width = "29" cell_height="30"
+			rows_num="5" cols_num="10"
+			group_similar="1" unlimited="1"/>
+
+---------------< сидор >-------------------------------------------
+	<!-- OTHERS TRADE -->
+	<static x="19" y="110" width="1024" height="768">
+		<texture></texture>
+	</static>
+
+	<dragdrop_list x="0" y="0" width="306" height="149.5"
+			cell_width = "29" cell_height="30"
+			rows_num="5" cols_num="10"
+			group_similar="1" unlimited="1"/>
+--------------------------------------------------------------------
+---------------< info item >----------------------------------------
+	<desc_frame_window x="343" y="308" width="329" height="230">
+		<texture></texture>		
+	</desc_frame_window>
+
+	<desc_static x="343" y="308" width="329" height="230">
+		<texture></texture>		
+	</desc_static>
+--------------------------------------------------------------------
+	<price_mt_static x="35" y="10" width="347" height="40">
+		<phrase x="-35" y="155" width="170" font="letterica18" r="238" g="153" b="26">ui_st_your_items</phrase>
+		<phrase x="150" y="157" font="letterica18" r="220" g="185" b="140">ui_st_price</phrase>
+		<phrase x="200" y="157" font="letterica18" r="240" g="215" b="185"></phrase>
+	</price_mt_static>
+
+</window>

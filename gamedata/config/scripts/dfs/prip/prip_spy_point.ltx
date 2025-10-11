@@ -1,0 +1,17 @@
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_actor_inside = {+overhear_bazar_start -overhear_bazar_1 -player_complete_message_monolith} %+overhear_bazar_1%
+on_info = {+overhear_bazar_1} sr_idle1
+
+[sr_idle1]
+on_timer = 12000 | %+zaglushka_81%
+on_info = {+zaglushka_81} sr_idle2
+
+[sr_idle2]
+on_info = {+overhear_bazar_2} sr_idle3
+
+[sr_idle3]
+on_info = {-player_complete_overhear_bazar =jj_on_spy_point} nil %+overhear_bazar_failed%
+on_timer = 92000 | nil %+player_complete_overhear_bazar +leave_imperceptibly_start%

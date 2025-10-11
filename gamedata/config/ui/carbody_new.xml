@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding="UTF-8"?>
+
+<window>
+
+	<main x=0 y=0 width=1024 height=768/>
+
+	<static_icon x="688" y="0" width="1024" height="768">
+		<texture></texture>
+		<texture_offset x="0" y="0"/>
+	</static_icon>
+	<static_icon x="0" y="0" width="1024" height="768">
+		<texture></texture>
+	</static_icon>
+
+=================================================================
+
+
+	<our_bag_static x="688" y="0" width="344" height="710">
+		<texture></texture>
+		<text x="225" y="740" font="letterica16" r="216" g="186" b="140" complex_mode="1"/>
+	</our_bag_static>
+
+	<dragdrop_list_our x="19" y="112" width="306" height="599.5"
+			cell_width = "29" cell_height="30" rows_num="20" cols_num="10"
+			unlimited="1" group_similar="1"/>
+
+=========================================================
+
+	<others_bag_static x="0" y="0" width="344" height="710">
+		<texture mirror="h" width="305" height="455"></texture>
+		<text x="50" y="78" font="letterica16" r="255" g="255" b="255" a="128">st_items</text>
+	</others_bag_static>
+
+	<dragdrop_list_other x="21" y="112" width="306" height="599.5"
+			cell_width="29" cell_height="30" rows_num="20" cols_num="10"
+			unlimited="1" group_similar="1"/>
+
+=========================                            =======================================
+
+	<frame_window x="343" y="308" width="267" height="460">
+		<texture></texture>
+		
+		<auto_static x="5555" y="-1110">
+			<texture></texture>
+		</auto_static>
+	</frame_window>
+
+=======================texstura         ==================================
+
+	<descr_static x="200" y="250" width="350" height="275">
+		<texture></texture>
+	</descr_static>
+
+===================              ================================
+
+	<auto_static x="3395" y="4461" width="220" height="30">
+		<text font="letterica18" r="255" g="255" b="255" a="128">ui_st_description</text>
+	</auto_static>
+
+========================texsture        -      ============================
+
+	<top_background x=0 y=0 width=1024 height=768>
+		<texture>ui\ui_trader_2</texture>
+	</top_background>
+
+	<bottom_background x=3000 y=500 width=32 height=32>
+		<texture></texture>
+	</bottom_background>
+
+
+=================================================
+	<take_all_btn x="353" y="736" width="316" height="24" stretch="1" hR="255" hB="83" hG="179" highlight_text="1" accel="kX">
+        <texture>ui_inGame2_big_inventory_button</texture>
+        <text align="c" font="letterica18" r="216" g="186" b="140">ui_st_take_all</text>
+        <text_color>
+			<e r="240" g="217" b="182"/>				
+			<t r="0" g="0" b="0"/>				
+			<d r="135" g="123" b="116"/>
+			<h r="0" g="0" b="0"/>
+		</text_color>
+	</take_all_btn>
+
+
+</window>
+

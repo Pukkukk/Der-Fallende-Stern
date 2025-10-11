@@ -1,0 +1,67 @@
+[logic]
+active = walker
+combat_ignore = combat_ignore
+on_hit = hit
+on_death = death
+
+[hit]
+on_info = {=hit_by_actor -gangsters_law_start} %+aggravated_scent_failed =kill%
+on_info2 = {+kovzur_last_byby} %=kill%
+
+[death]
+on_info = {=killed_by_actor -gangsters_law_start} %+aggravated_scent_failed%
+on_info2 = {+kovzur_last_byby} %+gangsters_law_3%
+
+[walker]
+path_walk = w_pri_kovzur_bandit_0015_walk
+path_look = w_pri_kovzur_bandit_0015_look
+combat_ignore_cond = {-aggravated_scent_failed} always
+danger = danger_condition@w_pri_kovzur_bandit_0015
+
+meet = no_meet
+on_info = {+gangsters_law_start} walker1
+
+[walker1]
+path_walk = w_pri_kovzur_bandit_0015_walk1
+path_look = w_pri_kovzur_bandit_0015_look1
+danger = danger_condition@w_pri_kovzur_bandit_0015
+combat_ignore_cond = {-aggravated_scent_failed} always
+wounded = wounded
+
+meet = no_meet
+on_info = {+gangsters_law_1} walker2
+
+[walker2]
+path_walk = w_pri_kovzur_bandit_0015_walk1
+path_look = w_pri_kovzur_bandit_0015_look1
+danger = danger_condition@w_pri_kovzur_bandit_0015
+combat_ignore_cond = {-aggravated_scent_failed} always
+wounded = wounded
+
+meet = meet
+
+[wounded]
+hp_state		= 10 | wounded_heavy@help_heavy
+hp_state_see	= 10 | wounded_heavy@help_heavy
+psy_state		= wounded_psy
+hp_victim		= 10 | nil
+hp_cover		= 210 | false
+hp_fight		= 210 | false
+
+[meet]
+meet_state 		= wounded_heavy@help_heavy
+meet_state_wpn	= wounded_heavy@help_heavy
+victim 			= nil
+victim_wpn 		= nil
+use 			= {=dfs_dialog_dist(3.0) -kovzur_last_byby +gangsters_law_1} self, true
+use_wpn 		= {=dfs_dialog_dist(3.0) -kovzur_last_byby +gangsters_law_1} self, true
+meet_dialog		= {-kovzur_last_byby +gangsters_law_1} kovzur_last_dialog
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@w_pri_kovzur_bandit_0015]
+ignore_distance = 0
+
+[smart_terrains]
+none = true

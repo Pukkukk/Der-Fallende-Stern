@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+	<string id="dfs_mod_name">
+		<text>Упавшая Звезда. Честь наемника</text>
+	</string>
+	<string id="dfs_autor">
+	<text>авторы</text>
+	</string>
+	<string id="dfs_executor">
+	<text>и разработчики:</text>
+	</string>
+	<string id="dfs_zauruscrew">
+	<text>команда zaurus' crew</text>
+	</string>
+	<string id="dfs_julius">
+	<text>julius</text>
+	</string>
+	<string id="dfs_marafon">
+	<text>marafonec</text>
+	</string>
+	<string id="dfs_zaurus_name">
+	<text>zaurus</text>
+	</string>
+	<string id="dfs_sound">
+	<text>работа со звуком</text>
+	</string>
+	<string id="dfs_testing">
+	<text>beta-тестеры:</text>
+	</string>
+	<string id="dfs_testing_crew_1">
+	<text>Форум "Боевой Народ":</text>
+	</string>
+	<string id="dfs_vzasade">
+	<text>VZASADE</text>
+	</string>
+	<string id="dfs_a185">
+	<text>Андрей (a185)</text>
+	</string>
+	<string id="dfs_bobson">
+	<text>BoBSoN</text>
+	</string>
+	<string id="dfs_comador">
+	<text>comador</text>
+	</string>
+	<string id="dfs_romale">
+	<text>romale</text>
+	</string>
+	<string id="dfs_ssweta">
+	<text>Ssweta</text>
+	</string>
+	<string id="dfs_utyyflbq">
+	<text>utyyflbq</text>
+	</string>
+	<string id="dfs_vdv">
+	<text>vdv5549</text>
+	</string>
+	<string id="dfs_dry">
+	<text>дрыка</text>
+	</string>
+	<string id="dfs_kost">
+	<text>костя-семен</text>
+	</string>
+	<string id="dfs_smok">
+	<text>Курильщик</text>
+	</string>
+	<string id="dfs_mar">
+	<text>Маришка (пантера)</text>
+	</string>
+	<string id="dfs_test_crew_2">
+	<text>Форум АМК-Team:</text>
+	</string>
+	<string id="dfs_vladi">
+	<text>vladi</text>
+	</string>
+	<string id="dfs_esmslavik">
+	<text>ESMSlavik</text>
+	</string>
+	<string id="dfs_test_crew_3">
+	<text>Форум Stalker-GSC:</text>
+	</string>
+	<string id="dfs_wonawi">
+	<text>wonawi</text>
+	</string>
+	<string id="dfs_test_crew_4">
+	<text>Форум stalker-team.pl:</text>
+	</string>
+	<string id="dfs_kobal">
+	<text>kobal</text>
+	</string>
+	<string id="dfs_yurek">
+	<text>Yurek</text>
+	</string>
+
+	<string id="dfs_test_crew_64">
+	<text>тест х64</text>
+	</string>
+	<string id="dfs_Aruron">
+	<text>Aruron</text>
+	</string>
+	<string id="dfs_cobaltworks">
+	<text>Денис "cobaltworks"</text>
+	</string>
+	<string id="dfs_YuRRaN">
+	<text>YuRRaN</text>
+	</string>
+
+
+
+
+
+
+
+	<string id="dfs_piwkaby">
+	<text>Пивкабы xD</text>
+	</string>
+	<string id="dfs_serg">
+	<text>Serg</text>
+	</string>
+	<string id="dfs_semiconductor">
+	<text>Semiconductor</text>
+	</string>
+	<string id="dfs_thahks_1">
+	<text>команда zaurus' crew благодарит</text>
+	</string>
+	<string id="dfs_thahks_2">
+	<text>компанию GSC Game World</text>
+	</string>
+	<string id="dfs_thahks_3">
+	<text>и ее лидера С. Григоровича</text>
+	</string>
+	<string id="dfs_thahks_4">
+	<text>за создание мира Зоны</text>
+	</string>
+	<string id="dfs_thahks_5">
+	<text>и культовой линейки игр</text>
+	</string>
+	<string id="dfs_thahks_6">
+	<text>S.T.A.L.K.E.R.,</text>
+	</string>
+	
+	<string id="dfs_thahks_7">
+	<text>без которых было бы</text>
+	</string>
+	<string id="dfs_thahks_8">
+	<text>НЕВОЗМОЖНЫМ</text>
+	</string>
+	<string id="dfs_thahks_9">
+	<text>создание</text>
+	</string>
+	<string id="dfs_thahks_10">
+	<text>сюжетной модификации</text>
+	</string>
+	<string id="dfs_thahks_11">
+	<text>УПАВШАЯ ЗВЕЗДА</text>
+	</string>
+	<string id="dfs_thahks_12">
+	<text>ЧЕСТЬ НАЕМНИКА</text>
+	</string>
+	<string id="dfs_thahks_13">
+	<text>"Долг. Философия Войны"</text>
+	</string>
+	<string id="dfs_thanks_14">
+	<text>автор благодарит</text>
+	</string>
+	<string id="dfs_thanks_15">
+	<text>отрывки из к/ф:</text>
+	</string>
+	<string id="dfs_thanks_16">
+	<text>Разведчики. Последний бой</text>
+	</string>
+	<string id="dfs_thanks_17">
+	<text>режиссер А.Замятин</text>
+	</string>
+	<string id="dfs_thanks_18">
+	<text>Мы были солдатами</text>
+	</string>
+	<string id="dfs_thanks_19">
+	<text>режиссер Рэндалл Уоллес</text>
+	</string>
+	
+	<string id="dfs_sponsor">
+	<text>спонсор проекта DFS:</text>
+	</string>
+	<string id="dfs_sponsor_name">
+	<text>компания MBTM LLC г.Иркутск</text>
+	</string>
+	
+	<string id="dfs_compous_1">
+	<text>использована музыка</text>
+	</string>
+	<string id="dfs_compous_2">
+	<text>авторов и исполнителей:</text>
+	</string>
+	
+	<string id="dfs_musicants_1">
+	<text>Deuter</text>
+	</string>
+	<string id="dfs_musicants_2">
+	<text>Deep Purple</text>
+	</string>
+	<string id="dfs_musicants_3">
+	<text>Sam the Sham and The Pharaohs</text>
+	</string>
+	<string id="dfs_musicants_4">
+	<text>Black Rebel Motorcycle Club</text>
+	</string>
+	<string id="dfs_musicants_5">
+	<text>Tito and Tarantula</text>
+	</string>
+	<string id="dfs_musicants_6">
+	<text>Stray Cats</text>
+	</string>
+	<string id="dfs_musicants_7">
+	<text>Taco</text>
+	</string>
+	<string id="dfs_musicants_8">
+	<text>Александр Аваков</text>
+	</string>
+	<string id="dfs_musicants_9">
+	<text>Дмитро Гнатюк</text>
+	</string>
+	<string id="dfs_musicants_10">
+	<text>В.Нечаев</text>
+	</string>
+	<string id="dfs_musicants_11">
+	<text>М.Исаковский</text>
+	</string>
+	<string id="dfs_musicants_12">
+	<text>Е.Жарковский</text>
+	</string>
+	<string id="dfs_musicants_13">
+	<text>Н.Букин</text>
+	</string>
+	<string id="dfs_musicants_14">
+	<text>Н.Кондратюк</text>
+	</string>
+	<string id="dfs_musicants_15">
+	<text>Н.Богословский</text>
+	</string>
+	<string id="dfs_musicants_16">
+	<text>В.Агатов</text>
+	</string>
+	<string id="dfs_musicants_17">
+	<text>М.Вайнберг</text>
+	</string>
+	<string id="dfs_musicants_18">
+	<text>М.Соболь</text>
+	</string>
+	<string id="dfs_musicants_19">
+	<text>М.Рыба</text>
+	</string>
+	<string id="dfs_musicants_20">
+	<text>Мария Горячева</text>
+	</string>
+	
+	<string id="dfs_musicants_21">
+	<text>автор и исполнитель</text>
+	</string>
+	<string id="dfs_musicants_22">
+	<text>песен</text>
+	</string>
+	<string id="dfs_musicants_23">
+	<text>"Народная-итальянская"</text>
+	</string>
+	<string id="dfs_musicants_24">
+	<text>"Народная-английская"</text>
+	</string>
+	<string id="dfs_musicants_25">
+	<text>"Солдатская-немецкая"</text>
+	</string>
+	<string id="dfs_musicants_26">
+	<text>к сожалению, не известен</text>
+	</string>
+	
+	<string id="dfs_progs_1">
+	<text>при создании мода и трилогии</text>
+	</string>
+	<string id="dfs_progs_2">
+	<text>использовались труды авторов:</text>
+	</string>
+	
+	<string id="dfs_progs_3">
+	<text>bardak</text>
+	</string>
+	<string id="dfs_progs_4">
+	<text>Kolmogor</text>
+	</string>
+	<string id="dfs_progs_5">
+	<text>mnn</text>
+	</string>
+	<string id="dfs_progs_6">
+	<text>gr1ph00n</text>
+	</string>
+	<string id="dfs_progs_7">
+	<text>Neo][</text>
+	</string>
+	<string id="dfs_progs_8">
+	<text>Xiani</text>
+	</string>
+	<string id="dfs_progs_9">
+	<text>Freack</text>
+	</string>
+	<string id="dfs_progs_10">
+	<text>loxotron</text>
+	</string>
+	<string id="dfs_progs_11">
+	<text>NatteFrost</text>
+	</string>
+	<string id="dfs_progs_12">
+	<text>Macron</text>
+	</string>
+	<string id="dfs_progs_13">
+	<text>KD87</text>
+	</string>
+	<string id="dfs_progs_14">
+	<text>abramcumner</text>
+	</string>
+	<string id="dfs_progs_15">
+	<text>ARTOS</text>
+	</string>
+	<string id="dfs_progs_16">
+	<text>команды AMK</text>
+	</string>
+	<string id="dfs_progs_17">
+	<text>xStream</text>
+	</string>
+	<string id="dfs_progs_18">
+	<text>Rulix (Bak)</text>
+	</string>
+	<string id="dfs_progs_19">
+	<text>Monnoroch</text>
+	</string>
+	<string id="dfs_progs_20">
+	<text>Red75</text>
+	</string>
+	<string id="dfs_progs_21">
+	<text>MegaFenix</text>
+	</string>
+	<string id="dfs_progs_22">
+	<text>OtshelNIK</text>
+	</string>
+	<string id="dfs_progs_23">
+	<text>Singapur22</text>
+	</string>
+	<string id="dfs_progs_24">
+	<text>Mechanic</text>
+	</string>
+	<string id="dfs_progs_25">
+	<text>Shoker</text>
+	</string>
+	<string id="dfs_progs_26">
+	<text>Stalk15</text>
+	</string>
+	<string id="dfs_progs_27">
+	<text>Buusty</text>
+	</string>
+	<string id="dfs_progs_28">
+	<text>Георгий Логинов (Deathdoor)</text>
+	</string>
+	<string id="dfs_progs_29">
+	<text>Ааз</text>
+	</string>
+	<string id="dfs_progs_30">
+	<text>Wookie</text>
+	</string>
+	<string id="dfs_progs_31">
+	<text>Kostya V</text>
+	</string>
+	<string id="dfs_progs_32">
+	<text>kalinin11</text>
+	</string>
+	<string id="dfs_progs_33">
+	<text>ZVUKARЬ</text>
+	</string>
+	<string id="dfs_progs_34">
+	<text>Charsi</text>
+	</string>
+	<string id="dfs_progs_35">
+	<text>Shadow</text>
+	</string>
+	<string id="dfs_progs_39">
+	<text>KRodin</text>
+	</string>
+	<string id="dfs_progs_40">
+	<text>dsh</text>
+	</string>
+	<string id="dfs_progs_41">
+	<text>mauvais</text>
+	</string>
+	
+	
+	<string id="dfs_progs_36">
+	<text>Авторы некоторых работ</text>
+	</string>
+	<string id="dfs_progs_37">
+	<text>не указаны.</text>
+	</string>
+	<string id="dfs_progs_38">
+	<text>Приносим свои извинения.</text>
+	</string>
+	
+	
+	<string id="dfs_progs_42">
+	<text>zaurus' crew</text>
+	</string>
+	
+	<string id="dfs_progs_43">
+	<text>2013</text>
+	</string>
+	
+	<string id="dfs_progs_44">
+	<text>2020</text>
+	</string>
+	
+	
+	
+	<string id="de_name">
+	<text>Definitive Edition:</text>
+	</string>
+	
+	<string id="dfs_de_1">
+	<text>Главный разработчик:</text>
+	</string>
+
+    <string id="dfs_de_2">
+	<text>WILD_USEC</text>
+	</string>
+	
+	<string id="dfs_de_2_1">
+	<text>Тема в главном меню:</text>
+	</string>
+	
+	<string id="dfs_de_2_2">
+	<text>Давид Мустафаев</text>
+	</string>
+	
+	<string id="dfs_de_3">
+	<text>Разработчик-аутсорсер:</text>
+	</string>
+	
+	<string id="dfs_de_4">
+	<text>Кефир</text>
+	</string>
+	
+	<string id="dfs_de_5">
+	<text>Использованные наработки:</text>
+	</string>
+	
+	<string id="dfs_de_6">
+	<text>Gunslinger Mod</text>
+	</string>
+	
+	<string id="dfs_de_7">
+	<text>SoC Gunslinger Adaptation</text>
+	</string>
+	
+	<string id="dfs_de_8">
+	<text>nestandart_5443</text>
+	</string>
+	
+	<string id="dfs_de_9">
+	<text>CGIM 2</text>
+	</string>
+	
+	<string id="dfs_de_10">
+	<text>ЗБТ тестеры:</text>
+	</string>
+	
+	<string id="dfs_de_11">
+	<text>Salatik</text>
+	</string>
+	
+	<string id="dfs_de_12">
+	<text>Верг</text>
+	</string>
+	
+	<string id="dfs_de_13">
+	<text>P100V</text>
+	</string>
+	
+	<string id="dfs_de_14">
+	<text>Владислав "Hamus" Колбасин</text>
+	</string>
+	
+	<string id="dfs_de_15">
+	<text>LampShelter (Кровавый Кот)</text>
+	</string>
+	
+	<string id="dfs_de_16">
+	<text>MegaTiEstO96</text>
+	</string>
+
+	<string id="dfs_de_17">
+	<text>Серый (нет, блин, Белый)</text>
+	</string>
+	
+	<string id="dfs_de_18">
+	<text>Возможно, кто-то был забыт и не указан в титрах.</text>
+	</string>
+	
+	<string id="dfs_de_19">
+	<text>Аутсорсер приносит извинения за это.</text>
+	</string>
+	
+	<string id="dfs_de_20">
+	<text>2021</text>
+	</string>
+	
+	<string id="dfs_de_21">
+	<text>2024</text>
+	</string>
+	
+</string_table>
+

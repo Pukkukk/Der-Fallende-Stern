@@ -1,0 +1,48 @@
+
+; Беретта ================================================================================================================================================ ПМ Пистолет Макарова
+; ==================================== первая ветка ====================================
+
+
+; 1 ветка
+
+; upgrade 1
+[wpn_colt_a1]:wpn_colt1911
+hidden_bones = barrel_silencer, barrel_compensator
+available_upgrades		= colt_upgr2
+installed_upgrades		= colt_upgr1
+icon_group = 2
+cost					 	= 1500
+hud                      	= wpn_colt_a1_hud
+[wpn_colt_a1_hud]:wpn_colt1911_hud
+hidden_bones = barrel_silencer, barrel_compensator
+
+
+
+
+
+; upgrade 2
+[wpn_colt_a2]:wpn_colt_a1
+hidden_bones =  barrel_compensator, barrel
+available_upgrades		= colt_upgr3
+installed_upgrades		= colt_upgr1, colt_upgr2
+silencer_status				= 2
+cost					 	= 1700
+hud                      	= wpn_colt_a2_hud
+[wpn_colt_a2_hud]:wpn_colt1911_hud
+hidden_bones =  barrel_compensator
+
+
+; upgrade 3
+[wpn_colt_a3]:wpn_colt_a2
+available_upgrades		= none
+installed_upgrades		= colt_upgr1, colt_upgr2, colt_upgr3
+
+ammo_mag_size		 		= 10
+cost					 	= 1900
+
+
+
+
+
+
+
