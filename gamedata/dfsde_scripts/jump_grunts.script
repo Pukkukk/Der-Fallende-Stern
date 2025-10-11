@@ -1,0 +1,161 @@
+--[[
+        JUMP GRUNT
+
+        Original Author(s)
+          Singustromo <singustromo at disroot.org>
+
+        Credits
+          - Sounds from: https://www.nexusmods.com/fallout4/mods/47266
+          - Haruka (this script is roughly based off of EFT Jump and Land SFX)
+          - Grinskin for the Wish :)
+
+        Edited by
+
+        License
+          Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+          (https://creativecommons.org/licenses/by-nc-sa/4.0)
+
+        Synopsis
+          Adds player jump and land grunts. Available for both genders.
+--]]
+
+version = 20240204
+base_sound_directory = "jump_grunts"
+
+settings = jump_grunts_mcm
+
+valid_grunt_trigger = {
+        ["jump"] = true,
+        ["land"] = true,
+}
+
+local volume, voice_type, grunt_delay, grunt_chance, chance_by_stamina
+
+local tm = 0
+function play_random_sound(dir)
+        if (not dir) then return end
+
+        local player = db.actor
+        if not (player and player:alive()) then 
+                return
+        end
+
+        -- Only allow sounds in x milliseconds intervals
+        local ct = time_global()
+        if (tm and ct <= tm) then return end
+
+        -- Perhaps cache the result...?
+        local list = getFS():file_list_open("$game_sounds$",
+                dir, bit_or(FS.FS_ListFiles, FS.FS_RootOnly))
+
+        if (not list) then return end
+
+        local file = dir .. tostring(math.random(list:Size()))
+
+        local sound = xr_sound.get_safe_sound_object(file)
+        sound:play(player, 0, sound_object.s2d)
+        sound.volume = volume
+
+        tm = ct + 100
+end
+
+function respirator_sound_active()
+        return (ui_options.get("sound/environment/breathing_sound")
+                and actor_effects.is_respi_on())
+end
+
+-- typ defines the subdirectory; Here it is referred to jump or land
+function play_grunt_sound(typ)
+        if not (typ and type(typ) == "string") then return end
+        if not (valid_grunt_trigger[typ]) then return end
+
+        if respirator_sound_active() then return end
+        
+        local grunt_directory = string.format("%s\\%s\\%s\\",
+                base_sound_directory, voice_type, typ)
+
+        if not (grunt_delay and grunt_delay > 0) then
+                play_random_sound(grunt_directory)
+                return
+        end
+
+        TimeEventWrapper(function()
+                play_random_sound(grunt_directory)
+                return true
+        end, grunt_delay, typ .. "_sound", "grunt_" .. math.random(4))
+end
+
+---------------------
+--    Wrapper
+---------------------
+
+-- Use nextTick function, when available
+function TimeEventWrapper(func, time, event_id, action_id)
+        if (not func) then return end
+
+        if (not time) then
+                time = 0
+        end
+
+        local mev = get_modded_exes_version
+
+        if (mev and (type(mev) == 'function') and mev() > 20230921) then
+                -- nextTick uses time in milliseconds
+                nextTick(func, (time > 1) and time or time * 100)
+                return
+        end
+
+        if not (event_id and action_id) then 
+                printe("! TimeEvent | No event or action ID specified")
+                callstack()
+                return
+        end
+        CreateTimeEvent(event_id, action_id, time, func)
+end
+
+---------------------
+--   Callbacks
+---------------------
+
+local no_landing_sound = false
+function actor_on_jump()
+        local chance = grunt_chance
+
+        -- TODO: Use Markov chain instead (exercise)
+        if chance_by_stamina then
+                chance = (1 + (chance / 100)) * (1 - db.actor.power) * 100
+        end
+
+        if (math.random(100) > chance) then
+                no_landing_sound = true
+                return
+        end
+
+        play_grunt_sound("jump")
+        no_landing_sound = false
+end
+
+function actor_on_land(landing_speed)
+	if landing_speed <= 5 then return end -- Beware the Slopes!
+
+        if no_landing_sound then return end
+        play_grunt_sound("land")
+end
+
+function on_option_change()
+        local id = "general"
+
+	volume = settings.get_config(id, "volume")
+	voice_type = settings.get_config(id, "voice_type")
+	grunt_delay = settings.get_config(id, "delay")
+
+	grunt_chance = settings.get_config(id, "chance")
+        chance_by_stamina = settings.get_config(id, "chance_by_stamina")
+end
+
+function on_game_start()
+        RegisterScriptCallback("actor_on_jump", actor_on_jump)
+        RegisterScriptCallback("actor_on_land", actor_on_land)
+        RegisterScriptCallback("on_option_change", on_option_change)
+        on_option_change()
+end

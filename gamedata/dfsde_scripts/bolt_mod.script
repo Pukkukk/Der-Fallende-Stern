@@ -1,0 +1,133 @@
+-------------- конечное количество болтов -------------
+------------------ реализация Charsi ------------------
+-------------- идейный вдохновитель Z.I.R.D.-----------
+------------------ 17/08 - 13/12 2010 -----------------
+----------------- last edit 26/04/2011 ----------------
+-------------------- версия 1.03 Final ------------------
+-------------------------------------------------------
+
+local infinity = false	-- true - только подбираются,false - подбираются и заканчиваются
+
+-------------------------------------------------------
+local bolt_cnt=0	--количество болтов в рюкзаке
+local st
+local game_start=true
+
+function on_item_take(obj)
+	if not infinity then
+	if obj:section()=="fake_knife_d" then
+		if xr_logic.pstor_retrieve(db.actor,"b_dr") then db.actor:eat(obj) xr_logic.pstor_store(db.actor,"b_dr",false) end
+		game_start = false
+		bolt_cnt=bolt_cnt+1
+
+	elseif obj:section()=="wpn_knife_d" then
+		if game_start and xr_logic.pstor_retrieve(db.actor,"b_dr") then
+			del_bolt()
+			end
+		xr_logic.pstor_store(db.actor,"b_dr",false)
+		game_start = false
+		bolt_cnt=bolt_cnt+1
+	end
+	end
+end
+
+function on_item_drop(obj)
+	if not infinity then
+	if obj:section()=="fake_knife_d" then
+		bolt_cnt=bolt_cnt-1
+	end
+	if obj:section()=="wpn_knife_d" then
+		bolt_cnt=bolt_cnt-1
+		xr_logic.pstor_store(db.actor,"b_dr",true)
+	end
+	end
+end
+
+function on_actor_use(obj)
+	if not infinity then
+	if obj:section()=="fake_knife_d" then
+		if db.actor:object("wpn_knife_d") then
+			spawn_item_in_inv("fake_knife_d")
+		else
+			spawn_item_in_inv("wpn_knife_d")
+		end
+	end
+	end
+end
+
+function update()
+	if not infinity then
+	if db.actor:active_slot()==1 and
+	xr_conditions.knife_d_ready() then
+		if level.main_input_receiver()==nil then show_static() elseif st then remove_static() end
+	elseif st then 
+		remove_static()
+	end
+end
+end
+
+function remove_static()
+	get_hud():RemoveDialogToRender(st) st=nil
+end
+
+function show_static()
+if st then
+	st:SetText(bolt_cnt)
+else
+	bolt_cnt=0
+	db.actor:iterate_inventory(function(dummy,item) if item:section()=="fake_knife_d" then bolt_cnt=bolt_cnt+1 end end,dummy)
+	if db.actor:item_in_slot(1) then bolt_cnt=bolt_cnt+1 end
+
+	st=CUIStatic()
+	st:Init(1024-160,768-65,110,50)
+
+	st:SetFont(GetFontGraffiti32Russian())
+	st:SetTextAlign(CGameFont.alRight)
+	st:SetTextColor	(255,238,155,23)
+	st:SetTextY(15)
+
+	local ini=system_ini()
+	local x=ini:r_u32("fake_knife_d", "inv_grid_x")*50
+ 	local y=ini:r_u32("fake_knife_d", "inv_grid_y")*50
+	local width=ini:r_u32("fake_knife_d", "inv_grid_width")*50
+ 	local height=ini:r_u32("fake_knife_d", "inv_grid_height")*50
+	st:InitTexture("ui\\ui_icon_equipment")
+	st:SetOriginalRect(x,y,width,height)
+	get_hud():AddDialogToRender(st)
+end
+end
+
+function remove_bolt()
+	if not infinity and not remove_item(db.actor:object("fake_knife_d")) then del_bolt() end
+end
+
+function del_bolt()
+	db.actor:drop_item_and_teleport(db.actor:object("wpn_knife_d"),vector():set(0,0,0))
+end
+
+function net_spawn()
+	spawn_item_in_inv( "wpn_knife_d" )
+end
+
+function net_destroy()
+	remove_static()
+end
+
+
+function remove_item(item)
+if item then
+	local sobj=alife():object(item:id())
+	if sobj then alife():release(sobj,true) end
+	return true
+end
+return false
+end
+
+function spawn_item_in_inv( sect )
+	alife():create(sect,db.actor:position(),db.actor:level_vertex_id(),db.actor:game_vertex_id(),0)
+end
+
+function retrieve_bolt()
+	local sect = infinity and "wpn_knife_d" or "fake_knife_d"
+	spawn_item_in_inv( sect )
+end

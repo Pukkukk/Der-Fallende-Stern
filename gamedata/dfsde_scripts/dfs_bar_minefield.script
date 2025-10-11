@@ -1,0 +1,36 @@
+function bar_mines_activate()
+for i = 20211, 20343 do
+local obj = alife():story_object(i)
+	if obj then
+		alife():set_switch_offline(obj.id, false)
+		alife():set_switch_online(obj.id, true)
+		alife():set_interactive(obj.id, true)
+	end
+end
+end
+
+function bar_mines_deactivate()
+for i = 20211, 20343 do
+local obj = alife():story_object(i)
+	if obj then
+		alife():set_switch_offline(obj.id, true)
+		alife():set_switch_online(obj.id, false)
+		alife():set_interactive(obj.id, false)
+	end
+end
+end
+
+function bar_mines_del()
+for i = 20211, 20343 do
+	local object = alife():story_object(i)
+	local object_name = ""
+		if object then
+			local obj_id = object.id
+			object_name = object:name()
+--log1("obj_id = "..obj_id.." - ".. object_name)
+			amk.start_timer("mina", 2, obj_id, object_name)
+		end
+end
+end
+
+

@@ -1,0 +1,529 @@
+
+function conductor_cmplt()
+if	db.actor:has_info("conductor_1") and
+	db.actor:has_info("conductor_2") and
+	db.actor:has_info("conductor_3") then
+return true and
+	db.actor:give_info_portion("player_complete_conductor")
+	end 
+end
+	
+function low_of_colt_cmplt()
+if	db.actor:has_info("dub_cambees_bandit_01_dead") and
+	db.actor:has_info("dub_cambees_bandit_02_dead") and
+	db.actor:has_info("dub_cambees_bandit_03_dead") and
+	db.actor:has_info("dub_cambees_bandit_04_dead") then
+return true and
+	db.actor:give_info_portion("low_of_colt_4")
+	end 
+end
+	
+function low_of_colt_full()
+if	db.actor:has_info("low_of_colt_1") and
+	db.actor:has_info("low_of_colt_2") and
+	db.actor:has_info("low_of_colt_3") and
+	db.actor:has_info("low_of_colt_4") and
+	db.actor:has_info("low_of_colt_5") then
+return true and
+	db.actor:give_info_portion("player_complete_low_of_colt")
+	end 
+end
+	
+	
+function two_on_swamp_1_cmplt()
+if	db.actor:has_info("bizon_dead") and
+	db.actor:has_info("luckie_dead") then
+return true and
+	db.actor:give_info_portion("find_xform_1_start") and
+	db.actor:give_info_portion("info_dfs_story_ar_12")
+	end 
+end
+
+function find_sor_sniper_2_cmplt()
+if	db.actor:has_info("find_sor_sniper_2_1") and
+	db.actor:has_info("find_sor_sniper_2_2") and
+	db.actor:has_info("find_sor_sniper_2_3") and
+	db.actor:has_info("find_sor_sniper_2_4") then
+return true and
+	db.actor:give_info_portion("find_sor_sniper_2")
+	end 
+end
+
+function xform_from_hell_cmplt()
+if	db.actor:has_info("xform_from_hell_1") and
+	db.actor:has_info("xform_from_hell_2") and
+	db.actor:has_info("xform_from_hell_3") and
+	db.actor:has_info("xform_from_hell_4") and
+	db.actor:has_info("xform_from_hell_5") and
+	db.actor:has_info("xform_from_hell_6") and
+	db.actor:has_info("xform_from_hell_7") and
+	db.actor:has_info("xform_from_hell_8") and
+	db.actor:has_info("xform_from_hell_9") and
+	db.actor:has_info("xform_from_hell_10") and
+	db.actor:has_info("xform_from_hell_11") and
+	db.actor:has_info("xform_from_hell_12") and
+	db.actor:has_info("xform_from_hell_13") and
+	db.actor:has_info("xform_from_hell_14") and
+	db.actor:has_info("xform_from_hell_15") and
+	db.actor:has_info("xform_from_hell_16") and
+	db.actor:has_info("xform_from_hell_17") and
+	db.actor:has_info("xform_from_hell_18") then
+return true and
+	db.actor:give_info_portion("meet_sidor_lilman_start")
+	end 
+end
+
+function cold_steel_cmplt()
+if	db.actor:has_info("marsh_kovzur_bandit_01_dead") and
+	db.actor:has_info("marsh_kovzur_bandit_02_dead") and
+	db.actor:has_info("marsh_kovzur_bandit_03_dead") and
+	db.actor:has_info("marsh_kovzur_bandit_04_dead") and
+	db.actor:has_info("marsh_kovzur_bandit_05_dead") and
+	db.actor:has_info("marsh_kovzur_bandit_06_dead") and
+	db.actor:has_info("marsh_kovzur_bandit_07_dead") and
+	db.actor:has_info("marsh_kovzur_bandit_08_dead") and
+	db.actor:has_info("marsh_kovzur_bandit_09_dead") and
+	db.actor:has_info("marsh_kovzur_bandit_10_dead") and
+	db.actor:has_info("marsh_kovzur_bandit_11_dead") and
+	db.actor:has_info("marsh_kovzur_bandit_00_dead") then
+return true and
+	db.actor:give_info_portion("player_complete_cold_steel") and
+	dfs.ch_range100()
+	end 
+end
+
+function degenerate_breakthrow_cmplt()
+if	db.actor:has_info("yo_bastard_01_dead") and
+	db.actor:has_info("yo_bastard_02_dead") and
+	db.actor:has_info("yo_bastard_03_dead") and
+	db.actor:has_info("yo_bastard_04_dead") and
+	db.actor:has_info("yo_bastard_05_dead") and
+	db.actor:has_info("yo_bastard_06_dead") then
+return true and
+	db.actor:give_info_portion("degenerate_breakthrow_2")
+	end 
+end
+
+function counter_attack_cmplt()
+if	db.actor:has_info("yo_bastard_07_dead") and
+	db.actor:has_info("yo_bastard_08_dead") and
+	db.actor:has_info("yo_bastard_09_dead") then
+return true and
+	db.actor:give_info_portion("player_complete_counter_attack")
+	end 
+end
+
+function debt_duty_cmplt()
+	local g = xr_gulag.get_gulag(20096)
+	return (not g) or (g:get_population() == 0) and
+	db.actor:give_info_portion("debt_duty_2")
+end
+
+function trade_fura_destroyed()
+	local car = level_object_by_sid(20103)
+	if car == nil or car:alive() == false then
+	db.actor:give_info_portion("trade_fura_dead")
+	end
+end
+
+function tod_destroyed()
+	local car = level_object_by_sid(20172)
+	if car == nil or car:alive() == false then
+	db.actor:give_info_portion("truck_od_dead")
+	db.actor:give_info_portion("self_evapoint_start")
+	end
+end
+
+function jail_truck_destroyed()
+	local car = level_object_by_sid(20369)
+	if car == nil or car:alive() == false then
+	db.actor:give_info_portion("jail_truck_dead")
+	db.actor:give_info_portion("destroy_barier_control_start")
+	end
+end
+
+function tin_cmplt()
+if	db.actor:has_info("red_killer_dead") and
+	db.actor:has_info("red_killer_1_dead") and
+	db.actor:has_info("red_killer_2_dead") and
+	db.actor:has_info("red_killer_3_dead") and
+	db.actor:has_info("red_killer_4_dead") and
+	db.actor:has_info("red_killer_5_dead") and
+	db.actor:has_info("red_killer_6_dead") and
+	db.actor:has_info("red_killer_7_dead") and
+	db.actor:has_info("red_killer_8_dead") and
+	db.actor:has_info("red_killer_9_dead") and
+	db.actor:has_info("red_killer_10_dead") and
+	db.actor:has_info("red_killer_11_dead") and
+	db.actor:has_info("red_killer_12_dead") and
+	db.actor:has_info("red_killer_13_dead") and
+	db.actor:has_info("red_killer_14_dead") and
+	db.actor:has_info("red_killer_15_dead") and
+	db.actor:has_info("red_killer_16_dead") and
+	db.actor:has_info("red_killer_17_dead") and
+	db.actor:has_info("red_killer_18_dead") and
+	db.actor:has_info("red_killer_19_dead") then
+return true and
+	db.actor:give_info_portion("player_complete_tin")
+	end 
+end
+
+function pri_action_1_cmplt()
+if	db.actor:has_info("pri_stalker_nato_01_dead") and
+	db.actor:has_info("pri_stalker_nato_02_dead") and
+	db.actor:has_info("pri_stalker_nato_03_dead") and
+	db.actor:has_info("pri_stalker_nato_04_dead") and
+	db.actor:has_info("pri_stalker_nato_05_dead") and
+	db.actor:has_info("pri_stalker_nato_06_dead") and
+	db.actor:has_info("pri_stalker_nato_07_dead") and
+	db.actor:has_info("pri_stalker_nato_08_dead") and
+	db.actor:has_info("pri_stalker_nato_09_dead") and
+	db.actor:has_info("pri_stalker_nato_10_dead") and
+	db.actor:has_info("pri_stalker_nato_11_dead") and
+	db.actor:has_info("pri_stalker_nato_12_dead") and
+	db.actor:has_info("pri_stalker_nato_13_dead") and
+	db.actor:has_info("pri_stalker_nato_14_dead") and
+	db.actor:has_info("pri_stalker_nato_15_dead") and
+	db.actor:has_info("pri_stalker_nato_16_dead") then
+return true and
+	db.actor:give_info_portion("pri_action_1") and
+	dfs_relations.us_up()
+	end 
+end
+
+function hard_inquiry_2_cmplt()
+if	db.actor:has_info("red_kovzur_bandit_khabar_dead") and
+	db.actor:has_info("red_kovzur_bandit_15_dead") and
+	db.actor:has_info("red_kovzur_bandit_16_dead") and
+	db.actor:has_info("red_kovzur_bandit_17_dead") and
+	db.actor:has_info("red_kovzur_bandit_18_dead") and
+	db.actor:has_info("red_kovzur_bandit_19_dead") and
+	db.actor:has_info("red_kovzur_bandit_20_dead") then
+return true and
+	db.actor:give_info_portion("hard_inquiry_2")
+	end 
+end
+
+function hard_inquiry_3_cmplt()
+if	db.actor:has_info("hard_inquiry_3_1") and
+	db.actor:has_info("hard_inquiry_3_2") then
+return true and
+	db.actor:give_info_portion("hard_inquiry_3")
+	end 
+end
+
+function panzer_test_cmplt()
+	if	db.actor:has_info("kill_sar_grc_stalker_00") and
+		db.actor:has_info("kill_sar_grc_stalker_01") and
+		db.actor:has_info("kill_sar_grc_stalker_02") and
+		db.actor:has_info("kill_sar_grc_stalker_03") and
+		db.actor:has_info("kill_sar_grc_stalker_04") and
+		db.actor:has_info("kill_sar_grc_stalker_05") and
+		db.actor:has_info("kill_sar_grc_stalker_06") and
+		db.actor:has_info("kill_sar_grc_stalker_07") and
+		db.actor:has_info("kill_sar_grc_stalker_08") and
+		db.actor:has_info("kill_sar_grc_stalker_09") and
+		db.actor:has_info("kill_sar_grc_stalker_10") and
+		db.actor:has_info("kill_sar_grc_stalker_11") and
+		db.actor:has_info("kill_sar_grc_stalker_12") and
+		db.actor:has_info("kill_sar_grc_stalker_13") and
+		db.actor:has_info("kill_sar_grc_stalker_14") and
+		db.actor:has_info("kill_sar_grc_stalker_15") and
+		db.actor:has_info("kill_sar_grc_stalker_16") and
+		db.actor:has_info("kill_sar_grc_stalker_17") and
+		db.actor:has_info("kill_sar_grc_stalker_18") and
+		db.actor:has_info("kill_sar_grc_stalker_19") and
+		db.actor:has_info("kill_sar_grc_stalker_20") and
+		db.actor:has_info("kill_sar_grc_stalker_21") and
+		db.actor:has_info("kill_sar_grc_stalker_22") and
+		db.actor:has_info("kill_sar_grc_stalker_23") and
+		db.actor:has_info("kill_sar_grc_stalker_24") and
+		db.actor:has_info("kill_sar_grc_stalker_25") and
+		db.actor:has_info("kill_sar_grc_stalker_26") and
+		db.actor:has_info("kill_sar_grc_stalker_27") and
+		db.actor:has_info("kill_sar_grc_stalker_28") and
+		db.actor:has_info("kill_sar_grc_stalker_29") and
+		db.actor:has_info("kill_sar_grc_stalker_30") and
+		db.actor:has_info("kill_sar_grc_stalker_31") and
+		db.actor:has_info("kill_sar_grc_stalker_32") and
+		db.actor:has_info("kill_sar_grc_stalker_33") and
+		db.actor:has_info("kill_sar_grc_stalker_34") and
+		db.actor:has_info("kill_sar_grc_stalker_35") and
+		db.actor:has_info("kill_sar_grc_stalker_36") and
+		db.actor:has_info("kill_sar_grc_stalker_37") and
+		db.actor:has_info("kill_sar_grc_stalker_38") and
+		db.actor:has_info("kill_sar_grc_stalker_39") and
+		db.actor:has_info("kill_sar_grc_stalker_40") and
+		db.actor:has_info("kill_sar_grc_stalker_41") and
+		db.actor:has_info("kill_sar_grc_stalker_42") and
+		db.actor:has_info("kill_sar_grc_stalker_43") and
+		db.actor:has_info("kill_sar_grc_stalker_44") and
+		db.actor:has_info("kill_sar_grc_stalker_45") and
+		db.actor:has_info("kill_sar_grc_stalker_46") and
+		db.actor:has_info("kill_sar_grc_stalker_47") and
+		db.actor:has_info("kill_sar_grc_stalker_48") and
+		db.actor:has_info("kill_sar_grc_stalker_49") and
+		db.actor:has_info("kill_sar_grc_stalker_50") and
+		db.actor:has_info("kill_sar_grc_stalker_51") and
+		db.actor:has_info("kill_sar_grc_stalker_52") and
+		db.actor:has_info("kill_sar_grc_stalker_53") and
+		db.actor:has_info("kill_sar_grc_stalker_54") and
+		db.actor:has_info("kill_sar_grc_stalker_55") and
+		db.actor:has_info("kill_sar_grc_stalker_56") and
+		db.actor:has_info("kill_sar_grc_stalker_57") and
+		db.actor:has_info("kill_sar_grc_stalker_58") and
+		db.actor:has_info("kill_sar_grc_stalker_59") and
+		db.actor:has_info("kill_sar_grc_stalker_60") and
+		db.actor:has_info("kill_sar_grc_stalker_61") and
+		db.actor:has_info("kill_sar_grc_stalker_62") and
+		db.actor:has_info("kill_sar_grc_stalker_63") and
+		db.actor:has_info("kill_sar_grc_stalker_64") and
+		db.actor:has_info("kill_sar_grc_stalker_65") and
+		db.actor:has_info("kill_sar_grc_stalker_66") and
+		db.actor:has_info("kill_sar_grc_stalker_67") and
+		db.actor:has_info("kill_sar_grc_stalker_68") then
+	return true and
+		db.actor:give_info_portion("panzer_test_1")
+	end 
+end
+
+function exempt_hostages_3_cmplt()
+if	db.actor:has_info("old_gar_stalker_grc_01_dead") and
+	db.actor:has_info("old_gar_stalker_grc_02_dead") and
+	db.actor:has_info("old_gar_stalker_grc_03_dead") and
+	db.actor:has_info("old_gar_stalker_grc_04_dead") and
+	db.actor:has_info("old_gar_stalker_grc_05_dead") then
+return true and
+	db.actor:give_info_portion("exempt_hostages_3")
+	end 
+end
+
+function exempt_hostages_4_cmplt()
+if	db.actor:has_info("old_gar_stalker_grc_06_dead") and
+	db.actor:has_info("old_gar_stalker_grc_07_dead") and
+	db.actor:has_info("old_gar_stalker_grc_08_dead") and
+	db.actor:has_info("old_gar_stalker_grc_09_dead") and
+	db.actor:has_info("old_gar_stalker_grc_10_dead") and
+	db.actor:has_info("old_gar_stalker_grc_11_dead") and
+	db.actor:has_info("old_gar_stalker_grc_12_dead") and
+	db.actor:has_info("old_gar_stalker_grc_13_dead") and
+	db.actor:has_info("old_gar_stalker_grc_14_dead") then
+return true and
+	db.actor:give_info_portion("exempt_hostages_4")
+	end 
+end
+
+function exempt_hostages_5_cmplt()
+if	db.actor:has_info("exempt_hostages_3") and
+	db.actor:has_info("exempt_hostages_4") then
+return true and
+	db.actor:give_info_portion("exempt_hostages_5")
+	end 
+end
+
+function exempt_hostages_cmplt()
+if	db.actor:has_info("exempt_hostages_3") and
+	db.actor:has_info("exempt_hostages_4") and
+	db.actor:has_info("exempt_hostages_5") then
+return true and
+	db.actor:give_info_portion("player_complete_exempt_hostages")
+	end 
+end
+
+function mutant_attack_2_cmplt()
+if	db.actor:has_info("dfs_bar_bloodsucker_01_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_02_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_03_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_04_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_05_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_06_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_07_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_08_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_09_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_10_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_11_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_12_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_13_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_14_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_15_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_16_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_17_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_18_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_19_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_20_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_21_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_22_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_23_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_24_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_25_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_26_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_27_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_28_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_29_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_30_dead") and
+	db.actor:has_info("dfs_bar_bloodsucker_31_dead") then
+return true and
+	db.actor:give_info_portion("mutant_attack_2")
+	end 
+end
+
+function monolithman_revenge_1_cmplt()
+if	db.actor:has_info("mil_kb_stalker_00_dead") and
+	db.actor:has_info("mil_kb_stalker_01_dead") and
+	db.actor:has_info("mil_kb_stalker_03_dead") and
+	db.actor:has_info("mil_kb_stalker_04_dead") and
+	db.actor:has_info("mil_kb_stalker_05_dead") and
+	db.actor:has_info("mil_kb_stalker_06_dead") and
+	db.actor:has_info("mil_kb_stalker_07_dead") and
+	db.actor:has_info("mil_kb_stalker_08_dead") then
+return true and
+	db.actor:give_info_portion("monolithman_revenge_1")
+	end 
+end
+
+function artefacts_for_ermol_1_cmplt()
+if	db.actor:has_info("art_zombie_01") and
+	db.actor:has_info("art_zombie_02") and
+	db.actor:has_info("art_zombie_03") and
+	db.actor:has_info("art_zombie_04") and
+	db.actor:has_info("art_zombie_05") and
+	db.actor:has_info("art_zombie_06") and
+	db.actor:has_info("art_zombie_07") and
+	db.actor:has_info("art_zombie_08") and
+	db.actor:has_info("art_zombie_09") and
+	db.actor:has_info("art_zombie_10") and
+	db.actor:has_info("art_zombie_11") and
+	db.actor:has_info("art_zombie_12") and
+	db.actor:has_info("art_zombie_13") and
+	db.actor:has_info("art_zombie_14") and
+	db.actor:has_info("art_zombie_15") and
+	db.actor:has_info("art_zombie_16") and
+	db.actor:has_info("art_zombie_17") and
+	db.actor:has_info("art_zombie_18") and
+	db.actor:has_info("art_zombie_19") and
+	db.actor:has_info("art_zombie_20") and
+	db.actor:has_info("art_zombie_21") and
+	db.actor:has_info("art_zombie_22") and
+	db.actor:has_info("art_zombie_23") and
+	db.actor:has_info("art_zombie_24") and
+	db.actor:has_info("art_zombie_25") and
+	db.actor:has_info("art_zombie_26") and
+	db.actor:has_info("art_zombie_27") then
+return true and
+	db.actor:give_info_portion("artefacts_for_ermol_1")
+	end 
+end
+
+function take_back_lorry_1_cmplt()
+if	db.actor:has_info("gen_grc_00_dead") and
+	db.actor:has_info("gen_grc_01_dead") and
+	db.actor:has_info("gen_grc_02_dead") and
+	db.actor:has_info("gen_grc_03_dead") and
+	db.actor:has_info("gen_grc_04_dead") and
+	db.actor:has_info("gen_grc_05_dead") and
+	db.actor:has_info("gen_grc_06_dead") then
+return true and
+	db.actor:give_info_portion("player_complete_take_back_lorry")
+	end 
+end
+
+function aggravated_scent_1_cmplt()
+if	db.actor:has_info("zaglushka_145") and
+	db.actor:has_info("zaglushka_184") and
+	db.actor:has_info("zaglushka_180") and
+	db.actor:has_info("zaglushka_181") and
+	db.actor:has_info("zaglushka_182") and
+	db.actor:has_info("zaglushka_144") and
+	db.actor:has_info("zaglushka_141") and
+	db.actor:has_info("zaglushka_183") then
+return true and
+	db.actor:give_info_portion("aggravated_scent_1")
+	end 
+end
+
+function proofs_for_captain_1_cmplt()
+if	db.actor:has_info("w_pri_stranger_04_dead") and
+	db.actor:has_info("w_pri_stranger_05_dead") and
+	db.actor:has_info("w_pri_stranger_06_dead") and
+	db.actor:has_info("w_pri_stranger_07_dead") and
+	db.actor:has_info("w_pri_stranger_08_dead") and
+	db.actor:has_info("w_pri_stranger_09_dead") and
+	db.actor:has_info("has_sniper_pda") then
+return true and
+	db.actor:give_info_portion("proofs_for_captain_1")
+	end 
+end
+
+function gangsters_law_1_cmplt()
+if	db.actor:has_info("w_pri_kovzur_bandit_0001_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0002_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0003_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0004_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0005_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0006_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0007_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0008_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0009_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0010_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0011_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0012_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0013_dead") and
+	db.actor:has_info("w_pri_kovzur_bandit_0014_dead") then
+return true and
+	db.actor:give_info_portion("gangsters_law_1")
+	end 
+end
+
+function killer_arsenal_1_cmplt()
+if	db.actor:has_info("killer_truck_1_destroyed") and
+	db.actor:has_info("killer_truck_2_destroyed") then
+return true and
+	db.actor:give_info_portion("killer_arsenal_1")
+	end 
+end
+
+function killer_arsenal_jjself_1_cmplt()
+if	db.actor:has_info("killer_truck_1_destroyed") and
+	db.actor:has_info("killer_truck_2_destroyed") then
+return true and
+	db.actor:give_info_portion("killer_arsenal_jjself_1")
+	end 
+end
+
+function the_trap_1_cmplt()
+if	db.actor:has_info("lim_stalker_grc_dead_0000") and
+	db.actor:has_info("lim_stalker_grc_dead_0001") and
+	db.actor:has_info("lim_stalker_grc_dead_0002") and
+	db.actor:has_info("lim_stalker_grc_dead_0003") and
+	db.actor:has_info("lim_stalker_grc_dead_0004") and
+	db.actor:has_info("lim_stalker_grc_dead_0005") and
+	db.actor:has_info("lim_stalker_grc_dead_0006") and
+	db.actor:has_info("lim_stalker_grc_dead_0007") and
+	db.actor:has_info("lim_stalker_grc_dead_0008") and
+	db.actor:has_info("lim_stalker_grc_dead_0009") and
+	db.actor:has_info("lim_stalker_grc_dead_0010") and
+	db.actor:has_info("lim_stalker_grc_dead_0011") and
+	db.actor:has_info("lim_stalker_grc_dead_0012") and
+	db.actor:has_info("lim_stalker_grc_dead_0013") and
+	db.actor:has_info("lim_stalker_grc_dead_0014") and
+	db.actor:has_info("lim_stalker_grc_dead_0015") and
+	db.actor:has_info("lim_stalker_grc_dead_0016") and
+	db.actor:has_info("lim_stalker_grc_dead_0017") then
+return true and
+	db.actor:give_info_portion("player_complete_the_trap")
+	end 
+end
+
+function take_keys_cmplt()
+if	db.actor:has_info("key_1_taken") and
+	db.actor:has_info("key_2_taken") and
+	db.actor:has_info("key_3_taken") then
+return true and
+	db.actor:give_info_portion("player_complete_take_keys") and
+	db.actor:give_info_portion("monolith_portal_start")
+	end 
+end
+
+
+
+

@@ -1,0 +1,94 @@
+---==================================================================================================---
+--------------------------------------------------------------------------------------------------------
+--------------------------------(Загрузчик файлов Improved_interface)-----------------------------------
+--------------------------------------------------------------------------------------------------------
+---==================================================================================================---
+	   ------------------------- Copyright 2012-2013 SERGGG ---------------------------
+
+
+--Callback на получение инфопоршена
+function on_info(npc, info_id)
+	ui_inGame2_pda.on_info(info_id)
+	ui_inGame2_inventory.on_info(info_id)
+	ui_inGame2_carbody.on_info(info_id)
+	ui_inGame2_trade.on_info(info_id)
+
+end
+
+--Callback на взятие предмета в инвентарь гг
+function actor_item_take(obj)
+
+    dmx_fast_use_slots.OnItemTake(obj:section())
+    dmx_inv_weight_static.item_take(obj)
+
+end
+
+--Callback на потерю предмета из инвенаря гг
+function actor_item_drop(obj)
+
+    dmx_fast_use_slots.OnItemDrop(obj:section())
+    dmx_inv_weight_static.on_item_drop(obj)
+
+end
+
+function loader()
+
+	hud_Time.ShowTime()
+
+	dmx_inv_weight_static.update()
+	dmx_fast_use_slots.FastUseSlotsHud()
+	keylogger.update()
+
+	ui_inGame2_hud.on_update()
+	ui_inGame2_inventory.on_update()
+	ui_inGame2_trade.on_update()
+	ui_inGame2_carbody.on_update()
+
+	check_binoc()				-- Убирание худа
+end
+
+------------------ Отладочные функции и фиксы для OGSM 2.x --------------------
+
+------------------------- Copyright 2007-2008 DEXXX ---------------------------
+
+-- Убирание худа при использовании оптического прицела или бинокля -- scope_texture
+function check_binoc()
+    if db.actor and db.actor.health > 0 then
+	local act_it = db.actor:active_item()
+	if act_it and (string.find(act_it:section(), "wpn_")) then
+		if system_ini():line_exist(act_it:section(), "scope_status") then
+		scope = system_ini():r_u32(act_it:section(), "scope_status")
+end
+		local addonf = rx_utils.get_weapon_data(alife():object(act_it:id())).addon_flags 
+		local zoom=67.5/device().fov
+		zoom=(zoom-1)*1.5+1
+		if zoom<1.001 then zoom=1.001 end
+		if zoom > 1.3 and (scope == 1 or (scope == 2 and bit_and(addonf, 1) == 1)
+		or string.find(act_it:section(), "wpn_binoc")) then
+	dmx_fast_use_slots.remove_elements_2(false)
+	dmx_inv_weight_static.remove_elements_3(false)
+if get_hud():GetCustomStatic("hud_show_time") then get_hud():RemoveCustomStatic("hud_show_time") end
+if get_hud():GetCustomStatic("hud_wpn_params_2") then get_hud():RemoveCustomStatic("hud_wpn_params_2") end
+if get_hud():GetCustomStatic("hud_wpn_params_2_2") then get_hud():RemoveCustomStatic("hud_wpn_params_2_2") end
+if get_hud():GetCustomStatic("hud_wpn_state_bar2") then get_hud():RemoveCustomStatic("hud_wpn_state_bar2") end
+
+return
+else
+
+end
+else
+
+end
+else
+	dmx_fast_use_slots.remove_elements_2(false)
+	dmx_inv_weight_static.remove_elements_3(false)
+if get_hud():GetCustomStatic("hud_show_time") then get_hud():RemoveCustomStatic("hud_show_time") end
+if get_hud():GetCustomStatic("hud_wpn_params_2") then get_hud():RemoveCustomStatic("hud_wpn_params_2") end
+if get_hud():GetCustomStatic("hud_wpn_params_2_2") then get_hud():RemoveCustomStatic("hud_wpn_params_2_2") end
+if get_hud():GetCustomStatic("hud_wpn_state_bar2") then get_hud():RemoveCustomStatic("hud_wpn_state_bar2") end
+
+return
+end
+end
+
+------------------------- Copyright 2007-2008 DEXXX ---------------------------

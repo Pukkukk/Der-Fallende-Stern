@@ -1,0 +1,240 @@
+
+function xform_1_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "xform_1", "out")
+end
+
+function xform_2_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "xform_2", "out")
+end
+
+function sniper_item_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "unknown_pda", "out")
+	dialogs.relocate_item_section(actor, "ss_document_00", "out")
+end
+
+function x18_sniper_item_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "wpn_p38_sk1", "out")
+	dialogs.relocate_item_section(actor, "ss_document_01", "out")
+	dialogs.relocate_item_section(actor, "ss_document_02", "out")
+	dialogs.relocate_item_section(actor, "ss_document_03", "out")
+end
+
+function kalash_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "wpn_ak74_m1", "out")
+end
+
+function vodka_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "vodka", "out")
+end
+
+function c4_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "explosive_c4", "out")
+end
+
+function docum_case_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "docum_case", "out")
+end
+
+function steppan_letter_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "ss_document_12", "out")
+end
+
+function devil_contract_xform_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "devil_contract_xform", "out")
+end
+
+function ripley_items_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "ripley_s_invertor", "out")
+	dialogs.relocate_item_section(actor, "ripley_pda", "out")
+end
+
+function accum_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "notebook_battery", "out")
+end
+
+function zombie_arts_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_electra_moonlight_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_medusa_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_cristall_flower_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_night_star_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_vyvert_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_gravi_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_gold_fish_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_drops_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_fireball_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_cristall_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_blood_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_mincer_meat_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_soul_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_electra_sparkler_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_electra_flash_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_ameba_slime_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_ameba_slug_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_ameba_mica_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_dummy_spring_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_dummy_dummy_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_dummy_battery_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_dummy_pellicle_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_dummy_glassbeads_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_rusty_thorn_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_rusty_kristall_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_rusty_sea_urchin_zombie", "out")
+	dialogs.relocate_item_section(actor, "af_fuzz_kolobok_zombie", "out")
+end
+
+function f_vit_letter_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "malyawa_07", "out")
+end
+
+function borman_letter_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "malyawa_08", "out")
+end
+
+function sniper_pda_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "sniper_pda", "out")
+end
+
+function knife_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "wpn_knife", "out")
+end
+
+function crucian_pda_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "crucian_pda", "out")
+end
+
+
+
+
+function af_medusa_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_medusa", "out")
+end
+
+function af_cristall_flower_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_cristall_flower", "out")
+end
+
+function af_night_star_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_night_star", "out")
+end
+
+function af_vyvert_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_vyvert", "out")
+end
+
+function af_gravi_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_gravi", "out")
+end
+
+function af_gold_fish_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_gold_fish", "out")
+end
+
+function af_drops_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_drops", "out")
+end
+
+function af_fireball_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_fireball", "out")
+end
+
+function af_cristall_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_cristall", "out")
+end
+
+function af_blood_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_blood", "out")
+end
+
+function af_mincer_meat_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_mincer_meat", "out")
+end
+
+function af_soul_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_soul", "out")
+end
+
+function af_electra_sparkler_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_electra_sparkler", "out")
+end
+
+function af_electra_flash_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_electra_flash", "out")
+end
+
+function af_electra_moonlight_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_electra_moonlight", "out")
+end
+
+function af_ameba_slime_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_ameba_slime", "out")
+end
+
+function af_ameba_slug_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_ameba_slug", "out")
+end
+
+function af_ameba_mica_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_ameba_mica", "out")
+end
+
+function af_dummy_spring_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_dummy_spring", "out")
+end
+
+function af_dummy_dummy_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_dummy_dummy", "out")
+end
+
+function af_dummy_battery_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_dummy_battery", "out")
+end
+
+function af_dummy_pellicle_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_dummy_pellicle", "out")
+end
+
+function af_dummy_glassbeads_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_dummy_glassbeads", "out")
+end
+
+function af_rusty_thorn_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_rusty_thorn", "out")
+end
+
+function af_rusty_kristall_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_rusty_kristall", "out")
+end
+
+function af_rusty_sea_urchin_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_rusty_sea-urchin", "out")
+end
+
+function af_fuzz_kolobok_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_fuzz_kolobok", "out")
+end
+
+function concord_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "concord", "out")
+end
+
+function black_soul_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "black_soul", "out")
+end
+
+function glowworm_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "glowworm", "out")
+end
+
+function af_doping_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "af_doping", "out")
+end
+
+function berkov_diary_nax(npc, actor)
+	dialogs.relocate_item_section(actor, "berkov_code_tables", "out")
+	dialogs.relocate_item_section(actor, "ss_document_13", "out")
+end
+
+
+--[[function _nax(npc, actor)
+	dialogs.relocate_item_section(actor, "", "out")
+end]]

@@ -1,0 +1,17 @@
+--' Script dim_loadscreens.script
+
+local f = getFS()
+
+--[Полный рандом, не зависящий от имени]--
+function fullscreen_loadscreen()
+	local flist = f:file_list_open("$game_textures$","ui\\load\\",FS.FS_ListFiles)
+	local f_cnt = flist:Size()
+	if f_cnt > 0 then
+		local rnd=math.random(1,f_cnt)
+		local file_name = flist:GetAt(rnd)
+		local texture = f:update_path("$game_textures$","ui\\ui_load.dds")
+		local name = f:update_path("$game_textures$","ui\\load\\"..file_name)
+		f:file_delete(texture)
+		f:file_copy(name, texture)
+	end 
+end

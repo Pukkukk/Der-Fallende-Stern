@@ -1,0 +1,68 @@
+function shoot_sound_1()
+	local snd_obj = xr_sound.get_safe_sound_object( [[dfs\sor_svd_shoot]] )
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+end
+
+function shoot_sound_2()
+	local snd_obj = xr_sound.get_safe_sound_object( [[dfs\hit]] )
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+end
+
+function scout_sound_1()
+	
+	local snd_obj = xr_sound.get_safe_sound_object([[dfs\scout]])
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+end
+
+function sniper_ambuse(actor, npc)
+	
+	local sniper = level_object_by_sid(19923)
+		--if not sniper or not sniper:alive() then
+		--return
+	--end
+	
+	if sniper then
+		sniper:set_relation(game_object.enemy, actor)
+	end
+end
+
+function pope_down(actor, npc)
+	
+
+	local pope = level_object_by_sid(20029)
+		if not pope or not pope:alive() then
+		return
+	end
+	
+	if pope then
+		pope:set_relation(game_object.enemy, actor)
+	end
+end
+
+function pope_up(actor, npc)
+	
+
+	local pope = level_object_by_sid(20029)
+		if not pope or not pope:alive() then
+		return
+	end
+	
+	if pope then
+		pope:set_relation(game_object.friend, actor)
+	end
+end
+
+function ch_range100()
+	db.actor:set_character_rank(db.actor:character_rank() + (100))
+end
+
+function ch_range200()
+	db.actor:set_character_rank(db.actor:character_rank() + (200))
+end
+
+function ch_range500()
+	db.actor:set_character_rank(db.actor:character_rank() + (500))
+end
+
+
+

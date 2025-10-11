@@ -1,0 +1,240 @@
+class "ui_cop_blood_empty" (CUIScriptWnd)
+
+function ui_cop_blood_empty:__init() super()
+  self:InitControls()
+end
+
+function ui_cop_blood_empty:InitControls()
+  self:Init(0, 0, device().width, device().height)
+
+  self.overlay = CUIStatic()
+  self.overlay:SetAutoDelete(true)
+	-- replace x, y with position of overlay texture (position on hud)
+	-- and w, h with overlay texture's width and height, respectively
+	-- you can use device().width instead of w if you want to set screen's
+	-- width as a texture width
+  self.overlay:Init(529, 472, 0, 0)
+  self.overlay:InitTexture("ui\\cop_inventory")
+  self.overlay:SetStretchTexture(true) -- to stretch texture based on w, h
+  self.overlay:Show(false)
+  self:AttachChild(self.overlay)
+
+  self.hud_stage = "no"
+end
+
+--initialize and display overlay textures
+function ui_cop_blood_empty:display_texture(idx)
+	if self.hud_stage ~= idx then
+		self.overlay:InitTexture("ui\\ui_cop_bleeding_" .. idx)
+		self.overlay:Show(true)
+		self.hud_stage = idx
+	end
+end
+
+--update texture based on actors current condition
+function ui_cop_blood_empty:Update()
+  CUIScriptWnd.Update(self)
+	
+  local bleeding = db.actor:get_bleeding()
+
+	--display texture overlay based on actor's radiation levels
+  if bleeding >= 0 then
+    self:display_texture("empty")
+  else
+  end
+end
+
+local HUD = nil
+
+function add_blood_empty()
+  if HUD == nil then
+    HUD = ui_cop_blood_empty()
+    get_hud():AddDialogToRender(HUD)
+  end
+end
+
+function remove_blood_empty()
+  if HUD ~= nil then
+    get_hud():RemoveDialogToRender(HUD)
+    HUD = nil
+  end
+end
+
+--
+class "ui_cop_blood_green" (CUIScriptWnd)
+
+function ui_cop_blood_green:__init() super()
+  self:InitControls()
+end
+
+function ui_cop_blood_green:InitControls()
+    self:Init(0, 0, device().width, device().height)
+    local xml = CScriptXmlInit()
+    xml:ParseFile("ui_cop_radblood.xml")
+	self.blood_green = xml:InitStatic("blood_green", self)
+	self.blood_green:Show(false)
+end
+
+
+function ui_cop_blood_green:Update()
+	CUIScriptWnd.Update(self)
+
+	local bleeding = db.actor:get_bleeding()
+
+	if bleeding > 0 and bleeding < 0.25 then 
+		self.blood_green:Show(true)
+	else
+		self.blood_green:Show(false)
+	end
+end
+
+  local HUD = nil
+
+function add_blood_green()
+   if HUD == nil then
+     HUD = ui_cop_blood_green()
+    get_hud():AddDialogToRender(HUD)
+  end
+end
+
+function remove_blood_green()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil
+  end
+end
+
+--
+
+class "ui_cop_blood_yellow" (CUIScriptWnd)
+
+function ui_cop_blood_yellow:__init() super()
+  self:InitControls()
+end
+
+function ui_cop_blood_yellow:InitControls()
+    self:Init(0, 0, device().width, device().height)
+    local xml = CScriptXmlInit()
+    xml:ParseFile("ui_cop_radblood.xml")
+	self.blood_yellow = xml:InitStatic("blood_yellow", self)
+	self.blood_yellow:Show(false)
+end
+
+
+function ui_cop_blood_yellow:Update()
+	CUIScriptWnd.Update(self)
+
+	local bleeding = db.actor:get_bleeding()
+
+	if bleeding > 0.25 and bleeding < 0.50 then 
+		self.blood_yellow:Show(true)
+	else
+		self.blood_yellow:Show(false)
+	end
+end
+
+  local HUD = nil
+
+function add_blood_yellow()
+   if HUD == nil then
+     HUD = ui_cop_blood_yellow()
+    get_hud():AddDialogToRender(HUD)
+  end
+end
+
+function remove_blood_yellow()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil
+  end
+end
+
+--
+
+class "ui_cop_blood_orange" (CUIScriptWnd)
+
+function ui_cop_blood_orange:__init() super()
+  self:InitControls()
+end
+
+function ui_cop_blood_orange:InitControls()
+    self:Init(0, 0, device().width, device().height)
+    local xml = CScriptXmlInit()
+    xml:ParseFile("ui_cop_radblood.xml")
+	self.blood_orange = xml:InitStatic("blood_orange", self)
+	self.blood_orange:Show(false)
+end
+
+
+function ui_cop_blood_orange:Update()
+	CUIScriptWnd.Update(self)
+
+	local bleeding = db.actor:get_bleeding()
+
+	if bleeding > 0.50 and bleeding < 0.75 then 
+		self.blood_orange:Show(true)
+	else
+		self.blood_orange:Show(false)
+	end
+end
+
+  local HUD = nil
+
+function add_blood_orange()
+   if HUD == nil then
+     HUD = ui_cop_blood_orange()
+    get_hud():AddDialogToRender(HUD)
+  end
+end
+
+function remove_blood_orange()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil
+  end
+end
+
+--
+
+class "ui_cop_blood_red" (CUIScriptWnd)
+
+function ui_cop_blood_red:__init() super()
+  self:InitControls()
+end
+
+function ui_cop_blood_red:InitControls()
+    self:Init(0, 0, device().width, device().height)
+    local xml = CScriptXmlInit()
+    xml:ParseFile("ui_cop_radblood.xml")
+	self.blood_red = xml:InitStatic("blood_red", self)
+	self.blood_red:Show(false)
+end
+
+
+function ui_cop_blood_red:Update()
+	CUIScriptWnd.Update(self)
+
+	local bleeding = db.actor:get_bleeding()
+
+	if bleeding > 0.75 then 
+		self.blood_red:Show(true)
+	else
+		self.blood_red:Show(false)
+	end
+end
+
+  local HUD = nil
+
+function add_blood_red()
+   if HUD == nil then
+     HUD = ui_cop_blood_red()
+    get_hud():AddDialogToRender(HUD)
+  end
+end
+
+function remove_blood_red()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil
+  end
+end

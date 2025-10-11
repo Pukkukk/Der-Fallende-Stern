@@ -1,0 +1,1705 @@
+local upd_time = 0
+local upd_time1 = 0
+local upd_time2 = 0
+local upd_time3 = 0
+local upd_time4 = 0
+local upd_time5 = 0
+
+function init(obj)
+	xr_motivator.AddToMotivator(obj)
+end
+
+function actor_init(npc)
+	_G.g_bind_actor = this.actor_binder(npc)
+	npc:bind_object(g_bind_actor)
+end
+function save(...)
+	_G.g_bind_actor:ext_save(...)
+end
+function load(...)
+	_G.g_bind_actor:ext_load(...)
+end
+
+local iSID = 9901 --/#+# начальный story_id для stor-элементов хранения данных
+
+
+
+
+
+
+--/ -----------------------------------------------------------------
+local game_difficulty_by_num = {
+	[0] = "gd_novice",
+	[1] = "gd_stalker",
+	[2] = "gd_veteran",
+	[3] = "gd_master"
+	}
+
+lasthealth  = 0
+lasttime	= 0
+post_process = 0
+local weapon_hide = false
+----------------------------------------------------------------------------------------------------------------------
+class "actor_binder" (object_binder)
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:__init(obj) super(obj)
+	self.bCheckStart = false
+	self.weather_manager = level_weathers.WeatherManager()
+	self.actor_detector = xr_detector.actor_detector()
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:net_spawn(data)
+
+	printf("actor net spawn")		
+
+	level.show_indicators()
+
+	self.bCheckStart = true
+	self.weapon_hide = false -- спрятано или нет оружие при разговоре.
+	weapon_hide = false -- устанавливаем глобальный дефолтовый флаг.
+
+	if object_binder.net_spawn(self,data) == false then
+		return false
+	end
+
+	db.add_actor(self.object)
+	
+	if self.st.disable_input_time == nil then
+		level.enable_input()
+	end
+
+	self.weather_manager:reset()
+
+	if actor_stats.add_to_ranking ~= nil then
+		actor_stats.add_to_ranking(self.object:id())
+	end
+
+	--' Загружаем настройки дропа
+	death_manager.init_drop_settings()
+ogsm.on_game_load(obj)
+-- Создаем хранилище актора
+	if db.storage[db.actor:id()].pstor == nil then
+		db.storage[db.actor:id()].pstor = {}
+	end
+  
+        
+	ts_mod_soc.ts_on_net_spawn()	--TS_MOD--
+	als_loadscrin.update() --полноэкранные интро
+	for _, k in ipairs({
+      "g_zones_dbg", "g_vertex_dbg", "g_crosshair_dbg",
+       "g_ammunition_on_belt",
+      "show_wnd_rect", "show_wnd_rect_all",
+    }) do
+      get_console():execute("g_god off" )
+	get_console():execute("g_ammunition_on_belt off" )
+      get_console():disable_command( k )
+    end
+----------------------------------
+	if rx_ai then 
+		rx_ai.actor_net_spawn()
+	end
+	if xrs_ai then xrs_ai.actor_net_spawn(self) end
+	return true
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:net_destroy()
+	
+	if actor_stats.remove_from_ranking ~= nil then
+		actor_stats.remove_from_ranking(self.object:id())
+	end
+	-- game_stats.shutdown()
+	db.del_actor(self.object)
+
+
+	ui_cop_rad.remove_rad_green()
+	ui_cop_rad.remove_rad_yellow()
+	ui_cop_rad.remove_rad_orange()
+	ui_cop_rad.remove_rad_red()
+	ui_cop_blood.remove_blood_green()
+	ui_cop_blood.remove_blood_yellow()
+	ui_cop_blood.remove_blood_orange()
+	ui_cop_blood.remove_blood_red()
+
+
+
+    sr_light.clean_up()
+
+	self.object:set_callback(callback.inventory_info, nil)
+	self.object:set_callback(callback.article_info, nil)
+	self.object:set_callback(callback.on_item_take, nil)
+	self.object:set_callback(callback.on_item_drop, nil)
+	--self.object:set_callback(callback.actor_sleep, nil)
+	self.object:set_callback(callback.task_state, nil)
+	self.object:set_callback(callback.level_border_enter, nil)
+	self.object:set_callback(callback.level_border_exit, nil)
+	self.object:set_callback(callback.take_item_from_box, nil)
+        self.object:set_callback(callback.use_object, nil)  
+	-- new callbacks
+	self.object:set_callback(callback.on_key_press, nil)
+	self.object:set_callback(callback.on_key_release, nil)
+--	self.object:set_callback(callback.on_key_hold, nil)
+--	self.object:set_callback(callback.on_mouse_wheel, nil)
+--	self.object:set_callback(callback.on_mouse_move, nil)
+	self.object:set_callback(callback.on_belt, nil)
+	self.object:set_callback(callback.on_ruck, nil)
+	self.object:set_callback(callback.on_slot, nil)
+----	self.object:set_callback(callback.on_goodwill_change, nil)
+--	self.object:set_callback(callback.entity_alive_before_hit, nil)
+--	self.object:set_callback(callback.on_create_cell_item, nil)
+--	self.object:set_callback(callback.on_select_item, nil)
+--	self.object:set_callback(callback.on_focus_item, nil)
+--	self.object:set_callback(callback.on_focus_lost_item, nil)
+
+
+	if sr_psy_antenna.psy_antenna then
+		sr_psy_antenna.psy_antenna:destroy()
+		sr_psy_antenna.psy_antenna = false
+	end
+
+	xr_sound.stop_all_sound_object()
+
+	if ui_grenade_marks then
+		ui_grenade_marks.remove_grenade_marks()
+	end
+
+	object_binder.net_destroy(self)
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:reinit()
+	object_binder.reinit(self)
+
+
+	local npc_id = self.object:id()
+
+	db.storage[npc_id] = { }
+
+	self.st = db.storage[npc_id]
+	self.st.pstor = nil
+
+	self.next_restrictors_update_time = -10000
+
+	self.object:set_callback(callback.inventory_info, self.info_callback, self)
+	self.object:set_callback(callback.article_info, self.article_callback, self)
+	self.object:set_callback(callback.on_item_take, self.on_item_take, self)
+	self.object:set_callback(callback.on_item_drop, self.on_item_drop, self)
+	self.object:set_callback(callback.trade_sell_buy_item, self.on_trade, self) -- for game stats
+	--self.object:set_callback(callback.actor_sleep, self.sleep_callback, self)
+	self.object:set_callback(callback.task_state, self.task_callback, self)
+	--self.object:set_callback(callback.map_location_added, self.map_location_added_callback, self)
+	self.object:set_callback(callback.level_border_enter, self.level_border_enter, self)
+	self.object:set_callback(callback.level_border_exit, self.level_border_exit, self)
+	self.object:set_callback(callback.take_item_from_box, self.take_item_from_box, self)
+        self.object:set_callback(callback.use_object, self.use_obj, self) 
+
+
+	self.object:set_callback(callback.on_key_press, self.on_key, self)			-- нажатие клавиши
+	self.object:set_callback(callback.on_key_release, self.on_key_free, self)		-- отпускание клавиши
+--	self.object:set_callback(callback.on_key_hold, self.on_key_hold, self)		-- удержание клавиши
+--	self.object:set_callback(callback.on_mouse_wheel, self.on_wheel_rotation, self)	-- вращение колесика мыши
+--	self.object:set_callback(callback.on_mouse_move, self.on_mouse_move, self)		-- движение мыши
+	self.object:set_callback(callback.on_belt, self.on_belt, self)		-- перемещение предмета на пояс
+	self.object:set_callback(callback.on_ruck, self.on_ruck, self)	-- перемещение предмета в рюкзак
+	self.object:set_callback(callback.on_slot, self.on_slot, self)		-- перемещение предмета в слот
+--	self.object:set_callback(callback.on_goodwill_change, self.on_goodwill_change, self)		-- изменение отношений
+--	self.object:set_callback(callback.on_release_npc, self.on_release_npc, self)		-- удаление серверного объекта непися или монстра
+	--
+	self.object:set_callback(callback.entity_alive_before_hit, self.before_hit_callback, self)
+--	self.object:set_callback(callback.on_before_use_item, self.before_use, self)
+--	self.object:set_callback(callback.on_create_cell_item, self.cell_item_create, self)
+--	self.object:set_callback(callback.on_select_item, self.inv_item_select, self)
+--	self.object:set_callback(callback.on_focus_item, self.inv_item_focus, self)
+--	self.object:set_callback(callback.on_focus_lost_item, self.inv_item_focus_lost, self)
+
+end
+
+----------------- Новые каллбеки начало ------------------------------------------------------------------------
+function actor_binder:on_ruck(obj)
+	use_key.item_to_ruck(obj)
+end
+
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:on_slot(obj)
+	use_key.item_to_slot(obj)
+end
+
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:on_belt(obj)
+	use_key.item_to_belt(obj)
+end
+--------------------------------------------------------------------------------------
+
+
+
+--function actor_binder:cell_item_create(item)
+--end
+----------------------------------------------------------------------------------------------------------------------
+--function actor_binder:inv_item_focus_lost(obj)
+--end
+----------------------------------------------------------------------------------------------------------------------
+--function actor_binder:inv_item_focus(obj)
+--end
+----------------------------------------------------------------------------------------------------------------------
+--function actor_binder:inv_item_select(obj)
+--end
+----------------------------------------------------------------------------------------------------------------------
+--function actor_binder:on_wheel_rotation(w)
+--end
+----------------------------------------------------------------------------------------------------------------------
+local kShifts = { [DIK_keys.DIK_RSHIFT] = true, [DIK_keys.DIK_LSHIFT] = true }
+function actor_binder:on_key(dik)
+	if kShifts[dik] then _G.ShiftPressed = true end
+	local bind = dik_to_bind(dik)
+	hotkeys.on_key(dik, bind)
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:on_key_free(dik)
+	if kShifts[dik] then _G.ShiftPressed = nil end
+end
+
+
+function actor_binder:before_hit_callback(hit_data)
+end
+
+-------------------- Новые каллбеки конец------------------------------------------------------------------------------
+
+function actor_binder:take_item_from_box(box, item)
+	local story_id = box:story_id()
+	if story_id == nil then
+		return
+	end
+
+	treasure_manager.take_item_from_box(box, story_id)
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:level_border_enter(npc, info_id)
+	self.actor_detector:actor_enter()
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:level_border_exit(npc, info_id)
+	self.actor_detector:actor_exit()
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:info_callback(npc, info_id)
+	printf("*INFO*: npc='%s' id='%s'", npc:name(), info_id)
+	--' Сюжет
+	level_tasks.proceed(self.object)
+	-- Отметки на карте
+	level_tasks.process_info_portion(info_id)
+
+	hidden_slots.on_info(info_id)
+	inventory.on_inventory_info(info_id)
+	pda.on_info(info_id)
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:on_trade (item, sell_bye, money)
+    if sell_bye == true then
+       game_stats.money_trade_update (money)
+    else       
+       game_stats.money_trade_update (-money) 
+    end   
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:article_callback(npc, group, name)
+	--printf("article_callback [%s][%s]", group, name)
+	if device().precache_frame >1 then return end
+	
+	if group == "Diary" then
+		news_manager.send_encyclopedy("diary", group)
+	else
+		news_manager.send_encyclopedy("encyclopedy", group)
+	end
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:on_item_take (obj)
+    level_tasks.proceed(self.object)
+take_item_sounds.take_items(obj)
+xr_statistic.addArtefact(obj)
+	local item = obj
+
+	if obj and obj:section() == "malyawa_01" and
+		not has_alife_info("info_malyawa_01") then
+	db.actor:give_info_portion("info_malyawa_01")
+end
+
+	if obj and obj:section() == "ss_document_12" and
+		not has_alife_info("info_letter_1") then
+	db.actor:give_info_portion("info_letter_1")
+end
+	
+	if obj and obj:section() == "molokh_pda" and
+		not has_alife_info("info_molokh_pda_nam") then
+	db.actor:give_info_portion("info_molokh_pda_nam")
+end
+
+if obj and obj:section() == "zakhar_pda" and
+		not has_alife_info("info_zakhar_pda_nam") then
+	db.actor:give_info_portion("info_zakhar_pda_nam")
+end
+
+if obj and obj:section() == "ss_document_06" and
+		not has_alife_info("info_ss_document_06_nam") then
+	db.actor:give_info_portion("info_ss_document_06_nam")
+end
+
+if obj and obj:section() == "malyawa_03" and
+		not has_alife_info("info_malyawa_03") then
+	db.actor:give_info_portion("info_malyawa_03")
+end
+
+if obj and obj:section() == "malyawa_04" and
+		not has_alife_info("info_malyawa_04") then
+	db.actor:give_info_portion("info_malyawa_04")
+end
+
+if obj and obj:section() == "malyawa_05" and
+		not has_alife_info("info_malyawa_05") then
+	db.actor:give_info_portion("info_malyawa_05")
+end
+
+if obj and obj:section() == "malyawa_06" and
+		not has_alife_info("info_malyawa_06") then
+	db.actor:give_info_portion("info_malyawa_06")
+end
+
+if obj and obj:section() == "fly_pda" and
+		not has_alife_info("info_fly_pda") then
+	db.actor:give_info_portion("info_fly_pda")
+end
+
+
+	if obj and obj:section() == "xform_1" and
+		not has_alife_info("player_complete_find_xform_1") then
+	db.actor:give_info_portion("player_complete_find_xform_1")
+end
+
+	if obj and obj:section() == "devil_contract_xform" and
+		not has_alife_info("taked_mzda") then
+	db.actor:give_info_portion("taked_mzda")
+end
+
+	if obj and obj:section() == "ss_document_00" and
+		not has_alife_info("ghost_sniper_2") then
+	db.actor:give_info_portion("ghost_sniper_2")
+	dfs.shoot_sound_1()
+end
+
+	if obj and obj:section() == "unknown_pda" and
+		not has_alife_info("ghost_sniper_4") then
+	db.actor:give_info_portion("ghost_sniper_4")
+end
+
+	if obj and obj:section() == "malyawa_01" and
+		not has_alife_info("zaglushka_8") then
+	db.actor:give_info_portion("info_dfs_story_ar_16")
+	db.actor:give_info_portion("info_dfs_story_ar_17")
+	db.actor:give_info_portion("zaglushka_8")
+end
+
+	if obj and obj:section() == "wpn_p38_sk1" and
+		not has_alife_info("find_sor_sniper_2_1") then
+		db.actor:give_info_portion("find_sor_sniper_2_1")
+	end
+	
+	if obj and obj:section() == "ss_document_01" and
+		not has_alife_info("find_sor_sniper_2_2") then
+		db.actor:give_info_portion("find_sor_sniper_2_2")
+	end
+	
+	if obj and obj:section() == "ss_document_02" and
+		not has_alife_info("find_sor_sniper_2_3") then
+		db.actor:give_info_portion("find_sor_sniper_2_3")
+	end
+	
+	if obj and obj:section() == "ss_document_03" and
+		not has_alife_info("find_sor_sniper_2_4") then
+		db.actor:give_info_portion("find_sor_sniper_2_4")
+	end
+	
+	if obj and obj:section() == "xform_2" and
+		not has_alife_info("xform_from_hell_1") and 
+		(level.name() == "l01_escape") then
+		db.actor:give_info_portion("xform_from_hell_1")
+	end
+	
+	if obj and obj:section() == "xform_4" and
+		not has_alife_info("xform_from_hell_2") then
+		db.actor:give_info_portion("xform_from_hell_2")
+	end
+	
+	if obj and obj:section() == "xform_5" and
+		not has_alife_info("xform_from_hell_3") then
+		db.actor:give_info_portion("xform_from_hell_3")
+	end
+	
+	if obj and obj:section() == "xform_6" and
+		not has_alife_info("xform_from_hell_4") then
+		db.actor:give_info_portion("xform_from_hell_4")
+	end
+	
+	if obj and obj:section() == "xform_7" and
+		not has_alife_info("xform_from_hell_5") then
+		db.actor:give_info_portion("xform_from_hell_5")
+	end
+	
+	if obj and obj:section() == "xform_8" and
+		not has_alife_info("xform_from_hell_6") then
+		db.actor:give_info_portion("xform_from_hell_6")
+	end
+	
+	if obj and obj:section() == "xform_9" and
+		not has_alife_info("xform_from_hell_7") then
+		db.actor:give_info_portion("xform_from_hell_7")
+	end
+	
+	if obj and obj:section() == "xform_10" and
+		not has_alife_info("xform_from_hell_8") then
+		db.actor:give_info_portion("xform_from_hell_8")
+	end
+	
+	if obj and obj:section() == "xform_11" and
+		not has_alife_info("xform_from_hell_9") then
+		db.actor:give_info_portion("xform_from_hell_9")
+	end
+	
+	if obj and obj:section() == "xform_12" and
+		not has_alife_info("xform_from_hell_10") then
+		db.actor:give_info_portion("xform_from_hell_10")
+	end
+	
+	if obj and obj:section() == "xform_13" and
+		not has_alife_info("xform_from_hell_11") then
+		db.actor:give_info_portion("xform_from_hell_11")
+	end
+	
+	if obj and obj:section() == "xform_14" and
+		not has_alife_info("xform_from_hell_12") then
+		db.actor:give_info_portion("xform_from_hell_12")
+	end
+	
+	if obj and obj:section() == "xform_15" and
+		not has_alife_info("xform_from_hell_13") then
+		db.actor:give_info_portion("xform_from_hell_13")
+	end
+	
+	if obj and obj:section() == "xform_16" and
+		not has_alife_info("xform_from_hell_14") then
+		db.actor:give_info_portion("xform_from_hell_14")
+	end
+	
+	if obj and obj:section() == "xform_17" and
+		not has_alife_info("xform_from_hell_15") then
+		db.actor:give_info_portion("xform_from_hell_15")
+	end
+	
+	if obj and obj:section() == "xform_18" and
+		not has_alife_info("xform_from_hell_16") then
+		db.actor:give_info_portion("xform_from_hell_16")
+	end
+	
+	if obj and obj:section() == "xform_19" and
+		not has_alife_info("xform_from_hell_17") then
+		db.actor:give_info_portion("xform_from_hell_17")
+	end
+	
+	if obj and obj:section() == "xform_20" and
+		not has_alife_info("xform_from_hell_18") then
+		db.actor:give_info_portion("xform_from_hell_18")
+	end
+	
+	if obj and obj:section() == "kira_pribor" and
+		not has_alife_info("player_complete_find_crym_invertor") then
+		db.actor:give_info_portion("player_complete_find_crym_invertor")
+	end
+	
+	if obj and obj:section() == "renn_pda" and
+		not has_alife_info("info_dfs_story_ar_34") then
+		db.actor:give_info_portion("info_dfs_story_ar_34")
+	end
+	
+	if obj and obj:section() == "access_flesh" and
+		not has_alife_info("military_baza_1") then
+		db.actor:give_info_portion("military_baza_1")
+		db.actor:give_info_portion("info_dfs_story_ar_49")
+	end
+	
+	if obj and obj:section() == "zakhar_pda" and
+		not has_alife_info("zakhar_pda_found") then
+		db.actor:give_info_portion("zakhar_pda_found")
+	end
+	
+	if obj and obj:section() == "docum_case" and
+		not has_alife_info("zaglushka_58") then
+		db.actor:give_info_portion("zaglushka_58")
+		dfs_diss.ch_rf2lim_appear()
+	end
+	
+	if	obj and obj:section() == "molokh_pda" and
+		not has_alife_info("hard_inquiry_3_1") and
+		has_alife_info("hard_inquiry_start") then
+		dfs_diss.ch_rf2ff_appear()
+		db.actor:give_info_portion("hard_inquiry_3_1")
+	end
+
+	if	obj and obj:section() == "wpn_m1000" and
+		not has_alife_info("hard_inquiry_3_2") and
+		has_alife_info("hard_inquiry_start") then
+		db.actor:give_info_portion("hard_inquiry_3_2")
+	end
+
+	if	obj and obj:section() == "malyawa_03" and
+		not has_alife_info("dagger_for_sinner_failed") and
+		has_alife_info("dagger_for_sinner_start") then
+		db.actor:give_info_portion("dagger_for_sinner_failed")
+	end
+
+	if obj and obj:section() == "sinner_flesh" and
+		not has_alife_info("has_dc_codes") then
+		db.actor:give_info_portion("has_dc_codes")
+		db.actor:give_info_portion("info_dfs_story_ar_50")
+	end
+	
+	if obj and obj:section() == "molokh_flesh" and
+		not has_alife_info("player_complete_sinner_items") and
+		not has_alife_info("has_dc_codes") then
+		db.actor:give_info_portion("has_dc_codes")
+		db.actor:give_info_portion("sinner_items_failed")
+		db.actor:give_info_portion("info_dfs_story_ar_50")
+	end
+	
+	if obj and obj:section() == "fly_pda" and
+		not has_alife_info("find_fly_pda") then
+		db.actor:give_info_portion("get_out_dc_1")
+		db.actor:give_info_portion("get_car_out_dc_1")
+		db.actor:give_info_portion("find_fly_pda")
+		dfs_diss.lc_dc2aes2_app()
+	end
+	
+	if obj and obj:section() == "wpn_vihlop" and
+		not has_alife_info("exempt_hostages_1") then
+		db.actor:give_info_portion("exempt_hostages_1")
+	end
+	
+	if obj and obj:section() == "malyawa_06" and
+		not has_alife_info("player_complete_meet_xeno_guard") and
+		not has_alife_info("meet_xeno_guard_start") then
+		db.actor:give_info_portion("meet_xeno_guard_start")
+	end
+	
+	
+	-- **************************************************
+	-- квест с артефактами зомби
+	if obj and obj:section() == "af_electra_moonlight_zombie" and
+		not has_alife_info("art_zombie_01") then
+		db.actor:give_info_portion("art_zombie_01")
+	end
+	
+	if obj and obj:section() == "af_medusa_zombie" and
+		not has_alife_info("art_zombie_02") then
+		db.actor:give_info_portion("art_zombie_02")
+	end
+	
+	if obj and obj:section() == "af_cristall_flower_zombie" and
+		not has_alife_info("art_zombie_03") then
+		db.actor:give_info_portion("art_zombie_03")
+	end
+	
+	if obj and obj:section() == "af_night_star_zombie" and
+		not has_alife_info("art_zombie_04") then
+		db.actor:give_info_portion("art_zombie_04")
+	end
+	
+	if obj and obj:section() == "af_vyvert_zombie" and
+		not has_alife_info("art_zombie_05") then
+		db.actor:give_info_portion("art_zombie_05")
+	end
+	
+	if obj and obj:section() == "af_gravi_zombie" and
+		not has_alife_info("art_zombie_06") then
+		db.actor:give_info_portion("art_zombie_06")
+	end
+	
+	if obj and obj:section() == "af_gold_fish_zombie" and
+		not has_alife_info("art_zombie_07") then
+		db.actor:give_info_portion("art_zombie_07")
+	end
+	
+	if obj and obj:section() == "af_drops_zombie" and
+		not has_alife_info("art_zombie_08") then
+		db.actor:give_info_portion("art_zombie_08")
+	end
+	
+	if obj and obj:section() == "af_fireball_zombie" and
+		not has_alife_info("art_zombie_09") then
+		db.actor:give_info_portion("art_zombie_09")
+	end
+	
+	if obj and obj:section() == "af_cristall_zombie" and
+		not has_alife_info("art_zombie_10") then
+		db.actor:give_info_portion("art_zombie_10")
+	end
+	
+	if obj and obj:section() == "af_blood_zombie" and
+		not has_alife_info("art_zombie_11") then
+		db.actor:give_info_portion("art_zombie_11")
+	end
+	
+	if obj and obj:section() == "af_mincer_meat_zombie" and
+		not has_alife_info("art_zombie_12") then
+		db.actor:give_info_portion("art_zombie_12")
+	end
+	
+	if obj and obj:section() == "af_soul_zombie" and
+		not has_alife_info("art_zombie_13") then
+		db.actor:give_info_portion("art_zombie_13")
+	end
+	
+	if obj and obj:section() == "af_electra_sparkler_zombie" and
+		not has_alife_info("art_zombie_14") then
+		db.actor:give_info_portion("art_zombie_14")
+	end
+	
+	if obj and obj:section() == "af_electra_flash_zombie" and
+		not has_alife_info("art_zombie_15") then
+		db.actor:give_info_portion("art_zombie_15")
+	end
+	
+	if obj and obj:section() == "af_ameba_slime_zombie" and
+		not has_alife_info("art_zombie_16") then
+		db.actor:give_info_portion("art_zombie_16")
+	end
+	
+	if obj and obj:section() == "af_ameba_slug_zombie" and
+		not has_alife_info("art_zombie_17") then
+		db.actor:give_info_portion("art_zombie_17")
+	end
+	
+	if obj and obj:section() == "af_ameba_mica_zombie" and
+		not has_alife_info("art_zombie_18") then
+		db.actor:give_info_portion("art_zombie_18")
+	end
+	
+	if obj and obj:section() == "af_dummy_spring_zombie" and
+		not has_alife_info("art_zombie_19") then
+		db.actor:give_info_portion("art_zombie_19")
+	end
+	
+	if obj and obj:section() == "af_dummy_dummy_zombie" and
+		not has_alife_info("art_zombie_20") then
+		db.actor:give_info_portion("art_zombie_20")
+	end
+	
+	if obj and obj:section() == "af_dummy_battery_zombie" and
+		not has_alife_info("art_zombie_21") then
+		db.actor:give_info_portion("art_zombie_21")
+	end
+	
+	if obj and obj:section() == "af_dummy_pellicle_zombie" and
+		not has_alife_info("art_zombie_22") then
+		db.actor:give_info_portion("art_zombie_22")
+	end
+	
+	if obj and obj:section() == "af_dummy_glassbeads_zombie" and
+		not has_alife_info("art_zombie_23") then
+		db.actor:give_info_portion("art_zombie_23")
+	end
+	
+	if obj and obj:section() == "af_rusty_thorn_zombie" and
+		not has_alife_info("art_zombie_24") then
+		db.actor:give_info_portion("art_zombie_24")
+	end
+	
+	if obj and obj:section() == "af_rusty_kristall_zombie" and
+		not has_alife_info("art_zombie_25") then
+		db.actor:give_info_portion("art_zombie_25")
+	end
+	
+	if obj and obj:section() == "af_rusty_sea_urchin_zombie" and
+		not has_alife_info("art_zombie_26") then
+		db.actor:give_info_portion("art_zombie_26")
+	end
+	
+	if obj and obj:section() == "af_fuzz_kolobok_zombie" and
+		not has_alife_info("art_zombie_27") then
+		db.actor:give_info_portion("art_zombie_27")
+	end
+	
+	if obj and obj:section() == "sniper_pda" and
+		not has_alife_info("has_sniper_pda") then
+		db.actor:give_info_portion("has_sniper_pda")
+	end
+	
+	if obj and obj:section() == "crucian_pda" and
+		not has_alife_info("crucian_compromat_1") then
+		db.actor:give_info_portion("crucian_compromat_1")
+	end
+	
+	if obj and obj:section() == "af_antidoping" and
+		not has_alife_info("zaglushka_251") then
+		db.actor:give_info_portion("zaglushka_251")
+	end
+	
+	if obj and obj:section() == "kira_pribor" and
+		not has_alife_info("has_kira_pribor") then
+		db.actor:give_info_portion("has_kira_pribor")
+	end
+	
+	if obj and obj:section() == "berkov_code_tables" and
+		not has_alife_info("player_complete_ahnenerbe_docs") then
+		db.actor:give_info_portion("player_complete_ahnenerbe_docs")
+	end
+	
+	if	obj and obj:section() == "monolith_kee_1" and
+		not has_alife_info("key_1_taken") then
+		db.actor:give_info_portion("key_1_taken")
+	end
+	
+	if	obj and obj:section() == "monolith_kee_2" and
+		not has_alife_info("key_2_taken") then
+		db.actor:give_info_portion("key_2_taken")
+	end
+	
+	if	obj and obj:section() == "monolith_kee_3" and
+		not has_alife_info("key_3_taken") then
+		db.actor:give_info_portion("key_3_taken")
+	end
+	-- *********************************************
+--=========== Для смены ножей начало ================
+	if obj and obj:section() == "ammo_knife" and
+		not has_alife_info("has_knife_d") then
+		alife():create("wpn_knife_d", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+		db.actor:give_info_portion("has_knife_d")
+	end
+	
+	if obj and obj:section() == "ammo_knife_bak" and
+		not has_alife_info("has_knife_bak") then
+		alife():create("wpn_knife_bak", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+		db.actor:give_info_portion("has_knife_bak")
+	end
+
+	if obj and obj:section() == "ammo_knife_map" and
+		not has_alife_info("has_knife_map")then
+		alife():create("wpn_knife_map", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+		db.actor:give_info_portion("has_knife_map")
+	end
+	
+	if obj and obj:section() == "ammo_knife_tanto" and
+		not has_alife_info("has_knife_tanto") then
+		alife():create("wpn_knife_tanto", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+		db.actor:give_info_portion("has_knife_tanto")
+	end
+	
+	if obj and obj:section() == "fake_wpn_knife" and
+		not has_alife_info("has_knife_als") then
+		alife():create("wpn_knife", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+		db.actor:give_info_portion("has_knife_als")
+	end
+	
+	if obj and obj:section() == "wpn_knife" and
+		not has_alife_info("has_knife_als") then
+		alife():create("fake_wpn_knife", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+		db.actor:give_info_portion("has_knife_als")
+	end
+--=========== Для смены ножей конец ================
+
+
+	local item = obj
+	inventory.on_item_take(item)
+	ts_mod_soc.ts_on_item_take(item)	--Авторазряжалка-- 
+	shadows_addon.outfits_fix(obj)
+	if rx_ai then
+		rx_ai.actor_item_take(obj)
+	end 
+	if xrs_ai then xrs_ai.actor_item_take(obj) end
+
+end
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:on_item_drop (obj)
+    level_tasks.proceed(self.object)
+	amk.on_item_drop(obj)
+	hidden_slots.on_item_drop(obj)
+	inventory.on_item_drop(obj)
+	use_key.item_drop(obj)
+	use_key.drop_knifes(obj)
+		
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:use_obj(obj) 
+ synchro_item.on_use(obj) 
+end
+------------------------------------------------------------------
+function actor_binder:task_callback(_task, _objective, _state)
+	task_manager.task_callback(_task:get_id(), _objective:get_idx(), _state)
+	if _objective:get_idx() == 0 then
+		if _state == task.fail then
+			news_manager.send_task(db.actor, "fail", _task, _objective)
+		elseif _state == task.completed then
+			task_manager.reward_by_task(_task)
+			news_manager.send_task(db.actor, "complete", _task, _objective)
+		else
+			news_manager.send_task(db.actor, "new", _task, _objective)
+		end
+	else
+		if _task:get_objective(0):get_state() == task.in_progress then
+			news_manager.send_task(db.actor, "update", _task, _objective)
+		end
+	end
+end
+
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:map_location_added_callback(spot_type_str, object_id)
+	if (false==app_ready()) or (device().precache_frame>1) then return end
+	--'news_manager.send_task(db.actor, "new")
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:update(delta)
+	object_binder.update(self, delta)
+
+	local time = time_global()
+	
+	game_stats.update (delta, self.object)
+	time_on_hud.show_time()
+	
+	if not has_alife_info ("ubil") and
+		xr_conditions.killed_by_actor then
+		xr_conditions.nizzjaa_1()
+	end
+	
+	if (level.name() == "labx8") then
+		xr_conditions.biolab_gase()
+	end
+	
+	if	(level.name() == "predbannik") and
+		has_alife_info ("is_infected_plague") and
+		not has_alife_info ("zaglushka_41") then
+		xr_effects.infection_hit()
+	end
+	
+	if	(level.name() == "warlab") and
+		not has_alife_info ("destroy_barier_control_start") and
+		has_alife_info ("hide_all_done") then
+		hide_weapon()
+	end
+	
+	if	(level.name() == "warlab") and
+		has_alife_info ("destroy_barier_control_start") then
+		restore_weapon()
+	end
+	
+	if	has_alife_info ("has_kira_pribor") and
+		has_alife_info ("taked_mzda") and
+		not has_alife_info ("get_access_over_barrier") then
+		xr_effects.broken_invertor_nax()
+		xr_effects.good_invertor_vax()
+		self.object:give_info_portion("get_access_over_barrier")
+	end
+	
+	if not has_alife_info("zaglushka_66") and
+		has_alife_info("zaglushka_65") then
+		dfs_static_part.timer_static()
+		dfs_static_part.hud_static_part("timer_boom")
+	end
+	
+	if has_alife_info ("ubil") then 
+			dfs_static_part.timer_static_taboo()
+			dfs_static_part.hud_static_dont_kill("dont_kill")
+	end
+	
+	if has_alife_info ("have_noticed") then 
+			dfs_static_part.timer_static_taboo()
+			dfs_static_part.hud_static_have_noticed("you_have_noticed")
+	end
+	
+	if has_alife_info ("you_lost") then 
+			dfs_static_part.timer_static_barier_1()
+			dfs_static_part.hud_static_you_lost("you_have_lost")
+	end
+	
+	if	has_alife_info ("you_vin") then 
+			dfs_static_part.timer_static_barier_2()
+			dfs_static_part.hud_static_you_vin("you_have_vin")
+	end
+	
+	if	has_alife_info ("you_get_nomoney") then 
+			dfs_static_part.timer_static_barier_3()
+			dfs_static_part.hud_static_you_vin("you_have_lost")
+	end
+	
+	if	has_alife_info ("you_fin_mission") then 
+			dfs_static_part.timer_static_barier_4()
+			dfs_static_part.hud_static_you_vin("you_have_lost")
+	end
+	
+	if not has_alife_info ("static_0") and
+		has_alife_info("zaglushka_92") then
+		dfs_static_part.timer_static()
+		dfs_static_part.hud_static_part("static_0")
+	end
+	
+	if not has_alife_info ("static_1") and
+		has_alife_info("zaglushka_93") then
+		dfs_static_part.timer_static()
+		dfs_static_part.hud_static_part("static_1")
+	end
+	
+	if not has_alife_info ("static_2") and
+		has_alife_info("zaglushka_94") then
+		dfs_static_part.timer_static()
+		dfs_static_part.hud_static_part("static_2")
+	end
+	
+	if not has_alife_info ("static_3") and
+		has_alife_info("zaglushka_95") then
+		dfs_static_part.timer_static()
+		dfs_static_part.hud_static_part("static_3")
+	end
+	
+	if not has_alife_info ("static_4") and
+		has_alife_info("zaglushka_135") then
+		dfs_static_part.timer_static()
+		dfs_static_part.hud_static_part("static_4")
+	end
+	
+	if not has_alife_info ("static_5") and
+		has_alife_info("zaglushka_147") then
+		dfs_static_part.timer_static()
+		dfs_static_part.hud_static_part("static_5")
+	end
+	
+	if not has_alife_info ("static_6") and
+		has_alife_info("zaglushka_216") then
+		dfs_static_part.timer_static()
+		dfs_static_part.hud_static_part("static_6")
+	end
+
+		if not has_alife_info ("zaglushka_103_ubil") and 
+		has_alife_info("zaglushka_103")  and
+		   (level.name() == "l12_stancia_2") then
+		   xr_effects.ml_dead()
+		end
+
+	-- апдейт погоды
+	self.weather_manager:update()
+	
+	-- апдейт схемы детектора
+	self.actor_detector:update()
+
+	-- апдейт звуковой схемы актера
+	xr_sound.update_actor()
+	
+	--' Проверка потери жизни
+--[[
+	if self.object.health - lasthealth > 0.001 or
+	   self.object.health - lasthealth < -0.001 then
+		printf("%f | %f", self.object.health, self.object.health - lasthealth, game.time() - lasttime)
+		lasthealth = self.object.health
+		lasttime = game.time()
+	end
+]]	
+	-- Обновление отключения ввода с клавиатуры.
+	if self.st.disable_input_time ~= nil and
+	   game.get_game_time():diffSec(self.st.disable_input_time) >= self.st.disable_input_idle 
+	then
+		level.enable_input()
+		self.st.disable_input_time = nil
+	end
+	-- Обновление сна с переносом чувака в указанную позицию
+	if self.st.sleep_relocate_time ~= nil and
+	   game.get_game_time():diffSec(self.st.sleep_relocate_time) >= self.st.sleep_relocate_idle 
+	then
+		self.object:set_actor_position(self.st.sleep_relocate_point)
+		local dir = self.st.sleep_relocate_point:sub(self.st.sleep_relocate_look)
+		self.object:set_actor_direction(dir:getH())
+		self.st.sleep_relocate_time = nil
+	end
+
+	-- Апдейт прятание оружия игрока во время диалога
+	if weapon_hide == true or self.object:is_talking() then
+		if self.weapon_hide == false then
+			self.object:hide_weapon()
+			self.weapon_hide = true
+		end
+	else
+		if self.weapon_hide == true then
+			self.object:restore_weapon()
+			self.weapon_hide = false
+		end
+	end	
+	if db.actor then
+		if has_alife_info("ui_inventory") then
+			ui_cop_rad.add_rad_empty()
+			ui_cop_blood.add_blood_empty()
+		else
+			ui_cop_rad.remove_rad_empty()
+			ui_cop_blood.remove_blood_empty()
+		end
+	end
+
+	if db.actor then
+		if has_alife_info("ui_inventory") then
+			ui_cop_rad.add_rad_green()
+			ui_cop_rad.add_rad_yellow()
+			ui_cop_rad.add_rad_orange()
+			ui_cop_rad.add_rad_red()
+		else
+			ui_cop_rad.remove_rad_green()
+			ui_cop_rad.remove_rad_yellow()
+			ui_cop_rad.remove_rad_orange()
+			ui_cop_rad.remove_rad_red()
+		end
+	end
+
+	if db.actor then
+		if has_alife_info("ui_inventory") then
+			ui_cop_blood.add_blood_green()
+			ui_cop_blood.add_blood_yellow()
+			ui_cop_blood.add_blood_orange()
+			ui_cop_blood.add_blood_red()
+		else
+			ui_cop_blood.remove_blood_green()
+			ui_cop_blood.remove_blood_yellow()
+			ui_cop_blood.remove_blood_orange()
+			ui_cop_blood.remove_blood_red()
+		end
+	end
+
+	-- обновление рестрикторов, которые под логикой, срабатывает через интервалы времени
+	if self.next_restrictors_update_time < time then
+		bind_restrictor.actor_update(delta)
+		
+		-- Апдейтим наш телепорт
+		bind_mteleport.actor_update(delta)
+
+		self.next_restrictors_update_time = time + 200
+
+		task_manager.actor_update()
+	end
+
+	-- обновление постпроцессов
+	if post_process ~= 0 then
+		if post_process:update () == true then
+		   post_process = 0
+		end
+	end
+
+	-- обновление пси-антенны
+	if sr_psy_antenna.psy_antenna then
+		sr_psy_antenna.psy_antenna:update(delta)
+	end
+	
+	--' Вывод сообщения о большой радиации
+	if self.object.radiation >= 0.7 then
+		local hud = get_hud()
+		local custom_static = hud:GetCustomStatic("cs_radiation_danger")
+		if custom_static == nil then
+			hud:AddCustomStatic("cs_radiation_danger", true)
+			hud:GetCustomStatic("cs_radiation_danger"):wnd():SetTextST("st_radiation_danger")
+		end
+	else
+		local hud = get_hud()
+		local custom_static = hud:GetCustomStatic("cs_radiation_danger")
+		if custom_static ~= nil then
+			hud:RemoveCustomStatic("cs_radiation_danger")
+		end
+	end
+
+	inventory.update()
+
+--' Запускаем затычку от возможной потери содержимого тайников
+	treasure_manager.get_treasure_manager():loss_workaround()
+
+ 	if self.bCheckStart then
+		printf("SET DEFAULT INFOS")
+		
+		if not has_alife_info("storyline_actor_start") and
+		has_alife_info("never") and
+		   (level.name() == "l01_escape")
+		then
+			self.object:give_info_portion("storyline_actor_start")
+			_G.g_start_avi = true
+			printf("*AVI* RUN START AVI")	
+			art_mgr.del_xlam()
+		
+		end
+		
+		if not has_alife_info("escape_panish_1") and
+		has_alife_info("escape_panish_start") and
+		   (level.name() == "l01_escape")
+		then
+			self.object:give_info_portion("info_dfs_story_ar_24")
+			self.object:give_info_portion("info_dfs_story_ar_25")
+			self.object:give_info_portion("info_dfs_story_ar_26")
+			self.object:give_info_portion("info_dfs_story_ar_27")
+			self.object:give_info_portion("info_dfs_story_ar_28")
+			self.object:give_info_portion("info_dfs_story_ar_29")
+			self.object:give_info_portion("info_dfs_story_ar_30")
+			self.object:give_info_portion("info_dfs_story_ar_31")
+			self.object:give_info_portion("info_dfs_story_ar_32")
+			self.object:give_info_portion("info_dfs_story_ar_33")
+			dfs_messages.hugo_msg_2()
+			dfs_treasure.skhrons_coord()
+			dfs_relations.us_army_default()
+			self.object:give_info_portion("escape_panish_1")			
+		end
+
+		if not has_alife_info("encyclopedy") then
+			dfs_diss.bun_burer_dis()
+			self.object:give_info_portion("encyclopedy")
+		end
+
+		if not has_alife_info("global_dialogs") then
+			self.object:give_info_portion("global_dialogs")
+		end
+		
+		if not has_alife_info ("meet_partner_start") and
+		   (level.name() == "predbannik") then
+		   self.object:give_info_portion("info_dfs_story_ar_0")
+		   self.object:give_info_portion("info_dfs_story_ar_1")
+		   self.object:give_info_portion("info_dfs_story_ar_2")
+		   self.object:give_info_portion("dfs_story_start")
+		   self.object:give_info_portion("meet_partner_start")
+		end
+		
+		if not has_alife_info ("lost_helicopter_start") and
+			has_alife_info("player_complete_find_another_exit") and
+		   (level.name() == "l02_garbage") then
+		   self.object:give_info_portion("lost_helicopter_start")
+		end
+		
+		if not has_alife_info ("lost_helicopter_start") and
+			has_alife_info("player_complete_find_another_exit") and
+		   (level.name() == "l03_agroprom") then
+		   self.object:give_info_portion("lost_helicopter_start")
+		end
+		
+		if not has_alife_info ("player_complete_cross_pr") and
+			has_alife_info("cross_pr_3") and
+		   (level.name() == "l01_escape") then
+		   dfs_diss.sor_heli_dissappear()
+		   dfs.ch_range100()
+		   self.object:give_info_portion("player_complete_cross_pr")
+		end
+		
+		if not has_alife_info ("player_complete_find_another_exit") and
+			has_alife_info("find_another_exit_start") and
+		   (level.name() == "peshera") then
+		   self.object:give_info_portion("player_complete_find_another_exit")
+		end
+		
+		if not has_alife_info ("find_exit_start") and
+		   (level.name() == "peshera") then
+		   self.object:give_info_portion("find_exit_start")
+		   self.object:give_info_portion("info_dfs_story_ar_22")
+		end
+		
+		if not has_alife_info ("player_complete_find_exit") and
+			has_alife_info("find_exit_start") and
+		   (level.name() == "l02_garbage") then
+		   dfs.ch_range100()
+		   self.object:give_info_portion("player_complete_find_exit")
+		end
+		
+		if not has_alife_info ("player_complete_find_exit") and
+			has_alife_info("find_exit_start") and
+		   (level.name() == "l03_agroprom") then
+		   self.object:give_info_portion("player_complete_find_exit")
+		end
+		
+		if not has_alife_info ("zaglushka_15") and
+			has_alife_info("zaglushka_8") and
+		   (level.name() == "l02_garbage") then
+		   dfs_messages.borman_msg_1()
+		   self.object:give_info_portion("zaglushka_15")
+		end
+		
+		if not has_alife_info ("zaglushka_16") and
+			has_alife_info("zaglushka_14") and
+		   (level.name() == "l04_darkvalley") then
+		   dfs_messages.unknown_msg_1()
+		   self.object:give_info_portion("zaglushka_16")
+		end
+		
+		if not has_alife_info ("zaglushka_18") and
+			has_alife_info("player_complete_find_exit") and
+		   (level.name() == "predbannik") then
+		   dfs_messages.hugo_msg_1()
+		   self.object:give_info_portion("zaglushka_18")
+		end
+		
+		if has_alife_info ("meet_gosha_start") and
+			not has_alife_info("meet_gosha_1") and
+		   (level.name() == "yantar_old") then
+		   dfs_messages.autor_msg_1()
+		   dfs.ch_range100()
+		   self.object:give_info_portion("meet_gosha_1")
+		   self.object:give_info_portion("episode_i_start")
+		end
+		
+		if 	has_alife_info("xform_from_hell_start") and
+			not	has_alife_info("player_complete_xform_from_hell") and
+			not	has_alife_info("xform_from_hell_crush") and
+				(level.name() == "yantar_old")
+		then
+			self.object:give_info_portion("xform_from_hell_crush")			
+		end
+		
+		if 	has_alife_info("cold_steel_start") and
+			not	has_alife_info("player_complete_cold_steel") and
+			not	has_alife_info("marsh_testing_crush") and
+				(level.name() == "yantar_old")
+		then
+			self.object:give_info_portion("marsh_testing_crush")			
+		end
+		
+		if 	has_alife_info("grc_pursuit_start") and
+			not	has_alife_info("grc_pursuit_1") and
+				(level.name() == "l12_stancia")
+		then
+			self.object:give_info_portion("grc_pursuit_1")			
+		end
+		
+		if 	has_alife_info("leave_imperceptibly_start") and
+			not	has_alife_info("player_complete_leave_imperceptibly") and
+				((level.name() == "l12_stancia") or
+				(level.name() == "l10_radar") or
+				(level.name() == "red_forest"))
+		then
+			self.object:give_info_portion("player_complete_leave_imperceptibly")
+			self.object:give_info_portion("info_dfs_story_ar_38")			
+		end
+		
+		if 	has_alife_info("dagger_for_sinner_start") and
+			not	has_alife_info("dagger_for_sinner_1") and
+				(level.name() == "aver")
+		then
+			self.object:give_info_portion("dagger_for_sinner_1")			
+		end
+		
+		if 	has_alife_info("dagger_for_sinner_2") and
+			not	has_alife_info("dagger_for_sinner_failed") and
+				(level.name() == "red_forest")
+		then
+			self.object:give_info_portion("dagger_for_sinner_failed")			
+		end
+		
+		if 	has_alife_info("old_dead_city_start") and
+			not	has_alife_info("player_complete_old_dead_city") and
+				(level.name() == "dead_city")
+		then
+			self.object:give_info_portion("player_complete_old_dead_city")
+			self.object:give_info_portion("player_complete_find_way_dc")
+		end
+		
+		if not has_alife_info("player_complete_get_out_dc") and
+			has_alife_info("get_out_dc_start") and
+			(level.name() == "l12_stancia_2") then
+			self.object:give_info_portion("player_complete_get_out_dc")
+			self.object:give_info_portion("self_evapoint_start")
+		end
+		
+		if not has_alife_info("player_complete_get_car_out_dc") and
+			has_alife_info("get_car_out_dc_start") and
+			(level.name() == "l12_stancia_2") then
+			self.object:give_info_portion("player_complete_get_car_out_dc")
+		end
+		
+		if not has_alife_info("car_evapoint_start") and
+			has_alife_info("player_complete_get_car_out_dc") and
+			(level.name() == "l12_stancia_2") then
+			dfs_messages.hugo_msg_3()
+			self.object:give_info_portion("car_evapoint_start")
+		end
+		
+		if not has_alife_info("episode_iii_start") and
+			(level.name() == "dead_city") then
+			self.object:give_info_portion("episode_iii_start")
+		end
+		
+		if	has_alife_info("aggravated_scent_start") and
+			(level.name() == "pripyat") then
+			xr_effects.w_pri_add_marks()
+		end
+		
+		if	has_alife_info("sinner_items_start") and
+			(level.name() == "aver") then
+			xr_effects.add_mark_sinner_shron()
+		end
+		
+		if not has_alife_info("zaglushka_246") then
+			alife():create("dfs_ibox_21",vector():set(127.61004638672,-9.2264137268066,-3.2697858810425),4739,3867)
+			self.object:give_info_portion("zaglushka_246")
+		end
+		
+		if not has_alife_info("zaglushka_247") then
+			alife():create("dfs_ibox_22",vector():set(46.618743896484,4.5110421180725,96.133636474609),27340,3331)
+			self.object:give_info_portion("zaglushka_247")
+		end
+		
+		if not has_alife_info("zapalilsya") then
+			self.object:give_info_portion("zapalilsya")
+		end
+		
+		if	xr_conditions.has_vampir() then
+		if	not has_alife_info("zaglushka_252") and
+			(level.name() == "pripyat") then
+			xr_effects.vampir_nax()
+			xr_effects.antivampir_vax()
+			self.object:give_info_portion("zaglushka_252")
+			end
+		end
+		
+		if	not has_alife_info("leave_pripyat_crush") and
+			has_alife_info("leave_pripyat_start") and
+			(level.name() == "pripyat") then
+			self.object:give_info_portion("leave_pripyat_crush")
+		end
+		
+		if	not has_alife_info("invertor_deadout") and
+			(level.name() == "yantar_old") then
+			xr_effects.good_invertor_nax()
+			xr_effects.broken_invertor_vax()
+			self.object:give_info_portion("invertor_deadout")
+		end
+		
+		if	has_alife_info("artefacts_for_ermol_start") and
+			not has_alife_info("artefacts_for_ermol_crush") and
+			not has_alife_info("player_complete_artefacts_for_ermol") and
+			(level.name() == "warlab") then
+			self.object:give_info_portion("artefacts_for_ermol_crush")
+		end
+		
+		if	has_alife_info("dead_artefacts_start") and
+			not has_alife_info("dead_artefacts_cruch") and
+			not has_alife_info("player_complete_dead_artefacts") and
+			(level.name() == "warlab") then
+			self.object:give_info_portion("dead_artefacts_cruch")
+		end
+		
+		if	has_alife_info("dolg_mekhanik_start") and
+			not has_alife_info("dolg_mekhanik_crush") and
+			not has_alife_info("player_complete_dolg_mekhanik") and
+			(level.name() == "warlab") then
+			self.object:give_info_portion("dolg_mekhanik_crush")
+		end
+		
+		if	has_alife_info("find_miser_start") and
+			not has_alife_info("find_miser_crush") and
+			not has_alife_info("player_complete_find_miser") and
+			(level.name() == "warlab") then
+			self.object:give_info_portion("find_miser_crush")
+		end
+		
+		if	has_alife_info("break_to_hospital_start") and
+			not has_alife_info("player_complete_break_to_hospital") and
+			(level.name() == "hospital") then
+			self.object:give_info_portion("player_complete_break_to_hospital")
+		end
+		
+		if	has_alife_info("monolith_portal_3") and
+			not has_alife_info("player_complete_monolith_portal") and
+			(level.name() == "pripyat") then
+			self.object:give_info_portion("player_complete_monolith_portal")
+		end
+		
+		if	has_alife_info("overhear_bazar_start") and
+			not has_alife_info("player_complete_overhear_bazar") and
+			not has_alife_info("overhear_bazar_3_cruch") and
+			(level.name() ~= "l11_pripyat") then
+			self.object:give_info_portion("overhear_bazar_3_cruch")
+		end
+
+		if not has_alife_info("level_changer_icons") then
+			dfs_bar_minefield.bar_mines_deactivate()
+			dfs_diss.stancia_lchs_diss()
+			dfs_diss.yan_2_yan_old_diss()
+			dfs_diss.lc_esc2marsh_dis()
+			dfs_diss.ch_bar2mil_dissappear()
+			dfs_diss.ch_rf2lim_dissappear()
+			dfs_diss.pri_c4_dis()
+			dfs_diss.yan_sosych_diss()
+			dfs_diss.yan_sosych_diss_2()
+			dfs_diss.w_pri_heli_dis()
+			dfs_diss.lc_dc2aes2_dis()
+			dfs_diss.ch_pri2west_pri_dissappear()
+			dfs_diss.w_pri2generators_lch_dissappear()
+			dfs_diss.w_pri_c4_dis()
+			dfs_diss.lim_col_lch2hos_dissappear()
+			dfs_diss.hos_koster_dissappear()
+			dfs_diss.hos_keys_dis()
+			dfs_diss.hos_key_lch_dis()
+			dfs_diss.w_pri_zabor_dis()
+			dfs_diss.wpri_lim_lch_dis()
+			dfs_diss.swamp2lost_diss()
+			dfs_diss.hell_heli_dissappear()
+			dfs_diss.gen_heli_diss()
+			dfs_diss.sor_projector_dis()
+			self.object:give_info_portion("nightmare_start")
+			self.object:give_info_portion("level_changer_icons")
+		end
+
+		if not has_alife_info("level_changer_icons") then
+			dfs_diss.w_pri_c4_dis1()
+		end
+		xr_effects.car_hit()
+		level_tasks.add_lchanger_location()
+                synchro_item.on_spawn() 
+		self.bCheckStart = false		
+	end
+        if dinamic_hud then
+		dinamic_hud.update()
+	end
+
+
+
+
+	amk.on_actor_update()
+	if bind_art then bind_art.beep_art(delta) end
+		if rx_ai then rx_ai.actor_update() end
+	if xrs_ai then xrs_ai.actor_update(delta) end
+	local sim = alife()
+	if sim then
+		local obj = sim:story_object(20171)
+		if obj and
+		has_alife_info("find_fly_pda") then
+			level.map_add_object_spot(obj.id, "crlc_big", "на станцию-2")
+		end
+	end
+	if upd_time5 < time then
+		upd_time5 = time + 120000
+	elseif upd_time4 < time then
+		upd_time4 = time + 10000
+		if (not has_alife_info ("spawn_arty") and (level.name() == "garbage_old")) then
+		   dfs_spawn.arty_spawn()
+		   self.object:give_info_portion("spawn_arty")
+		end
+
+	elseif upd_time3 < time then
+		upd_time3 = time + 20000
+		art_mgr.update()
+
+
+
+	elseif upd_time2 < time then
+		upd_time2 = time + 5000
+		use_key.knifes_rotation()
+
+
+	elseif upd_time1 < time then
+		upd_time1 = time + 100
+   	
+
+	elseif upd_time < time then
+		upd_time = time + 500
+		use_key.update()
+		dmx_fast_use_slots.FastUseSlotsHud()
+		this.hide_weapon_knife_d()
+	end
+        save_rename.update(time)
+       
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:save(packet)
+  ASSERT(
+    packet:w_tell() <= 7500,
+    "actor packet size is critical: %s", packet:w_tell()
+  )
+--  log2( "~~Actor netpacket size %s", packet:w_tell() )
+	if rx_ai then rx_ai.actor_save(packet) end
+	local save_treasure_manager = true
+	
+	printf("actor_binder:save(): self.object:name()='%s'", self.object:name())
+	object_binder.save(self, packet)
+
+	--' Сохраняем уровень сложности
+	if save_treasure_manager == true then
+		packet:w_u8(level.get_game_difficulty() + 128)
+	else
+		packet:w_u8(level.get_game_difficulty())
+	end
+
+
+	--' Сохраняем данные об отключенном вводе
+	if self.st.disable_input_time == nil then
+		packet:w_bool(false)
+	else
+		packet:w_bool(true)
+		utils.w_CTime(packet, self.st.disable_input_time)
+	end
+
+	xr_logic.pstor_save_all(self.object, packet)
+	self.weather_manager:save(packet)
+
+	self.actor_detector:save(packet)	
+        save_rename.on_save()
+	art_mgr.save(packet)
+
+	if se_stor then
+--		if to_log then to_log(script_name()..":save:size=["..(packet:w_tell() - size).."]") end --/#~#
+		if event then --/ вызов через 'систему сигналов'
+			event("actor_saved"):trigger()
+		elseif type(se_stor.save) == 'function' then --/ 'прямой' вызов
+			se_stor.save()
+		end
+	end
+
+end
+
+--/#+# [se_stor] сохранение в чанках данных из внешних модулей без публичного save(): --
+function actor_binder:ext_save(pk)
+	self.weather_manager:save(pk)
+	self.actor_detector:save(pk)
+end
+
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:load(reader)
+
+	--/#+# for debug --------------------------------------------------
+	local size = reader:r_tell()
+	--/<---------------------------------------------------------------
+
+	printf("actor_binder:load(): self.object:name()='%s'", self.object:name())
+	object_binder.load(self, reader)
+	printf("actor_binder:object_binder.load(): self.object:name()='%s'", self.object:name())
+
+	--' Загружаем уровень сложности
+	local game_difficulty = reader:r_u8()
+	
+	local load_treasure_manager = false      
+	if game_difficulty >= 128 then           
+		game_difficulty = game_difficulty - 128
+		load_treasure_manager = true           
+	end                                      
+
+	
+	get_console():execute("g_game_difficulty "..game_difficulty_by_num[game_difficulty])
+
+	if reader:r_eof() then
+		abort("SAVE FILE IS CORRUPT")
+	end
+
+	local stored_input_time = reader:r_u8()
+	if stored_input_time == true then
+		self.st.disable_input_time = utils.r_CTime(reader)
+	end
+
+	xr_logic.pstor_load_all(self.object, reader)
+	self.weather_manager:load(reader)
+
+	self.actor_detector:load(reader)	
+	art_mgr.load(reader)
+
+	if se_stor then
+--		if to_log then to_log(script_name()..":load:size=["..(reader:r_tell() - size).."]") end --/#~#
+		if event then --/ вызов через 'систему сигналов'
+			event("actor_load"):trigger()
+		elseif type(se_stor.load) == 'function' then --/ 'прямой' вызов
+		se_stor.load()
+		end
+	end
+
+
+end
+
+--/#+# [se_stor] загрузка данных из чанков во внешние модули без публичного save(): ----
+function actor_binder:ext_load(pk)
+	self.weather_manager:load(pk)
+	self.actor_detector:load(pk)
+end
+----------------------------------------------------------------------------------------------------------------------
+
+--старт префетча звуков
+--if string.find(command_line(), "-noprefetch") == nil then
+--	sound_prefetch.prefetch_sounds()
+--end
+
+
+-- Weapon functions
+function hide_weapon()
+	weapon_hide = true
+end
+function restore_weapon()
+	weapon_hide = false
+end
+function hide_weapon_knife_d(actor)
+	local w1 = db.actor:object("wpn_knife_d")
+	local w2 = db.actor:object("wpn_knife_bak")
+	local w3 = db.actor:object("wpn_knife_map")
+	local w4 = db.actor:object("wpn_knife_tanto")
+	local w5 = db.actor:object("wpn_knife")
+	local a1 = db.actor:object("ammo_knife")
+	local a2 = db.actor:object("ammo_knife_bak")
+	local a3 = db.actor:object("ammo_knife_map")
+	local a4 = db.actor:object("ammo_knife_tanto")
+	local a5 = db.actor:object("fake_wpn_knife")
+	
+	if w1 and
+	has_alife_info("has_knife_d") and
+	a1 == nil then
+	alife():release(alife():object(w1:id()), true)
+	db.actor:disable_info_portion("has_knife_d")
+	end
+	
+	if w2 and
+	has_alife_info("has_knife_bak") and
+	a2 == nil then
+	alife():release(alife():object(w2:id()), true)
+	db.actor:disable_info_portion("has_knife_bak")
+	end
+	
+	if w3 and
+	has_alife_info("has_knife_map") and
+	a3 == nil then
+	alife():release(alife():object(w3:id()), true)
+	db.actor:disable_info_portion("has_knife_map")
+	end
+	
+	if w4 and
+	has_alife_info("has_knife_tanto") and
+	a4 == nil then
+	alife():release(alife():object(w4:id()), true)
+	db.actor:disable_info_portion("has_knife_tanto")
+	end
+	
+	if w5 and
+	has_alife_info("has_knife_als") and
+	a5 == nil then
+	alife():release(alife():object(w5:id()), true)
+	db.actor:disable_info_portion("has_knife_als")
+	end
+	
+	if a5 and
+	has_alife_info("has_knife_als") and
+	w5 == nil then
+	alife():release(alife():object(a5:id()), true)
+	db.actor:disable_info_portion("has_knife_als")
+end
+end
+function actor_binder:use_object(obj)
+    	als_inv_sounds.use_snd(obj)
+end
+
+-- // this is test for section iteration
+-- /**
+-- local function test_section_iteration(file_name, section_name)
+	-- printf			("file    : %s",file_name)
+	-- printf			("section : %s",section_name)
+	
+	-- local			file = ini_file(file_name)
+	-- local			n = file:line_count(section_name)
+	-- printf			("lines   : %d",n)
+	
+	-- local			id, value = "", "", result
+	-- for i=0,n-1 do
+		-- result, id, value	= file:r_line(section_name,i,"","")
+		-- printf		("line %d : %s = %s",i,id,value)
+	-- end
+-- end
+
+-- test_section_iteration("system.ltx","space_restrictor")
+-- /**/
+
+
+
+

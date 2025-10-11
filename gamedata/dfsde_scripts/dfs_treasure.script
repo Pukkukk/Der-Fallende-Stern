@@ -1,0 +1,110 @@
+function dfs_secret_1()
+	
+	local obj
+	
+	local x = 95.471687316895
+	local y = -21.09238243103
+	local z = -286.68225097656
+	local level_vertex = 1092620
+	local game_vertex_id = 4016
+	
+		obj = alife():create("dfs_ibox_1",vector():set(x,y,z),level_vertex,game_vertex_id)
+
+end
+
+function dfs_secret_2()
+	
+	local obj
+	
+	local x = -10.404367446899
+	local y = 1.1155866384506
+	local z = -5.2350425720215
+	local level_vertex = 3917
+	local game_vertex_id = 1536
+	
+		obj = alife():create("dfs_ibox_2",vector():set(x,y,z),level_vertex,game_vertex_id)
+
+end
+
+function dfs_secret_3()
+	alife():create("dfs_ibox_3",vector():set(21.575159072876,12.699264526367,93.490356445313),278106,85)
+	alife():create("dfs_ibox_4",vector():set(151.73165893555,1.8338536024094,374.79446411133),456873,228)
+	alife():create("dfs_ibox_5",vector():set(14.366958618164,15.742992401123,646.88372802734),286589,205)
+	alife():create("dfs_ibox_6",vector():set(40.77787399292,1.8746737241745,-277.99069213867),216073,262)
+	alife():create("dfs_ibox_7",vector():set(-39.08455657959,22.451833724976,-106.47431945801),178497,286)
+	alife():create("dfs_ibox_8",vector():set(-83.327171325684,1.7963713407516,7.9324598312378),123380,328)
+	alife():create("dfs_ibox_9",vector():set(-170.15670776367,4.3888883590698,8.4727935791016),33524,308)
+	alife():create("dfs_ibox_10",vector():set(-47.802017211914,-4.0120892524719,-29.593139648438),4323,718)
+	alife():create("dfs_ibox_11",vector():set(-213.93086242676,1.2788381576538,91.517395019531),25699,535)
+	alife():create("dfs_ibox_12",vector():set(48.367305755615,-2.4976160526276,-25.316509246826),235695,1093)
+	alife():create("dfs_ibox_13",vector():set(517.41967773438,0.77332091331482,-149.63311767578),491590,3563)
+	alife():create("dfs_ibox_14",vector():set(186.84350585938,3.1433353424072,-41.199047088623),1556754,4399)
+	alife():create("dfs_ibox_15",vector():set(167.88734436035,8.2174987792969,68.039978027344),1503348,4392)
+	alife():create("dfs_ibox_16",vector():set(190.01916503906,1.4874373674393,62.730613708496),1561403,4396)
+	alife():create("dfs_ibox_17",vector():set(211.07498168945,3.6927580833435,6.7193822860718),1608174,4397)
+	alife():create("dfs_ibox_18",vector():set(177.76625061035,1.6185957193375,-150.82229614258),1538328,4395)
+	alife():create("dfs_ibox_19",vector():set(16.012844085693,9.7433300018311,27.600337982178),18230,3330)
+	alife():create("dfs_ibox_20",vector():set(79.503242492676,10.713428497314,56.085388183594),37588,3333)
+end
+
+function skhrons_coord()
+		
+	local sim = alife()
+	if sim then
+
+	local obj = sim:story_object(20073)
+	if obj then
+		level.map_add_object_spot(obj.id, "treasure", "—хрон-1")
+	end
+	
+	local obj = sim:story_object(5030)
+	if obj then
+		level.map_add_object_spot(obj.id, "treasure", "—хрон-2")
+	end
+	
+	local obj = sim:story_object(20074)
+	if obj then
+		level.map_add_object_spot(obj.id, "treasure", "—хрон-3")
+	end
+	
+	local obj = sim:story_object(5418)
+	if obj then
+		level.map_add_object_spot(obj.id, "treasure", "—хрон-4")
+	end
+	
+	local obj = sim:story_object(5073)
+	if obj then
+		level.map_add_object_spot(obj.id, "treasure", "—хрон-5")
+	end
+	
+	local obj = sim:story_object(20075)
+	if obj then
+		level.map_add_object_spot(obj.id, "treasure", "—хрон-6")
+	end
+	
+	local obj = sim:story_object(20076)
+	if obj then
+		level.map_add_object_spot(obj.id, "treasure", "—хрон-7")
+	end
+	
+	local obj = sim:story_object(20077)
+	if obj then
+		level.map_add_object_spot(obj.id, "treasure", "—хрон-8")
+	end
+	
+	local obj = sim:story_object(5235)
+	if obj then
+		level.map_add_object_spot(obj.id, "treasure", "—хрон-9")
+	end
+	
+	local obj = sim:story_object(5244)
+	if obj then
+		level.map_add_object_spot(obj.id, "treasure", "—хрон-10")
+	end
+end
+end
+
+
+
+
+	

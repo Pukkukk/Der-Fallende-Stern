@@ -1,0 +1,43 @@
+local scen1 = {
+		"without_dream",
+		"esc_sky_01",
+		"son_1",
+		"son_2",
+		"son_3",
+		"son_4"
+		}
+local scen2 = {
+		"without_dream",
+		"esc_sky_01",
+		"Tarelka_son",
+		"Chertegi_son",
+		"Dinamit_son"
+		}
+local dr = ""
+
+function perebor()
+local cactor = db.actor
+
+	if cactor:dont_has_info("player_complete_time_river") then
+		d = math.random(1,6)
+		dr = scen1[d]
+		return dr
+	else
+		d = math.random(1,5)
+		dr = scen2[d]
+		return dr
+	end
+cactor = nil
+d = nil
+dr = nil
+scen1 = nil
+scen2 = nil
+end
+
+
+
+
+function son_video_name()
+	-- function returns video file name or empty string
+    return perebor()
+end

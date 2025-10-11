@@ -1,0 +1,70 @@
+local f = getFS()
+local c = get_console()
+
+function dimorin_log(fmt,...)
+	c:execute(">>>" .. string.format(fmt, ...))
+end
+
+function to_log(text, script_name, type)
+	if script_name==nil then script_name="unknown" end
+	if type == nil then type = 0 end
+	ODS("Вызвано из: \n".."~   "..script_name..".script")
+	if type == 0 then
+	--' normal
+		ODS("    "..text)
+	elseif type == 1 then
+	--' good
+		ODS("-    "..text)
+	elseif type == 2 then
+	--' warning
+		ODS("~     "..text)
+	elseif type == 3 then
+	--' critical
+		ODS("!    "..text)
+	elseif type == 4 then
+	--' info
+		ODS("#    "..text)
+	elseif type == 5 then
+	--' info
+		ODS("*    "..text)
+	end
+end
+
+function log_g(fmt,...)
+	ODS("- " .. string.format(fmt, ...))
+end
+
+function log_b(fmt,...)
+	ODS("! " .. string.format(fmt, ...))
+end
+
+function log_i(fmt,...)
+	ODS("* " .. string.format(fmt, ...))
+end
+
+function table_files(FS,path)
+	local flist = f:file_list_open(FS,path,FS.FS_ListFiles)
+	local f_cnt = flist:Size()
+end
+
+function zero(z)
+	if z < 10 then z="0"..z end
+	return z
+end
+
+function on_save()
+	dim_saves.save_manager()
+end
+
+function on_destroy()
+	dim_loadscreens.fullscreen_loadscreen()
+end
+
+function on_wakeup()
+	dim_saves.save_after_sleep()
+end
+
+--' Вызывается непосредственно после окончани синхронизации на новой локации (? Оказывается до синхронизации, загрузочные экраны пропадают)
+function on_autosave()
+	dim_saves.auto_save_nlc()
+end

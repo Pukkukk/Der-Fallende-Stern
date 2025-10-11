@@ -1,0 +1,21 @@
+local booklet_types = {"grc_booklet_stalker", "grc_booklet_military"}
+
+function grs_booklet_spawn()
+
+local p = vector():set(97.717956542969,120.65721130371,-27.711097717285)
+	spawn_booklet(p, 100)
+end
+
+
+function spawn_booklet(position, total)
+	local booklet_index
+	local new_pos, x_offset, z_offset	
+	for booklet_index=1, total do
+		x_offset = math.random(3)
+		z_offset = math.random(3)
+		new_pos = position
+		new_pos.x = new_pos.x + x_offset
+		new_pos.z = new_pos.z + z_offset
+	alife():create(booklet_types[math.random(2)],new_pos,321521,3767)
+	end
+end

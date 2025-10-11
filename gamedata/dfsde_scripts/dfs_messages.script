@@ -1,0 +1,171 @@
+function borman_msg_1()
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Лёша Борман:\n%c[default] Если ты ещё в теме, найди на Свалке Грека. Он ждёт на старом долговском посту. У него есть кое-что для тебя.", nil, nil, 15000)
+end
+
+function borman_msg_2(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Лёша Борман:\n%c[default] Наёмник! Есть работа для тебя.", nil, nil, 15000)
+end
+
+function borman_msg_3()
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Лёша Борман:\n%c[default] Наёмник! Так это ты там бузишь? Дуй ко мне, спрячу до времени.", nil, nil, 15000)
+end
+
+function borman_msg_4(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Лёша Борман:\n%c[default] Слушай сюда, бандиты. Вы вообще хоть иногда думаете?! Ложитесь на дно. Если обойдётся - сообщу.", nil, nil, 15000)
+end
+
+function unknown_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Неизвестный:\n%c[default] Всем, кто меня слышит! Атакованы смешанной стаей мутантов! Пробиваемся в лабораторию! Просим помощи!", nil, nil, 15000)
+end
+
+function hugo_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Хьюго:\n%c[default] С возвращением! Заканчивайте дела и подходите в бар.", nil, nil, 15000)
+end
+
+function hugo_msg_2(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Хьюго:\n%c[default] Понимаю, что вам пришлось срочно покинуть территорию Сортировки. Посылаю вам информацию о схронах в Зоне. Удачи, JJ!", nil, nil, 25000)
+end
+
+function hugo_msg_3(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Хьюго:\n%c[default] Отличная работа, JJ! Осталось только доставить грузовик к месту эвакуации. Там мы и встретимся. Удачи!", nil, nil, 25000)
+end
+
+function hugo_msg_4(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Хьюго:\n%c[default] Жду вас на Свалке в тоннеле, не задерживайтесь.", nil, nil, 25000)
+end
+
+function hugo_msg_5(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Хьюго:\n%c[default] Если свободны, подойдите в бар, JJ.", nil, nil, 25000)
+end
+
+function sidor_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Сидорович:\n%c[default] Загляни ко мне, дружище, разговор есть.", nil, nil, 15000)
+end
+
+function father_vit_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]о.Виталий:\n%c[default] Сталкер! Погоди! Вернись!", nil, nil, 15000)
+end
+
+function autor_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]zaurus' crew:\n%c[default] Сталкер! Приветствуем тебя в сюжетном моде S.T.A.L.K.E.R. - Упавшая Звезда. Честь наёмника.", nil, nil, 15000)
+end
+
+function ivancov_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]майор Иванцов:\n%c[default] Не расслабляться! Быстро проверяем снаряжение. Лейтенант, хорош болтать.", nil, nil, 15000)
+end
+
+function ivancov_msg_2(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]майор Иванцов:\n%c[default] Блокпост - на месте. Остальные - за мной! Выбьем выродков с базы!", nil, nil, 15000)
+end
+
+function ivancov_msg_3(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]майор Иванцов:\n%c[default] Наёмник, подойди.", nil, nil, 15000)
+end
+
+function killers_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]неизвестный:\n%c[default] ПРИВЕТ ОТ АРНОЛЬДА, УБЛЮДОК!", nil, nil, 30000)
+end
+
+function aes2_dolg_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]капитан Уваров:\n%c[default] Немедленно покинуть грузовик! У тебя три секунды!", nil, nil, 5000)
+end
+
+function aes2_dolg_msg_2(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]капитан Уваров:\n%c[default] Гранатомётчики - залп!", nil, nil, 5000)
+end
+
+function aes2_dolg_msg_3(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]JJ:\n%c[default] Какого хрена вы творите?!", nil, nil, 5000)
+end
+
+function aes2_dolg_msg_4(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]капитан Уваров:\n%c[default] А ты кто такой?", nil, nil, 5000)
+end
+
+function aes2_dolg_msg_5(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]JJ:\n%c[default] Мне обещали награду за помощь на Янтаре. Я пришёл получить своё.", nil, nil, 5000)
+end
+
+function aes2_dolg_msg_6(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]капитан Уваров:\n%c[default] Понятно. Начальство в бункере, двигай туда, наёмник.", nil, nil, 5000)
+end
+
+function zlatich_msg(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Златич:\n%c[default] Наёмник, погоди! Есть работа. Как раз для тебя.", nil, nil, 15000)
+end
+
+function panzer_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]полковник Панцер:\n%c[default] Разведка сообщила, сюда движется группа выродков. Всем отходить на стадион, я задержу их. И - откройте решётку, выпустите наёмника.", nil, nil, 15000)
+end
+
+function panzer_msg_2(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]полковник Панцер:\n%c[default] Удачной охоты!!", nil, nil, 15000)
+end
+
+function ltnt_yakowlew_msg(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]лейтенант Яковлев:\n%c[default] Наёмник! Давай сюда!", nil, nil, 15000)
+end
+
+function gen_msg_1(first_speaker, second_speaker) 
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Славен:\n%c[default] У меня две новости, и обе плохие. Попы свинтили, и контейнер исчез. Приказ - всем уходить, остаётся только Поиск.", nil, nil, 5000)
+end
+
+function gen_msg_2(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]JJ:\n%c[default] Поиск, говорит наёмник Джон-Джо. Ваш грузовик у меня.", nil, nil, 5000)
+end
+
+function gen_msg_3(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Славен:\n%c[default] Он нужен здесь, придурок! Контейнер защищает бункер от Железной Морды!", nil, nil, 5000)
+end
+
+function gen_msg_4(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]JJ:\n%c[default] Знаю. Возвращать не собираюсь.", nil, nil, 5000)
+end
+
+function gen_msg_5(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Славен:\n%c[default] Чтоб ты сдох, грёбанный наёмник!", nil, nil, 5000)
+end
+
+function kovzur_msg(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]батька Ковцур:\n%c[default] Уходи, наёмник! С тобой базара не будет!", nil, nil, 15000)
+end
+
+function im_dp_msg(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Хьюго:\n%c[default] ситуация в корне меняется, появились конкуренты, будут мешать, получи координаты", nil, nil, 15000)
+end
+
+function about_invertor(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Пространственный инвертор АКТИВИРОВАН", nil, nil, 20000)
+end
+
+function about_invertor_2(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Пространственный инвертор ДЕАКТИВИРОВАН", nil, nil, 20000)
+end
+
+function greece_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]Грек:\n%c[default] НЫРЯЙ В КОЛЛЕКТОР! Я - ПРИКРОЮ!", nil, nil, 15000)
+end
+
+function at_beginning_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[default]Отключишь Барьер - возможно, я сохраню твою жизнь.", nil, nil, 15000)
+end
+
+function at_beginning_msg_2(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[default]Попробуешь помешать мне - отправишься в Ад.", nil, nil, 15000)
+end
+
+function war_slaven_msg(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]ВЫБРОС РАЗРУШИЛ КАМЕРУ... НАЁМНИК, НАДО УНИЧТОЖИТЬ ПУ БАРЬЕРА...", nil, nil, 15000)
+end
+
+function gena_hacker_msg(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]ПОЛУЧЕНО ЭЛЕКТРОННОЕ ПИСЬМО", nil, nil, 15000)
+end
+
+function greece_is_dead_msg_1(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0]ГРЕК УБИТ", nil, nil, 15000)
+end
+
+--[[function _msg_(first_speaker, second_speaker)
+	news_manager.send_tip(db.actor, "%c[255,200,0,0].\n-%c[default]", nil, nil, 15000)
+end]]

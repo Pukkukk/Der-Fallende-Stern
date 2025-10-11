@@ -1,0 +1,2983 @@
+function workers_dis()
+	local npc = alife():story_object(19917)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+ 
+	end
+	
+	local npc = alife():story_object(19918)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+ 
+	end
+end
+
+function sor_projector_dis()
+	local obj = alife():story_object(19919)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function sor_projector_app()
+	local obj = alife():story_object(19919)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+
+function terrible_dissappear()
+
+	horror_voice_2()
+	
+	local obj = alife():story_object(19926)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	
+	local obj = alife():story_object(19927)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	
+	local obj = alife():story_object(19928)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	
+	local obj = alife():story_object(19929)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	
+	local obj = alife():story_object(19930)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	
+	local obj = alife():story_object(19931)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	
+	local obj = alife():story_object(19925)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function horror_voice()
+		
+		local snd_obj			= xr_sound.get_safe_sound_object( [[dfs\rnd_the_horror2]] )
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+		level.add_cam_effector("camera_effects\\earthquake.anm", 1974, false, "")
+end
+
+function horror_voice_2()
+		local snd_obj			= xr_sound.get_safe_sound_object( [[dfs\whistling_wind1]] )
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+end
+
+
+
+function demon_dissappear_1()
+
+	horror_voice_2()
+	--invertor_spawn()
+	
+	local obj = alife():story_object(20025)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function invertor_spawn()
+	alife():create("s_invertor",vector():set(-62.93741607666,21.084182739258,-13.54594707489),1367,1530)
+end
+
+function satan_dissappear_1()
+	local obj = alife():story_object(20027)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function lc_esc2marsh_dis()
+	local obj = alife():story_object(11534)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(11535)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20794)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20101)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function lc_dc2aes2_dis()
+	local obj = alife():story_object(20171)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function lc_dc2aes2_app()
+	local obj = alife():story_object(20171)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function lc_esc2marsh_app()
+	local obj = alife():story_object(11534)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(11535)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function satan_dissappear_2()
+	local obj = alife():story_object(20028)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function lab_renn_dissappear()
+	local obj = alife():story_object(20033)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function agr_renn_dissappear()
+	local obj = alife():story_object(20034)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	 local sect1 = "renn_treasure"
+--	alife():create("renn_treasure", vector():set(-137.38893127441,17.463743209839,-199.16004943848),101715,643)
+			local lvid = 101715
+			local gvid = 643
+			local pos1 = vector():set(-137.38893127441,15.000463743209839,-199.16004943848)
+			zont(pos1,lvid,gvid,"equipments\\item_rukzak",100,"link",sect1)
+
+	end
+end
+
+function hell_heli_dissappear()
+	local obj = alife():story_object(20035)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function hell_heli_appear()
+	local obj = alife():story_object(20035)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function sor_heli_dissappear()
+	local obj = alife():story_object(20039)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function x18_heli_dissappear()
+	local obj = alife():story_object(20040)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function cambees_gang_dissappear()
+	local obj = alife():story_object(20041)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20042)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20043)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20044)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function aer_renn_dissappear()
+	local obj = alife():story_object(20064)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function ch_bar2mil_dissappear()
+	local obj = alife():story_object(592)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function ch_bar2mil_appear()
+	local obj = alife():story_object(592)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function bun_burer_dis()
+	local obj = alife():story_object(20111)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function bun_burer_app()
+	local obj = alife():story_object(20111)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function bun_ripley_dis()
+	local obj = alife():story_object(20110)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function rad_twice_dis()
+	local obj = alife():story_object(20112)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20113)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20125)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20126)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20127)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20128)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20129)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20130)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20131)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20132)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20133)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20134)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20135)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function ch_rf2lim_dissappear()
+	local obj = alife():story_object(11525)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(11527)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function ch_rf2lim_appear()
+	local obj = alife():story_object(11525)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function ch_rf2fogforest_appear()
+	local obj = alife():story_object(11527)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function hos_chf_dissappear()
+	
+	local obj = alife():story_object(20137)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20138)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20139)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20140)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function jawel_boxes_dissappear()
+
+	local obj = alife():story_object(20151)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20152)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20153)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20154)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20155)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20156)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20157)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20158)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function ch_rf2ff_dissappear()
+	local obj = alife():story_object(20164)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function ch_rf2ff_appear()
+	local obj = alife():story_object(20164)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function dc_im_dis()
+	horror_voice_2()
+
+	local obj = alife():story_object(20173)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function pri_c4_dis()
+	local obj = alife():story_object(20348)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20349)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20350)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20351)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function pri_c4_app()
+	local obj = alife():story_object(20348)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20349)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20350)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20351)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function ch_pri2_aes1_dissappear()
+	local obj = alife():story_object(832)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function ch_pri2west_pri_dissappear()
+	local obj = alife():story_object(20354)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function ch_pri2west_pri_appear()
+	local obj = alife():story_object(20354)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function gen_monstres_dissappear()
+	local obj = alife():story_object(20401)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20402)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20403)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20404)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20405)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20406)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20407)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20408)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20409)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20410)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20411)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20412)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20413)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20414)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20415)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20416)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20417)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20418)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20419)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20420)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20421)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20422)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20423)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20424)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20425)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20426)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20427)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20428)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20429)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20430)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20431)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function w_pri2generators_lch_dissappear()
+	local obj = alife():story_object(20396)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function w_pri2generators_lch_appear()
+	local obj = alife():story_object(20396)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function w_pri_c4_dis()
+	local obj = alife():story_object(20397)
+
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+
+	local obj = alife():story_object(20843)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20398)
+
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+
+	local obj = alife():story_object(20844)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function w_pri_c4_appear()
+	local obj = alife():story_object(20397)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20398)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function w_pri_greece_dis()
+	local obj = alife():story_object(20399)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function w_pri_greece_appear()
+	local obj = alife():story_object(20399)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function w_pri_heli_dis()
+	local obj = alife():story_object(20438)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20439)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function w_pri_heli_appear1()
+	local obj = alife():story_object(20439)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+	
+function w_pri_heli_appear2()
+	local obj = alife():story_object(20438)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function esc_to_sor_diss()
+	local obj = alife():story_object(19901)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+
+function yan_sosych_appear()
+	local obj = alife():story_object(20204)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function yan_sosych_diss()
+	local obj = alife():story_object(20204)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+
+function yan_sosych_appear_2()
+	local obj = alife():story_object(20205)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function yan_sosych_diss_2()
+	local obj = alife():story_object(20205)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function lim_monsters_diss()
+	local obj = alife():story_object(20621)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20622)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20623)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20624)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20625)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20626)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20627)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20628)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20629)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20630)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20631)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20632)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20633)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20634)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20635)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20636)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20637)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20638)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20639)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20640)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20641)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20642)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20643)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20644)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20645)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20646)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20647)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20648)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20649)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20650)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20651)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20652)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20653)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20654)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20655)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20656)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20657)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20658)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20659)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20660)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20661)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20662)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20663)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20664)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20665)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20666)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20667)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20668)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20669)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20670)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20671)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20672)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20673)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20674)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20675)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20676)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20677)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20678)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20679)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20680)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20681)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20682)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20683)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20684)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20685)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20686)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20687)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20688)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20689)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20690)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20691)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20692)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20693)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20694)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20695)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20696)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20697)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20698)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20699)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20700)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20701)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20702)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20703)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20704)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20705)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20706)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20707)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20708)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20709)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20710)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20711)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20712)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20713)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20721)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20722)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20723)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20724)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20725)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20726)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20727)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20728)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20729)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20730)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20731)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20732)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20733)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20734)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20735)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20736)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20737)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20738)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20739)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20740)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function lim_col_lch2hos_dissappear()
+	local obj = alife():story_object(20447)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function lim_col_lch2hos_appear()
+	local obj = alife():story_object(20447)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function ahnenerbe_lch_dissappear()
+	local obj = alife():story_object(20136)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(11532)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function hos_koster_dissappear()
+	local obj = alife():story_object(20448)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20449)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function hos_koster_appear()
+	local obj = alife():story_object(20448)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20449)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function hos_keys_dis()
+	local obj = alife():story_object(20743)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20744)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20745)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function hos_key_1_appear()
+	local obj = alife():story_object(20743)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function hos_key_2_appear()
+	local obj = alife():story_object(20744)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function hos_key_3_appear()
+	local obj = alife():story_object(20745)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function hos_key_lch_dis()
+	local obj = alife():story_object(20746)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function hos_key_lch_appear()
+	local obj = alife():story_object(20746)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function w_pri_zabor_dis()
+	local obj = alife():story_object(20750)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20751)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20752)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20753)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20754)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20755)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20756)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20757)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20758)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20759)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20760)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20761)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function w_pri_zabor_appear()
+	local obj = alife():story_object(20750)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20751)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20752)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20753)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20754)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20755)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20756)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20757)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20758)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20759)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20760)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20761)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+
+function wpri_lim_lch_dis()
+	local obj = alife():story_object(20446)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function wpri_lim_lch_appear()
+	local obj = alife():story_object(20446)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+
+function yan_2_yan_old_diss()
+	local obj = alife():story_object(20763)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function yan_2_yan_old_app()
+	local obj = alife():story_object(20763)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+
+
+
+function stancia_lchs_diss()
+	local obj = alife():story_object(20766)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(20767)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function stancia_lchs_app()
+	local obj = alife():story_object(20766)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20767)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+
+
+function swamp2lost_diss()
+	local obj = alife():story_object(19905)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+	
+	local obj = alife():story_object(11503)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function swamp2lost_app()
+	local obj = alife():story_object(19905)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(11503)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function gen_heli_diss()
+	local obj = alife():story_object(20768)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+ 
+	end
+end
+
+function gen_heli_app()
+	local obj = alife():story_object(20768)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function mil2rad_app()
+	local obj = alife():story_object(20794)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+	
+	local obj = alife():story_object(20101)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+ 
+	end
+end
+
+function prip_timer_c4_1_on()
+	this.object_on(20843)
+end
+
+function prip_timer_c4_2_on()
+	this.object_on(20844)
+end
+
+
+function object_on(sid)
+	local obj = alife():story_object(sid)
+	if obj then
+	alife():set_switch_offline(obj.id, false)
+	alife():set_switch_online(obj.id, true)
+	alife():set_interactive(obj.id, true)
+	end
+end
+
+function prip_target_1()
+	local hitter = level_object_by_sid(20843)
+    if hitter then
+	this.prip_mobile_expl(20843, hitter)
+	this.prip_mobile_shok(20394, hitter)
+	this.prip_mobile_expl(20397, hitter)
+	end
+end
+
+function prip_target_2()
+	local hitter = level_object_by_sid(20844)
+    if hitter then
+	this.prip_mobile_expl(20844, hitter)
+	this.prip_mobile_shok(20393, hitter)
+	this.prip_mobile_expl(20398, hitter)
+	end
+end
+
+function prip_mobile_expl(sid, draftsman)
+	local mbl = level_object_by_sid(sid)
+	if mbl == nil then
+		return
+	end
+	local h = hit()
+	h.power = 1000000
+	h.direction = vector():set( 0, 0, 0 )
+	h.draftsman = draftsman 
+	h.impulse = 0
+	h.type = hit.explosion
+	mbl:hit(h)
+end
+
+function prip_mobile_shok(sid, draftsman)
+	local mbl = level_object_by_sid(sid)
+	if mbl == nil then
+		return
+	end
+	local h = hit()
+	h.power = 1000000
+	h.direction = vector():set( 0, 0, 0 )
+	h.draftsman = draftsman 
+	h.impulse = 0
+	h.type = hit.shock
+	mbl:hit(h)
+end
+
+function zont( pos, lvid, gvid, vis, mass, fixed_bones,sect1 ) 
+  local sobj = alife():create( sect1, pos, lvid, gvid )
+  local pk = get_netpk( sobj, 1 )
+  local data = pk:get()
+  data.visual_name = vis or "physics\\art_sharik"
+  data.custom_data:setString("[logic]\ncfg = scripts\\dfs\\renn_taynik.ltx\n[collide]\nignore_static\n")
+  data.physic_type = 3
+  data.mass        = mass or 1
+  data.fixed_bones = fixed_bones or "joint1"
+  pk:set(data)
+  return sobj
+end

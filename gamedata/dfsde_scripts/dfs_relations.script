@@ -1,0 +1,52 @@
+
+function camban_down()
+	relation_registry.change_community_goodwill("camban", db.actor:id(), (-5000))
+end
+
+function killer_up()
+	relation_registry.change_community_goodwill("killer", db.actor:id(), (4000))
+end
+
+function killer_down()
+	relation_registry.change_community_goodwill("killer", db.actor:id(), (-4000))
+end
+
+function us_army_default()
+	relation_registry.set_community_goodwill ("usarmy", db.actor:id(), 0)
+end
+
+function bb_cnn_down()
+	relation_registry.change_community_goodwill("bb", db.actor:id(), (-5000))
+	relation_registry.change_community_goodwill("cnn", db.actor:id(), (-5000))
+end
+
+function cliric_up()
+	relation_registry.change_community_goodwill("cliric", db.actor:id(), (5000))
+end
+
+function stranger_down()
+	relation_registry.change_community_goodwill("stranger", db.actor:id(), (-5000))
+end
+
+function bb_up()
+	relation_registry.change_community_goodwill("bb", db.actor:id(), (5000))
+end
+
+function domino_down()
+	relation_registry.change_community_goodwill("ps_stalker", db.actor:id(), (-5000))
+	relation_registry.change_community_goodwill("ps_dolg", db.actor:id(), (-5000))
+	relation_registry.change_community_goodwill("ps_freedom", db.actor:id(), (-5000))
+	relation_registry.change_community_goodwill("ps_exmon", db.actor:id(), (-5000))
+	relation_registry.change_community_goodwill("ps_bandit", db.actor:id(), (-5000))
+	relation_registry.change_community_goodwill("ps_killer", db.actor:id(), (-5000))
+end
+
+function ecolog_up()
+	relation_registry.change_community_goodwill("ecolog", db.actor:id(), (5000))
+end
+
+function us_up()
+	relation_registry.change_community_goodwill("usarmy", db.actor:id(), (5000))
+end
+
+

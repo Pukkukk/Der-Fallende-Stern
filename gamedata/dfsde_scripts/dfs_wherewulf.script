@@ -1,0 +1,1820 @@
+
+function ww_transformation()
+	local npc = alife():story_object(19910)
+	local obj = alife():story_object(19910)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("bloodsucker_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+end
+
+function ww_transformation_1()
+	local npc = alife():story_object(19932)
+	local obj = alife():story_object(19932)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("bloodsucker_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_scientic", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("stalker_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_mp5", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+end
+
+function ww_transformation_4()
+	local npc = alife():story_object(20078)
+	local obj = alife():story_object(20078)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("m_burer_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandit_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_ak74u", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_pmm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	end
+	
+	local npc = alife():story_object(20079)
+	local obj = alife():story_object(20079)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("m_burer_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandit_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_ak74u", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_pmm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	end
+	
+	local npc = alife():story_object(20080)
+	local obj = alife():story_object(20080)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("m_burer_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandit_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_ak74u", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_pmm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	end
+end
+
+function good_cation()
+	
+	local snd_obj = xr_sound.get_safe_sound_object( [[dfs\cation_1]] )
+	
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+		--level.add_cam_effector("camera_effects\\earthquake.anm", 1974, false, "")
+		
+end
+
+function horror_cation()
+	
+	local snd_obj = xr_sound.get_safe_sound_object( [[dfs\cation_2]] )
+	
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+		
+end
+
+function ww_transformation_2()
+	
+	lights_off()
+	horror_voice_1()
+
+	local npc = alife():story_object(500)
+	local obj = alife():story_object(500)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("bar_iron_mask_1", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+
+	local npc = alife():story_object(510)
+	--local obj = alife():story_object(510)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(607)
+	--local obj = alife():story_object(607)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(504)
+	--local obj = alife():story_object(504)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(515)
+	--local obj = alife():story_object(515)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(518)
+	--local obj = alife():story_object(518)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(506)
+	--local obj = alife():story_object(506)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(505)
+	--local obj = alife():story_object(505)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(507)
+	--local obj = alife():story_object(507)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(516)
+	--local obj = alife():story_object(516)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(571)
+	--local obj = alife():story_object(571)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19933)
+	--local obj = alife():story_object(19933)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19934)
+	--local obj = alife():story_object(19934)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19935)
+	--local obj = alife():story_object(19935)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19936)
+	--local obj = alife():story_object(19936)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19937)
+	--local obj = alife():story_object(19937)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19938)
+	--local obj = alife():story_object(19938)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19939)
+	--local obj = alife():story_object(19939)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19940)
+	--local obj = alife():story_object(19940)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19941)
+	--local obj = alife():story_object(19941)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19942)
+	--local obj = alife():story_object(19942)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19943)
+	--local obj = alife():story_object(19943)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19944)
+	--local obj = alife():story_object(19944)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19945)
+	--local obj = alife():story_object(19945)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19946)
+	--local obj = alife():story_object(19946)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19947)
+	--local obj = alife():story_object(19947)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19948)
+	--local obj = alife():story_object(19948)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19949)
+	--local obj = alife():story_object(19949)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19950)
+	--local obj = alife():story_object(19950)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19951)
+	--local obj = alife():story_object(19951)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19952)
+	--local obj = alife():story_object(19952)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19953)
+	--local obj = alife():story_object(19953)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19954)
+	--local obj = alife():story_object(19954)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19955)
+	--local obj = alife():story_object(19955)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19956)
+	--local obj = alife():story_object(19956)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19957)
+	--local obj = alife():story_object(19957)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19958)
+	--local obj = alife():story_object(19958)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19959)
+	--local obj = alife():story_object(19959)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19960)
+	--local obj = alife():story_object(19960)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19961)
+	--local obj = alife():story_object(19961)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19962)
+	--local obj = alife():story_object(19962)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19963)
+	--local obj = alife():story_object(19963)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19964)
+	--local obj = alife():story_object(19964)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19965)
+	--local obj = alife():story_object(19965)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19966)
+	--local obj = alife():story_object(19966)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19967)
+	--local obj = alife():story_object(19967)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19968)
+	--local obj = alife():story_object(19968)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19969)
+	--local obj = alife():story_object(19969)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(19970)
+	--local obj = alife():story_object(19970)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--alife():create("bloodsucker_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+end
+
+function lights_off()
+
+	local obj = alife():story_object(19972)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19973)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19974)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19975)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19976)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19977)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19978)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19979)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19980)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19981)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19982)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19983)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19984)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19985)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19986)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19987)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19988)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19989)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19990)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19991)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19992)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19993)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19994)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19995)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19996)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19997)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19998)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(19999)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20000)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20001)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20002)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20003)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20004)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20005)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20006)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20007)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20008)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20009)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20010)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20011)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20012)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20013)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20014)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20015)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20016)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20017)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20018)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20019)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20020)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20021)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+	
+	local obj = alife():story_object(20022)
+	
+	if obj then
+	alife():set_switch_offline(obj.id, true)
+	alife():set_switch_online(obj.id, false)
+	alife():set_interactive(obj.id, false)
+	end
+end
+
+function ww_transformation_3()
+
+	horror_voice()
+	rats_spawns()
+
+	local npc = alife():story_object(19971)
+	--local obj = alife():story_object(19971)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	--[[alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)]]
+ 
+	end
+end
+
+function horror_voice()
+		
+		local snd_obj			= xr_sound.get_safe_sound_object( [[dfs\rnd_the_horror2]] )
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+		level.add_cam_effector("camera_effects\\earthquake.anm", 1974, false, "")
+end
+
+function horror_voice_1()
+		local snd_obj			= xr_sound.get_safe_sound_object( [[dfs\psy_affect_0]] )
+		snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+end
+
+function rats_spawns()
+	alife():create("rat_normal",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("rat_normal",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("rat_normal",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("rat_normal",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("rat_normal",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("rat_normal",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("rat_normal",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("rat_normal",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("rat_normal",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("rat_normal",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("wpn_usp",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("ammo_11.43x23_hydro",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("wpn_g36",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("ammo_5.56x45_ap",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("ammo_5.56x45_ap",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("ammo_5.56x45_ap",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+	alife():create("medkit",vector():set(17.375965118408,4.2789511680603,62.74292755127),295379,89)
+end
+
+function ww_transformation_5()
+	local npc = alife():story_object(20180)
+	local obj = alife():story_object(20180)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_army", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_walther", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_groza", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_pbp", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x39_sp5", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x39_sp5", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x39_sp5", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x39_sp5", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(20181)
+	local obj = alife():story_object(20181)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_army", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_walther", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_rpg7", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_pbp", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_og-7b", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_og-7b", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(20182)
+	local obj = alife():story_object(20182)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_army", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_walther", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_rpg7", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_pbp", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_og-7b", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_og-7b", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+	
+	local npc = alife():story_object(20183)
+	local obj = alife():story_object(20183)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_army", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_gauss", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_gauss", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_gauss", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_gauss", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+ 
+	end
+end
+
+function ww_transformation_6()
+	local npc = alife():story_object(20345)
+	local obj = alife():story_object(20345)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("renn_bastard", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("del_renn_from_game")
+ 
+	end
+end
+
+function act_free_walker_trans_1()
+	local npc = alife():story_object(20601)
+	local obj = alife():story_object(20601)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("boar_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandit_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_bm16", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_12x70_buck", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_12x70_buck", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_12x70_buck", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock1")
+ 
+	end
+end
+
+function act_free_walker_trans_2()
+	local npc = alife():story_object(20602)
+	local obj = alife():story_object(20602)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("chimera_weak", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_army", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandit_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_stg44", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock2")
+ 
+	end
+end
+
+function act_free_walker_trans_3()
+	local npc = alife():story_object(20603)
+	local obj = alife():story_object(20603)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("controller_tubeman", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_scientic", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandit_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_stg44", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock3")
+ 
+	end
+end
+
+function act_free_walker_trans_4()
+	local npc = alife():story_object(20604)
+	local obj = alife():story_object(20604)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("controller_tubeman", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("stalker_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_toz34", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_pmm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_12x70_buck", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_pmm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_12x70_buck", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_pmm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_12x70_buck", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock4")
+ 
+	end
+end
+
+function act_free_walker_trans_5()
+	local npc = alife():story_object(20605)
+	local obj = alife():story_object(20605)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("controller_tubeman", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_scientic", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("stalker_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_stg44", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock5")
+ 
+	end
+end
+
+function act_free_walker_trans_6()
+	local npc = alife():story_object(20606)
+	local obj = alife():story_object(20606)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("controller_tubeman", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("stalker_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pb", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_stg44", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.92x33", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock6")
+ 
+	end
+end
+
+function act_free_walker_trans_7()
+	local npc = alife():story_object(20607)
+	local obj = alife():story_object(20607)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("controller_tubeman", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("repair_kit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_army", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("stalker_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_ak74u", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock7")
+ 
+	end
+end
+
+function act_free_walker_trans_8()
+	local npc = alife():story_object(20608)
+	local obj = alife():story_object(20608)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("dog_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("dog_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_scientic", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("stalker_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_pm", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_ak74u", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock8")
+ 
+	end
+end
+
+function act_free_walker_trans_9()
+	local npc = alife():story_object(20609)
+	local obj = alife():story_object(20609)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("dog_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("dog_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("svoboda_light_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_usp", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_sig550", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_11.43x23_hydro", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_11.43x23_hydro", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock9")
+ 
+	end
+end
+
+function act_free_walker_trans_10()
+	local npc = alife():story_object(20610)
+	local obj = alife():story_object(20610)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("flesh_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_army", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("svoboda_light_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_walther", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_lr300", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock10")
+ 
+	end
+end
+
+function act_free_walker_trans_11()
+	local npc = alife():story_object(20611)
+	local obj = alife():story_object(20611)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("gigant_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_scientic", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("svoboda_light_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_sig220", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_svu", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_11.43x23_hydro", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_11.43x23_hydro", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_7.62x54_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock11")
+ 
+	end
+end
+
+function act_free_walker_trans_12()
+	local npc = alife():story_object(20612)
+	local obj = alife():story_object(20612)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("m_poltergeist_normal_flame", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("svoboda_light_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_usp", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_g36", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_11.43x23_hydro", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_11.43x23_hydro", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_11.43x23_hydro", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_11.43x23_hydro", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock12")
+ 
+	end
+end
+
+function act_free_walker_trans_13()
+	local npc = alife():story_object(20613)
+	local obj = alife():story_object(20613)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("m_poltergeist_normal_tele", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_army", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("dolg_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_walther", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_groza", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_pbp", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x39_sp5", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_pbp", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x39_sp5", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_pbp", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x39_sp5", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock13")
+ 
+	end
+end
+
+function act_free_walker_trans_14()
+	local npc = alife():story_object(20614)
+	local obj = alife():story_object(20614)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("snork_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_scientic", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("killer_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_walther", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_lr300", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock14")
+ 
+	end
+end
+
+function act_free_walker_trans_15()
+	local npc = alife():story_object(20615)
+	local obj = alife():story_object(20615)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("pseudodog_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("pseudodog_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("killer_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_walther", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_lr300", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock15")
+ 
+	end
+end
+
+function act_free_walker_trans_16()
+	local npc = alife():story_object(20616)
+	local obj = alife():story_object(20616)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("pseudodog_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("pseudodog_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_army", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_usp", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_lr300", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_11.43x23_hydro", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock16")
+ 
+	end
+end
+
+function act_free_walker_trans_17()
+	local npc = alife():story_object(20617)
+	local obj = alife():story_object(20617)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("rat_normal", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_scientic", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_walther", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_val", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x39_sp5", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x39_sp5", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock17")
+ 
+	end
+end
+
+function act_free_walker_trans_18()
+	local npc = alife():story_object(20618)
+	local obj = alife():story_object(20618)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("snork_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("scientific_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_walther", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_lr300", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.56x45_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x19_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock18")
+ 
+	end
+end
+
+function act_free_walker_trans_19()
+	local npc = alife():story_object(20619)
+	local obj = alife():story_object(20619)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("m_burer_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_army", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("monolit_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_fort", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_ak74", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_5.45x39_ap", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock19")
+ 
+	end
+end
+
+function act_free_walker_trans_20()
+	local npc = alife():story_object(20620)
+	local obj = alife():story_object(20620)
+	
+	if npc then
+	alife():set_switch_offline(npc.id, true)
+	alife():set_switch_online(npc.id, false)
+	alife():set_interactive(npc.id, false)
+	
+	alife():create("bloodsucker_strong", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("medkit_scientic", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("bandage", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("monolit_outfit", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_val_m1", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("wpn_fort", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	alife():create("ammo_9x18_fmj", obj.position, obj.m_level_vertex_id, obj.m_game_vertex_id)
+	db.actor:give_info_portion("player_complete_leading_deadlock20")
+ 
+	end
+end
+
+
+

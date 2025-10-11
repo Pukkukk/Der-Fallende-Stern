@@ -1,0 +1,240 @@
+class "ui_cop_rad_empty" (CUIScriptWnd)
+
+function ui_cop_rad_empty:__init() super()
+  self:InitControls()
+end
+
+function ui_cop_rad_empty:InitControls()
+  self:Init(0, 0, device().width, device().height)
+
+  self.overlay = CUIStatic()
+  self.overlay:SetAutoDelete(true)
+	-- replace x, y with position of overlay texture (position on hud)
+	-- and w, h with overlay texture's width and height, respectively
+	-- you can use device().width instead of w if you want to set screen's
+	-- width as a texture width
+  self.overlay:Init(-1658, -1472, 0, 0)
+  self.overlay:InitTexture("ui\\cop_inventory")
+  self.overlay:SetStretchTexture(true) -- to stretch texture based on w, h
+  self.overlay:Show(false)
+  self:AttachChild(self.overlay)
+
+  self.hud_stage = "no"
+end
+
+--initialize and display overlay textures
+function ui_cop_rad_empty:display_texture(idx)
+	if self.hud_stage ~= idx then
+		self.overlay:InitTexture("ui\\ui_cop_rad_" .. idx)
+		self.overlay:Show(true)
+		self.hud_stage = idx
+	end
+end
+
+--update texture based on actors current condition
+function ui_cop_rad_empty:Update()
+  CUIScriptWnd.Update(self)
+	
+  local rad = db.actor.radiation * 100
+
+	--display texture overlay based on actor's radiation levels
+  if rad >= 0 then
+    self:display_texture("empty")
+  else
+  end
+end
+
+local HUD = nil
+
+function add_rad_empty()
+  if HUD == nil then
+    HUD = ui_cop_rad_empty()
+    get_hud():AddDialogToRender(HUD)
+  end
+end
+
+function remove_rad_empty()
+  if HUD ~= nil then
+    get_hud():RemoveDialogToRender(HUD)
+    HUD = nil
+  end
+end
+
+--
+
+class "ui_cop_rad_green" (CUIScriptWnd)
+
+function ui_cop_rad_green:__init() super()
+  self:InitControls()
+end
+
+function ui_cop_rad_green:InitControls()
+    self:Init(0, 0, device().width, device().height)
+    local xml = CScriptXmlInit()
+    xml:ParseFile("ui_cop_radblood.xml")
+	self.rad_green = xml:InitStatic("rad_green", self)
+	self.rad_green:Show(false)
+end
+
+
+function ui_cop_rad_green:Update()
+	CUIScriptWnd.Update(self)
+
+	local rad = db.actor.radiation * 100
+
+	if rad > 0 and rad < 25 then 
+		self.rad_green:Show(true)
+	else
+		self.rad_green:Show(false)
+	end
+end
+
+  local HUD = nil
+
+function add_rad_green()
+   if HUD == nil then
+     HUD = ui_cop_rad_green()
+    get_hud():AddDialogToRender(HUD)
+  end
+end
+
+function remove_rad_green()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil
+  end
+end
+
+--
+class "ui_cop_rad_yellow" (CUIScriptWnd)
+
+function ui_cop_rad_yellow:__init() super()
+  self:InitControls()
+end
+
+function ui_cop_rad_yellow:InitControls()
+    self:Init(0, 0, device().width, device().height)
+    local xml = CScriptXmlInit()
+    xml:ParseFile("ui_cop_radblood.xml")
+	self.rad_yellow = xml:InitStatic("rad_yellow", self)
+	self.rad_yellow:Show(false)
+end
+
+
+function ui_cop_rad_yellow:Update()
+	CUIScriptWnd.Update(self)
+
+	local rad = db.actor.radiation * 100
+
+	if rad > 25 and rad < 50 then 
+		self.rad_yellow:Show(true)
+	else
+		self.rad_yellow:Show(false)
+	end
+end
+
+  local HUD = nil
+
+function add_rad_yellow()
+   if HUD == nil then
+     HUD = ui_cop_rad_yellow()
+    get_hud():AddDialogToRender(HUD)
+  end
+end
+
+function remove_rad_yellow()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil
+  end
+end
+
+--
+
+class "ui_cop_rad_orange" (CUIScriptWnd)
+
+function ui_cop_rad_orange:__init() super()
+  self:InitControls()
+end
+
+function ui_cop_rad_orange:InitControls()
+    self:Init(0, 0, device().width, device().height)
+    local xml = CScriptXmlInit()
+    xml:ParseFile("ui_cop_radblood.xml")
+	self.rad_orange = xml:InitStatic("rad_orange", self)
+	self.rad_orange:Show(false)
+end
+
+
+function ui_cop_rad_orange:Update()
+	CUIScriptWnd.Update(self)
+
+	local rad = db.actor.radiation * 100
+
+	if rad > 50 and rad < 75 then 
+		self.rad_orange:Show(true)
+	else
+		self.rad_orange:Show(false)
+	end
+end
+
+  local HUD = nil
+
+function add_rad_orange()
+   if HUD == nil then
+     HUD = ui_cop_rad_orange()
+    get_hud():AddDialogToRender(HUD)
+  end
+end
+
+function remove_rad_orange()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil
+  end
+end
+
+--
+
+class "ui_cop_rad_red" (CUIScriptWnd)
+
+function ui_cop_rad_red:__init() super()
+  self:InitControls()
+end
+
+function ui_cop_rad_red:InitControls()
+    self:Init(0, 0, device().width, device().height)
+    local xml = CScriptXmlInit()
+    xml:ParseFile("ui_cop_radblood.xml")
+	self.rad_red = xml:InitStatic("rad_red", self)
+	self.rad_red:Show(false)
+end
+
+
+function ui_cop_rad_red:Update()
+	CUIScriptWnd.Update(self)
+
+	local rad = db.actor.radiation * 100
+
+	if rad > 75 then 
+		self.rad_red:Show(true)
+	else
+		self.rad_red:Show(false)
+	end
+end
+
+  local HUD = nil
+
+function add_rad_red()
+   if HUD == nil then
+     HUD = ui_cop_rad_red()
+    get_hud():AddDialogToRender(HUD)
+  end
+end
+
+function remove_rad_red()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil
+  end
+end

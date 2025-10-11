@@ -1,0 +1,2347 @@
+-----------------------------------------------------------------------
+--- trunk_inv.script
+--- Интерфейс для работы с багажником
+--- KamikaZze, OGS Evolution Team 2010
+--- version 1.0
+-----------------------------------------------------------------------
+
+local repaired_item = 0
+local item_table
+local trunk_items = {}
+local item_table_index = 0
+local weight_limith = 0.0
+local cargo_weight = 0.0
+local everything_ok = 0
+
+local weight = {
+	["vehicle_baggi"] = 40.0,
+	["vehicle_btr"] = 100.0,
+	["vehicle_niva"] = 60.0,
+	["vehicle_moskvich"] = 60.0,
+	["vehicle_moskvich2"] = 60.0,
+	["vehicle_tr13"] = 40.0,
+	["vehicle_uaz"] = 80.0,
+	["vehicle_uaz2"] = 80.0,
+	["vehicle_uazbuhanka"] = 100.0,
+	["vehicle_zaz"] = 40.0,
+	["vehicle_zaz968"] = 40.0
+}	
+
+local common_items = {}
+local common_items_trunk = {}
+
+local spawn_to_actor = {}
+local release_from_actor = {}
+
+function open_trunk_dialog()
+
+	local spwn = trunk_dialog(get_hud())
+	level.start_stop_menu(spwn,true)	
+
+end
+
+
+class "select_actor_items" (CUIListItemEx)
+
+
+function select_actor_items:__init() super()
+-- -- amk.logf("Начинаем инициализацию поля списка предметов")
+	self.item_name		= "itemname"
+	self:SetWndRect		(0,0,320,22)
+	
+	local ca = 255
+	local cr = 216
+	local cg = 186
+	local cb = 140
+	
+	self.itmnum				= CUIStatic	()
+	self.itmnum:SetAutoDelete	(true)
+	self:AttachChild		(self.itmnum)
+	self.itmnum:SetWndRect	(0,0,20,22)
+	self.itmnum:SetText		("itemnum")
+	self.itmnum:SetFont		(GetFontLetterica16Russian())
+	self.itmnum:SetTextColor	(ca,cr,cg,cb)
+
+	self.itmn					= CUIStatic	()
+	self.itmn:SetAutoDelete	(true)
+	self:AttachChild		(self.itmn)
+	self.itmn:SetWndRect		(25,0,205,22)
+	self.itmn:SetText			("itemname")
+	self.itmn:SetFont			(GetFontLetterica18Russian())
+	self.itmn:SetTextColor	(ca,cr,cg,cb)
+
+	self.itmage				= CUIStatic	()
+	self.itmage:SetAutoDelete	(true)
+	self:AttachChild		(self.itmage)
+	self.itmage:SetWndRect	(250,0,40,22)
+	self.itmage:SetText		("itemage")
+	self.itmage:SetFont		(GetFontLetterica16Russian())
+	self.itmage:SetTextColor	(ca,cr,cg,cb)
+-- -- amk.logf("Поле списка предметов инициализировано")
+end
+
+
+class "trunk_dialog" (CUIScriptWnd)
+
+
+function trunk_dialog:__init() super()
+	my.ignore_this_items = true
+	self:enumerate_actor_items()
+	self:decode_trunk_items()
+	self:InitControls()
+	self:InitCallBacks()
+	self:FillList()
+	self:FillTrunk()
+end
+
+function trunk_dialog:__finalize() end
+
+
+function trunk_dialog:enumerate_actor_items()
+	item_table = 0
+	item_table = {}
+	item_table_index = 0
+	common_items = {}
+	db.actor:iterate_inventory(actor_items, db.actor)
+end
+
+
+function trunk_dialog:decode_trunk_items()
+	local trunk_encoded = load_trunk(car_trade.current_trunk)
+	if not trunk_encoded then
+		-- logf("TRUNK EMPTY")
+		trunk_encoded = {}
+	else
+		-- logf("TRUNK LOADED!")
+	--	print_table_inlog(trunk_encoded, "TRUNK>")
+		
+		for k,v in pairs(trunk_encoded) do
+				
+			for num, key in string.gfind(tostring(k), "(%d+)_([%a_]+)") do
+				if not trunk_items[tonumber(num)] then
+					trunk_items[tonumber(num)] = {}
+					if tostring(key) == "section" then
+						trunk_items[tonumber(num)][tostring(key)] = tostring(v)
+					else
+						trunk_items[tonumber(num)][tostring(key)] = tonumber(v)
+					end
+				else
+					if tostring(key) == "section" then
+						trunk_items[tonumber(num)][tostring(key)] = tostring(v)
+					else
+						trunk_items[tonumber(num)][tostring(key)] = tonumber(v)
+					end
+				end
+			end
+		end 
+		
+		local i = 1
+		while (trunk_items[i]) do
+			local t_item = trunk_items[i]
+			if t_item.it_type == 0 or t_item.it_type == 3 then
+				common_items_trunk[t_item.section] = i
+			end
+			i = i+1
+		end		
+		
+	--	print_table_inlog(trunk_items, "TEST>")
+		
+	end	
+end
+
+
+function trunk_dialog:InitControls()
+-- -- amk.logf("Инициализируем управление формой")
+	-- здесь определяем координаты левого верхнего угла и ширину-высоту
+	self:Init(100,100,900,700)
+
+	-- файл-описатель наших элементов
+	local xml = CScriptXmlInit()
+	local ctrl
+	
+	
+	xml:ParseFile("ui_trunk.xml")
+	
+	-- видео на заднем плане
+	xml:InitStatic("back_video", self)
+	-- рамка
+	xml:InitStatic("background", self)
+	
+	-- видео на заднем плане
+	xml:InitStatic("back_video2", self)
+	-- рамка
+	xml:InitStatic("background2", self)
+
+	-- рамка предмета
+	xml:InitStatic("actor_frame", self)	
+
+	-- рамка предмета
+	xml:InitStatic("item_frame", self)
+	-- рамка предмета
+	xml:InitStatic("item_frame2", self)	
+	-- рамка кнопки выход
+	xml:InitStatic("exit_frame", self)	
+	
+	-- колба предмета
+	xml:InitStatic("bar_frame", self)
+	-- колба предмета
+	xml:InitStatic("bar_frame2", self)	
+	-- список предметов
+	xml:InitFrame("list_frame", self)
+	xml:InitFrame("list2_frame", self)
+
+	ctrl = xml:InitList("list", self)
+	ctrl:ShowSelectedItem(true)
+	self:Register(ctrl, "list_window")
+	
+	ctrl = xml:InitList("list2", self)
+	ctrl:ShowSelectedItem(true)
+	self:Register(ctrl, "list2_window")	
+
+	-- кнопки
+	self:Register(xml:Init3tButton("window_name", self),"window_name")
+	self:Register(xml:Init3tButton("window_name2", self),"window_name")
+	
+	self:Register(xml:Init3tButton("caption2", self),"caption2")
+	self:Register(xml:Init3tButton("caption4", self),"caption4")
+	
+	self:Register(xml:Init3tButton("caption3", self),"caption3")
+	self:Register(xml:Init3tButton("caption5", self),"caption5")	
+	
+	self:Register(xml:Init3tButton("caption6", self),"caption6")
+	self:Register(xml:Init3tButton("caption7", self),"caption7")
+	self:Register(xml:Init3tButton("caption8", self),"caption8")
+	self:Register(xml:Init3tButton("caption9", self),"caption9")
+	
+	self.message_box = CUIMessageBoxEx()
+	self:Register(self.message_box,"message_box")
+	
+	self.btn_4 = xml:Init3tButton("btn_4", self)
+	self:Register(self.btn_4, "btn_4")
+	self.btn_4:Enable(false)	
+	
+	self.btn_5 = xml:Init3tButton("btn_5", self)
+	self:Register(self.btn_5, "btn_5")
+	self.btn_5:Enable(false)
+
+	self.btn_6 = xml:Init3tButton("btn_6", self)
+	self:Register(self.btn_6, "btn_6")
+	self.btn_6:Enable(true)		
+	
+	self.btn_7 = xml:Init3tButton("btn_7", self)
+	self:Register(self.btn_7, "btn_7")
+	self.btn_7:Enable(true)	
+
+end
+
+
+function trunk_dialog:InitCallBacks()
+-- -- amk.logf("Инициализируем коллбэки")
+	-- тут интерактивные элементы, при определенном действии выполняется заданная ф-ия
+	self:AddCallback("btn_4", ui_events.BUTTON_CLICKED, self.trunk_btn, self)
+	self:AddCallback("btn_5", ui_events.BUTTON_CLICKED, self.take_btn, self)
+	self:AddCallback("btn_6", ui_events.BUTTON_CLICKED, self.on_quit, self)
+	self:AddCallback("btn_7", ui_events.BUTTON_CLICKED, self.take_all, self)
+	
+	self:AddCallback("list_window", ui_events.LIST_ITEM_CLICKED, 			  self.OnListItemClicked,		self)
+	self:AddCallback("list_window", ui_events.WINDOW_LBUTTON_DB_CLICK,		  self.OnListItemDbClicked,		self)
+
+	self:AddCallback("list2_window", ui_events.LIST_ITEM_CLICKED, 			  self.OnList2ItemClicked,		self)
+	self:AddCallback("list2_window", ui_events.WINDOW_LBUTTON_DB_CLICK,		  self.OnList2ItemDbClicked,		self)	
+	
+	self:AddCallback("message_box",		ui_events.MESSAGE_BOX_OK_CLICKED,	  self.OnMsgYes,				self)
+-- -- amk.logf("Коллбэки инициализированы")
+end
+
+
+function trunk_dialog:FillList()
+
+	local item_in_slot_1 = db.actor:item_in_slot(1)
+	local item_in_slot_2 = db.actor:item_in_slot(2)
+	local item_in_slot_6 = db.actor:item_in_slot(6)
+	
+	if item_in_slot_1 then
+		item_in_slot_1 = item_in_slot_1:id()
+	else	
+		item_in_slot_1 = 0 
+	end
+	
+	if item_in_slot_2 then
+		item_in_slot_2 = item_in_slot_2:id()
+	else	
+		item_in_slot_2 = 0 
+	end
+
+	if item_in_slot_6 then
+		item_in_slot_6 = item_in_slot_6:id()
+	else	
+		item_in_slot_6 = 0 
+	end	
+	
+	-- print_table_inlog(item_table, "inv>")
+	
+	local i = 1
+	while (item_table[i]) do
+
+		local s_item = item_table[i]
+		local s_item_section = item_table[i].section
+		local _item_num = "" .. i .. ""
+		local _item_name = ""
+		
+		if string.find(s_item_section, "af_") then
+			_item_name = game.translate_string(get_inv_name(s_item_section))
+		else
+			_item_name = game.translate_string(get_inv_name_short(s_item_section))
+		end
+		
+		if item_table[i].id == item_in_slot_1 
+		or item_table[i].id == item_in_slot_2 then
+			_item_name = _item_name.." (в руках)"
+		elseif item_table[i].id == item_in_slot_6 then
+			_item_name = _item_name.." (одет)"
+		end
+		
+		local _item_cond = "--"
+		
+		if item_table[i].it_type == 0 then
+			_item_cond = item_table[i].count
+		elseif item_table[i].it_type == 1 or item_table[i].it_type == 2 then
+			_item_cond = "["..tostring(math.ceil(item_table[i].condition*100)).."%]"
+			string.format("%.1f", item_table[i].condition)
+		else	
+			_item_cond = item_table[i].count
+		end
+		
+		if item_table[i].count > 0 then
+			self:AddItemToList(_item_num, _item_name, _item_cond)
+		end
+		
+		i = i+1
+	end
+
+-- -- amk.logf("Закончили наполнять список")
+end
+
+function trunk_dialog:FillOneItem(item_index, index)
+
+		local _item_cond = "--"
+		
+		if item_table[item_index].it_type == 0 then
+			_item_cond = item_table[item_index].count
+		elseif item_table[item_index].it_type == 1 or item_table[item_index].it_type == 2 then
+			_item_cond = "["..tostring(math.ceil(item_table[item_index].condition*100)).."%]"
+			string.format("%.1f", item_table[item_index].condition)
+		else	
+			_item_cond = item_table[item_index].count
+		end
+
+		local list_box = self:GetListWnd("list_window")
+		
+		if item_table[item_index].count > 0 then
+			local item = list_box:GetItem(index)
+			item.itmage:SetText(_item_cond)
+		else
+			list_box:RemoveItem(index)
+			if self.cur_rem_textur then
+				self.cur_rem_textur:Show(false)
+			end
+			if self.item_name_rem then
+				self.item_name_rem:Show(false)
+			end
+			if self.cond_rem_bar then
+				self.cond_rem_bar:Show(false)
+			end				
+		end
+
+-- -- amk.logf("Закончили наполнять список")
+end
+
+function trunk_dialog:FillTrunk()
+	
+	local i = 1
+	while (trunk_items[i]) do
+		local t_item = trunk_items[i]
+		if trunk_items[i].count > 0 then
+			self:AddItemToTrunk(i, t_item)
+		end
+		i = i+1
+	end
+	
+	local car = level.object_by_id(car_trade.current_trunk)
+	local section = car:section()
+	
+	if weight[section] then
+		weight_limith = weight[section] 
+	else
+		weight_limith = 60.0
+	end
+	
+	self:RefreshTrunkWeight()
+	self:DrawWeightLimith(weight_limith, 660, 63)
+	self:DrawCargoWeight(cargo_weight, 660, 83)
+
+end
+
+function trunk_dialog:RefreshTrunkWeight()
+	
+	local full_weight = 0.0
+
+	local i = 1
+	while (trunk_items[i]) do
+		if system_ini():line_exist(trunk_items[i].section, "inv_weight") then
+			local item_weight = system_ini():r_float(trunk_items[i].section, "inv_weight")
+			if trunk_items[i].it_type ~= 3 then
+				full_weight = full_weight + (item_weight*trunk_items[i].count)
+			else
+				local box_size = system_ini():r_u32(trunk_items[i].section, "box_size")
+				full_weight = full_weight + (item_weight*(trunk_items[i].count/box_size))
+			end
+		end
+		i = i+1
+	end
+	
+	cargo_weight = full_weight
+
+end
+
+function trunk_dialog:FillOneItemTrunk(item_index, index)
+	
+		local _item_cond = "--"
+		
+		if trunk_items[item_index].it_type == 0 then
+			_item_cond = trunk_items[item_index].count
+		elseif trunk_items[item_index].it_type == 1 or trunk_items[item_index].it_type == 2 then
+			_item_cond = "["..tostring(math.ceil(trunk_items[item_index].condition*100)).."%]"
+			string.format("%.1f", trunk_items[item_index].condition)
+		else	
+			_item_cond = trunk_items[item_index].count
+		end
+
+		local list_box = self:GetListWnd("list2_window")
+		
+		if trunk_items[item_index].count > 0 then
+			local item = list_box:GetItem(index)
+			item.itmage:SetText(_item_cond)
+		else
+			list_box:RemoveItem(index)
+			if self.cur_rem_textur2 then
+				self.cur_rem_textur2:Show(false)
+			end
+			if self.item_name_rem2 then
+				self.item_name_rem2:Show(false)
+			end
+			if self.cond_rem_bar2 then
+				self.cond_rem_bar2:Show(false)
+			end				
+		end
+		
+	self:RefreshTrunkWeight()
+	self:DrawCargoWeight(cargo_weight, 660, 83)		
+	
+end
+
+function actor_items(npc, item)
+	local local_item_table = {
+		id = 0,
+		section = "",
+		condition = 0,
+		ammo_type = 0,
+		ammo_e = 0,
+		sil = 0,
+		scope = 0,
+		gren = 0,
+		count = 1,
+		it_type = 0
+	}
+	
+	local_item_table.id = item:id()
+	local_item_table.section = item:section()
+	local_item_table.condition = math.ceil(item:condition()*100)/100
+	
+	if local_item_table.section == "wpn_binoc"
+	or local_item_table.section == "binocular" 
+	or local_item_table.section == "hand_radio_f"
+	or local_item_table.section == "device_pda"
+	or local_item_table.section == "device_torch"
+	or local_item_table.section == "separator"
+	or local_item_table.section == "matras"
+	or local_item_table.section == "mobile_changer"
+	or local_item_table.section == "wpn_knife"
+	or local_item_table.section == "bolt" then
+		return
+	end
+	
+	if local_item_table.section == "repair_kit" and item:condition() < 0.99 then
+		return
+	end
+
+	if system_ini():line_exist(local_item_table.section, "quest_item") then
+		return
+	end
+	
+	if (isWeapon(item) or get_clsid(item) == clsid.wpn_binocular_s) and not string.find(local_item_table.section, "grenade") then
+	
+	--- Если это оружие - сохраняем id, состояние и обвес
+	
+		local_item_table.it_type = 1
+	
+		local scope = 0
+		local launcher = 0
+		local silence = 0	
+		
+		if system_ini():line_exist(local_item_table.section, "scope_status") then
+			scope = system_ini():r_u32(local_item_table.section, "scope_status")
+		end
+		if system_ini():line_exist(local_item_table.section, "grenade_launcher_status") then
+			launcher = system_ini():r_u32(local_item_table.section, "grenade_launcher_status")
+		end
+		if system_ini():line_exist(local_item_table.section, "silencer_status") then
+			silence = system_ini():r_u32(local_item_table.section, "silencer_status")
+		end		
+		
+		cur_state = remkit_main.get_weapon_data(alife():object(local_item_table.id))
+		
+		if cur_state then
+			if launcher == 2 and bit_and(cur_state.addon_flags, 2) == 2 then
+				local_item_table.gren = 1
+			end
+			if scope == 2 and bit_and(cur_state.addon_flags, 1) == 1 then
+				local_item_table.scope = 1
+			end
+			if silence == 2 and bit_and(cur_state.addon_flags, 4) == 4 then
+				local_item_table.sil = 1
+			end
+		end
+		
+		local_item_table.ammo_type = cur_state.ammo_type
+		local_item_table.ammo_e = cur_state.ammo_elapsed
+		
+		item_table_index = item_table_index + 1
+		item_table[item_table_index] = local_item_table
+		
+	elseif isOutfit(item) then	
+	
+		--- Если это броня - сохраняем id, состояние
+	
+		item_table_index = item_table_index + 1
+		local_item_table.it_type = 2
+		item_table[item_table_index] = local_item_table
+		
+	end
+	
+	if dunin_ammo.ammo[local_item_table.section] then
+	
+		--- Если это патроны - стакуем в строку
+	
+		if not common_items[local_item_table.section] then
+			local_item_table.it_type = 3
+			item_table_index = item_table_index + 1
+			item_table[item_table_index] = local_item_table	
+			item_table[item_table_index].count = dunin_ammo.get_ammo_size(item)
+			common_items[local_item_table.section] = item_table_index
+		else
+			local_item_table.it_type = 3
+			item_table[common_items[local_item_table.section]].count = item_table[common_items[local_item_table.section]].count + dunin_ammo.get_ammo_size(item)
+		end
+	end
+	
+	if local_item_table.it_type == 0 then
+	
+		--- Если это любая другая вещь - стакуем в строку
+	
+		if not common_items[local_item_table.section] then
+			item_table_index = item_table_index + 1
+			item_table[item_table_index] = local_item_table	
+			common_items[local_item_table.section] = item_table_index
+		else
+			item_table[common_items[local_item_table.section]].count = item_table[common_items[local_item_table.section]].count + 1
+		end	
+	end
+
+end
+
+
+function trunk_dialog:OnListItemClicked()
+
+	local list_box = self:GetListWnd("list_window")
+	if list_box:GetSize() == 0 then return end
+	
+	local itm_index = list_box:GetSelectedItem()
+	local item = list_box:GetItem(itm_index)
+
+	if item == nil then return end
+	
+	self.btn_4:Enable(true)
+
+	local destr_item_name = item.itmn:GetText()
+	local destr_item_index = tonumber(item.itmnum:GetText())
+	local destr_item_st = item_table[destr_item_index]
+	
+	self:DrawConditionBar(destr_item_st, 300, 130)
+	self:DrawCurItemName(destr_item_name, 300, 45)
+	self:DrawCurItem(destr_item_st, 300, 90)
+	
+	if self.cur_rem_textur then
+		self.cur_rem_textur:Show(true)
+	end
+	if self.item_name_rem then
+		self.item_name_rem:Show(true)
+	end
+	if self.cond_rem_bar then
+		self.cond_rem_bar:Show(true)
+	end
+	
+	if system_ini():line_exist(destr_item_st.section, "inv_weight") then
+		local item_weight = system_ini():r_float(destr_item_st.section, "inv_weight")
+		local pack_weight = 0
+		if destr_item_st.it_type == 3 then
+			local box_size = system_ini():r_u32(destr_item_st.section, "box_size")
+			pack_weight = item_weight*(destr_item_st.count/box_size)	
+			self:DrawCurrentWeight(pack_weight, 660, 103)
+			self:DrawPackWeight(item_weight, 660, 123)
+		else
+			self:DrawCurrentWeight(item_weight, 660, 103)
+			if self.cargopack then
+				self.cargopack:Show(false)
+			end
+		end
+	end		
+
+end
+
+function trunk_dialog:OnList2ItemClicked()
+
+	local list_box = self:GetListWnd("list2_window")
+	if list_box:GetSize() == 0 then return end
+	
+	local itm_index = list_box:GetSelectedItem()
+	local item = list_box:GetItem(itm_index)
+	
+	if item == nil then return end	
+	
+	self.btn_5:Enable(true)	
+	
+	local destr_item_name = item.itmn:GetText()
+	local destr_item_index = tonumber(item.itmnum:GetText())
+	local destr_item_st = trunk_items[destr_item_index]
+	
+	self:DrawConditionBar2(destr_item_st, 700, 130)
+	self:DrawCurItemName2(destr_item_name, 700, 45)
+	self:DrawCurItem2(destr_item_st, 700, 90)	
+	
+	if self.cur_rem_textur2 then
+		self.cur_rem_textur2:Show(true)
+	end
+	if self.item_name_rem2 then
+		self.item_name_rem2:Show(true)
+	end
+	if self.cond_rem_bar2 then
+		self.cond_rem_bar2:Show(true)
+	end	
+	
+	if system_ini():line_exist(destr_item_st.section, "inv_weight") then
+		local item_weight = system_ini():r_float(destr_item_st.section, "inv_weight")
+		local pack_weight = 0
+		if destr_item_st.it_type == 3 then
+			local box_size = system_ini():r_u32(destr_item_st.section, "box_size")
+			pack_weight = item_weight*(destr_item_st.count/box_size)	
+			self:DrawCurrentWeight(pack_weight, 660, 103)
+			self:DrawPackWeight(item_weight, 660, 123)
+		else
+			self:DrawCurrentWeight(item_weight, 660, 103)
+			if self.cargopack then
+				self.cargopack:Show(false)
+			end
+		end
+	end		
+
+end
+
+
+function trunk_dialog:OnListItemDbClicked()
+	self:trunk_btn()
+end
+
+function trunk_dialog:OnList2ItemDbClicked()
+	self:take_btn()
+end
+
+
+function trunk_dialog:trunk_btn()
+
+	local console = get_console()
+	local list = self:GetListWnd("list_window")	
+	local Max = list:GetSize()
+	if list:GetSize()==0 then
+		return
+	end
+	
+	local sys = system_ini()
+
+	-- logf("Button Pressed")
+	
+	local index = list:GetSelectedItem()
+	if index == -1 or index > Max then
+		self.msgbox_id = 1
+		self.message_box:Init("message_box_trunk_item")
+		self:GetHolder():start_stop_menu(self.message_box, true)
+		return
+	end
+
+	local item = list:GetItem(index)
+	
+	if not item then return end
+	
+	local item_index = tonumber(item.itmnum:GetText())
+	local s_item = item_table[item_index]
+	
+	if system_ini():line_exist(item_table[item_index].section, "inv_weight") then
+		local item_weight = sys:r_float(item_table[item_index].section, "inv_weight")
+		local total = cargo_weight + item_weight
+		if total > weight_limith then
+			self.msgbox_id = 1
+			self.message_box:Init("message_box_overweight")
+			self:GetHolder():start_stop_menu(self.message_box, true)
+			return		
+		end
+	end			
+	
+--- Запишем вещь в таблицу удаления из ГГ
+---	release_from_actor
+
+	if s_item.it_type == 3 then
+		local box_size = sys:r_u32(s_item.section, "box_size")
+		if s_item.count < box_size then
+			return
+		end
+	end
+	
+	local flag = 0
+	
+-- 1. Возможно игрок просто перепутал что-то и собирается вернуть назад переложенную вещь.
+-- проверим нет ли такой вещи в таблице спавна spawn_to_actor. Если есть, уберём её оттуда и вернём её в
+-- количество в таблицу trunk_items	
+
+	-- проверка не была ли вещь раньше перемещена в спавн актора
+	if s_item.it_type == 0 then
+		-- разное барахло
+		if spawn_to_actor[s_item.section] then
+			spawn_to_actor[s_item.section] = spawn_to_actor[s_item.section] - 1
+			s_item.count = s_item.count - 1
+			if common_items_trunk[s_item.section] then
+				trunk_items[common_items_trunk[s_item.section]].count = trunk_items[common_items_trunk[s_item.section]].count + 1
+				if spawn_to_actor[s_item.section] <= 0 then
+					spawn_to_actor[s_item.section] = nil
+				end
+				flag = 1
+			end			
+		end		
+	elseif s_item.it_type == 1 or s_item.it_type == 2 then
+		-- оружие, броня
+		if spawn_to_actor[s_item.id] then
+			s_item.count = 0
+			for k, v in pairs(trunk_items) do
+				if v.id == s_item.id then
+					v.count = v.count + 1
+					break
+				end
+			end		
+			spawn_to_actor[s_item.id] = nil			
+			flag = 1
+		end
+	else	
+		-- патроны
+		local box_size = sys:r_u32(s_item.section, "box_size")
+		if spawn_to_actor[s_item.section] then
+			spawn_to_actor[s_item.section] = spawn_to_actor[s_item.section] - box_size
+			s_item.count = s_item.count - box_size
+			if common_items_trunk[s_item.section] then
+				trunk_items[common_items_trunk[s_item.section]].count = trunk_items[common_items_trunk[s_item.section]].count + box_size
+				if spawn_to_actor[s_item.section] <= 0 then
+					spawn_to_actor[s_item.section] = nil
+				end				
+				flag = 1
+			end				
+		end	
+	end	
+	
+-- 2. Если не перепутал и перекладывает вещи из инвентаря тогда положим вещь в таблицу удаления release_from_actor и
+-- положим её в таблицу trunk_items	
+	
+	if flag == 0 and s_item.count > 0 then
+
+		-- помещение на удаление
+		if s_item.it_type == 0 then
+			-- разное барахло
+			if release_from_actor[s_item.section] then
+				release_from_actor[s_item.section] = release_from_actor[s_item.section] + 1
+				s_item.count = s_item.count - 1
+			else
+				release_from_actor[s_item.section] = 1
+				s_item.count = s_item.count - 1
+			end		
+		elseif s_item.it_type == 1 or s_item.it_type == 2 then
+			-- оружие, броня
+			if release_from_actor[s_item.id] then
+				-- не надо ничего делать
+			else
+				release_from_actor[s_item.id] = 1
+				s_item.count = 0
+			end
+		else	
+			-- патроны
+			local box_size = sys:r_u32(s_item.section, "box_size")
+			if release_from_actor[s_item.section] then
+				release_from_actor[s_item.section] = release_from_actor[s_item.section] + box_size
+				s_item.count = s_item.count - box_size
+			else
+				release_from_actor[s_item.section] = box_size
+				s_item.count = s_item.count - box_size
+			end	
+		end
+	
+		--- Запишем вещь в таблицу записи в багажник
+		local trunk_table_index = 0
+		if s_item.it_type == 0 then
+			-- разное барахло
+			trunk_table_index = table.getn(trunk_items)
+			local local_trunk_items = {
+				section = s_item.section,
+				count = 1,
+				it_type = s_item.it_type
+			}
+			if not common_items_trunk[local_trunk_items.section] then
+				trunk_table_index = trunk_table_index + 1
+				trunk_items[trunk_table_index] = local_trunk_items
+				common_items_trunk[local_trunk_items.section] = trunk_table_index
+			else
+				trunk_items[common_items_trunk[local_trunk_items.section]].count = trunk_items[common_items_trunk[local_trunk_items.section]].count + 1
+			end
+		elseif s_item.it_type == 1 or s_item.it_type == 2 then
+			-- оружие
+			if s_item.it_type == 1 then
+				local local_trunk_items = {
+					id = s_item.id,
+					section = s_item.section,
+					condition = s_item.condition,
+					ammo_type = s_item.ammo_type,
+					ammo_e = s_item.ammo_e,					
+					sil = s_item.sil,
+					scope = s_item.scope,
+					gren = s_item.gren,
+					count = 1,
+					it_type = s_item.it_type
+				}
+				local check = 0
+				for k, v in pairs(trunk_items) do
+					if v.id == s_item.id then
+						v.count = 1
+						check = 1
+					end
+				end
+				if check == 0 then
+						trunk_table_index = table.getn(trunk_items)
+						trunk_table_index = trunk_table_index + 1
+						trunk_items[trunk_table_index] = local_trunk_items		
+					end
+				end
+				-- броня
+			if s_item.it_type == 2 then
+				local local_trunk_items = {
+					id = s_item.id,
+					section = s_item.section,
+					condition = s_item.condition,
+					count = 1,
+					it_type = s_item.it_type
+				}	
+				local check = 0
+				for k, v in pairs(trunk_items) do
+					if v.id == s_item.id then
+						v.count = 1
+						check = 1
+					end
+				end			
+				if check == 0 then
+					trunk_table_index = table.getn(trunk_items)
+					trunk_table_index = trunk_table_index + 1
+					trunk_items[trunk_table_index] = local_trunk_items
+				end
+			end
+		else	
+			-- патроны - стакуем в строку
+			trunk_table_index = table.getn(trunk_items)
+			local box_size = sys:r_u32(s_item.section, "box_size")
+			local local_trunk_items = {
+				section = s_item.section,
+				count = box_size,
+				it_type = 3
+			}
+			if not common_items_trunk[local_trunk_items.section] then
+				trunk_table_index = trunk_table_index + 1
+				trunk_items[trunk_table_index] = local_trunk_items
+				common_items_trunk[local_trunk_items.section] = trunk_table_index
+			else
+				trunk_items[common_items_trunk[local_trunk_items.section]].count = trunk_items[common_items_trunk[local_trunk_items.section]].count + box_size
+			end
+		end 
+
+	end
+	
+-- Обновим список
+	
+	local list_box = self:GetListWnd("list_window")
+	local list2_box = self:GetListWnd("list2_window")
+	
+--	logf("Spawn items table:")
+--	print_table_inlog(spawn_to_actor, "SPW>")		
+	
+--	logf("Releasing items table:")
+--	print_table_inlog(release_from_actor, "REL>")	
+
+--	list_box:RemoveAll()
+--	self:FillList()
+
+	self:FillOneItem(item_index, index)
+	
+	list2_box:RemoveAll()
+	self:FillTrunk()
+		
+end
+
+function trunk_dialog:take_btn()
+
+	local console = get_console()
+	local list = self:GetListWnd("list2_window")	
+	local Max = list:GetSize()
+	
+	if list:GetSize()==0 then
+		return
+	end
+	
+	local sys = system_ini()
+
+	-- logf("Button Pressed")
+	
+	local index = list:GetSelectedItem()
+	if index == -1 or index > Max then
+		self.msgbox_id = 1
+		self.message_box:Init("message_box_trunk_item")
+		self:GetHolder():start_stop_menu(self.message_box, true)
+		return
+	end
+
+	local item = list:GetItem(index)
+	
+	if not item then return end
+	
+	local item_index = tonumber(item.itmnum:GetText())
+	local t_item = trunk_items[item_index]
+	
+-- 1. Возможно игрок просто перепутал что-то и собирается вернуть назад переложенную вещь.
+-- проверим нет ли такой вещи в таблице удаления release_from_actor. Если есть, уберём её оттуда и вернём её в
+-- количество в таблицу item_table
+
+	local flag = 0
+
+	if t_item.it_type == 0 then
+		-- разное барахло
+		if release_from_actor[t_item.section] then
+			release_from_actor[t_item.section] = release_from_actor[t_item.section] - 1
+			t_item.count = t_item.count - 1
+			if common_items[t_item.section] then
+				item_table[common_items[t_item.section]].count = item_table[common_items[t_item.section]].count + 1
+				if release_from_actor[t_item.section] == 0 then
+					release_from_actor[t_item.section] = nil
+				end				
+				flag = 1
+			end
+		end		
+	elseif t_item.it_type == 1 or t_item.it_type == 2 then
+		-- оружие, броня
+		if release_from_actor[t_item.id] then
+			t_item.count = 0
+			for k, v in pairs(item_table) do
+				if v.id == t_item.id then
+					v.count = v.count + 1
+					break
+				end
+			end
+			release_from_actor[t_item.id] = nil
+			flag = 1
+		end
+	else	
+		-- патроны
+		local box_size = sys:r_u32(t_item.section, "box_size")
+		if release_from_actor[t_item.section] then
+			release_from_actor[t_item.section] = release_from_actor[t_item.section] - box_size
+			t_item.count = t_item.count - box_size
+			if common_items[t_item.section] then
+				item_table[common_items[t_item.section]].count = item_table[common_items[t_item.section]].count + box_size
+				if release_from_actor[t_item.section] == 0 then
+					release_from_actor[t_item.section] = nil
+				end						
+				flag = 1
+			end			
+		end	
+	end
+
+-- 2. Если не перепутал и забирает вещи из багажника тогда положим вещь в таблицу спавна spawn_to_actor и
+-- положим её в таблицу item_table
+
+	if flag == 0 and t_item.count > 0 then
+		if t_item.it_type == 0 then
+			-- разное барахло
+			t_item.count = t_item.count - 1
+			if common_items[t_item.section] then
+				item_table[common_items[t_item.section]].count = item_table[common_items[t_item.section]].count + 1
+				if spawn_to_actor[t_item.section] then
+					spawn_to_actor[t_item.section] = spawn_to_actor[t_item.section] + 1
+				else
+					spawn_to_actor[t_item.section] = 1
+				end				
+			else	
+				-- созлаём новую запись
+				local local_item_table = {
+					id = my.real_rand(32000,65500),
+					section = t_item.section,
+					condition = 100,					
+					sil = 0,
+					scope = 0,
+					gren = 0,
+					count = 1,
+					it_type = t_item.it_type
+				}	
+				local index = table.getn(item_table)+1
+				item_table[index] = local_item_table
+				common_items[t_item.section] = index
+				if spawn_to_actor[t_item.section] then
+					spawn_to_actor[t_item.section] = spawn_to_actor[t_item.section] + 1
+				else
+					spawn_to_actor[t_item.section] = 1
+				end
+			end
+		elseif t_item.it_type == 1 or t_item.it_type == 2 then
+			-- оружие, броня
+			t_item.count = t_item.count - 1
+			if t_item.it_type == 1 then
+				local local_item_table = {
+					id = t_item.id,
+					section = t_item.section,
+					condition = t_item.condition,
+					ammo_type = t_item.ammo_type,
+					ammo_e = t_item.ammo_e,						
+					sil = t_item.sil,
+					scope = t_item.scope,
+					gren = t_item.gren,
+					count = 1,
+					it_type = t_item.it_type
+				}	
+				local index = table.getn(item_table)+1
+				item_table[index] = local_item_table
+				spawn_to_actor[t_item.id] = local_item_table
+			end
+			if t_item.it_type == 2 then
+				local local_item_table = {
+					id = t_item.id,
+					section = t_item.section,
+					condition = t_item.condition,
+					sil = 0,
+					scope = 0,
+					gren = 0,
+					count = 1,
+					it_type = t_item.it_type
+				}
+				local index = table.getn(item_table)+1
+				item_table[index] = local_item_table
+				spawn_to_actor[t_item.id] = local_item_table
+			end
+		else	
+			-- патроны
+			local box_size = sys:r_u32(t_item.section, "box_size")
+			t_item.count = t_item.count - box_size
+			if common_items[t_item.section] then
+				item_table[common_items[t_item.section]].count = item_table[common_items[t_item.section]].count + box_size
+				if spawn_to_actor[t_item.section] then
+					spawn_to_actor[t_item.section] = spawn_to_actor[t_item.section] + box_size
+				else
+					spawn_to_actor[t_item.section] = box_size
+				end					
+			else
+				-- создаём новую запись
+				local local_item_table = {
+					id = my.real_rand(32000,65500),
+					section = t_item.section,
+					condition = 100,
+					sil = 0,
+					scope = 0,
+					gren = 0,
+					count = box_size,
+					it_type = 3
+				}
+				local index = table.getn(item_table)+1
+				item_table[index] = local_item_table
+				common_items[t_item.section] = index
+				if spawn_to_actor[t_item.section] then
+					spawn_to_actor[t_item.section] = spawn_to_actor[t_item.section] + box_size
+				else
+					spawn_to_actor[t_item.section] = box_size
+				end				
+			end						
+		end	
+	end
+
+
+-- Обновим список
+	
+	local list_box = self:GetListWnd("list_window")
+	local list2_box = self:GetListWnd("list2_window")
+	
+--	logf("Spawn items table:")
+--	print_table_inlog(spawn_to_actor, "SPW>")		
+	
+--	logf("Releasing items table:")
+--	print_table_inlog(release_from_actor, "REL>")	
+
+	list_box:RemoveAll()
+	self:FillList()
+	
+--	list2_box:RemoveAll()
+--	self:FillTrunk()
+
+	self:FillOneItemTrunk(item_index, index)
+
+
+end
+
+function trunk_dialog:take_all()
+
+
+	local list = self:GetListWnd("list2_window")	
+	if list:GetSize()==0 then
+		return
+	end
+	
+	local sys = system_ini()
+	
+	for i=1, 1000 do
+	
+		local t_item = trunk_items[i]
+		
+		if t_item and t_item.count > 0 then
+	
+		-- 1. Возможно игрок просто перепутал что-то и собирается вернуть назад переложенную вещь.
+		-- проверим нет ли такой вещи в таблице удаления release_from_actor. Если есть, уберём её оттуда и вернём её в
+		-- количество в таблицу item_table
+
+			local flag = 0
+
+			if t_item.it_type == 0 then
+				-- разное барахло
+				if release_from_actor[t_item.section] then
+					local z = release_from_actor[t_item.section]
+					for a=1, z do
+						release_from_actor[t_item.section] = release_from_actor[t_item.section] - 1
+						t_item.count = t_item.count - 1
+						if common_items[t_item.section] then
+							item_table[common_items[t_item.section]].count = item_table[common_items[t_item.section]].count + 1
+							if release_from_actor[t_item.section] == 0 then
+								release_from_actor[t_item.section] = nil
+							end				
+							flag = 1
+						end
+					end
+				end		
+			elseif t_item.it_type == 1 or t_item.it_type == 2 then
+				-- оружие, броня
+				if release_from_actor[t_item.id] then
+					t_item.count = 0
+					for k, v in pairs(item_table) do
+						if v.id == t_item.id then
+							v.count = v.count + 1
+							break
+						end
+					end
+					release_from_actor[t_item.id] = nil
+					flag = 1
+				end
+			else	
+				-- патроны
+				local box_size = sys:r_u32(t_item.section, "box_size")
+				if release_from_actor[t_item.section] then
+					local z = math.ceil(release_from_actor[t_item.section]/box_size)
+					for a=1, z do
+						release_from_actor[t_item.section] = release_from_actor[t_item.section] - box_size
+						t_item.count = t_item.count - box_size
+						if common_items[t_item.section] then
+							item_table[common_items[t_item.section]].count = item_table[common_items[t_item.section]].count + box_size
+							if release_from_actor[t_item.section] == 0 then
+								release_from_actor[t_item.section] = nil
+							end						
+							flag = 1
+						end		
+					end
+				end	
+			end
+
+		-- 2. Если не перепутал и забирает вещи из багажника тогда положим вещь в таблицу спавна spawn_to_actor и
+		-- положим её в таблицу item_table
+
+			if flag == 0 and t_item.count > 0 then
+				if t_item.it_type == 0 then
+					-- разное барахло
+					local z = t_item.count
+					for a=1, z do					
+						t_item.count = t_item.count - 1
+						if common_items[t_item.section] then
+							item_table[common_items[t_item.section]].count = item_table[common_items[t_item.section]].count + 1
+							if spawn_to_actor[t_item.section] then
+								spawn_to_actor[t_item.section] = spawn_to_actor[t_item.section] + 1
+							else
+								spawn_to_actor[t_item.section] = 1
+							end				
+						else	
+							-- созлаём новую запись
+							local local_item_table = {
+								id = my.real_rand(32000,65500),
+								section = t_item.section,
+								condition = 100,					
+								sil = 0,
+								scope = 0,
+								gren = 0,
+								count = 1,
+								it_type = t_item.it_type
+							}	
+							local index = table.getn(item_table)+1
+							item_table[index] = local_item_table
+							common_items[t_item.section] = index
+							if spawn_to_actor[t_item.section] then
+								spawn_to_actor[t_item.section] = spawn_to_actor[t_item.section] + 1
+							else
+								spawn_to_actor[t_item.section] = 1
+							end
+						end
+					end
+				elseif t_item.it_type == 1 or t_item.it_type == 2 then
+					-- оружие, броня
+					t_item.count = t_item.count - 1
+					if t_item.it_type == 1 then
+						local local_item_table = {
+							id = t_item.id,
+							section = t_item.section,
+							condition = t_item.condition,
+							ammo_type = t_item.ammo_type,
+							ammo_e = t_item.ammo_e,						
+							sil = t_item.sil,
+							scope = t_item.scope,
+							gren = t_item.gren,
+							count = 1,
+							it_type = t_item.it_type
+						}	
+						local index = table.getn(item_table)+1
+						item_table[index] = local_item_table
+						spawn_to_actor[t_item.id] = local_item_table
+					end
+					if t_item.it_type == 2 then
+						local local_item_table = {
+							id = t_item.id,
+							section = t_item.section,
+							condition = t_item.condition,
+							sil = 0,
+							scope = 0,
+							gren = 0,
+							count = 1,
+							it_type = t_item.it_type
+						}
+						local index = table.getn(item_table)+1
+						item_table[index] = local_item_table
+						spawn_to_actor[t_item.id] = local_item_table
+					end
+				else	
+					-- патроны
+					local box_size = sys:r_u32(t_item.section, "box_size")
+					local z = math.ceil(t_item.count/box_size)
+					for a=1, z do						
+						t_item.count = t_item.count - box_size
+						if common_items[t_item.section] then
+							item_table[common_items[t_item.section]].count = item_table[common_items[t_item.section]].count + box_size
+							if spawn_to_actor[t_item.section] then
+								spawn_to_actor[t_item.section] = spawn_to_actor[t_item.section] + box_size
+							else
+								spawn_to_actor[t_item.section] = box_size
+							end					
+						else
+							-- создаём новую запись
+							local local_item_table = {
+								id = my.real_rand(32000,65500),
+								section = t_item.section,
+								condition = 100,
+								sil = 0,
+								scope = 0,
+								gren = 0,
+								count = box_size,
+								it_type = 3
+							}
+							local index = table.getn(item_table)+1
+							item_table[index] = local_item_table
+							common_items[t_item.section] = index
+							if spawn_to_actor[t_item.section] then
+								spawn_to_actor[t_item.section] = spawn_to_actor[t_item.section] + box_size
+							else
+								spawn_to_actor[t_item.section] = box_size
+							end				
+						end
+					end
+				end	
+			end
+		
+		end
+
+	end
+
+-- Обновим список
+	
+	local list_box = self:GetListWnd("list_window")
+	local list2_box = self:GetListWnd("list2_window")
+	
+--	logf("Spawn items table:")
+--	print_table_inlog(spawn_to_actor, "SPW>")		
+	
+--	logf("Releasing items table:")
+--	print_table_inlog(release_from_actor, "REL>")	
+
+	list_box:RemoveAll()
+	self:FillList()
+	
+	list2_box:RemoveAll()
+	self:FillTrunk()
+
+end
+
+function trunk_dialog:select_prev()
+
+	local console = get_console()
+	local list = self:GetListWnd("list_window")	
+	if list:GetSize()==0 then
+		return
+	end
+
+	-- logf("Button Pressed")
+	
+	local index = list:GetSelectedItem()
+	if index == -1 then
+		self.msgbox_id = 1
+		self.message_box:Init("message_box_trunk_item")
+		self:GetHolder():start_stop_menu(self.message_box, true)
+		return
+	end
+	
+	if index == 0 then
+		return
+	end
+	
+	list:ScrollToPos(index-1)
+	
+	-- list:SetFocusedItem(index-1)
+	-- list:SetFocusedItem(index-1)
+
+end
+
+function trunk_dialog:select_next()
+
+	local console = get_console()
+	local list = self:GetListWnd("list_window")	
+	if list:GetSize()==0 then
+		return
+	end
+
+	-- logf("Button Pressed")
+	
+	local index = list:GetSelectedItem()
+	if index == -1 then
+		self.msgbox_id = 1
+		self.message_box:Init("message_box_trunk_item")
+		self:GetHolder():start_stop_menu(self.message_box, true)
+		return
+	end
+	
+	local Max = list:GetSize()
+	
+	if index == Max then
+		return
+	end
+
+	list:ScrollToPos(index+1)
+	
+	-- list:SetFocusedItem(index+1)
+	-- list:SetFocusedItem(index+1)
+
+end
+
+function trunk_dialog:OnKeyboard(dik, keyboard_action)
+	CUIScriptWnd.OnKeyboard(self,dik,keyboard_action)
+	if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+		-- на выход повесим Esc или Tab
+		if dik == DIK_keys.DIK_ESCAPE then
+			self:on_quit()
+		end	
+		if dik == DIK_keys.DIK_TAB then
+			self:on_quit()
+		end			
+		--- кнопки вправо
+		if dik == DIK_keys.DIK_NUMPAD4 then
+			self:trunk_btn()
+		end
+		if dik == DIK_keys.DIK_RIGHT then
+			self:trunk_btn()
+		end
+		if dik == DIK_keys.DIK_D then
+			self:trunk_btn()
+		end		
+		-- кнопки влево
+		if dik == DIK_keys.DIK_NUMPAD6 then
+			self:take_btn()
+		end	
+		if dik == DIK_keys.DIK_LEFT then
+			self:take_btn()
+		end	
+		if dik == DIK_keys.DIK_A then
+			self:take_btn()
+		end			
+		-- -- кнопки вверх
+		-- if dik == DIK_keys.DIK_NUMPAD8 then
+			-- self:select_prev()
+		-- end	
+		-- if dik == DIK_keys.DIK_UP then
+			-- self:select_prev()
+		-- end		
+		-- if dik == DIK_keys.DIK_W then
+			-- self:select_prev()
+		-- end			
+		-- -- кнопки вниз
+		-- if dik == DIK_keys.DIK_NUMPAD2 then
+			-- self:select_next()
+		-- end	
+		-- if dik == DIK_keys.DIK_DOWN then
+			-- self:select_next()
+		-- end		
+		-- if dik == DIK_keys.DIK_S then
+			-- self:select_next()
+		-- end			
+	end
+	return true
+end
+
+
+function trunk_dialog:on_quit()
+	
+	repaired_item = 0
+	item_table_index = 0
+	item_table = {}
+	common_items = {}
+	common_items_trunk = {}	
+	
+-- 1. Запишем таблицу trunk_items в кастомдату машины
+	
+	save_trunk()
+
+-- 2. Удалим вещи из инвентаря ГГ по таблице release_from_actor
+
+	if everything_ok == 1 then
+
+	release_actor_items()
+
+-- 3. Заспавним актору вещи из таблицы spawn_to_actor
+
+	spawn_actor_items()
+
+-- 4. Очистим все таблицы
+	
+	my.start_timer("car",0.5)
+	
+	end
+	
+	self:GetHolder():start_stop_menu (self,true)
+end
+
+
+function trunk_dialog:AddItemToList(item_num, item_name, item_cond)
+-- -- amk.logf("Пытаемся добавить строку списка:")
+	local _itm = select_actor_items()
+	
+-- -- amk.logf("Передача индекса..." .. item_num)
+	_itm.itmnum:SetText (item_num)
+-- -- amk.logf("Передача имени..." .. item_name)
+	_itm.itmn:SetText (item_name)
+-- -- amk.logf("Передача кондиции..." .. item_cond)
+	_itm.itmage:SetText (item_cond)
+	
+-- -- amk.logf("Получаем доступ к полю списка...")
+	local list_box = self:GetListWnd("list_window")
+-- -- amk.logf("Добавление строки...")
+	list_box:AddItem (_itm)
+-- -- amk.logf("Строка списка добавлена")
+end
+
+function trunk_dialog:AddItemToTrunk(cnt, item)
+
+	local list = self:GetListWnd("list2_window")	
+
+	local s_item_section = item.section
+	local item_num = ""..cnt..""
+	local item_name = ""
+		
+	if string.find(s_item_section, "af_") then
+		item_name = game.translate_string(get_inv_name(s_item_section))
+	else
+		item_name = game.translate_string(get_inv_name_short(s_item_section))
+	end
+	
+	local item_in_slot_1 = db.actor:item_in_slot(1)
+	local item_in_slot_2 = db.actor:item_in_slot(2)
+	local item_in_slot_6 = db.actor:item_in_slot(6)
+	
+	if item_in_slot_1 then
+		item_in_slot_1 = item_in_slot_1:id()
+	else	
+		item_in_slot_1 = 0 
+	end
+	
+	if item_in_slot_2 then
+		item_in_slot_2 = item_in_slot_2:id()
+	else	
+		item_in_slot_2 = 0 
+	end
+
+	if item_in_slot_6 then
+		item_in_slot_6 = item_in_slot_6:id()
+	else	
+		item_in_slot_6 = 0 
+	end		
+		
+	if item.id then
+		if item.id == item_in_slot_1 
+		or item.id == item_in_slot_2 then
+			item_name = item_name.." (было в руках)"
+		elseif item.id == item_in_slot_6 then
+			item_name = item_name.." (был одет)"
+		end
+	end
+	
+	local item_cond = "--"
+	
+	if item.it_type == 0 then
+		item_cond = item.count
+	elseif item.it_type == 1 or item.it_type == 2 then
+		item_cond = "["..tostring(math.ceil(item.condition*100)).."%]"
+		string.format("%.1f", item.condition)
+	else	
+		item_cond = item.count
+	end
+
+-- -- amk.logf("Пытаемся добавить строку списка:")
+	local _itm = select_actor_items()
+	
+-- -- amk.logf("Передача индекса..." .. item_num)
+	_itm.itmnum:SetText (item_num)
+-- -- amk.logf("Передача имени..." .. item_name)
+	_itm.itmn:SetText (item_name)
+-- -- amk.logf("Передача кондиции..." .. item_cond)
+	_itm.itmage:SetText (item_cond)
+	
+-- -- amk.logf("Получаем доступ к полю списка...")
+	local list_box = self:GetListWnd("list2_window")
+-- -- amk.logf("Добавление строки...")
+	list_box:AddItem (_itm)
+-- -- amk.logf("Строка списка добавлена")
+end
+
+
+function get_inv_name_short(section)
+	return system_ini():r_string(section,"inv_name_short")
+end
+
+function get_inv_name(section)
+	return system_ini():r_string(section,"inv_name")
+end
+
+--Функции для записи информации в пакет машины
+function save_trunk()
+
+	everything_ok = 0
+
+	local car = car_trade.current_trunk
+
+	if not car or not trunk_items then 
+		logf("ERROR - CAR NOT FOUND!")
+		my.start_timer("cr2",1)
+		return 
+	end
+	
+	local sobj = alife():object(car)
+	
+	if not sobj then 
+		logf("ERROR - CAR_S NOT FOUND!")
+		my.start_timer("cr2",1)
+		return 
+	end	
+	
+	local trunk_clean = {}
+	
+	for k,v in pairs(trunk_items) do
+		if v.count <= 0 then
+			trunk_items[k] = nil
+		end
+	end
+	
+	local index = 1
+	for k,v in pairs(trunk_items) do
+		trunk_clean[index] = v
+		index = index + 1
+	end	
+	
+	local trunk_data = {}
+	for k,v in pairs(trunk_clean) do
+	--	logf("KEY is "..tostring(k))
+		local key = k
+		for a, d in pairs(v) do
+	--		logf("ADV is "..tostring(a))
+	--		logf("DEV is "..tostring(d))
+			local key = tostring(key).."_"..tostring(a)
+			trunk_data[key] = d
+		end
+	end	
+	
+	if sobj then
+
+		local car_data = m_net_utils.get_car_data(sobj)
+		local custom_data = m_net_utils.parse_custom_data(car_data.custom)
+		custom_data.trunk = trunk_data
+		car_data.custom = m_net_utils.gen_custom_data(custom_data)
+		m_net_utils.set_car_data(car_data, sobj)
+		-- logf("CAR TRUNK SYNCHRONIZED!")
+	
+	end
+
+	trunk_items = {}
+	everything_ok = 1
+	
+end
+
+function load_trunk(car)
+
+	if not car then return end
+	local sobj = alife():object(car)
+	
+	if sobj then
+	
+		local car_data = m_net_utils.get_car_data(sobj)
+		local custom_data = m_net_utils.parse_custom_data(car_data.custom)	
+		
+		if custom_data.trunk then
+			-- logf("CAR TRUNK FOUND!")
+			return custom_data.trunk
+		else	
+			return nil
+		end
+	
+	end	
+
+end
+
+function emergency()
+	save_trunk()
+	if everything_ok == 1 then
+		release_actor_items()
+		spawn_actor_items()
+		my.start_timer("car",0.5)
+	end	
+end
+
+--Функции обработки инвентаря игрока
+function release_actor_items()
+	for k, v in pairs(release_from_actor) do
+		release_from_actor[k] = tonumber(v)
+	end
+	for k, v in pairs(release_from_actor) do
+		if string.find(tostring(k), "ammo_") then
+			local sys = system_ini()
+			local box_size = sys:r_u32(k, "box_size")
+			release_from_actor[k] = math.ceil(v/box_size)
+		end		
+	end
+	
+	db.actor:iterate_inventory(iterate_deletion, db.actor)
+	release_from_actor = {}
+end
+
+function iterate_deletion(npc, item)
+	if not item then lofg("NO ITEM") return end
+	local item_id = item:id()
+	local section = item:section()
+	if string.find(section, "ammo_") then
+		local ammo_box = system_ini():r_u32(section, "box_size")
+		local elapsed = dunin_ammo.get_ammo_size(item)
+		if ammo_box and elapsed < ammo_box then
+			return false
+		end
+	end
+	if release_from_actor[item_id] then
+--		logf("REL_ID "..tostring(item_id))
+		local s_obj = alife():object(item_id)
+		if s_obj then
+			alife():release(s_obj, true)
+			release_from_actor[item_id] = nil
+--			logf("REL SUCCESS")
+		end
+	end
+	if release_from_actor[section] and release_from_actor[section] > 0 then
+--		logf("REL_SEC "..tostring(section))
+		release_from_actor[section] = release_from_actor[section] - 1
+		if release_from_actor[section] <= 0 then
+			release_from_actor[section] = nil
+		end
+		local s_obj = alife():object(item_id)
+		if s_obj then
+			alife():release(s_obj, true)
+--			logf("REL SUCCESS")
+		end
+	end
+end
+
+function spawn_actor_items()
+	for k, v in pairs(spawn_to_actor) do
+		if type(k) == "string" then
+			spawn_to_actor[k] = tonumber(v)
+		end
+	end
+	for k, v in pairs(spawn_to_actor) do
+		if string.find(tostring(k), "ammo_") then
+			local sys = system_ini()
+			local box_size = sys:r_u32(k, "box_size")
+			spawn_to_actor[k] = math.ceil(v/box_size)
+		end		
+	end	
+	for k,v in pairs(spawn_to_actor) do
+		if type(k) == "number" then
+			local car = level.object_by_id(car_trade.current_trunk)
+			if not car then car = db.actor end
+			local pos = car:position()
+			pos.x = pos.x + 3
+			pos.z = pos.z + 3
+			local s_obj = alife():create(v.section, pos, car:level_vertex_id(), car:game_vertex_id())
+			if s_obj then
+				if string.find(v.section, "wpn_") then
+					local cur_weapon_data = m_net_utils.get_weapon_data(s_obj)
+					local addon_flag = cur_weapon_data.addon_flags or 0		
+					
+					if v.scope == 1 then
+						-- пишем прицел
+						addon_flag = addon_flag + 1				
+					end		
+
+					if v.sil == 1 then
+						-- пишем глушитель
+						addon_flag = addon_flag + 4
+					end				
+
+					if v.gren == 1 then
+						-- пишем подстволник			
+						addon_flag = addon_flag + 2
+					end
+					
+					cur_weapon_data.addon_flags = addon_flag
+					cur_weapon_data.ammo_elapsed = v.ammo_e
+					cur_weapon_data.ammo_type = v.ammo_type
+					
+					
+					
+					m_net_utils.set_weapon_data(cur_weapon_data, s_obj)					
+				end
+				spawn_to_actor[k].id = s_obj.id
+			end
+		else
+			local count = v
+			for i=1,count do
+				my.spawn_item_in_inv(k)
+			end
+			spawn_to_actor[k] = nil
+		end
+	end
+end
+
+function post_working()
+	for k,v in pairs(spawn_to_actor) do
+		local obj = level.object_by_id(v.id)
+		if obj then
+			obj:set_condition(tonumber(v.condition))
+			db.actor:transfer_item(obj, db.actor)
+		end
+		if isWeapon(obj) then
+			db.actor:transfer_item(obj, db.actor)			
+		end
+	end	
+	spawn_to_actor = {}
+	-- logf("POST")
+	my.start_timer("cr1",5)
+end
+
+--Рисуем ремонтируемый предмет
+function trunk_dialog:DrawCurItem(de_item, x, y)
+
+if x == nil then x = 0 end
+if y == nil then y = 0 end
+
+	local di_section = de_item.section
+
+	local scope = 0
+	local launcher = 0
+	local silence = 0
+
+	local sect_addon
+	local xa,ya,wa,ha
+	local x_g,y_g,x_sco,y_sco,x_sil,y_sil
+	local isGrenade=false
+	local isScope=false
+	local isSilencer=false
+	
+	local a = self.cur_rem_textur
+	local sys = system_ini()
+	if not a then
+		self.cur_rem_textur = CUIStatic()
+		a = self.cur_rem_textur
+		a:SetWindowName("cur_rem_textur")
+		a:SetAutoDelete(true)	
+		a:InitTexture("ui\\ui_icon_equipment")	 
+		a:SetStretchTexture(true)
+		self:AttachChild(a)
+	end
+	
+	if de_item then
+	
+		tx = get_x(de_item.section)
+		ty = get_y(de_item.section)
+		tw = get_w(de_item.section)
+		th = get_h(de_item.section)
+		
+		tx=tx*50
+		ty=ty*50
+		tw=tw*50
+		th=th*50
+
+		x = x-(tw/4)
+		y = y-(th/4)
+
+		a:SetOriginalRect(tx,ty,tw,th)
+		a:Init(x,y,tw/2,th/2)
+
+		--Рисуем подствольник
+		if de_item.gren == 1 then
+			isGrenade=true
+			sect_addon=sys:r_string(di_section,"grenade_launcher_name")
+			x_g=x+(sys:r_u32(di_section, "grenade_launcher_x")/2)
+			y_g=y+(sys:r_u32(di_section, "grenade_launcher_y")/2)
+			xa=sys:r_u32(sect_addon, "inv_grid_x")*50
+			ya=sys:r_u32(sect_addon, "inv_grid_y")*50
+			wa=sys:r_u32(sect_addon, "inv_grid_width")*50
+			ha=sys:r_u32(sect_addon, "inv_grid_height")*50
+			
+			local b = self.grenade_rem_textur	 
+			
+			 if not b then
+				self.grenade_rem_textur=CUIStatic()
+				b = self.grenade_rem_textur
+				b:SetWindowName("grenade_rem_textur")
+				b:SetAutoDelete(true)	
+				b:InitTexture("ui\\ui_icon_equipment")	 
+				b:SetStretchTexture(true)
+				self:AttachChild(b)
+			 end
+			 
+			b:SetOriginalRect(xa,ya,wa,ha)
+			b:Init(x_g,y_g,wa/2,ha/2)
+		end
+
+		 --Рисуем оптический прицел
+		if de_item.scope == 1 then
+			isScope=true
+			sect_addon=sys:r_string(di_section,"scope_name")
+			x_sco=x+(sys:r_u32(di_section, "scope_x")/2)
+			y_sco=y+(sys:r_u32(di_section, "scope_y")/2)
+			xa=sys:r_u32(sect_addon, "inv_grid_x")*50
+			ya=sys:r_u32(sect_addon, "inv_grid_y")*50
+			wa=sys:r_u32(sect_addon, "inv_grid_width")*50
+			ha=sys:r_u32(sect_addon, "inv_grid_height")*50
+			
+			local b = self.scope_rem_textur	 
+			
+			 if not b then
+				self.scope_rem_textur =CUIStatic()
+				b = self.scope_rem_textur 
+				b:SetWindowName("scope_rem_textur ")
+				b:SetAutoDelete(true)	
+				b:InitTexture("ui\\ui_icon_equipment")	 
+				b:SetStretchTexture(true)
+				self:AttachChild(b)
+			 end
+			 
+			b:SetOriginalRect(xa,ya,wa,ha)
+			b:Init(x_sco,y_sco,wa/2,ha/2)		
+		end
+
+		--Рисуем глушитель
+		if de_item.sil == 1 then 	
+			isSilencer=true
+			sect_addon=sys:r_string(di_section,"silencer_name")
+			x_sil=x+(sys:r_u32(di_section, "silencer_x")/2)
+			y_sil=y+(sys:r_u32(di_section, "silencer_y")/2)
+			xa=sys:r_u32(sect_addon, "inv_grid_x")*50
+			ya=sys:r_u32(sect_addon, "inv_grid_y")*50
+			wa=sys:r_u32(sect_addon, "inv_grid_width")*50
+			ha=sys:r_u32(sect_addon, "inv_grid_height")*50
+			
+		 local b = self.silencer_rem_textur	 
+			
+			 if not b then
+				self.silencer_rem_textur=CUIStatic()
+				b = self.silencer_rem_textur
+				b:SetWindowName("silencer_rem_textur")
+				b:SetAutoDelete(true)	
+				b:InitTexture("ui\\ui_icon_equipment")	 
+				b:SetStretchTexture(true)
+				self:AttachChild(b)
+			 end
+			 
+			b:SetOriginalRect(xa,ya,wa,ha)
+			b:Init(x_sil,y_sil,wa/2,ha/2)
+		end
+
+	else
+		a:Init(0,0,0,0)
+	end	
+	
+	local d1 = self.grenade_rem_textur
+	local d2 = self.scope_rem_textur
+	local d3 = self.silencer_rem_textur
+	
+	if d1 and not isGrenade	then
+	d1:Init(0,0,0,0)
+	end
+
+	if d2 and not isScope	then
+	d2:Init(0,0,0,0)
+	end
+	
+	if d3 and not isSilencer	then
+	d3:Init(0,0,0,0)
+	end
+
+end
+
+--Полоска состояния оружия, которое разбираем
+function trunk_dialog:DrawConditionBar(de_item, x, y)
+
+if x == nil then x = 0 end
+if y == nil then y = 0 end
+local cond_rem_bar_width = 0
+	if de_item then
+		cond_rem_bar_width = (math.floor(de_item.condition*100)*1.1)
+		x = x - 55--(cond_rem_bar_width/2)
+		local c=self.cond_rem_bar
+		if not c then
+			self.cond_rem_bar = CUIStatic()
+			c = self.cond_rem_bar
+			c:SetWindowName("cond_rem_bar")
+			c:SetAutoDelete(true)
+			c:InitTexture("ui\\ui_hud")
+			c:SetOriginalRect(347,207,110,10)   
+			c:SetStretchTexture(true)
+			self:AttachChild(c) 
+		end
+		if cond_rem_bar_width > 109 then
+			cond_rem_bar_width = 109
+		elseif cond_rem_bar_width <= 0 then 
+			cond_rem_bar_width = 1 
+		end
+		c:SetOriginalRect(346+cond_rem_bar_width,207,1,10)   
+		c:Init(x,y,cond_rem_bar_width,10)
+	else
+		local c = self.cond_rem_bar
+		c:Init(0,0,0,0)
+	end
+end
+
+--Название предмета, который разбираем
+function trunk_dialog:DrawCurItemName(de_item, x, y)
+
+if x == nil then x = 0 end
+if y == nil then y = 0 end
+	local w = self.item_name_rem
+	if not w then
+	self.item_name_rem = CUI3tButton()
+    w = self.item_name_rem
+    w:SetWindowName("item_name_rem")
+    w:SetAutoDelete(true)
+    self:AttachChild(w) 
+	end
+	if de_item then
+	w:SetFont(GetFontLetterica16Russian())
+	w:SetTextColor (95,255,255,255)
+	w:SetText(de_item)
+	w:Init(x-100,y,200,10)
+	else
+	w:SetText("")
+	w:Init(0,0,0,0)
+	end
+end
+
+--Рисуем ремонтируемый предмет
+function trunk_dialog:DrawCurItem2(de_item, x, y)
+
+if x == nil then x = 0 end
+if y == nil then y = 0 end
+
+	local di_section = de_item.section
+
+	local scope = 0
+	local launcher = 0
+	local silence = 0
+
+	local sect_addon
+	local xa,ya,wa,ha
+	local x_g,y_g,x_sco,y_sco,x_sil,y_sil
+	local isGrenade=false
+	local isScope=false
+	local isSilencer=false
+	
+	local a = self.cur_rem_textur2
+	local sys = system_ini()
+	if not a then
+		self.cur_rem_textur2 = CUIStatic()
+		a = self.cur_rem_textur2
+		a:SetWindowName("cur_rem_textur2")
+		a:SetAutoDelete(true)	
+		a:InitTexture("ui\\ui_icon_equipment")	 
+		a:SetStretchTexture(true)
+		self:AttachChild(a)
+	end
+	
+	if de_item then
+	
+		tx = get_x(de_item.section)
+		ty = get_y(de_item.section)
+		tw = get_w(de_item.section)
+		th = get_h(de_item.section)
+		
+		tx=tx*50
+		ty=ty*50
+		tw=tw*50
+		th=th*50
+
+		x = x-(tw/4)
+		y = y-(th/4)
+
+		a:SetOriginalRect(tx,ty,tw,th)
+		a:Init(x,y,tw/2,th/2)
+
+		--Рисуем подствольник
+		if de_item.gren == 1 then
+			isGrenade=true
+			sect_addon=sys:r_string(di_section,"grenade_launcher_name")
+			x_g=x+(sys:r_u32(di_section, "grenade_launcher_x")/2)
+			y_g=y+(sys:r_u32(di_section, "grenade_launcher_y")/2)
+			xa=sys:r_u32(sect_addon, "inv_grid_x")*50
+			ya=sys:r_u32(sect_addon, "inv_grid_y")*50
+			wa=sys:r_u32(sect_addon, "inv_grid_width")*50
+			ha=sys:r_u32(sect_addon, "inv_grid_height")*50
+			
+			local b = self.grenade_rem_textur2	 
+			
+			 if not b then
+				self.grenade_rem_textur2=CUIStatic()
+				b = self.grenade_rem_textur2
+				b:SetWindowName("grenade_rem_textur2")
+				b:SetAutoDelete(true)	
+				b:InitTexture("ui\\ui_icon_equipment")	 
+				b:SetStretchTexture(true)
+				self:AttachChild(b)
+			 end
+			 
+			b:SetOriginalRect(xa,ya,wa,ha)
+			b:Init(x_g,y_g,wa/2,ha/2)
+		end
+
+		 --Рисуем оптический прицел
+		if de_item.scope == 1 then
+			isScope=true
+			sect_addon=sys:r_string(di_section,"scope_name")
+			x_sco=x+(sys:r_u32(di_section, "scope_x")/2)
+			y_sco=y+(sys:r_u32(di_section, "scope_y")/2)
+			xa=sys:r_u32(sect_addon, "inv_grid_x")*50
+			ya=sys:r_u32(sect_addon, "inv_grid_y")*50
+			wa=sys:r_u32(sect_addon, "inv_grid_width")*50
+			ha=sys:r_u32(sect_addon, "inv_grid_height")*50
+			
+			local b = self.scope_rem_textur2	 
+			
+			 if not b then
+				self.scope_rem_textur2 =CUIStatic()
+				b = self.scope_rem_textur2 
+				b:SetWindowName("scope_rem_textur2")
+				b:SetAutoDelete(true)	
+				b:InitTexture("ui\\ui_icon_equipment")	 
+				b:SetStretchTexture(true)
+				self:AttachChild(b)
+			 end
+			 
+			b:SetOriginalRect(xa,ya,wa,ha)
+			b:Init(x_sco,y_sco,wa/2,ha/2)		
+		end
+
+		--Рисуем глушитель
+		if de_item.sil == 1 then 	
+			isSilencer=true
+			sect_addon=sys:r_string(di_section,"silencer_name")
+			x_sil=x+(sys:r_u32(di_section, "silencer_x")/2)
+			y_sil=y+(sys:r_u32(di_section, "silencer_y")/2)
+			xa=sys:r_u32(sect_addon, "inv_grid_x")*50
+			ya=sys:r_u32(sect_addon, "inv_grid_y")*50
+			wa=sys:r_u32(sect_addon, "inv_grid_width")*50
+			ha=sys:r_u32(sect_addon, "inv_grid_height")*50
+			
+		 local b = self.silencer_rem_textur2	 
+			
+			 if not b then
+				self.silencer_rem_textur2=CUIStatic()
+				b = self.silencer_rem_textur2
+				b:SetWindowName("silencer_rem_textur2")
+				b:SetAutoDelete(true)	
+				b:InitTexture("ui\\ui_icon_equipment")	 
+				b:SetStretchTexture(true)
+				self:AttachChild(b)
+			 end
+			 
+			b:SetOriginalRect(xa,ya,wa,ha)
+			b:Init(x_sil,y_sil,wa/2,ha/2)
+		end
+
+	else
+		a:Init(0,0,0,0)
+	end	
+	
+	local d1 = self.grenade_rem_textur2
+	local d2 = self.scope_rem_textur2
+	local d3 = self.silencer_rem_textur2
+	
+	if d1 and not isGrenade	then
+	d1:Init(0,0,0,0)
+	end
+
+	if d2 and not isScope	then
+	d2:Init(0,0,0,0)
+	end
+	
+	if d3 and not isSilencer	then
+	d3:Init(0,0,0,0)
+	end
+
+end
+
+--Полоска состояния оружия, которое разбираем
+function trunk_dialog:DrawConditionBar2(de_item, x, y)
+
+if x == nil then x = 0 end
+if y == nil then y = 0 end
+local cond_rem_bar_width = 0
+	if de_item then
+		local cond = 100
+		if de_item.condition then
+			cond = de_item.condition
+		end
+		cond_rem_bar_width = (math.floor(cond*100)*1.1)
+		x = x - 55--(cond_rem_bar_width/2)
+		local c=self.cond_rem_bar2
+		if not c then
+			self.cond_rem_bar2 = CUIStatic()
+			c = self.cond_rem_bar2
+			c:SetWindowName("cond_rem_bar2")
+			c:SetAutoDelete(true)
+			c:InitTexture("ui\\ui_hud")
+			c:SetOriginalRect(347,207,110,10)   
+			c:SetStretchTexture(true)
+			self:AttachChild(c) 
+		end
+		if cond_rem_bar_width > 109 then
+			cond_rem_bar_width = 109
+		elseif cond_rem_bar_width <= 0 then 
+			cond_rem_bar_width = 1 
+		end
+		c:SetOriginalRect(346+cond_rem_bar_width,207,1,10)   
+		c:Init(x,y,cond_rem_bar_width,10)
+	else
+		local c = self.cond_rem_bar2
+		c:Init(0,0,0,0)
+	end
+end
+
+--Название предмета, который разбираем
+function trunk_dialog:DrawCurItemName2(de_item, x, y)
+
+if x == nil then x = 0 end
+if y == nil then y = 0 end
+	local w = self.item_name_rem2
+	if not w then
+	self.item_name_rem2 = CUI3tButton()
+    w = self.item_name_rem2
+    w:SetWindowName("item_name_rem2")
+    w:SetAutoDelete(true)
+    self:AttachChild(w) 
+	end
+	if de_item then
+	w:SetFont(GetFontLetterica16Russian())
+	w:SetTextColor (95,255,255,255)
+	w:SetText(de_item)
+	w:Init(x-100,y,200,10)
+	else
+	w:SetText("")
+	w:Init(0,0,0,0)
+	end
+end
+
+
+function trunk_dialog:DrawWeightLimith(insert_text, x, y)
+
+if x == nil then x = 0 end
+if y == nil then y = 0 end
+	local w = self.weightlim
+	if not w then
+	self.weightlim = CUI3tButton()
+    w = self.weightlim
+    w:SetWindowName("weightlim")
+    w:SetAutoDelete(true)
+    self:AttachChild(w) 
+	end
+	if insert_text then
+	w:SetFont(GetFontLetterica16Russian())
+	w:SetTextColor (255,255,255,255)
+	w:SetText(string.format("%.2f", insert_text).." кг")
+	w:Init(x-100,y,200,10)
+	w:SetTextAlign(CGameFont.alLeft)
+	else
+	w:SetText("")
+	w:Init(0,0,0,0)
+	end
+end
+
+function trunk_dialog:DrawCargoWeight(insert_text, x, y)
+
+if x == nil then x = 0 end
+if y == nil then y = 0 end
+	local w = self.cargo
+	if not w then
+	self.cargo = CUI3tButton()
+    w = self.cargo
+    w:SetWindowName("cargo")
+    w:SetAutoDelete(true)
+    self:AttachChild(w) 
+	end
+	if insert_text then
+	w:SetFont(GetFontLetterica16Russian())
+	w:SetTextColor (255,255,255,255)
+	w:SetText(string.format("%.2f", insert_text).." кг")
+	w:Init(x-100,y,200,10)
+	w:SetTextAlign(CGameFont.alLeft)
+	else
+	w:SetText("")
+	w:Init(0,0,0,0)
+	end
+end
+
+function trunk_dialog:DrawPackWeight(insert_text, x, y)
+
+if x == nil then x = 0 end
+if y == nil then y = 0 end
+	local w = self.cargopack
+	if not w then
+	self.cargopack = CUI3tButton()
+    w = self.cargopack
+    w:SetWindowName("cargopack")
+    w:SetAutoDelete(true)
+    self:AttachChild(w) 
+	end
+	if insert_text then
+	w:SetFont(GetFontLetterica16Russian())
+	w:SetTextColor (255,255,255,255)
+	w:SetText(string.format("%.2f", insert_text).." кг")
+	w:Init(x-100,y,200,10)
+	w:SetTextAlign(CGameFont.alLeft)
+	w:Show(true)
+	else
+	w:SetText("")
+	w:Init(0,0,0,0)
+	end
+end
+
+function trunk_dialog:DrawCurrentWeight(insert_text, x, y)
+
+if x == nil then x = 0 end
+if y == nil then y = 0 end
+	local w = self.curweight
+	if not w then
+	self.curweight = CUI3tButton()
+    w = self.curweight
+    w:SetWindowName("curweight")
+    w:SetAutoDelete(true)
+    self:AttachChild(w) 
+	end
+	if insert_text then
+	w:SetFont(GetFontLetterica16Russian())
+	w:SetTextColor (255,255,255,255)
+	w:SetText(string.format("%.2f", insert_text).." кг")
+	w:Init(x-100,y,200,10)
+	w:SetTextAlign(CGameFont.alLeft)
+	else
+	w:SetText("")
+	w:Init(0,0,0,0)
+	end
+end
+
+
+
+function trunk_dialog:OnMsgYes()
+
+	if self.msgbox_id == 1 then return
+	end
+	
+	self.msgbox_id = 0
+end
+
+function get_x(item)
+	local ini = system_ini()
+	tx = ini:r_u32(item, "inv_grid_x")
+	return tx
+end
+
+function get_y(item)
+	local ini = system_ini()
+    ty = ini:r_u32(item, "inv_grid_y")
+	return ty
+end
+
+function get_w(item)
+	local ini = system_ini()
+	tw = ini:r_u32(item, "inv_grid_width")
+	return tw
+end
+
+function get_h(item)
+	local ini = system_ini()
+    th = ini:r_u32(item, "inv_grid_height")
+	return th
+end
+
+-----------------------------------------------------------------------
+--- trunk_inv.script
+--- Интерфейс для работы с багажником
+--- KamikaZze, OGS Evolution Team 2010
+--- version 1.0
+-----------------------------------------------------------------------

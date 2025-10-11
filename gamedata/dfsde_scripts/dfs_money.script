@@ -1,0 +1,74 @@
+
+function sidor_money_1(npc,actor)
+	dialogs.relocate_money(npc, 1000, "in")
+end
+
+function borman_money_1(npc,actor)
+	dialogs.relocate_money(npc, 100000, "in")
+end
+
+function nax_5000_money(npc,actor)
+	dialogs.relocate_money(actor, 5000, "out")
+end
+
+function get_45000_money(npc,actor)
+	dialogs.relocate_money(npc, 45000, "in")
+end
+
+function get_30000_money(npc,actor)
+	dialogs.relocate_money(npc, 30000, "in")
+end
+
+function get_90000_money(npc,actor)
+	dialogs.relocate_money(npc, 90000, "in")
+end
+
+function get_150t(npc,actor)
+	dialogs.relocate_money(npc, 150000, "in")
+end
+
+function get_41000_money(npc,actor)
+	dialogs.relocate_money(npc, 41000, "in")
+end
+
+
+
+
+
+
+function get_2000_money(npc,actor)
+	dialogs.relocate_money(npc, 2000, "in")
+end
+
+function get_5000_money(npc,actor)
+	dialogs.relocate_money(npc, 5000, "in")
+end
+
+function get_10000_money(npc,actor)
+	dialogs.relocate_money(npc, 10000, "in")
+end
+
+function get_50000_money(npc,actor)
+	dialogs.relocate_money(npc, 50000, "in")
+end
+
+function get_500_money(npc,actor)
+	dialogs.relocate_money(npc, 500, "in")
+end
+
+function get_250t_money(npc,actor)
+	dialogs.relocate_money(npc, 250000, "in")
+end
+
+
+
+
+
+--[[function _money(npc,actor)
+	dialogs.relocate_money(npc, 000, "in")
+end
+
+function _money(npc,actor)
+	dialogs.relocate_money(actor, 000, "out")
+end]]
+
