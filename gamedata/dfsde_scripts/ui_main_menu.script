@@ -10,18 +10,43 @@ function main_menu:__init() super()
 	self.mbox_mode = 0
    self:InitControls()
    self:InitCallBacks()
+   self:MakeBG()
 end
 
 function main_menu:__finalize()
-
 end
+
+--
+-- NLC Improved (11.10.2025)
+--
+
+function main_menu:MakeBG()
+    local f       = getFS()
+    local flist   = f:file_list_open_ex( "$game_saves$", FS.FS_ListFiles + FS.FS_ClampExt + FS.FS_RootOnly + FS.FS_NoLower, "*.sav" )
+    local f_cnt   = flist:Size()
+    local picture = self:GetStatic( "static_background" )
+    if f_cnt > 0 then
+        flist:Sort( FS.FS_sort_by_modif_down )
+        local file  = flist:GetAt( 0 )
+        local fname = file:NameFull()
+        local sg    = CSavedGameWrapper( fname ) 
+		local lname = sg:level_name()
+    picture:InitTexture( "ui\\ui_background_main\\" .. lname  .. "_main" )
+    end
+end
+
+--
+-- NLC Improved (11.10.2025)
+--
+
 
 function main_menu:InitControls()
 	self:Init(0,0,1024,768)			  
     local xml = CScriptXmlInit()
     xml:ParseFile("ui_mm_main.xml")
      
-    xml:InitStatic("back_movie", self)
+	local ctrl = xml:InitStatic("back_movie", self)
+	ctrl:SetWindowName("static_background")
     xml:InitStatic("background", self)
     --xml:InitStatic("fire_movie", self)
     self.shniaga = xml:InitMMShniaga("shniaga_wnd",self);
