@@ -95,11 +95,35 @@ function save_load_dialog:__init( is_save_dlg ) super()
 	end
 	self:InitCallBacks()
 	self.msgbox_id = 0
+	self:MakeBG()
 end
 
 function save_load_dialog:__finalize()
 	--log1("--save_load_dialog:__finalize() called!")
 end
+
+--
+-- NLC Improved (11.10.2025)
+--
+
+function save_load_dialog:MakeBG()
+    local f       = getFS()
+    local flist   = f:file_list_open_ex( "$game_saves$", FS.FS_ListFiles + FS.FS_ClampExt + FS.FS_RootOnly + FS.FS_NoLower, "*.sav" )
+    local f_cnt   = flist:Size()
+    local picture = self:GetStatic( "static_background" )
+    if f_cnt > 0 then
+        flist:Sort( FS.FS_sort_by_modif_down )
+        local file  = flist:GetAt( 0 )
+        local fname = file:NameFull()
+        local sg    = CSavedGameWrapper( fname ) 
+		local lname = sg:level_name()
+    picture:InitTexture( "ui\\ui_background_main\\" .. lname  .. "_main" )
+    end
+end
+
+--
+-- NLC Improved (11.10.2025)
+--
 
 
 function save_load_dialog:InitControlsSave()
@@ -107,8 +131,9 @@ function save_load_dialog:InitControlsSave()
 
 	local xml = CScriptXmlInit()
 	xml:ParseFile("ui_mm_save_dlg.xml")
-
-	xml:InitStatic("back_video", self)
+	
+	local ctrl = xml:InitStatic("back_movie", self)
+	ctrl:SetWindowName("static_background")
 
 	xml:InitStatic("background", self)	
 	xml:InitStatic("newspaper_video", self)	
@@ -144,7 +169,9 @@ function save_load_dialog:InitControlsLoad()
 	local xml = CScriptXmlInit()
 	xml:ParseFile("ui_mm_load_dlg.xml")
 
-	xml:InitStatic("back_video", self)
+	local ctrl = xml:InitStatic("back_movie", self)
+	ctrl:SetWindowName("static_background")
+	
 	xml:InitStatic("background", self)
 	xml:InitStatic("newspaper_video", self)
 

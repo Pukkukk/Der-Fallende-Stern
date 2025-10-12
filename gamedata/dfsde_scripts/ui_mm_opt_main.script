@@ -14,11 +14,34 @@ function options_dialog:__init() super()
 	self:InitControls()
 	self:InitCallBacks()
 	self:UpdateOptValues()
+	self:MakeBG()
 end
 
 function options_dialog:__finalize()
-	--log1("--options_dialog:__finalize() called!")
 end
+
+--
+-- NLC Improved (12.10.2025)
+--
+
+function options_dialog:MakeBG()
+    local f       = getFS()
+    local flist   = f:file_list_open_ex( "$game_saves$", FS.FS_ListFiles + FS.FS_ClampExt + FS.FS_RootOnly + FS.FS_NoLower, "*.sav" )
+    local f_cnt   = flist:Size()
+    local picture = self:GetStatic( "static_background" )
+    if f_cnt > 0 then
+        flist:Sort( FS.FS_sort_by_modif_down )
+        local file  = flist:GetAt( 0 )
+        local fname = file:NameFull()
+        local sg    = CSavedGameWrapper( fname ) 
+		local lname = sg:level_name()
+    picture:InitTexture( "ui\\ui_background_main\\" .. lname  .. "_main" )
+    end
+end
+
+--
+-- NLC Improved (12.10.2025)
+--
 
 function options_dialog:InitControls()
 	self:Init(0,0,1024,768)
@@ -27,7 +50,9 @@ function options_dialog:InitControls()
 	local xml = CScriptXmlInit()
 	xml:ParseFile("ui_mm_opt.xml")
 
-	xml:InitStatic("back_video", self)
+	local ctrl = xml:InitStatic("back_video", self)
+	ctrl:SetWindowName("static_background")
+	
 	xml:InitStatic("background", self)
 	xml:InitStatic("rug_video", self)
 	self.dialog = xml:InitStatic("main_dialog:dialog", self)
