@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <window>
-	<back_video x="0" y="0" width="1024" height="800" stretch="1">
-		<texture x="0" y="0" width="1920" height="1080">ui\ui_mm_main_back_crop</texture>
-	</back_video>
-
-	<_back_video x="9999999999999999" y="0" width="1024" height="512" stretch="1">
+	<back_movie x="0" y="0" width="1024" height="768" stretch="1">
 		<texture></texture>
-	</_back_video>
-	
-	<background x="0" y="0" width="1024" height="768">
-		<texture></texture>
-	</background>
-
-	<newspaper_video x="999999999999" y="512" width="256" height="256">
-		<texture></texture>
-	</newspaper_video>
+	</back_movie>
 	
 	<form x="415" y="168" width="560" height="460">
 		<_texture>ui\ui_options_menu_static</_texture>
