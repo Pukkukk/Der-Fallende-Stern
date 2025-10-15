@@ -487,7 +487,7 @@
 			</text_color>
 			<list_font_s r="240" g="217" b="182"/>
 			<list_font r="216" g="186" b="140" font="letterica16"/>
-        </list_ssao_mode>
+        </list_ao_mode>
 
         <cap_ssao x="5" y="5" width="143" height="21">
             <text font="letterica16" r="215" g="195" b="170">ui_mm_ssao_quality</text>
