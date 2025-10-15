@@ -80,10 +80,9 @@ function save_load_item:__init() super()
 	self.fage:SetTextColor(255, 216, 186, 140)
 	self.fage:SetTextAlign(CGameFont.alRight)
 end
-function save_load_item:__finalize()
-	--log1("--save_load_item:__finalize() called!")
-end
 
+function save_load_item:__finalize()
+end
 
 class "save_load_dialog" (CUIScriptWnd)
 function save_load_dialog:__init( is_save_dlg ) super()
@@ -99,11 +98,10 @@ function save_load_dialog:__init( is_save_dlg ) super()
 end
 
 function save_load_dialog:__finalize()
-	--log1("--save_load_dialog:__finalize() called!")
 end
 
 --
--- NLC Improved (11.10.2025)
+-- NLC Improved (12.10.2025)
 --
 
 function save_load_dialog:MakeBG()
@@ -122,7 +120,7 @@ function save_load_dialog:MakeBG()
 end
 
 --
--- NLC Improved (11.10.2025)
+-- NLC Improved (12.10.2025)
 --
 
 
@@ -135,8 +133,6 @@ function save_load_dialog:InitControlsSave()
 	local ctrl = xml:InitStatic("back_movie", self)
 	ctrl:SetWindowName("static_background")
 
-	xml:InitStatic("background", self)	
-	xml:InitStatic("newspaper_video", self)	
 	self.form = xml:InitStatic("form", self)
 
 	xml:InitStatic("form:caption", self.form)
@@ -171,9 +167,6 @@ function save_load_dialog:InitControlsLoad()
 
 	local ctrl = xml:InitStatic("back_movie", self)
 	ctrl:SetWindowName("static_background")
-	
-	xml:InitStatic("background", self)
-	xml:InitStatic("newspaper_video", self)
 
 	self.form = xml:InitStatic("form", self)
 
