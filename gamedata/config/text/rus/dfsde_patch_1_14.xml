@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+
+	<!--  -->
+
+<!-- Техническое название = название скрипта -->
+
+	<string id="time_on_hud">
+		<text>Время —</text>
+	</string>
+	
+	<string id="als_amk_op">
+		<text>У объекта в конце сообщения повисла логика. Удалите созданное только что сохранение и переиграйте с предыдущего.</text>
+	</string>	
+	
+</string_table>	

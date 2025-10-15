@@ -19,7 +19,7 @@ if fov>35 then
     else
         msg = string.format(" %02d:%02d\n", time_h, time_m)
     end
-	msg = "Время - "..msg
+	msg = (game.translate_string("time_on_hud"))..msg
     if cs ~= nil then cs:wnd():SetText(msg) 
 	end
 else
