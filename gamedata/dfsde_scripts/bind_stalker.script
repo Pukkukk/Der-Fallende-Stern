@@ -90,7 +90,6 @@ ogsm.on_game_load(obj)
        "g_ammunition_on_belt",
       "show_wnd_rect", "show_wnd_rect_all",
     }) do
-      get_console():execute("g_god off" )
 	get_console():execute("g_ammunition_on_belt off" )
       get_console():disable_command( k )
     end
@@ -1463,7 +1462,7 @@ function actor_binder:update(delta)
 		local obj = sim:story_object(20171)
 		if obj and
 		has_alife_info("find_fly_pda") then
-			level.map_add_object_spot(obj.id, "crlc_big", "на станцию-2")
+			level.map_add_object_spot(obj.id, "crlc_big", (game.translate_string("bind_stalker")))
 		end
 	end
 	if upd_time5 < time then

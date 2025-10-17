@@ -236,7 +236,7 @@ for n=1,qtt do
 			local sec = rwc(arts[key])
 			local art = alife():create(sec, pos, lv, gv)
 			local art_inv = game.translate_string(system_ini():r_string(art:section_name(), "inv_name"))
-			local text = "Локация:"..lev_cur..". Аномалия: "..sect..", артефакт: "..art_inv
+			local text = (game.translate_string("art_mgr_1")) .. lev_cur .. (game.translate_string("art_mgr_2")) ..sect.. (game.translate_string("art_mgr_3")) .. art_inv
 --log1(text)
 --			level.map_add_object_spot(art.id, "red_location", text)
 --db.actor:give_game_news("Проведен доспавн артефактов.", "ui\\ui_iconsTotal",Frect():set(0,188,83,47) ,0, 5000)

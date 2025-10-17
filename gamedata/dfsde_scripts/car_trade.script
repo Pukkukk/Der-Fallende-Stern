@@ -7,6 +7,10 @@
 -- Òàáëèöà òğàíñïîğòà
 ------------------------------------------------------------
 
+--
+-- Íó ıòè ñòğî÷êè çäåñü òî÷íî íå èñïîëüçóşòñÿ... Âåğíî âåäü?.. (17.10.2025)
+--
+
 local trade_cars = {
 	-- Êîğäîí. Ñèäîğîâè÷
 	[1] = { section = "vehicle_uaz2",
@@ -185,6 +189,10 @@ local trade_cars = {
 
 			}			
 }
+
+--
+-- Íó ıòè ñòğî÷êè çäåñü òî÷íî íå èñïîëüçóşòñÿ... Âåğíî âåäü?.. (17.10.2025)
+--
 
 
 ------------------------------------------------------------
@@ -1069,9 +1077,9 @@ function hud_info()
 					critical = hud:GetCustomStatic("btr_critical"):wnd()
 					if chech_count == 0 then
 						if math.random() > 0.5 then
-							critical:SetText("!!! ÏÎÆÀĞ ÍÀ ÁÎĞÒÓ - ÏÎÊÈÍÜÒÅ ÌÀØÈÍÓ !!!")
+							critical:SetText(game.translate_string("car_trade"))
 						else
-							critical:SetText("!!! ÓÃĞÎÇÀ ÏÎÄĞÛÂÀ ÁÎÅÊÎÌÏËÅÊÒÀ !!!")
+							critical:SetText(game.translate_string("car_trade_1"))
 						end
 					end
 					chech_count = chech_count + 1
@@ -1082,9 +1090,9 @@ function hud_info()
 					critical = hud:GetCustomStatic("btr_critical"):wnd()
 					if chech_count == 0 then
 						if math.random() > 0.5 then
-							critical:SetText("!!! ÏÎÆÀĞ ÍÀ ÁÎĞÒÓ - ÏÎÊÈÍÜÒÅ ÌÀØÈÍÓ !!!")
+							critical:SetText(game.translate_string("car_trade"))
 						else
-							critical:SetText("!!! ÓÃĞÎÇÀ ÏÎÄĞÛÂÀ ÁÎÅÊÎÌÏËÅÊÒÀ !!!")
+							critical:SetText(game.translate_string("car_trade_1"))
 						end
 					end
 					chech_count = chech_count + 1
@@ -1096,10 +1104,10 @@ function hud_info()
 				if not armor then
 					hud:AddCustomStatic("btr_armor", true)
 					armor = hud:GetCustomStatic("btr_armor"):wnd()
-					armor:SetText("ÏĞÎ×ÍÎÑÒÜ ÁĞÎÍÅÇÀÙÈÒÛ: "..tostring(math.floor(health*100)).." %")
+					armor:SetText((game.translate_string("car_trade_2"))..tostring(math.floor(health*100)))
 				else
 					armor = hud:GetCustomStatic("btr_armor"):wnd()
-					armor:SetText("ÏĞÎ×ÍÎÑÒÜ ÁĞÎÍÅÇÀÙÈÒÛ: "..tostring(math.floor(health*100)).." %")
+					armor:SetText((game.translate_string("car_trade_2"))..tostring(math.floor(health*100)))
 				end					
 			else
 				local critical = hud:GetCustomStatic("btr_critical")
@@ -1109,7 +1117,7 @@ function hud_info()
 				if not targ then
 					hud:AddCustomStatic("btr_target", true)
 					targ = hud:GetCustomStatic("btr_target"):wnd()
-					targ:SetText("- ÍÅÒ ÖÅËÈ ÄËß ÂÅÄÅÍÈß ÎÃÍß -")
+					targ:SetText(game.translate_string("car_trade_3"))
 				else	
 					targ = hud:GetCustomStatic("btr_target"):wnd()
 				end
@@ -1118,24 +1126,24 @@ function hud_info()
 					if target_descr and script_car:IsObjectVisible(target_descr) then
 						local str = resolve_target(target_descr)
 						if str then
-							targ:SetText("- ÒÅÊÓÙÀß ÖÅËÜ: "..tostring(str).." -")
+							targ:SetText((game.translate_string("car_trade_4"))..tostring(str))
 						else	
-							targ:SetText("- ÖÅËÜ ÍÅ ĞÀÑÏÎÇÍÀÍÀ -")
+							targ:SetText(game.translate_string("car_trade_5"))
 						end
 					else	
-						targ:SetText("- ÖÅËÜ ÍÀÕÎÄÈÒÑß ÇÀ ÏĞÅÏßÒÑÒÂÈÅÌ -")
+						targ:SetText(game.translate_string("car_trade_6"))
 					end
 				else
-					targ:SetText("- ÍÅÒ ÖÅËÈ ÄËß ÂÅÄÅÍÈß ÎÃÍß -")
+					targ:SetText(game.translate_string("car_trade_3"))
 				end
 				local armor = hud:GetCustomStatic("btr_armor")
 				if not armor then
 					hud:AddCustomStatic("btr_armor", true)
 					armor = hud:GetCustomStatic("btr_armor"):wnd()
-					armor:SetText("ÏĞÎ×ÍÎÑÒÜ ÁĞÎÍÅÇÀÙÈÒÛ: "..tostring(math.floor(health*100)).." %")
+					armor:SetText((game.translate_string("car_trade_2"))..tostring(math.floor(health*100)))
 				else
 					armor = hud:GetCustomStatic("btr_armor"):wnd()
-					armor:SetText("ÏĞÎ×ÍÎÑÒÜ ÁĞÎÍÅÇÀÙÈÒÛ: "..tostring(math.floor(health*100)).." %")
+					armor:SetText((game.translate_string("car_trade_2"))..tostring(math.floor(health*100)))
 				end					
 			end
 		else
@@ -1244,6 +1252,12 @@ function horz_angle(vec1,vec2)
   return math.atan2(y,x) -- óãîë äîâîğîòà îò -pi äî pi
 end
 
+
+--
+-- À ñòîèò ëè ıòî âîîáùå ïåğåâîäèòü? (17.10.2025)
+--
+
+
 function resolve_target(target)
 local descript = nil
 	if target then
@@ -1324,6 +1338,10 @@ local descript = nil
 	end
 	return descript
 end
+
+--
+-- À ñòîèò ëè ıòî âîîáùå ïåğåâîäèòü? (17.10.2025)
+--
 
 function btr_kill(victim)
 	relation_registry.set_community_goodwill(victim:character_community(), db.actor:id(), -100)
