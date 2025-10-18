@@ -66,5 +66,185 @@
 	<string id="car_trade_6">
 		<text>ЦЕЛЬ НАХОДИТСЯ ЗА ПРЕПЯТСТВИЕМ!</text>
 	</string>
+	
+	
+	<string id="dfs_messages">
+		<text>%c[255,200,0,0]Лёша Борман:\n%c[default] Если ты ещё в теме, найди на Свалке Грека. Он ждёт на старом долговском посту. У него есть кое-что для тебя.</text>
+	</string>
+	
+	<string id="dfs_messages_1">
+		<text>%c[255,200,0,0]Лёша Борман:\n%c[default] Наёмник! Есть работа для тебя.</text>
+	</string>
+	
+	<string id="dfs_messages_2">
+		<text>%c[255,200,0,0]Лёша Борман:\n%c[default] Наёмник! Так это ты там бузишь? Дуй ко мне, спрячу до времени.</text>
+	</string>
+	
+	<string id="dfs_messages_3">
+		<text>%c[255,200,0,0]Лёша Борман:\n%c[default] Слушай сюда, бандиты. Вы вообще хоть иногда думаете?! Ложитесь на дно. Если обойдётся - сообщу.</text>
+	</string>
+	
+	<string id="dfs_messages_4">
+		<text>%c[255,200,0,0]Неизвестный:\n%c[default] Всем, кто меня слышит! Атакованы смешанной стаей мутантов! Пробиваемся в лабораторию! Просим помощи!</text>
+	</string>
+	
+	<string id="dfs_messages_5">
+		<text>%c[255,200,0,0]Хьюго:\n%c[default] С возвращением! Заканчивайте дела и подходите в бар.</text>
+	</string>
+	
+	<string id="dfs_messages_6">
+		<text>%c[255,200,0,0]Хьюго:\n%c[default] Понимаю, что вам пришлось срочно покинуть территорию Сортировки. Посылаю вам информацию о схронах в Зоне. Удачи, JJ!</text>
+	</string>
+	
+	<string id="dfs_messages_7">
+		<text>%c[255,200,0,0]Хьюго:\n%c[default] Отличная работа, JJ! Осталось только доставить грузовик к месту эвакуации. Там мы и встретимся. Удачи!</text>
+	</string>
+	
+	<string id="dfs_messages_8">
+		<text>%c[255,200,0,0]Хьюго:\n%c[default] Жду вас на Свалке в тоннеле, не задерживайтесь.</text>
+	</string>
+	
+	<string id="dfs_messages_9">
+		<text>%c[255,200,0,0]Хьюго:\n%c[default] Если свободны, подойдите в бар, JJ.</text>
+	</string>
+	
+	<string id="dfs_messages_10">
+		<text>%c[255,200,0,0]Сидорович:\n%c[default] Загляни ко мне, дружище, разговор есть.</text>
+	</string>
+	
+	<string id="dfs_messages_11">
+		<text>%c[255,200,0,0]Отец Виталий:\n%c[default] Сталкер! Погоди! Вернись!</text>
+	</string>
+	
+	<string id="dfs_messages_12">
+		<text>%c[255,200,0,0]Zaurus' Crew:\n%c[default] Сталкер! Приветствуем тебя в сюжетном моде S.T.A.L.K.E.R. — Упавшая Звезда. Честь наёмника.</text>
+	</string>
+	
+	<string id="dfs_messages_13">
+		<text>%c[255,200,0,0]Майор Иванцов:\n%c[default] Не расслабляться! Быстро проверяем снаряжение. Лейтенант, хорош болтать.</text>
+	</string>
+	
+	<string id="dfs_messages_14">
+		<text>%c[255,200,0,0]Майор Иванцов:\n%c[default] Блокпост — на месте. Остальные — за мной! Выбьем выродков с базы!</text>
+	</string>
+	
+	<string id="dfs_messages_15">
+		<text>%c[255,200,0,0]Майор Иванцов:\n%c[default] Наёмник, подойди.</text>
+	</string>
+	
+	<string id="dfs_messages_16">
+		<text>%c[255,200,0,0]Неизвестный:\n%c[default] ПРИВЕТ ОТ АРНОЛЬДА, УБЛЮДОК!</text>
+	</string>
+	
+	<string id="dfs_messages_17">
+		<text>%c[255,200,0,0]Капитан Уваров:\n%c[default] Немедленно покинуть грузовик! У тебя три секунды!</text>
+	</string>
+	
+	<string id="dfs_messages_18">
+		<text>%c[255,200,0,0]Капитан Уваров:\n%c[default] Гранатомётчики — залп!</text>
+	</string>
+	
+	<string id="dfs_messages_19">
+		<text>%c[255,200,0,0]JJ:\n%c[default] Какого хрена вы творите?!</text>
+	</string>
+	
+	<string id="dfs_messages_20">
+		<text>%c[255,200,0,0]Капитан Уваров:\n%c[default] А ты кто такой?</text>
+	</string>
+	
+	<string id="dfs_messages_21">
+		<text>%c[255,200,0,0]JJ:\n%c[default] Мне обещали награду за помощь на Янтаре. Я пришёл получить своё.</text>
+	</string>
+	
+	<string id="dfs_messages_22">
+		<text>%c[255,200,0,0]Капитан Уваров:\n%c[default] Понятно. Начальство в бункере, двигай туда, наёмник.</text>
+	</string>
+	
+	<string id="dfs_messages_23">
+		<text>%c[255,200,0,0]Златич:\n%c[default] Наёмник, погоди! Есть работа. Как раз для тебя.</text>
+	</string>
+	
+	<string id="dfs_messages_24">
+		<text>%c[255,200,0,0]Полковник Панцер:\n%c[default] Разведка сообщила, что сюда движется группа выродков. Всем отходить на стадион, я задержу их. И откройте решётку, выпустите наёмника.</text>
+	</string>
+	
+	<string id="dfs_messages_25">
+		<text>%c[255,200,0,0]Полковник Панцер:\n%c[default] Удачной охоты!!</text>
+	</string>
+	
+	<string id="dfs_messages_26">
+		<text>%c[255,200,0,0]Лейтенант Яковлев:\n%c[default] Наёмник! Давай сюда!</text>
+	</string>
+	
+	<string id="dfs_messages_27">
+		<text>%c[255,200,0,0]Славен:\n%c[default] У меня две новости, и обе плохие. Попы свинтили, и контейнер исчез. Приказ: всем уходить, остаётся только Поиск.</text>
+	</string>
+	
+	<string id="dfs_messages_28">
+		<text>%c[255,200,0,0]JJ:\n%c[default] Поиск, говорит наёмник Джон-Джо. Ваш грузовик у меня.</text>
+	</string>
+	
+	<string id="dfs_messages_29">
+		<text>%c[255,200,0,0]Славен:\n%c[default] Он нужен здесь, придурок! Контейнер защищает бункер от Железной Морды!</text>
+	</string>
+	
+	<string id="dfs_messages_30">
+		<text>%c[255,200,0,0]JJ:\n%c[default] Знаю. Возвращать не собираюсь.</text>
+	</string>
+	
+	<string id="dfs_messages_31">
+		<text>%c[255,200,0,0]Славен:\n%c[default] Чтоб ты сдох, грёбанный наёмник!</text>
+	</string>
+	
+	<string id="dfs_messages_32">
+		<text>%c[255,200,0,0]Батька Ковцур:\n%c[default] Уходи, наёмник! С тобой базара не будет!</text>
+	</string>
+	
+	<string id="dfs_messages_33">
+		<text>%c[255,200,0,0]Хьюго:\n%c[default] ситуация в корне меняется, появились конкуренты, будут мешать, получи координаты</text>
+	</string>
+	
+	<string id="dfs_messages_34">
+		<text>%c[255,200,0,0]Пространственный инвертор АКТИВИРОВАН</text>
+	</string>
+	
+	<string id="dfs_messages_35">
+		<text>%c[255,200,0,0]Пространственный инвертор ДЕАКТИВИРОВАН</text>
+	</string>
+	
+	<string id="dfs_messages_36">
+		<text>%c[255,200,0,0]Грек:\n%c[default] НЫРЯЙ В КОЛЛЕКТОР! Я ПРИКРОЮ!</text>
+	</string>
+	
+	<string id="dfs_messages_37">
+		<text>%c[default]Отключаешь Барьер и, возможно, останешься жить.</text>
+	</string>
+	
+	<string id="dfs_messages_38">
+		<text>%c[default]Решишь помешать мне — отправлю тебя в ад.</text>
+	</string>
+	
+	<string id="dfs_messages_39">
+		<text>%c[255,200,0,0]ВЫБРОС РАЗРУШИЛ КАМЕРУ... НАЁМНИК, НАДО УНИЧТОЖИТЬ ПУЛЬТ УПРАВЛЕНИЯ БАРЬЕРА...</text>
+	</string>
+	
+	<string id="dfs_messages_40">
+		<text>%c[255,200,0,0]ПОЛУЧЕНО ЭЛЕКТРОННОЕ ПИСЬМО</text>
+	</string>
+	
+	<string id="dfs_messages_41">
+		<text>%c[255,200,0,0]ГРЕК УБИТ!</text>
+	</string>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 </string_table>	
