@@ -125,23 +125,27 @@ function on_item_drop(item)
 	dmx_fast_use_slots.OnItemDrop(item:section())
 end
 
+--
+-- Бесящая штука, ну её... (18.10.2025)
+--	
+
 -- Открытие/закрытие инвентаря
 function on_inventory_info(info_id)
---    belt_ammo.on_info(info_id)
---	belt_grenade.on_info(info_id)
 	if info_id == "ui_inventory" then
 		inventory_open = true
 		if debug == true then get_console():execute("inventory_open") end
---	belt_ammo.on_inventory_open()
-	bind_stalker.hide_weapon()
-	elseif info_id == "ui_inventory_hide" then
+--	    bind_stalker.hide_weapon()
+	    elseif info_id == "ui_inventory_hide" then
 		inventory_open = false
-		need_update = true
+--		need_update = true
 		if debug == true then get_console():execute("inventory_close") end
---	belt_ammo.on_inventory_close()
-	if not has_alife_info("actor_zone_no_weapon") then bind_stalker.restore_weapon() end
+--	if not has_alife_info("actor_zone_no_weapon") then bind_stalker.restore_weapon() end
 	end
 end
+
+--
+-- Бесящая штука, ну её... (18.10.2025)
+--
 
 function start()
 	need_update = true
