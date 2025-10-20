@@ -6,6 +6,11 @@
 
 <!-- “ехническое название = название скрипта -->
 
+	<string id="ver_in_mm">
+		<text>1.14 [WiP]</text>
+	</string>
+	
+
 	<string id="time_on_hud">
 		<text>¬рем€ Ч</text>
 	</string>
@@ -237,10 +242,50 @@
 	</string>
 	
 	
+	<string id="dfs_treasure">
+		<text>—хрон-1</text>
+	</string>
+	
+	<string id="dfs_treasure_1">
+		<text>—хрон-2</text>
+	</string>
+	
+	<string id="dfs_treasure_2">
+		<text>—хрон-3</text>
+	</string>
+	
+	<string id="dfs_treasure_3">
+		<text>—хрон-4</text>
+	</string>
+	
+	<string id="dfs_treasure_4">
+		<text>—хрон-5</text>
+	</string>
+	
+	<string id="dfs_treasure_5">
+		<text>—хрон-6</text>
+	</string>
+	
+	<string id="dfs_treasure_6">
+		<text>—хрон-7</text>
+	</string>
+	
+	<string id="dfs_treasure_7">
+		<text>—хрон-8</text>
+	</string>
+	
+	<string id="dfs_treasure_8">
+		<text>—хрон-9</text>
+	</string>
+	
+	<string id="dfs_treasure_9">
+		<text>—хрон-10</text>
+	</string>
 	
 	
-	
-	
+	<string id="hotkeys">
+		<text>»спользовано:</text>
+	</string>	
 	
 	
 	

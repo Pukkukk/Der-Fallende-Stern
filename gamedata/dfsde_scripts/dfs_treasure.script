@@ -54,52 +54,52 @@ function skhrons_coord()
 
 	local obj = sim:story_object(20073)
 	if obj then
-		level.map_add_object_spot(obj.id, "treasure", "—хрон-1")
+		level.map_add_object_spot(obj.id, "treasure", "dfs_treasure")
 	end
 	
 	local obj = sim:story_object(5030)
 	if obj then
-		level.map_add_object_spot(obj.id, "treasure", "—хрон-2")
+		level.map_add_object_spot(obj.id, "treasure", "dfs_treasure_1")
 	end
 	
 	local obj = sim:story_object(20074)
 	if obj then
-		level.map_add_object_spot(obj.id, "treasure", "—хрон-3")
+		level.map_add_object_spot(obj.id, "treasure", "dfs_treasure_2")
 	end
 	
 	local obj = sim:story_object(5418)
 	if obj then
-		level.map_add_object_spot(obj.id, "treasure", "—хрон-4")
+		level.map_add_object_spot(obj.id, "treasure", "dfs_treasure_3")
 	end
 	
 	local obj = sim:story_object(5073)
 	if obj then
-		level.map_add_object_spot(obj.id, "treasure", "—хрон-5")
+		level.map_add_object_spot(obj.id, "treasure", "dfs_treasure_4")
 	end
 	
 	local obj = sim:story_object(20075)
 	if obj then
-		level.map_add_object_spot(obj.id, "treasure", "—хрон-6")
+		level.map_add_object_spot(obj.id, "treasure", "dfs_treasure_5")
 	end
 	
 	local obj = sim:story_object(20076)
 	if obj then
-		level.map_add_object_spot(obj.id, "treasure", "—хрон-7")
+		level.map_add_object_spot(obj.id, "treasure", "dfs_treasure_6")
 	end
 	
 	local obj = sim:story_object(20077)
 	if obj then
-		level.map_add_object_spot(obj.id, "treasure", "—хрон-8")
+		level.map_add_object_spot(obj.id, "treasure", "dfs_treasure_7")
 	end
 	
 	local obj = sim:story_object(5235)
 	if obj then
-		level.map_add_object_spot(obj.id, "treasure", "—хрон-9")
+		level.map_add_object_spot(obj.id, "treasure", "dfs_treasure_8")
 	end
 	
 	local obj = sim:story_object(5244)
 	if obj then
-		level.map_add_object_spot(obj.id, "treasure", "—хрон-10")
+		level.map_add_object_spot(obj.id, "treasure", "dfs_treasure_9")
 	end
 end
 end
