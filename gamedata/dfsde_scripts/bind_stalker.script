@@ -86,9 +86,7 @@ ogsm.on_game_load(obj)
 	ts_mod_soc.ts_on_net_spawn()	--TS_MOD--
 	als_loadscrin.update() --полноэкранные интро
 	for _, k in ipairs({
-      "g_zones_dbg", "g_vertex_dbg", "g_crosshair_dbg",
        "g_ammunition_on_belt",
-      "show_wnd_rect", "show_wnd_rect_all",
     }) do
 	get_console():execute("g_ammunition_on_belt off" )
       get_console():disable_command( k )
