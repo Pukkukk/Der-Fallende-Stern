@@ -151,15 +151,15 @@ function add_lchanger_location()
 		-- Kostya_levels
 		local obj = sim:story_object(11501)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Рыжий Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks")
 		end
 		obj = sim:story_object(11502)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Янтарь")
+			level.map_add_object_spot(obj.id, "level_changer", "to_yantar")
 		end
 		obj = sim:story_object(11503)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лабораторию")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_1")
 		end	
 		obj = sim:story_object(11504)
 		if obj then
@@ -171,7 +171,7 @@ function add_lchanger_location()
 		end	
 		obj = sim:story_object(11506)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лесную Чащу")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_2")
 		end	
 		obj = sim:story_object(11507)
 		if obj then
@@ -187,11 +187,11 @@ function add_lchanger_location()
 		end	
 		obj = sim:story_object(11510)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Логово")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_3")
 		end	
 		obj = sim:story_object(11511)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лесную Чащу")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_2")
 		end	
 		obj = sim:story_object(11512)
 		if obj then
@@ -199,125 +199,130 @@ function add_lchanger_location()
 		end	
 		obj = sim:story_object(11513)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лесную Чащу")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_2")
 		end	
 		obj = sim:story_object(11514)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лесную Чащу")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_2")
 		end	
 		obj = sim:story_object(11515)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "ПЕРЕХОД")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_4")
 		end	
 		obj = sim:story_object(11516)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На АТП")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_5")
 		end	
 		obj = sim:story_object(11517)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Рыжий Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks")
 		end	
 		obj = sim:story_object(11518)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Потерянную Деревню")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_6")
 		end	
 		obj = sim:story_object(11519)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Генераторы")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_7")
 		end	
 		obj = sim:story_object(11520)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Рыжий Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks")
 		end
 		obj = sim:story_object(11521)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Припять")
+			level.map_add_object_spot(obj.id, "level_changer", "to_pripyat")
 		end
 		obj = sim:story_object(11522)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Варлаб")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_8")
 		end
 		obj = sim:story_object(11524)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На АТП")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_5")
 		end
 		obj = sim:story_object(11525)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Лиманск")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_9")
 		end
 		obj = sim:story_object(11526)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Радар")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_10")
 		end
 		obj = sim:story_object(11527)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Забытый Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_11")
 		end
 		obj = sim:story_object(11528)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Рыжий Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks")
 		end
 		obj = sim:story_object(11529)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Ведьмино болото")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_12")
 		end
 		obj = sim:story_object(11530)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Госпиталь")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_13")
 		end
 		obj = sim:story_object(11531)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Янтарь")
+			level.map_add_object_spot(obj.id, "level_changer", "to_yantar")
 		end
 		obj = sim:story_object(11532)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Рыжий Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks")
 		end
 		obj = sim:story_object(11534)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Болото")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_14")
 		end
 		obj = sim:story_object(11535)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Болото")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_14")
 		end
 		obj = sim:story_object(11536)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Болото")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_14")
 		end
 		obj = sim:story_object(11537)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Кордон")
+			level.map_add_object_spot(obj.id, "level_changer", "to_escape")
 		end
 		obj = sim:story_object(11538)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Кордон")
+			level.map_add_object_spot(obj.id, "level_changer", "to_escape")
 		end
 		obj = sim:story_object(11539)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Ведьмино Болото")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_12")
 		end
 		obj = sim:story_object(11540)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Склады")
+			level.map_add_object_spot(obj.id, "level_changer", "to_military")
 		end
 		obj = sim:story_object(11541)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Рыжий Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks")
 		end
 		
 		obj = sim:story_object(19849)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Мертвый Город")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_15")
 		end
 		obj = sim:story_object(19850)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Темную Долину")
+			level.map_add_object_spot(obj.id, "level_changer", "to_darkvalley")
 		end
 		obj = sim:story_object(19851)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Трубопровод")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_16")
 		end
+		
+--
+-- А вы тоже видели билды УЗЧН с вырезанными локациями? (21.10.2025)
+--		
+		
 		obj = sim:story_object(19852)
 		if obj then
 			level.map_add_object_spot(obj.id, "level_changer", "На Затон")
@@ -326,115 +331,120 @@ function add_lchanger_location()
 		if obj then
 			level.map_add_object_spot(obj.id, "level_changer", "На Юпитер")
 		end
+		
+--
+-- А вы тоже видели билды УЗЧН с вырезанными локациями? (21.10.2025)
+--		
+		
 		obj = sim:story_object(19854)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Припять")
+			level.map_add_object_spot(obj.id, "level_changer", "to_pripyat")
 		end
 		obj = sim:story_object(19901)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Сортировку")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_17")
 		end
 		obj = sim:story_object(19902)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Свалку")
+			level.map_add_object_spot(obj.id, "level_changer", "to_garbage")
 		end
 		obj = sim:story_object(19903)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На озеро Янтарь")
+			level.map_add_object_spot(obj.id, "level_changer", "to_yantar")
 		end
 		obj = sim:story_object(19904)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Ведьмино Болото")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_12")
 		end
 		obj = sim:story_object(19905)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Покинутую деревню")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_6")
 		end
 		obj = sim:story_object(19906)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Дикую территорию")
+			level.map_add_object_spot(obj.id, "level_changer", "to_rostok")
 		end
 		obj = sim:story_object(19907)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Агропром")
+			level.map_add_object_spot(obj.id, "level_changer", "to_agroprom")
 		end
 		obj = sim:story_object(19908)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Кордон")
+			level.map_add_object_spot(obj.id, "level_changer", "to_escape")
 		end
 		obj = sim:story_object(19909)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В Темную долину")
+			level.map_add_object_spot(obj.id, "level_changer", "to_darkvalley")
 		end
 		obj = sim:story_object(20101)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Выжигатель")
+			level.map_add_object_spot(obj.id, "level_changer", "to_radar")
 		end
 		obj = sim:story_object(19900)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Радар")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_10")
 		end
 		obj = sim:story_object(20794)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На Радар")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_10")
 		end
 		obj = sim:story_object(20109)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "В биолабораторию")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_18")
 		end
 		obj = sim:story_object(20136)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "в госпиталь")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_13")
 		end
 		obj = sim:story_object(20147)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "в Припять")
+			level.map_add_object_spot(obj.id, "level_changer", "to_pripyat")
 		end
 		obj = sim:story_object(20160)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "в Рыжий Лес")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks")
 		end
 		obj = sim:story_object(20170)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "в Х-10")
+			level.map_add_object_spot(obj.id, "level_changer", "level_tasks_19")
 		end
 		
 		
 		obj = sim:story_object(20031)
 		if obj then
-			level.map_add_object_spot(obj.id, "crlc_big", "Проводник")
+			level.map_add_object_spot(obj.id, "crlc_big", "level_tasks_20")
 		end
 		obj = sim:story_object(20065)
 		if obj then
-			level.map_add_object_spot(obj.id, "crlc_big", "лагерь бандитов")
+			level.map_add_object_spot(obj.id, "crlc_big", "level_tasks_21")
 		end
 		obj = sim:story_object(20066)
 		if obj then
-			level.map_add_object_spot(obj.id, "crlc_big", "Лужа")
+			level.map_add_object_spot(obj.id, "crlc_big", "level_tasks_22")
 		end
 		obj = sim:story_object(20067)
 		if obj then
-			level.map_add_object_spot(obj.id, "crlc_big", "Хутор Сидоровича")
+			level.map_add_object_spot(obj.id, "crlc_big", "level_tasks_23")
 		end
 		obj = sim:story_object(20068)
 		if obj then
-			level.map_add_object_spot(obj.id, "crlc_big", "Бар")
+			level.map_add_object_spot(obj.id, "crlc_big", "level_tasks_24")
 		end
 		obj = sim:story_object(20069)
 		if obj then
-			level.map_add_object_spot(obj.id, "crlc_big", "Авиабаза")
+			level.map_add_object_spot(obj.id, "crlc_big", "level_tasks_25")
 		end
 		obj = sim:story_object(20070)
 		if obj then
-			level.map_add_object_spot(obj.id, "crlc_big", "Военный городок")
+			level.map_add_object_spot(obj.id, "crlc_big", "level_tasks_26")
 		end
 		obj = sim:story_object(20071)
 		if obj then
-			level.map_add_object_spot(obj.id, "crlc_big", "Фабрика")
+			level.map_add_object_spot(obj.id, "crlc_big", "level_tasks_27")
 		end
 		obj = sim:story_object(20107)
 		if obj then
-			level.map_add_object_spot(obj.id, "crlc_big", "база бандитов")
+			level.map_add_object_spot(obj.id, "crlc_big", "level_tasks_28")
 		end
 		obj = sim:story_object(20108)
 		if obj then
@@ -501,7 +511,7 @@ function add_lchanger_location()
 		-- yantar
 		obj = sim:story_object(925)
 		if obj then
-			level.map_add_object_spot(obj.id, "level_changer", "На АгроПром")
+			level.map_add_object_spot(obj.id, "level_changer", "to_agroprom")
 		end
 
 		-- radar

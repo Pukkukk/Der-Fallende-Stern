@@ -10,6 +10,11 @@
 		<text>1.14 [WiP]</text>
 	</string>
 	
+	
+	<string id="ui_mm_save_game_on_lvl">
+		<text>Сохранить на уровне</text>
+	</string>
+	
 
 	<string id="time_on_hud">
 		<text>Время —</text>
@@ -287,9 +292,124 @@
 		<text>Использовано:</text>
 	</string>	
 	
+	<string id="hotkeys_1">
+		<text>День</text>
+	</string>
 	
+	<string id="level_tasks">
+		<text>В Рыжий лес</text>
+	</string>
 	
+	<string id="level_tasks_1">
+		<text>В лабораторию</text>
+	</string>
 	
+	<string id="level_tasks_2">
+		<text>В Лесную чащу</text>
+	</string>
 	
+	<string id="level_tasks_3">
+		<text>В логово</text>
+	</string>
+	
+	<string id="level_tasks_4">
+		<text>Переход</text>
+	</string>
+	
+	<string id="level_tasks_5">
+		<text>На АТП</text>
+	</string>
+	
+	<string id="level_tasks_6">
+		<text>В Потерянную деревню</text>
+	</string>
+	
+	<string id="level_tasks_7">
+		<text>На Генераторы</text>
+	</string>
+	
+	<string id="level_tasks_8">
+		<text>В Варлаб</text>
+	</string>
+	
+	<string id="level_tasks_9">
+		<text>В Лиманск</text>
+	</string>
+	
+	<string id="level_tasks_10">
+		<text>На Радар</text>
+	</string>
+	
+	<string id="level_tasks_11">
+		<text>В Забытый лес</text>
+	</string>
+	
+	<string id="level_tasks_12">
+		<text>На Ведьмино болото</text>
+	</string>
+	
+	<string id="level_tasks_13">
+		<text>В госпиталь</text>
+	</string>
+	
+	<string id="level_tasks_14">
+		<text>На болота</text>
+	</string>
+	
+	<string id="level_tasks_15">
+		<text>В Мёртвый город</text>
+	</string>
+	
+	<string id="level_tasks_16">
+		<text>В трубопровод</text>
+	</string>
+	
+	<string id="level_tasks_17">
+		<text>На Сортировку</text>
+	</string>
+	
+	<string id="level_tasks_18">
+		<text>В биолабораторию</text>
+	</string>
+	
+	<string id="level_tasks_19">
+		<text>В X-10</text>
+	</string>
+	
+	<string id="level_tasks_20">
+		<text>Проводник</text>
+	</string>
+	
+	<string id="level_tasks_21">
+		<text>Лагерь бандитов</text>
+	</string>
+	
+	<string id="level_tasks_22">
+		<text>Лужа</text>
+	</string>
+	
+	<string id="level_tasks_23">
+		<text>Хутор Сидоровича</text>
+	</string>
+	
+	<string id="level_tasks_24">
+		<text>Бар</text>
+	</string>
+	
+	<string id="level_tasks_25">
+		<text>Авиабаза</text>
+	</string>
+	
+	<string id="level_tasks_26">
+		<text>Военный городок</text>
+	</string>
+	
+	<string id="level_tasks_27">
+		<text>Фабрика</text>
+	</string>
+	
+	<string id="level_tasks_28">
+		<text>База бандитов</text>
+	</string>
 
 </string_table>	

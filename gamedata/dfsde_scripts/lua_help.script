@@ -8040,6 +8040,8 @@ List of the namespaces exported to LUA
 
 namespace  {
     function game_ini();
+    function get_stored_vars(lua_State*);	
+	function vars_table_import(lua_State*);
     function bit_and(number, number);
     function alife();
     function GetFontGraffiti32Russian();

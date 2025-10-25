@@ -84,7 +84,6 @@ binds_actions[key_bindings.kWPN_NEXT] = hotkeys.grenade_change
 -- 'F1' - Слот быстрого использования №1
 binds_actions[key_bindings.kUSE_ANTIRAD] = function()
 	local section = dmx_fast_use_slots.GetItemInFastSlot1()
---log1("слот1 - "..section)
 	if section then
 		local item = db.actor:object(section)
 		if item and item ~= nil then
@@ -98,7 +97,6 @@ binds_actions[key_bindings.kUSE_ANTIRAD] = function()
 -- 'F2' - Слот быстрого использования №2
 binds_actions[key_bindings.kUSE_ENERGY_DRINK] = function()
 	local section = dmx_fast_use_slots.GetItemInFastSlot2()
---log1("слот2 - "..section)
 	if section then
 		local item = db.actor:object(section)
 		if item and item ~= nil then
@@ -112,7 +110,6 @@ end
 -- 'F3' - Слот быстрого использования №3
 binds_actions[key_bindings.kUSE_B190] = function()
 	local section = dmx_fast_use_slots.GetItemInFastSlot3()
---log1("слот3 - "..section)
 	if section then
 		local item = db.actor:object(section)
 		if item and item ~= nil then
@@ -126,7 +123,6 @@ end
 -- 'F4' - Слот быстрого использования №4
 binds_actions[key_bindings.kUSE_BIPSIZON] = function()
 	local section = dmx_fast_use_slots.GetItemInFastSlot4()
---log1("слот4 - "..section)
 	if section then
 		local item = db.actor:object(section)
 		if item and item ~= nil then
@@ -137,54 +133,30 @@ binds_actions[key_bindings.kUSE_BIPSIZON] = function()
 	return true
 end
 
--- 'Фонарь на 2 положения включения
-binds_actions[key_bindings.kTORCH] = function()
-if db.actor:alive() then
-    local torch = db.actor:item_in_slot( 9 )
-    if torch and torch:is_torch() then
-      local snd = sound_object( "device\\bad_box" )
-      snd:play( db.actor, 0, sound_object.s2d )
-      torch = get_torch_obj( torch )
-      if torch.on then
-        if torch_mode == "near" then
-          set_far_mode( torch )
-        torch:switch( true )
-        else
-          torch_mode = "off"
-        end
-        torch:switch( true )
-      else
-        set_near_mode( torch )
-        torch:switch( true )
-      end
-        torch:switch( true )
-    end
-  end
-	if db.actor:item_in_slot(9) then
-		local snd = xr_sound.get_safe_sound_object("zwuk\\inv_torch")
-		snd:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 0.7)
-	end
-end
 
 
+--
+-- NLC Improved (22.10.2025)
+--
 
+binds_actions[key_bindings.kNEW_QUICKSAVE] = function()
+                dsh.make_quicksave()
+			end
+			
+binds_actions[key_bindings.kNEW_QUICKSAVE_ON_LVL] = function()
+            if level.present() and (db.actor ~= nil) and db.actor:alive() then
+			local levname = translate(level.name())
+			local days = level.get_time_days()
+			local hours = level.get_time_hours()
+			local minutes = level.get_time_minutes()
+			local savename = dsh.safe_file_name(string.format("%s %u. %02u-%02u. %s", translate("hotkeys_1"), days, hours, minutes, levname))
+			cmd("save " .. savename)
+            end
+			end		
 
-function set_near_mode( torch, r )
-  torch_mode = "near"
-  torch:set_range( 20 )
-  torch:set_angle( math.rad( 60 ) ) --было 110
-end
-
-
-function set_far_mode( torch, r )
- torch_mode = "far"
-  torch:set_range( 60 )
-  torch:set_angle( math.rad( 40 ) ) --было 60
-end
-
---dik_actions[DIK_keys.DIK_F3] = function() use_from_slot(3) end
---dik_actions[DIK_keys.DIK_F4] = function() use_from_slot(4) end
---dik_actions[DIK_keys.DIK_F10] = function() ui_console.show_console() end
+--
+-- NLC Improved (22.10.2025)
+--			
 
 function on_key(dik, bind)
 	if not db.actor:alive() then return end

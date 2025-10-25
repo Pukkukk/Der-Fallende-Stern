@@ -13,6 +13,7 @@ math.randomseed(os.time())
 --prefetch("_luaxml")
 --===================[string.lower и string.upper с поддержкой русских букв]====================
 sys_ini = system_ini()
+translate = game.translate_string
 do
 	local lower = string.lower
 	string.lower = function(s)
@@ -239,6 +240,68 @@ function check_module(module_name)
     end
     return res, err
 end
+
+--
+-- NLC Improved (22.10.2025)
+--
+
+local xvars = get_stored_vars()
+
+
+function unpack_value( value )
+  if type( value ) == "userdata" then
+    value = value( true )
+  end
+  return value
+end
+
+
+function value_exist( name )
+  return xvars[ name ] ~= nil
+end
+
+
+function set_value( name, value )
+  remove_value( name )
+  xvars[ name ] = value
+end
+
+
+function get_value( name, default_value )
+  local value = xvars[ name ]
+  if value == nil then
+    return default_value
+  end
+  return unpack_value( value )
+end
+
+
+function remove_value( name )
+  xvars[ name ] = nil
+end
+
+
+function set_or_remove_value( name, value )
+  if value then
+    set_value( name, value )
+  else
+    remove_value( name )
+  end
+end
+
+
+function get_all_vars()
+  return xvars()
+end
+
+
+function init_xvars()
+end
+
+--
+-- NLC Improved (22.10.2025)
+--
+
 ----------------------------------------------------------------------
 
 function printf(fmt,...)
