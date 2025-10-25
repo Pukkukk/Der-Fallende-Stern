@@ -136,7 +136,7 @@ end
 
 
 --
--- NLC Improved (22.10.2025)
+-- NLC Improved (26.10.2025)
 --
 
 binds_actions[key_bindings.kNEW_QUICKSAVE] = function()
@@ -154,8 +154,12 @@ binds_actions[key_bindings.kNEW_QUICKSAVE_ON_LVL] = function()
             end
 			end		
 
+binds_actions[key_bindings.kNEW_QUICKLOAD] = function()
+                cmd("load_last_save")
+			end
+
 --
--- NLC Improved (22.10.2025)
+-- NLC Improved (26.10.2025)
 --			
 
 function on_key(dik, bind)

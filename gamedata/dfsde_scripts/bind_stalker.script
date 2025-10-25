@@ -1493,7 +1493,6 @@ function actor_binder:update(delta)
 		dmx_fast_use_slots.FastUseSlotsHud()
 		this.hide_weapon_knife_d()
 	end
-        save_rename.update(time)
        
 end
 ----------------------------------------------------------------------------------------------------------------------
@@ -1528,8 +1527,7 @@ function actor_binder:save(packet)
 	xr_logic.pstor_save_all(self.object, packet)
 	self.weather_manager:save(packet)
 
-	self.actor_detector:save(packet)	
-        save_rename.on_save()
+	self.actor_detector:save(packet)
 	art_mgr.save(packet)
 
 	if se_stor then

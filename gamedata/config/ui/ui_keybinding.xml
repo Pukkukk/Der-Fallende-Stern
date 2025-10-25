@@ -61,6 +61,6 @@
 		<command id="kb_console"					exe="console"/>
 		<command id="ui_mm_save_game"				exe="new_quicksave"/>
 		<command id="ui_mm_save_game_on_lvl"		exe="new_quicksave_on_lvl"/>
-		<command id="ui_mm_load_game"				exe="quick_load"/>
+		<command id="ui_mm_load_game"				exe="new_quickload"/>
 	</group>
 </keybingidg>
