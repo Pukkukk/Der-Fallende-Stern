@@ -2,7 +2,6 @@ local wthr
 
 function on_game_load()
 wthr = level.get_weather()
-level.set_weather("ogsm",true)
 game.start_tutorial("restore_sun")
 	-- Апдейтим ремкомплекты
 	remkit_main.update_repair_kit()
