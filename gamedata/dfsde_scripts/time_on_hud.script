@@ -4,7 +4,7 @@ function show_time()
     local hud = get_hud()
     local cs = hud:GetCustomStatic("hud_show_time")
 local fov = device().fov
-if fov>35 then
+if not bind_stalker.scopeUsed then
     if cs == nil then
  --       hud:AddCustomStatic("hud_time_static", true)
         hud:AddCustomStatic("hud_show_time", true)

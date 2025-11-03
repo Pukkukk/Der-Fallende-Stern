@@ -140,13 +140,23 @@ scope_y 						= -2
 scope_name 					= wpn_addon_scope			; section name for the attachable scope
 scope_names 					= wpn_addon_scope,wpn_addon_scope_cobra,wpn_addon_scope_pka,wpn_addon_scope_kashtan, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night
 scope_respawn = wpn_svd
-scope_respawn_wpn_addon_scope = scope_pso1_svd
+scope_respawn_wpn_addon_scope = wpn_scope_pso1_svd
+
+;;
+;; —татик времени скрываетс€ только на оптике, коллиматоры не задеваютс€, поэтому они остаютс€ нетронутыми (03.11.2025)
+;;
+
 scope_respawn_wpn_addon_scope_pka = scope_pka_svd
 scope_respawn_wpn_addon_scope_cobra = scope_cobra_svd
-scope_respawn_wpn_addon_scope_kashtan = scope_kashtan_svd
-scope_respawn_wpn_addon_scope_x2.7 = scope_pso1m2_svd
-scope_respawn_wpn_addon_scope_detector = scope_nvsn_svd
-scope_respawn_wpn_addon_scope_night = scope_nvas_svd
+
+;;
+;; —татик времени скрываетс€ только на оптике, коллиматоры не задеваютс€, поэтому они остаютс€ нетронутыми (03.11.2025)
+;;
+
+scope_respawn_wpn_addon_scope_kashtan = wpn_scope_kashtan_svd
+scope_respawn_wpn_addon_scope_x2.7 = wpn_scope_pso1m2_svd
+scope_respawn_wpn_addon_scope_detector = wpn_scope_nvsn_svd
+scope_respawn_wpn_addon_scope_night = wpn_scope_nvas_svd
 
 
 zoom_enabled			= true
@@ -194,7 +204,7 @@ snd_kick		= weapons\ak74\ak74_bayonet
 snd_item_on             = weapons\headflash_on
 #include "huds.ltx" 
 
-[scope_pso1_svd]:wpn_svd
+[wpn_scope_pso1_svd]:wpn_svd
 hidden_bones =  scope2, scope3, scope4, scope5, scope6, scope7, sight, sheka, knife
 hud  						= wpn_svd_1pso_hud
 scope_name 					= wpn_addon_scope
@@ -206,8 +216,10 @@ aim_hud_offset_rot = 0.0,0.0,0.0
 aim_hud_offset_pos_16x9 = 0.0,-0.0005,0.06
 aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
 
+[scope_pso1_svd]:wpn_scope_pso1_svd
 
-[scope_pso1m2_svd]:wpn_svd
+
+[wpn_scope_pso1m2_svd]:wpn_svd
 hidden_bones = scope1, scope2, scope3, scope4, scope5, scope7, sight, sheka, knife
 hud  						= wpn_svd_pso1m2_hud
 scope_name 					= wpn_addon_scope_x2.7
@@ -218,6 +230,8 @@ aim_hud_offset_pos = -0.0005,-0.0005,0.06
 aim_hud_offset_rot = 0.0,0.0,0.0
 aim_hud_offset_pos_16x9 = -0.0005,-0.0005,0.06
 aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+[scope_pso1m2_svd]:wpn_scope_pso1m2_svd
 
 
 [scope_pka_svd]:wpn_svd
@@ -248,7 +262,7 @@ aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
 inertion_origin_offset = -0.03
 
 
-[scope_kashtan_svd]:wpn_svd
+[wpn_scope_kashtan_svd]:wpn_svd
 hidden_bones = scope1, scope2, scope4, scope5, scope6, scope7, sight, sheka, knife
 hud  						= wpn_svd_kashtan_hud
 scope_name 					= wpn_addon_scope_kashtan
@@ -260,8 +274,10 @@ aim_hud_offset_rot = 0.0,0.0,0.0
 aim_hud_offset_pos_16x9 = -0.0115,0.0,-0.008
 aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
 
+[scope_kashtan_svd]:wpn_scope_kashtan_svd
 
-[scope_nvsn_svd]:wpn_svd
+
+[wpn_scope_nvsn_svd]:wpn_svd
 hidden_bones = scope1, scope3, scope4, scope5, scope6, scope7, sight, sheka, knife
 hud  						= wpn_svd_nvsn_hud
 scope_name              = wpn_addon_scope_detector 
@@ -274,8 +290,10 @@ aim_hud_offset_rot = 0.0,0.0,0.0
 aim_hud_offset_pos_16x9 = 0.0045,-0.028,0.04
 aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
 
+[scope_nvsn_svd]:wpn_scope_nvsn_svd
 
-[scope_nvas_svd]:wpn_svd
+
+[wpn_scope_nvas_svd]:wpn_svd
 hidden_bones = scope1, scope2, scope3, scope4, scope5, scope6, sight, sheka, knife
 hud  						= wpn_svd_nvas_hud
 scope_name              = wpn_addon_scope_night 
@@ -287,6 +305,8 @@ aim_hud_offset_pos = 0.01,-0.022,0.04
 aim_hud_offset_rot = 0.0,0.0,0.0
 aim_hud_offset_pos_16x9 = 0.01,-0.022,0.04
 aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+[scope_nvas_svd]:wpn_scope_nvas_svd
 
 
 [wpn_svd_m1]:wpn_svd

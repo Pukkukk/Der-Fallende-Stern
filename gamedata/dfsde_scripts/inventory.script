@@ -107,7 +107,7 @@ function on_item_take(item)
 		need_update = true
 		if debug == true then get_console():execute("item_take") end
 	end
-	dmx_fast_use_slots.OnItemTake(item:section())
+	ui_fast_use_slots.OnItemTake(item:section())
 end
 
 -- Выброс предмета
@@ -122,7 +122,7 @@ function on_item_drop(item)
 		need_update = true
 		if debug == true then get_console():execute("item_drop") end
 	end
-	dmx_fast_use_slots.OnItemDrop(item:section())
+	ui_fast_use_slots.OnItemDrop(item:section())
 end
 
 --

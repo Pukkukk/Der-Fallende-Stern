@@ -45,7 +45,11 @@
 		<command id="kb_night_vision"				exe="night_vision"/>
 		<command id="kb_use_bandage"				exe="use_bandage"/>
 		<command id="kb_use_medkit"					exe="use_medkit"/>
-		<command id="kb_drop"						exe="drop"/>		
+		<command id="kb_drop"						exe="drop"/>	
+		<command id="kb_use_antirad"				exe="use_antirad"/>
+		<command id="kb_use_energy_drink"			exe="use_energy_drink"/>
+		<command id="kb_use_b190"					exe="use_b190"/>
+		<command id="kb_use_bipsizon"				exe="use_bipsizon"/>		
 	</group>
 	<group name="kb_grp_common">
 		<command id="kb_hide_hud"					exe="hide_hud"/>

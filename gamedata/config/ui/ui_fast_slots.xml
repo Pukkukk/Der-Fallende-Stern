@@ -1,0 +1,12 @@
+<ui_texture>
+    <file_name>ui\ui_fast_slots</file_name>
+	
+	<texture id="ui_fast_use_container"					x="4" y="18" width="46" height="9"/>    <!-- быстрый слот: контейнер -->
+    <texture id="ui_fast_use_count_back"				x="55" y="4" width="32" height="16"/>	<!-- быстрый слот: фон счетчика -->
+    <texture id="ui_fast_use_key_back"					x="101" y="4" width="24" height="15"/>	<!-- быстрый слот: фон клавиши -->
+		
+	<texture id="null_b"							x="0" y="0"	width="1" height="1"/>			<!-- заглушка форм -->
+	<texture id="null_back"							x="0" y="0"	width="1" height="1"/>			<!-- заглушка форм -->
+	<texture id="null_e"							x="0" y="0"	width="1" height="1"/>			<!-- заглушка форм -->
+
+</ui_texture>

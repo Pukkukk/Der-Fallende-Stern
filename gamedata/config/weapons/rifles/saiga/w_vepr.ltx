@@ -141,13 +141,24 @@ scope_name 					= wpn_addon_scope 		; section name for the attachable scope
 scope_x              	= 49                 ; offset in inventory icon
 scope_y                 = 9
 scope_names 					= wpn_addon_scope,wpn_addon_scope_cobra,wpn_addon_scope_pka,wpn_addon_scope_kashtan, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night
-scope_respawn_wpn_addon_scope = scope_pso1_saiga12
+
+scope_respawn_wpn_addon_scope = wpn_scope_pso1_saiga12
+
+--
+-- —татик времени скрываетс€ только на оптике, коллиматоры не задеваютс€, поэтому они остаютс€ нетронутыми (31.10.2025)
+--
+
 scope_respawn_wpn_addon_scope_pka = scope_pka_saiga12
 scope_respawn_wpn_addon_scope_cobra = scope_cobra_saiga12
-scope_respawn_wpn_addon_scope_kashtan = scope_kashtan_saiga12
-scope_respawn_wpn_addon_scope_x2.7 = scope_pso1m2x1_saiga12
-scope_respawn_wpn_addon_scope_detector = scope_nvsn_saiga12
-scope_respawn_wpn_addon_scope_night = scope_nvas_saiga12
+
+--
+-- —татик времени скрываетс€ только на оптике, коллиматоры не задеваютс€, поэтому они остаютс€ нетронутыми (31.10.2025)
+--
+
+scope_respawn_wpn_addon_scope_kashtan = wpn_scope_kashtan_saiga12
+scope_respawn_wpn_addon_scope_x2.7 = wpn_scope_pso1m2x1_saiga12
+scope_respawn_wpn_addon_scope_detector = wpn_scope_nvsn_saiga12
+scope_respawn_wpn_addon_scope_night = wpn_scope_nvas_saiga12
 
 silencer_name  				= wpn_addon_silencer
 silencer_x					    = 223					; offset in inventory icon
@@ -221,7 +232,7 @@ silencer_light_time     = 0.01
 #include "huds.ltx"
  
  
-[scope_pso1_saiga12]:wpn_vepr
+[wpn_scope_pso1_saiga12]:wpn_vepr
 hud  						= wpn_saiga12_1pso_hud
 scope_status				= 2	
 scope_respawn = wpn_vepr
@@ -242,9 +253,10 @@ aim_hud_offset_rot = 0.000000,0.000000,0.000000
 aim_hud_offset_pos_16x9 = 0.0165,-0.0015,0.15
 aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
 
+[scope_pso1_saiga12]:wpn_scope_pso1_saiga12
 
 
-[scope_pso1m2x1_saiga12]:wpn_vepr
+[wpn_scope_pso1m2x1_saiga12]:wpn_vepr
 hud  						= wpn_saiga12_pso1m2x1_hud
 scope_status				= 2	
 scope_respawn = wpn_vepr
@@ -263,9 +275,10 @@ aim_hud_offset_rot = 0.000000,0.000000,0.000000
 aim_hud_offset_pos_16x9 = 0.0155,-0.0075,0.14
 aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
 
+[scope_pso1m2x1_saiga12]:wpn_scope_pso1m2x1_saiga12
 
 
-[scope_nvsn_saiga12]:wpn_vepr
+[wpn_scope_nvsn_saiga12]:wpn_vepr
 hud  						= wpn_saiga12_nvsn_hud
 scope_status				= 2	
 scope_respawn = wpn_vepr
@@ -285,10 +298,10 @@ aim_hud_offset_rot = 0.000000,0.000000,0.000000
 aim_hud_offset_pos_16x9 = 0.0175,-0.0295,0.1
 aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
 
+[scope_nvsn_saiga12]:wpn_scope_nvsn_saiga12
 
 
-
-[scope_nvas_saiga12]:wpn_vepr
+[wpn_scope_nvas_saiga12]:wpn_vepr
 hud  						= wpn_saiga12_nvas_hud
 scope_status				= 2	
 scope_respawn = wpn_vepr
@@ -308,7 +321,7 @@ aim_hud_offset_rot = 0.000000,0.000000,0.000000
 aim_hud_offset_pos_16x9 = 0.025,-0.02,0.08
 aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
 
-
+[scope_nvas_saiga12]:wpn_scope_nvas_saiga12
 
 
 
@@ -355,7 +368,7 @@ aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
 inertion_origin_offset = -0.03
 
 
-[scope_kashtan_saiga12]:wpn_vepr
+[wpn_scope_kashtan_saiga12]:wpn_vepr
 hud  						= wpn_saiga12_kashtan_hud
 scope_status				= 2	
 scope_respawn = wpn_vepr
@@ -373,4 +386,6 @@ aim_hud_offset_rot = 0.000000,0.000000,0.000000
 
 aim_hud_offset_pos_16x9 = 0.0050,-0.0045000,0.05
 aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.000000
+
+[scope_kashtan_saiga12]:wpn_scope_kashtan_saiga12
        

@@ -151,13 +151,24 @@ scope_zoom_factor	    	= 100		;ПСО-1 4X
 scope_name              = wpn_addon_scope
 scope_respawn = wpn_vintorez
 scope_names 					= wpn_addon_scope,wpn_addon_scope_cobra,wpn_addon_scope_pka,wpn_addon_scope_kashtan, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night
-scope_respawn_wpn_addon_scope = scope_pso1_vss
+
+scope_respawn_wpn_addon_scope = wpn_scope_pso1_vss
+
+;;
+;; Статик времени скрывается только на оптике, коллиматоры не задеваются, поэтому они остаются нетронутыми (03.11.2025)
+;;
+
 scope_respawn_wpn_addon_scope_pka = scope_pka_vss
 scope_respawn_wpn_addon_scope_cobra = scope_cobra_vss
-scope_respawn_wpn_addon_scope_kashtan = scope_kashtan_vss
-scope_respawn_wpn_addon_scope_x2.7 = scope_pso1m2x1_vss
-scope_respawn_wpn_addon_scope_detector = scope_nvsn_vss
-scope_respawn_wpn_addon_scope_night = scope_nvas_vss
+
+;;
+;; Статик времени скрывается только на оптике, коллиматоры не задеваются, поэтому они остаются нетронутыми (03.11.2025)
+;;
+
+scope_respawn_wpn_addon_scope_kashtan = wpn_scope_kashtan_vss
+scope_respawn_wpn_addon_scope_x2.7 = wpn_scope_pso1m2x1_vss
+scope_respawn_wpn_addon_scope_detector = wpn_scope_nvsn_vss
+scope_respawn_wpn_addon_scope_night = wpn_scope_nvas_vss
 
 
 scope_x                 = 78
@@ -207,8 +218,7 @@ snd_item_on             = weapons\headflash_on
 
 #include "huds.ltx"
 
-
-[scope_pso1_vss]:wpn_vintorez
+[wpn_scope_pso1_vss]:wpn_vintorez
 hidden_bones = mag20, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_assault, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_handler, rail_lam, sight
 hud  						= wpn_vintorez_1pso_hud
 scope_name 					= wpn_addon_scope
@@ -220,8 +230,9 @@ aim_hud_offset_rot = 0.00000,0.000000,0.0
 aim_hud_offset_pos_16x9 = 0.009000,-0.0338,0.11
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
 
+[scope_pso1_vss]:wpn_scope_pso1_vss
 
-[scope_pso1m2x1_vss]:wpn_vintorez
+[wpn_scope_pso1m2x1_vss]:wpn_vintorez
 hidden_bones = mag20, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_handler, rail_lam, sight
 hud  						= wpn_scope_pso1m2x1_vss_hud
 scope_name 					= wpn_addon_scope_x2.7
@@ -233,6 +244,7 @@ aim_hud_offset_rot = 0.00000,0.000000,0.0
 aim_hud_offset_pos_16x9 = 0.009000,-0.03280000,0.1
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
 
+[scope_pso1m2x1_vss]:wpn_scope_pso1m2x1_vss
 
 [scope_pka_vss]:wpn_vintorez
 hidden_bones = mag20, scope_rakurs, scope_kashtan, scope_cobra, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_handler, rail_lam, sight
@@ -245,7 +257,6 @@ aim_hud_offset_pos = 0.00920000,-0.0333000,-0.02
 aim_hud_offset_rot = 0.000000,0.000000,0.0
 aim_hud_offset_pos_16x9 = 0.00920000,-0.0333000,-0.02
 aim_hud_offset_rot_16x9 = 0.000000,0.000000,0.0
-
 
 [scope_cobra_vss]:wpn_vintorez
 hidden_bones = mag20, scope_rakurs, scope_kashtan, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_handler, rail_lam, sight
@@ -260,8 +271,7 @@ aim_hud_offset_pos_16x9 = -0.0010000,-0.0400,0.03
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.000000
 inertion_origin_offset = -0.03
 
-
-[scope_kashtan_vss]:wpn_vintorez
+[wpn_scope_kashtan_vss]:wpn_vintorez
 hidden_bones = mag20, scope_rakurs, scope_cobra, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_handler, rail_lam, sight
 hud  						= wpn_scope_kashtan_vss_hud
 scope_name 					= wpn_addon_scope_kashtan
@@ -273,8 +283,9 @@ aim_hud_offset_rot = 0.00000,0.000000,0.0
 aim_hud_offset_pos_16x9 = -0.0013000,-0.03170,0.09
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
 
+[scope_kashtan_vss]:wpn_scope_kashtan_vss
 
-[scope_nvsn_vss]:wpn_vintorez
+[wpn_scope_nvsn_vss]:wpn_vintorez
 hidden_bones = mag20, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_handler, rail_lam, sight
 hud  						= wpn_scope_nvsn_vss_hud
 scope_name              = wpn_addon_scope_detector 
@@ -287,8 +298,9 @@ aim_hud_offset_rot = 0.00000,0.000000,0.0
 aim_hud_offset_pos_16x9 = 0.0128,-0.0615,0.142
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
 
+[scope_nvsn_vss]:wpn_scope_nvsn_vss
 
-[scope_nvas_vss]:wpn_vintorez
+[wpn_scope_nvas_vss]:wpn_vintorez
 hidden_bones = mag20, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, tactical_handler, sheka, flash, laser, light, line, rail_handler, rail_lam, sight
 hud  						= wpn_scope_nvas_vss_hud
 scope_name              = wpn_addon_scope_night 
@@ -301,8 +313,9 @@ aim_hud_offset_rot = 0.00000,0.000000,0.0
 aim_hud_offset_pos_16x9 = 0.0189,-0.0485,0.12
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
 
+[scope_nvas_vss]:wpn_scope_nvas_vss
 
-[scope_rakurs_vss]:wpn_vintorez
+[wpn_scope_rakurs_vss]:wpn_vintorez
 hidden_bones = mag20, scope_pso_assault, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_nv_sniper, scope_nv_assault, tactical_handler, sheka, flash, laser, light, line, rail_lam, sight
 hud  						= wpn_scope_rakurs_vss_hud
 scope_name 					= wpn_addon_scope_rakurs
@@ -314,7 +327,7 @@ aim_hud_offset_rot = 0.00000,0.000000,0.000000
 aim_hud_offset_pos_16x9 = 0.000000,-0.002500,-0.03
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.000000
 
-
+[scope_rakurs_vss]:wpn_scope_rakurs_vss
  
 #include "upgrades.ltx"
 

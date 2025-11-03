@@ -3,8 +3,15 @@
 
 
 	<!--  -->
+	
+	<string id="deadbody">
+		<text>Труп</text>
+	</string>
 
-<!-- Техническое название = название скрипта -->
+	<string id="anomaly_zone">
+		<text>Опасность</text>
+	</string>
+	
 
 	<string id="ver_in_mm">
 		<text>1.14 [WiP]</text>
@@ -14,6 +21,26 @@
 	<string id="ui_mm_save_game_on_lvl">
 		<text>Сохранить на уровне</text>
 	</string>
+	
+	<string id="kb_use_antirad">
+		<text>Слот быстрого доступа 1</text>
+	</string>	
+	
+	<string id="kb_use_energy_drink">
+		<text>Слот быстрого доступа 2</text>
+	</string>
+
+	<string id="kb_use_b190">
+		<text>Слот быстрого доступа 3</text>
+	</string>
+
+	<string id="kb_use_bipsizon">
+		<text>Слот быстрого доступа 4</text>
+	</string>	
+
+<!-- Техническое название = название скрипта -->
+
+
 	
 
 	<string id="time_on_hud">

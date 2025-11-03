@@ -12,5 +12,9 @@
 	<color name="ui_clr_1"  r="240" g="217" b="182"/>
 	<color name="ui_clr_2"  r="216" g="186" b="140"/>
 	<color name="ui_clr_3"  r="135" g="123" b="116"/>
+	
+	<color name="hud_slot_count"		r="192" g="192" b="192"/>			<!-- худ: быстрый слот: счетчик -->
+	<color name="hud_slot_key"			r="192" g="192" b="192"/>			<!-- худ: быстрый слот: клавиша -->
+	<color name="hud_slot_inv_key"		r="192" g="192" b="192"/>			<!-- худ: быстрый слот: клавиша в инвентаре -->
 	<!-- Use "%cDEFAULT" color when need to switch to default color of UI element -->
 </colors>

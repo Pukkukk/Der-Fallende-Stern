@@ -1,0 +1,47 @@
+--[[-----------------------------------------------------------------------------------------------
+ File			: ui_loader.script
+ Description	: Общие функции
+ Source			: ABC Inferno
+ Author			: serg101188
+ Date			: 23.11.2011
+ Last edit		: 16.10.2021
+--]]-----------------------------------------------------------------------------------------------
+
+
+-- Нажатие клавиши
+function on_key(dik)
+	if kShifts[dik] then _G.ShiftPressed = true end
+	local bind = dik_to_bind(dik)
+	hotkeys.on_key(dik, bind)
+	xr_signals.on_event( "key_press", key, bind )
+end
+
+-- Отпускание клавиши
+function on_key_free(dik)
+	if kShifts[dik] then _G.ShiftPressed = nil end
+	xr_signals.on_event("key_release", key, bind)
+end
+
+-- net_spawn
+function net_spawn(data)
+	xr_signals.on_event("net_spawn")
+end
+
+-- net_destroy
+function net_destroy()
+	xr_signals.on_event("net_destroy")
+end
+
+-- __finalize()
+function init()
+	xr_signals.init()
+end
+
+-- Обновление биндера
+function update()
+	xr_signals.on_update(delta)
+	ui_fast_use_slots.FastUseSlotsHud()
+--	ui_hud_weight.update()
+	ui_hud_time.update()
+	ui_loader_hud.update()
+end

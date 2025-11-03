@@ -139,13 +139,23 @@ scope_zoom_factor	        = 100		;ПСО1M1-AMK 4X
 
 scope_name              = wpn_addon_scope
 scope_names 					= wpn_addon_scope,wpn_addon_scope_cobra,wpn_addon_scope_pka,wpn_addon_scope_kashtan, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night
-scope_respawn_wpn_addon_scope = scope_pso1_svu
+scope_respawn_wpn_addon_scope = wpn_scope_pso1_svu
+
+;;
+;; Статик времени скрывается только на оптике, коллиматоры не задеваются, поэтому они остаются нетронутыми (02.11.2025)
+;;
+
 scope_respawn_wpn_addon_scope_pka = scope_pka_svu
 scope_respawn_wpn_addon_scope_cobra = scope_cobra_svu
-scope_respawn_wpn_addon_scope_kashtan = scope_kashtan_svu
-scope_respawn_wpn_addon_scope_x2.7 = scope_pso1m2_svu
-scope_respawn_wpn_addon_scope_detector = scope_nvsn_svu
-scope_respawn_wpn_addon_scope_night = scope_nvas_svu
+
+;;
+;; Статик времени скрывается только на оптике, коллиматоры не задеваются, поэтому они остаются нетронутыми (02.11.2025)
+;;
+
+scope_respawn_wpn_addon_scope_kashtan = wpn_scope_kashtan_svu
+scope_respawn_wpn_addon_scope_x2.7 = wpn_scope_pso1m2_svu
+scope_respawn_wpn_addon_scope_detector = wpn_scope_nvsn_svu
+scope_respawn_wpn_addon_scope_night = wpn_scope_nvas_svu
 scope_x 				= 60
 scope_y 				= -2
 
@@ -195,7 +205,7 @@ snd_scope_brightness_minus = weapons\nv_intensity
 #include "huds.ltx"
  
  
-[scope_pso1_svu]:wpn_svu
+[wpn_scope_pso1_svu]:wpn_svu
 hud  						= wpn_svu_1pso_hud
 scope_status				= 2	
 scope_respawn = wpn_svu
@@ -215,7 +225,7 @@ aim_hud_offset_pos_16x9 = 0.0,-0.002,-0.01
 aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
 
 
-
+[scope_pso1_svu]:wpn_scope_pso1_svu
 
 
 
@@ -241,9 +251,6 @@ aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
 
 inertion_origin_offset = -0.03
 
-
-
-
 [scope_cobra_svu]:wpn_svu
 hud  						= wpn_svu_cobra_hud
 scope_status				= 2	
@@ -267,7 +274,7 @@ inertion_origin_offset = -0.03
 
 
 
-[scope_kashtan_svu]:wpn_svu
+[wpn_scope_kashtan_svu]:wpn_svu
 hud  						= wpn_svu_kashtan_hud
 scope_status				= 2	
 scope_respawn = wpn_svu
@@ -288,11 +295,11 @@ aim_hud_offset_pos_16x9 = -0.0115,0.0,-0.1
 aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
 
 
+[scope_kashtan_svu]:wpn_scope_kashtan_svu
 
 
 
-
-[scope_pso1m2_svu]:wpn_svu
+[wpn_scope_pso1m2_svu]:wpn_svu
 hud  						= wpn_svu_pso1m2_hud
 scope_status				= 2	
 scope_respawn = wpn_svu
@@ -314,10 +321,10 @@ aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
 
 inertion_origin_offset = -0.03
 
+[scope_pso1m2_svu]:wpn_scope_pso1m2_svu
 
 
-
-[scope_nvsn_svu]:wpn_svu
+[wpn_scope_nvsn_svu]:wpn_svu
 hud  						= wpn_svu_nvsn_hud
 scope_status				= 2	
 scope_respawn = wpn_svu
@@ -339,10 +346,10 @@ aim_hud_offset_rot = 0.0,0.0,0.0
 aim_hud_offset_pos_16x9 = 0.0035,-0.03,-0.09
 aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
 
+[scope_nvsn_svu]:wpn_scope_nvsn_svu
 
 
-
-[scope_nvas_svu]:wpn_svu
+[wpn_scope_nvas_svu]:wpn_svu
 hud  						= wpn_svu_nvas_hud
 scope_status				= 2	
 scope_respawn = wpn_svu
@@ -362,3 +369,6 @@ aim_hud_offset_rot = 0.0,0.0,0.0
 
 aim_hud_offset_pos_16x9 = 0.011,-0.021,-0.05
 aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+
+[scope_nvas_svu]:wpn_scope_nvas_svu

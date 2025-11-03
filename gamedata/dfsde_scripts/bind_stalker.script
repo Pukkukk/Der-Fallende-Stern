@@ -47,6 +47,10 @@ function actor_binder:__init(obj) super(obj)
 	self.weather_manager = level_weathers.WeatherManager()
 	self.actor_detector = xr_detector.actor_detector()
 end
+
+function actor_binder:__finalize()
+	ui_loader.init()
+end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:net_spawn(data)
 
@@ -69,6 +73,7 @@ function actor_binder:net_spawn(data)
 	end
 
 	self.weather_manager:reset()
+	ui_loader.net_spawn(data) -- MonolithUI
 
 	if actor_stats.add_to_ranking ~= nil then
 		actor_stats.add_to_ranking(self.object:id())
@@ -105,6 +110,7 @@ function actor_binder:net_destroy()
 		actor_stats.remove_from_ranking(self.object:id())
 	end
 	-- game_stats.shutdown()
+	ui_loader.net_destroy() -- MonolithUI
 	db.del_actor(self.object)
 
 
@@ -125,27 +131,18 @@ function actor_binder:net_destroy()
 	self.object:set_callback(callback.article_info, nil)
 	self.object:set_callback(callback.on_item_take, nil)
 	self.object:set_callback(callback.on_item_drop, nil)
-	--self.object:set_callback(callback.actor_sleep, nil)
 	self.object:set_callback(callback.task_state, nil)
 	self.object:set_callback(callback.level_border_enter, nil)
 	self.object:set_callback(callback.level_border_exit, nil)
 	self.object:set_callback(callback.take_item_from_box, nil)
-        self.object:set_callback(callback.use_object, nil)  
+    self.object:set_callback(callback.use_object, nil)  
 	-- new callbacks
 	self.object:set_callback(callback.on_key_press, nil)
 	self.object:set_callback(callback.on_key_release, nil)
---	self.object:set_callback(callback.on_key_hold, nil)
---	self.object:set_callback(callback.on_mouse_wheel, nil)
---	self.object:set_callback(callback.on_mouse_move, nil)
+	self.object:set_callback(callback.on_mouse_wheel, nil)
 	self.object:set_callback(callback.on_belt, nil)
 	self.object:set_callback(callback.on_ruck, nil)
 	self.object:set_callback(callback.on_slot, nil)
-----	self.object:set_callback(callback.on_goodwill_change, nil)
---	self.object:set_callback(callback.entity_alive_before_hit, nil)
---	self.object:set_callback(callback.on_create_cell_item, nil)
---	self.object:set_callback(callback.on_select_item, nil)
---	self.object:set_callback(callback.on_focus_item, nil)
---	self.object:set_callback(callback.on_focus_lost_item, nil)
 
 
 	if sr_psy_antenna.psy_antenna then
@@ -180,32 +177,17 @@ function actor_binder:reinit()
 	self.object:set_callback(callback.on_item_take, self.on_item_take, self)
 	self.object:set_callback(callback.on_item_drop, self.on_item_drop, self)
 	self.object:set_callback(callback.trade_sell_buy_item, self.on_trade, self) -- for game stats
-	--self.object:set_callback(callback.actor_sleep, self.sleep_callback, self)
 	self.object:set_callback(callback.task_state, self.task_callback, self)
-	--self.object:set_callback(callback.map_location_added, self.map_location_added_callback, self)
 	self.object:set_callback(callback.level_border_enter, self.level_border_enter, self)
 	self.object:set_callback(callback.level_border_exit, self.level_border_exit, self)
 	self.object:set_callback(callback.take_item_from_box, self.take_item_from_box, self)
         self.object:set_callback(callback.use_object, self.use_obj, self) 
 
-
 	self.object:set_callback(callback.on_key_press, self.on_key, self)			-- нажатие клавиши
 	self.object:set_callback(callback.on_key_release, self.on_key_free, self)		-- отпускание клавиши
---	self.object:set_callback(callback.on_key_hold, self.on_key_hold, self)		-- удержание клавиши
---	self.object:set_callback(callback.on_mouse_wheel, self.on_wheel_rotation, self)	-- вращение колесика мыши
---	self.object:set_callback(callback.on_mouse_move, self.on_mouse_move, self)		-- движение мыши
 	self.object:set_callback(callback.on_belt, self.on_belt, self)		-- перемещение предмета на пояс
 	self.object:set_callback(callback.on_ruck, self.on_ruck, self)	-- перемещение предмета в рюкзак
 	self.object:set_callback(callback.on_slot, self.on_slot, self)		-- перемещение предмета в слот
---	self.object:set_callback(callback.on_goodwill_change, self.on_goodwill_change, self)		-- изменение отношений
---	self.object:set_callback(callback.on_release_npc, self.on_release_npc, self)		-- удаление серверного объекта непися или монстра
-	--
-	self.object:set_callback(callback.entity_alive_before_hit, self.before_hit_callback, self)
---	self.object:set_callback(callback.on_before_use_item, self.before_use, self)
---	self.object:set_callback(callback.on_create_cell_item, self.cell_item_create, self)
---	self.object:set_callback(callback.on_select_item, self.inv_item_select, self)
---	self.object:set_callback(callback.on_focus_item, self.inv_item_focus, self)
---	self.object:set_callback(callback.on_focus_lost_item, self.inv_item_focus_lost, self)
 
 end
 
@@ -857,7 +839,9 @@ function actor_binder:update(delta)
 	local time = time_global()
 	
 	game_stats.update (delta, self.object)
-	time_on_hud.show_time()
+--	time_on_hud.show_time()
+	ui_loader.update()
+	ui_loader_hud.update()
 	
 	if not has_alife_info ("ubil") and
 		xr_conditions.killed_by_actor then
@@ -1452,6 +1436,8 @@ function actor_binder:update(delta)
 
 
 	amk.on_actor_update()
+	ui_loader.update() -- MonolithUI
+	ui_loader_hud.update()
 	if bind_art then bind_art.beep_art(delta) end
 		if rx_ai then rx_ai.actor_update() end
 	if xrs_ai then xrs_ai.actor_update(delta) end
@@ -1490,7 +1476,6 @@ function actor_binder:update(delta)
 	elseif upd_time < time then
 		upd_time = time + 500
 		use_key.update()
-		dmx_fast_use_slots.FastUseSlotsHud()
 		this.hide_weapon_knife_d()
 	end
        

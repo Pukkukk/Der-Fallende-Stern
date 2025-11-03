@@ -1,0 +1,25 @@
+--[[-----------------------------------------------------------------------------------------------
+ File			: ui_data.script
+ Description	: Настройки
+ Source			: MonolithUI
+ Author			: Enframed
+ Date			: 04.12.2021
+ Last edit		: 04.12.2021
+--]]-----------------------------------------------------------------------------------------------
+
+-- Загружаем переменную
+function load(name)
+	return xr_logic.pstor_retrieve(db.actor, name, defaults[name])
+end
+
+-- Записываем переменную
+function save(name, value)
+	xr_logic.pstor_store(db.actor, name, value)
+end
+
+-- Удаляем переменную
+function delete(name)
+	if db.storage[db.actor:id()].pstor[name] then
+		db.storage[db.actor:id()].pstor[name] = nil
+	end
+end

@@ -390,7 +390,8 @@
 	</hud_blur5>
 <!-- /Dinamic HUD -->
 
-<!-- fast slot -->
+<!-- fast slot — old (dmx_fast_use_slots.script) -->
+
 	<caption_button x="705" y="745" width="120" height="17" stretch="1">
 		<texture x="500" y="800" width="176" height="17">ui\ui_old_textures</texture>
 	</caption_button>
@@ -422,5 +423,73 @@
 		<text y="-2" align="c"/>
 		<texture x="676" y="800" width="33" height="21">ui\ui_hud</texture>
 	</caption_value_4>
-<!-- fast slot -->
+	
+	<!-- fast slot — old -->
+	
+	
+	
+	<!-- fast slot — new (monolith_ui\ui_fast_use_slots.script) -->	
+	
+	<quick_slot0 x="705" y="720" width="29.9" height="40" stretch="1">
+	<texture>ui\ui_icon_equipment</texture>
+	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	        <texture a="136">ui_fast_use_count_back</texture>
+	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
+	    </counter>
+        <auto_frameline x="16" y="34" width="21" height="23">
+			<texture>null</texture>
+        </auto_frameline>
+	</quick_slot0>
+
+	<quick_slot1 x="735" y="720" width="29.9" height="40" stretch="1">
+	<texture>ui\ui_icon_equipment</texture>
+	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	        <texture a="136">ui_fast_use_count_back</texture>
+	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
+	    </counter>
+        <auto_frameline x="16" y="34" width="21" height="23">
+			<texture>null</texture>
+        </auto_frameline>
+	</quick_slot1>
+
+	<quick_slot2 x="765" y="720" width="29.9" height="40" stretch="1">
+	<texture>ui\ui_icon_equipment</texture>
+	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	        <texture a="136">ui_fast_use_count_back</texture>
+	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
+	    </counter>
+        <auto_frameline x="16" y="34" width="21" height="23">
+			<texture>null</texture>
+        </auto_frameline>
+	</quick_slot2>
+
+	<quick_slot3 x="795" y="720" width="29.9" height="40" stretch="1">
+	<texture>ui\ui_icon_equipment</texture>
+	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	        <texture a="136">ui_fast_use_count_back</texture>
+	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
+	    </counter>
+        <auto_frameline x="16" y="34" width="21" height="23">
+			<texture>null</texture>
+        </auto_frameline>
+	</quick_slot3>
+
+    <quick_slot0_text x="723" y="748" width="14" height="15" stretch="1">
+		<texture a="136">ui_fast_use_count_back</texture>
+        <text x="-0.5" y="1" color="hud_slot_key" align="c" vert_align="c" font="letterica16"/>
+    </quick_slot0_text>
+    <quick_slot1_text x="752" y="748" width="14" height="15" stretch="1">
+		<texture a="136">ui_fast_use_count_back</texture>
+        <text x="-0.5" y="1" color="hud_slot_key" align="c" vert_align="c" font="letterica16"/>
+    </quick_slot1_text>
+    <quick_slot2_text x="782" y="748" width="14" height="15" stretch="1">
+		<texture a="136">ui_fast_use_count_back</texture>>
+        <text x="-0.5" y="1" color="hud_slot_key" align="c" vert_align="c" font="letterica16"/>
+    </quick_slot2_text>
+    <quick_slot3_text x="812" y="748" width="14" height="15" stretch="1">
+		<texture a="136">ui_fast_use_count_back</texture>
+        <text x="-0.5" y="1" color="hud_slot_key" align="c" vert_align="c" font="letterica16"/>
+    </quick_slot3_text>
+	
+	<!-- fast slot — new (monolith_ui\ui_fast_use_slots.script) -->	
 </header>
