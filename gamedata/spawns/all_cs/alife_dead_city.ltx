@@ -1,0 +1,5380 @@
+[13220]
+
+; cse_abstract properties
+section_name = climable_object
+name = clmbl#0
+position = -46.442512512207, 9.91079139709473, 111.11727142334
+direction = -1.4036285392649e-05, 0.684517562389374, 1.57068693637848
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11960
+
+; cse_alife_object properties
+game_vertex_id = 3582
+level_vertex_id = 11268
+object_flags = 0xffffffbf
+
+; cse_shape properties
+shapes = 1
+shape_0:type = box
+shape_0:axis_x = 7.67866897583008,0,0
+shape_0:axis_y = 0,0.38960075378418,0
+shape_0:axis_z = 0,0,0.00412750244140625
+shape_0:offset = 0,0,0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13221]
+
+; cse_abstract properties
+section_name = climable_object
+name = clmbl#1
+position = -118.557456970215, 17.4853019714355, 126.520088195801
+direction = -0.0020533271599561, 0.68671727180481, 1.57112956047058
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11961
+
+; cse_alife_object properties
+game_vertex_id = 3582
+level_vertex_id = 11268
+object_flags = 0xffffffbf
+
+; cse_shape properties
+shapes = 1
+shape_0:type = box
+shape_0:axis_x = 1.63772010803223,0,0
+shape_0:axis_y = 0,0.0124130249023438,0
+shape_0:axis_z = 0,0,0.3363037109375
+shape_0:offset = 0,0,0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13222]
+
+; cse_abstract properties
+section_name = climable_object
+name = clmbl#2
+position = -128.352294921875, 17.6802177429199, 91.2472686767578
+direction = 0.000118461641250178, -2.40412425994873, -1.57091164588928
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11962
+
+; cse_alife_object properties
+game_vertex_id = 3582
+level_vertex_id = 11268
+object_flags = 0xffffffbf
+
+; cse_shape properties
+shapes = 1
+shape_0:type = box
+shape_0:axis_x = 1.45004272460938,0,0
+shape_0:axis_y = 0,0.375141143798828,0
+shape_0:axis_z = 0,0,0.0040283203125
+shape_0:offset = 0,0,0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13223]
+
+; cse_abstract properties
+section_name = climable_object
+name = clmbl#3
+position = -2.15950393676758, 9.80694198608398, 104.525634765625
+direction = 5.85796897212276e-06, 0.722992479801178, 1.57079112529755
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11963
+
+; cse_alife_object properties
+game_vertex_id = 3582
+level_vertex_id = 11268
+object_flags = 0xffffffbf
+
+; cse_shape properties
+shapes = 1
+shape_0:type = box
+shape_0:axis_x = 7.77500343322754,0,0
+shape_0:axis_y = 0,0.00124740600585938,0
+shape_0:axis_z = 0,0,0.400047302246094
+shape_0:offset = 0,0,0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13224]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dolg_reznikov
+position = -269.959991455078, 9.79997158050537, -54.6122627258301
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11964
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dolg_reznikov
+
+; cse_alife_object properties
+game_vertex_id = 3587
+distance = 9
+level_vertex_id = 75523
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[spawn]
+wpn_binoc
+
+[logic]
+active = walker
+combat_ignore = combat_ignore
+on_hit = hit
+on_death = death
+
+[hit]
+on_info = {=hit_by_actor =is_npc_enemy} %=taboo_taboo%
+
+[death]
+on_info = {=killed_by_actor =is_npc_enemy} %=taboo_taboo%
+
+[walker]
+path_walk = dc_dolg_reznikov_walk
+path_look = dc_dolg_reznikov_look
+combat_ignore_cond = {=fighting_dist_ge(25)}
+danger = danger_condition@dc_dolg_reznikov
+meet = default_meet
+on_info = {+sow_reznikov} walker1
+
+[walker1]
+path_walk = dc_dolg_reznikov_walk
+path_look = dc_dolg_reznikov_look
+combat_ignore_cond = {=fighting_dist_ge(25)}
+danger = danger_condition@dc_dolg_reznikov
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = {=fighting_dist_ge(25)}
+
+[danger_condition@dc_dolg_reznikov]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -269.959991455078, 9.79997158050537, -54.6122627258301
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13225]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dolg_zombie_0000
+position = -3.52436280250549, 1.07666790485382, 148.963363647461
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11965
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dolg_zombie_khvostov
+
+; cse_alife_object properties
+game_vertex_id = 3640
+distance = 9
+level_vertex_id = 353546
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+on_hit = hit
+on_death = death
+
+[hit]
+on_info = {=hit_by_actor =is_npc_enemy} %=taboo_taboo%
+
+[death]
+on_info = {=killed_by_actor =is_npc_enemy} %=taboo_taboo%
+
+[walker]
+path_walk = dc_dolg_zombie_0000_walk
+combat_ignore_cond = always
+danger = danger_condition@dc_dolg_zombie_0000
+
+meet = default_meet
+on_info = {+final_chines_cation} walker1
+
+[walker1]
+path_walk = dc_dolg_zombie_0000_walk
+combat_ignore_cond = always
+danger = danger_condition@dc_dolg_zombie_0000
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_dolg_zombie_0000]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+story_id = 20174
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -3.52436280250549, 1.07666790485382, 148.963363647461
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13226]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_01
+position = 106.232368469238, -10.0055522918701, 208.557601928711
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11966
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_svoboda_1
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 454449
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 106.232368469238, -10.0055522918701, 208.557601928711
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13227]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_02
+position = 102.540557861328, -10.0082168579102, 208.058959960938
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11967
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_svoboda_2
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 451285
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 102.540557861328, -10.0082168579102, 208.058959960938
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13228]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_03
+position = 99.0024108886719, -10.0033845901489, 208.389938354492
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11968
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_svoboda_3
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 448522
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 99.0024108886719, -10.0033845901489, 208.389938354492
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13229]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_04
+position = 95.2792205810547, -10.0104598999023, 209.722595214844
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11969
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_svoboda_1
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 445740
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 95.2792205810547, -10.0104598999023, 209.722595214844
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13230]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_05
+position = 91.5441513061523, -10.0275249481201, 211.036666870117
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11970
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_svoboda_2
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 442931
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 91.5441513061523, -10.0275249481201, 211.036666870117
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13231]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_06
+position = 88.6709060668945, -10.044960975647, 212.528793334961
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11971
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_svoboda_3
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 440679
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 88.6709060668945, -10.044960975647, 212.528793334961
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13232]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_07
+position = 85.8561096191406, -10.0644769668579, 214.264465332031
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11972
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_svoboda_1
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 438475
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 85.8561096191406, -10.0644769668579, 214.264465332031
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13233]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_08
+position = 83.9016952514648, -10.0872611999512, 216.506057739258
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11973
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_svoboda_2
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 436873
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 83.9016952514648, -10.0872611999512, 216.506057739258
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13234]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_09
+position = 81.4000091552734, -10.10573387146, 221.824325561523
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11974
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_svoboda_3
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 434727
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 81.4000091552734, -10.10573387146, 221.824325561523
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13235]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_10
+position = 110.355812072754, -9.99917316436768, 232.190628051758
+direction = 0, 3.14000010490417, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11975
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_dolg_1
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 457521
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 110.355812072754, -9.99917316436768, 232.190628051758
+upd:o_torso = 3.14000010490417, 0, 0
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13236]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_11
+position = 107.833389282227, -10.004711151123, 233.679168701172
+direction = 0, 3.14000010490417, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11976
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_dolg_2
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 455512
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 107.833389282227, -10.004711151123, 233.679168701172
+upd:o_torso = 3.14000010490417, 0, 0
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13237]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_12
+position = 105.014953613281, -10.0139837265015, 234.761749267578
+direction = 0, 3.14000010490417, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11977
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_dolg_3
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 453435
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 105.014953613281, -10.0139837265015, 234.761749267578
+upd:o_torso = 3.14000010490417, 0, 0
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13238]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_13
+position = 102.403495788574, -10.0231733322144, 235.898071289062
+direction = 0, 3.14000010490417, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11978
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_dolg_1
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 451325
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 102.403495788574, -10.0231733322144, 235.898071289062
+upd:o_torso = 3.14000010490417, 0, 0
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13239]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_14
+position = 98.7553634643555, -10.0360441207886, 236.094818115234
+direction = 0, 3.14000010490417, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11979
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_dolg_2
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 448556
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 98.7553634643555, -10.0360441207886, 236.094818115234
+upd:o_torso = 3.14000010490417, 0, 0
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13240]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_15
+position = 94.714225769043, -10.050332069397, 236.2998046875
+direction = 0, 3.14000010490417, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11980
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_dolg_3
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 445215
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 94.714225769043, -10.050332069397, 236.2998046875
+upd:o_torso = 3.14000010490417, 0, 0
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13241]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_16
+position = 91.9529418945312, -10.0599994659424, 234.355621337891
+direction = 0, 3.14000010490417, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11981
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_dolg_1
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 442965
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 91.9529418945312, -10.0599994659424, 234.355621337891
+upd:o_torso = 3.14000010490417, 0, 0
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13242]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_17
+position = 89.0935211181641, -10.0699195861816, 230.644958496094
+direction = 0, 3.14000010490417, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11982
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_dolg_2
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 440704
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 89.0935211181641, -10.0699195861816, 230.644958496094
+upd:o_torso = 3.14000010490417, 0, 0
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13243]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_18
+position = 85.7530899047852, -10.0850553512573, 228.629089355469
+direction = 0, 3.14000010490417, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11983
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_dolg_3
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 438496
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 85.7530899047852, -10.0850553512573, 228.629089355469
+upd:o_torso = 3.14000010490417, 0, 0
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13244]
+
+; cse_abstract properties
+section_name = degen_stalker
+name = dc_dram_stalker_19
+position = 81.5472717285156, -10.1158113479614, 225.830413818359
+direction = 0, 3.14000010490417, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11984
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_dram_dolg_1
+
+; cse_alife_object properties
+game_vertex_id = 3651
+distance = 9
+level_vertex_id = 434733
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+episode_iii_start}
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 81.5472717285156, -10.1158113479614, 225.830413818359
+upd:o_torso = 3.14000010490417, 0, 0
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13245]
+
+; cse_abstract properties
+section_name = level_changer
+name = dc2stancia_2
+position = 145.061553955078, 1.13805520534515, -137.788833618164
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11985
+
+; cse_alife_object properties
+game_vertex_id = 3654
+level_vertex_id = 480914
+object_flags = 0xffffff3e
+story_id = 20171
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 3
+
+; cse_alife_space_restrictor properties
+restrictor_type = 0
+
+; cse_alife_level_changer properties
+dest_game_vertex_id = 2654
+dest_level_vertex_id = 207012
+dest_position = -62.2769355773926, 0.149496585130692, 381.102752685547
+dest_direction = 0, -1.57000005245209, 0
+dest_level_name = l12_stancia_2
+dest_graph_point = start_actor_01
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13246]
+
+; cse_abstract properties
+section_name = lights_hanging_lamp
+name = dfs_dc_lights_camp_fire_omni_r1_r2_0000
+position = -23.4542541503906, 8.23141384124756, 99.0362243652344
+direction = -2.27373675443232e-13, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11986
+
+; cse_alife_object properties
+game_vertex_id = 3630
+level_vertex_id = 330430
+object_flags = 0xffffffba
+
+; cse_visual properties
+
+; cse_ph_skeleton properties
+
+; cse_alife_object_hanging_lamp properties
+main_color = 0xfffab807
+main_brightness = 0.40000001
+main_color_animator = koster
+main_range = 6
+light_flags = 0x2a
+health = 100
+main_virtual_size = 0.1
+ambient_radius = 2
+ambient_power = 0.40000001
+main_cone_angle = 2.0943952
+glow_radius = 0.69999999
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13247]
+
+; cse_abstract properties
+section_name = lights_hanging_lamp
+name = dfs_dc_lights_camp_fire_omni_r1_r2_0001
+position = -23.6354656219482, 8.7744083404541, 95.0877151489258
+direction = -2.27373675443232e-13, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11987
+
+; cse_alife_object properties
+game_vertex_id = 3630
+level_vertex_id = 331272
+object_flags = 0xffffffba
+
+; cse_visual properties
+
+; cse_ph_skeleton properties
+
+; cse_alife_object_hanging_lamp properties
+main_color = 0xfffab807
+main_brightness = 0.40000001
+main_color_animator = koster
+main_range = 6
+light_flags = 0x2a
+health = 100
+main_virtual_size = 0.1
+ambient_radius = 2
+ambient_power = 0.40000001
+main_cone_angle = 2.0943952
+glow_radius = 0.69999999
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13248]
+
+; cse_abstract properties
+section_name = lights_hanging_lamp
+name = dfs_dc_lights_camp_fire_omni_r1_r2_0002
+position = -10.4192886352539, 2.10585069656372, 148.777160644531
+direction = -2.27373675443232e-13, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11988
+
+; cse_alife_object properties
+game_vertex_id = 3640
+level_vertex_id = 345627
+object_flags = 0xffffffba
+
+; cse_visual properties
+
+; cse_ph_skeleton properties
+
+; cse_alife_object_hanging_lamp properties
+main_color = 0xfffab807
+main_brightness = 0.40000001
+main_color_animator = koster
+main_range = 6
+light_flags = 0x2a
+health = 100
+main_virtual_size = 0.1
+ambient_radius = 2
+ambient_power = 0.40000001
+main_cone_angle = 2.0943952
+glow_radius = 0.69999999
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13249]
+
+; cse_abstract properties
+section_name = lights_hanging_lamp
+name = dfs_dc_lights_camp_fire_omni_r1_r2_0003
+position = -86.7315368652344, 3.41556525230408, 172.655380249023
+direction = -2.27373675443232e-13, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11989
+
+; cse_alife_object properties
+game_vertex_id = 3621
+level_vertex_id = 257748
+object_flags = 0xffffffba
+
+; cse_visual properties
+
+; cse_ph_skeleton properties
+
+; cse_alife_object_hanging_lamp properties
+main_color = 0xfffab807
+main_brightness = 0.40000001
+main_color_animator = koster
+main_range = 6
+light_flags = 0x2a
+health = 100
+main_virtual_size = 0.1
+ambient_radius = 2
+ambient_power = 0.40000001
+main_cone_angle = 2.0943952
+glow_radius = 0.69999999
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13250]
+
+; cse_abstract properties
+section_name = m_car
+name = dc_jeep_01
+position = -23.9088039398193, 1.07961285114288, 155.126358032227
+direction = 0, -2.27500009536743, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11990
+
+; cse_alife_object properties
+game_vertex_id = 3629
+distance = 2
+level_vertex_id = 330542
+object_flags = 0xffffffba
+story_id = 20769
+
+; cse_visual properties
+visual_name = physics\vehicles\jeep\jeep
+visual_flags = 0x1
+
+; cse_ph_skeleton properties
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13251]
+
+; cse_abstract properties
+section_name = m_car
+name = vehicle_dc_pseudo_truck
+position = -251.393936157227, 3.65186643600464, -132.997848510742
+direction = 0, -0.774999976158142, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11991
+
+; cse_alife_object properties
+game_vertex_id = 3594
+distance = 2
+level_vertex_id = 89978
+object_flags = 0xffffffba
+custom_data = <<END
+[logic]
+active = ph_car
+[ph_car]
+usable = {+zaglushka_87 -truck_od_dead +player_complete_inform_about_sucsess}
+END
+story_id = 20172
+
+; cse_visual properties
+visual_name = veh\pseudo_tod
+visual_flags = 0x1
+
+; cse_ph_skeleton properties
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13252]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = dc_cutscene_point
+position = 28.5365886688232, -1.18145835399628, 176.254409790039
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11992
+
+; cse_alife_object properties
+game_vertex_id = 3648
+level_vertex_id = 394121
+object_flags = 0xffffff3e
+custom_data = <<END
+[logic]
+active = sr_cutscene
+
+[sr_cutscene]
+point = dc_cutscene_way
+look = dc_cutscene_look
+cam_effector = dc_cutscene
+on_signal = cameff_end | nil %+zaglushka_118%
+END
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 1
+
+; cse_alife_space_restrictor properties
+restrictor_type = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13253]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = dfs_dc_camp_fire_0000
+position = -23.4542541503906, 7.73141431808472, 99.0362243652344
+direction = -2.27373675443232e-13, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11993
+
+; cse_alife_object properties
+game_vertex_id = 3630
+level_vertex_id = 330430
+object_flags = 0xffffff3e
+
+; cse_shape properties
+shapes = 1
+shape_0:type = box
+shape_0:axis_x = 1.7837952375412,0,0
+shape_0:axis_y = 0,1.93420171737671,0
+shape_0:axis_z = 0,0,1.7837952375412
+shape_0:offset = 0,0,0
+
+; cse_alife_space_restrictor properties
+restrictor_type = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13254]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = dfs_dc_camp_fire_0001
+position = -23.6354656219482, 8.2744083404541, 95.0877151489258
+direction = -2.27373675443232e-13, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11994
+
+; cse_alife_object properties
+game_vertex_id = 3630
+level_vertex_id = 331272
+object_flags = 0xffffff3e
+
+; cse_shape properties
+shapes = 1
+shape_0:type = box
+shape_0:axis_x = 1.7837952375412,0,0
+shape_0:axis_y = 0,1.93420171737671,0
+shape_0:axis_z = 0,0,1.7837952375412
+shape_0:offset = 0,0,0
+
+; cse_alife_space_restrictor properties
+restrictor_type = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13255]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = dfs_dc_camp_fire_0002
+position = -10.4192886352539, 1.60585081577301, 148.777160644531
+direction = -2.27373675443232e-13, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11995
+
+; cse_alife_object properties
+game_vertex_id = 3640
+level_vertex_id = 345627
+object_flags = 0xffffff3e
+
+; cse_shape properties
+shapes = 1
+shape_0:type = box
+shape_0:axis_x = 1.7837952375412,0,0
+shape_0:axis_y = 0,1.93420171737671,0
+shape_0:axis_z = 0,0,1.7837952375412
+shape_0:offset = 0,0,0
+
+; cse_alife_space_restrictor properties
+restrictor_type = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13256]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = dfs_dc_camp_fire_0003
+position = -86.7315368652344, 2.91556525230408, 172.655380249023
+direction = -2.27373675443232e-13, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11996
+
+; cse_alife_object properties
+game_vertex_id = 3621
+level_vertex_id = 257748
+object_flags = 0xffffff3e
+
+; cse_shape properties
+shapes = 1
+shape_0:type = box
+shape_0:axis_x = 1.7837952375412,0,0
+shape_0:axis_y = 0,1.93420171737671,0
+shape_0:axis_z = 0,0,1.7837952375412
+shape_0:offset = 0,0,0
+
+; cse_alife_space_restrictor properties
+restrictor_type = 2
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13257]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = episode_iii_point
+position = 34.693359375, -1.04458236694336, 174.880599975586
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11997
+
+; cse_alife_object properties
+game_vertex_id = 3648
+level_vertex_id = 394121
+object_flags = 0xffffff3e
+custom_data = <<END
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_actor_inside = {+zaglushka_118 -zaglushka_95} %+zaglushka_95 =prolog%
+on_info = {+zaglushka_95} sr_idle1
+
+[sr_idle1]
+on_timer = 6000 | %+static_3%
+on_info = {+static_3} sr_idle2
+
+[sr_idle2]
+nil
+END
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 1
+
+; cse_alife_space_restrictor properties
+restrictor_type = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13258]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = pseudo_truck_hit_point
+position = -251.393936157227, 3.65186643600464, -132.997848510742
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11998
+
+; cse_alife_object properties
+game_vertex_id = 3594
+level_vertex_id = 89978
+object_flags = 0xffffff3e
+custom_data = <<END
+[logic]
+active = sr_idle
+
+[sr_idle]
+on_info = {+havent_cons} sr_idle1 %+zaglushka_84%
+on_info2 = {+player_complete_dfs_story} sr_idle6
+
+[sr_idle1]
+on_timer = 10000 | %+zaglushka_85%
+on_info = {+zaglushka_85} sr_idle2
+
+[sr_idle2]
+on_info = sr_idle3 %=hit_obj(20172:root:10000:15000)%
+
+[sr_idle3]
+on_info = sr_idle4 %+dfs_story_failed%
+
+[sr_idle4]
+on_timer = 7000 | %+zaglushka_90%
+on_info = {+zaglushka_90} sr_idle5
+
+[sr_idle5]
+on_info = nil %+inform_about_crush_start%
+
+[sr_idle6]
+on_timer = 17000 | %+zaglushka_91%
+on_info = {+zaglushka_91} sr_idle7
+
+[sr_idle7]
+on_info = nil %+inform_about_sucsess_start%
+END
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 1
+
+; cse_alife_space_restrictor properties
+restrictor_type = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13259]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_01
+position = -151.488006591797, 9.05002880096436, -158.361114501953
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 11999
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3606
+distance = 90
+level_vertex_id = 185837
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_01_walk
+path_look = dc_stalker_grc_01_look
+danger = danger_condition@dc_stalker_grc_01
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_01_walk
+path_look = dc_stalker_grc_01_look
+danger = danger_condition@dc_stalker_grc_01
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_01]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -151.488006591797, 9.05002880096436, -158.361114501953
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13260]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_02
+position = -149.742614746094, 9.43509578704834, -172.570861816406
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12000
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3610
+distance = 90
+level_vertex_id = 187304
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_02_walk
+path_look = dc_stalker_grc_02_look
+danger = danger_condition@dc_stalker_grc_02
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_02_walk
+path_look = dc_stalker_grc_02_look
+danger = danger_condition@dc_stalker_grc_02
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_02]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -149.742614746094, 9.43509578704834, -172.570861816406
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13261]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_03
+position = -128.906021118164, 8.54497528076172, -175.241851806641
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12001
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3610
+distance = 90
+level_vertex_id = 209833
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_03_walk
+path_look = dc_stalker_grc_03_look
+danger = danger_condition@dc_stalker_grc_03
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_03_walk
+path_look = dc_stalker_grc_03_look
+danger = danger_condition@dc_stalker_grc_03
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_03]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -128.906021118164, 8.54497528076172, -175.241851806641
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13262]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_04
+position = -131.555252075195, 7.03978490829468, -149.937057495117
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12002
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3606
+distance = 90
+level_vertex_id = 206854
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_04_walk
+path_look = dc_stalker_grc_04_look
+danger = danger_condition@dc_stalker_grc_04
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_04_walk
+path_look = dc_stalker_grc_04_look
+danger = danger_condition@dc_stalker_grc_04
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_04]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -131.555252075195, 7.03978490829468, -149.937057495117
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13263]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_05
+position = -9.23626518249512, 8.40356159210205, -159.052780151367
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12003
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3639
+distance = 90
+level_vertex_id = 346874
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_05_walk
+path_look = dc_stalker_grc_05_look
+danger = danger_condition@dc_stalker_grc_05
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_05_walk
+path_look = dc_stalker_grc_05_look
+danger = danger_condition@dc_stalker_grc_05
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_05]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -9.23626518249512, 8.40356159210205, -159.052780151367
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13264]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_06
+position = 0.792446196079254, 8.50400829315186, -137.553131103516
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12004
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3646
+distance = 90
+level_vertex_id = 357846
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_06_walk
+path_look = dc_stalker_grc_06_look
+danger = danger_condition@dc_stalker_grc_06
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_06_walk
+path_look = dc_stalker_grc_06_look
+danger = danger_condition@dc_stalker_grc_06
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_06]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 0.792446196079254, 8.50400829315186, -137.553131103516
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13265]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_07
+position = 15.2706108093262, 8.67288875579834, -125.083023071289
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12005
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3646
+distance = 90
+level_vertex_id = 373877
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_07_walk
+path_look = dc_stalker_grc_07_look
+danger = danger_condition@dc_stalker_grc_07
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_07_walk
+path_look = dc_stalker_grc_07_look
+danger = danger_condition@dc_stalker_grc_07
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_07]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 15.2706108093262, 8.67288875579834, -125.083023071289
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13266]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_08
+position = 30.3246879577637, 8.91155242919922, -110.570068359375
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12006
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3646
+distance = 90
+level_vertex_id = 388509
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_08_walk
+path_look = dc_stalker_grc_08_look
+danger = danger_condition@dc_stalker_grc_08
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_08_walk
+path_look = dc_stalker_grc_08_look
+danger = danger_condition@dc_stalker_grc_08
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_08]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 30.3246879577637, 8.91155242919922, -110.570068359375
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13267]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_09
+position = 45.9555625915527, 9.44281959533691, -106.960235595703
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12007
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3646
+distance = 90
+level_vertex_id = 403607
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_09_walk
+path_look = dc_stalker_grc_09_look
+danger = danger_condition@dc_stalker_grc_09
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_09_walk
+path_look = dc_stalker_grc_09_look
+danger = danger_condition@dc_stalker_grc_09
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_09]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 45.9555625915527, 9.44281959533691, -106.960235595703
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13268]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_10
+position = 50.1984558105469, 9.05579471588135, -121.844131469727
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12008
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3646
+distance = 90
+level_vertex_id = 407435
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_10_walk
+path_look = dc_stalker_grc_10_look
+danger = danger_condition@dc_stalker_grc_10
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_10_walk
+path_look = dc_stalker_grc_10_look
+danger = danger_condition@dc_stalker_grc_10
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_10]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 50.1984558105469, 9.05579471588135, -121.844131469727
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13269]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_11
+position = 31.5914878845215, 8.03192806243896, -146.234298706055
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12009
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3646
+distance = 90
+level_vertex_id = 389846
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_11_walk
+path_look = dc_stalker_grc_11_look
+danger = danger_condition@dc_stalker_grc_11
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_11_walk
+path_look = dc_stalker_grc_11_look
+danger = danger_condition@dc_stalker_grc_11
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_11]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 31.5914878845215, 8.03192806243896, -146.234298706055
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13270]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_12
+position = 243.065887451172, -2.77375674247742, 56.5246353149414
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12010
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3659
+distance = 90
+level_vertex_id = 535112
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_12_walk
+path_look = dc_stalker_grc_12_look
+danger = danger_condition@dc_stalker_grc_12
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_12_walk
+path_look = dc_stalker_grc_12_look
+danger = danger_condition@dc_stalker_grc_12
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_12]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 243.065887451172, -2.77375674247742, 56.5246353149414
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13271]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_13
+position = 250.847091674805, -3.24413394927979, 24.7443370819092
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12011
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3659
+distance = 90
+level_vertex_id = 537806
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_13_walk
+path_look = dc_stalker_grc_13_look
+danger = danger_condition@dc_stalker_grc_13
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_13_walk
+path_look = dc_stalker_grc_13_look
+danger = danger_condition@dc_stalker_grc_13
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_13]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 250.847091674805, -3.24413394927979, 24.7443370819092
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13272]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_14
+position = 286.846405029297, -2.07566666603088, 32.9124755859375
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12012
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3659
+distance = 90
+level_vertex_id = 546912
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_14_walk
+path_look = dc_stalker_grc_14_look
+danger = danger_condition@dc_stalker_grc_14
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_14_walk
+path_look = dc_stalker_grc_14_look
+danger = danger_condition@dc_stalker_grc_14
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_14]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 286.846405029297, -2.07566666603088, 32.9124755859375
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13273]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_15
+position = 276.431365966797, -3.31026315689087, 57.4056777954102
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12013
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_stalker_grc
+
+; cse_alife_object properties
+game_vertex_id = 3659
+distance = 90
+level_vertex_id = 544472
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_15_walk
+path_look = dc_stalker_grc_15_look
+danger = danger_condition@dc_stalker_grc_15
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_15_walk
+path_look = dc_stalker_grc_15_look
+danger = danger_condition@dc_stalker_grc_15
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_15]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 276.431365966797, -3.31026315689087, 57.4056777954102
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13274]
+
+; cse_abstract properties
+section_name = stalker
+name = dc_stalker_grc_16
+position = 243.897644042969, -2.40697264671326, 73.6045074462891
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12014
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_grc_chief
+
+; cse_alife_object properties
+game_vertex_id = 3658
+distance = 90
+level_vertex_id = 535379
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {+dc_grc_spawn}
+[spawn]
+fly_pda
+
+[logic]
+active = walker
+on_combat = combat
+combat_ignore = combat_ignore
+
+[combat_ignore]
+
+[combat]
+combat_type = monolith
+
+[walker]
+path_walk = dc_stalker_grc_16_walk
+path_look = dc_stalker_grc_16_look
+danger = danger_condition@dc_stalker_grc_16
+meet = default_meet
+on_info = {+zaglushka_87} walker1
+
+[walker1]
+path_walk = dc_stalker_grc_16_walk
+path_look = dc_stalker_grc_16_look
+danger = danger_condition@dc_stalker_grc_16
+meet = no_meet
+
+[danger_condition@dc_stalker_grc_16]
+ignore_distance = 0
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 5
+g_squad = 5
+g_group = 5
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 243.897644042969, -2.40697264671326, 73.6045074462891
+upd:g_team = 5
+upd:g_squad = 5
+upd:g_group = 5
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13275]
+
+; cse_abstract properties
+section_name = stalker
+name = dead_city_dp_stalker_1
+position = -2.03449106216431, 1.25041246414185, 88.6155242919922
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12015
+
+; cse_alife_trader_abstract properties
+money = 300
+character_profile = dominoes_principle_stalker_3
+
+; cse_alife_object properties
+game_vertex_id = 3640
+distance = 10
+level_vertex_id = 355008
+object_flags = 0xffffffbf
+custom_data = <<END
+[spawner]
+cond = {+dominoes_principle45_start}
+[logic]
+active = nil
+on_death = death
+
+[death]
+on_info = %+player_complete_dominoes_principle45 +dominoes_principle84_start =im_laughter%
+
+[smart_terrains]
+none = true
+END
+story_id = 20571
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -2.03449106216431, 1.25041246414185, 88.6155242919922
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13276]
+
+; cse_abstract properties
+section_name = stalker
+name = dead_city_dp_stalker_2
+position = -2.03449106216431, 1.25041246414185, 88.6155242919922
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12016
+
+; cse_alife_trader_abstract properties
+money = 300
+character_profile = dominoes_principle_stalker_4
+
+; cse_alife_object properties
+game_vertex_id = 3640
+distance = 10
+level_vertex_id = 355008
+object_flags = 0xffffffbf
+custom_data = <<END
+[spawner]
+cond = {+dominoes_principle56_start}
+[logic]
+active = nil
+on_death = death
+
+[death]
+on_info = %+player_complete_dominoes_principle56 +dominoes_principle98_start =im_laughter%
+
+[smart_terrains]
+none = true
+END
+story_id = 20572
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -2.03449106216431, 1.25041246414185, 88.6155242919922
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13277]
+
+; cse_abstract properties
+section_name = stalker
+name = dead_city_dp_stalker_3
+position = -2.03449106216431, 1.25041246414185, 88.6155242919922
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12017
+
+; cse_alife_trader_abstract properties
+money = 300
+character_profile = dominoes_principle_stalker_5
+
+; cse_alife_object properties
+game_vertex_id = 3640
+distance = 10
+level_vertex_id = 355008
+object_flags = 0xffffffbf
+custom_data = <<END
+[spawner]
+cond = {+dominoes_principle68_start}
+[logic]
+active = nil
+on_death = death
+
+[death]
+on_info = %+player_complete_dominoes_principle68 +leading_deadlock9_start +leading_deadlock10_start =im_laughter%
+
+[smart_terrains]
+none = true
+END
+story_id = 20573
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -2.03449106216431, 1.25041246414185, 88.6155242919922
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13278]
+
+; cse_abstract properties
+section_name = stalker
+name = dead_city_dp_stalker_4
+position = -2.03449106216431, 1.25041246414185, 88.6155242919922
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12018
+
+; cse_alife_trader_abstract properties
+money = 300
+character_profile = dominoes_principle_stalker_6
+
+; cse_alife_object properties
+game_vertex_id = 3640
+distance = 10
+level_vertex_id = 355008
+object_flags = 0xffffffbf
+custom_data = <<END
+[spawner]
+cond = {+dominoes_principle80_start}
+[logic]
+active = nil
+on_death = death
+
+[death]
+on_info = %+player_complete_dominoes_principle80 =im_laughter%
+
+[smart_terrains]
+none = true
+END
+story_id = 20574
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -2.03449106216431, 1.25041246414185, 88.6155242919922
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13279]
+
+; cse_abstract properties
+section_name = stalker
+name = dead_city_dp_stalker_5
+position = -2.03449106216431, 1.25041246414185, 88.6155242919922
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12019
+
+; cse_alife_trader_abstract properties
+money = 300
+character_profile = dominoes_principle_stalker_7
+
+; cse_alife_object properties
+game_vertex_id = 3640
+distance = 10
+level_vertex_id = 355008
+object_flags = 0xffffffbf
+custom_data = <<END
+[spawner]
+cond = {+dominoes_principle92_start}
+[logic]
+active = nil
+on_death = death
+
+[death]
+on_info = %+player_complete_dominoes_principle92 +leading_deadlock20_start =im_laughter%
+
+[smart_terrains]
+none = true
+END
+story_id = 20575
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -2.03449106216431, 1.25041246414185, 88.6155242919922
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13280]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_dead_stalker_01
+position = -111.633010864258, 6.85912084579468, 39.0156784057617
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12020
+
+; cse_alife_trader_abstract properties
+character_profile = dc_fly
+
+; cse_alife_object properties
+game_vertex_id = 3622
+distance = 9
+level_vertex_id = 229856
+object_flags = 0xffffffff
+custom_data = <<END
+[dont_spawn_loot]
+[dont_spawn_character_supplies]
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 0
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 0
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -111.633010864258, 6.85912084579468, 39.0156784057617
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13281]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_iron_mask
+position = -247.169891357422, 3.63236141204834, -128.521224975586
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12021
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = iron_mask_3
+
+; cse_alife_object properties
+game_vertex_id = 3594
+distance = 9
+level_vertex_id = 93549
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_iron_mask_walk
+path_look = dc_iron_mask_look
+combat_ignore_cond = always
+danger = danger_condition@dc_iron_mask
+
+meet = no_meet
+show_spot = false
+on_actor_dist_le = 20 | remark
+
+[remark]
+anim = hello
+snd = demon_say
+target = actor
+meet = no_meet
+show_spot = false
+snd_anim_sync = true
+on_actor_dist_le = 5 | walker1
+danger = danger_condition@dc_iron_mask
+combat_ignore_cond = always
+
+[walker1]
+path_walk = dc_iron_mask_walk
+path_look = dc_iron_mask_look
+combat_ignore_cond = always
+danger = danger_condition@dc_iron_mask
+
+meet = meet
+show_spot = false
+on_info = {+havent_cons} walker2
+on_info2 = {+player_complete_dfs_story} walker2
+
+[walker2]
+path_walk = dc_iron_mask_walk
+path_look = dc_iron_mask_look1
+combat_ignore_cond = always
+danger = danger_condition@dc_iron_mask
+
+meet = no_meet
+show_spot = false
+on_timer = 5000 | %+zaglushka_87%
+on_info = {+zaglushka_87} nil %=dc_im_dissapear%
+
+[meet]
+meet_state 		= ward@wait
+meet_state_wpn 	= ward@wait
+victim 			= actor
+victim_wpn 		= actor
+use				= true
+use_wpn			= false
+meet_dialog		= dc_iron_mask_dialog
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_iron_mask]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+story_id = 20173
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -247.169891357422, 3.63236141204834, -128.521224975586
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13282]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0001
+position = -22.4113883972168, 7.38590717315674, 97.7311630249023
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12022
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_1
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 332115
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0001_walk
+path_look = dc_krank_stalker_0001_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0001
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0001]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -22.4113883972168, 7.38590717315674, 97.7311630249023
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13283]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0002
+position = -25.59206199646, 7.3857274055481, 99.162467956543
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12023
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_2
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 327843
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0002_walk
+path_look = dc_krank_stalker_0002_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0002
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0002]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -25.59206199646, 7.3857274055481, 99.162467956543
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13284]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0003
+position = -23.1960105895996, 7.38604593276978, 101.078918457031
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12024
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_3
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 331295
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0003_walk
+path_look = dc_krank_stalker_0003_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0003
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0003]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -23.1960105895996, 7.38604593276978, 101.078918457031
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13285]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0004
+position = -17.0910320281982, 7.38337802886963, 100.416114807129
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12025
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_4
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 338496
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0004_walk
+path_look = dc_krank_stalker_0004_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0004
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0004]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -17.0910320281982, 7.38337802886963, 100.416114807129
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13286]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0005
+position = -46.0657691955566, 7.384840965271, 109.345687866211
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12026
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_5
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 304197
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0005_walk
+path_look = dc_krank_stalker_0005_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0005
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0005]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -46.0657691955566, 7.384840965271, 109.345687866211
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13287]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0006
+position = -19.3813304901123, 11.2279682159424, 89.2074432373047
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12027
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_6
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 335310
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0006_walk
+path_look = dc_krank_stalker_0006_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0006
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0006]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -19.3813304901123, 11.2279682159424, 89.2074432373047
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13288]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0007
+position = -63.5361976623535, 1.25028705596924, 83.0948944091797
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12028
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_7
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 283994
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0007_walk
+path_look = dc_krank_stalker_0007_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0007
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0007]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -63.5361976623535, 1.25028705596924, 83.0948944091797
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13289]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0008
+position = -61.9445648193359, 1.25026893615723, 80.9552764892578
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12029
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_8
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 286220
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0008_walk
+path_look = dc_krank_stalker_0008_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0008
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0008]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -61.9445648193359, 1.25026893615723, 80.9552764892578
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13290]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0009
+position = -60.0906143188477, 1.25131750106812, 79.0432968139648
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12030
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_9
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 287684
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0009_walk
+path_look = dc_krank_stalker_0009_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0009
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0009]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -60.0906143188477, 1.25131750106812, 79.0432968139648
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13291]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0010
+position = -58.3793754577637, 1.25123560428619, 77.2410202026367
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12031
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_10
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 289920
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0010_walk
+path_look = dc_krank_stalker_0010_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0010
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0010]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -58.3793754577637, 1.25123560428619, 77.2410202026367
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13292]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0011
+position = -56.8289566040039, 1.25115537643433, 75.3894882202148
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12032
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_11
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 291469
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0011_walk
+path_look = dc_krank_stalker_0011_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0011
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0011]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -56.8289566040039, 1.25115537643433, 75.3894882202148
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13293]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0012
+position = -55.2566184997559, 1.24655818939209, 73.5103607177734
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12033
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_12
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 293022
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0012_walk
+path_look = dc_krank_stalker_0012_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0012
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0012]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -55.2566184997559, 1.24655818939209, 73.5103607177734
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13294]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0013
+position = -66.9239044189453, 2.20661211013794, 70.8590927124023
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12034
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_13
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 9
+level_vertex_id = 280140
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0013_walk
+path_look = dc_krank_stalker_0013_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0013
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0013]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -66.9239044189453, 2.20661211013794, 70.8590927124023
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13295]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0014
+position = -88.5531997680664, 2.6289210319519, 173.066497802734
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12035
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_14
+
+; cse_alife_object properties
+game_vertex_id = 3621
+distance = 9
+level_vertex_id = 255543
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0014_walk
+path_look = dc_krank_stalker_0014_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0014
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0014]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -88.5531997680664, 2.6289210319519, 173.066497802734
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13296]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0015
+position = -84.806037902832, 2.43357825279236, 173.30012512207
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12036
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_15
+
+; cse_alife_object properties
+game_vertex_id = 3621
+distance = 9
+level_vertex_id = 260064
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0015_walk
+path_look = dc_krank_stalker_0015_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0015
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0015]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -84.806037902832, 2.43357825279236, 173.30012512207
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13297]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0016
+position = -86.6647491455078, 2.69888424873352, 170.211212158203
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12037
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_16
+
+; cse_alife_object properties
+game_vertex_id = 3621
+distance = 9
+level_vertex_id = 257744
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0016_walk
+path_look = dc_krank_stalker_0016_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0016
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0016]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -86.6647491455078, 2.69888424873352, 170.211212158203
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13298]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0017
+position = -69.4876708984375, 2.17906594276428, 174.420639038086
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12038
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_17
+
+; cse_alife_object properties
+game_vertex_id = 3621
+distance = 9
+level_vertex_id = 277904
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0017_walk
+path_look = dc_krank_stalker_0017_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0017
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0017]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -69.4876708984375, 2.17906594276428, 174.420639038086
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13299]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0018
+position = -81.5398712158203, 1.25140392780304, 35.6104774475098
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12039
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_18
+
+; cse_alife_object properties
+game_vertex_id = 3622
+distance = 9
+level_vertex_id = 263860
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0018_walk
+path_look = dc_krank_stalker_0018_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0018
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0018]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -81.5398712158203, 1.25140392780304, 35.6104774475098
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13300]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0019
+position = -117.621643066406, 1.07823956012726, -14.7472534179688
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12040
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_19
+
+; cse_alife_object properties
+game_vertex_id = 3615
+distance = 9
+level_vertex_id = 222378
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0019_walk
+path_look = dc_krank_stalker_0019_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0019
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0019]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -117.621643066406, 1.07823956012726, -14.7472534179688
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13301]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0020
+position = -116.402587890625, 1.07974922657013, -17.1707916259766
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12041
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_20
+
+; cse_alife_object properties
+game_vertex_id = 3620
+distance = 9
+level_vertex_id = 223984
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0020_walk
+path_look = dc_krank_stalker_0020_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0020
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0020]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -116.402587890625, 1.07974922657013, -17.1707916259766
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13302]
+
+; cse_abstract properties
+section_name = stalker_sakharov
+name = dc_krank_stalker_0021
+position = -117.039207458496, 1.08000349998474, -19.8917770385742
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12042
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = dc_krank_21
+
+; cse_alife_object properties
+game_vertex_id = 3620
+distance = 9
+level_vertex_id = 223178
+object_flags = 0xffffffff
+custom_data = <<END
+[logic]
+active = walker
+combat_ignore = combat_ignore
+
+[walker]
+path_walk = dc_krank_stalker_0021_walk
+path_look = dc_krank_stalker_0021_look
+combat_ignore_cond = always
+danger = danger_condition@dc_krank_stalker_0021
+
+meet = no_meet
+
+[combat_ignore]
+;combat_ignore_cond = always
+
+[danger_condition@dc_krank_stalker_0021]
+ignore_distance = 0
+
+[smart_terrains]
+none = true
+END
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+health = 2
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 2
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = -117.039207458496, 1.08000349998474, -19.8917770385742
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13303]
+
+; cse_abstract properties
+section_name = zone_flame_small
+name = dfs_dc_zone_flame_small_0000
+position = -23.4542541503906, 7.73141431808472, 99.0362243652344
+direction = -9.31549948290922e-10, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12043
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 16.1
+level_vertex_id = 330430
+object_flags = 0xffffff3e
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 0.64168655872345
+
+; cse_alife_space_restrictor properties
+restrictor_type = 0
+
+; cse_alife_custom_zone properties
+max_power = 15
+
+; cse_alife_anomalous_zone properties
+offline_interactive_radius = 3
+artefact_spawn_count = 32
+artefact_position_offset = 0x4092
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13304]
+
+; cse_abstract properties
+section_name = zone_flame_small
+name = dfs_dc_zone_flame_small_0001
+position = -23.6354656219482, 8.2744083404541, 95.0877151489258
+direction = -9.31549948290922e-10, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12044
+
+; cse_alife_object properties
+game_vertex_id = 3630
+distance = 16.1
+level_vertex_id = 331272
+object_flags = 0xffffff3e
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 0.64168655872345
+
+; cse_alife_space_restrictor properties
+restrictor_type = 0
+
+; cse_alife_custom_zone properties
+max_power = 15
+
+; cse_alife_anomalous_zone properties
+offline_interactive_radius = 3
+artefact_spawn_count = 32
+artefact_position_offset = 0x4092
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13305]
+
+; cse_abstract properties
+section_name = zone_flame_small
+name = dfs_dc_zone_flame_small_0002
+position = -10.4192886352539, 1.60585081577301, 148.777160644531
+direction = -9.31549948290922e-10, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12045
+
+; cse_alife_object properties
+game_vertex_id = 3640
+distance = 16.1
+level_vertex_id = 345627
+object_flags = 0xffffff3e
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 0.64168655872345
+
+; cse_alife_space_restrictor properties
+restrictor_type = 0
+
+; cse_alife_custom_zone properties
+max_power = 15
+
+; cse_alife_anomalous_zone properties
+offline_interactive_radius = 3
+artefact_spawn_count = 32
+artefact_position_offset = 0x4092
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[13306]
+
+; cse_abstract properties
+section_name = zone_flame_small
+name = dfs_dc_zone_flame_small_0003
+position = -86.7315368652344, 2.91556525230408, 172.655380249023
+direction = -9.31549948290922e-10, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 12046
+
+; cse_alife_object properties
+game_vertex_id = 3621
+distance = 16.1
+level_vertex_id = 257748
+object_flags = 0xffffff3e
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 0.64168655872345
+
+; cse_alife_space_restrictor properties
+restrictor_type = 0
+
+; cse_alife_custom_zone properties
+max_power = 15
+
+; cse_alife_anomalous_zone properties
+offline_interactive_radius = 3
+artefact_spawn_count = 32
+artefact_position_offset = 0x4092
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

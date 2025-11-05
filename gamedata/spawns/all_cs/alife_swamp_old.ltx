@@ -1,0 +1,605 @@
+[10585]
+
+; cse_abstract properties
+section_name = level_changer
+name = swamp_old_2_lost_village
+position = 33.3713684082031, 4.19810962677002, 304.929779052734
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3105
+
+; cse_alife_object properties
+game_vertex_id = 4390
+level_vertex_id = 1219327
+object_flags = 0xffffff3e
+story_id = 19905
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 2
+
+; cse_alife_space_restrictor properties
+restrictor_type = 3
+
+; cse_alife_level_changer properties
+dest_game_vertex_id = 3335
+dest_level_vertex_id = 27590
+dest_position = 47.4698944091797, 6.86920499801636, -79.6338195800781
+dest_level_name = lost_village
+dest_graph_point = start_actor_01
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10586]
+
+; cse_abstract properties
+section_name = m_car
+name = swamp_car_1
+position = 264.883697509766, 1.48692095279694, -253.281402587891
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3106
+
+; cse_alife_object properties
+game_vertex_id = 4395
+distance = 2
+level_vertex_id = 1722977
+object_flags = 0xffffffba
+story_id = 20793
+
+; cse_visual properties
+visual_name = physics\vehicles\niva\veh_niva_u_01
+visual_flags = 0x1
+
+; cse_ph_skeleton properties
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10587]
+
+; cse_abstract properties
+section_name = m_controller_normal
+name = swamp_old_controller_tubeman
+position = -314.670013427734, 2.55999994277954, 73
+direction = 0, 0.000331776973325759, 0.0392423942685127
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3119
+
+; cse_alife_object properties
+game_vertex_id = 4399
+distance = 49
+level_vertex_id = 467389
+object_flags = 0xfffff7bb
+custom_data = <<END
+[smart_terrains] 
+none = true
+END
+
+; cse_visual properties
+visual_name = monsters\kontroler\kontroler
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+
+; cse_ph_skeleton properties
+
+; cse_alife_monster_base properties
+
+; se_monster properties
+upd:health = 1
+upd:timestamp = 0
+upd:creature_flags = 0x74
+upd:position = -314.670013427734, 2.55999994277954, 73
+upd:o_torso = 0.000331776973325759, 0.0392423942685127, 0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10588]
+
+; cse_abstract properties
+section_name = physic_object
+name = dyrka_koster
+position = -14.4099998474121, 2.6800000667572, -26.6399993896484
+direction = -0.036651898175478, -0.293215304613113, -0.00349066010676324
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3121
+
+; cse_alife_object properties
+game_vertex_id = 4391
+level_vertex_id = 1114090
+object_flags = 0xfffffffa
+custom_data = <<END
+[collide]
+ignore_static
+END
+
+; cse_visual properties
+visual_name = physics\zabor\koster
+
+; cse_ph_skeleton properties
+skeleton_name = 
+
+; cse_alife_object_physic properties
+physic_type = 0x3
+mass = 1000
+fixed_bones = link
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10589]
+
+; cse_abstract properties
+section_name = physic_object
+name = esc_obryv
+position = 264.670013427734, 1.84592998027802, 282.593719482422
+direction = 0.511381506919861, 2.0996310710907, 0.162315994501114
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3120
+
+; cse_alife_object properties
+game_vertex_id = 4393
+level_vertex_id = 1742022
+object_flags = 0xfffffffa
+custom_data = <<END
+[collide]
+ignore_static
+END
+
+; cse_visual properties
+visual_name = physics\zabor\grnd_obryv
+
+; cse_ph_skeleton properties
+skeleton_name = 
+
+; cse_alife_object_physic properties
+physic_type = 0x3
+mass = 1000
+fixed_bones = link
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10590]
+
+; cse_abstract properties
+section_name = respawn
+name = swamp_boar_respawn
+position = 165.050415039062, 3.58231496810913, 21.2661838531494
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3107
+
+; cse_alife_object properties
+game_vertex_id = 4396
+distance = 5
+level_vertex_id = 1507803
+object_flags = 0xffffff3e
+custom_data = <<END
+[respawn]
+respawn_section = boar_weak,10, boar_normal,10
+max_spawn = 10
+idle_spawn = medium
+END
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 15
+
+; cse_alife_space_restrictor properties
+restrictor_type = 0
+
+; se_respawn properties
+spawned_obj = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10591]
+
+; cse_abstract properties
+section_name = respawn
+name = swamp_flesh_respawn
+position = 124.146575927734, 2.34606456756592, -16.6987838745117
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3108
+
+; cse_alife_object properties
+game_vertex_id = 4394
+distance = 5
+level_vertex_id = 1417917
+object_flags = 0xffffff3e
+custom_data = <<END
+[respawn]
+respawn_section = flesh_weak,10, flesh_normal,10
+max_spawn = 10
+idle_spawn = medium
+END
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 15
+
+; cse_alife_space_restrictor properties
+restrictor_type = 0
+
+; se_respawn properties
+spawned_obj = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10592]
+
+; cse_abstract properties
+section_name = smart_terrain
+name = dfs_mlag_01
+position = 206.976318359375, 3.77430057525635, 5.66113615036011
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3109
+
+; cse_alife_object properties
+game_vertex_id = 4397
+distance = 20
+level_vertex_id = 1599126
+object_flags = 0xffffff3e
+custom_data = <<END
+[smart_terrain]
+type = general_lair
+capacity = 4
+communities = boar
+END
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 5
+
+; cse_alife_space_restrictor properties
+restrictor_type = 0
+
+; se_smart_terrain properties
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10593]
+
+; cse_abstract properties
+section_name = smart_terrain
+name = dfs_mlag_02
+position = 175.043212890625, 2.09957194328308, 67.9466934204102
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3110
+
+; cse_alife_object properties
+game_vertex_id = 4392
+distance = 20
+level_vertex_id = 1529303
+object_flags = 0xffffff3e
+custom_data = <<END
+[smart_terrain]
+type = general_lair
+capacity = 5
+communities = boar
+END
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 5
+
+; cse_alife_space_restrictor properties
+restrictor_type = 0
+
+; se_smart_terrain properties
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10594]
+
+; cse_abstract properties
+section_name = smart_terrain
+name = dfs_mlag_03
+position = 134.632080078125, 2.39755892753601, -16.7284889221191
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3111
+
+; cse_alife_object properties
+game_vertex_id = 4394
+distance = 20
+level_vertex_id = 1440952
+object_flags = 0xffffff3e
+custom_data = <<END
+[smart_terrain]
+type = general_lair
+capacity = 3
+communities = flesh
+END
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 5
+
+; cse_alife_space_restrictor properties
+restrictor_type = 0
+
+; se_smart_terrain properties
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10595]
+
+; cse_abstract properties
+section_name = smart_terrain
+name = dfs_mlag_04
+position = 180.888076782227, 1.67103254795074, -146.840911865234
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3112
+
+; cse_alife_object properties
+game_vertex_id = 4395
+distance = 20
+level_vertex_id = 1541438
+object_flags = 0xffffff3e
+custom_data = <<END
+[smart_terrain]
+type = general_lair
+capacity = 5
+communities = flesh
+END
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 5
+
+; cse_alife_space_restrictor properties
+restrictor_type = 0
+
+; se_smart_terrain properties
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10596]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = dfs_ibox_14
+position = 186.843505859375, 3.14333534240723, -41.199047088623
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3113
+
+; cse_alife_object properties
+game_vertex_id = 4399
+level_vertex_id = 1556754
+object_flags = 0xffffff3e
+story_id = 20057
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 1
+
+; cse_alife_space_restrictor properties
+restrictor_type = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10597]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = dfs_ibox_15
+position = 167.887344360352, 8.21749877929688, 68.0399780273438
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3114
+
+; cse_alife_object properties
+game_vertex_id = 4392
+level_vertex_id = 1503348
+object_flags = 0xffffff3e
+story_id = 20058
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 1
+
+; cse_alife_space_restrictor properties
+restrictor_type = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10598]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = dfs_ibox_16
+position = 190.019165039062, 1.48743736743927, 62.7306137084961
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3115
+
+; cse_alife_object properties
+game_vertex_id = 4396
+level_vertex_id = 1561403
+object_flags = 0xffffff3e
+story_id = 20059
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 1
+
+; cse_alife_space_restrictor properties
+restrictor_type = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10599]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = dfs_ibox_17
+position = 211.074981689453, 3.69275808334351, 6.71938228607178
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3116
+
+; cse_alife_object properties
+game_vertex_id = 4397
+level_vertex_id = 1608174
+object_flags = 0xffffff3e
+story_id = 20060
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 1
+
+; cse_alife_space_restrictor properties
+restrictor_type = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10600]
+
+; cse_abstract properties
+section_name = space_restrictor
+name = dfs_ibox_18
+position = 177.766250610352, 1.61859571933746, -150.822296142578
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3117
+
+; cse_alife_object properties
+game_vertex_id = 4395
+level_vertex_id = 1538328
+object_flags = 0xffffff3e
+story_id = 20061
+
+; cse_shape properties
+shapes = 1
+shape_0:type = sphere
+shape_0:offset = 0,0,0
+shape_0:radius = 1
+
+; cse_alife_space_restrictor properties
+restrictor_type = 3
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[10601]
+
+; cse_abstract properties
+section_name = tod_dark_stalker
+name = swamp_pope_vitaly
+position = 139.250305175781, 6.45762586593628, 251.090759277344
+direction = 0, 0, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 3118
+
+; cse_alife_trader_abstract properties
+money = 15000
+character_profile = pope_vitaly
+
+; cse_alife_object properties
+game_vertex_id = 4390
+distance = 9
+level_vertex_id = 1452082
+object_flags = 0xffffffff
+custom_data = <<END
+[spawner]
+cond = {-player_complete_meet_vill_stalker}
+[logic]
+cfg = scripts\dfs\swamp\swamp_pope.ltx
+[smart_terrains]
+none = true
+END
+story_id = 20029
+
+; cse_visual properties
+visual_name = VISUAL_NAME_TAKES_FROM_CHARACTER
+
+; cse_alife_creature_abstract properties
+g_team = 0
+g_squad = 0
+g_group = 0
+dynamic_out_restrictions = 
+dynamic_in_restrictions = 
+
+; cse_alife_monster_abstract properties
+equipment_preferences = 2, 0, 2, 2, 1
+main_weapon_preferences = 2, 1, 2, 0
+
+; cse_ph_skeleton properties
+
+; se_stalker properties
+upd:health = 1
+upd:timestamp = 0
+upd:creature_flags = 0
+upd:position = 139.250305175781, 6.45762586593628, 251.090759277344
+
+; cse_alife_human_stalker properties
+upd:start_dialog = 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

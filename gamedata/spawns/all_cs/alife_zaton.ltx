@@ -1,0 +1,39 @@
+[528]
+
+; cse_abstract properties
+section_name = physic_destroyable_object
+name = zat_b14_box_blocked_door
+position = 410.101196289062, -5.75064516067505, 230.310317993164
+direction = 0, 0.0872659981250763, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 5962
+
+; cse_alife_object properties
+game_vertex_id = 3660
+level_vertex_id = 293223
+object_flags = 0xffffff3a
+custom_data = <<END
+[collide]
+ignore_static
+
+[logic]
+active = ph_on_death
+
+[ph_on_death]
+on_info = %+zat_b14_door_1_unlock%
+END
+
+; cse_visual properties
+visual_name = physics\box\box_wood_01
+
+; cse_ph_skeleton properties
+
+; cse_alife_object_physic properties
+physic_type = 0x3
+mass = 10
+fixed_bones = link
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+

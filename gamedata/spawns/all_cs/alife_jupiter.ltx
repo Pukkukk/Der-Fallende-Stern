@@ -1,0 +1,55 @@
+[10837]
+
+; cse_abstract properties
+section_name = physic_object
+name = jup_b41_ph_door_outer
+position = -207.630004882812, -3.46000003814697, 73.4599990844727
+direction = 0, 1.57079601287842, 0
+id = 65535
+version = 118
+script_version = 6
+spawn_id = 9801
+
+; cse_alife_object properties
+game_vertex_id = 3700
+level_vertex_id = 1231404
+object_flags = 0xffffff3a
+custom_data = <<END
+[collide]
+ignore_static
+ignore_ragdoll
+
+[logic]
+active = ph_door@close
+
+[ph_door@close]
+locked = false
+closed = true
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+on_use = ph_door@open
+tip_open = tip_door_open
+
+[ph_door@open]
+locked = false
+closed = false
+snd_open_start = trader_door_open_start
+snd_close_start = trader_door_close_start
+snd_close_stop = trader_door_close_stop
+tip_close = jup_b1_bar_door
+on_use = ph_door@close
+END
+
+; cse_visual properties
+visual_name = physics\door\door_trader
+
+; cse_ph_skeleton properties
+
+; cse_alife_object_physic properties
+physic_type = 0x3
+mass = 10
+fixed_bones = link
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
