@@ -37,11 +37,60 @@
 	<string id="kb_use_bipsizon">
 		<text>Слот быстрого доступа 4</text>
 	</string>	
+	
+	
+	<string id="detector_mine">
+		<text>«Сканирующий миноискатель АСМ-2м»</text>
+	</string>
+	
+	<string id="detector_mine_short">
+		<text>Миноискатель</text>
+	</string>
+
+	<string id="detector_mine_descr">
+		<text>Новейшая военная разработка АСМ-2м. Компактный автономный сканирующий миноискатель. Предупреждает о нахождении мины звуковым сигналом и может передавать информацию о её местонахождении на навигатор. Радиус устойчивого обнаружения мины — семь метров.</text>
+	</string>
+	
+	
+	<string id="af_doping">
+		<text>Вампир</text>
+	</string>
+	
+	<string id="af_doping_descr">
+		<text>Редчайший артефакт, буквально сосущий энергию Зоны. При ношении на поясе способствует быстрому восстановлению сил.</text>
+	</string>
+	
+	<string id="af_antidoping_descr">
+		<text>Редчайший артефакт, буквально сосущий энергию Зоны. При ношении на поясе способствует быстрой трате сил.</text>
+	</string>
+	
+	<string id="glowworm">
+		<text>Светляк</text>
+	</string>
+	
+	<string id="glowworm_descr">
+		<text>Польза от этого артефакта одна — неиссякаемый источник света. Других полезных свойств пока не найдено. До конца не исследован. Немного фонит. Встречается только в подземельях.</text>
+	</string>	
+	
+	<string id="black_soul">
+		<text>Чёрная Душа</text>
+	</string>
+	
+	<string id="black_soul_descr">
+		<text>Зона порождает разные артефакты, полезные и не очень. Этот же — артефакт-убийца.</text>
+	</string>
+	
+	<string id="concord">
+		<text>Cordium Controlleri</text>
+	</string>
+	
+	<string id="concord_descr">
+		<text>Артефакт из старой сталкерской легенды. Оказывается он существует на самом деле!</text>
+	</string>
+
 
 <!-- Техническое название = название скрипта -->
 
-
-	
 
 	<string id="time_on_hud">
 		<text>Время —</text>

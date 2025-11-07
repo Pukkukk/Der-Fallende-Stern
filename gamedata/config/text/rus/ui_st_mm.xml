@@ -638,7 +638,7 @@
 	</string>
 	
 	<string id="ui_mm_g_god">
-		<text>Бессмертие (отключается после выхода из игры)</text>
+		<text>Бессмертие</text>
 	</string>
 	<string id="ui_mm_g_ammo">
 		<text>Неограниченные патроны</text>
