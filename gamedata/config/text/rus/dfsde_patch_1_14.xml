@@ -87,6 +87,11 @@
 	<string id="concord_descr">
 		<text>Артефакт из старой сталкерской легенды. Оказывается он существует на самом деле!</text>
 	</string>
+	
+	
+	<string id="xenoform">
+		<text>XENOFORM</text>
+	</string>	
 
 
 <!-- Техническое название = название скрипта -->
