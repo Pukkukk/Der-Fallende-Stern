@@ -432,7 +432,7 @@
 	
 	<quick_slot0 x="705" y="720" width="29.9" height="40" stretch="1">
 	<texture>ui\ui_icon_equipment</texture>
-	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	    <counter x="-9999" y="-2" width="25" height="15" stretch="1">
 	        <texture a="136">ui_fast_use_count_back</texture>
 	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
 	    </counter>
@@ -443,7 +443,7 @@
 
 	<quick_slot1 x="735" y="720" width="29.9" height="40" stretch="1">
 	<texture>ui\ui_icon_equipment</texture>
-	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	    <counter x="-9999" y="-2" width="25" height="15" stretch="1">
 	        <texture a="136">ui_fast_use_count_back</texture>
 	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
 	    </counter>
@@ -454,7 +454,7 @@
 
 	<quick_slot2 x="765" y="720" width="29.9" height="40" stretch="1">
 	<texture>ui\ui_icon_equipment</texture>
-	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	    <counter x="-9999" y="-2" width="25" height="15" stretch="1">
 	        <texture a="136">ui_fast_use_count_back</texture>
 	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
 	    </counter>
@@ -465,7 +465,7 @@
 
 	<quick_slot3 x="795" y="720" width="29.9" height="40" stretch="1">
 	<texture>ui\ui_icon_equipment</texture>
-	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	    <counter x="-9999" y="-2" width="25" height="15" stretch="1">
 	        <texture a="136">ui_fast_use_count_back</texture>
 	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
 	    </counter>
