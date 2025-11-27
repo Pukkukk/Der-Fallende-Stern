@@ -64,7 +64,7 @@
 	<!-- Кнопки на ползунках !-->
     <texture id="ui_slider_button_h" x="41" y="46" width="24" height="16" />
     <texture id="ui_slider_button_e" x="67" y="46" width="24" height="16" />
-    <texture id="ui_slider_button_t" x="93" y="46" width="24" height="16" />
+    <texture id="ui_slider_button_t" x="93" y="46" width="23" height="16" />
     <texture id="ui_slider_button_d" x="147" y="198" width="24" height="17" />
 	<!-- Кнопки на ползунках !-->
     
