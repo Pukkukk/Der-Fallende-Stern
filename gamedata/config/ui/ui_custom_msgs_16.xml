@@ -121,10 +121,12 @@
   <hud_rad_level x="0" y="0" width="1" height="1" stretch="1" complex_mode="1">
     <texture>ui\ui_hud_progress_rad</texture>
   </hud_rad_level>
+  
+  <!-- Цифры времени на худе --> 
 
-  <hud_show_time  x="20" y="190" width="800" height="30" complex_mode="1">
+  <hud_show_time  x="3" y="180" width="800" height="30" complex_mode="1">
            <text font="letterica18"  r="153" g="255" b="0" a="255" align="l"/>
-     </hud_show_time>
+  </hud_show_time>
 
 <cs_demo_play  x="165" y="735" width="600" height="50" complex_mode="1" stretch="1"
 							light_anim="" la_cyclic="1" la_texture="1" la_alpha="1">
