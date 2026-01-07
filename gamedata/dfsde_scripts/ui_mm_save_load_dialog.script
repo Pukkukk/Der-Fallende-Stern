@@ -116,6 +116,8 @@ function save_load_dialog:MakeBG()
         local sg    = CSavedGameWrapper( fname ) 
 		local lname = sg:level_name()
     picture:InitTexture( "ui\\ui_background_main\\" .. lname  .. "_main" )
+		else
+        picture:InitTexture( "ui\\ui_background_main\\_default" )
     end
 end
 

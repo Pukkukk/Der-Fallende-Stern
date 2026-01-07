@@ -31,7 +31,9 @@ function main_menu:MakeBG()
         local fname = file:NameFull()
         local sg    = CSavedGameWrapper( fname ) 
 		local lname = sg:level_name()
-    picture:InitTexture( "ui\\ui_background_main\\" .. lname  .. "_main" )
+        picture:InitTexture( "ui\\ui_background_main\\" .. lname  .. "_main" )
+	else
+        picture:InitTexture( "ui\\ui_background_main\\_default" )	
     end
 end
 
