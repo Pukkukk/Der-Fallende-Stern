@@ -8,9 +8,7 @@
 -- При добавлении новой опции обязательно выставить дефолтное значение!
 -- Типы сохраняемых значений: string, number и boolean
 
-AutoGrab	= false	-- автообыск трупов
-SaveRen		= false	-- Save Rename mod: копирование быстрых сохранений в резерв
-DinHud = true
+HaveEat      = true
 
 -- Вызывается один раз при загрузке скриптов
 function load_game_options()
@@ -26,7 +24,7 @@ function load_game_options()
 		local module = _G[script_name()]
 		for line in file:lines() do
 			opt, val = string.match(line, "([%w_]+)%s*=%s*(.+)")
-		--	log1("load options: "..tostring(opt).." = "..tostring(val))
+			log1("load options: "..tostring(opt).." = "..tostring(val))
 			if opt and module[opt]~=nil then
 				n = tonumber(val)
 				if n then module[opt] = n

@@ -14,7 +14,7 @@
 	
 
 	<string id="ver_in_mm">
-		<text>1.14 [WiP]</text>
+		<text>1.14</text>
 	</string>
 	
 	
@@ -40,7 +40,7 @@
 	
 	
 	<string id="detector_mine">
-		<text>«Сканирующий миноискатель АСМ-2м»</text>
+		<text>Сканирующий миноискатель АСМ-2м</text>
 	</string>
 	
 	<string id="detector_mine_short">
@@ -51,9 +51,29 @@
 		<text>Новейшая военная разработка АСМ-2м. Компактный автономный сканирующий миноискатель. Предупреждает о нахождении мины звуковым сигналом и может передавать информацию о её местонахождении на навигатор. Радиус устойчивого обнаружения мины — семь метров.</text>
 	</string>
 	
+	<string id="detektor_amorf">
+		<text>Детектор изоморфов</text>
+	</string>
+	
+	<string id="detektor_amorf_short">
+		<text>Изоморфики!</text>
+	</string>
+
+	<string id="detektor_amorf_descr">
+		<text>Детектор, при помощи которого можно находить необычные объекты, именуемые "изоморфы".</text>
+	</string>
+
+	<string id="separator">
+		<text>Разделитель</text>
+	</string>
+
+	<string id="separator_descr">
+		<text>Что я такое вообще?</text>
+	</string>	
+	
 	
 	<string id="af_doping">
-		<text>Вампир</text>
+		<text>"Вампир"</text>
 	</string>
 	
 	<string id="af_doping_descr">
@@ -65,7 +85,7 @@
 	</string>
 	
 	<string id="glowworm">
-		<text>Светляк</text>
+		<text>"Светляк"</text>
 	</string>
 	
 	<string id="glowworm_descr">
@@ -73,7 +93,7 @@
 	</string>	
 	
 	<string id="black_soul">
-		<text>Чёрная Душа</text>
+		<text>"Чёрная душа"</text>
 	</string>
 	
 	<string id="black_soul_descr">
@@ -81,17 +101,17 @@
 	</string>
 	
 	<string id="concord">
-		<text>Cordium Controlleri</text>
+		<text>"Cordium Controlleri"</text>
 	</string>
 	
 	<string id="concord_descr">
-		<text>Артефакт из старой сталкерской легенды. Оказывается он существует на самом деле!</text>
+		<text>Артефакт из старой сталкерской легенды. Оказывается, он существует на самом деле!</text>
 	</string>
 	
 	
 	<string id="xenoform">
 		<text>XENOFORM</text>
-	</string>	
+	</string>
 
 
 <!-- Техническое название = название скрипта -->

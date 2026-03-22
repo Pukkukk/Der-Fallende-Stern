@@ -438,7 +438,7 @@ aim_hud_offset_pos_16x9 = 0.000000,-0.002500,-0.03
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.000000
 
 
-
+; Уникальный АС «Вал» — wpn_val_m1 
 
 ; upgrade 4
 [wpn_val_a4]:wpn_val_a3
@@ -462,15 +462,27 @@ inv_grid_y				        = 26
 cost		 	 			= 13000
 scope_name              = wpn_addon_scope
 scope_respawn = wpn_val_a4
-scope_names 					= wpn_addon_scope,wpn_addon_scope_cobra,wpn_addon_scope_pka,wpn_addon_scope_kashtan, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night, wpn_addon_scope_rakurs
-scope_respawn_wpn_addon_scope = scope_pso1_val_a4
+scope_names 					= wpn_addon_scope, wpn_addon_scope_cobra, wpn_addon_scope_pka, wpn_addon_scope_kashtan, wpn_addon_scope_x2.7, wpn_addon_scope_detector, wpn_addon_scope_night, wpn_addon_scope_rakurs
+
+;;
+;; Статик времени скрывается только на оптике, коллиматоры не задеваются, поэтому они остаются нетронутыми (19.03.2026)
+;;
+
 scope_respawn_wpn_addon_scope_pka = scope_pka_val_a4
 scope_respawn_wpn_addon_scope_cobra = scope_cobra_val_a4
-scope_respawn_wpn_addon_scope_kashtan = scope_kashtan_val_a4
-scope_respawn_wpn_addon_scope_x2.7 = scope_pso1m2x1_val_a4
-scope_respawn_wpn_addon_scope_detector = scope_nvsn_val_a4
-scope_respawn_wpn_addon_scope_night = scope_nvas_val_a4
 scope_respawn_wpn_addon_scope_rakurs = scope_rakurs_val_a4
+
+;;
+;; Статик времени скрывается только на оптике, коллиматоры не задеваются, поэтому они остаются нетронутыми (19.03.2026)
+;;
+
+scope_respawn_wpn_addon_scope = wpn_scope_pso1_val_a4
+scope_respawn_wpn_addon_scope_kashtan = wpn_scope_kashtan_val_a4
+scope_respawn_wpn_addon_scope_x2.7 = wpn_scope_pso1m2x1_val_a4
+scope_respawn_wpn_addon_scope_detector = wpn_scope_nvsn_val_a4
+scope_respawn_wpn_addon_scope_night = wpn_scope_nvas_val_a4
+
+
 
 hud                      	= wpn_val_a4_hud
 [wpn_val_a4_hud]:wpn_val_tact_hud
@@ -478,7 +490,7 @@ hidden_bones = mag, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_p
 
 ; upgrade 4 Sights
 
-[scope_pso1_val_a4]:wpn_val_a4
+[wpn_scope_pso1_val_a4]:wpn_val_a4
 hidden_bones = mag, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_assault, scope_nv_sniper, scope_nv_assault, flash, laser, light, line, rail_lam
 hud  						= wpn_val_a4_1pso_hud
 scope_name 					= wpn_addon_scope
@@ -491,8 +503,10 @@ aim_hud_offset_rot = 0.00000,0.000000,0.0
 aim_hud_offset_pos_16x9 = 0.009000,-0.0338,0.11
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
 
+[scope_pso1_val_a4]:wpn_scope_pso1_val_a4
 
-[scope_pso1m2x1_val_a4]:wpn_val_a4
+
+[wpn_scope_pso1m2x1_val_a4]:wpn_val_a4
 hidden_bones = mag, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_nv_sniper, scope_nv_assault, flash, laser, light, line, rail_lam
 hud  						= wpn_scope_pso1m2x1_val_a4_hud
 scope_name 					= wpn_addon_scope_x2.7
@@ -504,6 +518,8 @@ aim_hud_offset_pos = 0.009000,-0.03280000,0.1
 aim_hud_offset_rot = 0.00000,0.000000,0.0
 aim_hud_offset_pos_16x9 = 0.009000,-0.03280000,0.1
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
+
+[scope_pso1m2x1_val_a4]:wpn_scope_pso1m2x1_val_a4
 
 
 [scope_pka_val_a4]:wpn_val_a4
@@ -535,7 +551,7 @@ aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.000000
 inertion_origin_offset = -0.03
 
 
-[scope_kashtan_val_a4]:wpn_val_a4
+[wpn_scope_kashtan_val_a4]:wpn_val_a4
 hidden_bones = mag, scope_rakurs, scope_cobra, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, scope_nv_assault, flash, laser, light, line, rail_lam
 hud  						= wpn_scope_kashtan_val_a4_hud
 scope_name 					= wpn_addon_scope_kashtan
@@ -548,8 +564,10 @@ aim_hud_offset_rot = 0.00000,0.000000,0.0
 aim_hud_offset_pos_16x9 = -0.0013000,-0.03170,0.09
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
 
+[scope_kashtan_val_a4]:wpn_scope_kashtan_val_a4
 
-[scope_nvsn_val_a4]:wpn_val_a4
+
+[wpn_scope_nvsn_val_a4]:wpn_val_a4
 hidden_bones = mag, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_assault, flash, laser, light, line, rail_lam
 hud  						= wpn_scope_nvsn_val_a4_hud
 scope_name              = wpn_addon_scope_detector 
@@ -563,8 +581,10 @@ aim_hud_offset_rot = 0.00000,0.000000,0.0
 aim_hud_offset_pos_16x9 = 0.0128,-0.0615,0.142
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
 
+[scope_nvsn_val_a4]:wpn_scope_nvsn_val_a4
 
-[scope_nvas_val_a4]:wpn_val_a4
+
+[wpn_scope_nvas_val_a4]:wpn_val_a4
 hidden_bones = mag, scope_rakurs, scope_kashtan, scope_cobra, scope_pka, scope_pso_sniper, scope_pso_assault, scope_nv_sniper, flash, laser, light, line, rail_lam
 hud  						= wpn_scope_nvas_val_a4_hud
 scope_name              = wpn_addon_scope_night 
@@ -577,6 +597,8 @@ aim_hud_offset_pos = 0.0189,-0.0485,0.12
 aim_hud_offset_rot = 0.00000,0.000000,0.0
 aim_hud_offset_pos_16x9 = 0.0189,-0.0485,0.12
 aim_hud_offset_rot_16x9 = 0.00000,0.000000,0.0
+
+[scope_nvas_val_a4]:wpn_scope_nvsn_val_a4
 
 
 [scope_rakurs_val_a4]:wpn_val_a4

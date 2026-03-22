@@ -2,8 +2,19 @@
 hud = energy_drink_hud_hud
 description = item_food_descr
 
+eat_health			= 0
+eat_satiety			= 0
+eat_power			= 0
+eat_alcohol			= 0
+eat_radiation		= 0
+wounds_heal_perc	= 0
+eat_max_power		= 0
+
 [energy_drink_hud_hud]:anm_base_hud
 zoom_hide_crosshair			= true
+
+eat_max_power		= 0
+
 
 hud_fov_factor = 1.25
 
@@ -27,18 +38,4 @@ aim_hud_offset_rot_16x9 = 0.057800,0.111900,-0.011000
 
 item_visual             	= gwr\food\energy\energy_hud.ogf
 
-anm_show						= energy_drink 
-anm_hide						= energy_zaglushka
-anm_idle						= energy_zaglushka
-anm_idle_slow                                           = energy_zaglushka
-anm_idle_crouch                                         = energy_zaglushka
-anm_idle_crouch_slow                                    = energy_zaglushka
-anm_idle_aim				                = energy_zaglushka
-anm_idle_aim_end							= energy_zaglushka
-anm_idle_moving			                        = energy_zaglushka
-anm_idle_moving_slow 		                        = energy_zaglushka
-anm_idle_moving_crouch 	                                = energy_zaglushka
-anm_idle_moving_crouch_slow 	                        = energy_zaglushka
-anm_idle_sprint			                        = energy_zaglushka
-anm_idle_sprint_start = energy_zaglushka
-anm_bore						= energy_zaglushka
+anm_show					= energy_drink

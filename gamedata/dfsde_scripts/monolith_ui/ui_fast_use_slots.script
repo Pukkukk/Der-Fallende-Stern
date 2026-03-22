@@ -20,7 +20,13 @@ local eat_items = {
 	["medkit"] = true,
 	["medkit_army"] = true,
 	["medkit_scientic"] = true,
-	["german_conserva"] = true}
+	["german_conserva"] = true,
+	["mutant_krovosos_jaw"] = true,
+    ["mutant_krovosos_jaw_cook"] = true,
+    ["mutant_boar_leg"] = true,
+    ["mutant_boar_leg_cook"] = true,
+    ["mutant_flesh_eye"] = true,
+    ["mutant_flesh_eye_cook"] = true}
 
 local strings = {}
 local strings_1 = {[1] = {text = "", keybind = key_bindings.kUSE_ANTIRAD}}
@@ -185,6 +191,8 @@ end
 ------------------
 local last_item_in_fast_slot1, last_item_in_fast_slot2, last_item_in_fast_slot3, last_item_in_fast_slot4
 function FastUseSlotsHud()
+
+
 
 if not bind_stalker.scopeUsed then
 	local item_in_fast_slot1, item_in_fast_slot2, item_in_fast_slot3, item_in_fast_slot4 = GetItemInFastSlot1(), GetItemInFastSlot2(), GetItemInFastSlot3(), GetItemInFastSlot4()

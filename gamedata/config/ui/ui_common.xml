@@ -10,25 +10,30 @@
     <texture id="ui_listline_back" x="4" y="37" width="28" height="18" />
     <texture id="ui_listline_e"    x="32" y="37" width="4" height="18" />
 	
-	<!-- Кнопка «Расширенные» в меню настроек	!-->
+	<!-- Кнопка «Расширенные» в меню настроек !-->
     <texture id="ui_button_ordinary_d" x="3" y="85" width="110" height="29" />
     <texture id="ui_button_ordinary_e" x="3" y="114" width="110" height="29" />
     <texture id="ui_button_ordinary_h" x="3" y="143" width="110" height="29" />
     <texture id="ui_button_ordinary_t" x="3" y="172" width="110" height="29" />
-	<!-- Кнопка «Расширенные» в меню настроек	!-->
+	<!-- Кнопка «Расширенные» в меню настроек !-->
 	
+	<!-- Лишняя !-->
     <texture id="ui_button_tablist_d" x="0" y="378" width="114" height="44" />
+	<!-- Лишняя !-->
+
+	<!-- Кнопки разделов в меню настроек !-->
     <texture id="ui_button_tablist_e" x="0" y="334" width="114" height="44" />
     <texture id="ui_button_tablist_h" x="0" y="290" width="114" height="44" />
     <texture id="ui_button_tablist_middle" x="0" y="246" width="114" height="44" />
     <texture id="ui_button_tablist_t" x="0" y="199" width="117" height="34" />
+	<!-- Кнопки разделов в меню настроек !-->
 	
 	<!-- Кнопка «Применить» в меню настроек	!-->
     <texture id="ui_button_main01_d" x="0" y="422" width="157" height="48" />
     <texture id="ui_button_main01_e" x="17" y="477" width="126" height="28" />
 	<texture id="ui_button_main01_t" x="17" y="525" width="126" height="28" />
     <texture id="ui_button_main01_h" x="17" y="573" width="126" height="28" />
-	<!-- Кнопка «Расширенные» в меню настроек	!-->
+	<!-- Кнопка «Применить» в меню настроек	!-->
 	
     <texture id="ui_button_main02_d" x="0" y="614" width="157" height="48" />
     <texture id="ui_button_main02_e" x="0" y="662" width="157" height="48" />

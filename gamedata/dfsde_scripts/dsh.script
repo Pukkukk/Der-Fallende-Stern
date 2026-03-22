@@ -12,13 +12,13 @@ function get_next_random( vname, ... )
 		min, max = unpack( args )
 	end
 	if min and max and min == max then return min end
-	local nums = get_value( vname, {} )
+	local nums = ogse_unist.get_value( vname, {} )
 	while table.getn( nums ) < 100 do
 		table.insert( nums, lua_random() )
 	end
 	local cur_num = tonumber( table.remove( nums, 1 ) )
 	table.insert( nums, lua_random() )
-	set_value( vname, nums )
+	ogse_unist.set_value( vname, nums )
 	if table.getn( args ) > 0 then
 		cur_num = min + round( cur_num * ( max - min ) )
 	end
@@ -42,6 +42,59 @@ function create_candle( pos, lvid, gvid, vis )
 	end
 end
 
+--
+-- Secret Trails, OGSR: Gunslinger Addon (26.12.2025)
+--
+
+class "timeout_timer" ( ogse_qt.quick_timer )
+function timeout_timer:__init( delay, fun, ... ) super( delay )
+  self.fun = fun
+  self.args = { ... }
+end
+
+function timeout_timer:taction()
+    self.fun(unpack(self.args))
+end
+
+function timeout(delay, fun, ...)
+    local tmout = timeout_timer(delay, fun, ...)
+    --
+    local d = debug.getinfo(2)
+    tmout.script_name = d.short_src:gsub('^.-([^\\]+)%.[^.]+$', '%1') .. "." .. d.linedefined
+    --
+    tmout:start()
+    return tmout
+end
+
+class "condition_timer" ( ogse_qt.quick_timer )
+function condition_timer:__init( fun1, fun2, fun3 )
+  self.fun1 = fun1
+  self.fun2 = fun2
+  self.fun3 = fun3
+end
+function condition_timer:condition()
+  return self.fun1()
+end
+function condition_timer:action()
+  self.fun2()
+end
+function condition_timer:update()
+  if self.fun3 then self.fun3( self ) end
+end
+
+function wait_condition(...)
+    local tmout = condition_timer(...)
+    --
+    local d = debug.getinfo(2)
+    tmout.script_name = d.short_src:gsub('^.-([^\\]+)%.[^.]+$', '%1') .. "." .. d.linedefined
+    --
+    tmout:start()
+    return tmout
+end
+
+--
+-- Secret Trails, OGSR: Gunslinger Addon (26.12.2025)
+--
 
 function exec_periodic( freq, f, ... )
   local args = { ... }
@@ -62,13 +115,13 @@ end
 
 
 function make_quicksave()
-  local cnt = get_value( "dsh.next_quicksave", 0 )
+  local cnt = ogse_unist.get_value( "dsh.next_quicksave", 0 )
   if cnt == 9 then
     cnt = 1
   else
     cnt = cnt + 1
   end
-  set_value( "dsh.next_quicksave", cnt )
+  ogse_unist.set_value( "dsh.next_quicksave", cnt )
   local next_save = safe_file_name( string.format( "%s_quicksave_%u", user_name(), cnt ) )
   cmd( "save", next_save )
 end

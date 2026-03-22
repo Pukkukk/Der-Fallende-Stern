@@ -1,3 +1,8 @@
+--
+-- Through the Perimeter to the Dream Prologue (08.03.2026)
+--
+
+
 ------------ ПРЕДУСЛОВИЯ ------------
 function allways()
 	return true
@@ -25,24 +30,25 @@ local available_sections_exo = {
 	
 	-- продукты питания
 	["bread"] 				= {"bread_hud", "interface\\inv_food", 4300, allways, "bread_use"},
-	["kolbasa"] 			= {"kolbasa_hud", "interface\\inv_food", 4000, allways, "kolbasa_use"},
+	["kolbasa"] 			= {"kolbasa_hud", "interface\\inv_food", 4300, allways, "kolbasa_use"},
 	["conserva"] 			= {"conserva_hud", "interface\\inv_conserva", 8000, allways, "conserva_use"},
 	["vodka"] 				= {"vodka_hud", "interface\\inv_vodka", 7000, allways, "vodka_use"},
-	["energy_drink"] 		= {"energy_drink_hud", "interface\\inv_energy_drink", 6000, allways, "energy_drink_use"},
+	["energy_drink"] 		= {"energy_drink_hud", "interface\\inv_energy_drink", 5800, allways, "energy_drink_use"},
+	["german_conserva"] 	= {"conserva_german_hud", "interface\\inv_conserva", 8000, allways, "conserva_german_use"},
+
+        ["mutant_krovosos_jaw"] 			= {"sosych_hud", "interface\\inv_food", 4300, allways, "mutant_krovosos_jaw_use"},
+        ["mutant_krovosos_jaw_cook"] 		= {"sosych_cook_hud", "interface\\inv_food", 4300, allways, "mutant_krovosos_jaw_cook_use"},
+        ["mutant_boar_leg"] 			    = {"boarleg_hud", "interface\\inv_food", 4300, allways, "mutant_boar_leg_use"},
+        ["mutant_boar_leg_cook"] 			= {"boarleg_cook_hud", "interface\\inv_food", 4300, allways, "mutant_boar_leg_cook_use"},
+        ["mutant_flesh_eye"] 			    = {"eye_hud", "items\\drug\\drug_last", 4000, allways, "mutant_flesh_eye_use"},
+        ["mutant_flesh_eye_cook"] 			= {"eye_cook_hud", "items\\drug\\drug_last", 4000, allways,"mutant_flesh_eye_cook_use"},
 	
 	-- медикаменты
-	["antirad"] 			= {"antirad_hud", "interface\\inv_tabletki", 6700, allways, "antirad_use"},
-	["bandage"] 			= {"bandage_hud", "interface\\inv_bandage", 4800, allways, "bandage_use"},
+	["antirad"] 			= {"antirad_exo_hud", "interface\\medkit_exo", 2900, allways, "antirad_use"},
+	["bandage"] 			= {"bandage_hud", "interface\\inv_bandage", 4600, allways, "bandage_use"},
 	["medkit"] 				= {"medkit_exo_hud", "interface\\medkit_exo", 2900, allways, "medkit_use"},
 	["medkit_army"] 		= {"medkit_exo_army_hud", "interface\\medkit_exo", 2900, allways, "medkit_army_use"},
-	["medkit_scientic"] 	= {"medkit_exo_scientic_hud", "interface\\medkit_exo", 2900, allways, "medkit_scientic_use"},
-        ["mutant_krovosos_jaw"] 			= {"sosych_hud", "interface\\inv_food", 4300, allways, "mutant_krovosos_jaw_use"},
-        ["mutant_krovosos_jaw_cook"] 			= {"sosych_cook_hud", "interface\\inv_food", 4300, allways, "mutant_krovosos_jaw_cook_use"},
-        ["mutant_boar_leg"] 			= {"boarleg_hud", "interface\\inv_food", 4300, allways, "mutant_boar_leg_use"},
-        ["mutant_boar_leg_cook"] 			= {"boarleg_cook_hud", "interface\\inv_food", 4300, allways, "mutant_boar_leg_cook_use"},
-        ["mutant_flesh_eye"] 			= {"eye_hud", "items\\drug\\drug_last", 4300, allways, "mutant_flesh_eye_use"},
-        ["mutant_flesh_eye_cook"] 			= {"eye_cook_hud", "items\\drug\\drug_last", 4300, allways,"mutant_flesh_eye_cook_use"}
-
+	["medkit_scientic"] 	= {"medkit_exo_scientic_hud", "interface\\medkit_exo", 2900, allways, "medkit_scientic_use"}
 
 }
 
@@ -53,31 +59,32 @@ local available_sections = {
 	["conserva"] 			= {"conserva_hud", "interface\\inv_conserva", 8000, allways, "conserva_use"},
 	["vodka"] 				= {"vodka_hud", "interface\\inv_vodka", 7000, allways, "vodka_use"},
 	["energy_drink"] 		= {"energy_drink_hud", "interface\\inv_energy_drink", 5800, allways, "energy_drink_use"},
+	["german_conserva"] 	= {"conserva_german_hud", "interface\\inv_conserva", 8000, allways, "conserva_german_use"},	
+	
+        ["mutant_krovosos_jaw"] 			= {"sosych_hud", "interface\\inv_food", 4300, allways, "mutant_krovosos_jaw_use"},
+        ["mutant_krovosos_jaw_cook"] 		= {"sosych_cook_hud", "interface\\inv_food", 4300, allways, "mutant_krovosos_jaw_cook_use"},
+        ["mutant_boar_leg"] 			    = {"boarleg_hud", "interface\\inv_food", 4300, allways, "mutant_boar_leg_use"},
+        ["mutant_boar_leg_cook"] 			= {"boarleg_cook_hud", "interface\\inv_food", 4300, allways, "mutant_boar_leg_cook_use"},
+        ["mutant_flesh_eye"] 			    = {"eye_hud", "items\\drug\\drug_last", 4000, allways, "mutant_flesh_eye_use"},
+        ["mutant_flesh_eye_cook"] 			= {"eye_cook_hud", "items\\drug\\drug_last", 4000, allways,"mutant_flesh_eye_cook_use"},
 	
 	-- медикаменты
-	["antirad"] 			= {"antirad_hud", "interface\\inv_tabletki", 6700, allways, "antirad_use"},
+	["antirad"] 			= {"antirad_hud", "interface\\inv_tabletki", 6400, allways, "antirad_use"},
 	["bandage"] 			= {"bandage_hud", "interface\\inv_bandage", 4600, allways, "bandage_use"},
 	["medkit"] 				= {"medkit_hud", "interface\\inv_medkit", 3500, allways, "medkit_use"},
 	["medkit_army"] 		= {"medkit_army_hud", "interface\\inv_medkit", 3500, allways, "medkit_army_use"},
-	["medkit_scientic"] 	= {"medkit_scientic_hud", "interface\\inv_medkit", 3500, allways, "medkit_scientic_use"},
-        ["mutant_krovosos_jaw"] 			= {"sosych_hud", "interface\\inv_food", 4300, allways, "mutant_krovosos_jaw_use"},
-        ["mutant_krovosos_jaw_cook"] 			= {"sosych_cook_hud", "interface\\inv_food", 4300, allways, "mutant_krovosos_jaw_cook_use"},
-        ["mutant_boar_leg"] 			= {"boarleg_hud", "interface\\inv_food", 4300, allways, "mutant_boar_leg_use"},
-        ["mutant_boar_leg_cook"] 			= {"boarleg_cook_hud", "interface\\inv_food", 4300, allways, "mutant_boar_leg_cook_use"},
-        ["mutant_flesh_eye"] 			= {"eye_hud", "items\\drug\\drug_last", 4000, allways, "mutant_flesh_eye_use"},
-        ["mutant_flesh_eye_cook"] 			= {"eye_cook_hud", "items\\drug\\drug_last", 4000, allways,"mutant_flesh_eye_cook_use"}
-
+	["medkit_scientic"] 	= {"medkit_scientic_hud", "interface\\inv_medkit", 3500, allways, "medkit_scientic_use"}
 
 }
 
 -- слот, в который спавним предметы с анимацией (имхо, бинокль - самое оптимальное, с болтом не получилось)
-local hud_item_slot = 4 -- номер
-local return_weapon = 2
+local hud_item_slot = 12 --13 -- номер --Simp: используем слот биодетектора, которого тут нет
 local hud_item_slot_default = "wpn_binoc" -- дефолтный предмет
-
+local SLOT_RESTORE
 -- вспомогательные переменные, не трогать
 local use_timer = 0
 local sounds_tbl = { }
+local hidden_weapon = false
 
 function on_spawn()
 	-- инициализируем звуковые объекты
@@ -88,28 +95,37 @@ function on_spawn()
 		end
 	end
 	
-	-- сбрасываем использование, если при сохранении находились в процессе
-	for k,v in pairs(available_sections) do
-		local hud_section = v[1]
-		local item_in_slot = db.actor:item_in_slot(hud_item_slot)
+	level.only_allow_movekeys(false)
+end
+
+
+local snd_in_use = false
 		
-		if item_in_slot and item_in_slot:section() == hud_section then
-			destroy_actor_item(item_in_slot:section())
-			spawn(hud_item_slot_default)
-			spawn(k)
+local function play_use_sound(sect)
+	local snd = get_string( sect, "use_sound" )
+	if snd then
+		if snd_in_use then
+			snd_in_use:stop()
 		end
+		snd_in_use = sound_object( snd )
+		snd_in_use:play( db.actor, 0, sound_object.s2d )
 	end
 end
 
-function on_use(obj)
+function on_use(obj) --вызывается при юзе предмета
 	local section = obj:section()
+	
+if game_options.HaveEat == true	then
 	
 	if available_sections[section] == nil then
 		return
 	end
+	
+	play_use_sound(section)
+	
         local gg = db.actor
         local item = gg:item_in_slot(6)
-        if item and (item:section() == "exo_outfit" or item:section() == "outfit_exo_m1" or item:section() == "outfit_exo_m2")  then
+if item and (item:section() == "exo_outfit" or item:section() == "outfit_exo_m1" or item:section() == "outfit_exo_m2")  then  -- анимки для экзоскелетов
 	  local section_params = available_sections_exo[section]
 	  local hud_obj_section = section_params[1]
 	  local sound = section_params[2]
@@ -143,14 +159,9 @@ function on_use(obj)
 	end
 	
 	-- удаляем дефолтный предмет из слота, спавним предмет с анимацией / запрещаем пользоваться оружием
-	if hud_obj_section ~= nil then
-               	destroy_actor_item(hud_item_slot_default)
-		spawn(hud_obj_section)
-		db.actor:restore_weapon()
-	else
-		db.actor:hide_weapon()
-	end
 	
+	
+	level.only_allow_movekeys(true)
 	-- объявляем звук при наличии
 	local sound_obj = sounds_tbl[sound]
 	
@@ -165,6 +176,11 @@ function on_use(obj)
 	end
 	local eating_end = function()
 		db.actor:eat(db.actor:object(use_obj_section))
+		if hidden_weapon == true then
+			hidden_weapon = false
+			db.actor:restore_weapon()
+		end
+		db.actor:activate_slot(SLOT_RESTORE)
 	end
 	
 	-- события дожидания конца таймера
@@ -176,8 +192,6 @@ function on_use(obj)
 			end
 		end
 	
-
-                
 		-- ждёмс
 		if use_timer < time_global() then
 			return true
@@ -194,21 +208,15 @@ function on_use(obj)
 
 		-- отбираем предмет с анимацией и спауним бинокль или что там вы поставили
 		-- возвращаем оружие
-               
-		 
 		if hud_obj_section ~= nil then
-                        if db.actor:object(hud_obj_section) then
 			destroy_actor_item(hud_obj_section)
-                        end
-			spawn(hud_item_slot_default)
+			
 			db.actor:hide_weapon()
-                        db.actor:activate_slot(return_weapon)
 		else
 			db.actor:restore_weapon()	
 		end
                
-               
-		
+		level.only_allow_movekeys(false)
 		
 		using_item_timer = time_global() + 10 -- взводим таймер на применение предмета use_obj_section (заспаунить и сразу съесть - невозможно)
 		spawn(use_obj_section) -- спауним предмет, который влияет на персонажа
@@ -217,7 +225,7 @@ function on_use(obj)
 	
 	-- ждём убирания оружия
 	local wait_start = function()
-		if db.actor:active_slot() == hud_item_slot or hud_obj_section == nil then
+		if not db.actor:active_item() then
 			return true
 		end
 	end
@@ -228,22 +236,37 @@ function on_use(obj)
 			sound_obj:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d)
 		end
 		
-		level.add_call(effect_start, effect_stop) -- запускаем операцию "поедания" предмета
+	if hud_obj_section ~= nil then
+		spawn(hud_obj_section)
+		db.actor:restore_weapon()
+	else
+		db.actor:hide_weapon()
 	end
 	
+		level.add_call(effect_start, effect_stop) -- запускаем операцию "поедания" предмета
+	end
+		
+	SLOT_RESTORE = db.actor:active_slot()	
+	local itm = db.actor:active_item()	
+		if itm then 
+			db.actor:hide_weapon()
+			hidden_weapon = true
+		end
 	db.actor:activate_slot(hud_item_slot) -- активируем слот
 	level.add_call(wait_start, wait_stop) -- запускаем всю эту систему
+	
+else -- начинается для обычных костюмов
 
- else
-	  local section_params = available_sections[section]
-	  local hud_obj_section = section_params[1]
-	  local sound = section_params[2]
-	  local time = section_params[3]
-	  local precond = section_params[4]
-	  local use_obj_section = section_params[5]
-	  local item_in_slot = db.actor:item_in_slot(hud_item_slot)
-	  local using_item_timer = 0
-
+	local section_params = available_sections[section]
+	local hud_obj_section = section_params[1]
+	local sound = section_params[2]
+	local time = section_params[3]
+	local precond = section_params[4]
+	local use_obj_section = section_params[5]
+	
+	local item_in_slot = db.actor:item_in_slot(hud_item_slot)
+	local using_item_timer = 0
+	
 	-- проверка занятости рук
 	if use_timer > time_global() then
 		tip("Невозможно использовать предмет: у Вас заняты руки")
@@ -267,14 +290,9 @@ function on_use(obj)
 	end
 	
 	-- удаляем дефолтный предмет из слота, спавним предмет с анимацией / запрещаем пользоваться оружием
-	if hud_obj_section ~= nil then
-		destroy_actor_item(hud_item_slot_default)
-		spawn(hud_obj_section)
-		db.actor:restore_weapon()
-	else
-		db.actor:hide_weapon()
-	end
 	
+	
+	level.only_allow_movekeys(true)
 	-- объявляем звук при наличии
 	local sound_obj = sounds_tbl[sound]
 	
@@ -289,6 +307,12 @@ function on_use(obj)
 	end
 	local eating_end = function()
 		db.actor:eat(db.actor:object(use_obj_section))
+
+		if hidden_weapon == true then
+			hidden_weapon = false
+			db.actor:restore_weapon()
+		end
+		db.actor:activate_slot(SLOT_RESTORE)
 	end
 	
 	-- события дожидания конца таймера
@@ -316,21 +340,16 @@ function on_use(obj)
 		
 		-- отбираем предмет с анимацией и спауним бинокль или что там вы поставили
 		-- возвращаем оружие
-               
 		if hud_obj_section ~= nil then
-			if db.actor:object(hud_obj_section) then
 			destroy_actor_item(hud_obj_section)
-                        end
-			spawn(hud_item_slot_default)
+			
 			db.actor:hide_weapon()
-                        db.actor:activate_slot(return_weapon)
 		else	
 			db.actor:restore_weapon()
-	
 		end
 
-		
-		
+		level.only_allow_movekeys(false)
+
 		using_item_timer = time_global() + 10 -- взводим таймер на применение предмета use_obj_section (заспаунить и сразу съесть - невозможно)
 		spawn(use_obj_section) -- спауним предмет, который влияет на персонажа
 		level.add_call(eating_start, eating_end) -- запускаем операцию "съедания" предмета, который влияет на персонажа
@@ -338,8 +357,8 @@ function on_use(obj)
 	
 	-- ждём убирания оружия
 	local wait_start = function()
-		if db.actor:active_slot() == hud_item_slot or hud_obj_section == nil then
-                       return true
+		if not db.actor:active_item() then
+			return true
 		end
 	end
 	
@@ -348,12 +367,29 @@ function on_use(obj)
 		if sound_obj then
 			sound_obj:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d)
 		end
+
+			if hud_obj_section ~= nil then
+				spawn(hud_obj_section)
+				db.actor:restore_weapon()
+			else
+				db.actor:hide_weapon()
+			end
 		
 		level.add_call(effect_start, effect_stop) -- запускаем операцию "поедания" предмета
 	end
 	
+	SLOT_RESTORE = db.actor:active_slot()	
+	local itm = db.actor:active_item()	
+		if itm then 
+			db.actor:hide_weapon()
+			hidden_weapon = true
+		end
 	db.actor:activate_slot(hud_item_slot) -- активируем слот
 	level.add_call(wait_start, wait_stop) -- запускаем всю эту систему
+	
+end
+elseif game_options.HaveEat == false then
+als_inv_sounds.use_snd(obj)
 end
 end
 
@@ -364,10 +400,29 @@ end
 
 -- удалить предмет из рюкзака героя
 function destroy_actor_item(section)
-	alife():release(alife():object(db.actor:object(section):id()), true)
+    local obj = db.actor:object(section)
+    if obj then
+        local sobj = alife():object(obj:id())
+        if sobj then
+            alife():release(sobj)
+        end
+    end
 end
 
 -- выдать сообщение на 5 секунд
 function tip(text)
 	db.actor:give_game_news(text, "ui\\ui_iconsTotal", Frect():set(83,470,83,47), 0, 5000)
 end
+
+
+function release_trash() --вызывается на первом апдейте
+	local item_in_slot = db.actor:item_in_slot(hud_item_slot)
+	if item_in_slot then
+		local release_item = item_in_slot:section()
+		alife():release(alife():object(db.actor:object(release_item):id()))
+	end
+end
+
+--
+-- Through the Perimeter to the Dream Prologue (08.03.2026)
+--

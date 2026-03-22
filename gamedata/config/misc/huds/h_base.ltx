@@ -24,8 +24,8 @@ kill_msg_height				= 16
 
 show_ammo					= false
 
-slot						= 4
-animation_slot				= 5
+slot						= 12 ;13 ; --Simp: используем слот биодетектора, которого тут нет
+animation_slot				= 13
 single_handed				= 1
 	
 cost						= 0
@@ -97,19 +97,19 @@ silencer_status				= 0
 grenade_launcher_status		= 0
 zoom_enabled				= false
 
-sprint_allowed = false
-
-snd_draw					= weapons\generic_draw
-snd_holster					= weapons\generic_holster
-snd_gyro					= weapons\binoculars_gyro
-snd_zoomin					= weapons\binoculars_zoomin
-snd_zoomout					= weapons\binoculars_zoomout
-snd_shoot					= weapons\walther_p99_shoot
-snd_empty					= weapons\pistol_empty
-snd_reload					= weapons\pm_reload, 0.8
-snd_close					= weapons\generic_close 
+snd_draw					= weapons\draw_silent
+snd_holster					= weapons\draw_silent
+snd_gyro					= weapons\draw_silent
+snd_zoomin					= weapons\draw_silent
+snd_zoomout					= weapons\draw_silent
+snd_shoot					= weapons\draw_silent
+snd_empty					= weapons\draw_silent
+snd_reload					= weapons\draw_silent
+snd_close					= weapons\draw_silent 
 
 weapon_remove_time			= 5000	;время уничтожения оружия (с учетом TimeFactor) для мультиплеера
+
+sprint_allowed = false ;запрет бега
 
 [anm_base_hud]
 zoom_hide_crosshair						= true
@@ -130,8 +130,3 @@ gl_hud_offset_pos_16x9					= 0,0,0
 gl_hud_offset_rot_16x9					= 0,0,0
 lean_hud_offset_pos						= 0,0,0
 lean_hud_offset_rot						= 0,0,0
-;item_visual             	= dynamics\hud_anims\eat\eat_conserva.ogf
-;anm_show				= actor_use_protector		;binoculars_draw
-
-;anm_show				= actor_hit_anim		;binoculars_draw
-

@@ -8,25 +8,29 @@ local obj_sect = obj:section()
  
 local snd
  
-if obj_sect == 'medkit' then snd = [[interface\inv_medkit]]
+if obj_sect == 'medkit' then snd              = [[interface\old\inv_medkit]]
+elseif obj_sect == 'medkit_army' then snd     = [[interface\old\inv_medkit]]
+elseif obj_sect == 'medkit_scientic' then snd = [[interface\old\inv_medkit]]
  
-elseif obj_sect == 'medkit_army' then snd = [[interface\inv_medkit]]
+elseif obj_sect == 'kolbasa' then snd         = [[interface\old\inv_food]]
+elseif obj_sect == 'bread' then snd           = [[interface\old\inv_food]]
+elseif obj_sect == 'conserva' then snd        = [[interface\old\inv_food]]
+elseif obj_sect == 'german_conserva' then snd = [[interface\old\inv_food]]
  
-elseif obj_sect == 'medkit_scientic' then snd = [[interface\inv_medkit]]
- 
-elseif obj_sect == 'kolbasa' then snd = [[interface\inv_food]]
+elseif obj_sect == 'vodka' then snd = [[interface\old\inv_vodka]]
 
-elseif obj_sect == 'bread' then snd = [[interface\inv_food]]
+elseif obj_sect == 'energy_drink' then snd = [[interface\old\inv_softdrink]]
  
-elseif obj_sect == 'conserva' then snd = [[interface\inv_food]]
+elseif obj_sect == 'bandage' then snd = [[interface\old\inv_bandage]]
  
-elseif obj_sect == 'vodka' then snd = [[interface\inv_vodka]]
+elseif obj_sect == 'antirad' then snd = [[interface\old\inv_pills]]
 
-elseif obj_sect == 'energy_drink' then snd = [[interface\inv_softdrink]]
- 
-elseif obj_sect == 'bandage' then snd = [[interface\inv_bandage]]
- 
-elseif obj_sect == 'antirad' then snd = [[interface\inv_pills]]
+elseif obj_sect == 'mutant_krovosos_jaw' then snd      = [[interface\old\inv_food]]
+elseif obj_sect == 'mutant_krovosos_jaw_cook' then snd = [[interface\old\inv_food]]
+elseif obj_sect == 'mutant_boar_leg' then snd          = [[interface\old\inv_food]]
+elseif obj_sect == 'mutant_boar_leg_cook' then snd     = [[interface\old\inv_food]]
+elseif obj_sect == 'mutant_flesh_eye' then snd         = [[interface\old\inv_food]]
+elseif obj_sect == 'mutant_flesh_eye_cook' then snd    = [[interface\old\inv_food]]
  
 end
  

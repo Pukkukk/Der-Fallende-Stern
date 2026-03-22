@@ -109,19 +109,19 @@
 	</string>
 	<!-- Пресеты -->
 	<string id="Minimum">
-		<text>минимальные</text>
+		<text>Минимальные</text>
 	</string>
 	<string id="Low">
-		<text>низкие</text>
+		<text>Низкие</text>
 	</string>
 	<string id="Default">
-		<text>средние</text>
+		<text>Средние</text>
 	</string>
 	<string id="High">
-		<text>высокие</text>
+		<text>Высокие</text>
 	</string>
 	<string id="Extreme">
-		<text>максимальные</text>
+		<text>Максимальные</text>
 	</string>
 	<!-- базовые настройки видео -->
 	<string id="ui_mm_quality_presets">
@@ -157,38 +157,38 @@
 	<!-- Окно расширенных настроек видео -->
 
 	<string id="qt_off">
-		<text>выкл.</text>
+		<text>Выкл.</text>
 	</string>
 	<string id="qt_low">
-		<text>низкое</text>
+		<text>Низкое</text>
 	</string>
 	<string id="qt_medium">
-		<text>среднее</text>
+		<text>Среднее</text>
 	</string>
 	<string id="qt_high">
-		<text>высокое</text>
+		<text>Высокое</text>
 	</string>
 	<string id="qt_extreme">
-		<text>максимальное</text>
+		<text>Максимальное</text>
 	</string>
 
 	<string id="st_opt_extreme">
-		<text>макс. высоко</text>
+		<text>Макс. высоко</text>
 	</string>
 	<string id="st_opt_ultra">
-		<text>очень высоко</text>
+		<text>Очень высоко</text>
 	</string>
 	<string id="st_opt_high">
-		<text>высоко</text>
+		<text>Высоко</text>
 	</string>
 	<string id="st_opt_low">
-		<text>низко</text>
+		<text>Низко</text>
 	</string>
 	<string id="st_opt_medium">
-		<text>средне</text>
+		<text>Средне</text>
 	</string>
 	<string id="st_opt_off">
-		<text>отключено</text>
+		<text>Отключено</text>
 	</string>
 
 	<string id="default">
@@ -205,7 +205,7 @@
 		<text>Описание настроек</text>
 	</string>
 	<string id="hint_caption_text">
-		<text>Нажмите кнопку 'Расширенные', чтобы изменить настройки, добавленные в OGSR</text>
+		<text>Нажмите кнопку "Расширенные", чтобы изменить настройки, добавленные в OGSR</text>
 	</string>	
 	<string id="hint_caption_adv_text">
 		<text>Наведите курсор мыши на опцию и увидите здесь её описание. Таким образом вы сможете понять смысл незнакомых вам настроек, а так же новых настроек, добавленных в OGSR</text>
@@ -410,13 +410,13 @@
 		<text>Режим отражений</text>
 	</string>
 	<string id="water">
-		<text>на воде</text>
+		<text>На воде</text>
 	</string>
 	<string id="ground">
-		<text>на асфальте</text>
+		<text>На асфальте</text>
 	</string>
 	<string id="both">
-		<text>на воде и асфальте</text>
+		<text>На воде и асфальте</text>
 	</string>
 	<string id="ui_mm_r2_image_sharpening">
 		<text>Резкость изображения</text>
@@ -427,11 +427,11 @@
 	<string id="ui_mm_r4_enable_tessellation">
 		<text>Тесселяция</text>
 	</string>
-	<string id="ui_mm_soft_particles">
-		<text>Мягкие частицы</text>
+	<string id="ui_mm_mblur">
+		<text>Размытие в движении</text>
 	</string>
-	<string id="ui_mm_r__bloodmarks">
-		<text>Блудмарки</text>
+	<string id="ui_mm_mblur_param">
+		<text>Интенсивность размытия в движении</text>
 	</string>	
 	<string id="ui_mm_r2_details_opt">
 		<text>Оптимизация травы</text>
@@ -528,7 +528,7 @@
 	</string>
 
 	<string id="r_sslr_enable">
-		<text>Отражения в воде и лужах</text>
+		<text>Лужи и отражения в них</text>
 	</string>
 
 	<string id="ui_mm_3d_scopes_fps_factor">
@@ -613,7 +613,7 @@
 		<text>Распознавание НПС</text>
 	</string>
 	<string id="ui_mm_build_crosshair">
-		<text>Круглый курсор, как в билдах</text>
+		<text>Прицел-точка</text>
 	</string>
 	<string id="ui_mm_small_font">
 		<text>Уменьшенный шрифт (требуется перезапуск игры)</text>
@@ -637,11 +637,25 @@
 		<text>Высота шрифтов</text>
 	</string>
 	
+	<string id="ui_mm_font_shadows">
+		<text>Тень от текста</text>
+	</string>	
 	<string id="ui_mm_g_god">
 		<text>Бессмертие</text>
 	</string>
 	<string id="ui_mm_g_ammo">
 		<text>Неограниченные патроны</text>
+	</string>
+
+	<!-- Окно "Дополн." -->
+	<string id="optional_options">
+		<text>Дополнительно</text>
+	</string>
+	<string id="opt_eat">
+		<text>Анимации использования предметов</text>
+	</string>	
+	<string id="opt_hud">
+		<text>Динамический худ</text>
 	</string>
 
 	<!-- Окно "Управление" -->
@@ -669,7 +683,7 @@
 
 
 	<string id="video_settings_name_1">
-		<text>Multisample anti-aliasing - r3_msaa</text>
+		<text>Размытие в движении - r2_mblur_enable</text>
 	</string>
 	<string id="video_settings_name_2">
 		<text>Дальность видимости - rs_vis_distance</text>
@@ -753,7 +767,7 @@
 		<text>Мягкие тени от солнца</text>
 	</string>
 	<string id="video_settings_name_31">
-		<text>Мягкие края воды - r2_soft_water</text>
+		<text>Интенсивность размытия в движении - r2_mblur</text>
 	</string>
 	<string id="video_settings_name_32">
 		<text>Мягкие частицы - r2_soft_particles</text>
@@ -813,7 +827,7 @@
 		<text>Объемный свет - r2_volumetric_lights</text>
 	</string>
 	<string id="video_settings_name_51">
-		<text>Отражения в воде и лужах - r_sslr_enable</text>
+		<text>Лужи и отражения в них - r_sslr_enable</text>
 	</string>
 	<string id="video_settings_name_52">
 		<text>Тесселяция - r4_enable_tessellation</text>
@@ -873,7 +887,7 @@
 	</string>
 
 	<string id="video_settings_desc_1">
-		<text>MSAA - очень тяжелый и в тоже время очень качественный тип сглаживания. Качественно сглаживает провода, растительность, полупрозрачную геометрию.</text>
+		<text>Motion blur - размытие изображения при повороте камеры, воспроизведении сцен движения или быстро движущихся объектов.</text>
 	</string>
 	<string id="video_settings_desc_2">
 		<text>Эта настройка регулирует величину, на которую умножается предельное расстояние видимости, установленное в профиле текущей погоды. Диапазон значений этой величины - от 0.4 (минимум ползунка) до 1 (максимум ползунка). Например, в погоде установлена дальность обзора 150 метров. На минимуме ползунка вы будете видеть на 60 метров, на максимуме на 150.</text>
@@ -936,7 +950,7 @@
 		<text>Эта настройка регулирует угол обзора, в котором нормально отрисовываются тени. Если этот угол недостаточен, по краям экрана будут постоянно видны лишние треугольные тени. Рекомендуется держать настройку на максимуме.</text>
 	</string>
 	<string id="video_settings_desc_24">
-		<text>Данный эффект не на всех текстурах земли может выглядеть хорошо, потому что требуются правильные карты высот для всех текстур земли.</text>
+		<text>Включает эффект параллакса на террейне с лужами в углублениях. %c[red] Для правильной работы надо повозиться с настройками террейна, текстур, их бампов и подобрать ssfx_terrain_offset для каждой текстуры. Подробности см. в OGSR WIKI.</text>
 	</string>
 	<string id="video_settings_desc_25">
 		<text>Эта настройка включает эффект HDR Tone mapping. Он улучшает изображение, акцентируя его детали, которые без этого эффекта были бы недостаточно контрастны - мелкие элементы, края, при этом не делая изображение чрезмерно ярким.</text>
@@ -1014,7 +1028,7 @@
 		<text>Настройка включает объемный свет для некоторых ламп.</text>
 	</string>
 	<string id="video_settings_desc_51">
-		<text>Настройка включает отражения на воде и в лужах во время дождя.</text>
+		<text>Настройка включает лужи и отражения в них во время дождя.</text>
 	</string>
 	<string id="video_settings_desc_52">
 		<text>Тесселяция увеличивает качество низкополигональных моделей НПС, монстров, рук актора, анимированных предметов (бутылок и тп). Угловатые модели становятся более сглаженными.</text>
@@ -1058,6 +1072,32 @@
 	</string>
 	<string id="video_settings_desc_69">
 		<text>Если включен DLSS или FSR, эта настройка регулирует масштабирование изображения в 3D прицеле для улучшения его чёткости. %c[yellow] \nПри значении 1 изображение не масштабируется. %c[green] \nОптимальное значение: 2. %c[red] \nПри значениях больше 2 может заметно падать FPS.</text>
+	</string>
+
+	<!-- Cheat menu -->
+	<string id="ui_mm_cheat">
+		<text>Спавнер</text>
+	</string>
+	<string id="ui_mm_cheat_weap">
+		<text>Вооружение</text>
+	</string>
+	<string id="ui_mm_cheat_outfit">
+		<text>Броня</text>
+	</string>
+	<string id="ui_mm_cheat_items">
+		<text>Предметы</text>
+	</string>
+	<string id="ui_mm_cheat_monsters">
+		<text>Артефакты</text>
+	</string>
+	<string id="ui_mm_cheat_stalkers">
+		<text>Сталкеры</text>
+	</string>
+	<string id="ui_mm_spawn">
+		<text>Получить</text>
+	</string>
+	<string id="actor_params">
+		<text>Параметры актера (один клик: +/- 5%)</text>
 	</string>
 
 </string_table>

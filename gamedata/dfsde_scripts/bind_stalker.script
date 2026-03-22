@@ -9,6 +9,8 @@ function init(obj)
 	xr_motivator.AddToMotivator(obj)
 end
 
+local sim = alife()
+
 function actor_init(npc)
 	_G.g_bind_actor = this.actor_binder(npc)
 	npc:bind_object(g_bind_actor)
@@ -43,12 +45,18 @@ local weapon_hide = false
 class "actor_binder" (object_binder)
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:__init(obj) super(obj)
+	self.sm = ogse_signals.get_mgr() -- сигналы/signals
+	self.sm:call("on_load_before_all") -- сигналы/signals
+	self.sm:call("on_init", obj) -- сигналы/signals
+
+
 	self.bCheckStart = false
 	self.weather_manager = level_weathers.WeatherManager()
 	self.actor_detector = xr_detector.actor_detector()
 end
 
 function actor_binder:__finalize()
+    self.am:call("on_finalize")
 	ui_loader.init()
 end
 ----------------------------------------------------------------------------------------------------------------------
@@ -81,7 +89,10 @@ function actor_binder:net_spawn(data)
 
 	--' Загружаем настройки дропа
 	death_manager.init_drop_settings()
-ogsm.on_game_load(obj)
+	
+	self.sm:call("on_spawn", data) -- сигналы/signals
+	
+    ogsm.on_game_load(obj)
 -- Создаем хранилище актора
 	if db.storage[db.actor:id()].pstor == nil then
 		db.storage[db.actor:id()].pstor = {}
@@ -89,9 +100,11 @@ ogsm.on_game_load(obj)
   
         
 	ts_mod_soc.ts_on_net_spawn()	--TS_MOD--
-	als_loadscrin.update() --полноэкранные интро
+--	als_loadscrin.update() --полноэкранные интро
 	for _, k in ipairs({
+      "g_zones_dbg", "g_vertex_dbg", "g_crosshair_dbg",
        "g_ammunition_on_belt",
+      "show_wnd_rect", "show_wnd_rect_all",
     }) do
 	get_console():execute("g_ammunition_on_belt off" )
       get_console():disable_command( k )
@@ -135,7 +148,7 @@ function actor_binder:net_destroy()
 	self.object:set_callback(callback.level_border_enter, nil)
 	self.object:set_callback(callback.level_border_exit, nil)
 	self.object:set_callback(callback.take_item_from_box, nil)
-    self.object:set_callback(callback.use_object, nil)  
+        self.object:set_callback(callback.use_object, nil)  
 	-- new callbacks
 	self.object:set_callback(callback.on_key_press, nil)
 	self.object:set_callback(callback.on_key_release, nil)
@@ -143,7 +156,7 @@ function actor_binder:net_destroy()
 	self.object:set_callback(callback.on_belt, nil)
 	self.object:set_callback(callback.on_ruck, nil)
 	self.object:set_callback(callback.on_slot, nil)
-
+ 	self.object:set_callback(callback.on_before_use_item, nil) -- ogsr_items_anims.script
 
 	if sr_psy_antenna.psy_antenna then
 		sr_psy_antenna.psy_antenna:destroy()
@@ -155,6 +168,8 @@ function actor_binder:net_destroy()
 	if ui_grenade_marks then
 		ui_grenade_marks.remove_grenade_marks()
 	end
+
+self.sm:call("on_destroy")  -- сигналы/signals
 
 	object_binder.net_destroy(self)
 end
@@ -182,13 +197,16 @@ function actor_binder:reinit()
 	self.object:set_callback(callback.level_border_exit, self.level_border_exit, self)
 	self.object:set_callback(callback.take_item_from_box, self.take_item_from_box, self)
         self.object:set_callback(callback.use_object, self.use_obj, self) 
+	self.object:set_callback(callback.on_before_use_item, self.before_use, self)
 
 	self.object:set_callback(callback.on_key_press, self.on_key, self)			-- нажатие клавиши
 	self.object:set_callback(callback.on_key_release, self.on_key_free, self)		-- отпускание клавиши
 	self.object:set_callback(callback.on_belt, self.on_belt, self)		-- перемещение предмета на пояс
 	self.object:set_callback(callback.on_ruck, self.on_ruck, self)	-- перемещение предмета в рюкзак
 	self.object:set_callback(callback.on_slot, self.on_slot, self)		-- перемещение предмета в слот
+    self.object:set_callback(callback.entity_alive_before_hit, self.before_hit_callback, self)
 
+self.sm:call("on_reinit") -- сигналы/signals
 end
 
 ----------------- Новые каллбеки начало ------------------------------------------------------------------------
@@ -207,6 +225,15 @@ function actor_binder:on_belt(obj)
 end
 --------------------------------------------------------------------------------------
 
+function actor_binder:before_use(item)                             -- ogsr_items_anims.script
+	if not item then return end                                    -- ogsr_items_anims.script
+	local sobj = alife():object(item:id())                         -- ogsr_items_anims.script
+	if not sobj then return end                                    -- ogsr_items_anims.script
+                                                                   -- ogsr_items_anims.script
+	self.sm:call("on_actor_before_use", item, sobj)                -- ogsr_items_anims.script
+	
+--	ogsr_items_anims.on_actor_before_use(item)
+end                                                                -- ogsr_items_anims.script
 
 
 --function actor_binder:cell_item_create(item)
@@ -806,7 +833,8 @@ function actor_binder:on_item_drop (obj)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:use_obj(obj) 
- synchro_item.on_use(obj) 
+ synchro_item.on_use(obj)
+  --ogsr_items_anims.on_actor_before_use(obj)
 end
 ------------------------------------------------------------------
 function actor_binder:task_callback(_task, _objective, _state)
@@ -833,15 +861,27 @@ function actor_binder:map_location_added_callback(spot_type_str, object_id)
 	--'news_manager.send_task(db.actor, "new")
 end
 ----------------------------------------------------------------------------------------------------------------------
+local first_update
 function actor_binder:update(delta)
+xr_s.on_update( delta )
 	object_binder.update(self, delta)
 
 	local time = time_global()
 	
 	game_stats.update (delta, self.object)
---	time_on_hud.show_time()
+--  time_on_hud.show_time()
 	ui_loader.update()
 	ui_loader_hud.update()
+	
+	if not first_update then
+		if device().precache_frame >1 then return end	
+		level.only_allow_movekeys(false)
+		synchro_item.release_trash()
+		
+		self.sm:call("on_first_update") -- сигналы/signals, ogsr_items_anims.script
+
+		first_update = true
+	end
 	
 	if not has_alife_info ("ubil") and
 		xr_conditions.killed_by_actor then
@@ -1478,6 +1518,7 @@ function actor_binder:update(delta)
 		use_key.update()
 		this.hide_weapon_knife_d()
 	end
+	   
        
 end
 ----------------------------------------------------------------------------------------------------------------------
@@ -1512,8 +1553,10 @@ function actor_binder:save(packet)
 	xr_logic.pstor_save_all(self.object, packet)
 	self.weather_manager:save(packet)
 
-	self.actor_detector:save(packet)
+	self.actor_detector:save(packet)	
 	art_mgr.save(packet)
+	self.sm:call("on_save", packet) -- сигналы/signals
+	self.sm:call("on_save_after_all") -- сигналы/signals
 
 	if se_stor then
 --		if to_log then to_log(script_name()..":save:size=["..(packet:w_tell() - size).."]") end --/#~#
@@ -1657,7 +1700,7 @@ function hide_weapon_knife_d(actor)
 end
 end
 function actor_binder:use_object(obj)
-    	als_inv_sounds.use_snd(obj)
+    	--als_inv_sounds.use_snd(obj)
 end
 
 -- // this is test for section iteration

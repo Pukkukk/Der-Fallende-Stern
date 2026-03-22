@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<window>
+
+	<background x="0" y="0" width="1024" height="768" stretch="1">
+		<texture x="0" y="0" width="1920" height="1080">ui\ui_background_cheat</texture>
+	</background>
+	
+	<background_1 x="0" y="0" width="1024" height="900">
+		<texture>ui\dfsde_settings</texture>
+	</background_1>
+	
+	<main_dialog>
+		<dialog x="400" y="0" width="1024" height="900" stretch="1">
+			<texture x="0" y="0" width="1024" height="900"></texture>
+		</dialog>
+		<cap_cheat x="1" y="9" width="378" height="33">
+			<text font="graffiti22" r="240" g="140" b="50"></text>
+		</cap_cheat>
+		
+		<list_frame x="62" y="251" width="572" height="168">
+			<texture></texture>
+		</list_frame>
+		<list_window x="145" y="250" width="475" height="300" item_height="18">
+			<font font="letterica16" r="216" g="186" b="140" />
+		</list_window>
+		
+		<tab x="145" y="48" width="580" height="26">
+			<button x="0" y="0" width="116" height="26">
+				<texture_offset x="0" y="-7"/>
+				<texture>ui_button_tablist</texture>
+				<text font="graffiti19" align="c">ui_mm_cheat_weap</text>				
+				<text_color>
+					<e r="106" g="95" b="91"/> <t r="227" g="199" b="178"/> <h r="180" g="153" b="155"/>
+				</text_color>
+			</button>
+			<button x="116" y="0" width="116" height="26">
+				<texture_offset x="0" y="-7"/>
+				<texture>ui_button_tablist</texture>
+				<text font="graffiti19" align="c">ui_mm_cheat_outfit</text>
+				<text_color>
+					<e r="106" g="95" b="91"/> <t r="227" g="199" b="178"/> <h r="180" g="153" b="155"/>
+				</text_color>
+			</button>
+			<button x="232" y="0" width="116" height="26">
+				<texture_offset x="0" y="-7"/>
+				<texture>ui_button_tablist</texture>
+				<text font="graffiti19" align="c">ui_mm_cheat_items</text>
+				<text_color>
+					<e r="106" g="95" b="91"/> <t r="227" g="199" b="178"/> <h r="180" g="153" b="155"/>
+				</text_color>
+			</button>
+			<button x="9999" y="9999" width="116" height="26">
+				<texture_offset x="0" y="-7"/>
+				<texture>ui_button_tablist</texture>
+				<text font="graffiti19" align="c">ui_mm_cheat_monsters</text>
+				<text_color>
+					<e r="106" g="95" b="91"/> <t r="227" g="199" b="178"/> <h r="180" g="153" b="155"/>
+				</text_color>
+			</button>
+			<button x="348" y="0" width="116" height="26">
+				<texture_offset x="0" y="-7"/>
+				<texture>ui_button_tablist</texture>
+				<text font="graffiti19" align="c">ui_mm_cheat_stalkers</text>				
+				<text_color>
+					<e r="106" g="95" b="91"/> <t r="227" g="199" b="178"/> <h r="180" g="153" b="155"/>
+				</text_color>
+			</button>
+		</tab>
+		<btn_spawn x="335" y="720" width="126" height="28">
+			<text x="0" y="3" font="graffiti19" align="c">ui_mm_spawn</text>
+			<texture>ui_button_main01</texture>
+			<text_color>
+				<e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+			</text_color>
+		</btn_spawn>
+		<btn_cancel x="491" y="720" width="126" height="28">
+			<text x="0" y="3" font="graffiti19" align="c">ui_mm_cancel</text>
+			<texture>ui_button_main01</texture>
+			<text_color>
+				<e r="227" g="199" b="178"/> <t r="180" g="153" b="155"/> <d r="106" g="95" b="91"/> <h r="0" g="0" b="0"/>
+			</text_color>
+		</btn_cancel>
+		<frame_search x="400" y="85" width="170" height="23">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" a="0" r="0" g="0" b="0"/>
+		</frame_search>
+	</main_dialog>
+	<frame x="55" y="74" width="586" height="353">
+		<texture></texture>		
+	</frame>
+	<frame_descr x="145" y="700" width="300" height="700">
+        <texture></texture>
+	</frame_descr>
+	<descr_list x="530" y="560" width="485" height="280">
+		<text font="letterica18" complex_mode="1" align="l"/>
+	</descr_list>
+	<actor_params_list x="9999" y="9999" width="310" height="155">
+		<texture></texture>
+	</actor_params_list>
+	<actor_params_capt x="9999" y="9999" width="300" height="19">
+		<text font="graffiti19" r="200" g="160" b="50">actor_params</text>
+	</actor_params_capt>
+	<actor_health x="9999" y="9999" width="140" height="19">
+		<text font="graffiti19" r="170" g="50" b="50"/>
+	</actor_health>
+	<actor_radiation x="9999" y="9999" width="140" height="19">
+		<text font="graffiti19" r="170" g="170" b="50"/>
+	</actor_radiation>
+	<actor_psy_health x="9999" y="9999" width="140" height="19">
+		<text font="graffiti19" r="50" g="50" b="170"/>
+	</actor_psy_health>
+	<actor_power x="9999" y="9999" width="140" height="19">
+		<text font="graffiti19" r="50" g="170" b="50"/>
+	</actor_power>
+</window>

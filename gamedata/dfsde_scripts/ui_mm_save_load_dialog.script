@@ -131,7 +131,7 @@ function save_load_dialog:InitControlsSave()
 
 	local xml = CScriptXmlInit()
 	xml:ParseFile("ui_mm_save_dlg.xml")
-	
+
 	local ctrl = xml:InitStatic("back_movie", self)
 	ctrl:SetWindowName("static_background")
 

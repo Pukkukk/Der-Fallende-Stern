@@ -14,24 +14,18 @@ math.randomseed(os.time())
 --===================[string.lower ш string.upper ё яюффхЁцъющ Ёєёёъшї сєът]====================
 sys_ini = system_ini()
 translate = game.translate_string
+game_options.load_game_options()
 do
 	local lower = string.lower
 	string.lower = function(s)
 		return lower(s:gsub("([└-▀])",function(c) return string.char(c:byte()+32) end):gsub("и", "╕"))
-	end
-	string.lowerW = function(s)
-		return game.StringToUTF8(string.lower(game.StringFromUTF8(s)))
 	end
 	--
 	local upper = string.upper
 	string.upper = function(s)
 		return upper(s:gsub("([р- ])",function(c) return string.char(c:byte()-32) end):gsub("╕", "и"))
 	end
-	string.upperW = function(s)
-		return game.StringToUTF8(string.upper(game.StringFromUTF8(s)))
-	end
 end
---=============================================================================================
 --=================================[╘єэъЎшш шч xrLuaFix]========================================
 --CЁхчрЄ№ яхЁтюх "ёыютю"
 string.trim_w = function(s) return s:gsub("%s-(%S+)%s+", '', 1) end
@@ -240,68 +234,6 @@ function check_module(module_name)
     end
     return res, err
 end
-
---
--- NLC Improved (22.10.2025)
---
-
-local xvars = get_stored_vars()
-
-
-function unpack_value( value )
-  if type( value ) == "userdata" then
-    value = value( true )
-  end
-  return value
-end
-
-
-function value_exist( name )
-  return xvars[ name ] ~= nil
-end
-
-
-function set_value( name, value )
-  remove_value( name )
-  xvars[ name ] = value
-end
-
-
-function get_value( name, default_value )
-  local value = xvars[ name ]
-  if value == nil then
-    return default_value
-  end
-  return unpack_value( value )
-end
-
-
-function remove_value( name )
-  xvars[ name ] = nil
-end
-
-
-function set_or_remove_value( name, value )
-  if value then
-    set_value( name, value )
-  else
-    remove_value( name )
-  end
-end
-
-
-function get_all_vars()
-  return xvars()
-end
-
-
-function init_xvars()
-end
-
---
--- NLC Improved (22.10.2025)
---
-
 ----------------------------------------------------------------------
 
 function printf(fmt,...)
@@ -976,17 +908,6 @@ function parse_key_value( s )
 end
 
 
--- парсит строку вида "n1, n2, n3..." в таблицу { n1, n2, n3, ... } где n1, n2, n3... - целые числа
--- Чугай
---[[function parse_nums( s )
-    local t = {}
-
-    for entry in string.gfind( s, "([%w_\\]+)%p*" ) do
-        table.insert( t, tonumber( entry ) )
-    end
-
-    return t
-end]]
 
 -- парсит строку вида "n1, n2, n3..." в таблицу { n1, n2, n3, ... } где n1, n2, n3... - дробные числа
 function parse_nums( s )
@@ -1943,6 +1864,44 @@ function get_string(section, param, def_val, ini_file)
 		return def_val
 	end
 end
+
+--
+-- OGSR: Gunslinger Addon (26.12.2025)
+--
+
+function get_u32(section, param, def_val, ini_file)
+	local ini = ini_file or sys_ini
+	ASSERT(ini:section_exist(section), "get_u32: section '"..section.."' doesn't exist")
+	if ini:line_exist(section, param) then
+		return ini:r_u32(section, param)
+	else
+		return def_val
+	end
+end
+
+function get_bool(section, param, def_val, ini_file)
+	local ini = ini_file or sys_ini
+	ASSERT(ini:section_exist(section), "get_bool: section '"..section.."' doesn't exist")
+	if ini:line_exist(section, param) then
+		return ini:r_bool(section, param)
+	else
+		return not (not def_val)
+	end
+end
+
+function get_float(section, param, def_val, ini_file)
+	local ini = ini_file or sys_ini
+	ASSERT(ini:section_exist(section), "get_float: section '"..section.."' doesn't exist")
+	if ini:line_exist(section, param) then
+		return ini:r_float(section, param)
+	else
+		return def_val
+	end
+end
+
+--
+-- OGSR: Gunslinger Addon (26.12.2025)
+--
 
 --/-------------------------------------------------------------------
 --/#+# initialize modules [lua_helper/lua_extensions]

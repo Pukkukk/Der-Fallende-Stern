@@ -85,7 +85,7 @@
 		<text>Голосование отключено</text>
 	</string>
 	<string id="ui_st_your_items">
-		<text>Вещи Меченого</text>
+		<text>Вещи JJ</text>
 	</string>
 	<string id="st_level">
 		<text>Уровень</text>
@@ -255,11 +255,15 @@
 	</string>
 
 	<string id="ui_st_money_descr">
-		<text>РУБ</text>
+		<text>руб</text>
 	</string>
 
 	<string id="discord_status_mm">
 		<text>В главном меню</text>
 	</string>
+	
+	<string id="discord_status_small_icon">
+		<text>WILD_USEC, Pukkukk</text>
+	</string>	
 
 </string_table>

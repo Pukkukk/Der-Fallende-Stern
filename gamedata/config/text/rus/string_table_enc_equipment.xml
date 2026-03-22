@@ -3,6 +3,9 @@
 	<string id="Antirad">
 		<text>Антирадиационные препараты</text>
 	</string>
+	<string id="Antirad_short">
+		<text>Антирад</text>
+	</string>	
 	<string id="Arm-heavy">
 		<text>Тяжёлое сталкеровское снаряжение</text>
 	</string>
@@ -109,7 +112,7 @@
 		<text>Энергетический напиток "Non Stop"</text>
 	</string>
 	<string id="energy_drink_short_name">
-		<text>Энергетический напиток "Non Stop"</text>
+		<text>"Non Stop"</text>
 	</string>
 	<string id="Equipment">
 		<text>Экипировка и еда</text>
@@ -119,6 +122,9 @@
 	</string>
 	<string id="Kolbasa">
 		<text>Колбаса "Практическая"</text>
+	</string>
+	<string id="Kolbasa_short">
+		<text>Колбаса</text>
 	</string>
 	<string id="Medi">
 		<text>Медицинские препараты</text>
@@ -138,6 +144,9 @@
 	<string id="Vodka">
 		<text>Водка "Казаки"</text>
 	</string>
+	<string id="Detector">
+		<text>Дозиметр</text>
+	</string>	
 	<string id="st_detector">
 		<text>Детектор аномалий</text>
 	</string>
