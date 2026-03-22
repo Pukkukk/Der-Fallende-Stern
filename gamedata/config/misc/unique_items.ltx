@@ -409,7 +409,7 @@ grenade_launcher_status		                = 0
 silencer_x					= 203
 silencer_y					= 9
 
-scope_texture		= crosshair2d\crosshairs_ui_pn23
+scope_texture		= crosshair2d\crosshairs_ui_elcan
 scope_zoom_factor	= 20
 scope_zoom_factor_descr	= 1.0
 scope_zoom_hud_fov = 0.45
@@ -426,22 +426,72 @@ hit_power        	= 0.58
 bullet_speed		= 1000
 silencer_hit_power      = 0.55
 silencer_bullet_speed	= 970
-prm                     = 300
+rpm                     = 300
 
 snd_silncer_shot        = weapons\sig550\sig550_m2_silent
 
-hidden_bones = firemode_single, firemode_triple,  scope1, scope2, scope3, scope5, scope6, light,  flash, laser, ironsight_sight, foregrip_sight, bayonet, ironsight, ironsight_sight
+hidden_bones = firemode_single, firemode_triple,  scope1, scope2, scope4, scope5, scope6, light,  flash, laser, ironsight_sight, foregrip_sight, bayonet, ironsight, ironsight_sight
 
- hud = wpn_sig_m2_hud
+hud = wpn_sig_m2_hud
+
 [wpn_sig_m2_hud]:wpn_sig550_hud
+
+aim_hud_offset_pos = 0.0,-0.0275,-0.12
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0,-0.0275,-0.12
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
+
+;;;;;;;;;;;;;;;;;;;; SIG SG 551 Commando ;;;;;;;;;;;;;;;;;;;;;;
+;--------------------------------------------------------------
+[wpn_sig_m1]:wpn_sig550	
+
+inv_name			= gunsl_wpn_sig550_m1
+inv_name_short		= gunsl_wpn_sig550_m1
+
+cost					= 8500
+hidden_bones = firemode_single, firemode_triple,  scope2, scope3, scope4, scope5, scope6, light, flash, laser, bayonet 
+scope_status			        = 1
+silencer_status				= 2
+grenade_launcher_status			= 0
+silencer_x					= 219
+silencer_y					= 9
+inv_weight					= 2.2
+condition_shot_dec 				= 0.00005
+hit_power        	= 0.58
+silencer_hit_power      = 0.55
+rpm                     = 800
+
+inv_grid_width     = 5
+inv_grid_height    = 2
+inv_grid_x         = 0
+inv_grid_y         = 24
+
+
+scope_name 					= wpn_addon_scope_eotech
+scope_x                 = 100
+scope_y                 = 100
+
+scope_respawn                                        = wpn_sig_m1
+
+
+scope_zoom_factor	= 100
+scope_zoom_factor_descr	= 1.0
+scope_zoom_hud_fov = 0.45
+
+position			= -0.021, -0.122, 0.10 ;-0.021, -0.020, -0.0175
+fire_point			= 0.0, 0.165, 0.474
+shell_point			= 0.0000,0.160,0.020
+
+hud                      	= wpn_sig_m1_hud
+
+[wpn_sig_m1_hud]:wpn_sig550_hud
+
 item_visual		= dynamics\weapons\wpn_sig550\wpn_sig550_tactical_hud
-aim_hud_offset_pos          =  0.000198,-0.046000,0.203499
-aim_hud_offset_pos_16x9 =  0.000198,-0.046000,0.203499
-anm_suicide			    = sg550_tac_suicide
 
-aim_hud_offset_rot = 0.010000,0.000000,0.000000
-
-aim_hud_offset_rot_16x9 = 0.010000,0.000000,0.000000
+aim_hud_offset_pos = 0.0001,-0.0221,0.0
+aim_hud_offset_rot = 0.0,0.0,0.0
+aim_hud_offset_pos_16x9 = 0.0001,-0.0221,0.0
+aim_hud_offset_rot_16x9 = 0.0,0.0,0.0
 
 ;          ///////////////////////////////////////////////////
 anm_show                   = sg550_tac_draw
