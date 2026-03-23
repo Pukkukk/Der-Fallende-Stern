@@ -124,7 +124,7 @@
   
   <!-- Цифры времени на худе --> 
 
-  <hud_show_time  x="3" y="180" width="800" height="30" complex_mode="1">
+  <hud_show_time  x="5.5" y="160" width="800" height="30" complex_mode="1">
            <text font="letterica18"  r="153" g="255" b="0" a="255" align="l"/>
   </hud_show_time>
 

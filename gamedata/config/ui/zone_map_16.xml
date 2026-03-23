@@ -4,7 +4,7 @@
 	<minimap>
 		<level_frame x="8" y="8" width="169" height="168"/>
 		
-		<background x="0" y="0" width="185" height="185" stretch="1">
+		<background x="0" y="0" width="181" height="179" stretch="1">
 			<texture>ui_hud_map</texture>
 			
 			<dist_text x="140" y="8" width="150" height="20">

@@ -2,7 +2,7 @@
     <file_name>ui\ui_hud</file_name>
     
 	-- рамки
-    <texture id="ui_hud_map" x="0" y="0" width="185" height="185" />			-- рамка карты
+    <texture id="ui_hud_map" x="0" y="0" width="181" height="179" />			-- рамка карты
     <texture id="ui_hud_frame_patron"  x="185" y="72" width="157" height="65" />	-- рамка патронов
     <texture id="ui_hud_frame_rank" x="349" y="0" width="60" height="65" />    
     <texture id="ui_hud_frame_money" x="409" y="0" width="100" height="65" />	

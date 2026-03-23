@@ -48,7 +48,7 @@
 	<car_panel x="-850" y="2" width="110" height="10"/>
 	
 	-- счетчик НПС на карте
-	<static_pda_online x="165" y="155" width="35" height="30" light_anim="ui_pda_contacts" la_cyclic="0" la_texture="0" la_text="1" la_alpha="1">
+	<static_pda_online x="152" y="150.5" width="35" height="30" light_anim="ui_pda_contacts" la_cyclic="0" la_texture="0" la_text="1" la_alpha="1">
 		<texture>ui_hud_map_counter</texture>
 		<text y="8" align="c" font="graffiti19" r="159" g="159" b="159" a="255"/>
 	</static_pda_online>
