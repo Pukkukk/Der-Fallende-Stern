@@ -59,7 +59,7 @@ function BkgrWnd:InitControls()
 	self:Register(ctrl,"btn_drop_item")
 	self:AddCallback("btn_drop_item",ui_events.BUTTON_CLICKED,self.DropItem,self)
 	-- кнопки быстрых слотов -- fast use slots
-	self.fast_use_slots_wnd = dmx_fast_use_slots.FastUseSlotsWnd(self)
+	self.fast_use_slots_wnd = ui_fast_use_slots.FastUseSlotsWnd(self)
 	self.stat:AttachChild(self.fast_use_slots_wnd)
 	-- кнопка сна
 	ctrl = xml:Init3tButton("btn_sleep",self.stat)

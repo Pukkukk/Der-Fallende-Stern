@@ -153,7 +153,7 @@ function FastUseSlotsList:FillList()
 	local duplicate_sections = {}
 	db.actor:iterate_inventory(function (dummy, item)
 		local section = item:section()
-		if items_for_fast_slots[section] and not duplicate_sections[section] then
+		if eat_items[section] and not duplicate_sections[section] then
 			duplicate_sections[section] = true
 			table.insert(self.items, section)
 			local item_static = FastUseSlotsItem()
