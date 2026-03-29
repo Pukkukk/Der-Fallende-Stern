@@ -28,7 +28,7 @@
 
 	<others_bag_static x="0" y="0" width="344" height="710">
 		<texture mirror="h" width="305" height="455"></texture>
-		<text x="50" y="78" font="letterica16" r="255" g="255" b="255" a="128">st_items</text>
+		<text x="50" y="74" font="letterica16" r="255" g="255" b="255" a="128">st_items</text>
 	</others_bag_static>
 
 	<dragdrop_list_other x="21" y="112" width="306" height="599"
