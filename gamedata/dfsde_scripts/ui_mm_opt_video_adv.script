@@ -20,7 +20,7 @@ local adv_vid_opt_params = {
 --	{ "dyn_opt_dist",          "track", 0, hint_colors.yellow, "video_settings_name_68", "video_settings_desc_68" },
 	--
 	{ "r__smap_size",          "list",  1, hint_colors.red   , "video_settings_name_59", "video_settings_desc_59" },
-	{ "r2_sun_quality",        "list",  0, hint_colors.red   , "video_settings_name_70", ""                       },
+	{ "r2_sun_quality",        "list",  0, hint_colors.red   , "video_settings_name_71", ""                       },
 	{ "sun_shafts",            "list",  0, hint_colors.yellow, "video_settings_name_29", "video_settings_desc_29" },
 	{ "r2_actor_shadow",       "check", 0, hint_colors.green , "video_settings_name_56", ""                       },
 	{ "lens_flare",            "check", 0, hint_colors.green,  "video_settings_name_67", "" },
@@ -38,7 +38,7 @@ local adv_vid_opt_params = {
 	--
 	{ "detail_density",        "track", 0, hint_colors.red   , "video_settings_name_4" , "video_settings_desc_4"  },
 	{ "detail_distance",       "track", 0, hint_colors.red   , "video_settings_name_5" , "video_settings_desc_5"  },
-	{ "detail_scale",          "track", 0, hint_colors.yellow, "video_settings_name_70" , ""                      },
+	{ "detail_scale",          "track", 0, hint_colors.yellow, "video_settings_name_72" , ""                      },
 	{ "r2_sun_details",        "check", 0, hint_colors.red   , "video_settings_name_12", "video_settings_desc_12" },
 	--
 	{ "r2_steep_parallax",     "check", 0, hint_colors.yellow, "video_settings_name_39", "video_settings_desc_39" },

@@ -891,10 +891,10 @@
 	<string id="video_settings_name_70">
 		<text>Предзагрузка моделей и их текстур - g_prefetch</text>
 	</string>	
-	<string id="video_settings_name_70">
+	<string id="video_settings_name_71">
 		<text>Мягкие тени от солнца - r2_sun_quality</text>
 	</string>	
-	<string id="video_settings_name_70">
+	<string id="video_settings_name_72">
 		<text>Высота травы - detail_scale</text>
 	</string>		
 
