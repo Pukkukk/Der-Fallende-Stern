@@ -106,7 +106,8 @@ hit_type 			= fire_wound
 
 fire_distance            	= 50
 bullet_speed			= 425 ;начальная скорость пули
-rpm                      	= 550
+rpm                     = 200
+rpm_empty_click 	 	= 200
 ; end ttc	
 
 use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
@@ -154,7 +155,7 @@ silencer_x 					= 80						; offset in inventory icon
 silencer_y 					= -17
 
 ;звуки
-snd_shoot				= weapons\beretta\m9_4
+snd_shoot				= weapons\beretta\m9_4, 0.7
 snd_draw		= weapons\p99\p99_draw
 snd_holster		= weapons\m1911\hide
 snd_empty		= weapons\glock17\glock17_dry
@@ -207,7 +208,7 @@ silencer_bullet_speed	 	= 400
 
 ;snd_silncer_shot			= weapons\w_ak74_shot1 
 
-silencer_light_color		= 0.58
+silencer_light_color		= 0.6,0.5,0.3
 silencer_light_range		= 2
 silencer_light_var_color	= 0.05
 silencer_light_var_range	= 0.5
