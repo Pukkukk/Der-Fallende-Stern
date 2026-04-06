@@ -1417,7 +1417,7 @@
 			<infoportion_fail>rad_scene_end_trans</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Остановить превращение</text>
+			<text>Остановить превращение огнестрелом</text>
 			<infoportion_complete>last_will_1</infoportion_complete>
 		</objective>
 </game_task>
@@ -1501,16 +1501,16 @@
 </game_task>
 
 <game_task id="dead_artefacts" prio="100">
-		<title>"Мертвые" артефакты</title>
+		<title>"Мёртвые" артефакты</title>
 		<objective>
-			<text>"Мертвые" артефакты</text>
+			<text>"Мёртвые" артефакты</text>
 			<icon>arts_tasks</icon>
 			<article>dfs_71</article>
 			<infoportion_complete>player_complete_dead_artefacts</infoportion_complete>
 			<infoportion_fail>dead_artefacts_cruch</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Разузнать о происхождении "мертвых" артефактов</text>
+			<text>Разузнать о происхождении "мёртвых" артефактов</text>
 			<infoportion_complete>dead_artefacts_1</infoportion_complete>
 		</objective>
 </game_task>
