@@ -47,7 +47,7 @@
 
 =======================texstura         ==================================
 
-	<descr_static x="200" y="250" width="350" height="275">
+	<descr_static x="200" y="250" width="1024" height="768">
 		<texture></texture>
 	</descr_static>
 

@@ -103,7 +103,7 @@
 		<texture></texture>		
 	</desc_frame_window>
 
-	<desc_static x="343" y="308" width="329" height="230">
+	<desc_static x="343" y="308" width="1024" height="768">
 		<texture></texture>		
 	</desc_static>
 --------------------------------------------------------------------
