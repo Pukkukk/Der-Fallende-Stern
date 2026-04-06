@@ -103,10 +103,8 @@ function actor_binder:net_spawn(data)
 --	als_loadscrin.update() --полноэкранные интро
 	for _, k in ipairs({
       "g_zones_dbg", "g_vertex_dbg", "g_crosshair_dbg",
-       "g_ammunition_on_belt",
-      "show_wnd_rect", "show_wnd_rect_all",
+      "show_wnd_rect", "show_wnd_rect_all", "show_wnd_rect_names",
     }) do
-	get_console():execute("g_ammunition_on_belt off" )
       get_console():disable_command( k )
     end
 ----------------------------------
