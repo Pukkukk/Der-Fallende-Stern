@@ -1400,7 +1400,7 @@
 
 		<supplies>
 			[spawn] \n
-			scope_kashtan_svu = 1, scope \n
+			wpn_scope_kashtan_svu = 1, scope \n
 			ammo_7.62x54_7h14 = 1 \n
 		</supplies>
 		
@@ -2952,7 +2952,7 @@
 
 		<supplies>
 			[spawn] \n
-			scope_pso1m2_svd = 1, scope \n
+			wpn_scope_pso1m2_svd = 1, scope \n
 			ammo_7.62x54_7h14 = 1 \n
 			wpn_desert_eagle \n
 			ammo_11.43x23_fmj = 1 \n
@@ -2981,7 +2981,7 @@
 
 		<supplies>
 			[spawn] \n
-			scope_kashtan_svu = 1, scope \n
+			wpn_scope_kashtan_svu = 1, scope \n
 			ammo_7.62x54_7h14 = 1 \n
 			wpn_tt33 \n
 			ammo_7.62x25_p = 1 \n
@@ -5764,7 +5764,7 @@
 			[spawn] \n
 			wpn_glock18c_expert \n
 			ammo_9x19_fmj = 1 \n
-			scope_pso1_svd =1, scope, silencer \n 
+			wpn_scope_pso1_svd = 1, scope, silencer \n 
                         wpn_addon_scope \n
 			ammo_7.62x54_7h14 = 1 \n
 #include "gameplay\character_items.xml" \n
@@ -6811,7 +6811,7 @@
 			[spawn] \n
 			wpn_sig220 \n
 			ammo_11.43x23_hydro = 1 \n
-			wpn_g36_susat_night = 1, scope \n
+			wpn_g36_susat = 1, scope \n
 			ammo_5.56x45_ap = 1 \n
 			device_torch \n
 #include "gameplay\character_items.xml" \n
