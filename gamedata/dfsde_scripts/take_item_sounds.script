@@ -2,6 +2,31 @@ function take_items(obj)
 if obj:section() == "wpn_pm" then
 pistol_take_sound()
 end
+
+--
+-- 03.04.2026
+--
+
+if obj:section() == "af_doping" then
+detectors_take_sound()
+end
+if obj:section() == "af_antidoping" then
+detectors_take_sound()
+end
+if obj:section() == "glowworm" then
+detectors_take_sound()
+end
+if obj:section() == "black_soul" then
+detectors_take_sound()
+end
+if obj:section() == "concord" then
+detectors_take_sound()
+end
+
+--
+-- 03.04.2026
+--
+
 if obj:section() == "wpn_pm_arena" then
 pistol_take_sound()
 end
@@ -291,6 +316,12 @@ if obj:section() == "wpn_knife" then
 knife_take_sound()
 end
 if obj:section() == "fake_wpn_knife" then
+knife_take_sound()
+end
+if obj:section() == "wpn_knife_d" then
+knife_take_sound()
+end
+if obj:section() == "fake_wpn_knife_d" then
 knife_take_sound()
 end
 if obj:section() == "vodka" then
