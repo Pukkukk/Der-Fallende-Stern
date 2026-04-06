@@ -62,42 +62,42 @@
 	<icons_scroll_view  x="955" y="100" width="65" height="455" right_ident="2" always_show_scroll="0" vert_interval="18" inverse_dir="1" flip_vert="0"/>
 
 	-- иконки голода, радиации, поломки оружи€ и т.п.
-	<weapon_jammed_static x="000" y="000" width="40" height="40" stretch="1">
+	<weapon_jammed_static x="000" y="000" width="50" height="50" stretch="1">
 		<texture>ui_hud_icon_weapon</texture>
 	</weapon_jammed_static>
 
-	<radiation_static x="000" y="000" width="40" height="40" stretch="1">
+	<radiation_static x="000" y="000" width="50" height="50" stretch="1">
 		<texture>ui_hud_icon_radiation</texture>
 	</radiation_static>
 
-	<wound_static x="000" y="000" width="40" height="40" stretch="1">
+	<wound_static x="000" y="000" width="50" height="50" stretch="1">
 		<texture>ui_hud_icon_drop</texture>
 	</wound_static>
 
-	<starvation_static x="000" y="000" width="40" height="40" stretch="1">
+	<starvation_static x="000" y="000" width="50" height="50" stretch="1">
 		<texture>ui_hud_icon_eat</texture>
 	</starvation_static>
 
-	<psy_health_static x="000" y="000" width="40" height="40" stretch="1">
+	<psy_health_static x="000" y="000" width="50" height="50" stretch="1">
 		<texture>ui_hud_icon_psycho</texture>
 	</psy_health_static>
 
-	<invincible_static x="000" y="000" width="40" height="40" stretch="1">
+	<invincible_static x="000" y="000" width="50" height="50" stretch="1">
 		<texture>ui_hud_icon_goodmode</texture>
 	</invincible_static>
 	
-	<can_sleep_static x="000" y="000" width="40" height="40" stretch="1">
+	<can_sleep_static x="000" y="000" width="50" height="50" stretch="1">
 		<texture>ui_hud_icon_sleep</texture>
 	</can_sleep_static>
 
-	<artefact_static x="000" y="000" width="40" height="40" stretch="1">
+	<artefact_static x="000" y="000" width="50" height="50" stretch="1">
 		<texture>ui_hud_icon_artefact</texture>
 	</artefact_static>
 
 	-- мигающий ѕƒј (вход€шие смс)
 	<flashing_icons>
 		<flashing_icon x="125" y="158" width="48" height="29" type="pda" light_anim="ui_slow_blinking_alpha">
-			<texture>ui_hud_icon_PDA</texture>
+			<texture></texture>
 		</flashing_icon>
 	</flashing_icons>
 
