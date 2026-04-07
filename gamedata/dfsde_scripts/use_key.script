@@ -291,7 +291,7 @@ end
                 			 end 
         			end
     		end
-		alife():create("wpn_gaus_m1", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
+		alife():create("wpn_gauss", db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
 	end
 
 
