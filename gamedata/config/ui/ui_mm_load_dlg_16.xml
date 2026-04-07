@@ -11,7 +11,7 @@
 		<texture>ui\dfsde_settings</texture>
 		
 		<caption x="740" y="014" width="378" height="33" complex_mode="0">
-			<text font="graffiti22" r="184" g="168" b="131">ui_mm_load_game</text>
+			<text font="graffiti22" r="184" g="168" b="131"></text>
 		</caption>
 		
 		<picture x="560" y="098" width="128" height="128" clipper="1" stretch="1">
