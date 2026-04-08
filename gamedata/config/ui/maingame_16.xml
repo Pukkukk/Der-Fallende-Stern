@@ -33,7 +33,7 @@
 	
 	-- рамка патронов и ее наполнение
 	<static_weapon x="844" y="683" width="183" height="85" stretch="1">
-		<text complex_mode="0" x="45" y="0" font="letterica16" r="255" g="255" b="255" a="130"/>
+		<text complex_mode="0" x="45" y="1" font="letterica16" r="255" g="255" b="255" a="130"/>
 		<texture>ui_hud_frame_patron</texture>
 	</static_weapon>
 	
