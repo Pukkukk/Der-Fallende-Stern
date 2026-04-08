@@ -132,7 +132,30 @@
 	<string id="wpn_knife_d_descr">
 		<text>Боевой метательный нож City Brother 1115 Warhawk, представляющий особую угрозу всему живому будучи в умелых руках.</text>
 	</string>	
+	
+	<string id="dfs_de_22">
+	<text>Спасибо за помощь:</text>
+	</string>
 
+	<string id="dfs_de_23">
+	<text>morrazzzz</text>
+	</string>
+	
+	<string id="dfs_de_24">
+	<text>NLC Improved</text>
+	</string>	
+	
+	<string id="dfs_de_25">
+	<text>Monolith UI</text>
+	</string>	
+	
+	<string id="dfs_de_26">
+	<text>OGSR: Gunslinger Addon</text>
+	</string>
+
+	<string id="dfs_de_27">
+	<text>Secret Trails</text>
+	</string>	
 
 <!-- Техническое название = название скрипта -->
 

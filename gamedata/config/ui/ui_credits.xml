@@ -224,7 +224,7 @@
 		</auto_static>
 		
 				<auto_static start_time="60" length_sec="3" x="262" y="370" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
-					<text align="c" font="graffiti50" color="yelow">dfs_sponsor_name</text>
+					<text align="c" font="graffiti50" color="yellow">dfs_sponsor_name</text>
 				</auto_static>
 		
 
@@ -237,39 +237,39 @@
 		</auto_static>
 				
 				<auto_static start_time="65" length_sec="10" x="262" y="310" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
-					<text align="c" font="graffiti32" color="yelow">dfs_musicants_1</text>
+					<text align="c" font="graffiti32" color="yellow">dfs_musicants_1</text>
 				</auto_static>
 				
 				<auto_static start_time="65" length_sec="10" x="262" y="340" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
-					<text align="c" font="graffiti32" color="yelow">dfs_musicants_2</text>
+					<text align="c" font="graffiti32" color="yellow">dfs_musicants_2</text>
 				</auto_static>
 				
 				<auto_static start_time="65" length_sec="10" x="262" y="370" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
-					<text align="c" font="graffiti32" color="yelow">dfs_musicants_3</text>
+					<text align="c" font="graffiti32" color="yellow">dfs_musicants_3</text>
 				</auto_static>
 				
 				<auto_static start_time="65" length_sec="10" x="262" y="400" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
-					<text align="c" font="graffiti32" color="yelow">dfs_musicants_4</text>
+					<text align="c" font="graffiti32" color="yellow">dfs_musicants_4</text>
 				</auto_static>
 				
 				<auto_static start_time="65" length_sec="10" x="262" y="430" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
-					<text align="c" font="graffiti32" color="yelow">dfs_musicants_5</text>
+					<text align="c" font="graffiti32" color="yellow">dfs_musicants_5</text>
 				</auto_static>
 				
 				<auto_static start_time="65" length_sec="10" x="262" y="460" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
-					<text align="c" font="graffiti32" color="yelow">dfs_musicants_6</text>
+					<text align="c" font="graffiti32" color="yellow">dfs_musicants_6</text>
 				</auto_static>
 				
 				<auto_static start_time="65" length_sec="10" x="262" y="490" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
-					<text align="c" font="graffiti32" color="yelow">dfs_musicants_7</text>
+					<text align="c" font="graffiti32" color="yellow">dfs_musicants_7</text>
 				</auto_static>
 				
 				<auto_static start_time="65" length_sec="10" x="262" y="520" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
-					<text align="c" font="graffiti32" color="yelow">dfs_musicants_8</text>
+					<text align="c" font="graffiti32" color="yellow">dfs_musicants_8</text>
 				</auto_static>
 				
 				<auto_static start_time="65" length_sec="10" x="262" y="550" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
-					<text align="c" font="graffiti32" color="yelow">dfs_musicants_9</text>
+					<text align="c" font="graffiti32" color="yellow">dfs_musicants_9</text>
 				</auto_static>
 				
 				
@@ -460,14 +460,22 @@
 				</auto_static>				
 				
 				
-				<auto_static start_time="190" length_sec="10" x="262" y="250" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+				<auto_static start_time="190" length_sec="10" x="152" y="250" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
 					<text align="c" font="graffiti32" color="red">dfs_de_3</text>
 				</auto_static>
 				
-				<auto_static start_time="192" length_sec="8" x="262" y="350" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+				<auto_static start_time="192" length_sec="8" x="152" y="350" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
 					<text align="c" font="graffiti50" color="green">dfs_de_4</text>
-				</auto_static>		
+				</auto_static>
 
+				<auto_static start_time="190" length_sec="10" x="402" y="252" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="red">dfs_de_22</text>
+				</auto_static>
+				
+				<auto_static start_time="192" length_sec="8" x="402" y="350" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti50" color="green">dfs_de_23</text>
+				</auto_static>
+			
 
 				<auto_static start_time="200" length_sec="10" x="262" y="250" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
 					<text align="c" font="graffiti32" color="red">dfs_de_5</text>
@@ -489,6 +497,22 @@
 					<text align="c" font="graffiti32" color="green">dfs_de_9</text>
 				</auto_static>
 
+				<auto_static start_time="202" length_sec="8" x="262" y="430" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="green">dfs_de_24</text>
+				</auto_static>
+				
+				<auto_static start_time="202" length_sec="8" x="262" y="460" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="green">dfs_de_25</text>
+				</auto_static>
+				
+				<auto_static start_time="202" length_sec="8" x="262" y="490" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="green">dfs_de_26</text>
+				</auto_static>
+				
+				<auto_static start_time="202" length_sec="8" x="262" y="520" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
+					<text align="c" font="graffiti32" color="green">dfs_de_27</text>
+				</auto_static>
+				
 
 				<auto_static start_time="210" length_sec="10" x="262" y="250" width="500" height="40" light_anim="credits_head" la_cyclic="0" la_texture="0" la_alpha="1">
 					<text align="c" font="graffiti32" color="red">dfs_de_10</text>
