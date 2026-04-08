@@ -318,78 +318,106 @@ function actor_binder:on_item_take (obj)
     level_tasks.proceed(self.object)
 take_item_sounds.take_items(obj)
 xr_statistic.addArtefact(obj)
-	local item = obj
-
-	if obj and obj:section() == "malyawa_01" and
-		not has_alife_info("info_malyawa_01") then
-	db.actor:give_info_portion("info_malyawa_01")
-end
-
-	if obj and obj:section() == "ss_document_12" and
-		not has_alife_info("info_letter_1") then
-	db.actor:give_info_portion("info_letter_1")
-end
 	
-	if obj and obj:section() == "molokh_pda" and
-		not has_alife_info("info_molokh_pda_nam") then
-	db.actor:give_info_portion("info_molokh_pda_nam")
-end
+--
+-- morrazzzz (07.04.2026)
+--	
+	
+local morrazzzz =
+{
+    malyawa_01                    = "info_malyawa_01",
+    ss_document_12                = "info_letter_1",
+    molokh_pda                    = "info_molokh_pda_nam",
+    zakhar_pda                    = "info_zakhar_pda_nam",
+    ss_document_06                = "info_ss_document_06_nam",
+    malyawa_03                    = "info_malyawa_03",
+    malyawa_04                    = "info_malyawa_04",
+    malyawa_05                    = "info_malyawa_05",
+    malyawa_06                    = "info_malyawa_06",
+    fly_pda                       = "info_fly_pda",
+    xform_1                       = "player_complete_find_xform_1",
+    devil_contract_xform          = "taked_mzda",
+    unknown_pda                   = "ghost_sniper_4",
+    malyawa_01                    = "zaglushka_8",
+    wpn_p38_sk1                   = "find_sor_sniper_2_1",
+    ss_document_01                = "find_sor_sniper_2_2",
+    ss_document_02                = "find_sor_sniper_2_3",
+    ss_document_03                = "find_sor_sniper_2_4",
+    xform_4                       = "xform_from_hell_2",
+    xform_5                       = "xform_from_hell_3",
+    xform_6                       = "xform_from_hell_4",
+    xform_7                       = "xform_from_hell_5",
+    xform_8                       = "xform_from_hell_6",
+    xform_9                       = "xform_from_hell_7",
+    xform_10                      = "xform_from_hell_8",
+    xform_11                      = "xform_from_hell_9",
+    xform_12                      = "xform_from_hell_10",
+    xform_13                      = "xform_from_hell_11",
+    xform_14                      = "xform_from_hell_12",
+    xform_15                      = "xform_from_hell_13",
+    xform_16                      = "xform_from_hell_14",
+    xform_17                      = "xform_from_hell_15",
+    xform_18                      = "xform_from_hell_16",
+    xform_19                      = "xform_from_hell_17",
+    xform_20                      = "xform_from_hell_18",
+    kira_pribor                   = "player_complete_find_crym_invertor",
+    renn_pda                      = "info_dfs_story_ar_34",
+    zakhar_pda                    = "zakhar_pda_found",
+    docum_case                    = "zaglushka_58",
+    wpn_vihlop                    = "exempt_hostages_1",
+    af_electra_moonlight_zombie   = "art_zombie_01",
+    af_medusa_zombie              = "art_zombie_02",
+    af_cristall_flower_zombie     = "art_zombie_03",
+    af_night_star_zombie          = "art_zombie_04",
+    af_vyvert_zombie              = "art_zombie_05",
+    af_gravi_zombie               = "art_zombie_06",
+    af_gold_fish_zombie           = "art_zombie_07",
+    af_drops_zombie               = "art_zombie_08",
+    af_fireball_zombie            = "art_zombie_09",
+    af_cristall_zombie            = "art_zombie_10",
+    af_blood_zombie               = "art_zombie_11",
+    af_mincer_meat_zombie         = "art_zombie_12",
+    af_soul_zombie                = "art_zombie_13",
+    af_electra_sparkler_zombie    = "art_zombie_14",
+    af_electra_flash_zombie       = "art_zombie_15",
+    af_ameba_slime_zombie         = "art_zombie_16",
+    af_ameba_slug_zombie          = "art_zombie_17",
+    af_ameba_mica_zombie          = "art_zombie_18",
+    af_dummy_spring_zombie        = "art_zombie_19",
+    af_dummy_dummy_zombie         = "art_zombie_20",
+    af_dummy_battery_zombie       = "art_zombie_21",
+    af_dummy_pellicle_zombie      = "art_zombie_22",
+    af_dummy_glassbeads_zombie    = "art_zombie_23",
+    af_rusty_thorn_zombie         = "art_zombie_24",
+    af_rusty_kristall_zombie      = "art_zombie_25",
+    af_rusty_sea_urchin_zombie    = "art_zombie_26",
+    af_fuzz_kolobok_zombie        = "art_zombie_27",
+    sniper_pda                    = "has_sniper_pda",
+    crucian_pda                   = "crucian_compromat_1",
+    af_antidoping                 = "zaglushka_251",
+    kira_pribor                   = "has_kira_pribor",
+    berkov_code_tables            = "player_complete_ahnenerbe_docs",
+    monolith_kee_1                = "key_1_taken",
+    monolith_kee_2                = "key_2_taken",
+    monolith_kee_3                = "key_3_taken"
+}
 
-if obj and obj:section() == "zakhar_pda" and
-		not has_alife_info("info_zakhar_pda_nam") then
-	db.actor:give_info_portion("info_zakhar_pda_nam")
-end
+for item, infoportion in pairs(morrazzzz) do
+      if obj and obj:section() == item and not has_alife_info(infoportion) then
+          db.actor:give_info_portion(infoportion)
+      end
+end	
 
-if obj and obj:section() == "ss_document_06" and
-		not has_alife_info("info_ss_document_06_nam") then
-	db.actor:give_info_portion("info_ss_document_06_nam")
-end
+--
+-- morrazzzz (07.04.2026)
+--
 
-if obj and obj:section() == "malyawa_03" and
-		not has_alife_info("info_malyawa_03") then
-	db.actor:give_info_portion("info_malyawa_03")
-end
-
-if obj and obj:section() == "malyawa_04" and
-		not has_alife_info("info_malyawa_04") then
-	db.actor:give_info_portion("info_malyawa_04")
-end
-
-if obj and obj:section() == "malyawa_05" and
-		not has_alife_info("info_malyawa_05") then
-	db.actor:give_info_portion("info_malyawa_05")
-end
-
-if obj and obj:section() == "malyawa_06" and
-		not has_alife_info("info_malyawa_06") then
-	db.actor:give_info_portion("info_malyawa_06")
-end
-
-if obj and obj:section() == "fly_pda" and
-		not has_alife_info("info_fly_pda") then
-	db.actor:give_info_portion("info_fly_pda")
-end
-
-
-	if obj and obj:section() == "xform_1" and
-		not has_alife_info("player_complete_find_xform_1") then
-	db.actor:give_info_portion("player_complete_find_xform_1")
-end
-
-	if obj and obj:section() == "devil_contract_xform" and
-		not has_alife_info("taked_mzda") then
-	db.actor:give_info_portion("taked_mzda")
-end
+local item = obj
 
 	if obj and obj:section() == "ss_document_00" and
 		not has_alife_info("ghost_sniper_2") then
 	db.actor:give_info_portion("ghost_sniper_2")
 	dfs.shoot_sound_1()
-end
-
-	if obj and obj:section() == "unknown_pda" and
-		not has_alife_info("ghost_sniper_4") then
-	db.actor:give_info_portion("ghost_sniper_4")
 end
 
 	if obj and obj:section() == "malyawa_01" and
@@ -398,137 +426,11 @@ end
 	db.actor:give_info_portion("info_dfs_story_ar_17")
 	db.actor:give_info_portion("zaglushka_8")
 end
-
-	if obj and obj:section() == "wpn_p38_sk1" and
-		not has_alife_info("find_sor_sniper_2_1") then
-		db.actor:give_info_portion("find_sor_sniper_2_1")
-	end
-	
-	if obj and obj:section() == "ss_document_01" and
-		not has_alife_info("find_sor_sniper_2_2") then
-		db.actor:give_info_portion("find_sor_sniper_2_2")
-	end
-	
-	if obj and obj:section() == "ss_document_02" and
-		not has_alife_info("find_sor_sniper_2_3") then
-		db.actor:give_info_portion("find_sor_sniper_2_3")
-	end
-	
-	if obj and obj:section() == "ss_document_03" and
-		not has_alife_info("find_sor_sniper_2_4") then
-		db.actor:give_info_portion("find_sor_sniper_2_4")
-	end
-	
-	if obj and obj:section() == "xform_2" and
-		not has_alife_info("xform_from_hell_1") and 
-		(level.name() == "l01_escape") then
-		db.actor:give_info_portion("xform_from_hell_1")
-	end
-	
-	if obj and obj:section() == "xform_4" and
-		not has_alife_info("xform_from_hell_2") then
-		db.actor:give_info_portion("xform_from_hell_2")
-	end
-	
-	if obj and obj:section() == "xform_5" and
-		not has_alife_info("xform_from_hell_3") then
-		db.actor:give_info_portion("xform_from_hell_3")
-	end
-	
-	if obj and obj:section() == "xform_6" and
-		not has_alife_info("xform_from_hell_4") then
-		db.actor:give_info_portion("xform_from_hell_4")
-	end
-	
-	if obj and obj:section() == "xform_7" and
-		not has_alife_info("xform_from_hell_5") then
-		db.actor:give_info_portion("xform_from_hell_5")
-	end
-	
-	if obj and obj:section() == "xform_8" and
-		not has_alife_info("xform_from_hell_6") then
-		db.actor:give_info_portion("xform_from_hell_6")
-	end
-	
-	if obj and obj:section() == "xform_9" and
-		not has_alife_info("xform_from_hell_7") then
-		db.actor:give_info_portion("xform_from_hell_7")
-	end
-	
-	if obj and obj:section() == "xform_10" and
-		not has_alife_info("xform_from_hell_8") then
-		db.actor:give_info_portion("xform_from_hell_8")
-	end
-	
-	if obj and obj:section() == "xform_11" and
-		not has_alife_info("xform_from_hell_9") then
-		db.actor:give_info_portion("xform_from_hell_9")
-	end
-	
-	if obj and obj:section() == "xform_12" and
-		not has_alife_info("xform_from_hell_10") then
-		db.actor:give_info_portion("xform_from_hell_10")
-	end
-	
-	if obj and obj:section() == "xform_13" and
-		not has_alife_info("xform_from_hell_11") then
-		db.actor:give_info_portion("xform_from_hell_11")
-	end
-	
-	if obj and obj:section() == "xform_14" and
-		not has_alife_info("xform_from_hell_12") then
-		db.actor:give_info_portion("xform_from_hell_12")
-	end
-	
-	if obj and obj:section() == "xform_15" and
-		not has_alife_info("xform_from_hell_13") then
-		db.actor:give_info_portion("xform_from_hell_13")
-	end
-	
-	if obj and obj:section() == "xform_16" and
-		not has_alife_info("xform_from_hell_14") then
-		db.actor:give_info_portion("xform_from_hell_14")
-	end
-	
-	if obj and obj:section() == "xform_17" and
-		not has_alife_info("xform_from_hell_15") then
-		db.actor:give_info_portion("xform_from_hell_15")
-	end
-	
-	if obj and obj:section() == "xform_18" and
-		not has_alife_info("xform_from_hell_16") then
-		db.actor:give_info_portion("xform_from_hell_16")
-	end
-	
-	if obj and obj:section() == "xform_19" and
-		not has_alife_info("xform_from_hell_17") then
-		db.actor:give_info_portion("xform_from_hell_17")
-	end
-	
-	if obj and obj:section() == "xform_20" and
-		not has_alife_info("xform_from_hell_18") then
-		db.actor:give_info_portion("xform_from_hell_18")
-	end
-	
-	if obj and obj:section() == "kira_pribor" and
-		not has_alife_info("player_complete_find_crym_invertor") then
-		db.actor:give_info_portion("player_complete_find_crym_invertor")
-	end
-	
-	if obj and obj:section() == "renn_pda" and
-		not has_alife_info("info_dfs_story_ar_34") then
-		db.actor:give_info_portion("info_dfs_story_ar_34")
-	end
 	
 	if obj and obj:section() == "access_flesh" and
 		not has_alife_info("military_baza_1") then
 		db.actor:give_info_portion("military_baza_1")
 		db.actor:give_info_portion("info_dfs_story_ar_49")
-	end
-	
-	if obj and obj:section() == "zakhar_pda" and
-		not has_alife_info("zakhar_pda_found") then
-		db.actor:give_info_portion("zakhar_pda_found")
 	end
 	
 	if obj and obj:section() == "docum_case" and
@@ -578,195 +480,12 @@ end
 		dfs_diss.lc_dc2aes2_app()
 	end
 	
-	if obj and obj:section() == "wpn_vihlop" and
-		not has_alife_info("exempt_hostages_1") then
-		db.actor:give_info_portion("exempt_hostages_1")
-	end
-	
 	if obj and obj:section() == "malyawa_06" and
 		not has_alife_info("player_complete_meet_xeno_guard") and
 		not has_alife_info("meet_xeno_guard_start") then
 		db.actor:give_info_portion("meet_xeno_guard_start")
 	end
 	
-	
-	-- **************************************************
-	-- квест с артефактами зомби
-	if obj and obj:section() == "af_electra_moonlight_zombie" and
-		not has_alife_info("art_zombie_01") then
-		db.actor:give_info_portion("art_zombie_01")
-	end
-	
-	if obj and obj:section() == "af_medusa_zombie" and
-		not has_alife_info("art_zombie_02") then
-		db.actor:give_info_portion("art_zombie_02")
-	end
-	
-	if obj and obj:section() == "af_cristall_flower_zombie" and
-		not has_alife_info("art_zombie_03") then
-		db.actor:give_info_portion("art_zombie_03")
-	end
-	
-	if obj and obj:section() == "af_night_star_zombie" and
-		not has_alife_info("art_zombie_04") then
-		db.actor:give_info_portion("art_zombie_04")
-	end
-	
-	if obj and obj:section() == "af_vyvert_zombie" and
-		not has_alife_info("art_zombie_05") then
-		db.actor:give_info_portion("art_zombie_05")
-	end
-	
-	if obj and obj:section() == "af_gravi_zombie" and
-		not has_alife_info("art_zombie_06") then
-		db.actor:give_info_portion("art_zombie_06")
-	end
-	
-	if obj and obj:section() == "af_gold_fish_zombie" and
-		not has_alife_info("art_zombie_07") then
-		db.actor:give_info_portion("art_zombie_07")
-	end
-	
-	if obj and obj:section() == "af_drops_zombie" and
-		not has_alife_info("art_zombie_08") then
-		db.actor:give_info_portion("art_zombie_08")
-	end
-	
-	if obj and obj:section() == "af_fireball_zombie" and
-		not has_alife_info("art_zombie_09") then
-		db.actor:give_info_portion("art_zombie_09")
-	end
-	
-	if obj and obj:section() == "af_cristall_zombie" and
-		not has_alife_info("art_zombie_10") then
-		db.actor:give_info_portion("art_zombie_10")
-	end
-	
-	if obj and obj:section() == "af_blood_zombie" and
-		not has_alife_info("art_zombie_11") then
-		db.actor:give_info_portion("art_zombie_11")
-	end
-	
-	if obj and obj:section() == "af_mincer_meat_zombie" and
-		not has_alife_info("art_zombie_12") then
-		db.actor:give_info_portion("art_zombie_12")
-	end
-	
-	if obj and obj:section() == "af_soul_zombie" and
-		not has_alife_info("art_zombie_13") then
-		db.actor:give_info_portion("art_zombie_13")
-	end
-	
-	if obj and obj:section() == "af_electra_sparkler_zombie" and
-		not has_alife_info("art_zombie_14") then
-		db.actor:give_info_portion("art_zombie_14")
-	end
-	
-	if obj and obj:section() == "af_electra_flash_zombie" and
-		not has_alife_info("art_zombie_15") then
-		db.actor:give_info_portion("art_zombie_15")
-	end
-	
-	if obj and obj:section() == "af_ameba_slime_zombie" and
-		not has_alife_info("art_zombie_16") then
-		db.actor:give_info_portion("art_zombie_16")
-	end
-	
-	if obj and obj:section() == "af_ameba_slug_zombie" and
-		not has_alife_info("art_zombie_17") then
-		db.actor:give_info_portion("art_zombie_17")
-	end
-	
-	if obj and obj:section() == "af_ameba_mica_zombie" and
-		not has_alife_info("art_zombie_18") then
-		db.actor:give_info_portion("art_zombie_18")
-	end
-	
-	if obj and obj:section() == "af_dummy_spring_zombie" and
-		not has_alife_info("art_zombie_19") then
-		db.actor:give_info_portion("art_zombie_19")
-	end
-	
-	if obj and obj:section() == "af_dummy_dummy_zombie" and
-		not has_alife_info("art_zombie_20") then
-		db.actor:give_info_portion("art_zombie_20")
-	end
-	
-	if obj and obj:section() == "af_dummy_battery_zombie" and
-		not has_alife_info("art_zombie_21") then
-		db.actor:give_info_portion("art_zombie_21")
-	end
-	
-	if obj and obj:section() == "af_dummy_pellicle_zombie" and
-		not has_alife_info("art_zombie_22") then
-		db.actor:give_info_portion("art_zombie_22")
-	end
-	
-	if obj and obj:section() == "af_dummy_glassbeads_zombie" and
-		not has_alife_info("art_zombie_23") then
-		db.actor:give_info_portion("art_zombie_23")
-	end
-	
-	if obj and obj:section() == "af_rusty_thorn_zombie" and
-		not has_alife_info("art_zombie_24") then
-		db.actor:give_info_portion("art_zombie_24")
-	end
-	
-	if obj and obj:section() == "af_rusty_kristall_zombie" and
-		not has_alife_info("art_zombie_25") then
-		db.actor:give_info_portion("art_zombie_25")
-	end
-	
-	if obj and obj:section() == "af_rusty_sea_urchin_zombie" and
-		not has_alife_info("art_zombie_26") then
-		db.actor:give_info_portion("art_zombie_26")
-	end
-	
-	if obj and obj:section() == "af_fuzz_kolobok_zombie" and
-		not has_alife_info("art_zombie_27") then
-		db.actor:give_info_portion("art_zombie_27")
-	end
-	
-	if obj and obj:section() == "sniper_pda" and
-		not has_alife_info("has_sniper_pda") then
-		db.actor:give_info_portion("has_sniper_pda")
-	end
-	
-	if obj and obj:section() == "crucian_pda" and
-		not has_alife_info("crucian_compromat_1") then
-		db.actor:give_info_portion("crucian_compromat_1")
-	end
-	
-	if obj and obj:section() == "af_antidoping" and
-		not has_alife_info("zaglushka_251") then
-		db.actor:give_info_portion("zaglushka_251")
-	end
-	
-	if obj and obj:section() == "kira_pribor" and
-		not has_alife_info("has_kira_pribor") then
-		db.actor:give_info_portion("has_kira_pribor")
-	end
-	
-	if obj and obj:section() == "berkov_code_tables" and
-		not has_alife_info("player_complete_ahnenerbe_docs") then
-		db.actor:give_info_portion("player_complete_ahnenerbe_docs")
-	end
-	
-	if	obj and obj:section() == "monolith_kee_1" and
-		not has_alife_info("key_1_taken") then
-		db.actor:give_info_portion("key_1_taken")
-	end
-	
-	if	obj and obj:section() == "monolith_kee_2" and
-		not has_alife_info("key_2_taken") then
-		db.actor:give_info_portion("key_2_taken")
-	end
-	
-	if	obj and obj:section() == "monolith_kee_3" and
-		not has_alife_info("key_3_taken") then
-		db.actor:give_info_portion("key_3_taken")
-	end
-	-- *********************************************
 --=========== Для смены ножей начало ================
 	if obj and obj:section() == "ammo_knife" and
 		not has_alife_info("has_knife_d") then
