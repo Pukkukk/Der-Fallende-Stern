@@ -160,7 +160,7 @@ else
 	self:Show(false)
 end
 else
-	my.send_tip("Нельзя произвести ремонт - в слоте нет предмета.")
+	my.send_tip(translate("ui_remkit"))
 end
 end
 

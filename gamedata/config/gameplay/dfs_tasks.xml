@@ -1,14 +1,14 @@
 
 <game_task id="meet_partner" prio="150">
-		<title>Напарник</title>
+		<title>dfs_tasks</title>
 		<objective>
-			<text>Напарник</text>
+			<text>dfs_tasks</text>
 			<icon>hugo_tasks</icon>
 			<article>dfs_1</article>
 			<infoportion_complete>player_complete_meet_partner</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Встретиться с Хьюго</text>
+			<text>dfs_tasks_1</text>
 		<map_location_type hint= "sor_hugo_name">blue_location</map_location_type>
 		<object_story_id>sor_hugo</object_story_id>
 			<infoportion_complete>meet_partner1</infoportion_complete>
@@ -16,27 +16,27 @@
 </game_task>
 
 <game_task id="conductor" prio="50">
-		<title>Проводник для полковника</title>
+		<title>dfs_tasks_2</title>
 		<objective>
-			<text>Проводник для полковника</text>
+			<text>dfs_tasks_2</text>
 			<icon>copper_tasks</icon>
 			<article>dfs_2</article>
 		<infoportion_fail>player_complete_conductor</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Бармен</text>
+			<text>dfs_tasks_2_1</text>
 		<map_location_type hint= "bar_barmen_name">blue_location</map_location_type>
 		<object_story_id>sor_barman</object_story_id>
 			<infoportion_complete>conductor_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Торговец</text>
+			<text>dfs_tasks_2_2</text>
 		<map_location_type hint= "escape_trader_name">blue_location</map_location_type>
 		<object_story_id>predbannik_m_trader</object_story_id>
 			<infoportion_complete>conductor_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Полковник Коппер</text>
+			<text>dfs_tasks_2_3</text>
 		<map_location_type hint= "col_copper_name">blue_location</map_location_type>
 		<object_story_id>sor_col_copper</object_story_id>
 			<infoportion_complete>conductor_3</infoportion_complete>
@@ -44,15 +44,15 @@
 </game_task>
 
 <game_task id="accreditation" prio="50">
-		<title>Жильё</title>
+		<title>dfs_tasks_3</title>
 		<objective>
-			<text>Жильё</text>
+			<text>dfs_tasks_3</text>
 			<icon>hugo_tasks</icon>
 			<article>dfs_3</article>
 			<infoportion_complete>player_complete_accreditation</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Снять комнату</text>
+			<text>dfs_tasks_3_1</text>
 		<map_location_type hint= "escape_trader_name">blue_location</map_location_type>
 		<object_story_id>predbannik_m_trader</object_story_id>
 			<infoportion_complete>accreditation1</infoportion_complete>
@@ -60,37 +60,37 @@
 </game_task>
 
 <game_task id="low_of_colt" prio="40">
-		<title>Закон Кольта</title>
+		<title>dfs_tasks_4</title>
 		<objective>
-			<text>Закон Кольта</text>
+			<text>dfs_tasks_4</text>
 			<icon>colt_tasks</icon>
 			<article>dfs_4</article>
 			<infoportion_complete>player_complete_low_of_colt</infoportion_complete>
 			<function_complete>dfs_quests_complit.low_of_colt_full</function_complete>
 		</objective>
 		<objective>
-			<text>Забить Камбису стрелку</text>
+			<text>dfs_tasks_4_1</text>
 			<infoportion_complete>low_of_colt_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Вооружиться</text>
+			<text>dfs_tasks_4_2</text>
 			<infoportion_complete>low_of_colt_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Прийти на "стрелку"</text>
+			<text>dfs_tasks_4_3</text>
 		<map_location_type hint= "cambees_bandit_02_name">kill_stalker_location</map_location_type>
 		<object_story_id>dub_cambees_bandit_02</object_story_id>
 			<infoportion_complete>low_of_colt_3</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Разобраться с бандой Камбиса</text>
+			<text>dfs_tasks_4_4</text>
 		<map_location_type hint= "cambees_bandit_01_name">eliminate_lager_location</map_location_type>
 		<object_story_id>dub_cambees_bandit_01</object_story_id>
 			<infoportion_complete>low_of_colt_4</infoportion_complete>
 			<function_complete>dfs_quests_complit.low_of_colt_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Рассказать Сидоровичу</text>
+			<text>dfs_tasks_4_5</text>
 		<map_location_type hint= "escape_trader_name">blue_location</map_location_type>
 		<object_story_id>predbannik_m_trader</object_story_id>
 			<infoportion_complete>low_of_colt_5</infoportion_complete>
@@ -98,20 +98,20 @@
 </game_task>
 
 <game_task id="two_on_swamp" prio="150">
-		<title>Двое на болоте</title>
+		<title>dfs_tasks_5</title>
 		<objective>
-			<text>Двое на болоте</text>
+			<text>dfs_tasks_5</text>
 			<icon>sidor_tasks</icon>
 			<article>dfs_5</article>
 			<infoportion_complete>player_complete_two_on_swamp</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти Бизона и Луки</text>
+			<text>dfs_tasks_5_1</text>
 			<infoportion_complete>two_on_swamp_1</infoportion_complete>
 			<function_complete>dfs_quests_complit.two_on_swamp_1_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Сообщить Сидоровичу</text>
+			<text>dfs_tasks_5_2</text>
 	<map_location_type hint= "escape_trader_name">blue_location</map_location_type>
 		<object_story_id>predbannik_m_trader</object_story_id>
 			<infoportion_complete>two_on_swamp_2</infoportion_complete>
@@ -119,29 +119,29 @@
 </game_task>
 
 <game_task id="find_xform_1" prio="30">
-		<title>Тайник</title>
+		<title>dfs_tasks_6</title>
 		<objective>
-			<text>Тайник</text>
+			<text>dfs_tasks_6</text>
 			<icon>compas_tasks</icon>
 			<article>dfs_6</article>
 			<infoportion_complete>player_complete_find_xform_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти объект поиска убитых сталкеров</text>
+			<text>dfs_tasks_6_1</text>
 			<infoportion_complete>find_xform_1_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="meet_borman" prio="80">
-		<title>Братва</title>
+		<title>dfs_tasks_7</title>
 		<objective>
-			<text>Братва</text>
+			<text>dfs_tasks_7</text>
 			<icon>borman_tasks</icon>
 			<article>dfs_7</article>
 			<infoportion_complete>player_complete_meet_borman</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Прийти на встречу с бандитами</text>
+			<text>dfs_tasks_7_1</text>
 	<map_location_type hint= "borman_name">blue_location</map_location_type>
 	<object_story_id>sor_borman_1</object_story_id>
 			<infoportion_complete>meet_borman_1</infoportion_complete>
@@ -149,33 +149,33 @@
 </game_task>
 
 <game_task id="ghost_sniper" prio="60">
-		<title>Снайпер</title>
+		<title>dfs_tasks_8</title>
 		<objective>
-			<text>Снайпер</text>
+			<text>dfs_tasks_8</text>
 			<icon>sniper_tasks</icon>
 			<article>dfs_8</article>
 			<infoportion_complete>player_complete_ghost_sniper</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Обменять ксеноформу на СВД</text>
+			<text>dfs_tasks_8_1</text>
 	<map_location_type hint= "escape_trader_name">blue_location</map_location_type>
 		<object_story_id>predbannik_m_trader</object_story_id>
 			<infoportion_complete>ghost_sniper_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Осмотреть место преступления</text>
+			<text>dfs_tasks_8_2</text>
 			<infoportion_complete>ghost_sniper_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Ликвидировать снайпера с напарником</text>
+			<text>dfs_tasks_8_3</text>
 			<infoportion_complete>ghost_sniper_3</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Забрать вещи</text>
+			<text>dfs_tasks_8_4</text>
 			<infoportion_complete>ghost_sniper_4</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Принести документы Борману</text>
+			<text>dfs_tasks_8_5</text>
 	<map_location_type hint= "borman_name">blue_location</map_location_type>
 	<object_story_id>sor_borman_1</object_story_id>
 			<infoportion_complete>ghost_sniper_5</infoportion_complete>
@@ -183,48 +183,48 @@
 </game_task>
 
 <game_task id="dfs_story" prio="300">
-		<title>Найти грузовик</title>
+		<title>dfs_tasks_9</title>
 		<objective>
-			<text>Найти грузовик</text>
+			<text>dfs_tasks_9</text>
 			<icon>jail_truck_2_tasks</icon>
 			<article>dfs_9</article>
 			<infoportion_complete>player_complete_dfs_story</infoportion_complete>
 			<infoportion_fail>dfs_story_failed</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Найти грузовик</text>
+			<text>dfs_tasks_9</text>
 			<infoportion_complete>dfs_story_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="cross_pr" prio="90">
-		<title>Пересечь периметр</title>
+		<title>dfs_tasks_10</title>
 		<objective>
-			<text>Пересечь периметр</text>
+			<text>dfs_tasks_10</text>
 			<icon>borman_tasks</icon>
 			<article>dfs_10</article>
 			<infoportion_complete>player_complete_cross_pr</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Получить инструкции у Хьюго</text>
+			<text>dfs_tasks_10_1</text>
 	<map_location_type hint= "sor_hugo_name">blue_location</map_location_type>
 	<object_story_id>sor_hugo</object_story_id>
 			<infoportion_complete>cross_pr_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Получить снаряжение у Бармена</text>
+			<text>dfs_tasks_10_2</text>
 	<map_location_type hint= "bar_barmen_name">blue_location</map_location_type>
 	<object_story_id>sor_barman</object_story_id>
 			<infoportion_complete>cross_pr_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Получить пропуск у Коти</text>
+			<text>dfs_tasks_10_3</text>
 	<map_location_type hint= "bandit_moldovan_name">blue_location</map_location_type>
 	<object_story_id>sor_bar_bandit</object_story_id>
 			<infoportion_complete>cross_pr_3</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Пересечь периметр</text>
+			<text>dfs_tasks_10</text>
 	<map_location_type hint= "lch_hint">green_location</map_location_type>
 	<object_story_id>predbannik_2_esc</object_story_id>
 			<infoportion_complete>cross_pr_4</infoportion_complete>
@@ -232,66 +232,66 @@
 </game_task>
 
 <game_task id="find_sor_sniper" prio="100">
-		<title>Погоня за снайпером</title>
+		<title>dfs_tasks_11</title>
 		<objective>
-			<text>Погоня за снайпером</text>
+			<text>dfs_tasks_11</text>
 			<icon>sniper_tasks</icon>
 			<article>dfs_11</article>
 			<infoportion_complete>player_complete_find_sor_sniper</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти снайпера</text>
+			<text>dfs_tasks_11_1</text>
 			<infoportion_complete>find_sor_sniper_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Забрать вещи</text>
+			<text>dfs_tasks_11_2</text>
 			<infoportion_complete>find_sor_sniper_2</infoportion_complete>
 			<function_complete>dfs_quests_complit.find_sor_sniper_2_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Принести Борману</text>
+			<text>dfs_tasks_11_3</text>
 			<infoportion_complete>find_sor_sniper_3</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="find_another_exit" prio="80">
-		<title>Второй выход</title>
+		<title>dfs_tasks_12</title>
 		<objective>
-			<text>Второй выход</text>
+			<text>dfs_tasks_12</text>
 			<icon>compas_tasks</icon>
 			<article>dfs_12</article>
 			<infoportion_complete>player_complete_find_another_exit</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти другой путь из лаборатории</text>
+			<text>dfs_tasks_12_1</text>
 			<infoportion_complete>find_another_exit_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="find_exit" prio="80">
-		<title>Страшная пещера</title>
+		<title>dfs_tasks_13</title>
 		<objective>
-			<text>Страшная пещера</text>
+			<text>dfs_tasks_13</text>
 			<icon>compas_tasks</icon>
 			<article>dfs_13</article>
 			<infoportion_complete>player_complete_find_exit</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Выбраться из пещеры</text>
+			<text>dfs_tasks_13_1</text>
 			<infoportion_complete>find_exit_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="lost_helicopter" prio="90">
-		<title>Вертолет из Ада</title>
+		<title>dfs_tasks_14</title>
 		<objective>
-			<text>Вертолет из Ада</text>
+			<text>dfs_tasks_14</text>
 			<icon>copper_tasks</icon>
 			<article>dfs_14</article>
 			<infoportion_complete>player_complete_lost_helicopter</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Сообщить полковнику о найденном вертолете</text>
+			<text>dfs_tasks_14_1</text>
 		<map_location_type hint= "col_copper_name">blue_location</map_location_type>
 		<object_story_id>sor_col_copper</object_story_id>
 			<infoportion_complete>lost_helicopter_1</infoportion_complete>
@@ -299,27 +299,27 @@
 </game_task>
 
 <game_task id="find_lost_commandos" prio="70">
-		<title>Пропавшие коммандос</title>
+		<title>dfs_tasks_15</title>
 		<objective>
-			<text>Пропавшие коммандос</text>
+			<text>dfs_tasks_15</text>
 			<icon>lost_commandos_tasks</icon>
 			<article>dfs_15</article>
 			<infoportion_complete>player_complete_find_lost_commandos</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти команду первого вертолета</text>
+			<text>dfs_tasks_15_1</text>
 			<infoportion_complete>find_lost_commandos_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти второй вертолет</text>
+			<text>dfs_tasks_15_2</text>
 			<infoportion_complete>find_lost_commandos_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти команду второго вертолета</text>
+			<text>dfs_tasks_15_3</text>
 			<infoportion_complete>find_lost_commandos_3</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Доложить полковнику Копперу</text>
+			<text>dfs_tasks_15_4</text>
 		<map_location_type hint= "col_copper_name">blue_location</map_location_type>
 		<object_story_id>sor_col_copper</object_story_id>
 			<infoportion_complete>find_lost_commandos_4</infoportion_complete>
@@ -327,57 +327,57 @@
 </game_task>
 
 <game_task id="lost_priest" prio="60">
-		<title>Отец Виталий</title>
+		<title>dfs_tasks_16</title>
 		<objective>
-			<text>Отец Виталий</text>
+			<text>dfs_tasks_16</text>
 			<icon>monk_tasks</icon>
 			<article>dfs_16</article>
 			<infoportion_complete>player_complete_lost_priest</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Встретиться с проводником</text>
+			<text>dfs_tasks_16_1</text>
 			<infoportion_complete>lost_priest_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти часовню на Болотах</text>
+			<text>dfs_tasks_16_2</text>
 	<map_location_type hint= "marsh_monk_6_hint">crlc_big</map_location_type>
 	<object_story_id>marsh_monk_6</object_story_id>
 			<infoportion_complete>lost_priest_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти отца Виталия</text>
+			<text>dfs_tasks_16_3</text>
 			<infoportion_complete>lost_priest_3</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Отвести отца Виталия в часовню</text>
+			<text>dfs_tasks_16_4</text>
 			<infoportion_complete>lost_priest_4</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="creazy_pope" prio="30">
-		<title>Угомонить батюшку</title>
+		<title>dfs_tasks_17</title>
 		<objective>
-			<text>Угомонить батюшку</text>
+			<text>dfs_tasks_17</text>
 			<icon>monk_tasks</icon>
 			<article>dfs_17</article>
 			<infoportion_complete>player_complete_creazy_pope</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Ранить о.Виталия</text>
+			<text>dfs_tasks_17_1</text>
 			<infoportion_complete>creazy_pope_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="meet_vill_stalker" prio="50">
-		<title>Гейгер</title>
+		<title>dfs_tasks_18</title>
 		<objective>
-			<text>Гейгер</text>
+			<text>dfs_tasks_18</text>
 			<icon>geyger_tasks</icon>
 			<article>dfs_18</article>
 			<infoportion_complete>player_complete_meet_vill_stalker</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Поговорить с Гейгером</text>
+			<text>dfs_tasks_18_1</text>
 	<map_location_type hint= "geyger_name">blue_location</map_location_type>
 	<object_story_id>lost_village_geyger</object_story_id>
 			<infoportion_complete>meet_vill_stalker_1</infoportion_complete>
@@ -385,27 +385,27 @@
 </game_task>
 
 <game_task id="escape_panish" prio="50">
-		<title>Побег</title>
+		<title>dfs_tasks_19</title>
 		<objective>
-			<text>Побег</text>
+			<text>dfs_tasks_19</text>
 			<icon>borman_tasks</icon>
 			<article>dfs_19</article>
 			<infoportion_complete>player_complete_escape_panish</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Выбраться за периметр</text>
+			<text>dfs_tasks_19_1</text>
 	<map_location_type hint= "lch_hint">green_location</map_location_type>
 	<object_story_id>predbannik_2_esc</object_story_id>
 			<infoportion_complete>escape_panish_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти проводника</text>
+			<text>dfs_tasks_19_2</text>
 	<map_location_type hint= "satan_name">blue_location</map_location_type>
 	<object_story_id>marsh_provodnik_satan</object_story_id>
 			<infoportion_complete>escape_panish_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Добраться до базы</text>
+			<text>dfs_tasks_19_3</text>
 	<map_location_type hint= "greece_name">green_location</map_location_type>
 	<object_story_id>marsh_greece</object_story_id>
 			<infoportion_complete>escape_panish_3</infoportion_complete>
@@ -413,35 +413,35 @@
 </game_task>
 
 <game_task id="find_prohor" prio="90">
-		<title>Прохор-Пулемет</title>
+		<title>dfs_tasks_20</title>
 		<objective>
-			<text>Прохор-Пулемет</text>
+			<text>dfs_tasks_20</text>
 			<icon>hunter_tasks</icon>
 			<article>dfs_20</article>
 			<infoportion_complete>player_complete_find_prohor</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти бандита по кличке Прохор</text>
+			<text>dfs_tasks_20_1</text>
 			<infoportion_complete>find_prohor_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="meet_gosha" prio="80">
-		<title>Гоша Резанный</title>
+		<title>dfs_tasks_21</title>
 		<objective>
-			<text>Гоша Резанный</text>
+			<text>dfs_tasks_21</text>
 			<icon>borman_tasks</icon>
 			<article>dfs_21</article>
 			<infoportion_complete>player_complete_meet_gosha</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Пройти через Барьер</text>
+			<text>dfs_tasks_21_1</text>
 	<map_location_type hint= "lch_hint">crlc_small</map_location_type>
 	<object_story_id>yan_worm_teleport_1</object_story_id>
 			<infoportion_complete>meet_gosha_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Встретить Гошу Резанного</text>
+			<text>dfs_tasks_21_2</text>
 	<map_location_type hint= "gosha_rezaniy_name">blue_location</map_location_type>
 	<object_story_id>go_gosha</object_story_id>
 			<infoportion_complete>meet_gosha_2</infoportion_complete>
@@ -449,9 +449,9 @@
 </game_task>
 
 <game_task id="xform_from_hell" prio="100">
-		<title>Подарки из преисподней</title>
+		<title>dfs_tasks_22</title>
 		<objective>
-			<text>Подарки из преисподней</text>
+			<text>dfs_tasks_22</text>
 			<icon>sidor_tasks</icon>
 			<article>dfs_22</article>
 			<infoportion_complete>player_complete_xform_from_hell</infoportion_complete>
@@ -459,109 +459,109 @@
 			<infoportion_fail>xform_from_hell_crush</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Посылка-1</text>
+			<text>dfs_tasks_22_1</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_3</object_story_id>
 			<infoportion_complete>xform_from_hell_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-2</text>
+			<text>dfs_tasks_22_2</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_4</object_story_id>
 			<infoportion_complete>xform_from_hell_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-3</text>
+			<text>dfs_tasks_22_3</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_5</object_story_id>
 			<infoportion_complete>xform_from_hell_3</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-4</text>
+			<text>dfs_tasks_22_4</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_6</object_story_id>
 			<infoportion_complete>xform_from_hell_4</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-5</text>
+			<text>dfs_tasks_22_5</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_7</object_story_id>
 			<infoportion_complete>xform_from_hell_5</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-6</text>
+			<text>dfs_tasks_22_6</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_8</object_story_id>
 			<infoportion_complete>xform_from_hell_6</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-7</text>
+			<text>dfs_tasks_22_7</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_9</object_story_id>
 			<infoportion_complete>xform_from_hell_7</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-8</text>
+			<text>dfs_tasks_22_8</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_10</object_story_id>
 			<infoportion_complete>xform_from_hell_8</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-9</text>
+			<text>dfs_tasks_22_9</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_11</object_story_id>
 			<infoportion_complete>xform_from_hell_9</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-10</text>
+			<text>dfs_tasks_22_10</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_12</object_story_id>
 			<infoportion_complete>xform_from_hell_10</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-11</text>
+			<text>dfs_tasks_22_11</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_13</object_story_id>
 			<infoportion_complete>xform_from_hell_11</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-12</text>
+			<text>dfs_tasks_22_12</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_14</object_story_id>
 			<infoportion_complete>xform_from_hell_12</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-13</text>
+			<text>dfs_tasks_22_13</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_15</object_story_id>
 			<infoportion_complete>xform_from_hell_13</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-14</text>
+			<text>dfs_tasks_22_14</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_16</object_story_id>
 			<infoportion_complete>xform_from_hell_14</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-15</text>
+			<text>dfs_tasks_22_15</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_17</object_story_id>
 			<infoportion_complete>xform_from_hell_15</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-16</text>
+			<text>dfs_tasks_22_16</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_18</object_story_id>
 			<infoportion_complete>xform_from_hell_16</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-17</text>
+			<text>dfs_tasks_22_17</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_19</object_story_id>
 			<infoportion_complete>xform_from_hell_17</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Посылка-18</text>
+			<text>dfs_tasks_22_18</text>
 	<map_location_type hint= "xform_from_hell_hint">find_item_location</map_location_type>
 	<object_story_id>dfs_ibox_20</object_story_id>
 			<infoportion_complete>xform_from_hell_18</infoportion_complete>
@@ -569,15 +569,15 @@
 </game_task>
 
 <game_task id="meet_sidor_lilman" prio="100">
-		<title>Человек в тоннеле</title>
+		<title>dfs_tasks_23</title>
 		<objective>
-			<text>Человек в тоннеле</text>
+			<text>dfs_tasks_23</text>
 			<icon>sidor_tasks</icon>
 			<article>dfs_23</article>
 			<infoportion_complete>player_complete_meet_sidor_lilman</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Встретиться с человеком Сидора</text>
+			<text>dfs_tasks_23_1</text>
 	<map_location_type hint= "geyger_name">blue_location</map_location_type>
 	<object_story_id>gar_stalker_corpse</object_story_id>
 			<infoportion_complete>meet_sidor_lilman_1</infoportion_complete>
@@ -585,23 +585,23 @@
 </game_task>
 
 <game_task id="find_crym_invertor" prio="30">
-		<title>Инвертор мертвого сталкера</title>
+		<title>dfs_tasks_24</title>
 		<objective>
-			<text>Инвертор мертвого сталкера</text>
+			<text>dfs_tasks_24</text>
 			<icon>invertor_tasks</icon>
 			<article>dfs_24</article>
 			<infoportion_complete>player_complete_find_crym_invertor</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти похищенный инвертор</text>
+			<text>dfs_tasks_24_1</text>
 			<infoportion_complete>find_crym_invertor_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="cold_steel" prio="50">
-		<title>Холодная сталь</title>
+		<title>dfs_tasks_25</title>
 		<objective>
-			<text>Холодная сталь</text>
+			<text>dfs_tasks_25</text>
 			<icon>kovzur_tasks</icon>
 			<article>dfs_25</article>
 			<infoportion_complete>player_complete_cold_steel</infoportion_complete>
@@ -609,7 +609,7 @@
 			<infoportion_fail>marsh_testing_crush</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Перебить банду, используя только метательные ножи</text>
+			<text>dfs_tasks_25_1</text>
 	<map_location_type hint= "baza_kovzur_hint">eliminate_lager_location</map_location_type>
 	<object_story_id>marsh_baza_kovzur_point</object_story_id>
 			<infoportion_complete>cold_steel_1</infoportion_complete>
@@ -617,26 +617,26 @@
 </game_task>
 
 <game_task id="degenerate_breakthrow" prio="50">
-		<title>Прорыв</title>
+		<title>dfs_tasks_26</title>
 		<objective>
-			<text>Прорыв</text>
+			<text>dfs_tasks_26</text>
 			<icon>dolg_tasks</icon>
 			<article>dfs_26</article>
 			<infoportion_complete>player_complete_degenerate_breakthrow</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Следовать за лейтенантом Яковлевым</text>
+			<text>dfs_tasks_26_1</text>
 	<map_location_type hint= "ltnt_yakovlev_name">blue_location</map_location_type>
 	<object_story_id>yo_yakovlev</object_story_id>
 			<infoportion_complete>degenerate_breakthrow_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Отбить атаку выродков</text>
+			<text>dfs_tasks_26_2</text>
 			<infoportion_complete>degenerate_breakthrow_2</infoportion_complete>
 			<function_complete>dfs_quests_complit.degenerate_breakthrow_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Поговорить с Яковлевым</text>
+			<text>dfs_tasks_26_3</text>
 	<map_location_type hint= "ltnt_yakovlev_name">blue_location</map_location_type>
 	<object_story_id>yo_yakovlev</object_story_id>
 			<infoportion_complete>degenerate_breakthrow_3</infoportion_complete>
@@ -644,59 +644,59 @@
 </game_task>
 
 <game_task id="counter_attack" prio="50">
-		<title>Прорыв-2</title>
+		<title>dfs_tasks_27</title>
 		<objective>
-			<text>Прорыв-2</text>
+			<text>dfs_tasks_27</text>
 			<icon>dolg_tasks</icon>
 			<article>dfs_27</article>
 		<function_complete>dfs_quests_complit.counter_attack_cmplt</function_complete>
 			<infoportion_complete>player_complete_counter_attack</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Выбить выродков с базы Долга</text>
+			<text>dfs_tasks_27_1</text>
 			<infoportion_complete>counter_attack_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="dolg_mekhanik" prio="200">
-		<title>Гриша Будулай</title>
+		<title>dfs_tasks_28</title>
 		<objective>
-			<text>Гриша Будулай</text>
+			<text>dfs_tasks_28</text>
 			<icon>budulay_tasks</icon>
 			<article>dfs_28</article>
 			<infoportion_complete>player_complete_dolg_mekhanik</infoportion_complete>
 			<infoportion_fail>dolg_mekhanik_crush</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Найти долговского механика</text>
+			<text>dfs_tasks_28_1</text>
 			<infoportion_complete>dolg_mekhanik</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="debt_duty" prio="70">
-		<title>Долг долговца</title>
+		<title>dfs_tasks_29</title>
 		<objective>
-			<text>Долг долговца</text>
+			<text>dfs_tasks_29</text>
 			<icon>colt_tasks</icon>
 			<article>dfs_29</article>
 			<infoportion_complete>player_complete_debt_duty</infoportion_complete>
 			<infoportion_fail>debt_duty_crush</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Убить Хрона метательным ножом</text>
+			<text>dfs_tasks_29_1</text>
 	<map_location_type hint= "khron_name">kill_stalker_location</map_location_type>
 	<object_story_id>ros_khron</object_story_id>
 			<infoportion_complete>debt_duty_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Уничтожить торговую точку бандитов на Ростоке</text>
+			<text>dfs_tasks_29_2</text>
 	<map_location_type hint= "dfs_ros_bandit_lager_hint">defend_lager_location</map_location_type>
 	<object_story_id>dfs_ros_bandit_lager</object_story_id>
 			<infoportion_complete>debt_duty_2</infoportion_complete>
 			<function_complete>dfs_quests_complit.debt_duty_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Вернуться за наградой</text>
+			<text>dfs_tasks_29_3</text>
 	<map_location_type hint= "ltnt_yakovlev_name">blue_location</map_location_type>
 	<object_story_id>yo_yakovlev</object_story_id>
 			<infoportion_complete>debt_duty_3</infoportion_complete>
@@ -704,47 +704,47 @@
 </game_task>
 
 <game_task id="military_baza" prio="70">
-		<title>База на Складах</title>
+		<title>dfs_tasks_30</title>
 		<objective>
-			<text>База на Складах</text>
+			<text>dfs_tasks_30</text>
 			<icon>borman_tasks</icon>
 			<article>dfs_30</article>
 			<infoportion_complete>player_complete_military_baza</infoportion_complete>
 			<infoportion_fail>vot_neprukha_1</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Получить флеш-карту у Бредня</text>
+			<text>dfs_tasks_30_1</text>
 	<map_location_type hint= "breden_name">find_item_location</map_location_type>
 	<object_story_id>dfs_mil_dead_stalker_0000</object_story_id>
 			<infoportion_complete>military_baza_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>"Маякнуть" военным</text>
+			<text>dfs_tasks_30_2</text>
 			<infoportion_complete>military_baza_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Поговорить с командиром военных</text>
+			<text>dfs_tasks_30_3</text>
 			<infoportion_complete>military_baza_3</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="trade_fura" prio="70">
-		<title>Фура</title>
+		<title>dfs_tasks_31</title>
 		<objective>
-			<text>Фура</text>
+			<text>dfs_tasks_31</text>
 			<icon>fura_tasks</icon>
 			<article>dfs_31</article>
 			<infoportion_complete>player_complete_trade_fura</infoportion_complete>
 			<infoportion_fail>trade_fura_dead</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Доставить фуру на место</text>
+			<text>dfs_tasks_31_1</text>
 	<map_location_type hint= "fura_done_point_hint">green_location</map_location_type>
 	<object_story_id>trade_fura_done_point</object_story_id>
 			<infoportion_complete>trade_fura_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Предложить Кремню выкупить груз</text>
+			<text>dfs_tasks_31_2</text>
 	<map_location_type hint= "atp_freedom_trader_name">blue_location</map_location_type>
 	<object_story_id>atp_trader</object_story_id>
 			<infoportion_complete>trade_fura_2</infoportion_complete>
@@ -753,24 +753,24 @@
 </game_task>
 
 <game_task id="find_miser" prio="90">
-		<title>Скряга</title>
+		<title>dfs_tasks_32</title>
 		<objective>
-			<text>Скряга</text>
+			<text>dfs_tasks_32</text>
 			<icon>skryaga_tasks</icon>
 			<article>dfs_32</article>
 			<infoportion_complete>player_complete_find_miser</infoportion_complete>
 			<infoportion_fail>find_miser_crush</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Найти Скрягу</text>
+			<text>dfs_tasks_32_1</text>
 			<infoportion_complete>find_miser</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="proff_ripley" prio="85">
-		<title>Профессор Рипли</title>
+		<title>dfs_tasks_33</title>
 		<objective>
-			<text>Профессор Рипли</text>
+			<text>dfs_tasks_33</text>
 			<icon>ripley_tasks</icon>
 			<article>dfs_33</article>
 			<infoportion_complete>player_complete_proff_ripley</infoportion_complete>
@@ -789,300 +789,296 @@
 </game_task>
 
 <game_task id="prof_trust" prio="80">
-		<title>Биолаборатория</title>
+		<title>dfs_tasks_34</title>
 		<objective>
-			<text>Биолаборатория</text>
+			<text>dfs_tasks_34</text>
 			<icon>ripley_tasks</icon>
 			<article>dfs_34</article>
 			<infoportion_complete>player_complete_prof_trust</infoportion_complete>
 		</objective>
-		<!--objective>
-			<text>Найти защитный костюм</text>
-			<infoportion_complete>prof_trust_1</infoportion_complete>
-		</objective-->
 		<objective>
-			<text>Найти Рипли в биолаборатории</text>
+			<text>dfs_tasks_34_1</text>
 	<map_location_type hint= "ripley_name">green_location</map_location_type>
 	<object_story_id>biolab_ripley</object_story_id>
 			<infoportion_complete>prof_trust_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Вывести Рипли из биолаборатории</text>
+			<text>dfs_tasks_34_2</text>
 			<infoportion_complete>prof_trust_3</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="protect_ripley" prio="80">
-		<title>Защищать Рипли</title>
+		<title>dfs_tasks_35</title>
 		<objective>
-			<text>Защищать Рипли</text>
+			<text>dfs_tasks_35</text>
 			<icon>ripley_tasks</icon>
 			<article>dfs_35</article>
 			<infoportion_complete>player_complete_protect_ripley</infoportion_complete>
 			<infoportion_fail>rad_ripley_dead</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Защищать Рипли на пути к переходу</text>
+			<text>dfs_tasks_35_1</text>
 			<infoportion_complete>protect_ripley_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="tin" prio="75">
-		<title>Крутая разборка</title>
+		<title>dfs_tasks_36</title>
 		<objective>
-			<text>Крутая разборка</text>
+			<text>dfs_tasks_36</text>
 			<icon>colt_tasks</icon>
 			<article>dfs_36</article>
 			<infoportion_complete>player_complete_tin</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Перебить наемников</text>
+			<text>dfs_tasks_36_1</text>
 			<infoportion_complete>tin_1</infoportion_complete>
 		<function_complete>dfs_quests_complit.tin_cmplt</function_complete>
 		</objective>
 </game_task>
 
 <game_task id="verbal_decision" prio="75">
-		<title>Договор</title>
+		<title>dfs_tasks_37</title>
 		<objective>
-			<text>Договор</text>
+			<text>dfs_tasks_37</text>
 			<icon>killers_tasks</icon>
 			<article>dfs_37</article>
 			<infoportion_complete>player_complete_verbal_decision</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Договориться с наемниками</text>
+			<text>dfs_tasks_37_1</text>
 			<infoportion_complete>verbal_decision_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="safe_place" prio="75">
-		<title>Защищать Рипли - 2</title>
+		<title>dfs_tasks_38</title>
 		<objective>
-			<text>Защищать Рипли - 2</text>
+			<text>dfs_tasks_38</text>
 			<icon>ripley_tasks</icon>
 			<article>dfs_38</article>
 			<infoportion_complete>player_complete_safe_place</infoportion_complete>
 			<infoportion_fail>rad_ripley_dead</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Довести Рипли до перехода на АТП</text>
+			<text>dfs_tasks_38_1</text>
 			<infoportion_complete>safe_place_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="safe_place_dubl" prio="75">
-		<title>Защищать Рипли - 2</title>
+		<title>dfs_tasks_39</title>
 		<objective>
-			<text>Защищать Рипли - 2</text>
+			<text>dfs_tasks_39</text>
 			<icon>ripley_tasks</icon>
 			<article>dfs_39</article>
 			<infoportion_complete>player_complete_safe_place_dubl</infoportion_complete>
 			<infoportion_fail>rad_ripley_dead</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Довести Рипли до перехода на АТП</text>
+			<text>dfs_tasks_39_1</text>
 			<infoportion_complete>safe_place_dubl_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="message_monolith" prio="70">
-		<title>Посланник Монолита</title>
+		<title>dfs_tasks_40</title>
 		<objective>
-			<text>Посланник Монолита</text>
+			<text>dfs_tasks_40</text>
 			<icon>monolith_tasks</icon>
 			<article>dfs_40</article>
 			<infoportion_complete>player_complete_message_monolith</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Добраться до тайника группы Поиск в Припяти</text>
+			<text>dfs_tasks_40_1</text>
 	<map_location_type hint= "pri_poisk_base_hint">crlc_big</map_location_type>
 	<object_story_id>pri_poisk_base</object_story_id>
 			<infoportion_complete>message_monolith_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Произвести закладку в тайник</text>
+			<text>dfs_tasks_40_2</text>
 			<infoportion_complete>message_monolith_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Вернуться к Деймосу</text>
+			<text>dfs_tasks_40_3</text>
 			<infoportion_complete>message_monolith_3</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="pri_action" prio="60">
-		<title>Новый враг</title>
+		<title>dfs_tasks_41</title>
 		<objective>
-			<text>Новый враг</text>
+			<text>dfs_tasks_41</text>
 			<icon>lost_commandos_tasks</icon>
 			<article>dfs_41</article>
 			<infoportion_complete>player_complete_pri_action</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Помочь отряду Рённа</text>
+			<text>dfs_tasks_41_1</text>
 			<infoportion_complete>pri_action_1</infoportion_complete>
 			<function_complete>dfs_quests_complit.pri_action_1_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Поговорить с Рённом</text>
+			<text>dfs_tasks_41_2</text>
 			<infoportion_complete>pri_action_2</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="find_gunman" prio="100">
-		<title>Стрелок</title>
+		<title>dfs_tasks_42</title>
 		<objective>
-			<text>Стрелок</text>
+			<text>dfs_tasks_42</text>
 			<icon>gunman_tasks</icon>
 			<article>dfs_42</article>
 			<infoportion_complete>player_complete_find_gunman</infoportion_complete>
 			<infoportion_fail>find_gunman_crush</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Найти Стрелка</text>
+			<text>dfs_tasks_42_1</text>
 			<infoportion_complete>find_gunman_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="find_way_dc" prio="100">
-		<title>Мертвый Город</title>
+		<title>dfs_tasks_43</title>
 		<objective>
-			<text>Мертвый Город</text>
+			<text>dfs_tasks_43</text>
 			<icon>compas_tasks</icon>
 			<article>dfs_43</article>
 			<infoportion_complete>player_complete_find_way_dc</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти путь в Мертвый Город</text>
+			<text>dfs_tasks_43_1</text>
 			<infoportion_complete>find_way_dc_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="grc_pursuit" prio="50">
-		<title>Язык</title>
+		<title>dfs_tasks_44</title>
 		<objective>
-			<text>Язык</text>
+			<text>dfs_tasks_44</text>
 			<icon>sniper_tasks</icon>
 			<article>dfs_44</article>
 			<infoportion_complete>player_complete_grc_pursuit</infoportion_complete>
 			<infoportion_fail>grc_pursuit_fail</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Догнать беглецов</text>
+			<text>dfs_tasks_44_1</text>
 			<infoportion_complete>grc_pursuit_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Ранить старшего</text>
+			<text>dfs_tasks_44_2</text>
 			<infoportion_complete>grc_pursuit_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Допросить раненного</text>
+			<text>dfs_tasks_44_3</text>
 			<infoportion_complete>grc_pursuit_3</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="overhear_bazar" prio="80">
-		<title>Тайный разговор</title>
+		<title>dfs_tasks_45</title>
 		<objective>
-			<text>Тайный разговор</text>
+			<text>dfs_tasks_45</text>
 			<icon>jj_tasks</icon>
 			<article>dfs_45</article>
 			<infoportion_complete>player_complete_overhear_bazar</infoportion_complete>
 			<infoportion_fail>overhear_bazar_failed</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Найти укромное место</text>
+			<text>dfs_tasks_45_1</text>
 	<map_location_type hint= "dfs_pri_spy_point_hint">green_location</map_location_type>
 	<object_story_id>dfs_pri_spy_point</object_story_id>
 			<infoportion_complete>overhear_bazar_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Дождаться встречи Немца и неизвестного</text>
+			<text>dfs_tasks_45_2</text>
 			<infoportion_complete>overhear_bazar_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Подслушать разговор</text>
+			<text>dfs_tasks_45_3</text>
 			<infoportion_complete>overhear_bazar_3</infoportion_complete>
 			<infoportion_fail>overhear_bazar_3_cruch</infoportion_fail>
 		</objective>
 </game_task>
 
 <game_task id="leave_imperceptibly" prio="75">
-		<title>Уйти незамеченным</title>
+		<title>dfs_tasks_46</title>
 		<objective>
-			<text>Уйти незамеченным</text>
+			<text>dfs_tasks_46</text>
 			<icon>jj_tasks</icon>
 			<article>dfs_46</article>
 			<infoportion_complete>player_complete_leave_imperceptibly</infoportion_complete>
 			<infoportion_fail>leave_imperceptibly_failed</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Незаметно покинуть Припять</text>
+			<text>dfs_tasks_46_1</text>
 			<infoportion_complete>leave_imperceptibly_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="hard_inquiry" prio="75">
-		<title>Дознание JJ</title>
+		<title>dfs_tasks_47</title>
 		<objective>
-			<text>Дознание JJ</text>
+			<text>dfs_tasks_47</text>
 			<icon>kovzur_tasks</icon>
 			<article>dfs_47</article>
 			<infoportion_complete>player_complete_hard_inquiry</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Обследовать базу бандитов</text>
+			<text>dfs_tasks_47_1</text>
 			<infoportion_complete>hard_inquiry_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Расправиться с бандой</text>
+			<text>dfs_tasks_47_2</text>
 			<infoportion_complete>hard_inquiry_2</infoportion_complete>
 			<function_complete>dfs_quests_complit.hard_inquiry_2_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Забрать вещи Молоха</text>
+			<text>dfs_tasks_47_3</text>
 			<infoportion_complete>hard_inquiry_3</infoportion_complete>
 			<function_complete>dfs_quests_complit.hard_inquiry_3_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Вернуться к монахам</text>
+			<text>dfs_tasks_47_4</text>
 			<infoportion_complete>hard_inquiry_4</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="dagger_for_sinner" prio="70">
-		<title>Грех JJ</title>
+		<title>dfs_tasks_48</title>
 		<objective>
-			<text>Грех JJ</text>
+			<text>dfs_tasks_48</text>
 			<icon>compas_tasks</icon>
 			<article>dfs_48</article>
 			<infoportion_complete>player_complete_dagger_for_sinner</infoportion_complete>
 			<infoportion_fail>dagger_for_sinner_failed</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Попасть в Забытый Лес</text>
+			<text>dfs_tasks_48_1</text>
 	<map_location_type hint= "lch_hint">green_location</map_location_type>
 	<object_story_id>red_level_changer_to_puzir</object_story_id>
 			<infoportion_complete>dagger_for_sinner_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти Грешника</text>
+			<text>dfs_tasks_48_2</text>
 			<infoportion_complete>dagger_for_sinner_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Отдать Грешнику "даггер"</text>
+			<text>dfs_tasks_48_3</text>
 			<infoportion_complete>dagger_for_sinner_3</infoportion_complete>
 			<infoportion_fail>dagger_for_sinner_failed</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Отдать Грешнику "Золотую Свинью"</text>
+			<text>dfs_tasks_48_4</text>
 			<infoportion_complete>dagger_for_sinner_4</infoportion_complete>
 			<infoportion_fail>dagger_for_sinner_failed</infoportion_fail>
 		</objective>
 </game_task>
 
 <game_task id="sinner_items" prio="80">
-		<title>"Любопытствующий"</title>
+		<title>dfs_tasks_49</title>
 		<objective>
 			<text>"Любопытствующий"</text>
 			<icon>compas_tasks</icon>
@@ -1091,21 +1087,21 @@
 		<infoportion_fail>sinner_items_failed</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Найти вещи Грешника</text>
+			<text>dfs_tasks_49_1</text>
 			<infoportion_complete>sinner_items_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="old_dead_city" prio="70">
-		<title>Мертвый Город</title>
+		<title>dfs_tasks_50</title>
 		<objective>
-			<text>Мертвый Город</text>
+			<text>dfs_tasks_50</text>
 			<icon>compas_tasks</icon>
 			<article>dfs_50</article>
 			<infoportion_complete>player_complete_old_dead_city</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Попасть в Мертвый Город</text>
+			<text>dfs_tasks_50_1</text>
 	<map_location_type hint= "lch_hint">green_location</map_location_type>
 	<object_story_id>x10_2_dc</object_story_id>
 			<infoportion_complete>old_dead_city_1</infoportion_complete>
@@ -1113,82 +1109,82 @@
 </game_task>
 
 <game_task id="inform_about_crush" prio="50">
-		<title>Провал</title>
+		<title>dfs_tasks_51</title>
 		<objective>
-			<text>Провал</text>
+			<text>dfs_tasks_51</text>
 			<icon>hugo_tasks</icon>
 			<article>dfs_51</article>
 			<infoportion_complete>player_complete_inform_about_crush</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Сообщить Хьюго о провале задания</text>
+			<text>dfs_tasks_51_1</text>
 			<infoportion_complete>inform_about_crush_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="inform_about_sucsess" prio="50">
-		<title>Успех</title>
+		<title>dfs_tasks_52</title>
 		<objective>
-			<text>Успех</text>
+			<text>dfs_tasks_52</text>
 			<icon>hugo_tasks</icon>
 			<article>dfs_52</article>
 			<infoportion_complete>player_complete_inform_about_sucsess</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Сообщить Хьюго о найденном грузовике</text>
+			<text>dfs_tasks_52_1</text>
 			<infoportion_complete>inform_about_sucsess_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="get_out_dc" prio="70">
-		<title>Эвакуация</title>
+		<title>dfs_tasks_53</title>
 		<objective>
-			<text>Эвакуация</text>
+			<text>dfs_tasks_53</text>
 			<icon>compas_tasks</icon>
 			<article>dfs_53</article>
 			<infoportion_complete>player_complete_get_out_dc</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти дорогу на станцию-2</text>
+			<text>dfs_tasks_53_1</text>
 			<infoportion_complete>get_out_dc_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Выбраться из Мертвого Города</text>
+			<text>dfs_tasks_53_2</text>
 			<infoportion_complete>get_out_dc_2</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="get_car_out_dc" prio="70">
-		<title>Эвакуация</title>
+		<title>dfs_tasks_54</title>
 		<objective>
-			<text>Эвакуация</text>
+			<text>dfs_tasks_54</text>
 			<icon>jail_truck_2_tasks</icon>
 			<article>dfs_54</article>
 			<infoportion_complete>player_complete_get_car_out_dc</infoportion_complete>
 			<infoportion_fail>truck_od_dead</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Найти дорогу на станцию-2</text>
+			<text>dfs_tasks_54_1</text>
 			<infoportion_complete>get_car_out_dc_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Вывезти ковчег из Мертвого Города</text>
+			<text>dfs_tasks_54_2</text>
 			<infoportion_complete>get_car_out_dc_2</infoportion_complete>
 			<function_complete>dfs_quests_complit.tod_destroyed</function_complete>
 		</objective>
 </game_task>
 
 <game_task id="car_evapoint" prio="70">
-		<title>Эвакуация-2</title>
+		<title>dfs_tasks_55</title>
 		<objective>
-			<text>Эвакуация-2</text>
+			<text>dfs_tasks_55</text>
 			<icon>jail_truck_2_tasks</icon>
 			<article>dfs_55</article>
 			<infoportion_complete>player_complete_car_evapoint</infoportion_complete>
 			<infoportion_fail>truck_od_dead</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Доставить грузовик в точку эвакуации</text>
+			<text>dfs_tasks_55_1</text>
 	<map_location_type hint= "aes_evapoint_hint">green_location</map_location_type>
 	<object_story_id>aes_evapoint</object_story_id>
 			<infoportion_complete>car_evapoint_1</infoportion_complete>
@@ -1197,15 +1193,15 @@
 </game_task>
 
 <game_task id="self_evapoint" prio="65">
-		<title>Запасный вариант</title>
+		<title>dfs_tasks_56</title>
 		<objective>
-			<text>Запасный вариант</text>
+			<text>dfs_tasks_56</text>
 			<icon>compas_tasks</icon>
 			<article>dfs_56</article>
 			<infoportion_complete>player_complete_self_evapoint</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Прибыть в точку эвакуации</text>
+			<text>dfs_tasks_56_1</text>
 	<map_location_type hint= "aes_evapoint_hint">green_location</map_location_type>
 	<object_story_id>aes_evapoint</object_story_id>
 			<infoportion_complete>self_evapoint_1</infoportion_complete>
@@ -1213,43 +1209,43 @@
 </game_task>
 
 <game_task id="panzer_test" prio="70">
-		<title>Проверка Панцера</title>
+		<title>dfs_tasks_57</title>
 		<objective>
-			<text>Проверка Панцера</text>
+			<text>dfs_tasks_57</text>
 			<icon>panzer_tasks</icon>
 			<article>dfs_57</article>
 			<infoportion_complete>player_complete_panzer_test</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Зачистить Саркофаг</text>
+			<text>dfs_tasks_57_1</text>
 			<infoportion_complete>panzer_test_1</infoportion_complete>
 			<function_complete>dfs_quests_complit.panzer_test_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Вернуться за своим снаряжением</text>
+			<text>dfs_tasks_57_2</text>
 			<infoportion_complete>panzer_test_2</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="terminate_ripley" prio="60">
-		<title>Убить Рипли</title>
+		<title>dfs_tasks_58</title>
 		<objective>
-			<text>Убить Рипли</text>
+			<text>dfs_tasks_58</text>
 			<icon>ripley_tasks</icon>
 			<article>dfs_58</article>
 			<infoportion_complete>player_complete_terminate_ripley</infoportion_complete>
 			<infoportion_fail>terminate_ripley_crush</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Найти Рипли</text>
+			<text>dfs_tasks_58_1</text>
 			<infoportion_complete>terminate_ripley_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Ликвидировать Рипли</text>
+			<text>dfs_tasks_58_2</text>
 			<infoportion_complete>terminate_ripley_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Принести Панцеру КПК и инвертор Рипли</text>
+			<text>dfs_tasks_58_3</text>
 	<map_location_type hint= "mon_col_panzer">green_location</map_location_type>
 	<object_story_id>dfs_pri_dolg_00</object_story_id>
 			<infoportion_complete>terminate_ripley_3</infoportion_complete>
@@ -1257,15 +1253,15 @@
 </game_task>
 
 <game_task id="meet_hugo" prio="55">
-		<title>Напарник-2</title>
+		<title>dfs_tasks_59</title>
 		<objective>
-			<text>Напарник-2</text>
+			<text>dfs_tasks_59</text>
 			<icon>hugo_tasks</icon>
 			<article>dfs_59</article>
 			<infoportion_complete>player_complete_meet_hugo</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Встретиться с Хьюго</text>
+			<text>dfs_tasks_59_1</text>
 	<map_location_type hint= "sor_hugo_name">blue_location</map_location_type>
 	<object_story_id>old_gar_hugo_01</object_story_id>
 			<infoportion_complete>meet_hugo_1</infoportion_complete>
@@ -1273,27 +1269,27 @@
 </game_task>
 
 <game_task id="dfs_story_cont" prio="100">
-		<title>Найти грузовик-2</title>
+		<title>dfs_tasks_60</title>
 		<objective>
-			<text>Найти грузовик-2</text>
+			<text>dfs_tasks_60</text>
 			<icon>jail_truck_tasks</icon>
 			<article>dfs_60</article>
 			<infoportion_complete>player_complete_dfs_story_cont</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти грузовик-2</text>
+			<text>dfs_tasks_60</text>
 			<infoportion_complete>dfs_story_cont_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Сообщить Хьюго</text>
+			<text>dfs_tasks_60_1</text>
 			<infoportion_complete>dfs_story_cont_2</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="exempt_hostages" prio="60">
-		<title>Заложники</title>
+		<title>dfs_tasks_61</title>
 		<objective>
-			<text>Заложники</text>
+			<text>dfs_tasks_61</text>
 			<icon>sinoptic_tasks</icon>
 			<article>dfs_61</article>
 			<infoportion_complete>player_complete_exempt_hostages</infoportion_complete>
@@ -1301,143 +1297,143 @@
 			<function_complete>dfs_quests_complit.exempt_hostages_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Забрать винтовку из схрона</text>
+			<text>dfs_tasks_61_1</text>
 	<map_location_type hint= "secret_storage">green_location</map_location_type>
 	<object_story_id>old_gar_vihlop_box</object_story_id>
 			<infoportion_complete>exempt_hostages_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Занять позицию</text>
+			<text>dfs_tasks_61_2</text>
 	<map_location_type hint= "sniper_position">green_location</map_location_type>
 	<object_story_id>old_gar_sniper_position</object_story_id>
 			<infoportion_complete>exempt_hostages_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Снять охрану лагеря</text>
+			<text>dfs_tasks_61_3</text>
 			<infoportion_complete>exempt_hostages_3</infoportion_complete>
 			<function_complete>dfs_quests_complit.exempt_hostages_3_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>По-тихому зачистить лагерь</text>
+			<text>dfs_tasks_61_4</text>
 			<infoportion_complete>exempt_hostages_4</infoportion_complete>
 			<function_complete>dfs_quests_complit.exempt_hostages_4_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Освободить заложников</text>
+			<text>dfs_tasks_61_5</text>
 			<infoportion_complete>exempt_hostages_5</infoportion_complete>
 			<function_complete>dfs_quests_complit.exempt_hostages_5_cmplt</function_complete>
 		</objective>
 </game_task>
 
 <game_task id="new_monster_hunt" prio="80">
-		<title>Адский пес</title>
+		<title>dfs_tasks_62</title>
 		<objective>
-			<text>Адский пес</text>
+			<text>dfs_tasks_62</text>
 			<icon>hell_dog_tasks</icon>
 			<article>dfs_62</article>
 			<infoportion_complete>player_complete_new_monster_hunt</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Возглавить отряд охотников</text>
+			<text>dfs_tasks_62_1</text>
 			<infoportion_complete>new_monster_hunt_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Убить мутанта-собаку</text>
+			<text>dfs_tasks_62_2</text>
 			<infoportion_complete>new_monster_hunt_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Получить награду</text>
+			<text>dfs_tasks_62_3</text>
 			<infoportion_complete>new_monster_hunt_3</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="meet_xeno_guard" prio="50">
-		<title>Страж</title>
+		<title>dfs_tasks_63</title>
 		<objective>
-			<text>Страж</text>
+			<text>dfs_tasks_63</text>
 			<icon>xenoguard_tasks</icon>
 			<article>dfs_63</article>
 			<infoportion_complete>player_complete_meet_xeno_guard</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Встретиться со Стражем</text>
+			<text>dfs_tasks_63_1</text>
 			<infoportion_complete>meet_xeno_guard_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="mutant_attack" prio="70">
-		<title>Атака мутантов</title>
+		<title>dfs_tasks_64</title>
 		<objective>
-			<text>Атака мутантов</text>
+			<text>dfs_tasks_64</text>
 			<icon>renn_tasks</icon>
 			<article>dfs_64</article>
 			<infoportion_complete>player_complete_mutant_attack</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Активировать охранную систему Долга</text>
+			<text>dfs_tasks_64_1</text>
 			<infoportion_complete>mutant_attack_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Отбить атаку мутантов</text>
+			<text>dfs_tasks_64_2</text>
 			<infoportion_complete>mutant_attack_2</infoportion_complete>
 	<function_complete>dfs_quests_complit.mutant_attack_2_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Закончить разговор с Ренном</text>
+			<text>dfs_tasks_64_3</text>
 			<infoportion_complete>mutant_attack_3</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="monolithman_revenge" prio="70">
-		<title>Месть монолитовца</title>
+		<title>dfs_tasks_65</title>
 		<objective>
-			<text>Месть монолитовца</text>
+			<text>dfs_tasks_65</text>
 			<icon>monolith_tasks</icon>
 			<article>dfs_65</article>
 			<infoportion_complete>player_complete_monolithman_revenge</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Разобраться с бандитами</text>
+			<text>dfs_tasks_65_1</text>
 			<infoportion_complete>monolithman_revenge_1</infoportion_complete>
 			<function_complete>dfs_quests_complit.monolithman_revenge_1_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Поговорить с Молохом</text>
+			<text>dfs_tasks_65_2</text>
 			<infoportion_complete>monolithman_revenge_2</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="last_will" prio="30">
-		<title>Последняя просьба Рённа</title>
+		<title>dfs_tasks_66</title>
 		<objective>
-			<text>Последняя просьба Рённа</text>
+			<text>dfs_tasks_66</text>
 			<icon>renn_tasks</icon>
 			<article>dfs_66</article>
 			<infoportion_complete>player_complete_last_will</infoportion_complete>
 			<infoportion_fail>rad_scene_end_trans</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Остановить превращение огнестрелом</text>
+			<text>dfs_tasks_66_1</text>
 			<infoportion_complete>last_will_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="aggravated_scent" prio="70">
-		<title>Шестое чувство Бормана</title>
+		<title>dfs_tasks_67</title>
 		<objective>
-			<text>Шестое чувство Бормана</text>
+			<text>dfs_tasks_67</text>
 			<icon>borman_tasks</icon>
 			<article>dfs_67</article>
 			<infoportion_complete>player_complete_aggravated_scent</infoportion_complete>
 			<infoportion_fail>aggravated_scent_failed</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Произвести разведку</text>
+			<text>dfs_tasks_67_1</text>
 			<infoportion_complete>aggravated_scent_1</infoportion_complete>
 			<function_complete>dfs_quests_complit.aggravated_scent_1_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Вернуться к Борману</text>
+			<text>dfs_tasks_67_2</text>
 			<infoportion_complete>aggravated_scent_2</infoportion_complete>
 		</objective>
 </game_task>
@@ -1465,15 +1461,15 @@
 </game_task>
 
 <game_task id="find_ermol" prio="80">
-		<title>Ермол</title>
+		<title>dfs_tasks_69</title>
 		<objective>
-			<text>Ермол</text>
+			<text>dfs_tasks_69</text>
 			<icon>ermol_tasks</icon>
 			<article>dfs_69</article>
 			<infoportion_complete>player_complete_find_ermol</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти Ермола</text>
+			<text>dfs_tasks_69_1</text>
 	<map_location_type hint= "ermol_name">green_location</map_location_type>
 	<object_story_id>gen_exmon_13</object_story_id>
 			<infoportion_complete>find_ermol_1</infoportion_complete>
@@ -1481,63 +1477,63 @@
 </game_task>
 
 <game_task id="artefacts_for_ermol" prio="100">
-		<title>Артефакты из деревни зомби</title>
+		<title>dfs_tasks_70</title>
 		<objective>
-			<text>Артефакты из деревни зомби</text>
+			<text>dfs_tasks_70</text>
 			<icon>arts_tasks</icon>
 			<article>dfs_70</article>
 			<infoportion_complete>player_complete_artefacts_for_ermol</infoportion_complete>
 			<infoportion_fail>artefacts_for_ermol_crush</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Собрать артефакты в деревне зомби</text>
+			<text>dfs_tasks_70_1</text>
 		<function_complete>dfs_quests_complit.artefacts_for_ermol_1_cmplt</function_complete>
 			<infoportion_complete>artefacts_for_ermol_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Обменять артефакты на информацию</text>
+			<text>dfs_tasks_70_2</text>
 			<infoportion_complete>artefacts_for_ermol_2</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="dead_artefacts" prio="100">
-		<title>"Мёртвые" артефакты</title>
+		<title>dfs_tasks_71</title>
 		<objective>
-			<text>"Мёртвые" артефакты</text>
+			<text>dfs_tasks_71</text>
 			<icon>arts_tasks</icon>
 			<article>dfs_71</article>
 			<infoportion_complete>player_complete_dead_artefacts</infoportion_complete>
 			<infoportion_fail>dead_artefacts_cruch</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Разузнать о происхождении "мёртвых" артефактов</text>
+			<text>dfs_tasks_71_1</text>
 			<infoportion_complete>dead_artefacts_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="operation_stealing" prio="60">
-		<title>Угон</title>
+		<title>dfs_tasks_72</title>
 		<objective>
-			<text>Угон</text>
+			<text>dfs_tasks_72</text>
 			<icon>jail_truck_tasks</icon>
 			<article>dfs_72</article>
 			<infoportion_complete>player_complete_operation_stealing</infoportion_complete>
 			<infoportion_fail>jail_truck_dead</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Найти вход в старый коллектор</text>
+			<text>dfs_tasks_72_1</text>
 	<map_location_type hint= "operation_stealing_point_0_hint">green_location</map_location_type>
 	<object_story_id>operation_stealing_point_0</object_story_id>
 			<infoportion_complete>operation_stealing_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Попасть в лагерь сталкеров</text>
+			<text>dfs_tasks_72_2</text>
 	<map_location_type hint= "operation_stealing_point_1_hint">green_location</map_location_type>
 	<object_story_id>operation_stealing_point_1</object_story_id>
 			<infoportion_complete>operation_stealing_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Угнать грузовик со стазис-камерой</text>
+			<text>dfs_tasks_72_3</text>
 	<map_location_type hint= "operation_stealing_point_2_hint">green_location</map_location_type>
 	<object_story_id>operation_stealing_point_2</object_story_id>
 			<infoportion_complete>operation_stealing_3</infoportion_complete>
@@ -1546,45 +1542,45 @@
 </game_task>
 
 <game_task id="destroy_barier_control" prio="20">
-		<title>Уничтожить пульт управления Барьером</title>
+		<title>dfs_tasks_73</title>
 		<objective>
-			<text>Уничтожить пульт управления Барьером</text>
+			<text>dfs_tasks_73</text>
 			<icon>jj_tasks</icon>
 			<article>dfs_73</article>
 			<infoportion_complete>player_complete_destroy_barier_control</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Уничтожить пульт управления Барьером</text>
+			<text>dfs_tasks_73</text>
 			<infoportion_complete>destroy_barier_control_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="take_back_lorry" prio="40">
-		<title>Ошибка Хьюго</title>
+		<title>dfs_tasks_74</title>
 		<objective>
-			<text>Ошибка Хьюго</text>
+			<text>dfs_tasks_74</text>
 			<icon>hugo_tasks</icon>
 			<article>dfs_74</article>
 			<infoportion_complete>player_complete_take_back_lorry</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Отбить грузовик у GRC</text>
+			<text>dfs_tasks_74_1</text>
 		<function_complete>dfs_quests_complit.take_back_lorry_1_cmplt</function_complete>
 			<infoportion_complete>take_back_lorry_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="catch_iron_mask" prio="20">
-		<title>Поймать ксеноморфа</title>
+		<title>dfs_tasks_75</title>
 		<objective>
-			<text>Поймать ксеноморфа</text>
+			<text>dfs_tasks_75</text>
 			<icon>xenomorph_tasks</icon>
 			<article>dfs_75</article>
 			<infoportion_complete>player_complete_catch_iron_mask</infoportion_complete>
 			<infoportion_fail>jail_truck_dead</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Поймать ксеноморфа</text>
+			<text>dfs_tasks_75</text>
 	<map_location_type hint= "iron_mask_name">green_location</map_location_type>
 	<object_story_id>gen_im</object_story_id>
 			<infoportion_complete>catch_iron_mask_1</infoportion_complete>
@@ -1593,65 +1589,65 @@
 </game_task>
 
 <game_task id="stop_xenomorph" prio="15">
-		<title>Остановить ксеноморфа</title>
+		<title>dfs_tasks_76</title>
 		<objective>
-			<text>Остановить ксеноморфа</text>
+			<text>dfs_tasks_76</text>
 			<icon>xenomorph_tasks</icon>
 			<article>dfs_76</article>
 			<infoportion_complete>player_complete_stop_xenomorph</infoportion_complete>
 			<infoportion_fail>dfs_story_bad_end</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Остановить ксеноморфа</text>
+			<text>dfs_tasks_76</text>
 			<infoportion_complete>stop_xenomorph_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="stop_xenomorph2" prio="15">
-		<title>Остановить ксеноморфа</title>
+		<title>dfs_tasks_77</title>
 		<objective>
-			<text>Остановить ксеноморфа</text>
+			<text>dfs_tasks_77</text>
 			<icon>xenomorph_tasks</icon>
 			<article>dfs_77</article>
 			<infoportion_complete>player_complete_stop_xenomorph2</infoportion_complete>
 			<infoportion_fail>dfs_story_bad_end</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Остановить ксеноморфа</text>
+			<text>dfs_tasks_77</text>
 			<infoportion_complete>stop_xenomorph2_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="letter_for_slaven" prio="60">
-		<title>Письмо для Славена</title>
+		<title>dfs_tasks_78</title>
 		<objective>
-			<text>Письмо для Славена</text>
+			<text>dfs_tasks_78</text>
 			<icon>poisk_tasks</icon>
 			<article>dfs_78</article>
 			<infoportion_complete>player_complete_letter_for_slaven</infoportion_complete>
 			<infoportion_fail>letter_for_slaven_crush</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Передать письмо Бормана Славену</text>
+			<text>dfs_tasks_78_1</text>
 			<infoportion_complete>letter_for_slaven_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Договориться о совместных действиях</text>
+			<text>dfs_tasks_78_2</text>
 			<infoportion_complete>letter_for_slaven_2</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="night_stealing" prio="30">
-		<title>Угон</title>
+		<title>dfs_tasks_79</title>
 		<objective>
-			<text>Угон</text>
+			<text>dfs_tasks_79</text>
 			<icon>jail_truck_tasks</icon>
 			<article>dfs_79</article>
 			<infoportion_complete>player_complete_night_stealing</infoportion_complete>
 			<infoportion_fail>jail_truck_dead</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Угнать грузовик со стазис-камерой</text>
+			<text>dfs_tasks_79_1</text>
 	<map_location_type hint= "operation_stealing_point_2_hint">green_location</map_location_type>
 	<object_story_id>operation_stealing_point_2</object_story_id>
 			<infoportion_complete>night_stealing_1</infoportion_complete>
@@ -1660,125 +1656,125 @@
 </game_task>
 
 <game_task id="proofs_for_captain" prio="60">
-		<title>Доказательства для капитана</title>
+		<title>dfs_tasks_80</title>
 		<objective>
-			<text>Доказательства для капитана</text>
+			<text>dfs_tasks_80</text>
 			<icon>yaroslavkin_tasks</icon>
 			<article>dfs_80</article>
 			<infoportion_complete>player_complete_proofs_for_captain</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти доказательства непричастности Поиска</text>
+			<text>dfs_tasks_80_1</text>
 			<infoportion_complete>proofs_for_captain_1</infoportion_complete>
 			<function_complete>dfs_quests_complit.proofs_for_captain_1_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Принести Ярославкину</text>
+			<text>dfs_tasks_80_2</text>
 			<infoportion_complete>proofs_for_captain_2</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="crucian_compromat" prio="150">
-		<title>Серьезный компромат</title>
+		<title>dfs_tasks_81</title>
 		<objective>
-			<text>Серьезный компромат</text>
+			<text>dfs_tasks_81</text>
 			<icon>docum_tasks</icon>
 			<article>dfs_81</article>
 			<infoportion_complete>player_complete_crucian_compromat</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти КПК Карася</text>
+			<text>dfs_tasks_81_1</text>
 			<infoportion_complete>crucian_compromat_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Продать КПК Камбодже</text>
+			<text>dfs_tasks_81_2</text>
 			<infoportion_complete>crucian_compromat_2</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="killer_arsenal" prio="30">
-		<title>Арсенал наемников</title>
+		<title>dfs_tasks_82</title>
 		<objective>
-			<text>Арсенал наемников</text>
+			<text>dfs_tasks_82</text>
 			<icon>killers_tasks</icon>
 			<article>dfs_82</article>
 			<infoportion_complete>player_complete_killer_arsenal</infoportion_complete>
 			<infoportion_fail>killer_arsenal_jjself_start</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Уничтожить арсенал наемников</text>
+			<text>dfs_tasks_82_1</text>
 			<infoportion_complete>killer_arsenal_1</infoportion_complete>
 		<function_complete>dfs_quests_complit.killer_arsenal_1_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Поговорить с Греком</text>
+			<text>dfs_tasks_82_2</text>
 	<!--map_location_type hint= "greece_name">green_location</map_location_type>
 	<object_story_id>op_2_greece</object_story_id-->
 			<infoportion_complete>killer_arsenal_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Сообщить Борману</text>
+			<text>dfs_tasks_82_3</text>
 			<infoportion_complete>killer_arsenal_3</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="killer_arsenal_jjself" prio="30">
-		<title>Арсенал наемников</title>
+		<title>dfs_tasks_83</title>
 		<objective>
-			<text>Арсенал наемников</text>
+			<text>dfs_tasks_83</text>
 			<icon>killers_tasks</icon>
 			<article>dfs_83</article>
 			<infoportion_complete>player_complete_killer_arsenal_jjself</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Уничтожить арсенал наемников</text>
+			<text>dfs_tasks_83_1</text>
 			<infoportion_complete>killer_arsenal_jjself_1</infoportion_complete>
 		<function_complete>dfs_quests_complit.killer_arsenal_jjself_1_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Сообщить Борману</text>
+			<text>dfs_tasks_83_2</text>
 			<infoportion_complete>killer_arsenal_jjself_2</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="gangsters_law" prio="50">
-		<title>Разборка по-понятиям</title>
+		<title>dfs_tasks_84</title>
 		<objective>
-			<text>Разборка по-понятиям</text>
+			<text>dfs_tasks_84</text>
 			<icon>greese_tasks</icon>
 			<article>dfs_84</article>
 			<infoportion_complete>player_complete_gangsters_law</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Ликвидировать банду батьки Ковцура</text>
+			<text>dfs_tasks_84_1</text>
 			<infoportion_complete>gangsters_law_1</infoportion_complete>
 			<function_complete>dfs_quests_complit.gangsters_law_1_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Допросить Ковцура</text>
+			<text>dfs_tasks_84_2</text>
 			<infoportion_complete>gangsters_law_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Закончить дело</text>
+			<text>dfs_tasks_84_3</text>
 			<infoportion_complete>gangsters_law_3</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Поговорить с Греком</text>
+			<text>dfs_tasks_84_4</text>
 			<infoportion_complete>gangsters_law_4</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="kill_killer" prio="20">
-		<title>Убить снайпера</title>
+		<title>dfs_tasks_85</title>
 		<objective>
-			<text>Убить снайпера</text>
+			<text>dfs_tasks_85</text>
 			<icon>sniper_tasks</icon>
 			<article>dfs_85</article>
 			<infoportion_complete>player_complete_kill_killer</infoportion_complete>
 			<infoportion_fail>kill_killer_failed</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Проявить милосердие</text>
+			<text>dfs_tasks_85_1</text>
 	<map_location_type hint= "w_pri_killer_sniper_hint">green_location</map_location_type>
 	<object_story_id>w_pri_killer_sniper</object_story_id>
 			<infoportion_complete>kill_killer_1</infoportion_complete>
@@ -1786,15 +1782,15 @@
 </game_task>
 
 <game_task id="time_river" prio="50">
-		<title>Река Времени</title>
+		<title>dfs_tasks_86</title>
 		<objective>
-			<text>Река Времени</text>
+			<text>dfs_tasks_86</text>
 			<icon>jj_tasks</icon>
 			<article>dfs_86</article>
 			<infoportion_complete>player_complete_time_river</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Пройти по Реке под мостом</text>
+			<text>dfs_tasks_86_1</text>
 	<map_location_type hint= "old_gar_river_point_hint">red_location</map_location_type>
 	<object_story_id>old_gar_river_point</object_story_id>
 			<infoportion_complete>time_river_1</infoportion_complete>
@@ -1802,14 +1798,14 @@
 </game_task>
 
 <game_task id="letter_for_pope_leonid" prio="50">
-		<title>Письмо для о.Леонида</title>
+		<title>dfs_tasks_87</title>
 		<objective>
-			<text>Письмо для о.Леонида</text>
+			<text>dfs_tasks_87</text>
 			<icon>monk_tasks</icon>
 			<infoportion_complete>player_complete_letter_for_pope_leonid</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Передать письмо о.Леониду</text>
+			<text>dfs_tasks_87_1</text>
 			<infoportion_complete>letter_for_pope_leonid_1</infoportion_complete>
 	<map_location_type hint= "marsh_monk_12_name">green_location</map_location_type>
 	<object_story_id>gen_monk_09</object_story_id>
@@ -1817,88 +1813,88 @@
 </game_task>
 
 <game_task id="leave_pripyat" prio="20">
-		<title>ЧАЭС</title>
+		<title>dfs_tasks_88</title>
 		<objective>
-			<text>ЧАЭС</text>
+			<text>dfs_tasks_88</text>
 			<icon>jj_tasks</icon>
 			<infoportion_complete>player_complete_leave_pripyat</infoportion_complete>
 			<infoportion_fail>leave_pripyat_crush</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Перейти из Припяти на ЧАЭС</text>
+			<text>dfs_tasks_88_1</text>
 			<infoportion_complete>leave_pripyat_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="ahnenerbe_docs" prio="40">
-		<title>"Упавшая Звезда"</title>
+		<title>dfs_tasks_89</title>
 		<objective>
-			<text>"Упавшая Звезда"</text>
+			<text>dfs_tasks_89</text>
 			<icon>ahnenerbe</icon>
 		<article>dfs_87</article>
 			<infoportion_complete>player_complete_ahnenerbe_docs</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Добраться до Лиманска</text>
+			<text>dfs_tasks_89_1</text>
 			<infoportion_complete>ahnenerbe_docs_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Найти документы спецотдела "DFS"</text>
+			<text>dfs_tasks_89_2</text>
 			<infoportion_complete>ahnenerbe_docs_2</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="the_trap" prio="30">
-		<title>Западня</title>
+		<title>dfs_tasks_90</title>
 		<objective>
-			<text>Западня</text>
+			<text>dfs_tasks_90</text>
 			<icon>greese_tasks</icon>
 		<article>dfs_88</article>
 			<infoportion_complete>player_complete_the_trap</infoportion_complete>
 			<infoportion_fail>lim_greece_dead</infoportion_fail>
 		</objective>
 		<objective>
-			<text>Прикрывать Грека</text>
+			<text>dfs_tasks_90_1</text>
 			<infoportion_complete>the_trap_1</infoportion_complete>
 		<function_complete>dfs_quests_complit.the_trap_1_cmplt</function_complete>
 		</objective>
 </game_task>
 
 <game_task id="break_to_hospital" prio="50">
-		<title>На север</title>
+		<title>dfs_tasks_91</title>
 		<objective>
-			<text>На север</text>
+			<text>dfs_tasks_91</text>
 			<icon>greese_tasks</icon>
 		<article>dfs_89</article>
 			<infoportion_complete>player_complete_break_to_hospital</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Прорваться в Госпиталь</text>
+			<text>dfs_tasks_91_1</text>
 			<infoportion_complete>break_to_hospital_1</infoportion_complete>
 		</objective>
 </game_task>
 
 <game_task id="monolith_portal" prio="50">
-		<title>Портал Монолита</title>
+		<title>dfs_tasks_92</title>
 		<objective>
-			<text>Пройти через Портал Монолита</text>
+			<text>dfs_tasks_92_1</text>
 			<icon>ui_iconsTotal_storyline_eliminate_gunslinger</icon>
 			<infoportion_complete>player_complete_monolith_portal</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Установить первый ключ</text>
+			<text>dfs_tasks_92_2</text>
 	<map_location_type hint= "monolith_kee_1_active_hint">green_location</map_location_type>
 	<object_story_id>hos_key_1_point</object_story_id>
 			<infoportion_complete>monolith_portal_1</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Установить второй ключ</text>
+			<text>dfs_tasks_92_3</text>
 	<map_location_type hint= "monolith_kee_2_active_hint">green_location</map_location_type>
 	<object_story_id>hos_key_2_point</object_story_id>
 			<infoportion_complete>monolith_portal_2</infoportion_complete>
 		</objective>
 		<objective>
-			<text>Установить третий ключ</text>
+			<text>dfs_tasks_92_4</text>
 	<map_location_type hint= "monolith_kee_3_active_hint">green_location</map_location_type>
 	<object_story_id>hos_key_3_point</object_story_id>
 			<infoportion_complete>monolith_portal_3</infoportion_complete>
@@ -1906,15 +1902,15 @@
 </game_task>
 
 <game_task id="take_keys" prio="50">
-		<title>Ключи от Портала</title>
+		<title>dfs_tasks_93</title>
 		<objective>
-			<text>Ключи от Портала</text>
+			<text>dfs_tasks_93</text>
 			<icon>ui_iconsTotal_storyline_eliminate_gunslinger</icon>
 			<infoportion_complete>player_complete_take_keys</infoportion_complete>
 			<function_complete>dfs_quests_complit.take_keys_cmplt</function_complete>
 		</objective>
 		<objective>
-			<text>Забрать ключи</text>
+			<text>dfs_tasks_93_1</text>
 			<infoportion_complete>take_keys_1</infoportion_complete>
 		</objective>
 </game_task>

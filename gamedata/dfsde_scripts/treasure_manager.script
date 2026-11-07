@@ -187,7 +187,7 @@ function CTreasure:give_treasure(k, npc)
 	if obj ~= nil then
 
 		--' Пометить на карте		
-		local text = "%c[255,238,155,23]"..game.translate_string(v.name).."\\n".."%c[default]"..game.translate_string(v.description).."\\n".."%c[120,255,120,160]".."В тайнике: "
+		local text = "%c[255,238,155,23]"..game.translate_string(v.name).."\\n".."%c[default]"..game.translate_string(v.description).."\\n".."%c[120,255,120,160]"..translate("treasure_manager").." "
 
 		--' Сгенерить вещи
 		--'
@@ -270,7 +270,7 @@ local treasure_descr_details = ""
 				end
 local inv_name = system_ini():r_string(vv.section,"inv_name")    
 if inv_name ~= nil then            
-treasure_descr_details = treasure_descr_details.."\\n  - %c[255,155,238,23]"..game.translate_string(inv_name)    
+treasure_descr_details = treasure_descr_details.."\\n %c[255,155,238,23] - "..game.translate_string(inv_name)    
 end                 
     				if string.find(text,add_dialogs.get_treasure_name(vv.section)) == nil  then 
 					text = text.."%c[255,155,238,23]"..tmp_str..add_dialogs.get_treasure_name(vv.section)
@@ -284,64 +284,64 @@ end
 -- Группировка ============
 local commy, txt_news = "",""
 if npc:character_community() == "monolith" then
-			commy = "монолитовец"
+			commy = translate("treasure_manager_1")
 		elseif npc:character_community() == "military" then
-			commy = "военный"
+			commy = translate("treasure_manager_2")
 		elseif npc:character_community() == "killer" then
-			commy = "наемник"
+			commy = translate("treasure_manager_3")
 		elseif npc:character_community() == "ecolog" then
-			commy = "ученый"
+			commy = translate("treasure_manager_4")
 		elseif npc:character_community() == "dolg" then
-			commy = "долговец"
+			commy = translate("treasure_manager_5")
 		elseif npc:character_community() == "freedom" then
-			commy = "свободовец"
+			commy = translate("treasure_manager_6")
 		elseif npc:character_community() == "bandit" then
-			commy = "бандит"
+			commy = translate("treasure_manager_7")
 		elseif npc:character_community() == "zombied" then
-			commy = "зомби"
+			commy = translate("treasure_manager_8")
 			
 		elseif npc:character_community() == "usarmy" then
-			commy = "американец"
+			commy = translate("treasure_manager_9")
 		elseif npc:character_community() == "camban" then
-			commy = "бандит"
+			commy = translate("treasure_manager_7")
 		elseif npc:character_community() == "bb" then
-			commy = "бандит"
+			commy = translate("treasure_manager_7")
 		elseif npc:character_community() == "cliric" then
-			commy = "монах"
+			commy = translate("treasure_manager_10")
 		elseif npc:character_community() == "degen" then
-			commy = "выродок"
+			commy = translate("treasure_manager_17")
 		elseif npc:character_community() == "cnn" then
-			commy = "cnn"
+			commy = translate("treasure_manager_11")
 		elseif npc:character_community() == "nato" then
-			commy = "натовец"
+			commy = translate("treasure_manager_12")
 		elseif npc:character_community() == "p_usarmy" then
-			commy = "американец"
+			commy = translate("treasure_manager_9")
 		elseif npc:character_community() == "stranger" then
-			commy = "stranger"
+			commy = translate("treasure_manager_13")
 		elseif npc:character_community() == "exmon" then
-			commy = "exmon"
+			commy = translate("treasure_manager_14")
 		elseif npc:character_community() == "speckiller" then
-			commy = "наемник"
+			commy = translate("treasure_manager_3")
 
 		elseif npc:character_community() == "ps_stalker" then
-			commy = "сталкер"
+			commy = translate("treasure_manager_15")
 		elseif npc:character_community() == "ps_dolg" then
-			commy = "долговец"
+			commy = translate("treasure_manager_5")
 		elseif npc:character_community() == "ps_freedom" then
-			commy = "свободовец"
+			commy = translate("treasure_manager_6")
 		elseif npc:character_community() == "ps_exmon" then
-			commy = "ps_exmon"
+			commy = translate("treasure_manager_16")
 		elseif npc:character_community() == "ps_bandit" then
-			commy = "бандит"
+			commy = translate("treasure_manager_7")
 		elseif npc:character_community() == "ps_killer" then
-			commy = "наемник"
+			commy = translate("treasure_manager_3")
 end
 
 
-text = "%c[default]".."Тайник спрятал "..commy.." %c[255,238,155,23]"..npc:character_name().."\\n".."%c[default]".."В тайнике: "
+text = "%c[default]"..translate("treasure_manager_18").." "..commy.." %c[255,238,155,23]"..npc:character_name().."\\n".."%c[default]"..translate("treasure_manager").." "
 text = text .. treasure_descr_details
 
-txt_news = "спрятал ".."%c[255,238,155,23]"..npc:character_name().."%c[default]"..", "..commy
+txt_news = translate("treasure_manager_19").." ".."%c[255,238,155,23]"..npc:character_name().."%c[default]"..", "..commy
 
 
 		news_manager.send_treasure(v.name,txt_news)

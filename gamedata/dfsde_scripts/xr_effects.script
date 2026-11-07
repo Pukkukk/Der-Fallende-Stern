@@ -2603,32 +2603,32 @@ function add_mark_sinner_shron()
 
 	local obj = sim:story_object(20162)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "тайник")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects")
 	end
 	
 	local obj = sim:story_object(20165)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "тайник")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects")
 	end
 	
 	local obj = sim:story_object(20166)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "тайник")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects")
 	end
 	
 	local obj = sim:story_object(20167)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "тайник")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects")
 	end
 	
 	local obj = sim:story_object(20168)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "тайник")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects")
 	end
 	
 	local obj = sim:story_object(20169)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "тайник")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects")
 	end
 end
 end
@@ -2640,42 +2640,42 @@ function w_pri_add_marks()
 	
 	local obj = sim:story_object(20356)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "наемники")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects_1")
 	end
 	
 	local obj = sim:story_object(20357)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "банда  овцура")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects_2")
 	end
 	
 	local obj = sim:story_object(20358)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "военные")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects_3")
 	end
 	
 	local obj = sim:story_object(20359)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "—вобода")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects_4")
 	end
 	
 	local obj = sim:story_object(20360)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "сталкеры")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects_5")
 	end
 	
 	local obj = sim:story_object(20361)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "√астроном")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects_6")
 	end
 	
 	local obj = sim:story_object(20362)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "ƒолг")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects_7")
 	end
 	
 	local obj = sim:story_object(20363)
 	if obj then
-		level.map_add_object_spot(obj.id, "crlc_big", "монахи")
+		level.map_add_object_spot(obj.id, "crlc_big", "xr_effects_8")
 	end
 end
 end
@@ -3527,7 +3527,7 @@ function im_away()
 	--[[local sobj = alife():object("bar_iron_mask_1")
 	if sobj then
 		alife():release(sobj, true)
-		news_manager.send_tip(db.actor,"ћен€ющий Ћица ушел",nil,nil,19000)
+		news_manager.send_tip(db.actor,translate("xr_effects_9"),nil,nil,19000)
 	end]]
 	
 	--[[local obj = alife():story_object(23558)
@@ -3537,13 +3537,13 @@ function im_away()
 	alife():set_switch_offline(obj.id, true)
 	alife():set_switch_online(obj.id, false)
 	alife():set_interactive(obj.id, false)
-	news_manager.send_tip(db.actor,"ћен€ющий Ћица ушел:"..se_name,nil,nil,1000)
+	news_manager.send_tip(db.actor,translate("xr_effects_10")..se_name,nil,nil,1000)
 	end]]
 
 	--[[local se_name = "bar_iron_mask_1"
 	local se_obj = alife():object("bar_iron_mask_1")
   if se_obj then
-        news_manager.send_tip(db.actor,"ћен€ющий Ћица ушел:"..se_name,nil,nil,1000)
+        news_manager.send_tip(db.actor,translate("xr_effects_10")..se_name,nil,nil,1000)
         alife():release(se_obj, true)
   end]]
   
@@ -3552,7 +3552,7 @@ function im_away()
 		if s_obj:section_name() == "bar_iron_mask_1" then
 	--s_obj:SetfHealth(0)
 	alife():release(s_obj, true)
-	news_manager.send_tip(db.actor,"ћен€ющий Ћица ушел:"..se_name,nil,nil,10000)
+	news_manager.send_tip(db.actor,translate("xr_effects_10")..se_name,nil,nil,10000)
 	end
 end
 

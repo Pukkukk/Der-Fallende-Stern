@@ -555,5 +555,1171 @@
 	<string id="level_tasks_28">
 		<text>База бандитов</text>
 	</string>
+	
+	
+	<string id="news_manager">
+		<text>Кордон</text>
+	</string>
+
+	<string id="news_manager_1">
+		<text>Свалка</text>
+	</string>
+
+	<string id="news_manager_2">
+		<text>НИИ «Агропром»</text>
+	</string>
+
+	<string id="news_manager_3">
+		<text>Подземелья НИИ «Агропром»</text>
+	</string>
+
+	<string id="news_manager_4">
+		<text>Тёмная долина</text>
+	</string>
+
+	<string id="news_manager_5">
+		<text>Армейские склады</text>
+	</string>
+
+	<string id="news_manager_6">
+		<text>Янтарь</text>
+	</string>
+
+	<string id="news_manager_7">
+		<text>Лаборатория X-16</text>
+	</string>
+
+	<string id="news_manager_8">
+		<text>Радар</text>
+	</string>
+
+	<string id="news_manager_9">
+		<text>Припять</text>
+	</string>
+
+	<string id="news_manager_10">
+		<text>Лаборатория X-18</text>
+	</string>
+
+	<string id="news_manager_11">
+		<text>Бар</text>
+	</string>
+
+	<string id="news_manager_12">
+		<text>Дикая территория</text>
+	</string>
+
+	<string id="news_manager_13">
+		<text>Забытый лес</text>
+	</string>
+
+	<string id="news_manager_14">
+		<text>Госпиталь</text>
+	</string>
+
+	<string id="news_manager_15">
+		<text>Лиманск</text>
+	</string>	
+	
+	<string id="news_manager_16">
+		<text>Болота</text>
+	</string>
+
+	<string id="news_manager_17">
+		<text>Пещера</text>
+	</string>
+
+	<string id="news_manager_18">
+		<text>Сортировка</text>
+	</string>
+
+	<string id="news_manager_19">
+		<text>Рыжий лес</text>
+	</string>	
+
+
+	<string id="ogse_repair">
+		<text>(в руках)</text>
+	</string>
+	
+	<string id="ogse_repair_1">
+		<text>(одет)</text>
+	</string>
+
+
+	<string id="remkit_main">
+		<text>Вы не можете заниматься ремонтом, когда рядом враги.</text>
+	</string>
+
+	<string id="remkit_main_1">
+		<text>Инструмент пришёл в негодность.</text>
+	</string>
+	
+	
+	<string id="treasure_manager">
+		<text>В тайнике:</text>
+	</string>
+	
+	<string id="treasure_manager_1">
+		<text>монолитовец</text>
+	</string>
+
+	<string id="treasure_manager_2">
+		<text>военный</text>
+	</string>
+
+	<string id="treasure_manager_3">
+		<text>наёмник</text>
+	</string>
+
+	<string id="treasure_manager_4">
+		<text>учёный</text>
+	</string>
+
+	<string id="treasure_manager_5">
+		<text>долговец</text>
+	</string>
+
+	<string id="treasure_manager_6">
+		<text>свободовец</text>
+	</string>
+
+	<string id="treasure_manager_7">
+		<text>бандит</text>
+	</string>
+
+	<string id="treasure_manager_8">
+		<text>зомби</text>
+	</string>
+
+	<string id="treasure_manager_9">
+		<text>американец</text>
+	</string>
+
+	<string id="treasure_manager_10">
+		<text>монах</text>
+	</string>
+	
+	<string id="treasure_manager_12">
+		<text>натовец</text>
+	</string>	
+
+<!-- Я не знаю что это за группировки, в игре они точно не встречаются... Можете не переводить 
+     I do not know what these groupings are, they definitely do not occur in the game... You don't have to translate -->
+
+	<string id="treasure_manager_11">
+		<text>cnn</text>
+	</string>
+
+	<string id="treasure_manager_13">
+		<text>stranger</text>
+	</string>
+
+	<string id="treasure_manager_14">
+		<text>exmon</text>
+	</string>
+	
+	<string id="treasure_manager_16">
+		<text>ps_exmon</text>
+	</string>	
+	
+<!-- Я не знаю что это за группировки, в игре они точно не встречаются... Можете не переводить 
+     I do not know what these groupings are, they definitely do not occur in the game... You don't have to translate -->
+
+	<string id="treasure_manager_15">
+		<text>сталкер</text>
+	</string>
+
+	<string id="treasure_manager_17">
+		<text>выродок</text>
+	</string>
+
+	<string id="treasure_manager_18">
+		<text>Тайник спрятал</text>
+	</string>
+
+	<string id="treasure_manager_19">
+		<text>спрятал</text>
+	</string>
+	
+	
+	<string id="ui_remkit">
+		<text>Нельзя произвести ремонт - в слоте нет предмета.</text>
+	</string>
+
+	
+	<string id="use_key">
+		<text>%c[default]Получена новая информация.</text>
+	</string>
+
+
+	<string id="xr_effects">
+		<text>Тайник</text>
+	</string>
+
+	<string id="xr_effects_1">
+		<text>Наёмники</text>
+	</string>
+
+	<string id="xr_effects_2">
+		<text>Банда Ковцура</text>
+	</string>
+
+	<string id="xr_effects_3">
+		<text>Военные</text>
+	</string>
+
+	<string id="xr_effects_4">
+		<text>Свобода</text>
+	</string>
+
+	<string id="xr_effects_5">
+		<text>Сталкеры</text>
+	</string>
+
+	<string id="xr_effects_6">
+		<text>Гастроном</text>
+	</string>
+
+	<string id="xr_effects_7">
+		<text>Долг</text>
+	</string>
+
+	<string id="xr_effects_8">
+		<text>Монахи</text>
+	</string>
+
+	<string id="xr_effects_9">
+		<text>Меняющий Лица ушёл</text>
+	</string>
+
+	<string id="xr_effects_10">
+		<text>Меняющий Лица ушёл:</text>
+	</string>
+
+
+	<string id="dfs_tasks">
+		<text>Напарник</text>
+	</string>
+	<string id="dfs_tasks_1">
+		<text>Встретиться с Хьюго</text>
+	</string>
+	
+	<string id="dfs_tasks_2">
+		<text>Проводник для полковника</text>
+	</string>
+	<string id="dfs_tasks_2_1">
+		<text>Бармен</text>
+	</string>
+	<string id="dfs_tasks_2_2">
+		<text>Торговец</text>
+	</string>
+	<string id="dfs_tasks_2_3">
+		<text>Полковник Коппер</text>
+	</string>
+	
+	<string id="dfs_tasks_3">
+		<text>Жильё</text>
+	</string>
+	<string id="dfs_tasks_3_1">
+		<text>Снять комнату</text>
+	</string>
+	
+	<string id="dfs_tasks_4">
+		<text>Закон Кольта</text>
+	</string>
+	<string id="dfs_tasks_4_1">
+		<text>Забить Камбису стрелку</text>
+	</string>
+	<string id="dfs_tasks_4_2">
+		<text>Вооружиться</text>
+	</string>
+	<string id="dfs_tasks_4_3">
+		<text>Прийти на "стрелку"</text>
+	</string>
+	<string id="dfs_tasks_4_4">
+		<text>Разобраться с бандой Камбиса</text>
+	</string>
+	<string id="dfs_tasks_4_5">
+		<text>Рассказать Сидоровичу</text>
+	</string>
+	
+	<string id="dfs_tasks_5">
+		<text>Двое на болоте</text>
+	</string>
+	<string id="dfs_tasks_5_1">
+		<text>Найти Бизона и Луки</text>
+	</string>
+	<string id="dfs_tasks_5_2">
+		<text>Сообщить Сидоровичу</text>
+	</string>
+	
+	<string id="dfs_tasks_6">
+		<text>Тайник</text>
+	</string>
+	<string id="dfs_tasks_6_1">
+		<text>Найти объект поиска убитых сталкеров</text>
+	</string>
+	
+	<string id="dfs_tasks_7">
+		<text>Братва</text>
+	</string>
+	<string id="dfs_tasks_7_1">
+		<text>Прийти на встречу с бандитами</text>
+	</string>
+	
+	<string id="dfs_tasks_8">
+		<text>Снайпер</text>
+	</string>
+	<string id="dfs_tasks_8_1">
+		<text>Обменять ксеноформу на СВД</text>
+	</string>
+	<string id="dfs_tasks_8_2">
+		<text>Осмотреть место преступления</text>
+	</string>
+	<string id="dfs_tasks_8_3">
+		<text>Ликвидировать снайпера с напарником</text>
+	</string>
+	<string id="dfs_tasks_8_4">
+		<text>Забрать вещи</text>
+	</string>
+	<string id="dfs_tasks_8_5">
+		<text>Принести документы Борману</text>
+	</string>
+	
+	<string id="dfs_tasks_9">
+		<text>Найти грузовик</text>
+	</string>
+	
+	<string id="dfs_tasks_10">
+		<text>Пересечь периметр</text>
+	</string>
+	<string id="dfs_tasks_10_1">
+		<text>Получить инструкции у Хьюго</text>
+	</string>
+	<string id="dfs_tasks_10_2">
+		<text>Получить снаряжение у Бармена</text>
+	</string>
+	<string id="dfs_tasks_10_3">
+		<text>Получить пропуск у Коти</text>
+	</string>
+	
+	<string id="dfs_tasks_11">
+		<text>Погоня за снайпером</text>
+	</string>
+	<string id="dfs_tasks_11_1">
+		<text>Найти снайпера</text>
+	</string>
+	<string id="dfs_tasks_11_2">
+		<text>Забрать вещи</text>
+	</string>
+	<string id="dfs_tasks_11_3">
+		<text>Принести Борману</text>
+	</string>
+	
+	<string id="dfs_tasks_12">
+		<text>Второй выход</text>
+	</string>
+	<string id="dfs_tasks_12_1">
+		<text>Найти другой путь из лаборатории</text>
+	</string>
+	
+	<string id="dfs_tasks_13">
+		<text>Страшная пещера</text>
+	</string>
+	<string id="dfs_tasks_13_1">
+		<text>Выбраться из пещеры</text>
+	</string>	
+	
+	<string id="dfs_tasks_14">
+		<text>Вертолёт из Ада</text>
+	</string>	
+	<string id="dfs_tasks_14_1">
+		<text>Сообщить полковнику о найденном вертолёте</text>
+	</string>	
+	
+	<string id="dfs_tasks_15">
+		<text>Пропавшие коммандос</text>
+	</string>	
+	<string id="dfs_tasks_15_1">
+		<text>Найти команду первого вертолёта</text>
+	</string>	
+	<string id="dfs_tasks_15_2">
+		<text>Найти второй вертолет</text>
+	</string>	
+	<string id="dfs_tasks_15_3">
+		<text>Найти команду второго вертолёта</text>
+	</string>
+	<string id="dfs_tasks_15_4">
+		<text>Доложить полковнику Копперу</text>
+	</string>	
+	
+	<string id="dfs_tasks_16">
+		<text>Отец Виталий</text>
+	</string>	
+	<string id="dfs_tasks_16_1">
+		<text>Встретиться с проводником</text>
+	</string>	
+	<string id="dfs_tasks_16_2">
+		<text>Найти часовню на Болотах</text>
+	</string>	
+	<string id="dfs_tasks_16_3">
+		<text>Найти отца Виталия</text>
+	</string>	
+	<string id="dfs_tasks_16_4">
+		<text>Отвести отца Виталия в часовню</text>
+	</string>	
+	
+	<string id="dfs_tasks_17">
+		<text>Угомонить батюшку</text>
+	</string>	
+	<string id="dfs_tasks_17_1">
+		<text>Ранить отца Виталия</text>
+	</string>		
+	
+	<string id="dfs_tasks_18">
+		<text>Гейгер</text>
+	</string>		
+	<string id="dfs_tasks_18_1">
+		<text>Поговорить с Гейгером</text>
+	</string>		
+	
+	<string id="dfs_tasks_19">
+		<text>Побег</text>
+	</string>
+	<string id="dfs_tasks_19_1">
+		<text>Выбраться за периметр</text>
+	</string>
+	<string id="dfs_tasks_19_2">
+		<text>Найти проводника</text>
+	</string>		
+	<string id="dfs_tasks_19_3">
+		<text>Добраться до базы</text>
+	</string>		
+	
+	<string id="dfs_tasks_20">
+		<text>Прохор-Пулемёт</text>
+	</string>
+	<string id="dfs_tasks_20_1">
+		<text>Найти бандита по кличке Прохор</text>
+	</string>
+	
+	<string id="dfs_tasks_21">
+		<text>Гоша Резанный</text>
+	</string>
+	<string id="dfs_tasks_21_1">
+		<text>Пройти через Барьер</text>
+	</string>
+	<string id="dfs_tasks_21_2">
+		<text>Встретить Гошу Резанного</text>
+	</string>
+	
+	<string id="dfs_tasks_22">
+		<text>Подарки из преисподней</text>
+	</string>
+	<string id="dfs_tasks_22_1">
+		<text>Посылка-1</text>
+	</string>
+	<string id="dfs_tasks_22_2">
+		<text>Посылка-2</text>
+	</string>
+	<string id="dfs_tasks_22_3">
+		<text>Посылка-3</text>
+	</string>
+	<string id="dfs_tasks_22_4">
+		<text>Посылка-4</text>
+	</string>
+	<string id="dfs_tasks_22_5">
+		<text>Посылка-5</text>
+	</string>
+	<string id="dfs_tasks_22_6">
+		<text>Посылка-6</text>
+	</string>
+	<string id="dfs_tasks_22_7">
+		<text>Посылка-7</text>
+	</string>
+	<string id="dfs_tasks_22_8">
+		<text>Посылка-8</text>
+	</string>
+	<string id="dfs_tasks_22_9">
+		<text>Посылка-9</text>
+	</string>
+	<string id="dfs_tasks_22_10">
+		<text>Посылка-10</text>
+	</string>
+	<string id="dfs_tasks_22_11">
+		<text>Посылка-11</text>
+	</string>
+	<string id="dfs_tasks_22_12">
+		<text>Посылка-12</text>
+	</string>
+	<string id="dfs_tasks_22_13">
+		<text>Посылка-13</text>
+	</string>
+	<string id="dfs_tasks_22_14">
+		<text>Посылка-14</text>
+	</string>
+	<string id="dfs_tasks_22_15">
+		<text>Посылка-15</text>
+	</string>
+	<string id="dfs_tasks_22_16">
+		<text>Посылка-16</text>
+	</string>
+	<string id="dfs_tasks_22_17">
+		<text>Посылка-17</text>
+	</string>
+	<string id="dfs_tasks_22_18">
+		<text>Посылка-18</text>
+	</string>
+	
+	<string id="dfs_tasks_23">
+		<text>Человек в тоннеле</text>
+	</string>
+	<string id="dfs_tasks_23_1">
+		<text>Встретиться с человеком Сидора</text>
+	</string>
+	
+	<string id="dfs_tasks_24">
+		<text>Инвертор мертвого сталкера</text>
+	</string>
+	<string id="dfs_tasks_24_1">
+		<text>Найти похищенный инвертор</text>
+	</string>
+	
+	<string id="dfs_tasks_25">
+		<text>Холодная сталь</text>
+	</string>
+	<string id="dfs_tasks_25_1">
+		<text>Перебить банду, используя только метательные ножи</text>
+	</string>
+	
+	<string id="dfs_tasks_26">
+		<text>Прорыв</text>
+	</string>
+	<string id="dfs_tasks_26_1">
+		<text>Следовать за лейтенантом Яковлевым</text>
+	</string>
+	<string id="dfs_tasks_26_2">
+		<text>Отбить атаку выродков</text>
+	</string>
+	<string id="dfs_tasks_26_3">
+		<text>Поговорить с Яковлевым</text>
+	</string>
+	
+	<string id="dfs_tasks_27">
+		<text>Прорыв-2</text>
+	</string>
+	<string id="dfs_tasks_27_1">
+		<text>Выбить выродков с базы Долга</text>
+	</string>
+	
+	<string id="dfs_tasks_28">
+		<text>Гриша Будулай</text>
+	</string>
+	<string id="dfs_tasks_28_1">
+		<text>Найти долговского механика</text>
+	</string>
+	
+	<string id="dfs_tasks_29">
+		<text>Долг долговца</text>
+	</string>
+	<string id="dfs_tasks_29_1">
+		<text>Убить Хрона метательным ножом</text>
+	</string>
+	<string id="dfs_tasks_29_2">
+		<text>Уничтожить торговую точку бандитов на Ростоке</text>
+	</string>
+	<string id="dfs_tasks_29_3">
+		<text>Вернуться за наградой</text>
+	</string>
+	
+	<string id="dfs_tasks_30">
+		<text>База на Складах</text>
+	</string>
+	<string id="dfs_tasks_30_1">
+		<text>Получить флеш-карту у Бредня</text>
+	</string>
+	<string id="dfs_tasks_30_2">
+		<text>"Маякнуть" военным</text>
+	</string>
+	<string id="dfs_tasks_30_3">
+		<text>Поговорить с командиром военных</text>
+	</string>
+
+	<string id="dfs_tasks_31">
+		<text>Фура</text>
+	</string>
+	<string id="dfs_tasks_31_1">
+		<text>Доставить фуру на место</text>
+	</string>
+	<string id="dfs_tasks_31_2">
+		<text>Предложить Кремню выкупить груз</text>
+	</string>
+	
+	<string id="dfs_tasks_32">
+		<text>Скряга</text>
+	</string>
+	<string id="dfs_tasks_32_1">
+		<text>Найти Скрягу</text>
+	</string>
+	
+	<string id="dfs_tasks_33">
+		<text>Профессор Рипли</text>
+	</string>
+	<string id="dfs_tasks_33_1">
+		<text>Найти профессора Рипли</text>
+	</string>
+	<string id="dfs_tasks_33_2">
+		<text>Доставить Рипли на базу наемников</text>
+	</string>
+	
+	<string id="dfs_tasks_34">
+		<text>Биолаборатория</text>
+	</string>
+	<string id="dfs_tasks_34_1">
+		<text>Найти Рипли в биолаборатории</text>
+	</string>
+	<string id="dfs_tasks_34_2">
+		<text>Вывести Рипли из биолаборатории</text>
+	</string>
+	
+	<string id="dfs_tasks_35">
+		<text>Защищать Рипли</text>
+	</string>
+	<string id="dfs_tasks_35_1">
+		<text>Защищать Рипли на пути к переходу</text>
+	</string>
+	
+	<string id="dfs_tasks_36">
+		<text>Крутая разборка</text>
+	</string>
+	<string id="dfs_tasks_36_1">
+		<text>Перебить наемников</text>
+	</string>
+	
+	<string id="dfs_tasks_37">
+		<text>Договор</text>
+	</string>
+	<string id="dfs_tasks_37_1">
+		<text>Договориться с наемниками</text>
+	</string>
+	
+	<string id="dfs_tasks_38">
+		<text>Защищать Рипли - 2</text>
+	</string>
+	<string id="dfs_tasks_38_1">
+		<text>Довести Рипли до перехода на АТП</text>
+	</string>
+	
+	<string id="dfs_tasks_39">
+		<text>Защищать Рипли - 2</text>
+	</string>
+	<string id="dfs_tasks_39_1">
+		<text>Довести Рипли до перехода на АТП</text>
+	</string>
+	
+	<string id="dfs_tasks_40">
+		<text>Посланник Монолита</text>
+	</string>
+	<string id="dfs_tasks_40_1">
+		<text>Добраться до тайника группы Поиск в Припяти</text>
+	</string>
+	<string id="dfs_tasks_40_2">
+		<text>Произвести закладку в тайник</text>
+	</string>
+	<string id="dfs_tasks_40_3">
+		<text>Вернуться к Деймосу</text>
+	</string>
+	
+	<string id="dfs_tasks_41">
+		<text>Новый враг</text>
+	</string>
+	<string id="dfs_tasks_41_1">
+		<text>Помочь отряду Рённа</text>
+	</string>
+	<string id="dfs_tasks_41_2">
+		<text>Поговорить с Рённом</text>
+	</string>
+	
+	<string id="dfs_tasks_42">
+		<text>Стрелок</text>
+	</string>
+	<string id="dfs_tasks_42_1">
+		<text>Найти Стрелка</text>
+	</string>
+	
+	<string id="dfs_tasks_43">
+		<text>Мертвый Город</text>
+	</string>
+	<string id="dfs_tasks_43_1">
+		<text>Найти путь в Мертвый Города</text>
+	</string>
+	
+	<string id="dfs_tasks_44">
+		<text>Язык</text>
+	</string>
+	<string id="dfs_tasks_44_1">
+		<text>Догнать беглецов</text>
+	</string>
+	<string id="dfs_tasks_44_2">
+		<text>Ранить старшего</text>
+	</string>
+	<string id="dfs_tasks_44_3">
+		<text>Допросить раненного</text>
+	</string>
+	
+	<string id="dfs_tasks_45">
+		<text>Тайный разговор</text>
+	</string>
+	<string id="dfs_tasks_45_1">
+		<text>Найти укромное место</text>
+	</string>
+	<string id="dfs_tasks_45_2">
+		<text>Дождаться встречи Немца и неизвестного</text>
+	</string>
+	<string id="dfs_tasks_45_3">
+		<text>Подслушать разговор</text>
+	</string>
+	
+	<string id="dfs_tasks_46">
+		<text>Уйти незамеченным</text>
+	</string>
+	<string id="dfs_tasks_46_1">
+		<text>Незаметно покинуть Припять</text>
+	</string>
+	
+	<string id="dfs_tasks_47">
+		<text>Дознание JJ</text>
+	</string>
+	<string id="dfs_tasks_47_1">
+		<text>Обследовать базу бандитов</text>
+	</string>
+	<string id="dfs_tasks_47_2">
+		<text>Расправиться с бандой</text>
+	</string>
+	<string id="dfs_tasks_47_3">
+		<text>Забрать вещи Молоха</text>
+	</string>
+	<string id="dfs_tasks_47_4">
+		<text>Вернуться к монахам</text>
+	</string>
+	
+	<string id="dfs_tasks_48">
+		<text>Грех JJ</text>
+	</string>
+	<string id="dfs_tasks_48_1">
+		<text>Попасть в Забытый Лес</text>
+	</string>
+	<string id="dfs_tasks_48_2">
+		<text>Найти Грешника</text>
+	</string>
+	<string id="dfs_tasks_48_3">
+		<text>Отдать Грешнику «Даггер»</text>
+	</string>
+	<string id="dfs_tasks_48_4">
+		<text>Отдать Грешнику «Золотую Свинью»</text>
+	</string>	
+	
+	<string id="dfs_tasks_49">
+		<text>«Любопытствующий»</text>
+	</string>
+	<string id="dfs_tasks_49_1">
+		<text>Найти вещи Грешника</text>
+	</string>
+	
+	<string id="dfs_tasks_50">
+		<text>Мёртвый Город</text>
+	</string>
+	<string id="dfs_tasks_50_1">
+		<text>Попасть в Мёртвый Город</text>
+	</string>
+	
+	<string id="dfs_tasks_51">
+		<text>Провал</text>
+	</string>
+	<string id="dfs_tasks_51_1">
+		<text>Сообщить Хьюго о провале задания</text>
+	</string>
+	
+	<string id="dfs_tasks_52">
+		<text>Успех</text>
+	</string>
+	<string id="dfs_tasks_52_1">
+		<text>Сообщить Хьюго о найденном грузовике</text>
+	</string>
+	
+	<string id="dfs_tasks_53">
+		<text>Эвакуация</text>
+	</string>
+	<string id="dfs_tasks_53_1">
+		<text>Найти дорогу на станцию-2</text>
+	</string>
+	<string id="dfs_tasks_53_2">
+		<text>Выбраться из Мертвого Города</text>
+	</string>
+	
+	<string id="dfs_tasks_54">
+		<text>Эвакуация</text>
+	</string>
+	<string id="dfs_tasks_54_1">
+		<text>Найти дорогу на станцию-2</text>
+	</string>
+	<string id="dfs_tasks_54_2">
+		<text>Выбраться из Мертвого Города</text>
+	</string>
+
+	<string id="dfs_tasks_55">
+		<text>Эвакуация-2</text>
+	</string>
+	<string id="dfs_tasks_55_1">
+		<text>Доставить грузовик в точку эвакуации</text>
+	</string>
+	
+	<string id="dfs_tasks_56">
+		<text>Запасный вариант</text>
+	</string>
+	<string id="dfs_tasks_56_1">
+		<text>Прибыть в точку эвакуации</text>
+	</string>
+	
+	<string id="dfs_tasks_57">
+		<text>Проверка Панцера</text>
+	</string>
+	<string id="dfs_tasks_57_1">
+		<text>Зачистить Саркофаг</text>
+	</string>
+	<string id="dfs_tasks_57_2">
+		<text>Вернуться за своим снаряжением</text>
+	</string>
+	
+	<string id="dfs_tasks_58">
+		<text>Убить Рипли</text>
+	</string>
+	<string id="dfs_tasks_58_1">
+		<text>Найти Рипли</text>
+	</string>
+	<string id="dfs_tasks_58_2">
+		<text>Ликвидировать Рипли</text>
+	</string>
+	<string id="dfs_tasks_58_3">
+		<text>Принести Панцеру КПК и инвертор Рипли</text>
+	</string>
+	
+	<string id="dfs_tasks_59">
+		<text>Напарник-2</text>
+	</string>
+	<string id="dfs_tasks_59_1">
+		<text>Встретиться с Хьюго</text>
+	</string>
+	
+	<string id="dfs_tasks_60">
+		<text>Напарник-2</text>
+	</string>
+	<string id="dfs_tasks_60_1">
+		<text>Сообщить Хьюго</text>
+	</string>
+	
+	<string id="dfs_tasks_61">
+		<text>Заложники</text>
+	</string>
+	<string id="dfs_tasks_61_1">
+		<text>Забрать винтовку из схрона</text>
+	</string>
+	<string id="dfs_tasks_61_2">
+		<text>Занять позицию</text>
+	</string>
+	<string id="dfs_tasks_61_3">
+		<text>Снять охрану лагеря</text>
+	</string>
+	<string id="dfs_tasks_61_4">
+		<text>По-тихому зачистить лагерь</text>
+	</string>
+	<string id="dfs_tasks_61_5">
+		<text>Освободить заложников</text>
+	</string>
+	
+	<string id="dfs_tasks_62">
+		<text>Адский пес</text>
+	</string>
+	<string id="dfs_tasks_62_1">
+		<text>Возглавить отряд охотников</text>
+	</string>
+	<string id="dfs_tasks_62_2">
+		<text>Убить мутанта-собаку</text>
+	</string>
+	<string id="dfs_tasks_62_3">
+		<text>Получить награду</text>
+	</string>
+	
+	<string id="dfs_tasks_63">
+		<text>Страж</text>
+	</string>
+	<string id="dfs_tasks_63_1">
+		<text>Встретиться со Стражем</text>
+	</string>
+	
+	<string id="dfs_tasks_64">
+		<text>Атака мутантов</text>
+	</string>
+	<string id="dfs_tasks_64_1">
+		<text>Активировать охранную систему Долга</text>
+	</string>
+	<string id="dfs_tasks_64_2">
+		<text>Отбить атаку мутантов</text>
+	</string>
+	<string id="dfs_tasks_64_3">
+		<text>Закончить разговор с Ренном</text>
+	</string>
+	
+	<string id="dfs_tasks_65">
+		<text>Месть монолитовца</text>
+	</string>
+	<string id="dfs_tasks_65_1">
+		<text>Разобраться с бандитами</text>
+	</string>
+	<string id="dfs_tasks_65_2">
+		<text>Поговорить с Молохом</text>
+	</string>
+	
+	<string id="dfs_tasks_66">
+		<text>Последняя просьба Рённа</text>
+	</string>
+	<string id="dfs_tasks_66_1">
+		<text>Остановить превращение огнестрелом</text>
+	</string>
+	
+	<string id="dfs_tasks_67">
+		<text>Шестое чувство Бормана</text>
+	</string>
+	<string id="dfs_tasks_67_1">
+		<text>Произвести разведку</text>
+	</string>
+	<string id="dfs_tasks_67_2">
+		<text>Вернуться к Борману</text>
+	</string>
+	
+	<string id="dfs_tasks_68">
+		<text>Недоступная информация</text>
+	</string>
+	<string id="dfs_tasks_68_1">
+		<text>Найти источник питания</text>
+	</string>
+	<string id="dfs_tasks_68_2">
+		<text>Запитать ноутбук Гены</text>
+	</string>
+	<string id="dfs_tasks_68_3">
+		<text>Получить информацию из ноутбука Гены</text>
+	</string>
+	
+	<string id="dfs_tasks_69">
+		<text>Ермол</text>
+	</string>
+	<string id="dfs_tasks_69_1">
+		<text>Найти Ермола</text>
+	</string>
+	
+	<string id="dfs_tasks_70">
+		<text>Артефакты из деревни зомби</text>
+	</string>
+	<string id="dfs_tasks_70_1">
+		<text>Собрать артефакты в деревне зомби</text>
+	</string>
+	<string id="dfs_tasks_70_2">
+		<text>Обменять артефакты на информацию</text>
+	</string>
+	
+	<string id="dfs_tasks_71">
+		<text>«Мёртвые» артефакты</text>
+	</string>
+	<string id="dfs_tasks_71_1">
+		<text>Разузнать о происхождении «мёртвых» артефактов</text>
+	</string>
+	
+	<string id="dfs_tasks_72">
+		<text>Угон</text>
+	</string>
+	<string id="dfs_tasks_72_1">
+		<text>Найти вход в старый коллектор</text>
+	</string>
+	<string id="dfs_tasks_72_2">
+		<text>Попасть в лагерь сталкеров</text>
+	</string>
+	<string id="dfs_tasks_72_3">
+		<text>Угнать грузовик со стазис-камерой</text>
+	</string>
+	
+	<string id="dfs_tasks_73">
+		<text>Уничтожить пульт управления Барьером</text>
+	</string>
+	
+	<string id="dfs_tasks_74">
+		<text>Ошибка Хьюго</text>
+	</string>
+	<string id="dfs_tasks_74_1">
+		<text>Отбить грузовик у GRC</text>
+	</string>
+	
+	<string id="dfs_tasks_75">
+		<text>Поймать ксеноморфа</text>
+	</string>
+	
+	<string id="dfs_tasks_76">
+		<text>Остановить ксеноморфа</text>
+	</string>
+	
+	<string id="dfs_tasks_77">
+		<text>Остановить ксеноморфа</text>
+	</string>
+	
+	<string id="dfs_tasks_78">
+		<text>Письмо для Славена</text>
+	</string>
+	<string id="dfs_tasks_78_1">
+		<text>Передать письмо Бормана Славену</text>
+	</string>
+	<string id="dfs_tasks_78_2">
+		<text>Договориться о совместных действиях</text>
+	</string>
+	
+	<string id="dfs_tasks_79">
+		<text>Угон</text>
+	</string>
+	<string id="dfs_tasks_79_1">
+		<text>Угнать грузовик со стазис-камерой</text>
+	</string>
+	
+	<string id="dfs_tasks_80">
+		<text>Доказательства для капитана</text>
+	</string>
+	<string id="dfs_tasks_80_1">
+		<text>Найти доказательства непричастности Поиска</text>
+	</string>
+	<string id="dfs_tasks_80_2">
+		<text>Принести Ярославкину</text>
+	</string>
+	
+	<string id="dfs_tasks_81">
+		<text>Серьезный компромат</text>
+	</string>
+	<string id="dfs_tasks_81_1">
+		<text>Найти КПК Карася</text>
+	</string>
+	<string id="dfs_tasks_81_2">
+		<text>Продать КПК Камбодже</text>
+	</string>
+	
+	<string id="dfs_tasks_82">
+		<text>Арсенал наёмников</text>
+	</string>
+	<string id="dfs_tasks_82_1">
+		<text>Уничтожить арсенал наёмников</text>
+	</string>
+	<string id="dfs_tasks_82_2">
+		<text>Поговорить с Греком</text>
+	</string>
+	<string id="dfs_tasks_82_3">
+		<text>Сообщить Борману</text>
+	</string>
+	
+	<string id="dfs_tasks_83">
+		<text>Арсенал наёмников</text>
+	</string>
+	<string id="dfs_tasks_83_1">
+		<text>Уничтожить арсенал наёмников</text>
+	</string>
+	<string id="dfs_tasks_83_2">
+		<text>Сообщить Борману</text>
+	</string>
+	
+	<string id="dfs_tasks_84">
+		<text>Разборка по-понятиям</text>
+	</string>
+	<string id="dfs_tasks_84_1">
+		<text>Ликвидировать банду батьки Ковцура</text>
+	</string>
+	<string id="dfs_tasks_84_2">
+		<text>Допросить Ковцура</text>
+	</string>
+	<string id="dfs_tasks_84_3">
+		<text>Закончить дело</text>
+	</string>
+	<string id="dfs_tasks_84_4">
+		<text>Поговорить с Греком</text>
+	</string>
+	
+	<string id="dfs_tasks_85">
+		<text>Убить снайпера</text>
+	</string>
+	<string id="dfs_tasks_85_1">
+		<text>Проявить милосердие</text>
+	</string>
+	
+	<string id="dfs_tasks_86">
+		<text>Река Времени</text>
+	</string>
+	<string id="dfs_tasks_86_1">
+		<text>Пройти по реке под мостом</text>
+	</string>
+	
+	<string id="dfs_tasks_87">
+		<text>Письмо для о. Леонида</text>
+	</string>
+	<string id="dfs_tasks_87_1">
+		<text>Передать письмо о. Леониду</text>
+	</string>
+	
+	<string id="dfs_tasks_88">
+		<text>ЧАЭС</text>
+	</string>
+	<string id="dfs_tasks_88_1">
+		<text>Перейти из Припяти на ЧАЭС</text>
+	</string>
+	
+	<string id="dfs_tasks_89">
+		<text>«Упавшая Звезда»</text>
+	</string>
+	<string id="dfs_tasks_89_1">
+		<text>Добраться до Лиманска</text>
+	</string>
+	<string id="dfs_tasks_89_2">
+		<text>Найти документы спецотдела «DFS»</text>
+	</string>
+	
+	<string id="dfs_tasks_90">
+		<text>Западня</text>
+	</string>
+	<string id="dfs_tasks_90_1">
+		<text>Прикрывать Грека</text>
+	</string>
+	
+	<string id="dfs_tasks_91">
+		<text>На север</text>
+	</string>
+	<string id="dfs_tasks_91_1">
+		<text>Прорваться в Госпиталь</text>
+	</string>
+	
+	<string id="dfs_tasks_92">
+		<text>Портал Монолита</text>
+	</string>
+	<string id="dfs_tasks_92_1">
+		<text>Пройти через портал Монолита</text>
+	</string>
+	<string id="dfs_tasks_92_2">
+		<text>Установить первый ключ</text>
+	</string>
+	<string id="dfs_tasks_92_3">
+		<text>Установить второй ключ</text>
+	</string>
+	<string id="dfs_tasks_92_4">
+		<text>Установить третий ключ</text>
+	</string>
+	
+	<string id="dfs_tasks_93">
+		<text>Ключи от портала</text>
+	</string>
+	<string id="dfs_tasks_93_1">
+		<text>Забрать ключи</text>
+	</string>
 
 </string_table>	

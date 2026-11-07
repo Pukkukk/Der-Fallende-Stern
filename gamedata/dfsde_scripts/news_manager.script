@@ -240,26 +240,26 @@ function send_encyclopedy(type, title)
 end
 function send_treasure(name)
 local 	level_name = {}
-		level_name["esc"]  = "Кордон"
-		level_name["gar"]  = "Свалка"
-		level_name["agr"]  = "НИИ Агропром"
-		level_name["agru"] = "Подвалы Агропрома"
-		level_name["val"]  = "Темная Долина"
-		level_name["mil"]  = "Армейские склады"
-		level_name["yan"]  = "Янтарь"
-		level_name["x16"]  = "Лаборатория x16"
-		level_name["rad"]  = "Радар"
-		level_name["pri"]  = "Припять"
-		level_name["x18"]  = "Лаборатория x18"
-		level_name["bar"]  = "Бар"
-		level_name["ros"]  = "Дикая территория"
-		level_name["aver"]  = "Забытый лес"
-		level_name["hos"]  = "Госпиталь"
-		level_name["lim"]  = "Лиманск"
-		level_name["marsh"]  = "Болота"
-		level_name["peshera"]  = "Пещера"
-		level_name["sor"]  = "Сортировка"
-		level_name["red"]  = "Рыжий лес"
+		level_name["esc"]  = translate("news_manager")
+		level_name["gar"]  = translate("news_manager_1")
+		level_name["agr"]  = translate("news_manager_2")
+		level_name["agru"] = translate("news_manager_3")
+		level_name["val"]  = translate("news_manager_4")
+		level_name["mil"]  = translate("news_manager_5")
+		level_name["yan"]  = translate("news_manager_6")
+		level_name["x16"]  = translate("news_manager_7")
+		level_name["rad"]  = translate("news_manager_8")
+		level_name["pri"]  = translate("news_manager_9")
+		level_name["x18"]  = translate("news_manager_10")
+		level_name["bar"]  = translate("news_manager_11")
+		level_name["ros"]  = translate("news_manager_12")
+		level_name["aver"]  = translate("news_manager_13")
+		level_name["hos"]  = translate("news_manager_14")
+		level_name["lim"]  = translate("news_manager_15")
+		level_name["marsh"]  = translate("news_manager_16")
+		level_name["peshera"]  = translate("news_manager_17")
+		level_name["sor"]  = translate("news_manager_18")
+		level_name["red"]  = translate("news_manager_19")
 	pda_news:play(db.actor, 0, sound_object.s2d)
 	
 	local task_texture, task_rect = get_texture_info("ui_iconsTotal_found_thing")

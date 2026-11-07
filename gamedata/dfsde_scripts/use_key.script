@@ -516,5 +516,5 @@ end
 
 
 function news_have(first_speaker, second_speaker)
-	news_manager.send_tip(db.actor, "%c[default]Получена новая информация.", nil, nil, 25000)
+	news_manager.send_tip(db.actor, translate("use_key"), nil, nil, 25000)
 end

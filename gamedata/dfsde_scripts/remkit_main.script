@@ -19,15 +19,11 @@ if db.actor:item_in_slot(repaired_slot) ~= nil then
 	
 	local actor_rank = db.actor:character_rank()
 	if actor_rank > 1000 then actor_rank = 1000 end
--- amk.send_tip("Ранг: " .. actor_rank)
 
 	local tech_complication = technical_complication(repair_item)
--- amk.send_tip("Сложность: " .. tech_complication)
 	local amendment = (math.random((actor_rank - tech_complication), (actor_rank - tech_complication + 300)))/1000
 	if amendment > 0 then amendment = 0 end
 	if repair_item_section == destr_item_section then amendment = amendment*0.7 end
--- amk.send_tip("Поправка: " .. amendment)
-
 	local size_of_repair = (destr_item_condition - 0.15) * (1 - ((1 - db.cond_rk) / 3))
 	local repared_condition = repair_item_condition + size_of_repair
 	local dif_repared_condition = repared_condition + amendment
@@ -41,26 +37,21 @@ if db.actor:item_in_slot(repaired_slot) ~= nil then
 		dif_repared_condition = 0.98
 	elseif (dif_repared_condition > 0) and (dif_repared_condition < 0.98) then
 		if dif_repared_condition < repair_item_condition then
--- amk.send_tip("Похоже, мы испортили вещь...")
 			dif_repared_condition = repair_item_condition - ((repair_item_condition - dif_repared_condition)*((1000 - actor_rank)/1000))
 			if dif_repared_condition < 0 then dif_repared_condition = 0 end
 		end
 	elseif dif_repared_condition <= 0 then
 		if dif_repared_condition < repair_item_condition then
--- amk.send_tip("Ты сломал это!!!")
 			dif_repared_condition = repair_item_condition - ((repair_item_condition + dif_repared_condition)*((1000 - actor_rank)/1000))
 			if dif_repared_condition < 0 then dif_repared_condition = 0 end
 		end
 	end
 
 	if dif_repared_condition > repair_item_condition then
---		amk.send_tip("Вам удалось улучшить состояние предмета.")
 		result = "success"
 	elseif dif_repared_condition == repair_item_condition then
---		amk.send_tip("Вам не удалось улучшить состояние предмета.")
 		result = "without_changes"
 	else
---		amk.send_tip("По неопытности Вы ухудшили состояние предмета.")
 		result = "failure"
 	end
 
@@ -69,13 +60,10 @@ if db.actor:item_in_slot(repaired_slot) ~= nil then
 	if system_ini():r_string(destr_item_section, "slot") == "1" or system_ini():r_string(destr_item_section, "slot") == "2" then
 
 	if system_ini():line_exist(destr_item_section, "ammo_class") then
--- Разрядим оружие и снимем с него аддоны
--- -- amk.logf("Разрядим разбираемое оружие")
 
 		local destr_item_state = get_weapon_data(alife():object(destr_item:id()))
 
 		local w_ammo_num = destr_item:get_ammo_in_magazine()
--- -- amk.logf("Оружие снаряжено " .. w_ammo_num .. " патронами")
 		local w_ammo_type = destr_item_state.ammo_type
 		local ammo_list = system_ini():r_string(destr_item_section, "ammo_class")
 		local num = nil
@@ -135,9 +123,7 @@ end
 
 
 function create_repair_kit()
--- -- amk.logf("Спавним в инвентарь новый ремкит")
 	local new_rep_kit = amk.spawn_item_in_inv("repair_kit")
--- -- amk.logf("Запускаем таймер для ожидания появления предмета")
 	amk.start_timer("rkc", 0.05)
 
 end
@@ -157,11 +143,10 @@ function call_menu_repair_kit(pid)
 			end
 		end
 		if enemy == true then
-			amk.send_tip("Вы не можете заниматься ремонтом, когда рядом враги.")
--- -- amk.logf("Рядом враги - ремонт невозможен")
+			amk.send_tip(translate("remkit_main"))
 			create_repair_kit()
 		elseif db.cond_rk < 0.15 then
-			amk.send_tip("Инструмент пришёл в негодность.")
+			amk.send_tip(translate("remkit_main_1"))
 			create_repair_kit()
 		else
 			local spwn=ui_remkit.remkit(get_hud())
@@ -175,7 +160,6 @@ function search_repair_kit()
 	db.use_rk = 0
 	db.actor:inventory_for_each(set_condition_repair_kit)
 	if db.use_rk == 0 then
--- -- amk.logf("Предмет ещё не появился, ждём дальше")
 		amk.start_timer("rkc", 0.05)
 	end
 end
@@ -190,24 +174,16 @@ if item:condition() == 1 then
 		
 	local new_repair_kit = item
 
--- -- amk.logf("Прочитаем текущие параметры ремкита в нет-пакет")
 	local rep_kit_params = read_cse_item_params(alife():object(new_repair_kit:id()))
--- -- amk.logf("Сбросим таблицу нет-пакета в лог: " .. rep_kit_params.gvid .. " / " .. rep_kit_params.obf32u1 .. " / " .. rep_kit_params.obs32u2 .. " / " .. rep_kit_params.lvid .. " / " .. rep_kit_params.oflags .. " / " .. rep_kit_params.custom .. " / " .. rep_kit_params.sid .. " / " .. rep_kit_params.obs32u3 .. " / " .. rep_kit_params.visual .. " / " .. rep_kit_params.vsu8u1 .. " / " .. rep_kit_params.condition .. " / " .. rep_kit_params.updnum_items--[[ .. " / " .. rep_kit_params.updcse_alife_item__unk1_q8v4 .. " / " .. rep_kit_params.updcse_alife_item__unk2_q8v3 .. " / " .. rep_kit_params.updcse_alife_item__unk3_q8v3]])
 
 	local new_rep_kit_cond = db.cond_rk - db.cond_rk_dif
--- -- amk.logf("Запомненная кондиция ремкита " .. db.cond_rk .. " Разница после ремонта составила " .. db.cond_rk_dif)
--- -- amk.logf("Кондиция обновлённого ремкита будет " .. new_rep_kit_cond)
 	if new_rep_kit_cond < 0 then new_rep_kit_cond = 0 end
--- -- amk.logf("Назначаем новую кондицию новому ремкиту")
 	new_repair_kit:set_condition(new_rep_kit_cond)
-	if new_repair_kit:condition() < 0.15 and db.cond_rk_dif ~= 0 then amk.send_tip("Инструмент пришёл в негодность.") end
+	if new_repair_kit:condition() < 0.15 and db.cond_rk_dif ~= 0 then amk.send_tip(translate("remkit_main_1")) end
 
--- -- amk.logf("Изменим параметры ремкита в таблице нет-пакета")
 	rep_kit_params.custom = new_rep_kit_cond
--- -- amk.logf("Запишем нет-пакет в объект")
 	write_cse_item_params(rep_kit_params,alife():object(new_repair_kit:id()))
 
--- -- amk.logf("И обновим инвентарь - создадим в инвентаре разделитель...")
 	amk.spawn_item_in_inv("separator")
 end
 end
@@ -218,16 +194,12 @@ function reset_condition_repair_kit(item)
 if item:section() == "repair_kit" then
 	local new_repair_kit = item
 	local new_repair_kit_condition = new_repair_kit:condition()
--- -- amk.logf("Прочитаем текущие параметры ремкита в нет-пакет")
 	local rep_kit_params = read_cse_item_params(alife():object(new_repair_kit:id()))
--- -- amk.logf("Сбросим таблицу нет-пакета в лог: " .. rep_kit_params.gvid .. " / " .. rep_kit_params.obf32u1 .. " / " .. rep_kit_params.obs32u2 .. " / " .. rep_kit_params.lvid .. " / " .. rep_kit_params.oflags .. " / " .. rep_kit_params.custom .. " / " .. rep_kit_params.sid .. " / " .. rep_kit_params.obs32u3 .. " / " .. rep_kit_params.visual .. " / " .. rep_kit_params.vsu8u1 .. " / " .. rep_kit_params.condition .. " / " .. rep_kit_params.updnum_items--[[ .. " / " .. rep_kit_params.updcse_alife_item__unk1_q8v4 .. " / " .. rep_kit_params.updcse_alife_item__unk2_q8v3 .. " / " .. rep_kit_params.updcse_alife_item__unk3_q8v3]])
 
 	if rep_kit_params.custom ~= nil then
 		if rep_kit_params.custom ~= "" then
--- -- amk.logf("В кастом_дате у него что-то есть. Вот это 'что-то' и выставляем как его кондицию")
 			new_repair_kit:set_condition(rep_kit_params.custom)
 		elseif new_repair_kit_condition ~= 1 then
--- -- amk.logf("Ремкит поюзан, но не обработан. Исправляем это безобразие.")
 			rep_kit_params.custom = new_repair_kit_condition
 			write_cse_item_params(rep_kit_params,alife():object(new_repair_kit:id()))
 		end
@@ -255,11 +227,8 @@ function technical_complication(item)
 	local item_name = item:section()
 
 	if system_ini():line_exist((item_name .. "_repair"), "tech_complication") then
--- amk.logf("Параметр 'Сложность' найден.")
 		complication = system_ini():r_s32((item_name .. "_repair"), "tech_complication")
--- amk.logf("Прочитали и присвоили значение.")
 	elseif system_ini():line_exist(item_name, "repair") then
--- amk.logf("Параметр 'Сложность' не найден. Ищем по родителю.")
 		local repair_section = system_ini():r_string(item_name, "repair")
 		if system_ini():line_exist(repair_section, "tech_complication") then
 			complication = system_ini():r_s32(repair_section, "tech_complication")
@@ -273,16 +242,13 @@ end
 function compatibility_item(item, repaired_item)
 
 	if item == nil or repaired_item == nil then return false end
--- amk.logf("Сравнение...")
 	local itm_name = item:section()
 	local rprd_itm_name = repaired_item:section()
 	local itm_compat = ""
 	local rep_itm_compat = ""
 	local compatibility = false
 	if 	system_ini():line_exist((itm_name .. "_repair"), "repair_compatibility") then
--- amk.logf("Параметр 'Совместимость' найден.")
 		itm_compat = system_ini():r_string((itm_name .. "_repair"), "repair_compatibility")
--- amk.logf("Прочитали и присвоили значение.")
 	elseif system_ini():line_exist(itm_name, "repair") then
 		local repair_section = system_ini():r_string(itm_name, "repair")
 		if system_ini():line_exist(repair_section, "repair_compatibility") then
@@ -290,9 +256,7 @@ function compatibility_item(item, repaired_item)
 		end
 	end
 	if 	system_ini():line_exist((rprd_itm_name .. "_repair"), "repair_compatibility") then
--- amk.logf("Параметр 'Совместимость' найден.")
 		rep_itm_compat = system_ini():r_string((rprd_itm_name .. "_repair"), "repair_compatibility")
--- amk.logf("Прочитали и присвоили значение.")
 	elseif system_ini():line_exist(rprd_itm_name, "repair") then
 		local rprd_repair_section = system_ini():r_string(rprd_itm_name, "repair")
 		if system_ini():line_exist(rprd_repair_section, "repair_compatibility") then
@@ -362,11 +326,9 @@ function read_cse_item_params(sobj)
   sobj:UPDATE_Write(uppk)
   local size=stpk:w_tell()
   local size1=uppk:w_tell()
--- -- amk.logf("rsp "..size.." "..size1)
   stpk:r_seek(0)
   uppk:r_seek(0)
   local tbl=parse_cse_object_packet({},stpk,uppk)
--- -- amk.logf("rsp "..size.." "..size1.." "..stpk:r_tell())
   return tbl
 end
 
@@ -397,7 +359,6 @@ function write_cse_item_params(tbl,sobj)
   fill_cse_object_packet(tbl,stpk,uppk)
   local size=stpk:w_tell()
   local size1=uppk:w_tell()
--- -- amk.logf("wsp "..size.." "..size1)
   stpk:r_seek(0)
   uppk:r_seek(0)
   sobj:STATE_Read(stpk,size)
@@ -431,7 +392,6 @@ function get_weapon_data(sobj)
   sobj:UPDATE_Write(uppk)
   local size=stpk:w_tell()
   local size1=uppk:w_tell()
--- -- amk.logf("rsp "..size.." "..size1)
   stpk:r_seek(0)
   uppk:r_seek(0)
   local ret={}
@@ -439,7 +399,6 @@ function get_weapon_data(sobj)
   parse_visual_packet(ret,stpk,uppk,size)
   parse_item_packet(ret,stpk,uppk,size)
   parse_item_weapon_packet(ret,stpk,uppk,size)
--- -- amk.logf("rsp "..size.." "..size1.." "..stpk:r_tell())
   return ret
 end
 
