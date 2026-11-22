@@ -41,6 +41,11 @@ lasthealth  = 0
 lasttime	= 0
 post_process = 0
 local weapon_hide = false
+
+local hud_hidden_by_zoom = false
+local hide_hud_sections = {
+    ["device_pda"] = true,
+}
 ----------------------------------------------------------------------------------------------------------------------
 class "actor_binder" (object_binder)
 ----------------------------------------------------------------------------------------------------------------------
@@ -155,6 +160,9 @@ function actor_binder:net_destroy()
 	self.object:set_callback(callback.on_ruck, nil)
 	self.object:set_callback(callback.on_slot, nil)
  	self.object:set_callback(callback.on_before_use_item, nil) -- ogsr_items_anims.script
+	
+	self.object:set_callback(callback.on_actor_weapon_zoom_in, nil)
+	self.object:set_callback(callback.on_actor_weapon_zoom_out, nil)
 
 	if sr_psy_antenna.psy_antenna then
 		sr_psy_antenna.psy_antenna:destroy()
@@ -203,6 +211,9 @@ function actor_binder:reinit()
 	self.object:set_callback(callback.on_ruck, self.on_ruck, self)	-- перемещение предмета в рюкзак
 	self.object:set_callback(callback.on_slot, self.on_slot, self)		-- перемещение предмета в слот
     self.object:set_callback(callback.entity_alive_before_hit, self.before_hit_callback, self)
+	
+	self.object:set_callback(callback.on_actor_weapon_zoom_in, self.on_zoom_in, self)
+    self.object:set_callback(callback.on_actor_weapon_zoom_out, self.on_zoom_out, self)
 
 self.sm:call("on_reinit") -- сигналы/signals
 end
@@ -262,6 +273,23 @@ end
 
 
 function actor_binder:before_hit_callback(hit_data)
+end
+
+function actor_binder:on_zoom_in(obj)
+    if not (obj and hide_hud_sections[obj:section()]) then
+        return
+    end
+    if level.game_indicators_shown() then
+        level.hide_hud_indicators()
+        hud_hidden_by_zoom = true
+    end
+end
+
+function actor_binder:on_zoom_out(obj)
+    if hud_hidden_by_zoom then
+        level.show_hud_indicators()
+        hud_hidden_by_zoom = false
+    end
 end
 
 -------------------- Новые каллбеки конец------------------------------------------------------------------------------
