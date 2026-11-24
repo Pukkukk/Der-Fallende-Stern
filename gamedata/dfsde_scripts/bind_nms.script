@@ -35,7 +35,7 @@ function nms_binder:net_spawn(data)
     if not object_binder.net_spawn(self, data) then
         return false
     end
-    self.load = self.object:get_ammo_in_magazine()
+    self.mag_load = self.object:get_ammo_in_magazine()
     return true
 end
 
@@ -43,62 +43,186 @@ function nms_binder:net_destroy()
     object_binder.net_destroy(self)
 end
 
-function nms_binder:update(delta)
-    object_binder.update(self, delta)
-	if db.actor:active_item() and db.actor:active_item():id() == self.object:id() then 
-        local load = self.object:get_ammo_in_magazine()
-                if load < self.load and not db.actor:has_info("ui_inventory") then 
-			if self:check_shoot() then end
-		end
+-- метательный нож (оружие) -> его "патрон"
+local ammo_by_knife = {
+	wpn_knife_d     = "ammo_knife",
+	wpn_knife_bak   = "ammo_knife_bak",
+	wpn_knife_map   = "ammo_knife_map",
+	wpn_knife_tanto = "ammo_knife_tanto",
+}
 
-		self.load = load
-	else 
-	--news_manager.send_tip(db.actor, "Нож в руках но биндер НЕ активен", nil, nil, 10000)
-    end
+function nms_binder:update(delta)
+	object_binder.update(self, delta)
+
+	local a = db.actor
+	-- ГГ мёртв - нож не отслеживаем и не перезаряжаем
+	if not a or not a:alive() then return end
+
+	local act = a:active_item()
+	if not (act and act:id() == self.object:id()) then
+		self.empty_t = nil
+		return
+	end
+
+	local in_ui = a:has_info("ui_inventory")
+	local load = self.object:get_ammo_in_magazine()
+
+	-- магазин стал меньше - нож брошен
+	if load < self.mag_load and not in_ui then
+		self:check_shoot()
+	end
+	self.mag_load = load
+
+	-- нож брошен, магазин пуст - перезаряжаем сами, не завися от автоперезарядки движка
+	if load == 0 and not in_ui then
+		self:try_reload(a)
+	else
+		self.empty_t = nil
+	end
 end
 
+-- состояния CHudItem::EHudStates (xrGame/HudItem.h)
+local HUD_IDLE   = 0
+local HUD_RELOAD = 3
+-- true - писать в лог смену состояния оружия при перезарядке ножа
+local KNIFE_RELOAD_DEBUG = true
 
+function nms_binder:try_reload(a)
+	local ammo = ammo_by_knife[self.object:section()]
+	if not ammo or a:object(ammo) == nil then return end -- запасных ножей нет
+
+	local now = time_global()
+	if self.next_reload and now < self.next_reload then return end
+
+	-- CWeaponMagazined::Action игнорирует перезарядку, пока оружие занято (анимация броска,
+	-- показ и т.д.), поэтому жмём только когда оружие в состоянии покоя, иначе нажатие пропадёт
+	local st = self.object:get_hud_item_state()
+	if KNIFE_RELOAD_DEBUG and st ~= self.dbg_st then
+		self.dbg_st = st
+		log3("knife reload: state=%s", tostring(st))
+	end
+	if st == HUD_RELOAD then
+		self.next_reload = now + 200 -- уже перезаряжается
+		return
+	end
+	if st ~= HUD_IDLE then
+		self.next_reload = now + 50  -- оружие занято, проверим чуть позже
+		return
+	end
+
+	self.next_reload = now + 800 -- дать перезарядке начаться, прежде чем жать снова
+
+	-- то же, что нажатие клавиши перезарядки: CActor:press_action принимает ID действия
+	-- a:get_actor() у реального актёра возвращает nil (smart_cast<CActorObject> не проходит -
+	-- настоящий объект это CActor), поэтому берём CActor через get_actor_obj()
+	local act = get_actor_obj and get_actor_obj() or nil
+	if not act then act = a:get_actor() end
+	if act then
+		act:press_action(key_bindings.kWPN_RELOAD)
+	elseif KNIFE_RELOAD_DEBUG then
+		log3("knife reload: CActor object not available, press_action skipped")
+	end
+end
+
+-- Материалы с fShootFactor >= этого значения нож пролетает насквозь (камыши, трава, вода и т.п.),
+-- как и обычная пуля в CBulletManager::firetrace_callback (там условие fShootFactor == 1.0).
+local PASS_SHOOT_FACTOR = 0.99
+-- true - писать в лог материал, через который нож пролетел / который его остановил
+local KNIFE_RAY_DEBUG = true
+
+--[[ Луч броска от камеры. Пролетает через простреливаемые материалы.
+     Возвращает: объект (или nil), дистанцию до точки попадания (70 если ничего не задето) ]]
+local function knife_ray(a, max_range)
+	local cam = device().cam_pos
+	local dir = device().cam_dir
+	local sx, sy, sz = cam.x, cam.y, cam.z
+	local travelled = 0
+	local left = max_range
+
+	for i = 1, 10 do
+		local res = level.ray_query(vector():set(sx, sy, sz), dir, left, rq_target.rqtBoth, a)
+		if not res.result then
+			return nil, max_range -- ничего не задето
+		end
+
+		if res.object then
+			return res.object, travelled + res.range
+		end
+
+		local m = res.mtl
+		if m and m.fShootFactor >= PASS_SHOOT_FACTOR and res.range < left - 0.1 then
+			-- простреливаемая поверхность - летим дальше от этой точки
+			if KNIFE_RAY_DEBUG then
+				log3("knife ray: pass through [%s] shoot_factor=%s at %s m", tostring(m.m_Name), tostring(m.fShootFactor), tostring(travelled + res.range))
+			end
+			local step = res.range + 0.05
+			sx = sx + dir.x * step
+			sy = sy + dir.y * step
+			sz = sz + dir.z * step
+			travelled = travelled + step
+			left = left - step
+		else
+			if KNIFE_RAY_DEBUG then
+				log3("knife ray: stopped by [%s] shoot_factor=%s at %s m", m and tostring(m.m_Name) or "?", m and tostring(m.fShootFactor) or "?", tostring(travelled + res.range))
+			end
+			return nil, travelled + res.range
+		end
+	end
+
+	return nil, max_range - left + 0.0
+end
 
 function nms_binder:check_shoot()
-	local res = level.get_current_ray_query()
-	local target_obj = res.object
-  	local a = db.actor
-  	local itm = a:item_in_slot(0)
-  	local ammo = ""
+	local a = db.actor
+	local ammo = ammo_by_knife[self.object:section()]
+	if not ammo then return false end
 
-  	if itm:section() == "wpn_knife_d" then ammo = "ammo_knife"
-   	elseif itm:section() == "wpn_knife_bak" then ammo = "ammo_knife_bak"
-   	elseif itm:section() == "wpn_knife_map" then ammo = "ammo_knife_map"
-   	elseif itm:section() == "wpn_knife_tanto" then ammo = "ammo_knife_tanto"
-  	end
+	-- ВАЖНО: level.get_current_ray_query() не используем - на большой дистанции он берёт
+	-- устаревший указатель из HUD-прицела и валит движок (set_result). Пускаем свой луч.
+	local target_obj, dist = knife_ray(a, 70)
 
-  	if not target_obj then 
-		local dist = res.range
-		if dist > 70 then dist = 70 end -- 70 - дальность броска ножа
-		lv = a:level_vertex_id()
-		gv = a:game_vertex_id()
-		pos = a:position()
-		dir = device().cam_dir
-		lvnew = level.vertex_in_direction(lv,dir,dist)
-		pos2 = vector()
-			if lvnew ~= lv then
-			pos2 = level.vertex_position(lvnew) 
-			else
-			pos2 = pos
-			end
-	alife():create(ammo, vector():set(pos2.x, pos2.y, pos2.z),lvnew,gv )
-	return false
-  else 
+	if not target_obj then
+		if not dist or dist <= 0 or dist > 70 then dist = 70 end -- 70 - дальность броска ножа
+		local gv  = a:game_vertex_id()
+		local cam = device().cam_pos
+		local dir = device().cam_dir
+
+		-- Реальная точка падения: конец луча (чуть не доходя до стены).
+		-- Раньше брался ближайший узел AI-сетки "по направлению" - на большой дистанции
+		-- сетки там нет, функция возвращала вершину ГГ, и нож падал под ноги.
+		local d = dist - 0.2
+		if d < 0.3 then d = 0.3 end
+		local pos = vector():set(cam.x + dir.x * d, cam.y + dir.y * d, cam.z + dir.z * d)
+
+		-- вершина AI-сетки для этой точки
+		local lvid = nil
+		local ok, v = pcall(level.vertex_id, pos)
+		if ok and v and v < 4294967295 then
+			lvid = v
+			-- точка над сеткой: опускаем нож до уровня земли этой вершины
+			local ok2, vp = pcall(level.vertex_position, lvid)
+			if ok2 and vp and pos.y > vp.y then pos.y = vp.y end
+		else
+			-- точка вне сетки (далеко/над обрывом): берём ближайшую вершину, нож упадёт физикой
+			local ok3, nv = pcall(level.nearest_vertex_id, pos)
+			if ok3 and nv and nv < 4294967295 then lvid = nv end
+		end
+		if not lvid then lvid = a:level_vertex_id() end
+
+		alife():create(ammo, pos, lvid, gv)
+		return false
+	else
 		local obj1 = target_obj:id()
 		local lvid = target_obj:level_vertex_id()
 		local gvid = target_obj:game_vertex_id()
-		local pos = target_obj:position()
+		local pos  = target_obj:position()
 
 		if target_obj:is_stalker() or target_obj:is_monster() or target_obj:is_trader() then
-			  if target_obj then alife():create(ammo, vector():set(pos.x, pos.y, pos.z), lvid, gvid, obj1)  end
-	else
-	  local rast = math.random(-50,50)/100
-	 		 if target_obj then alife():create(ammo, vector():set(pos.x+rast, pos.y, pos.z+rast), lvid, gvid) end
-		end  
-	  end
-	end  
+			-- нож остаётся в трупе/цели
+			alife():create(ammo, vector():set(pos.x, pos.y, pos.z), lvid, gvid, obj1)
+		else
+			local rast = math.random(-50, 50) / 100
+			alife():create(ammo, vector():set(pos.x + rast, pos.y, pos.z + rast), lvid, gvid)
+		end
+	end
+end

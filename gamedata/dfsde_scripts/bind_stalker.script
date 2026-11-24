@@ -1262,6 +1262,7 @@ xr_s.on_update( delta )
 
 	elseif upd_time1 < time then
 		upd_time1 = time + 100
+		use_key.knife_update()
    	
 
 	elseif upd_time < time then

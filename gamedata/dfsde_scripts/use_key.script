@@ -16,221 +16,220 @@ end
 
 
 --[[ -----------------------------------------------------------------------------------------------
- Description    : Cмена метательных ножей
- Last edit      : 10.01.2016 marafonec. 
+ Description    : Система метательных ножей
+ Last edit      : переработана - больше не зависит от автоперезарядки движка,
+                  после смерти ГГ ничего не достаётся
 ---------------------------------------------------------------------------------------------------]]
 
+-- порядок в списке = приоритет, какой нож брать в руки, если нужного типа нет
 local knifes = {"wpn_knife_d", "wpn_knife_bak", "wpn_knife_map", "wpn_knife_tanto", "wpn_knife"}
 
-function drop_knifes(obj)
-local a = db.actor
+-- метательный нож (оружие) -> его "патрон" и инфопоршень
+local throw_knifes = {
+	wpn_knife_map   = {ammo = "ammo_knife_map",   info = "has_knife_map"},
+	wpn_knife_tanto = {ammo = "ammo_knife_tanto", info = "has_knife_tanto"},
+	wpn_knife_bak   = {ammo = "ammo_knife_bak",   info = "has_knife_bak"},
+	wpn_knife_d     = {ammo = "ammo_knife",       info = "has_knife_d"},
+}
 
--- ================== Выбросили нож ========================
-	-- определяем, что выбросили именно метательный нож
-	if obj and string.sub(obj:section(),1,6) == "wpn_kn" and obj:section() ~= "wpn_knife" then
-	local obj_a = ""
-	local obj_k,pos,lv,gv
-		-- сопоставили ножи их зарядам
-		if obj:section()     == "wpn_knife_map" then obj_a = "ammo_knife_map"
-		elseif obj:section() == "wpn_knife_tanto" then obj_a = "ammo_knife_tanto"
-		elseif obj:section() == "wpn_knife_bak" then obj_a = "ammo_knife_bak"
-		elseif obj:section() == "wpn_knife_d" then obj_a = "ammo_knife"
-		elseif obj:section() == "wpn_knife" then obj_a = ""
-		end
+-- "патрон" -> метательный нож (оружие)
+local knife_by_ammo = {}
+for wpn_sect, d in pairs(throw_knifes) do
+	knife_by_ammo[d.ammo] = wpn_sect
+end
 
-	for a=1,65535,1 do
-		obj_k=alife():object(a)
-		-- если нож находится не у актора - на земле, и никому не принадлежит, ... то 
-		if obj_k and obj_k:section_name() ~= "wpn_knife" and obj_k:section_name() == obj:section() and obj_k.parent_id == 65535 then
+-- отложенное доставание ножа после броска (см. request_rearm / knife_update)
+local rearm = nil
 
-		-- ... определяем его позицию на локации и...
-			pos = obj_k.position
-			lv = obj_k.m_level_vertex_id
-			gv = obj_k.m_game_vertex_id
-		-- ... удаляем сам нож, а на его место спавним его патроны
-			alife():release(obj_k,true)
-			alife():create(obj_a,pos,lv,gv)
-		end
-	end
-	
-	-- пробегаемся по инвентарю актора, подсчитываем доступные заряды
-	local cnt = db.actor:object_count()
-	local cnt_ammo = 0
-    			for i=0, cnt-1 do
-        			local item = db.actor:object(i)
-				-- считаем заряды к ножу 
-        			if item:section() == obj_a then
-					cnt_ammo=cnt_ammo+1
-				end
-    			end 
+local function actor_alive()
+	local a = db.actor
+	return a ~= nil and a:alive()
+end
 
-			-- если находим больше одного заряда, то пробегаемся по инвентарю актора
-			if cnt_ammo > 1 then 
-			    for i=0, cnt-1 do
-        			local item = db.actor:object(i)
-				-- если находим заряды к ножу - удаляем 1 заряд и снова спавним нож
-        			if item:section() == obj_a then
-					local sobj = alife():object(item:id())
-					local sobj_1 = obj:section()
-            				if sobj then 
-                			     alife():release(sobj,true)
-					     alife():create(sobj_1, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id())
-                			     break 
-					end 
-        			end
-    			    end
-			-- если находим только один заряд, то пробегаемся по инвентарю актора
-			else 
-				for i=0, cnt-1 do
-        				local item = db.actor:object(i)	
-					local item_1 = db.actor:object(i)	
-					-- если находим заряд к ножу - удаляем и заряд и, если находим - и сам нож
-					if item:section() == obj_a then
-						local inf_k = obj:section()
-						local inf = string.gsub (inf_k, "wpn_", "has_")
-						db.actor:disable_info_portion(inf)	
-						local sobj = alife():object(item:id())	
-						if sobj then 
-                			     		alife():release(sobj,true)
-                			     	end 
-        				end
-					if item_1:section() == obj:section() then
-						local sobj = alife():object(item_1:id())	
-						if sobj then 
-                			     		alife():release(sobj,true)
-                			     	end 
-        				end
-				end 
-			end
+--[[ Достаёт нож в руки.
+     r - необязательный запрос (см. request_rearm).
+     Возвращает true - задача закончена (или делать нечего), false - попробовать позже. ]]
+local function try_equip_knife(r)
+	local a = db.actor
+	-- ГГ мёртв - ничего не достаём (иначе проигрывается звук доставания у трупа)
+	if not (a and a:alive()) then return true end
 
-	this.knifes_rotation()
+	-- открыт инвентарь - подождём, пока закроют
+	if r and a:has_info("ui_inventory") then return false end
+
+	local thrown_id = r and r.thrown_id
+
+	-- в руках уже что-то есть
+	local act = a:active_item()
+	if act ~= nil then
+		-- но если это ещё сам брошенный нож - ждём, пока движок его уберёт
+		return not (thrown_id and act:id() == thrown_id)
 	end
 
--- ================== Выбросили заряды к ножам ========================
--- определяем, что выбросили именно заряд
-
-	if obj and obj:section() == "ammo_knife" then
-	local weapon = db.actor:object("wpn_knife_d")
-	local ammo = db.actor:object("ammo_knife")
-	if weapon and ammo == nil then
-		local cnt = db.actor:object_count()
-    		for i=0, cnt-1 do
-        		local item = db.actor:object(i)
-        			if item:section() == "wpn_knife_d" then
-            				local sobj = alife():object(item:id())
-            				if sobj then 
-                				alife():release(sobj,true)
-                			 end 
-        			end
-    		end
-		db.actor:disable_info_portion("has_knife_d")
-	end
-
-	elseif obj and obj:section() == "ammo_knife_bak" then
-	local weapon = db.actor:object("wpn_knife_bak")
-	local ammo = db.actor:object("ammo_knife_bak")
-	if weapon and ammo == nil then
-		local cnt = db.actor:object_count()
-    		for i=0, cnt-1 do
-        		local item = db.actor:object(i)
-        			if item:section() == "wpn_knife_bak" then
-            				local sobj = alife():object(item:id())
-            				if sobj then 
-                				alife():release(sobj,true)
-                			 end 
-        			end
-    		end
-		db.actor:disable_info_portion("has_knife_bak")
-	end
-
-	elseif obj and obj:section() == "ammo_knife_tanto" then
-	local weapon = db.actor:object("wpn_knife_tanto")
-	local ammo = db.actor:object("ammo_knife_tanto")
-	if weapon and ammo == nil then
-		local cnt = db.actor:object_count()
-    		for i=0, cnt-1 do
-        		local item = db.actor:object(i)
-        			if item:section() == "wpn_knife_tanto" then
-            				local sobj = alife():object(item:id())
-            				if sobj then 
-                				alife():release(sobj,true)
-                			 end 
-        			end
-    		end
-		db.actor:disable_info_portion("has_knife_tanto")
-	end
-	
-	elseif obj and obj:section() == "ammo_knife_map" then
-
-	local weapon = db.actor:object("wpn_knife_map")
-	local ammo = db.actor:object("ammo_knife_map")
-	if weapon and ammo == nil then
-		local cnt = db.actor:object_count()
-    		for i=0, cnt-1 do
-        		local item = db.actor:object(i)
-        			if item:section() == "wpn_knife_map" then
-            				local sobj = alife():object(item:id())
-            				if sobj then 
-                				alife():release(sobj,true)
-                			 end 
-        			end
-    		end
-		db.actor:disable_info_portion("has_knife_map")
-	end
-	end
-
-	if a:active_slot() == 0 then
+	-- в слоте ножа что-то лежит - как и раньше, не трогаем
 	local itm = a:item_in_slot(0)
-		if itm ~= nil then
-			return
-		else
-		this.knifes_rotation()
+	if itm ~= nil then
+		return not (thrown_id and itm:id() == thrown_id)
+	end
+
+	-- скрипт создал новый нож взамен брошенного - ждём, пока он появится в инвентаре
+	if r and r.expect and a:object(r.expect) == nil then return false end
+
+	local order = {}
+	if r and r.prefer then order[#order + 1] = r.prefer end
+	for _, s in ipairs(knifes) do
+		if not (r and r.exclude == s) then order[#order + 1] = s end
+	end
+
+	for _, s in ipairs(order) do
+		local gr = a:object(s)
+		if gr then
+			a:move_to_slot(gr)
+			a:activate_slot(0)
+			return true
 		end
+	end
+	return true
+end
+
+--[[ Запросить доставание ножа чуть позже (чтобы движок успел убрать брошенный нож,
+     а скрипт - создать замену). Работает сам, автоперезарядка движка не нужна.
+     thrown_id - id брошенного ножа
+     prefer    - тип ножа, который желательно достать
+     expect    - тип ножа, который скрипт создал и который надо дождаться
+     exclude   - тип ножа, который доставать нельзя (закончился) ]]
+local function request_rearm(thrown_id, prefer, expect, exclude)
+	rearm = {
+		time      = time_global() + 200,
+		tries     = 12,
+		thrown_id = thrown_id,
+		prefer    = prefer,
+		expect    = expect,
+		exclude   = exclude,
+	}
+end
+
+-- вызывается из actor_binder:update каждые ~100 мс
+function knife_update()
+	local r = rearm
+	if not r then return end
+	if time_global() < r.time then return end
+
+	if not actor_alive() then
+		rearm = nil
+		return
+	end
+
+	if try_equip_knife(r) or r.tries <= 0 then
+		rearm = nil
+		return
+	end
+
+	r.tries = r.tries - 1
+	r.time = time_global() + 250
+end
+
+-- Брошен метательный нож (оружие)
+local function on_knife_thrown(obj, sect, d)
+	local a = db.actor
+	local sim = alife()
+	if not sim then return end
+
+	-- 1. Все такие ножи, лежащие на земле, превращаем в "патроны", чтобы их можно было подобрать
+	for id = 1, 65535 do
+		local obj_k = sim:object(id)
+		if obj_k and obj_k:section_name() == sect and obj_k.parent_id == 65535 then
+			local pos = obj_k.position
+			local lv  = obj_k.m_level_vertex_id
+			local gv  = obj_k.m_game_vertex_id
+			sim:release(obj_k, true)
+			sim:create(d.ammo, pos, lv, gv)
+		end
+	end
+
+	-- 2. Сколько у ГГ осталось таких ножей (патронов) в инвентаре
+	local cnt = a:object_count()
+	local cnt_ammo = 0
+	for i = 0, cnt - 1 do
+		local item = a:object(i)
+		if item and item:section() == d.ammo then
+			cnt_ammo = cnt_ammo + 1
+		end
+	end
+
+	if cnt_ammo > 1 then
+		-- 3.1. Есть ещё ножи: один "патрон" превращаем в оружие
+		for i = 0, cnt - 1 do
+			local item = a:object(i)
+			if item and item:section() == d.ammo then
+				local sobj = sim:object(item:id())
+				if sobj then
+					sim:release(sobj, true)
+					sim:create(sect, a:position(), a:level_vertex_id(), a:game_vertex_id(), a:id())
+					break
+				end
+			end
+		end
+		request_rearm(obj:id(), sect, sect, nil)
+	else
+		-- 3.2. Это был последний нож этого типа: убираем патрон и оружие, гасим инфопоршень
+		for i = 0, cnt - 1 do
+			local item = a:object(i)
+			if item then
+				local s = item:section()
+				if s == d.ammo or s == sect then
+					local sobj = sim:object(item:id())
+					if sobj then sim:release(sobj, true) end
+				end
+			end
+		end
+		a:disable_info_portion(d.info)
+		request_rearm(obj:id(), nil, nil, sect)
 	end
 end
 
-function knifes_rotation()
-  	local a = db.actor
---log1(a:active_slot())
-if a:active_item() == nil then
-		local itm = a:item_in_slot(0)
-		local gr
-		if itm ~= nil then return end
-		if itm == nil then
-			for k,v in pairs(knifes) do
-				gr = a:object(v)
-				if gr then 
-					a:move_to_slot(gr)
-					a:activate_slot(0)
-					break 
-				end
-			end
-			return
-		end
-		
-		local sect = itm:section()
-		local n = #knifes
-		local pos = 0
-		
-		for i=1,n do
-			if knifes[i]==sect then
-				pos = i
-				break
+-- Выброшен/убран "патрон" ножа: если таких больше нет - убираем и само оружие
+local function on_knife_ammo_dropped(ammo_sect)
+	local a = db.actor
+	local sim = alife()
+	if not sim then return end
+
+	local wpn_sect = knife_by_ammo[ammo_sect]
+	if a:object(wpn_sect) and a:object(ammo_sect) == nil then
+		for i = 0, a:object_count() - 1 do
+			local item = a:object(i)
+			if item and item:section() == wpn_sect then
+				local sobj = sim:object(item:id())
+				if sobj then sim:release(sobj, true) end
 			end
 		end
-		
-		for i=1,n do
-			pos = pos + 1
-			if pos>n then pos = 1 end
-			gr = a:object(knifes[pos])
-			if gr and knifes[pos]~=sect then
-				a:move_to_ruck(itm)
-				a:move_to_slot(gr)
-				a:activate_slot(0)
-				break
-			end
-		end
+		a:disable_info_portion(throw_knifes[wpn_sect].info)
 	end
+end
+
+-- Вызывается из actor_binder:on_item_drop для любого выброшенного предмета
+function drop_knifes(obj)
+	local a = db.actor
+	-- ГГ мёртв (при смерти движок "роняет" оружие из рук) - ничего не делаем
+	if not obj or not a or not a:alive() then return end
+
+	local sect = obj:section()
+	local d = throw_knifes[sect]
+	if d then
+		on_knife_thrown(obj, sect, d)
+	elseif knife_by_ammo[sect] then
+		on_knife_ammo_dropped(sect)
+	end
+
+	-- слот ножа опустел - достаём нож (если запрос уже не поставлен выше)
+	if not rearm and a:active_slot() == 0 and a:item_in_slot(0) == nil then
+		request_rearm(nil, nil, nil, nil)
+	end
+end
+
+-- Периодическая проверка (из actor_binder:update): руки пусты - достаём нож
+function knifes_rotation()
+	try_equip_knife(nil)
 end
 
 

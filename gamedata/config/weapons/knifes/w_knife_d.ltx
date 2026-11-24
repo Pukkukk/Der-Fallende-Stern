@@ -142,13 +142,13 @@ scope_zoom_factor	    	= 100
 snd_draw						= weapons\knife\knife_draw, 0.5
 snd_holster						= weapons\knife\knife_hide, 0.5
 snd_shoot					= weapons\dfsde_knife_shoot
-snd_empty					= weapons\generic_holster
+snd_empty					= $silent
 snd_reload					= $silent	;reload both
 snd_shoot_duplet			= weapons\dfsde_knife_shoot
 snd_shoot_1					= weapons\dfsde_knife_shoot
 snd_silncer_shot			      	= weapons\pm\shoot_silenced, 0.4
 snd_reload_1				= $silent		;reload left
-snd_close = weapons\generic_holster	;reload left
+snd_close = $silent	;reload left
 snd_item_on             = weapons\headflash_on
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -210,7 +210,7 @@ item_orientation		= 0 , 0 ,0
  anm_idle_sprint_end             = bolt_sprint_end
  anim_idle_moving		= bolt_walk
  
- anim_empty					= bolt_throw_end
+; anim_empty					= bolt_throw_end
  anm_idle_aim_start             = bolt_throw_start
  anm_idle_aim_end             = knife_throw_otmena
  anim_reload				= knife_throw_reload
